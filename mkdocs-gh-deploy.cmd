@@ -8,17 +8,11 @@ WHERE /Q mkdocs ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
-mkdocs build ^
-        && ECHO MkDocs build succeed. ^
-        || ECHO MkDocs build failed. ^
-        && CALL :pause_if_double_click ^
-        && EXIT /B 2
-
-mkdocs gh-deploy ^
+mkdocs gh-deploy --strict ^
         && ECHO MkDocs gh-deploy succeed. ^
         || ECHO MkDocs gh-deploy failed. ^
         && CALL :pause_if_double_click ^
-        && EXIT /B 3
+        && EXIT /B 2
 
 CALL :pause_if_double_click
 EXIT /B 0

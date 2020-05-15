@@ -16,7 +16,6 @@ remote_branch: master
 
 # Preview controls
 # https://www.mkdocs.org/user-guide/configuration/#preview-controls
-strict: true
 dev_addr: 127.0.0.1:49152
 
 # Formatting options

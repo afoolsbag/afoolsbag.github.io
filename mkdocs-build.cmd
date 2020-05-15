@@ -8,7 +8,7 @@ WHERE /Q mkdocs ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
-mkdocs build ^
+mkdocs build --strict ^
         && ECHO MkDocs build succeed. ^
         || ECHO MkDocs build failed. ^
         && CALL :pause_if_double_click ^
