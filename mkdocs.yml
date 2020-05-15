@@ -1,0 +1,22 @@
+# MkDocs 配置文件
+# https://www.mkdocs.org/user-guide/configuration/
+
+# Project information
+# https://www.mkdocs.org/user-guide/configuration/#project-information
+site_name: zhengrr's docs
+site_author: zhengrr
+copyright: CC0-1.0
+remote_branch: master
+
+# Documentation layout
+# https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+
+# Build directories
+# https://www.mkdocs.org/user-guide/configuration/#build-directories
+
+# Preview controls
+# https://www.mkdocs.org/user-guide/configuration/#preview-controls
+strict: true
+
+# Formatting options
+# https://www.mkdocs.org/user-guide/configuration/#formatting-options
