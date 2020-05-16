@@ -6,7 +6,6 @@
 site_name: zhengrr's docs
 site_author: zhengrr
 copyright: CC0-1.0
-remote_branch: master
 
 # Documentation layout
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
@@ -16,7 +15,6 @@ remote_branch: master
 
 # Preview controls
 # https://www.mkdocs.org/user-guide/configuration/#preview-controls
-dev_addr: 127.0.0.1:49152
 
 # Formatting options
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options

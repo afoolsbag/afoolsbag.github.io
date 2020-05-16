@@ -8,7 +8,7 @@ WHERE /Q mkdocs ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
-mkdocs gh-deploy --strict ^
+mkdocs gh-deploy --remote-branch master --strict ^
         && ECHO MkDocs gh-deploy succeed. ^
         || ECHO MkDocs gh-deploy failed. ^
         && CALL :pause_if_double_click ^

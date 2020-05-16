@@ -11,7 +11,7 @@ WHERE /Q mkdocs ^
 explorer http://127.0.0.1:49152/
 ECHO Visit http://127.0.0.1:49152/ with explorer and waiting service startup.
 
-mkdocs serve ^
+mkdocs serve --dev-addr 127.0.0.1:49152 ^
         && ECHO MkDocs serve succeed. ^
         || ECHO MkDocs serve failed. ^
         && CALL :pause_if_double_click ^
