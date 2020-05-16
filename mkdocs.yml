@@ -9,6 +9,53 @@ copyright: CC0-1.0
 
 # Documentation layout
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+nav:
+    - 码代码:
+        - CC/CC.md
+        - CC/MkDocs.md
+    - 音视频:
+        - AV/FFmpeg.md
+    - 中间件:
+        - MW/MySQL.md
+        - MW/NGINX.md
+        - MW/nginx-rtmp-module.md
+    - 操作系统:
+        - OS/OS.md
+        - Windows:
+            - OS/Windows/arp.md
+            - OS/Windows/choco.md
+            - OS/Windows/ipconfig.md
+            - OS/Windows/PE.md
+            - OS/Windows/scoop.md
+        - GNU/Linux:
+            - OS/Linux/Linux.md
+            - OS/Linux/ELF.md
+            - OS/Linux/fish.md
+            - OS/Linux/grep.md
+            - OS/Linux/top.md
+        - Debian:
+            - OS/Debian/apt.md
+            - OS/Debian/apt-toolchain.md
+        - Arch:
+            - OS/Arch/Arch.md
+            - OS/Arch/pacman.md
+            - OS/Arch/pacman-devel.md
+        - CentOS:
+            - OS/CentOS/CentOS.md
+            - OS/CentOS/yum.md
+            - OS/CentOS/yum-devtoolset.md
+        - Kali:
+            - OS/Kali/Kali.md
+            - OS/Kali/DirBuster.md
+            - OS/Kali/Nmap.md
+            - OS/Kali/skipfish.md
+    - 开发运维一体化:
+        - DevOps/DevOps.md
+        - DevOps/Ansible.md
+        - DevOps/Docker.md
+        - DevOps/Git.md
+        - DevOps/GitLab.md
+        - DevOps/Jenkins.md
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
