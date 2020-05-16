@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>网络嗅探工具 [*Nmap*](https://nmap.org/) - zhengrr's docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../../../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../../Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Linux/ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../../Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../DirBuster/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../skipfish/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#nmap" class="nav-link">网络嗅探工具 Nmap</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">命令示例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">命令说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="nmap">网络嗅探工具 <a href="https://nmap.org/"><em>Nmap</em></a></h1>
+<ul>
+<li><a href="https://nmap.org/man/"><em>Reference Guide</em></a> <sub>
+        <a href="https://nmap.org/man/zh/"><em>zh_cn</em></a> </sub></li>
+<li><a href="https://nmap.org/zenmap/"><em>GUI</em></a></li>
+</ul>
+<p>互联网协议套件</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">abbr.</th>
+<th align="left">term</th>
+<th align="left">trans.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">应用层</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">传输层</td>
+<td align="left">SCTP</td>
+<td align="left">Stream Control Transmission Protocol</td>
+<td align="left">流控制传输协议</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">TCP</td>
+<td align="left">Transmission Control Protocol</td>
+<td align="left">传输控制协议</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">UDP</td>
+<td align="left">User Datagram Protocol</td>
+<td align="left">用户数据报协议</td>
+</tr>
+<tr>
+<td align="left">网络层</td>
+<td align="left">IP</td>
+<td align="left">Internet Protocol</td>
+<td align="left">网际协议</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">ICMP</td>
+<td align="left">Internet Control Message Protocol</td>
+<td align="left">网际控制消息协议</td>
+</tr>
+<tr>
+<td align="left">链路层</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>IPv4 地址分配</p>
+<pre><code class="text">  0.  *.  *.  */8   本网络（RFC 5735）
+ 10.  *.  *.  */8   A 类专用网络（RFC 1918）
+100. 64.  *.  */10  运营商级网络地址转换（RFC 6598）
+    127             ↵
+127.  *.  *.  */8   本地环回（RFC 5735）
+169.254.  *.  */16  链路本地（RFC 3927）
+172. 16.  *.  */12  B 类专用网络（RFC 1918）
+     31             ↵
+192.  0.  0.  */24  保留（RFC 5735）
+192.  0.  2.  */24  示例网络 1（RFC 5735）
+192. 88. 99.  */24  中继（RFC 3068）
+192.168.  *.  */16  C 类专用网络（RFC 1918）
+198. 18.  *.  */15  网络基准测试（RFC 2544）
+     19             ↵
+198. 51.100.  */24  示例网络 2（RFC 5737）
+203.  0.113.  */24  示例网络 3（RFC 5737）
+224.  *.  *.  */4   多播（RFC 3171）
+239                 ↵
+240.  *.  *.  */4   保留（RFC 1700）
+255                 ↵
+255.255.255.255     受限广播（RFC 919）
+</code></pre>
+
+<h2 id="_1">命令示例</h2>
+<pre><code class="fish">root@host *# nmap -sn &lt;target&gt;                   # 主机发现
+root@host *# nmap &lt;target&gt;                       # 端口扫描
+root@host *# nmap -v -oA &lt;basename&gt; -A &lt;target&gt;  # 信息探测
+</code></pre>
+
+<h2 id="_2">命令说明</h2>
+<h3 id="_3">主机发现</h3>
+<pre><code class="fish">root@host *# nmap -sL &lt;target&gt;  # 列表扫描，不发送报文
+
+root@host *# nmap -sn &lt;target&gt;  # Ping 扫描，使用以下 4 种数据包探测主机是否在线
+                                # 1. ICMP Echo Request 包
+                                # 2. ICMP Timestamp Request 包
+                                # 3. TCP SYN 包，向 HTTPS 443 端口
+                                # 4. TCP ACK 包，向 HTTP 80 端口
+
+root@host *# nmap -PS[port,]... &lt;target&gt;  # TCP SYN Ping 扫描，端口默认为 80
+root@host *# nmap -PA[port,]... &lt;target&gt;  # TCP ACK Ping 扫描，端口默认为 80
+root@host *# nmap -PU[port,]... &lt;target&gt;  # UDP Ping 扫描，端口默认为 40125
+root@host *# nmap -PY[port,]... &lt;target&gt;  # SCTP INIT Ping 扫描，默认端口为 80
+
+root@host *# nmap -PE &lt;target&gt;  # ICMP Echo Request Ping 扫描
+root@host *# nmap -PP &lt;target&gt;  # ICMP Timestamp Request Ping 扫描
+root@host *# nmap -PM &lt;target&gt;  # ICMP Address Mask Request Ping 扫描
+</code></pre>
+
+<h3 id="_4">端口扫描</h3>
+<pre><code class="fish">root@host *# nmap &lt;target&gt;            # 常用端口扫描
+root@host *# nmap -p0-65535 &lt;target&gt;  # 全端口扫描
+# abbr.      nmap -p- &lt;target&gt;
+
+root@host *# nmap -sS &lt;target&gt;  # TCP SYN 扫描，不完成 TCP 连接，半开放扫描
+root@host *# nmap -sT &lt;target&gt;  # TCP 连接扫描，将留下访问痕迹
+root@host *# nmap -sA &lt;target&gt;  # TCP ACK 扫描
+root@host *# nmap -sW &lt;target&gt;  # TCP 窗口扫描
+root@host *# nmap -sM &lt;target&gt;  # TCP Maimon 扫描
+
+root@host *# nmap -sU &lt;target&gt;  # UDP 扫描
+
+root@host *# nmap -sN &lt;target&gt;  # TCP Null 扫描
+root@host *# nmap -sF &lt;target&gt;  # TCP FIN 扫描
+root@host *# nmap -sX &lt;target&gt;  # TCP Xmas（FIN、PSH、URG） 扫描
+
+root@host *# nmap -sY &lt;target&gt;  # SCTP INIT 扫描
+root@host *# nmap -sZ &lt;target&gt;  # SCTP COOKIE-ECHO 扫描
+
+root@host *# nmap -sO &lt;target&gt;  # IP 协议扫描
+</code></pre>
+
+<h3 id="_5">信息探测</h3>
+<p>依据端口扫描得到的信息，可以进一步探测其所提供的服务和版本，并据此猜测其所用操作系统。</p>
+<pre><code class="fish">root@host *# nmap -sV &lt;target&gt;  # 启用服务版本探测
+root@host *# nmap -O &lt;target&gt;   # 启用操作系统探测
+
+root@host *# nmap -sC &lt;target&gt;  # 启用脚本扫描
+
+root@host *# nmap -A &lt;target&gt;   # 激烈扫描模式
+</code></pre>
+
+<h3 id="_6">杂项</h3>
+<pre><code class="fish">root@host *# nmap -v &lt;target&gt;   # 增强详细程度
+root@host *# nmap -vv &lt;target&gt;  # 增强更多详细程度
+root@host *# nmap -d &lt;target&gt;   # 增强调试级别
+root@host *# nmap -dd &lt;target&gt;  # 增强更多调试级别
+
+root@host *# nmap -oN &lt;file.nmap&gt; &lt;target&gt;  # 标准输出
+root@host *# nmap -oX &lt;file.xml&gt; &lt;target&gt;   # XML 输出
+root@host *# nmap -oG &lt;file.gnmap&gt; &lt;target&gt; # 可 Grep 输出
+root@host *# nmap -oA &lt;basename&gt; &lt;target&gt;   # 以上三种输出
+</code></pre>
+
+<p>运行时交互：
+*   <code>v</code>（<code>V</code>） 增强（减弱）详细程度
+*   <code>d</code>（<code>D</code>） 增强（减弱）调试级别
+*   <code>p</code>（<code>P</code>） 开启（关闭）包追踪</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

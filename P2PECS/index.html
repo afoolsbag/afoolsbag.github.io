@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>点对点电子货币系统（Peer-to-Peer Electronic Cash Systems） - zhengrr's docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../OS/OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#peer-to-peer-electronic-cash-systems" class="nav-link">点对点电子货币系统（Peer-to-Peer Electronic Cash Systems）</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#20140418" class="nav-link">2014年04月18日门罗币</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="peer-to-peer-electronic-cash-systems">点对点电子货币系统（Peer-to-Peer Electronic Cash Systems）</h1>
+<p><a href="https://bitcoin.org/bitcoin.pdf"><em>Bitcoin: A Peer-to-Peer Electronic Cash System</em></a> <sub>
+    <a href="https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf"><em>cmn-Hans</em></a> </sub></p>
+<ul>
+<li>资讯<ul>
+<li><a href="https://8btc.com/"><em>巴比特</em></a></li>
+<li><a href="https://bishijie.com/"><em>币世界</em></a></li>
+<li><a href="https://chainnews.com/"><em>链闻</em></a></li>
+<li><a href="https://jinse.com/"><em>金色财经</em></a></li>
+<li><a href="https://readhub.cn/blockchain"><em>Readhub - 区块链快讯</em></a></li>
+<li><a href="https://tuoluocaijing.cn/"><em>陀螺财金</em></a></li>
+</ul>
+</li>
+<li>行情<ul>
+<li><a href="https://coinmarketcap.com/"><em>CoinMarketCap</em></a></li>
+<li><a href="https://feixiaohao.com/"><em>非小号</em></a></li>
+<li><a href="https://tokenview.com/"><em>Tokenview</em></a></li>
+</ul>
+</li>
+<li>指数<ul>
+<li><a href="https://alternative.me/crypto/">https://alternative.me/crypto/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="20140418">2014年04月18日<a href="https://getmonero.org/"><em>门罗币</em></a></h2>
+<p>CryptoNote 上的白皮书 <a href="https://cryptonote.org/whitepaper.pdf">CryptoNote v 2.0</a> 。</p>
+<p>头等仓上的《精通门罗币》翻译连载：
+*   <a href="https://www.first.vip/project/3837.html">前言</a>
+*   <a href="https://www.first.vip/project/3843.html">第一章：加密货币与门罗简介（上）</a>
+*   <a href="https://www.first.vip/project/3847.html">第一章：加密货币与门罗简介（下）</a>
+*   <a href="https://www.first.vip/project/3849.html">第二章：如何接收、存储和发送门罗币（上）</a>
+*   <a href="https://www.first.vip/project/3855.html">第二章：如何接收、存储和发送门罗币（下）</a>
+*   <a href="https://www.first.vip/project/3857.html">第三章：门罗币的工作原理（上）</a>
+*   <a href="https://www.first.vip/project/16697.html">第三章：门罗币的工作原理（下）</a>
+*   <a href="https://www.first.vip/project/16699.html">第四章：门罗币网络（一）</a>
+*   <a href="https://www.first.vip/project/16701.html">第四章：门罗币网络（二）</a>
+*   <a href="https://www.first.vip/project/16703.html">第四章：门罗币网络（三）</a>
+*   <a href="https://www.first.vip/project/3869.html">第四章：门罗币网络（四）</a>
+*   <a href="https://www.first.vip/project/16709.html">第六章：社区文化</a>
+*   <a href="https://www.first.vip/project/16711.html">第八章：钱包指南、答疑和贴士</a></p>
+<h3 id="_1">钱包</h3>
+<ul>
+<li>种子密语（seed）：需要严格保密</li>
+<li>私钥（private keys）：由种子密语生成，需要严格保密</li>
+<li>查看公钥（public view keys）：由种子密语生成，</li>
+<li>花费公钥（public spend keys）：由种子密语生成，</li>
+<li>主地址：由公钥生成，唯一，以 <code>4</code> 起头的 95 位字符串</li>
+<li>子地址：由公钥生成，以 <code>8</code> 起头的 95 位字符串</li>
+</ul>
+<h3 id="_2">挖矿</h3>
+<p>H/s (hashes per seconds)</p>
+<ul>
+<li><a href="https://miningpoolstats.stream/monero">矿池</a></li>
+<li>矿机 <a href="https://github.com/xmrig/xmrig"><em>XMRig</em></a></li>
+<li>矿机 <a href="https://github.com/xmrig/xmrig-amd"><em>XMRig-AMD</em></a></li>
+<li>矿机 <a href="https://github.com/xmrig/xmrig-nvidia"><em>XMRig-NVIDIA</em></a></li>
+</ul>
+<pre><code class="cmder">%USERPROFILE% λ xmrig --url=&lt;pool_url&gt; ^
+                      --user=&lt;wallet_address&gt;.&lt;custom_name&gt; ^
+                      --pass=x ^
+                      --keepalive ^
+                      --donate-level=1
+:: abbr.        xmrig -o &lt;pool_url&gt; ^
+                      -u &lt;wallet_address&gt;.&lt;custom_name&gt; ^
+                      -p x ^
+                      -k ^
+                      --donate-level=1
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

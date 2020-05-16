@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>链路聚合 - zhengrr's docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../../../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../../Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="../../Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../../Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">链路聚合</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ubuntu" class="nav-link">Ubuntu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#eno0eno0-bond0" class="nav-link">聚合 eno0、eno0 到 bond0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#0" class="nav-link">0. 检查支持</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_2" class="nav-link">......</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#1" class="nav-link">1. 关闭网络服务</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#2" class="nav-link">2. 修改配置文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#auto-eno1" class="nav-link">auto eno1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#iface-eno1-inet-manual" class="nav-link">iface eno1 inet manual</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bond-master-bond0" class="nav-link">bond-master bond0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#auto-eno2" class="nav-link">auto eno2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#iface-eno2-inet-manual" class="nav-link">iface eno2 inet manual</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bond-master-bond0_1" class="nav-link">bond-master bond0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#auto-bond0" class="nav-link">auto bond0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#iface-bond0-inet-static" class="nav-link">iface bond0 inet static</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#address-19216801" class="nav-link">address 192.168.0.1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#gateway-1921680254" class="nav-link">gateway 192.168.0.254</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#netmask-2552552550" class="nav-link">netmask 255.255.255.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bond-mode-balance-alb" class="nav-link">bond-mode balance-alb</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bond-miimon-100" class="nav-link">bond-miimon 100</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bond-slaves-eno1-eno2" class="nav-link">bond-slaves eno1 eno2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#3" class="nav-link">3. 启动网络服务</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#4" class="nav-link">4. 检查聚合接口</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">链路聚合</h1>
+<h2 id="ubuntu">Ubuntu</h2>
+<p><a href="https://help.ubuntu.com/community/UbuntuBonding"><em>UbuntuBonding</em></a></p>
+<p>```shell script</p>
+<h1 id="eno0eno0-bond0">聚合 eno0、eno0 到 bond0</h1>
+<h1 id="0">0. 检查支持</h1>
+<h1 id="_2">......</h1>
+<h1 id="1">1. 关闭网络服务</h1>
+<p>sudo systemctl stop networking.service</p>
+<h1 id="2">2. 修改配置文件</h1>
+<p>sudo vim /etc/notwork/interfaces</p>
+<h1 id="auto-eno1">auto eno1</h1>
+<h1 id="iface-eno1-inet-manual">iface eno1 inet manual</h1>
+<h1 id="bond-master-bond0">bond-master bond0</h1>
+<h1 id="_3"></h1>
+<h1 id="auto-eno2">auto eno2</h1>
+<h1 id="iface-eno2-inet-manual">iface eno2 inet manual</h1>
+<h1 id="bond-master-bond0_1">bond-master bond0</h1>
+<h1 id="_4"></h1>
+<h1 id="auto-bond0">auto bond0</h1>
+<h1 id="iface-bond0-inet-static">iface bond0 inet static</h1>
+<h1 id="address-19216801">address 192.168.0.1</h1>
+<h1 id="gateway-1921680254">gateway 192.168.0.254</h1>
+<h1 id="netmask-2552552550">netmask 255.255.255.0</h1>
+<h1 id="bond-mode-balance-alb">bond-mode balance-alb</h1>
+<h1 id="bond-miimon-100">bond-miimon 100</h1>
+<h1 id="bond-slaves-eno1-eno2">bond-slaves eno1 eno2</h1>
+<h1 id="3">3. 启动网络服务</h1>
+<p>sudo systemctl start networking.service</p>
+<h1 id="4">4. 检查聚合接口</h1>
+<p>cat /proc/net/bonding/bond0
+```</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

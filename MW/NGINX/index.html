@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>网页服务器 NGINX - zhengrr's docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../MySQL/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../nginx-rtmp-module/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#nginx" class="nav-link">网页服务器 NGINX</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">常用命令</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">配置说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">配置示例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="nginx">网页服务器 NGINX</h1>
+<p>跨平台的网页服务器，官网 <a href="https://nginx.org/">https://nginx.org/</a>。</p>
+<h2 id="_1">安装</h2>
+<h3 id="centos">CentOS</h3>
+<pre><code class="sh">[user@host *]$ sudo yum install nginx
+</code></pre>
+
+<h3 id="ubuntu">Ubuntu</h3>
+<pre><code class="sh">user@host:*$ sudo apt install nginx
+</code></pre>
+
+<h2 id="_2">常用命令</h2>
+<pre><code class="fish">user@host *&gt; nginx -v  # 版本
+user@host *&gt; nginx -h  # 帮助
+user@host *&gt; nginx -t  # 测试
+
+user@host *&gt; nginx            # 启动
+user@host *&gt; nginx -s stop    # 快速停止
+user@host *&gt; nginx -s quit    # 优雅地退出
+user@host *&gt; nginx -s reload  # 重新加载配置文件
+user@host *&gt; nginx -s reopen  # 重新打开日志文件
+</code></pre>
+
+<p>若有意外，可从以下方面排查：</p>
+<ul>
+<li>防火墙配置</li>
+</ul>
+<h2 id="_3">配置说明</h2>
+<pre><code class="fish">user@host *&gt; vim /etc/nginx/nginx.conf
+</code></pre>
+
+<pre><code class="nginx.conf"># 工作用户和组（https://nginx.org/docs/ngx_core_module.html#user）
+user nobody nobody;
+
+# 工作线程数（https://nginx.org/docs/ngx_core_module.html#worker_processes）
+worker_processes 1;
+
+# 事件上下文（https://nginx.org/docs/ngx_core_module.html#events）
+events {
+    # 工作线程最大可连接数（https://nginx.org/docs/ngx_core_module.html#worker_connections）
+    worker_connections 512;
+
+}
+
+# HTTP 服务上下文（https://nginx.org/docs/http/ngx_http_core_module.html#http）
+http {
+    include mine.types;
+
+    # 默认 MINE 类型（https://nginx.org/docs/http/ngx_http_core_module.html#default_type）
+    default_type text/plain;
+
+    # 保活超时（https://nginx.org/docs/http/ngx_http_core_module.html#keepalive_timeout）
+    keepalive_timeout 75s;
+
+    # 是否启用 sendfile() 函数（https://nginx.org/docs/http/ngx_http_core_module.html#sendfile）
+    sendfile off;
+    # 是否启用 TCP_NOPUSH 或 TCP_CORK 选项（https://nginx.org/docs/http/ngx_http_core_module.html#tcp_nopush）
+    tcp_nopush off;
+
+    # 虚拟服务器配置（https://nginx.org/docs/http/ngx_http_core_module.html#server）
+    server {
+        # 监听（https://nginx.org/docs/http/ngx_http_core_module.html#listen）
+        listen *:80;    # root
+        listen *:8000;  # user
+
+        # URI 路由（https://nginx.org/docs/http/ngx_http_core_module.html#location）
+        location / {
+            # 请求的映射根目录（https://nginx.org/docs/http/ngx_http_core_module.html#root）
+            root html;
+
+            # URI 索引（https://nginx.org/docs/http/ngx_http_index_module.html#index）
+            index index.html;
+
+        }
+
+    }
+
+}
+</code></pre>
+
+<h2 id="_4">配置示例</h2>
+<h3 id="_5">简单静态页面</h3>
+<pre><code class="nginx.conf">worker_processes auto;
+events {
+    worker_connections 1024;
+}
+http {
+    server {
+        listen 80;
+        location / {
+            root /path/to/www;
+        }
+    }
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

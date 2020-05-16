@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Crossing the Wall - zhengrr's docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../OS/OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../OS/Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../OS/Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#crossing-the-wall" class="nav-link">Crossing the Wall</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dns" class="nav-link">DNS 劫持</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dns_1" class="nav-link">DNS 污染</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ip" class="nav-link">IP 黑名单</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sni" class="nav-link">SNI 阻断</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#httpsocks" class="nav-link">HTTP/SOCKS 代理检测</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#https" class="nav-link">HTTPS 代理检测</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pptp" class="nav-link">PPTP 检测</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ssh" class="nav-link">SSH 检测</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cdn" class="nav-link">CDN 检测</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#openvpn" class="nav-link">OpenVPN</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cisco-anyconnect" class="nav-link">Cisco AnyConnect</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#softether-vpn-vpngate" class="nav-link">SoftEther VPN / VPNGate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#shadowsocks" class="nav-link">Shadowsocks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="crossing-the-wall">Crossing the Wall</h1>
+<p><strong>在浏览器地址栏输入一个网址，在执行“跳转”的瞬间，发生了什么？</strong></p>
+<p>不妨假定输入的是世界上的第一个页面：<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a>。</p>
+<ol>
+<li>
+<p>浏览器从网址中解析出主机：</p>
+<p>网址即 URL（Uniform Resource Locator，统一资源定位符），是 URI（Uniform Resource Identifier，统一资源标识符）的一种，格式为
+<code>text
+scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]</code>
+其中的 <code>host</code> 即为主机。
+主机可以用域名或 IP（Internet Protocol，网际协议）地址表示，前述的 URL 即以域名 <code>info.cern.ch</code> 表示主机。</p>
+</li>
+<li>
+<p>若主机以域名表示，则通过 DNS（Domain Name System，域名系统）进行域名解析以查找 IP 地址：</p>
+<ol>
+<li>浏览器首先会在内置 DNS 缓存中查找，若找到则将其返回，否则进行下一步；</li>
+<li>浏览器请求操作系统解析域名，操作系统尝试在系统 DNS 缓存中查找，若找到……，否则……；<ul>
+<li>查看当前系统缓存 <code>ipconfig /displaydns</code></li>
+<li>清空当前系统缓存 <code>ipconfig /flushdns</code></li>
+<li>浏览器 DNS 缓存和系统 DNS 缓存都存储在内存中，断电清空</li>
+</ul>
+</li>
+<li>操作系统尝试在 HOSTS 文件中查找，若找到……，否则……；<ul>
+<li>HOSTS 文件位置 <code>%SystemRoot%\System32\drivers\etc\hosts</code></li>
+</ul>
+</li>
+<li>操作系统请求 DNS 服务器解析域名，DNS 服务器尝试在缓存中查找，若找到……，否则……；<ul>
+<li>阿里云公共 DNS <code>223.5.5.5</code> / <code>223.6.6.6</code> / <code>2400:3200::1</code> / <code>2400:3200:baba::1</code></li>
+<li>百度公共 DNS <code>180.76.76.76</code> / <code>2400:da00::6666</code></li>
+<li>Google Public DNS <code>8.8.8.8</code> / <code>8.8.4.4</code></li>
+<li>OpenDNS <code>207.67.222.222</code> / <code>208.67.220.220</code></li>
+</ul>
+</li>
+<li>DNS 服务器递归请求根服务器、主服务器、域服务器等解析域名，若找到……，否则……；</li>
+<li>报错：“找不到……的服务器 IP 地址”。</li>
+</ol>
+<p>前述域名在此文写作时被解析为 IPv6 地址 <code>2001:1458:201:a4::100:2f</code>。</p>
+</li>
+<li>
+<p>取得 IP 地址后，尝试与对应 IP 地址端口建立 TCP（Transmission Control Protocol，传输控制协议）连接；</p>
+</li>
+<li>
+<p>建立 TCP 连接后，按协议与服务器进行交互，并对收到的数据进行处理、渲染和呈现。</p>
+</li>
+</ol>
+<p>依据以上流程，若要需要定向屏蔽网络服务，可能的技术方案：</p>
+<h2 id="dns">DNS 劫持</h2>
+<p>通过把持 DNS 服务器，修改域名解析规则，将敏感域名解析到错误的地址，以达到屏蔽效果。</p>
+<p>应对：
+*   配置 HOSTS，在本机将敏感域名解析为 IP 地址，绕过 DNS 服务器
+*   配置信任的 DNS 服务器</p>
+<h2 id="dns_1">DNS 污染</h2>
+<p>DNS 主要使用 UDP（User Datagram Protocol，用户数据报协议） 53 端口，且每次请求只认首个有效回应。
+于是通过把持网络要冲，对检测到的敏感 DNS 解析请求，抢先回发错误回应，以达到屏蔽效果。</p>
+<p>应对：
+*   配置 HOSTS，在本机将敏感域名解析为 IP 地址，绕过 DNS 服务器</p>
+<h2 id="ip">IP 黑名单</h2>
+<p>通过把持网络要冲，将与敏感 IP 地址交互的数据包拦截，以达到屏蔽效果。</p>
+<p>应对：
+*   使用代理，不直接访问敏感 IP 地址</p>
+<h2 id="sni">SNI 阻断</h2>
+<h2 id="httpsocks">HTTP/SOCKS 代理检测</h2>
+<p>HTTP 代理通常使用 80 / 8080 / 3128 / 8081 / 9080 端口，SOCKS 代理通常使用 1080 端口，
+这两种代理对内容都不加密，因而很容易被检测，从而拦截屏蔽。</p>
+<p>对 HTTP 内容经过简单的 BASE64 转换的方法，也轻易被监测、拦截、屏蔽。</p>
+<p>Proxy Hunter</p>
+<h2 id="https">HTTPS 代理检测</h2>
+<p>active probe 检测</p>
+<p>无法获取代理的内容，但可以基于特征检测出典型代理。无法完全拦截，但可以拦截部分。</p>
+<h2 id="pptp">PPTP 检测</h2>
+<p>加密强度不高
+已被干掉</p>
+<h2 id="ssh">SSH 检测</h2>
+<p>通过流量大小检测</p>
+<p>变种：
+进行了混淆的 SSH
+多伦多大学公民实验室 赛风（PSIPHON）
+依然可用</p>
+<h2 id="cdn">CDN 检测</h2>
+<p>通过将代理流量装入 CDN Host 头，绕过检测</p>
+<p>Lantern、FireFly、Tor Browser – Meek</p>
+<h2 id="openvpn">OpenVPN</h2>
+<p>高强度加密
+但是特征太明显
+被干掉</p>
+<p>但是经过混淆后还可以用</p>
+<h2 id="cisco-anyconnect">Cisco AnyConnect</h2>
+<p>类似 OpenVPN，但是这货有很多大型跨国企业也在用，因而无法粗暴屏蔽，好在配置麻烦，使用者较少</p>
+<p>仍然可用</p>
+<h2 id="softether-vpn-vpngate">SoftEther VPN / VPNGate</h2>
+<p>日本筑波大学 VPNGate</p>
+<p>特征被掌握</p>
+<p>偶尔可用</p>
+<h2 id="shadowsocks">Shadowsocks</h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

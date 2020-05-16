@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>分布式版本控制系统 [*Git*](https://git-scm.com/) - zhengrr's docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../../OS/Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../../OS/Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Docker/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../GitLab/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#git" class="nav-link">分布式版本控制系统 Git</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">配置</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#repositorygit" class="nav-link">版本库（Repository，.git）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#branch" class="nav-link">分支（Branch）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#index" class="nav-link">暂存区（index）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#working-directorywdir" class="nav-link">工作区（Working Directory，wdir）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">服务</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="git">分布式版本控制系统 <a href="https://git-scm.com/"><em>Git</em></a></h1>
+<ul>
+<li><a href="https://liaoxuefeng.com/wiki/896043488029600"><em>Git 教程</em></a></li>
+<li><a href="https://sourcetreeapp.com/"><em>Sourcetree</em></a></li>
+</ul>
+<h2 id="_1">配置</h2>
+<pre><code class="fish">user@host *&gt; git config --list           # 列出配置
+# abbr.      git config -l
+user@host *&gt; git config --system --list  # 系统配置（/etc/gitconfig）
+user@host *&gt; git config --global --list  # 用户配置（~/.gitconfig）
+user@host *&gt; git config --local  --list  # 项目配置（.git/config）
+</code></pre>
+
+<h3 id="_2">为当前用户设置名称和邮箱</h3>
+<pre><code class="fish">user@host *&gt; git config --global user.name &quot;&lt;name&gt;&quot;
+user@host *&gt; git config --global user.email &quot;&lt;email@example.com&gt;&quot;
+</code></pre>
+
+<h3 id="ssh">生成 SSH 密钥对</h3>
+<pre><code class="fish">user@host *&gt; ssh-keygen -t rsa -C &quot;&lt;email@example.com&gt;&quot;  # ~/.ssh
+user@host *&gt; cd ~/.ssh
+</code></pre>
+
+<h2 id="repositorygit">版本库（Repository，<code>.git</code>）</h2>
+<pre><code class="fish">user@host ~/wdir&gt; git remote --verbose  # 列出远端库
+# abbr.           git remote -v
+</code></pre>
+
+<h3 id="_3">在本地创建版本库</h3>
+<pre><code class="fish"># 初始化版本库
+user@host ~/wdir&gt; git init
+
+# 添加远端库
+user@host ~/wdir&gt; git remote add &lt;origin&gt; &lt;git@host:wdir.git&gt;
+
+# 绑定当前分支到远端 &lt;origin&gt; 库
+user@host ~/wdir&gt; git branch --set-upstream-to=&lt;origin&gt;
+# abbr.           git branch -u &lt;origin&gt;
+
+# 推送本地提交到远端库
+user@host ~/wdir&gt; git push &lt;origin&gt; &lt;master&gt;
+</code></pre>
+
+<h3 id="_4">从远端复制版本库</h3>
+<pre><code class="fish"># 从远端复制版本库
+user@host ~&gt; git clone &lt;git@host:wdir.git&gt;
+
+# 创建远端分支到本地
+user@host ~/wdir&gt; git branch --set-upstream-to=&lt;origin/dev&gt; &lt;dev&gt;
+# abbr.           git branch -u &lt;origin/dev&gt; &lt;dev&gt;
+</code></pre>
+
+<h2 id="branch">分支（Branch）</h2>
+<pre><code class="fish">user@host ~/wdir&gt; git branch          # 展示分支
+
+user@host ~/wdir&gt; git branch &lt;dev&gt;    # 创建分支
+
+user@host ~/wdir&gt; git --delete &lt;dev&gt;  # 删除分支
+# abbr.           git -d &lt;dev&gt;
+
+user@host ~/wdir&gt; git switch &lt;dev&gt;    # 切换分支
+# depr.           git checkout &lt;dev&gt;
+
+
+user@host ~/wdir&gt; git switch --create &lt;dev&gt;  # 创建并切换分支
+# abbr.           git switch -c &lt;dev&gt;
+# depr.           git checkout -b &lt;dev&gt;
+</code></pre>
+
+<h3 id="_5">提交</h3>
+<pre><code class="fish"># 查看提交历史
+user@host ~/wdri&gt; git log
+user@host ~/wdri&gt; git log --abbrev-commit --graph --pretty=oneline
+# abbr.           git log --graph --online
+</code></pre>
+
+<h3 id="merge">合并分支（Merge）</h3>
+<pre><code class="fish">user@host ~/wdir (dev)&gt; git checkout &lt;master&gt;  # 切换到主分支
+user@host ~/wdir (master)&gt; git merge &lt;dev&gt;     # 合并分支
+
+# 禁用快进模式，带记录地合并分支
+user@host ~/wdir (master)&gt; git merge --no-ff -m &quot;&lt;merge with no-ff&gt;&quot; &lt;dev&gt;
+
+# 若有冲突
+user@host ~/wdir (master)&gt; git status          # 查看冲突
+# ......                                       # 解决冲突
+user@host ~/wdir (master)&gt; git add &lt;file&gt;      # 提交修改
+user@host ~/wdir (master)&gt; git commit -m &quot;&lt;conflict fixed&gt;&quot;
+
+# 若希望整理提交历史，将分岔合并
+user@host ~/wdir (master)&gt; git rebase
+</code></pre>
+
+<h3 id="tag">标签（Tag）</h3>
+<pre><code class="fish"></code></pre>
+
+<h2 id="index">暂存区（<code>index</code>）</h2>
+<pre><code class="fish">user@host ~/wdir&gt; git diff --cached                 # 比较暂存区与版本库
+
+user@host ~/wdir&gt; git commit --message=&quot;&lt;message&gt;&quot;  # 提交暂存区修改到版本库 `index` &gt;&gt; `branch`
+# abbr.           git commit -m &quot;&lt;message&gt;&quot;
+
+user@host ~/wdir&gt; git restore --staged &lt;file&gt;...    # 回退暂存区修改到工作区
+# depr.           git reset HEAD [file]...
+</code></pre>
+
+<h2 id="working-directorywdir">工作区（Working Directory，<code>wdir</code>）</h2>
+<pre><code class="fish">user@host ~/wdir&gt; git status                 # 查看工作区状态
+
+user@host ~/wdir&gt; git diff HEAD              # 比较工作区与版本库
+user@host ~/wdir&gt; git diff                   # 比较工作区与暂存区
+
+user@host ~/wdir&gt; git add &lt;file&gt;...          # 添加工作区修改到暂存区 `wdir` &gt;&gt; `index`
+
+user@host ~/wdir&gt; git restore &lt;file&gt;...      # 放弃工作区修改
+# depr.           git checkout -- &lt;file&gt;...
+</code></pre>
+
+<h3 id="stash">藏匿（Stash）</h3>
+<pre><code class="fish">user@host ~/wdir&gt; git stash                 # 藏匿脏工作区，以处理突发事件，譬如漏洞修复
+# ......
+user@host ~/wdir&gt; git stash pop             # 恢复脏工作区，继续之前的工作
+
+user@host ~/wdir&gt; git cherry-pick &lt;commit&gt;  # 复制特定提交到当前分支
+                                            # 常用于将主分支的漏洞修复，应用到开发分支
+
+
+user@host ~/wdir&gt; git stash list               # 列出存储的脏工作区
+user@host ~/wdir&gt; git stash apply [stash@{0}]  # 恢复指定的脏工作区，且不将其丢弃
+user@host ~/wdir&gt; git stash drop [stash@{0}]   # 丢弃指定的脏工作区
+</code></pre>
+
+<h2 id="_6">服务</h2>
+<h3 id="ubuntu">Ubuntu</h3>
+<pre><code class="sh"># 安装 git
+user@host:*$ sudo apt install git
+
+# 创建名为 git 用户，并禁用其默认 Shell
+user@host:*$ sudo adduser git
+user@host:*$ sudo vim /etc/passwd
+# git:x:1001:1001:user for git service:/home/git:/usr/bin/git-shell
+
+# 导入证书
+user@host:*$ cd /home/git
+user@host:~$ sudo --user=git mkdir .ssh
+# abbr.      sudo -u git mkdir .ssh
+user@host:~$ sudo --user=git vim .ssh/authorized_keys  # 一行一条
+# abbr.      sudo -u git vim .ssh/authorized_keys
+
+# 初始化仓库
+user@host:~$ sudo --user=git git init --bare &lt;wdir.git&gt;
+# abbr.      sudo -u git git init --bare &lt;wdir.git&gt;
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="zhengrr">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统 - zhengrr's docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">zhengrr's docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../CC/CC/" class="dropdown-item">Codes & Coding</a>
+</li>
+                                    
+<li>
+    <a href="../../../CC/MkDocs/" class="dropdown-item">MkDocs</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/" class="dropdown-item">操作系统</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../../Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../../Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GNU/Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Linux/ELF/" class="dropdown-item">ELF</a>
+</li>
+            
+<li>
+    <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+</li>
+            
+<li>
+    <a href="../../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../../Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Debian</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+</li>
+            
+<li>
+    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Arch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+</li>
+            
+<li>
+    <a href="../pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">CentOS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+</li>
+            
+<li>
+    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Kali</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+</li>
+            
+<li>
+    <a href="../../Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+</li>
+            
+<li>
+    <a href="../../Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../Debian/apt-toolchain/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../pacman/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gnulinux-arch" class="nav-link">GNU/Linux 发行版 Arch 操作系统</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">若异常可尝试：</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_6" class="nav-link">为块设备分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#1m-bios-boot-biosgpt" class="nav-link">1M           BIOS boot   若选用 BIOS/GPT 则须此分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#512m-efi-system-uefi" class="nav-link">512M         EFI System  若选用 UEFI 则须此分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#linux-root" class="nav-link">Linux root  根目录分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#4g-linux-swap" class="nav-link">4G           Linux swap  交换分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_8" class="nav-link">挂载根分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#uefi-efi" class="nav-link">若选用 UEFI 则挂载 EFI 分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">检查分区挂载</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="gnulinux-arch">GNU/Linux 发行版 <a href="https://archlinux.org/"><em>Arch</em></a> 操作系统</h1>
+<h2 id="_1">安装</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)">https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)</a></li>
+<li>Shell 中以管理员权限执行：<code>sudo &lt;command line&gt;</code></li>
+<li>VIM 中以管理员权限保存：<code>:w !sudo tee %</code></li>
+</ul>
+<h3 id="_2">验证启动模式</h3>
+<pre><code class="sh">ls /sys/firmware/efi/efivars  # 若目录存在，说明选用的 UEFI
+</code></pre>
+
+<h3 id="_3">连接到互联网</h3>
+<p>```shell script
+ip link             # 检查网卡
+ping archlinux.org  # 检查网络连接</p>
+<h1 id="_4">若异常可尝试：</h1>
+<p>systemctl enable dhcpcd.service  # 启用 DHCPCD 服务</p>
+<pre><code>
+### 更新系统时间
+
+```shell script
+timedatectl status        # 检查服务状态
+
+# 若异常可尝试：
+timedatectl set-ntp true  # 启用网络时间同步
+</code></pre>
+
+<h3 id="_5">建立硬盘分区</h3>
+<p>```shell script
+lsblk               # 列出块设备</p>
+<h1 id="_6">为块设备分区</h1>
+<p>cfdisk -z /dev/<sda></p>
+<h1 id="1m-bios-boot-biosgpt">1M           BIOS boot   若选用 BIOS/GPT 则须此分区</h1>
+<h1 id="512m-efi-system-uefi">512M         EFI System  若选用 UEFI 则须此分区</h1>
+<h1 id="linux-root">Linux root  根目录分区</h1>
+<h1 id="4g-linux-swap">4G           Linux swap  交换分区</h1>
+<pre><code>
+### 格式化分区
+
+```shell script
+# BIOS boot 无需格式化
+
+# 若选用 UEFI 则格式化 EFI System 分区，EFI 分区仅支持 FAT32
+mkfs.vfat /dev/&lt;sda&gt;1
+
+# 格式化根目录分区
+mkfs.ext4 /dev/&lt;sda&gt;2
+
+# 格式化交换分区
+mkswap /dev/&lt;sda&gt;3
+swapon /dev/&lt;sda&gt;3
+
+# Linux swap 无需格式化
+
+# 检查分区格式
+lsblk -f
+</code></pre>
+
+<h3 id="_7">挂载分区</h3>
+<p>```shell script</p>
+<h1 id="_8">挂载根分区</h1>
+<p>mount /dev/<sda>2 /mnt</p>
+<h1 id="uefi-efi">若选用 UEFI 则挂载 EFI 分区</h1>
+<p>mkdir -p /mnt/boot/EFI
+mount /dev/<sda>1 /mnt/boot/EFI</p>
+<h1 id="_9">检查分区挂载</h1>
+<p>lsblk</p>
+<pre><code>
+### 选择包管理器的在线源的镜像
+
+```shell script
+vim /etc/pacman.d/mirrorlist
+
+# 越靠前的镜像优先级越高，且该配置将被复制到新系统，须正确调整
+#
+### Alibaba
+# Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
+### Tencent
+# Server = https://mirrors.cloud.tencent.com/archlinux/$repo/os/$arch
+### China
+# ...
+### Hong Kong
+# ...
+### Taiwan
+# ...
+#
+# ......
+</code></pre>
+
+<h3 id="_10">安装基本系统</h3>
+<p>```shell script
+pacstrap /mnt linux base base-devel vim  # linux       内核
+                                         # base        基础软件包
+                                         # base-devel  开发软件包
+                                         # vim         编辑器</p>
+<pre><code>
+## 配置系统
+
+### 配置文件系统表
+
+```shell script
+genfstab -U /mnt &gt;&gt; /mnt/etc/fstab  # 生成 fstab
+cat /mnt/etc/fstab                  # 检查 fstab
+</code></pre>
+
+<h3 id="_11">切换根目录</h3>
+<p>```shell script
+arch-chroot /mnt</p>
+<pre><code>
+### 设置时区
+
+```shell script
+ln -sf /usr/share/zoneinfo/Asia/Chongqing /etc/localtime  # 东八区
+hwclock --systohc --utc                                   # 设置时间标准为 UTC 并同步
+date                                                      # 检查当前时间
+</code></pre>
+
+<h3 id="_12">设置本地化</h3>
+<p>```shell script
+vim /etc/locale.gen   # 编辑欲支持的本地化配置
+locale-gen            # 生成欲支持的本地化配置</p>
+<p>vim /etc/locale.conf  # 编辑本地化配置
+                      # LANG=en_US.UTF-8</p>
+<pre><code>
+### 设置网络
+
+配置主机名和本地静态域名解析
+
+```sh
+[user@host *]$ sudo vim /etc/hostname  # 配置主机名
+
+[user@host *]$ sudo vim /etc/hosts     # 配置本地静态域名解析
+# 127.0.0.1       localhost
+# ::1             localhost
+# 127.0.0.1       &lt;hostname&gt;.localdomain  &lt;hostname&gt;
+</code></pre>
+
+<p>选用 <a href="https://wiki.archlinux.org/index.php/Systemd-networkd"><em>systemd-networkd</em></a> 进行网络管理</p>
+<pre><code class="sh"># 二选一：动态主机配置
+[user@host *] sudo vim /etc/systemd/network/&lt;dhcp&gt;.network
+# [Match]
+# Name=en*
+#
+# [Network]
+# DHCP=ipv4
+
+# 二选一：静态主机配置
+[user@host *] sudo vim /etc/systemd/network/&lt;en*&gt;.network
+# [Match]
+# Name=&lt;en*&gt;
+#
+# [Network]
+# Address=192.168.0.1/24
+# Gateway=192.168.0.254
+# DNS=10.1.10.1
+# DNS=8.8.8.8
+
+# 启用并启动 systemd-networkd 网络管理器
+[user@host *] sudo systemctl enable systemd-networkd
+[user@host *] sudo systemctl start systemd-networkd
+# 或者若其已经启动，则强制其重载配置
+[user@host *] sudo systemctl force-reload systemd-networkd
+
+</code></pre>
+
+<p>选用 <a href="https://wiki.archlinux.org/index.php/Systemd-resolved"><em>systemd-resolved</em></a> 进行域名解析</p>
+<pre><code class="sh"># 若需要，可通过 DHCP 获取 DNS：
+[user@host *] ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+
+# 启用并启动 systemd-resolved 网络管理器
+[user@host *] sudo systemctl enable systemd-resolved
+[user@host *] sudo systemctl start systemd-resolved
+</code></pre>
+
+<h3 id="_13">系统管理员密码</h3>
+<p>```shell script
+passwd</p>
+<pre><code>
+### 安装引导
+
+```shell script
+# BIOS/GTP
+pacman -S grub                        # 安装引导程序
+grub-install --recheck /dev/sda       # 向分区装载引导
+grub-mkconfig -o /boot/grub/grub.cfg  # 生成引导配置
+
+# UEFI
+pacman -S efibootmgr grub
+grub-install --recheck /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+
+<h3 id="_14">重启</h3>
+<p><code>shell script
+exit            # 退出 chroot 环境
+umount -R /mnt  # 卸载分区，以检查分区是否仍繁忙，避免数据丢失
+reboot          # 硬重启</code></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>CC0-1.0</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
