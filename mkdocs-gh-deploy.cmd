@@ -8,11 +8,16 @@ WHERE /Q mkdocs ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
-mkdocs gh-deploy --remote-branch master --strict ^
+CD %script_directory% ^
+        || ECHO Change directory to project directory failed. ^
+        && CALL :pause_if_double_click ^
+        && EXIT /B 2
+
+mkdocs gh-deploy --remote-branch master --strict --site-dir ^
         && ECHO MkDocs gh-deploy succeed. ^
         || ECHO MkDocs gh-deploy failed. ^
         && CALL :pause_if_double_click ^
-        && EXIT /B 2
+        && EXIT /B 3
 
 CALL :pause_if_double_click
 EXIT /B 0

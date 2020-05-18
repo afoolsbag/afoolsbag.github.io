@@ -8,6 +8,11 @@ WHERE /Q mkdocs ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
+CD %script_directory% ^
+        || ECHO Change directory to project directory failed. ^
+        && CALL :pause_if_double_click ^
+        && EXIT /B 2
+
 explorer http://127.0.0.1:49152/
 ECHO Visit http://127.0.0.1:49152/ with explorer and waiting service startup.
 
@@ -15,7 +20,7 @@ mkdocs serve --dev-addr 127.0.0.1:49152 ^
         && ECHO MkDocs serve succeed. ^
         || ECHO MkDocs serve failed. ^
         && CALL :pause_if_double_click ^
-        && EXIT /B 2
+        && EXIT /B 3
 
 CALL :pause_if_double_click
 EXIT /B 0
