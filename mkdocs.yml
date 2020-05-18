@@ -4,6 +4,10 @@
 # Project information
 # https://www.mkdocs.org/user-guide/configuration/#project-information
 site_name: zhengrr's docs
+site_url: https://afoolsbag.github.io/
+repo_url: https://github.com/afoolsbag/afoolsbag.github.io/
+edit_uri: ''
+site_description: 一份为 zhengrr 定制化的技术备忘。
 site_author: zhengrr
 copyright: CC0-1.0
 
