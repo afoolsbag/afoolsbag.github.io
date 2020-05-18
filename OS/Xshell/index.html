@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        
+        <link rel="canonical" href="https://afoolsbag.github.io/OS/Xshell/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>MkDocs - zhengrr's docs</title>
+        <title>安全壳层客户端 Xshell - zhengrr's docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,16 +33,20 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../CC/" class="dropdown-item">Codes & Coding</a>
+    <a href="../../CC/CC/" class="dropdown-item">Codes & Coding</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">MkDocs</a>
+    <a href="../../CC/Vim/" class="dropdown-item">文本编辑器 Vim</a>
+</li>
+                                    
+<li>
+    <a href="../../CC/StarUML/" class="dropdown-item">统一建模语言工具 [*StarUML*](http://staruml.io/)</a>
 </li>
                                 </ul>
                             </li>
@@ -51,7 +55,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)</a>
+    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+</li>
+                                    
+<li>
+    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -68,16 +76,16 @@
 </li>
                                     
 <li>
-    <a href="../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)</a>
+    <a href="../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../OS/OS/" class="dropdown-item">操作系统</a>
+    <a href="../OS/" class="dropdown-item">操作系统</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -85,23 +93,27 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../OS/Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 `arp` (address resolution protocol)</a>
+    <a href="../Windows/Windows/" class="dropdown-item">Windows 操作系统</a>
 </li>
             
 <li>
-    <a href="../../OS/Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+    <a href="../Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 arp</a>
 </li>
             
 <li>
-    <a href="../../OS/Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+    <a href="../Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
 </li>
             
 <li>
-    <a href="../../OS/Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+    <a href="../Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
 </li>
             
 <li>
-    <a href="../../OS/Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+    <a href="../Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+</li>
+            
+<li>
+    <a href="../Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
 </li>
     </ul>
   </li>
@@ -111,23 +123,47 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+    <a href="../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/ELF/" class="dropdown-item">ELF</a>
+    <a href="../Linux/bootstrap/" class="dropdown-item">启动</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+    <a href="../Linux/ELF/" class="dropdown-item">ELF</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../Linux/fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/top/" class="dropdown-item">进程管理器 top（table of processes）</a>
+    <a href="../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+</li>
+            
+<li>
+    <a href="../Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
+</li>
+            
+<li>
+    <a href="../Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
+</li>
+            
+<li>
+    <a href="../Linux/readelf/" class="dropdown-item">[`readelf`](https://linux.die.net/man/1/readelf)</a>
+</li>
+            
+<li>
+    <a href="../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
+</li>
+            
+<li>
+    <a href="../Linux/top/" class="dropdown-item">进程查看工具 top</a>
+</li>
+            
+<li>
+    <a href="../Linux/user/" class="dropdown-item">用户</a>
 </li>
     </ul>
   </li>
@@ -137,11 +173,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+    <a href="../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
 </li>
             
 <li>
-    <a href="../../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
+    <a href="../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
 </li>
     </ul>
   </li>
@@ -151,15 +187,15 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+    <a href="../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
 </li>
             
 <li>
-    <a href="../../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+    <a href="../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
 </li>
             
 <li>
-    <a href="../../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
+    <a href="../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
 </li>
     </ul>
   </li>
@@ -169,15 +205,15 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+    <a href="../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
 </li>
             
 <li>
-    <a href="../../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
+    <a href="../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
 </li>
             
 <li>
-    <a href="../../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
 </li>
     </ul>
   </li>
@@ -187,22 +223,34 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统</a>
+    <a href="../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
 </li>
             
 <li>
-    <a href="../../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)</a>
+    <a href="../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
 </li>
             
 <li>
-    <a href="../../OS/Kali/Nmap/" class="dropdown-item">网络嗅探工具 [*Nmap*](https://nmap.org/)</a>
+    <a href="../Kali/Nmap/" class="dropdown-item">网络嗅探工具 Nmap</a>
 </li>
             
 <li>
-    <a href="../../OS/Kali/skipfish/" class="dropdown-item">网站渗透测试工具 [*skipfish*](https://code.google.com/archive/p/skipfish/)</a>
+    <a href="../Kali/skipfish/" class="dropdown-item">网站渗透测试工具 skipfish</a>
 </li>
     </ul>
   </li>
+                                    
+<li>
+    <a href="../VMware/" class="dropdown-item">虚拟机 VMware</a>
+</li>
+                                    
+<li>
+    <a href="../VirtualBox/" class="dropdown-item">虚拟机 VirtualBox</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">安全壳层客户端 Xshell</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -214,23 +262,23 @@
 </li>
                                     
 <li>
-    <a href="../../DevOps/Ansible/" class="dropdown-item">持续配置 [*Ansible*](https://ansible.com/)</a>
+    <a href="../../DevOps/Ansible/" class="dropdown-item">持续配置 Ansible</a>
 </li>
                                     
 <li>
-    <a href="../../DevOps/Docker/" class="dropdown-item">持续容器 [*Docker*](https://docker.com/)</a>
+    <a href="../../DevOps/Docker/" class="dropdown-item">持续容器 Docker</a>
 </li>
                                     
 <li>
-    <a href="../../DevOps/Git/" class="dropdown-item">分布式版本控制系统 [*Git*](https://git-scm.com/)</a>
+    <a href="../../DevOps/Git/" class="dropdown-item">分布式版本控制系统 Git</a>
 </li>
                                     
 <li>
-    <a href="../../DevOps/GitLab/" class="dropdown-item">开发管理 [*GitLab*](https://gitlab.com/)</a>
+    <a href="../../DevOps/GitLab/" class="dropdown-item">开发管理 GitLab</a>
 </li>
                                     
 <li>
-    <a href="../../DevOps/Jenkins/" class="dropdown-item">持续集成 [*Jenkins*](https://jenkins.io/)</a>
+    <a href="../../DevOps/Jenkins/" class="dropdown-item">持续集成 Jenkins</a>
 </li>
                                 </ul>
                             </li>
@@ -243,14 +291,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../CC/" class="nav-link">
+                                <a rel="prev" href="../VirtualBox/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../AV/FFmpeg/" class="nav-link">
+                                <a rel="next" href="../../DevOps/DevOps/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/afoolsbag/afoolsbag.github.io/" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -270,8 +321,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#mkdocs" class="nav-link">MkDocs</a>
+            <li class="nav-item" data-level="1"><a href="#xshell" class="nav-link">安全壳层客户端 Xshell</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">注册码</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -279,7 +334,59 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="mkdocs">MkDocs</h1></div>
+<h1 id="xshell">安全壳层客户端 Xshell</h1>
+<p>官网 <a href="https://netsarang.com/xshell/">https://netsarang.com/xshell/</a>。</p>
+<h2 id="_1">注册码</h2>
+<p>请到官网申领个人版或购买商业版以支持正版。</p>
+<p>或可转用自由软件世界的替代方案：<a href="https://winscp.net/"><em>WinSCP</em></a> + <a href="https://putty.org/"><em>PuTTY</em></a> 。</p>
+<!--
+  据《中华人民共和国著作权法（2010年2月26日第二次修正版）》第二十二条，
+  下述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+
+  流下了贫穷的泪水 ( TдT)
+
+  经实测，最新版本需要联网验证以激活，下述方法已失效，允悲 (σﾟ∀ﾟ)σ
+
+  1. 访问十分钟邮箱 https://10minutemail.com/
+     以获取一个临时邮箱
+
+  2. 另开标签页，访问官方下载页面 https://netsarang.com/zh/xmanager-power-suite-download/
+     选择 30 天评估，并使用刚刚获取到的邮箱地址和地址里的用户名
+
+  3. 返回十分钟邮箱标签页，此时应当会收到一封邮件
+     邮件内有下载页面地址，形如 https://www.netsarang.com/zh/downloading/?token=*
+
+  4. 访问下载页面地址，醒目处有“begin downloading”超链接，其链接地址形如
+     https://cdn.netsarang.net/????????/XmanagerPowerSuite-?.?.????.exe 是试用版，有时间和标签限制
+     相应的，形如
+     https://cdn.netsarang.net/????????/XmanagerPowerSuite-?.?.????p.exe 是个人版，有标签限制
+     https://cdn.netsarang.net/????????/XmanagerPowerSuite-?.?.????r.exe 是注册版
+     选择需要的版本并下载
+
+  5. 安装前，若有安装旧版则卸载旧版，并清除注册表
+     REG DELETE HKEY_CURRENT_USER\Software\NetSarang /f
+
+  6. 若选择的是注册版，则需要注册码
+     下载 Xmanager-keygen.py 并运行，以获取注册码
+
+     一些可能有效的下载地址
+     https://github.com/DoubleLabyrinth/Xmanager-keygen
+     https://github.com/HeartZhang/Xmanager-keygen
+
+  7. 显然，官方并不认可以此种方式获取到的注册码，所以需要使用一点点额外技术手段来屏蔽联网验证
+     使用管理员权限启动你喜爱的文本编辑器，比如 notepad.exe
+     打开 %WINDIR%\System32\drivers\etc\hosts 并在其中加入以下内容
+
+     127.0.0.1 sales.netsarang.com
+     127.0.0.1 transact.netsarang.com
+     127.0.0.1 update.netsarang.com
+     127.0.0.1 www.netsarang.com
+     127.0.0.1 www.netsarang.co.kr
+
+  8. 安装
+
+  9. 上述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+  --></div>
             </div>
         </div>
 
