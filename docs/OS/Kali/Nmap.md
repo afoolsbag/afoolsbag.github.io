@@ -1,7 +1,9 @@
-# 网络嗅探工具 [*Nmap*](https://nmap.org/)
+# 网络嗅探工具 Nmap
+
+官网 <https://nmap.org/>。
 
 *   [*Reference Guide*](https://nmap.org/man/) <sub>
-        [*zh_cn*](https://nmap.org/man/zh/) </sub>
+        [*zh_cmn*](https://nmap.org/man/zh/) </sub>
 *   [*GUI*](https://nmap.org/zenmap/)
 
 互联网协议套件
@@ -42,14 +44,17 @@ IPv4 地址分配
 255.255.255.255     受限广播（RFC 919）
 ```
 
+___
 ## 命令示例
 
 ```fish
 root@host *# nmap -sn <target>                   # 主机发现
 root@host *# nmap <target>                       # 端口扫描
+root@host *# nmap -p- <target>                   # 全端口扫描
 root@host *# nmap -v -oA <basename> -A <target>  # 信息探测
 ```
 
+___
 ## 命令说明
 
 ### 主机发现
@@ -126,6 +131,7 @@ root@host *# nmap -oA <basename> <target>   # 以上三种输出
 ```
 
 运行时交互：
+
 *   `v`（`V`） 增强（减弱）详细程度
 *   `d`（`D`） 增强（减弱）调试级别
 *   `p`（`P`） 开启（关闭）包追踪

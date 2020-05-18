@@ -1,18 +1,19 @@
-# [*tar*](https://gnu.org/software/tar/)
+# 归档打包工具 tar
 
-*   tape archive
-*   磁带存档
+适用于 GNU/Linux 操作系统的归档打包工具 `tar`（tape archive），官网 <https://gnu.org/software/tar/>。
 
+___
 ## 常用命令组合
 
-```shell script
+```shell
 tar -cavf <archive.tar.*> <source>         # 压缩
 tar -xavf <archive.tar.*> -C <target-dir>  # 解压
 ```
 
+___
 ## 常见选项释义
 
-```shell script
+```shell
 # 操作
 tar -c (--create)   # 创建
 tar -x (--extract)  # 提取

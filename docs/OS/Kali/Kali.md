@@ -1,1 +1,3 @@
-# GNU/Linux 发行版 [*Kali*](https://kali.org/) 操作系统
+# GNU/Linux 发行版 Kali 操作系统
+
+官网 <https://kali.org/>。

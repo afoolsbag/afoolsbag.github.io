@@ -1,8 +1,10 @@
-# 安全壳层客户端 [*Xshell*](https://netsarang.com/xshell/)
+# 安全壳层客户端 Xshell
+
+官网 <https://netsarang.com/xshell/>。
 
 ## 注册码
 
-请到官网 [*NetSarang*](https://netsarang.com/) 申领个人版或购买商业版以支持正版。
+请到官网申领个人版或购买商业版以支持正版。
 
 或可转用自由软件世界的替代方案：[*WinSCP*](https://winscp.net/) + [*PuTTY*](https://putty.org/) 。
 

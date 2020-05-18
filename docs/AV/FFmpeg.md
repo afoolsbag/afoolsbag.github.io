@@ -1,38 +1,42 @@
-# 多媒体处理套件 [*FFmpeg*](https://ffmpeg.org/)
+# 多媒体处理套件 FFmpeg
 
+官网 <https://ffmpeg.org/>。
+
+___
 ## 常用命令
 
 ### 改变封装格式
 
-```cmder
+```batchfile
 λ ffmpeg -i <input-video-path> ^
          -c copy <output-video-path>
 ```
 
 ### 生成缩略图
 
-```cmder
+```batchfile
 λ ffmpeg -i <video-path> ^
          -f mjpeg -ss 1 -frames:v 1 <image-path>
 ```
 
 ### 转文件流到 RTMP 流
 
-```cmder
+```batchfile
 λ ffmpeg -re -i </path/to/video.flv> ^
          -f flv -c copy rtmp://host/live/<stream>
 ```
 
 ### 转 RTSP 流到 RTMP 流
 
-```cmder
+```batchfile
 λ ffmpeg -i rtsp://host/<path/to/stream> ^
          -f flv -c copy rtmp://host/live/<stream>
 ```
 
+___
 ## 命令说明
 
-```cmder
+```batchfile
 λ ffmpeg [global_options] ^
          {[input_file_options] -i input_url} ... ^
          {[output_file_options] output_url} ...
@@ -40,7 +44,7 @@
 
 ### `global_options`
 
-```cmder
+```batchfile
          -loglevel          # 设定日志级别：
          -v        quiet    # 沉默
                    panic    # 崩溃错误
@@ -55,7 +59,7 @@
 
 ### `input/output_file_options`
 
-```cmder
+```batchfile
          -f <fmt>                                 # 指定文件格式
 
          -y                                       # 覆盖输出而不询问

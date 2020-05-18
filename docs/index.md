@@ -2,6 +2,7 @@
 
 一份为 zhengrr 定制化的技术备忘。
 
+___
 ## 挑选趁手的家伙
 
 > Everyone knows it's a mistake to write your whole program by hand in machine language.
@@ -17,6 +18,7 @@
 >
 > *黑客与画家*. 2004.
 
+___
 ## 信息
 
 搜索

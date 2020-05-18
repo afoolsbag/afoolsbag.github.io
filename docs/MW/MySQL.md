@@ -2,14 +2,16 @@
 
 官网 <https://mysql.com/>。
 
+___
+
 登录和登出
-```shell script
+```fish
 fish> mysql -u NAME (--user=USR) -p (--password=PWD)
 mysql> exit
 ```
 
 允许远程管理（允许 `root` 用户远程登录）
-```shell script
+```fish
 # 切换到 `mysql` 数据库
 mysql> use mysql;
 
@@ -27,7 +29,7 @@ mysql> flush privileges;
 ```
 
 禁用 SSL
-```shell script
+```fish
 # 检查是否启用 SSL
 mysql> SHOW VARIABLES LIKE '%ssl%';
 

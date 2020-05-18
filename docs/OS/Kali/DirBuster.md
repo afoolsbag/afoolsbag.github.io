@@ -1,1 +1,3 @@
-# 网站目录扫描工具 [*DieBuster*](https://sourceforge.net/projects/dirbuster/)
+# 网站目录扫描工具 DieBuster
+
+官网 <https://sourceforge.net/projects/dirbuster/>。

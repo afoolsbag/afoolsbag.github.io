@@ -1,8 +1,11 @@
-# 分布式版本控制系统 [*Git*](https://git-scm.com/)
+# 分布式版本控制系统 Git
+
+官网 <https://git-scm.com/>。
 
 *   [*Git 教程*](https://liaoxuefeng.com/wiki/896043488029600)
 *   [*Sourcetree*](https://sourcetreeapp.com/)
 
+___
 ## 配置
 
 ```fish
@@ -27,6 +30,7 @@ user@host *> ssh-keygen -t rsa -C "<email@example.com>"  # ~/.ssh
 user@host *> cd ~/.ssh
 ```
 
+___
 ## 版本库（Repository，`.git`）
 
 ```fish
@@ -62,6 +66,7 @@ user@host ~/wdir> git branch --set-upstream-to=<origin/dev> <dev>
 # abbr.           git branch -u <origin/dev> <dev>
 ```
 
+___
 ## 分支（Branch）
 
 ```fish
@@ -126,6 +131,7 @@ user@host ~/wdir> git restore --staged <file>...    # 回退暂存区修改到�
 # depr.           git reset HEAD [file]...
 ```
 
+___
 ## 工作区（Working Directory，`wdir`）
 
 ```fish
@@ -156,11 +162,12 @@ user@host ~/wdir> git stash apply [stash@{0}]  # 恢复指定的脏工作区，�
 user@host ~/wdir> git stash drop [stash@{0}]   # 丢弃指定的脏工作区
 ```
 
+___
 ## 服务
 
 ### Ubuntu
 
-```sh
+```shell
 # 安装 git
 user@host:*$ sudo apt install git
 

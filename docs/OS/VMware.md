@@ -1,5 +1,8 @@
-# 虚拟机 [*VMware*](https://vmware.com/)
+# 虚拟机 VMware
 
+官网 <https://vmware.com/>。
+
+___
 ## 安装 VMware Tools
 
 *   虚拟系统拥有虚拟 CD/DVD 驱动设备
@@ -11,7 +14,7 @@
 
 ### CentOS
 
-```sh
+```shell
 # 查找 CD/DVD 设备
 [user@host *]$ lsblk
 
@@ -28,9 +31,10 @@
 [user@host *]$ sudo yum install perl
 
 # 安装 VMware Tools
-[user@host *]# sudo ~/vmware-tools-distrib/vmware-install.pl --default
+[user@host *]$ sudo ~/vmware-tools-distrib/vmware-install.pl --default
 ```
 
+___
 ## 注册码
 
-请到官网 [*VMware*](https://vmware.com/) 购买以支持正版。
+请到官网购买以支持正版。

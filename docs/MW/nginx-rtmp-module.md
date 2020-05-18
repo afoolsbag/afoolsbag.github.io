@@ -1,12 +1,13 @@
-# 流媒体服务器 [*nginx-rtmp-module*](https://github.com/arut/nginx-rtmp-module)
+# 流媒体服务器 nginx-rtmp-module
 
-跨平台的流媒体服务器。
+跨平台的流媒体服务器，官网 <https://github.com/arut/nginx-rtmp-module>。
 
+___
 ## 安装
 
 ### CentOS
 
-```sh
+```shell
 # 安装默认版本 GCC
 [user@host *]$ sudo yum group install 'Development Tools'
 
@@ -42,7 +43,7 @@
 
 ### Ubuntu
 
-```sh
+```shell
 # 安装 GCC
 user@host:*$ sudo apt install build-essential
 
@@ -76,6 +77,7 @@ user@host:*$ sudo chmod a+w /var/nginx-rtmp-vod
 # https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/
 ```
 
+___
 ## 配置
 
 ```nginx.conf

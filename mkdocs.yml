@@ -16,9 +16,11 @@ copyright: CC0-1.0
 nav:
     - 码代码:
         - CC/CC.md
-        - CC/MkDocs.md
+        - CC/Vim.md
+        - CC/StarUML.md
     - 音视频:
         - AV/FFmpeg.md
+        - AV/VLC.md
     - 中间件:
         - MW/MySQL.md
         - MW/NGINX.md
@@ -26,6 +28,7 @@ nav:
     - 操作系统:
         - OS/OS.md
         - Windows:
+            - OS/Windows/Windows.md
             - OS/Windows/arp.md
             - OS/Windows/choco.md
             - OS/Windows/ipconfig.md
@@ -33,10 +36,16 @@ nav:
             - OS/Windows/scoop.md
         - GNU/Linux:
             - OS/Linux/Linux.md
+            - OS/Linux/bootstrap.md
             - OS/Linux/ELF.md
             - OS/Linux/fish.md
             - OS/Linux/grep.md
+            - OS/Linux/link aggregation.md
+            - OS/Linux/netfilter.md
+            - OS/Linux/readelf.md
+            - OS/Linux/tar.md
             - OS/Linux/top.md
+            - OS/Linux/user.md
         - Debian:
             - OS/Debian/apt.md
             - OS/Debian/apt-toolchain.md
@@ -53,6 +62,9 @@ nav:
             - OS/Kali/DirBuster.md
             - OS/Kali/Nmap.md
             - OS/Kali/skipfish.md
+        - OS/VMware.md
+        - OS/VirtualBox.md
+        - OS/Xshell.md
     - 开发运维一体化:
         - DevOps/DevOps.md
         - DevOps/Ansible.md

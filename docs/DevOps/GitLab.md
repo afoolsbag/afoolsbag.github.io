@@ -1,1 +1,3 @@
-# 开发管理 [*GitLab*](https://gitlab.com/)
+# 开发管理 GitLab
+
+官网 <https://gitlab.com/>。

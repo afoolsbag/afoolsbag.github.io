@@ -2,20 +2,22 @@
 
 跨平台的网页服务器，官网 <https://nginx.org/>。
 
+___
 ## 安装
 
 ### CentOS
 
-```sh
+```shell
 [user@host *]$ sudo yum install nginx
 ```
 
 ### Ubuntu
 
-```sh
+```shell
 user@host:*$ sudo apt install nginx
 ```
 
+___
 ## 常用命令
 
 ```fish
@@ -34,6 +36,7 @@ user@host *> nginx -s reopen  # 重新打开日志文件
 
 *   防火墙配置
 
+___
 ## 配置说明
 
 ```fish
@@ -90,6 +93,7 @@ http {
 }
 ```
 
+___
 ## 配置示例
 
 ### 简单静态页面
