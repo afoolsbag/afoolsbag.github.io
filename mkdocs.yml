@@ -17,8 +17,10 @@ nav:
     - 码代码:
         - CC/CC.md
         - CC/Vim.md
+        - CC/Emacs.md
         - CC/StarUML.md
     - 音视频:
+        - AV/AV.md
         - AV/FFmpeg.md
         - AV/VLC.md
     - 中间件:
@@ -45,7 +47,7 @@ nav:
             - OS/Linux/readelf.md
             - OS/Linux/tar.md
             - OS/Linux/top.md
-            - OS/Linux/user.md
+            - OS/Linux/users.md
         - Debian:
             - OS/Debian/apt.md
             - OS/Debian/apt-toolchain.md

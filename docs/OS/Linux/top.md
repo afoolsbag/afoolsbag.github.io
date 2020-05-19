@@ -2,6 +2,9 @@
 
 适用于 GNU/Linux 操作系统的进程查看工具 `top`（table of processes）。
 
+___
+## 总览
+
 ```text
 <Esc>/q          <Space>/<Enter>                                                  W
 
@@ -35,7 +38,7 @@ ___
   |     |        |                   当前用户数
   |     |        系统已运行时间
   |     当前时间
-  table od processes
+  table of processes
 ```
 
 ### 任务和处理器信息

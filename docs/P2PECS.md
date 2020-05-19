@@ -22,6 +22,7 @@
 CryptoNote 上的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf) 。
 
 头等仓上的《精通门罗币》翻译连载：
+
 *   [前言](https://www.first.vip/project/3837.html)
 *   [第一章：加密货币与门罗简介（上）](https://www.first.vip/project/3843.html)
 *   [第一章：加密货币与门罗简介（下）](https://www.first.vip/project/3847.html)
@@ -54,7 +55,7 @@ H/s (hashes per seconds)
 *   矿机 [*XMRig-AMD*](https://github.com/xmrig/xmrig-amd)
 *   矿机 [*XMRig-NVIDIA*](https://github.com/xmrig/xmrig-nvidia)
 
-```cmder
+```batchfile
 %USERPROFILE% λ xmrig --url=<pool_url> ^
                       --user=<wallet_address>.<custom_name> ^
                       --pass=x ^

@@ -69,7 +69,8 @@ Markdown
 | [*Markdown*](https://daringfireball.net/markdown/)
 | [*GitHub Flavored Markdown*](https://help.github.com/github/writing-on-github),
   [*Cheatsheet*](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet),
-  [*Syntax High Lighting*](https://help.github.com/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting)
+  [*Syntax High Lighting*](https://help.github.com/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting),
+  [*linguist languages.yml*](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 | [*MkDocs*](https://www.mkdocs.org/)
 
 reStructuredText
@@ -77,3 +78,19 @@ reStructuredText
 
 YAML
 | [*YAML*](https://yaml.org/)
+
+___
+## 文本编辑器
+
+| [*vi*](http://ex-vi.sourceforge.net/ "1976"),
+  [*Vim*](https://www.vim.org/ "1991-11-02"),
+  [*Cheat Sheet*](https://vim.rtorr.com/lang/zh_cn),
+  [*quickref*](http://vimcdoc.sourceforge.net/doc/quickref.html),
+  [*index*](http://vimcdoc.sourceforge.net/doc/index.html),
+  [*help*](http://vimcdoc.sourceforge.net/doc/help.html),
+  [*Chinese Documentation*](http://vimcdoc.sourceforge.net)
+| [*Emacs*](https://www.gnu.org/software/emacs/ "1976")
+| [*UltraEdit*](https://ultraedit.com/ "1994")
+| [*Notepad++*](https://notepad-plus-plus.org/ "2003-11-24")
+| [*Sublime Text*](https://www.sublimetext.com/ "2008-01-18")
+| [*Visual Studio Code*](https://code.visualstudio.com/ "2015-04-29")

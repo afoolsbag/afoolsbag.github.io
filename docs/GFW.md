@@ -7,9 +7,11 @@
 1.  浏览器从网址中解析出主机：
 
     网址即 URL（Uniform Resource Locator，统一资源定位符），是 URI（Uniform Resource Identifier，统一资源标识符）的一种，格式为
-    ```text
+
+    ```
     scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]
     ```
+
     其中的 `host` 即为主机。
     主机可以用域名或 IP（Internet Protocol，网际协议）地址表示，前述的 URL 即以域名 `info.cern.ch` 表示主机。
 
@@ -43,6 +45,7 @@
 通过把持 DNS 服务器，修改域名解析规则，将敏感域名解析到错误的地址，以达到屏蔽效果。
 
 应对：
+
 *   配置 HOSTS，在本机将敏感域名解析为 IP 地址，绕过 DNS 服务器
 *   配置信任的 DNS 服务器
 
@@ -52,6 +55,7 @@ DNS 主要使用 UDP（User Datagram Protocol，用户数据报协议） 53 端�
 于是通过把持网络要冲，对检测到的敏感 DNS 解析请求，抢先回发错误回应，以达到屏蔽效果。
 
 应对：
+
 *   配置 HOSTS，在本机将敏感域名解析为 IP 地址，绕过 DNS 服务器
 
 ## IP 黑名单
@@ -59,6 +63,7 @@ DNS 主要使用 UDP（User Datagram Protocol，用户数据报协议） 53 端�
 通过把持网络要冲，将与敏感 IP 地址交互的数据包拦截，以达到屏蔽效果。
 
 应对：
+
 *   使用代理，不直接访问敏感 IP 地址
 
 ## SNI 阻断

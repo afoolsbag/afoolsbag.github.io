@@ -19,27 +19,34 @@ ___
 > *黑客与画家*. 2004.
 
 ___
-## 信息
+## 搜索
 
-搜索
 | [*Wolfram|Alpha*](https://wolframalpha.com/)
 | [*Wolfram MathWorld*](http://mathworld.wolfram.com/)
 
-新闻
+___
+## 新闻
+
 | [*InfoQ*](https://infoq.cn/)
 | [*好奇心日报*](https://www.qdaily.com/),
   [*后续*](https://houxuapp.com/)
 | [*蓝点网*](https://landiannews.com/)
 
-指数
+___
+## 指数
+
 | [*TIOBE Index*](https://tiobe.com/tiobe-index/)
 
-黄页
+___
+## 黄页
+
 | [*awesome*](https://awesome.re/)
 | [*DevDocs*](https://devdocs.io/)
 | [*OverAPI.com*](http://overapi.com/)
 | [*ProgramCreek.com*](https://programcreek.com/)
 
-书籍
+___
+## 书籍
+
 | [free-programming-books](https://ebookfoundation.github.io/free-programming-books/)
 | [计算机书籍控](http://bestcbooks.com/)

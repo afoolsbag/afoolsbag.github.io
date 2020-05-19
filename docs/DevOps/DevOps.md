@@ -17,23 +17,9 @@
       [*qBittorrent-Enhanced-Edition*](https://github.com/c0re100/qBittorrent-Enhanced-Edition) </sub>,
   [*Transmission*](https://transmissionbt.com/ "一款对等网络下载器")
 
-文本编辑
-| [*Emacs*](https://gnu.org/software/emacs/)
-| [*Notepad++*](https://notepad-plus-plus.org/)
-| [*UltraEdit*](https://ultraedit.com/)
-| [*Vim*](https://www.vim.org/) <sub>
-      [*cheatsheet*](https://vim.rtorr.com/lang/zh_cn),
-      [*quickref*](http://vimcdoc.sourceforge.net/doc/quickref.html),
-      [*index*](http://vimcdoc.sourceforge.net/doc/index.html),
-      [*help*](http://vimcdoc.sourceforge.net/doc/help.html),
-      [*doc*](http://vimcdoc.sourceforge.net) </sub>
-| [*Visual Studio Code*](https://code.visualstudio.com/)
-| [*WinHex*](http://winhex.com/winhex/)
 
 媒体编辑
-| [*Elecard*](https://elecard.com/ "一款视频分析工具")
-| [*MediaInfo*](https://mediaarea.net/MediaInfo "一款视频格式分析工具")
-| [*VLC*](https://videolan.org/ "一款媒体播放器")
+
 
 版本管理
 | [*CVS*](https://savannah.nongnu.org/projects/cvs "Concurrent Versions System, 1990-11-19")

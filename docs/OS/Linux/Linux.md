@@ -76,11 +76,13 @@ ln -s <target-path> <new-path>
 
 ### CentOS
 
-```sh
+```shell
 [user@host *]$ sudo vim /etc/sysconfig/network-scripts/ifcfg-en<*>
 ```
 
-```/etc/sysconfig/network-scripts/ifcfg-en<*>
+```ini
+# /etc/sysconfig/network-scripts/ifcfg-en<*>
+
 # 动态网络配置
 BOOTPROTO=dhcp
 
@@ -93,7 +95,7 @@ DNS1=223.6.6.6
 DNS2=8.8.8.8
 ```
 
-```sh
+```shell
 [user@host *]$ sudo systemctl restart network
 ```
 
