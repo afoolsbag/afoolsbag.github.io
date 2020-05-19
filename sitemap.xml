@@ -1,191 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://afoolsbag.github.io/CC/CC/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/CC/Vim/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://afoolsbag.github.io/CC/Emacs/</loc>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/CC/StarUML/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://afoolsbag.github.io/AV/AV/</loc>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/AV/FFmpeg/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/AV/VLC/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/MW/MySQL/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/MW/NGINX/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/MW/nginx-rtmp-module/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/OS/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Windows/Windows/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Windows/arp/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Windows/choco/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Windows/ipconfig/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Windows/PE/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Windows/scoop/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/Linux/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/bootstrap/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/ELF/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/fish/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/grep/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/link%20aggregation/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/netfilter/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/readelf/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/tar/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Linux/top/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://afoolsbag.github.io/OS/Linux/user/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <loc>https://afoolsbag.github.io/OS/Linux/users/</loc>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Debian/apt/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Debian/apt-toolchain/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Arch/Arch/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Arch/pacman/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Arch/pacman-devel/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/CentOS/CentOS/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/CentOS/yum/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/CentOS/yum-devtoolset/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Kali/Kali/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Kali/DirBuster/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Kali/Nmap/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Kali/skipfish/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/VMware/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/VirtualBox/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/OS/Xshell/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/DevOps/DevOps/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/DevOps/Ansible/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/DevOps/Docker/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/DevOps/Git/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/DevOps/GitLab/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://afoolsbag.github.io/DevOps/Jenkins/</loc>
-     <lastmod>2020-05-18</lastmod>
+     <lastmod>2020-05-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
