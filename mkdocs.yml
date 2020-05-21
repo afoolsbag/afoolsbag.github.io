@@ -44,7 +44,6 @@ nav:
             - OS/Linux/grep.md
             - OS/Linux/link aggregation.md
             - OS/Linux/netfilter.md
-            - OS/Linux/readelf.md
             - OS/Linux/tar.md
             - OS/Linux/top.md
             - OS/Linux/users.md
@@ -67,13 +66,13 @@ nav:
         - OS/VMware.md
         - OS/VirtualBox.md
         - OS/Xshell.md
-    - 开发运维一体化:
+    - 开发运维:
         - DevOps/DevOps.md
-        - DevOps/Ansible.md
-        - DevOps/Docker.md
         - DevOps/Git.md
         - DevOps/GitLab.md
         - DevOps/Jenkins.md
+        - DevOps/Docker.md
+        - DevOps/Ansible.md
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories

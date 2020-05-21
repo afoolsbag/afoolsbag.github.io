@@ -1,4 +1,20 @@
-# 开发运维一体化
+# 开发运维
+
+<https://xie.infoq.cn/article/be5164d597d29c9e6ba4180a6>
+
+![DevOps](DevOps.png)
+
+## 持续开发
+
+## 持续集成
+
+## 持续测试
+
+## 持续部署
+
+## 持续监控
+
+## 持续反馈
 
 维护和自动化
 | [*AutoHotkey*](https://autohotkey.com/ "一款自动化脚本语言")
@@ -16,9 +32,6 @@
   [*qBittorrent*](https://qbittorrent.org/ "一款对等网络下载器") <sub>
       [*qBittorrent-Enhanced-Edition*](https://github.com/c0re100/qBittorrent-Enhanced-Edition) </sub>,
   [*Transmission*](https://transmissionbt.com/ "一款对等网络下载器")
-
-
-媒体编辑
 
 
 版本管理

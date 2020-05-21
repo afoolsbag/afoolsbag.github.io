@@ -1,6 +1,6 @@
-# 命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)
+# 命令行壳层 fish
 
-跨平台的命令行壳层。
+跨平台的命令行壳层 fish（friendly interactive shell），官网 <https://fishshell.com/>。
 
 ## 查询当前壳层
 

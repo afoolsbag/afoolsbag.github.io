@@ -7,11 +7,11 @@ ___
 
 ```fish
 # 压缩
-user@gost *> tar --create --auto-compress --verbose --file=<archive.tar.*> <source>...
+user@host *> tar --create --auto-compress --verbose --file=<archive.tar.*> <source>...
 # abbr.      tar -cavf <archive.tar.*> <source>...
 
 # 解压
-user@gost *> tar --extract --auto-compress --verbose --file=<archive.tar.*> [--directory=<dir>]
+user@host *> tar --extract --auto-compress --verbose --file=<archive.tar.*> [--directory=<dir>]
 user@host *> tar -xavf <archive.tar.*> [-C <dir>]
 ```
 
