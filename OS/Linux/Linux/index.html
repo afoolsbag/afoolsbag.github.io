@@ -139,11 +139,11 @@
 </li>
             
 <li>
-    <a href="../ELF/" class="dropdown-item">ELF</a>
+    <a href="../ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
-    <a href="../fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+    <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
@@ -159,10 +159,6 @@
 </li>
             
 <li>
-    <a href="../readelf/" class="dropdown-item">[`readelf`](https://linux.die.net/man/1/readelf)</a>
-</li>
-            
-<li>
     <a href="../tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -171,7 +167,7 @@
 </li>
             
 <li>
-    <a href="../users/" class="dropdown-item">用户管理工具 users 等</a>
+    <a href="../users/" class="dropdown-item">用户管理工具套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -213,7 +209,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
 </li>
             
 <li>
@@ -262,19 +258,11 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
-</li>
-                                    
-<li>
-    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 Ansible</a>
-</li>
-                                    
-<li>
-    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 Docker</a>
+    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维</a>
 </li>
                                     
 <li>
@@ -287,6 +275,14 @@
                                     
 <li>
     <a href="../../../DevOps/Jenkins/" class="dropdown-item">持续集成 Jenkins</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 Ansible</a>
 </li>
                                 </ul>
                             </li>
@@ -340,10 +336,6 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">符号链接</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#ipv4" class="nav-link">配置静态 IPv4</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -415,34 +407,7 @@ user@host *&gt; lsblk
 
 <h2 id="_3">符号链接</h2>
 <pre><code class="sh">ln -s &lt;target-path&gt; &lt;new-path&gt;
-</code></pre>
-
-<h2 id="ipv4">配置静态 IPv4</h2>
-<h3 id="kali">Kali</h3>
-<p>图形用户界面，略。</p>
-<h3 id="centos">CentOS</h3>
-<pre><code class="shell">[user@host *]$ sudo vim /etc/sysconfig/network-scripts/ifcfg-en&lt;*&gt;
-</code></pre>
-
-<pre><code class="ini"># /etc/sysconfig/network-scripts/ifcfg-en&lt;*&gt;
-
-# 动态网络配置
-BOOTPROTO=dhcp
-
-# 静态网络配置
-BOOTPROTO=static
-IPADDR=192.168.0.1
-NETMASK=255.255.255.0
-GATEWAY=192.168.0.254
-DNS1=223.6.6.6
-DNS2=8.8.8.8
-</code></pre>
-
-<pre><code class="shell">[user@host *]$ sudo systemctl restart network
-</code></pre>
-
-<h3 id="ubuntu-desktop">Ubuntu Desktop</h3>
-<p>图形用户界面，略。</p></div>
+</code></pre></div>
             </div>
         </div>
 

@@ -8,7 +8,7 @@
         <meta name="author" content="zhengrr">
         <link rel="canonical" href="https://afoolsbag.github.io/OS/Linux/users/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>用户管理工具 users 等 - zhengrr's docs</title>
+        <title>用户管理工具套件 users 等 - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -139,11 +139,11 @@
 </li>
             
 <li>
-    <a href="../ELF/" class="dropdown-item">ELF</a>
+    <a href="../ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
-    <a href="../fish/" class="dropdown-item">命令行壳层 [*fish*](https://fishshell.com/) (friendly interactive shell)</a>
+    <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
@@ -159,10 +159,6 @@
 </li>
             
 <li>
-    <a href="../readelf/" class="dropdown-item">[`readelf`](https://linux.die.net/man/1/readelf)</a>
-</li>
-            
-<li>
     <a href="../tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -171,7 +167,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">用户管理工具 users 等</a>
+    <a href="./" class="dropdown-item active">用户管理工具套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -213,7 +209,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 [*CentOS*](https://centos.org/) 操作系统</a>
+    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
 </li>
             
 <li>
@@ -262,19 +258,11 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维一体化 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发运维 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维一体化</a>
-</li>
-                                    
-<li>
-    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 Ansible</a>
-</li>
-                                    
-<li>
-    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 Docker</a>
+    <a href="../../../DevOps/DevOps/" class="dropdown-item">开发运维</a>
 </li>
                                     
 <li>
@@ -287,6 +275,14 @@
                                     
 <li>
     <a href="../../../DevOps/Jenkins/" class="dropdown-item">持续集成 Jenkins</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Docker/" class="dropdown-item">持续容器 Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../DevOps/Ansible/" class="dropdown-item">持续配置 Ansible</a>
 </li>
                                 </ul>
                             </li>
@@ -329,7 +325,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#users" class="nav-link">用户管理工具 users 等</a>
+            <li class="nav-item" data-level="1"><a href="#users" class="nav-link">用户管理工具套件 users 等</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
@@ -342,31 +338,32 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="users">用户管理工具 users 等</h1>
+<h1 id="users">用户管理工具套件 users 等</h1>
 <hr />
 <h2 id="_1">常用命令组合</h2>
 <pre><code class="fish">user@host *&gt; users          # 输出已登陆用户的用户名
 user@host *&gt; who --heading  # 输出已登录用户的用户信息
 # abbr.      who -H
 user@host *&gt; w              # 输出已登录用户的用户信息，和他们正在做什么
-</code></pre>
 
-<h3 id="_2">新建用户</h3>
-<pre><code class="fish"># 新建用户[，并创建用户主目录]
-user@host *&gt; useradd [--create-home] &lt;username&gt;
-# abbr.      useradd [-m] &lt;username&gt;
+user@host *&gt; sudo usermod --shell /sbin/nologin &lt;username&gt;  # 禁止用户登录
+# abbr.      sudo usermod -s /sbin/nologin &lt;username&gt;
+user@host *&gt; sudo usermod --shell /bin/bash &lt;username&gt;      # 允许用户登录
+# abbr.      sudo usermod -s /bin/bash &lt;username&gt;
 
-# 交互式修改用户密码
-user@host *&gt; passwd &lt;username&gt;
-
-# 可选的，为用户赋予 `sudo` 权限
-user@host *&gt; echo &quot;&lt;username&gt; ALL=(ALL) NOPASSWD:ALL&quot; | sudo tee /etc/sudoers.d/&lt;username&gt;
-</code></pre>
-
-<h3 id="_3">删除用户</h3>
-<pre><code class="fish"># 删除用户[，并移除用户主目录]
-user@host *&gt; userdel [--remove] &lt;username&gt;
+user@host *&gt; useradd [--create-home] --shell /bin/bash &lt;username&gt;  # 新建用户[，并创建用户主目录]
+# abbr.      useradd [-m] -s /bin/bash &lt;username&gt;
+user@host *&gt; passwd &lt;username&gt;                                     # 交互式修改用户密码
+user@host *&gt; userdel [--remove] &lt;username&gt;                         # 删除用户[，并移除用户主目录]
 # abbr.      userdel [-r] &lt;username&gt;
+
+# 为用户赋予 `sudo` 权限
+user@host *&gt; echo &quot;&lt;username&gt; ALL=(ALL) NOPASSWD:ALL&quot; | sudo tee /etc/sudoers.d/&lt;username&gt;
+
+# 新建后门用户
+user@host *&gt; sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash &lt;username&gt;
+# abbr.      sudo useradd -d /dev/null -g root -l -M -s /bin/bash &lt;username&gt;
+user@host *&gt; sudo passwd &lt;username&gt;
 </code></pre></div>
             </div>
         </div>
