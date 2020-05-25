@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/OS/Linux/bootstrap/">
+        <link rel="canonical" href="https://afoolsbag.github.io/OS/Windows/Cmder/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>启动 - zhengrr's docs</title>
+        <title>命令行壳层 Cmder - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -101,27 +101,35 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../Windows/Windows/" class="dropdown-item">Windows 操作系统</a>
+    <a href="../Windows/" class="dropdown-item">Windows 操作系统</a>
 </li>
             
 <li>
-    <a href="../../Windows/arp/" class="dropdown-item">地址解析协议转换表操作工具 arp</a>
+    <a href="../PE/" class="dropdown-item">可移植可执行格式 PE</a>
 </li>
             
 <li>
-    <a href="../../Windows/choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+    <a href="./" class="dropdown-item active">命令行壳层 Cmder</a>
 </li>
             
 <li>
-    <a href="../../Windows/ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+    <a href="../Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
             
 <li>
-    <a href="../../Windows/PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
+    <a href="../arp/" class="dropdown-item">地址解析协议转换表操作工具 arp</a>
 </li>
             
 <li>
-    <a href="../../Windows/scoop/" class="dropdown-item">包管理器 `scoop`</a>
+    <a href="../choco/" class="dropdown-item">包管理器 `choco` (chocolatey)</a>
+</li>
+            
+<li>
+    <a href="../ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
+</li>
+            
+<li>
+    <a href="../scoop/" class="dropdown-item">包管理器 `scoop`</a>
 </li>
     </ul>
   </li>
@@ -131,43 +139,39 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+    <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">启动</a>
+    <a href="../../Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
-    <a href="../ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
+    <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
+    <a href="../../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
 </li>
             
 <li>
-    <a href="../grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../../Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
 </li>
             
 <li>
-    <a href="../link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
 </li>
             
 <li>
-    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
+    <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
 <li>
-    <a href="../tar/" class="dropdown-item">归档打包工具 tar</a>
+    <a href="../../Linux/top/" class="dropdown-item">进程查看工具 top</a>
 </li>
             
 <li>
-    <a href="../top/" class="dropdown-item">进程查看工具 top</a>
-</li>
-            
-<li>
-    <a href="../users/" class="dropdown-item">用户管理工具套件 users 等</a>
+    <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -295,12 +299,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Linux/" class="nav-link">
+                                <a rel="prev" href="../PE/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../ELF/" class="nav-link">
+                                <a rel="next" href="../Cheat%20Engine/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -325,7 +329,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">启动</a>
+            <li class="nav-item" data-level="1"><a href="#cmder" class="nav-link">命令行壳层 Cmder</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -334,122 +338,8 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">启动</h1>
-<p><code>shell script
-sudo shutdown -r now  # 安全地重启系统
-sudo shutdown -h now  # 安全地关闭系统
-sudo halt             # 硬停机
-sudo poweroff         # 硬掉电
-sudo reboot           # 硬重启</code></p>
-<p><a href="http://linux.vbird.org/linux_basic/0510osloader.php">“第十九章、開機流程、模組管理與 Loader”</a>. <em>鳥哥的 Linux 私房菜</em>.</p>
-<ol>
-<li>
-<p>开机</p>
-</li>
-<li>
-<p>非易失性存储器（NVM，Non-Volatile Memory）中的固件——基本输入输出系统（BIOS，Basic Input/Output System）或统一可扩展固件接口（UEFI，Unified Extensible Firmware Interface），被加载到主存并运行：</p>
-<ol>
-<li>
-<p>加电自检（POST，Power-On Self-Test）</p>
-</li>
-<li>
-<p>启动设备（Boot Device）中的、可选的全局唯一标识分区表（GPT，GUID Partition Table）中的、主引导记录（MBR，Master Boot Record）中的、一阶段引导程序（1st-Stage Boot Loader），被加载到主存并运行</p>
-<p>常见的一阶段引导程序：
-*   coreboot
-*   Libreboot
-*   Das U-Boot</p>
-</li>
-<li>
-<p>可选的，引导分区（Boot Partition）中的、引导扇区（Boot Sector）中的、二阶段引导程序（2nd-Stage Boot Loader），被加载到主存并运行</p>
-<p>常见的二阶段引导程序：
-*   GRUB (UNIX-like)
-*   BOOTMGR
-*   NTLDR (Windows)
-*   BootX (macOS)
-*   SYSLINUX (Linux)</p>
-</li>
-<li>
-<p>Linux 内核（<code>/boot/vmlinuz</code>）被解压并加载到主存</p>
-</li>
-<li>
-<p>虚拟文件系统（<code>/boot/initrd</code> 或 <code>/boot/initramfs</code>）被解压、加载到主存、并挂载为根目录</p>
-</li>
-<li>
-<p>引导程序将控制权交予操作系统</p>
-</li>
-</ol>
-</li>
-<li>
-<p>操作系统第一次调用 <code>systemd</code> 守护进程，执行 <code>initrd.target</code>：</p>
-<ol>
-<li>
-<p>执行硬件检测</p>
-</li>
-<li>
-<p>从虚拟文件系统中加载内核模块（<code>/lib/modules/$(uname -r)/kernel</code>）到主存，主要是存储设备的驱动程序</p>
-</li>
-<li>
-<p>卸载虚拟文件系统</p>
-</li>
-<li>
-<p>挂载实际文件系统到根目录</p>
-</li>
-<li>
-<p>硬件就绪（Ready）</p>
-</li>
-</ol>
-</li>
-<li>
-<p>操作系统第二次调用 <code>systemd</code> 守护进程，进程标识 <code>1</code> 号：</p>
-<ol>
-<li>
-<p>执行 <code>/etc/systemd/system/default.target</code>，通常链接为 <code>/usr/lib/systemd/system/multi-user.target</code> 或 <code>/usr/lib/systemd/system/graphical.target</code>，假定链接为后者</p>
-<p>系统定义的 <code>*.target[.wants]</code> 置于 <code>/usr/lib/systemd/system</code>，用户定义的 <code>*.target[.wants]</code> 置于 <code>/etc/systemd/system</code>，为与 System V 兼容，系统 <code>*.target</code> 有以下别名：</p>
-<p><code>shell script
-/usr/lib/systemd/system/runlevel0.target  # poweroff.target
-                        runlevel1.target  # rescue.target
-                        runlevel2.target  # multi-user.target
-                        runlevel3.target  # multi-user.target
-                        runlevel4.target  # multi-user.target
-                        runlevel5.target  # graphical.target
-                        runlevel6.target  # reboot.target</code></p>
-<p>使用 <code>systemctl list-dependencies default.target</code> 可以列出完整依赖列表，下述按执行顺序，选取关注项列出：</p>
-</li>
-<li>
-<p>执行 <code>sysinit.target</code> 初始化系统，由 <code>basic.target</code> 依赖</p>
-<ol>
-<li>
-<p>依据 <code>/etc/modules-load.d/*.conf</code> 加载额外核心模块</p>
-</li>
-<li>
-<p>依据 <code>/etc/modprobe.d/*.conf</code> 加载额外核心模块参数</p>
-</li>
-<li>
-<p>依据 <code>/etc/sysctl.conf</code> 加载核心参数，依据 <code>/etc/sysctl.d/*.conf</code> 加载额外核心参数</p>
-</li>
-</ol>
-</li>
-<li>
-<p>执行 <code>basic.target</code> 准备系统，由 <code>multi-user.target</code> 依赖</p>
-<ol>
-<li>依据 <code>/etc/rc.modules</code> 和 <code>/etc/sysconfig/modules/*.modules</code> 加载模块</li>
-</ol>
-</li>
-<li>
-<p>执行 <code>multi-user.target</code>，由 <code>graphical.target</code> 依赖</p>
-<ol>
-<li>
-<p>为与 System V 兼容，若 <code>/etc/rc.local</code> 可读可执行，则执行</p>
-<p>若 <code>/etc/rc.local</code> 链接到 <code>/etc/rc.d/rc.local</code>，则此二者都需要可读和可执行权限</p>
-</li>
-</ol>
-</li>
-<li>
-<p>执行 <code>graphical.target</code>，由 <code>default.target</code> 链接</p>
-</li>
-</ol>
-</li>
-</ol></div>
+<h1 id="cmder">命令行壳层 Cmder</h1>
+<p>适用于 Windows 操作系统的命令行壳层 Cmder（Console Emulator），官网 <a href="https://cmder.net/">https://cmder.net/</a>。</p></div>
             </div>
         </div>
 

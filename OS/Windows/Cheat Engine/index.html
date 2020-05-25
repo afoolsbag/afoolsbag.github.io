@@ -8,7 +8,7 @@
         <meta name="author" content="zhengrr">
         <link rel="canonical" href="https://afoolsbag.github.io/OS/Windows/Cheat%20Engine/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>[*Cheat Engine*](https://cheatengine.org/) - zhengrr's docs</title>
+        <title>单人游戏修改器 Cheat Engine - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -88,7 +88,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">操作系统 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -105,6 +105,18 @@
 </li>
             
 <li>
+    <a href="../PE/" class="dropdown-item">可移植可执行格式 PE</a>
+</li>
+            
+<li>
+    <a href="../Cmder/" class="dropdown-item">命令行壳层 Cmder</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">单人游戏修改器 Cheat Engine</a>
+</li>
+            
+<li>
     <a href="../arp/" class="dropdown-item">地址解析协议转换表操作工具 arp</a>
 </li>
             
@@ -114,10 +126,6 @@
             
 <li>
     <a href="../ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
-</li>
-            
-<li>
-    <a href="../PE/" class="dropdown-item">可移植可执行（Portable Executable）文件</a>
 </li>
             
 <li>
@@ -132,10 +140,6 @@
             
 <li>
     <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Linux/bootstrap/" class="dropdown-item">启动</a>
 </li>
             
 <li>
@@ -295,6 +299,16 @@
                             </a>
                         </li>
                             <li class="nav-item">
+                                <a rel="prev" href="../Cmder/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../arp/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="https://github.com/afoolsbag/afoolsbag.github.io/" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
                             </li>
                     </ul>
@@ -315,9 +329,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#cheat-engine" class="nav-link">Cheat Engine</a>
+            <li class="nav-item" data-level="1"><a href="#cheat-engine" class="nav-link">单人游戏修改器 Cheat Engine</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">汇编</a>
+            <li class="nav-item" data-level="2"><a href="#x86-64" class="nav-link">x86-64 架构的寄存器</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#x86-64_1" class="nav-link">x86-64 架构的指令</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -328,147 +346,283 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="cheat-engine"><a href="https://cheatengine.org/"><em>Cheat Engine</em></a></h1>
-<h2 id="_1"><a href="https://wiki.cheatengine.org/index.php?title=Assembler">汇编</a></h2>
-<h3 id="_2"><a href="https://wiki.cheatengine.org/index.php?title=Assembler#Purpose">寄存器</a></h3>
+<h1 id="cheat-engine">单人游戏修改器 Cheat Engine</h1>
+<p>适用于 Windows 操作系统的单人游戏修改器 CE（Cheat Engine），官网 <a href="https://cheatengine.org/">https://cheatengine.org/</a>。</p>
+<p>Cheat Engine Wiki 上关于汇编的文档 <a href="https://wiki.cheatengine.org/index.php?title=Assembler">https://wiki.cheatengine.org/index.php?title=Assembler</a>。</p>
+<hr />
+<h2 id="x86-64">x86-64 架构的寄存器</h2>
+<p>Cheat Engine Wiki 上关于寄存器的文档 <a href="https://wiki.cheatengine.org/index.php?title=Assembler#Registers">https://wiki.cheatengine.org/index.php?title=Assembler#Registers</a>。</p>
 <table>
 <thead>
 <tr>
-<th align="left">name</th>
+<th align="center">64:63-0</th>
+<th align="center">32:31-0</th>
+<th align="center">16:15-0</th>
+<th align="center">8:15-8</th>
+<th align="center">8:7-0</th>
 <th align="left">term</th>
 <th align="left">description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>RAX</code>/<code>EAX</code>/<code>AX</code>/<code>AH</code>/<code>AL</code></td>
+<td align="center">register-</td>
+<td align="center">extended-</td>
+<td align="center">-hex</td>
+<td align="center">-high</td>
+<td align="center">-low</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>RAX</code></td>
+<td align="center"><code>EAX</code></td>
+<td align="center"><code>AX</code></td>
+<td align="center"><code>AH</code></td>
+<td align="center"><code>AL</code></td>
 <td align="left">accumulator</td>
 <td align="left">累加器</td>
 </tr>
 <tr>
-<td align="left"><code>RBX</code>/<code>EBX</code>/<code>BX</code>/<code>AH</code>/<code>BL</code></td>
+<td align="center"><code>RBX</code></td>
+<td align="center"><code>EBX</code></td>
+<td align="center"><code>BX</code></td>
+<td align="center"><code>BH</code></td>
+<td align="center"><code>BL</code></td>
 <td align="left">base index</td>
-<td align="left">基址索引，用于数组</td>
+<td align="left">数组的基址索引</td>
 </tr>
 <tr>
-<td align="left"><code>RCX</code>/<code>ECX</code>/<code>CX</code>/<code>CH</code>/<code>CL</code></td>
+<td align="center"><code>RCX</code></td>
+<td align="center"><code>ECX</code></td>
+<td align="center"><code>CX</code></td>
+<td align="center"><code>CH</code></td>
+<td align="center"><code>CL</code></td>
 <td align="left">counter</td>
-<td align="left">计数器，用于循环和字符串</td>
+<td align="left">循环和字符串的计数器</td>
 </tr>
 <tr>
-<td align="left"><code>RDX</code>/<code>EDX</code>/<code>DX</code>/<code>DH</code>/<code>DL</code></td>
+<td align="center"><code>RDX</code></td>
+<td align="center"><code>EDX</code></td>
+<td align="center"><code>DX</code></td>
+<td align="center"><code>DH</code></td>
+<td align="center"><code>DL</code></td>
 <td align="left"></td>
-<td align="left">用于扩展累加器的精度</td>
+<td align="left">累加器精度扩展</td>
 </tr>
 <tr>
-<td align="left"><code>RSI</code>/<code>ESI</code>/<code>SI</code></td>
+<td align="center">register-</td>
+<td align="center">extended-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-low</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>RSI</code></td>
+<td align="center"><code>ESI</code></td>
+<td align="center"><code>SI</code></td>
+<td align="center"></td>
+<td align="center"><code>SIL</code></td>
 <td align="left">source index</td>
-<td align="left">源索引，用于字符串操作</td>
+<td align="left">字符串操作的源索引</td>
 </tr>
 <tr>
-<td align="left"><code>RDI</code>/<code>EDI</code>/<code>DI</code></td>
+<td align="center"><code>RSI</code></td>
+<td align="center"><code>ESI</code></td>
+<td align="center"><code>SI</code></td>
+<td align="center"></td>
+<td align="center"><code>SIL</code></td>
 <td align="left">destination index</td>
-<td align="left">目的索引，用于字符串操作</td>
+<td align="left">字符串操作的目的索引</td>
 </tr>
 <tr>
-<td align="left"><code>RBP</code>/<code>EBP</code>/<code>BP</code></td>
+<td align="center"><code>RBP</code></td>
+<td align="center"><code>EBP</code></td>
+<td align="center"><code>BP</code></td>
+<td align="center"></td>
+<td align="center"><code>BPL</code></td>
 <td align="left">base pointer</td>
 <td align="left">栈基指针</td>
 </tr>
 <tr>
-<td align="left"><code>RSP</code>/<code>ESP</code>/<code>SP</code></td>
+<td align="center"><code>RSP</code></td>
+<td align="center"><code>ESP</code></td>
+<td align="center"><code>SP</code></td>
+<td align="center"></td>
+<td align="center"><code>SPL</code></td>
 <td align="left">stack pointer</td>
 <td align="left">栈顶指针</td>
 </tr>
 <tr>
-<td align="left"><code>R8</code>/<code>R8D</code>/<code>R8W</code>/<code>R8B</code></td>
+<td align="center">register-</td>
+<td align="center">-double-word</td>
+<td align="center">-word</td>
+<td align="center">-</td>
+<td align="center">-byte</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R9</code>/<code>R9D</code>/<code>R9W</code>/<code>R9B</code></td>
+<td align="center"><code>R8</code></td>
+<td align="center"><code>R8D</code></td>
+<td align="center"><code>R8W</code></td>
+<td align="center"></td>
+<td align="center"><code>R8B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R10</code>/<code>R10D</code>/<code>R10W</code>/<code>R10B</code></td>
+<td align="center"><code>R9</code></td>
+<td align="center"><code>R9D</code></td>
+<td align="center"><code>R9W</code></td>
+<td align="center"></td>
+<td align="center"><code>R9B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R11</code>/<code>R11D</code>/<code>R11W</code>/<code>R11B</code></td>
+<td align="center"><code>R10</code></td>
+<td align="center"><code>R10D</code></td>
+<td align="center"><code>R10W</code></td>
+<td align="center"></td>
+<td align="center"><code>R10B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R12</code>/<code>R12D</code>/<code>R12W</code>/<code>R12B</code></td>
+<td align="center"><code>R11</code></td>
+<td align="center"><code>R11D</code></td>
+<td align="center"><code>R11W</code></td>
+<td align="center"></td>
+<td align="center"><code>R11B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R13</code>/<code>R13D</code>/<code>R13W</code>/<code>R13B</code></td>
+<td align="center"><code>R12</code></td>
+<td align="center"><code>R12D</code></td>
+<td align="center"><code>R12W</code></td>
+<td align="center"></td>
+<td align="center"><code>R12B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R14</code>/<code>R14D</code>/<code>R14W</code>/<code>R14B</code></td>
+<td align="center"><code>R13</code></td>
+<td align="center"><code>R13D</code></td>
+<td align="center"><code>R13W</code></td>
+<td align="center"></td>
+<td align="center"><code>R13B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>R15</code>/<code>R15D</code>/<code>R15W</code>/<code>R15B</code></td>
+<td align="center"><code>R14</code></td>
+<td align="center"><code>R14D</code></td>
+<td align="center"><code>R14W</code></td>
+<td align="center"></td>
+<td align="center"><code>R14B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"><code>RIP</code>/<code>EIP</code>/<code>IP</code></td>
+<td align="center"><code>R15</code></td>
+<td align="center"><code>R15D</code></td>
+<td align="center"><code>R15W</code></td>
+<td align="center"></td>
+<td align="center"><code>R15B</code></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">register-</td>
+<td align="center">extended-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>RIP</code></td>
+<td align="center"><code>EIP</code></td>
+<td align="center"><code>IP</code></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="left">instruction pointer</td>
 <td align="left">指令指针</td>
 </tr>
 <tr>
-<td align="left"><code>CS</code></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>CS</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="left">code segment</td>
 <td align="left">代码段</td>
 </tr>
 <tr>
-<td align="left"><code>DS</code></td>
-<td align="left">data segment</td>
-<td align="left">数据段</td>
-</tr>
-<tr>
-<td align="left"><code>SS</code></td>
+<td align="center"><code>SS</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="left">stack segment</td>
 <td align="left">栈段</td>
 </tr>
 <tr>
-<td align="left"><code>ES</code></td>
+<td align="center"><code>DS</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left">data segment</td>
+<td align="left">数据段</td>
+</tr>
+<tr>
+<td align="center"><code>ES</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="left">extra segment</td>
 <td align="left">附加段</td>
 </tr>
 <tr>
-<td align="left"><code>FS</code></td>
+<td align="center"><code>FS</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="left">extra segment #2</td>
 <td align="left">附加段 #2</td>
 </tr>
 <tr>
-<td align="left"><code>GS</code></td>
+<td align="center"><code>GS</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="left">extra segment #3</td>
 <td align="left">附加段 #3</td>
 </tr>
 </tbody>
 </table>
-<p><code>R?X</code> register, <code>E?X</code> extended, <code>?X</code> hex, <code>?H</code> high, <code>?L</code> low;
-<code>R?</code> register, <code>R?D</code> double-word, <code>R?W</code> word, <code>R?B</code> byte.</p>
-<pre><code>&lt;                            R?X/R?I/R?P/R?                           &gt;
-                                    &lt;          E?X/E?I/E?P/R?D        &gt;
-                                                      &lt;  ?X/?I/?P/R?B &gt;
-                                                      &lt;  ?H  &gt; &lt;?L/R?B&gt;
-........ ........ ........ ........ ........ ........ ........ ........
-63    56 55    48 47    40 39    32 31    24 23    16 15     8 7      0
-</code></pre>
-
 <p><img alt="https://wiki.cheatengine.org/index.php?title=Assembler#Structure" src="https://wiki.cheatengine.org/images/2/2c/Table_of_x86_Registers_svg.svg.png" /></p>
-<h3 id="_3"><a href="https://wiki.cheatengine.org/index.php?title=Assembler:Commands">指令</a></h3>
+<hr />
+<h2 id="x86-64_1">x86-64 架构的指令</h2>
+<p>Cheat Engine Wiki 上关于指令的文档 <a href="https://wiki.cheatengine.org/index.php?title=Assembler:Commands">https://wiki.cheatengine.org/index.php?title=Assembler:Commands</a>。</p>
 <table>
 <thead>
 <tr>
@@ -479,7 +633,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>[</code>*<code>]</code></td>
+<td align="left"><code>[</code>...<code>]</code></td>
 <td align="left"></td>
 <td align="left">解引用，类似于 C 语言中的 <code>*</code> 操作符</td>
 </tr>

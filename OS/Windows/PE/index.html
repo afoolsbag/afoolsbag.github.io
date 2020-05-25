@@ -8,7 +8,7 @@
         <meta name="author" content="zhengrr">
         <link rel="canonical" href="https://afoolsbag.github.io/OS/Windows/PE/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>可移植可执行（Portable Executable）文件 - zhengrr's docs</title>
+        <title>可移植可执行格式 PE - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -105,6 +105,18 @@
 </li>
             
 <li>
+    <a href="./" class="dropdown-item active">可移植可执行格式 PE</a>
+</li>
+            
+<li>
+    <a href="../Cmder/" class="dropdown-item">命令行壳层 Cmder</a>
+</li>
+            
+<li>
+    <a href="../Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
+</li>
+            
+<li>
     <a href="../arp/" class="dropdown-item">地址解析协议转换表操作工具 arp</a>
 </li>
             
@@ -114,10 +126,6 @@
             
 <li>
     <a href="../ipconfig/" class="dropdown-item">[ipconfig](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)</a>
-</li>
-            
-<li>
-    <a href="./" class="dropdown-item active">可移植可执行（Portable Executable）文件</a>
 </li>
             
 <li>
@@ -132,10 +140,6 @@
             
 <li>
     <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Linux/bootstrap/" class="dropdown-item">启动</a>
 </li>
             
 <li>
@@ -295,12 +299,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../ipconfig/" class="nav-link">
+                                <a rel="prev" href="../Windows/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../scoop/" class="nav-link">
+                                <a rel="next" href="../Cmder/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -325,7 +329,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#portable-executable" class="nav-link">可移植可执行（Portable Executable）文件</a>
+            <li class="nav-item" data-level="1"><a href="#pe" class="nav-link">可移植可执行格式 PE</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -334,26 +338,26 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="portable-executable">可移植可执行（Portable Executable）文件</h1>
-<ul>
-<li><a href="https://sweetscape.com/010editor/"><em>010 Editor</em></a></li>
-<li>
-<p><a href="http://winhex.com/winhex/"><em>WinHex</em></a></p>
-</li>
-<li>
-<p><a href="https://aldeid.com/wiki/PEiD"><em>PEiD</em></a> (Only PE)</p>
-</li>
-<li>
-<p><a href="http://exeinfo.xn.pl/"><em>Exeinfo PE</em></a></p>
-</li>
-<li>
-<p><a href="https://aldeid.com/wiki/LordPE"><em>LoadPE</em></a> (Only PE)</p>
-</li>
-<li><a href="https://ntcore.com/?page_id=388"><em>Explorer-Suite</em></a> <sub>
-        <a href="https://aldeid.com/wiki/Explorer-Suite"><em>aldeid</em></a> </sub></li>
-<li><a href="http://angusj.com/resourcehacker/"><em>Resource Hacker</em></a> <sub>
-        <a href="https://aldeid.com/wiki/ResourceHacker"><em>aldeid</em></a> </sub></li>
-</ul></div>
+<h1 id="pe">可移植可执行格式 PE</h1>
+<p>适用于 Windows 操作系统的应用程序二进制接口规范 PE（Portable Executable）。</p>
+<p>| <a href="#" title="PE32 查壳工具">PEiD</a> <sub>
+      <a href="https://www.aldeid.com/wiki/PEiD"><em>aldeid</em></a> </sub>,
+  <a href="http://exeinfo.xn.pl/" title="PE 查壳工具"><em>Exeinfo PE</em></a> <sub>
+      <a href="https://www.aldeid.com/wiki/Exeinfo-PE"><em>aldeid</em></a> </sub>
+| <a href="#" title="PE32 修复工具">LoadPE</a> <sub>
+      <a href="https://www.aldeid.com/wiki/LordPE"><em>aldeid</em></a> </sub>
+| <a href="http://dependencywalker.com/" title="PE 依赖查询工具"><em>Dependency Walker</em></a> <sub>
+      <a href="https://www.aldeid.com/wiki/Dependency-Walker"><em>aldeid</em></a> </sub>
+| <a href="http://angusj.com/resourcehacker/" title="PE 资源编辑工具"><em>Resource Hacker</em></a> <sub>
+      <a href="https://www.aldeid.com/wiki/ResourceHacker"><em>aldeid</em></a> </sub>
+| <a href="https://ntcore.com/?page_id=388" title="PE 编辑套件"><em>Explorer Suite</em></a> <sub>
+      <a href="https://www.aldeid.com/wiki/Explorer-Suite"><em>aldeid</em></a> </sub>,
+  CFF Explorer <sub>
+      <a href="https://www.aldeid.com/wiki/Explorer-Suite/CFF-Explorer"><em>aldeid</em></a> </sub>,
+  PE Detective <sub>
+      <a href="https://www.aldeid.com/wiki/Explorer-Suite/PE-Detective"><em>aldeid</em></a> </sub>,
+  Task Explorer <sub>
+      <a href="https://www.aldeid.com/wiki/Explorer-Suite/Task-Explorer"><em>aldeid</em></a> </sub></p></div>
             </div>
         </div>
 
