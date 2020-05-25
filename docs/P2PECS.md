@@ -1,25 +1,32 @@
-# 点对点电子货币系统（Peer-to-Peer Electronic Cash Systems）
+# 点对点电子货币系统
+
+点对点电子货币系统（Peer-to-Peer Electronic Cash Systems）
 
 [*Bitcoin: A Peer-to-Peer Electronic Cash System*](https://bitcoin.org/bitcoin.pdf) <sub>
     [*cmn-Hans*](https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf) </sub>
 
-*   资讯
-    *   [*巴比特*](https://8btc.com/)
-    *   [*币世界*](https://bishijie.com/)
-    *   [*链闻*](https://chainnews.com/)
-    *   [*金色财经*](https://jinse.com/)
-    *   [*Readhub - 区块链快讯*](https://readhub.cn/blockchain)
-    *   [*陀螺财金*](https://tuoluocaijing.cn/)
-*   行情
-    *   [*CoinMarketCap*](https://coinmarketcap.com/)
-    *   [*非小号*](https://feixiaohao.com/)
-    *   [*Tokenview*](https://tokenview.com/)
-* 指数
-    *   <https://alternative.me/crypto/>
+资讯
+| [*巴比特*](https://8btc.com/)
+| [*币世界*](https://bishijie.com/)
+| [*链闻*](https://chainnews.com/)
+| [*金色财经*](https://jinse.com/)
+| [*Readhub - 区块链快讯*](https://readhub.cn/blockchain)
+| [*陀螺财金*](https://tuoluocaijing.cn/)
 
-## 2014年04月18日[*门罗币*](https://getmonero.org/)
+行情
+| [*CoinMarketCap*](https://coinmarketcap.com/)
+| [*非小号*](https://feixiaohao.com/)
+| [*Tokenview*](https://tokenview.com/)
 
-CryptoNote 上的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf) 。
+指数
+| <https://alternative.me/crypto/>
+
+___
+## 门罗币（MXR）
+
+门罗币（Monero）发行于 2014 年 04 月 18 日，官网 <https://getmonero.org/>。
+
+CryptoNote 的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf) 。
 
 头等仓上的《精通门罗币》翻译连载：
 
@@ -48,22 +55,67 @@ CryptoNote 上的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.
 
 ### 挖矿
 
-H/s (hashes per seconds)
+速率单位：
 
-*   [矿池](https://miningpoolstats.stream/monero)
+*   每秒散列，H/s，hashes per seconds
+*   每秒千散列，kH/s，kilo-hashes per seconds
+*   每秒百万散列，MH/s，mega-hashes per seconds
+*   每秒十亿散列，GH/s，giga-hashes per seconds
+
+矿机和矿池：
+
 *   矿机 [*XMRig*](https://github.com/xmrig/xmrig)
 *   矿机 [*XMRig-AMD*](https://github.com/xmrig/xmrig-amd)
 *   矿机 [*XMRig-NVIDIA*](https://github.com/xmrig/xmrig-nvidia)
+*   [矿池](https://miningpoolstats.stream/monero)
 
-```batchfile
-%USERPROFILE% λ xmrig --url=<pool_url> ^
-                      --user=<wallet_address>.<custom_name> ^
-                      --pass=x ^
-                      --keepalive ^
-                      --donate-level=1
-:: abbr.        xmrig -o <pool_url> ^
-                      -u <wallet_address>.<custom_name> ^
-                      -p x ^
-                      -k ^
-                      --donate-level=1
+#### Windows+CPU+XMRig+F2Pool 简易挖矿流程
+
+```bat
+%USERPROFILE%> CD %TMP%
+%TMP%> _
+:: 下载 https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-msvc-win64.zip 并解压
+%TMP%> CD xmrig-5.11.1
+%USERPROFILE%\xmrig-5.11.1> xmrig --url=stratum+tcp://xmr.f2pool.com:13531 ^
+                                  --user=<wallet_address>.<custom_name> ^
+                                  --pass=x ^
+                                  --keepalive ^
+                                  --donate-level=1 ^
+                                  --cpu-priority=0 ^
+                                  --cpu-max-threads-hint=80
+:: abbr.                    xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 --cpu-max-threads-hint=80
+```
+
+#### CentOS+CPU+XMRig+F2Pool 简易挖矿流程
+
+```bash
+[user@host *]$ cd /tmp
+[user@host tmp]$ curl -O https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-gcc-win64.zip
+[user@host tmp]$ tar -xavf xmrig-5.11.1-xenial-x64.tar.gz
+[user@host tmp]$ cd xmrig-5.11.1
+[user@host xmrig-5.11.1]$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
+                                  --user=<wallet_address>.<custom_name> \
+                                  --pass=x \
+                                  --keepalive \
+                                  --donate-level=1 \
+                                  --cpu-priority=0 \
+                                  --cpu-max-threads-hint=80
+# abbr.                   ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 --cpu-max-threads-hint=80
+```
+
+#### Ubuntu+CPU+XMRig+F2Pool 简易挖矿流程
+
+```bash
+user@host:*$ cd /tmp
+user@host:/tmp$ wget https://github.com.cnpmjs.org/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-xenial-x64.tar.gz
+user@host:/tmp$ tar -xavf xmrig-5.11.1-xenial-x64.tar.gz
+user@host:/tmp$ cd xmrig-5.11.1
+user@host:/tmp/xmrig-5.11.1$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
+                                     --user=<wallet_address>.<custom_name> \
+                                     --pass=x \
+                                     --keepalive \
+                                     --donate-level=1 \
+                                     --cpu-priority=0 \
+                                     --cpu-max-threads-hint=80
+# abbr.                      ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 --cpu-max-threads-hint=80
 ```

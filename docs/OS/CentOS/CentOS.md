@@ -63,6 +63,8 @@ NetworkManager 官网 <https://wiki.gnome.org/Projects/NetworkManager>。
 其提供一个 CLI 工具 `nmcli` 和一个 TUI 工具 `nmtui`。
 其使用的大多数配置位于 `/etc/sysconfig/` 目录下，VPN、移动宽带和 PPPoE 配置位于 `/etc/NetworkManager/` 目录下。
 
+注意：远程配置网络要谨慎，不要试图远程停止（`stop`）再启动接口，而是使用重载（`reload`）、重启（`restart`）或直接覆盖启动（`start`）。
+
 ```shell
 [user@host *]$ systemctl status NetworkManager  # 查看服务状态
 

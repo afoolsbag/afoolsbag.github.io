@@ -31,14 +31,15 @@ nav:
         - OS/OS.md
         - Windows:
             - OS/Windows/Windows.md
+            - OS/Windows/PE.md
+            - OS/Windows/Cmder.md
+            - OS/Windows/Cheat Engine.md
             - OS/Windows/arp.md
             - OS/Windows/choco.md
             - OS/Windows/ipconfig.md
-            - OS/Windows/PE.md
             - OS/Windows/scoop.md
         - GNU/Linux:
             - OS/Linux/Linux.md
-            - OS/Linux/bootstrap.md
             - OS/Linux/ELF.md
             - OS/Linux/fish.md
             - OS/Linux/grep.md

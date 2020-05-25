@@ -1,15 +1,22 @@
-# 可移植可执行（Portable Executable）文件
+# 可移植可执行格式 PE
 
-*   [*010 Editor*](https://sweetscape.com/010editor/)
-*   [*WinHex*](http://winhex.com/winhex/)
+适用于 Windows 操作系统的应用程序二进制接口规范 PE（Portable Executable）。
 
-
-*   [*PEiD*](https://aldeid.com/wiki/PEiD) (Only PE)
-*   [*Exeinfo PE*](http://exeinfo.xn.pl/)
-
-
-*   [*LoadPE*](https://aldeid.com/wiki/LordPE) (Only PE)
-*   [*Explorer-Suite*](https://ntcore.com/?page_id=388) <sub>
-        [*aldeid*](https://aldeid.com/wiki/Explorer-Suite) </sub>
-*   [*Resource Hacker*](http://angusj.com/resourcehacker/) <sub>
-        [*aldeid*](https://aldeid.com/wiki/ResourceHacker) </sub>
+| [PEiD](# "PE32 查壳工具") <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/PEiD) </sub>,
+  [*Exeinfo PE*](http://exeinfo.xn.pl/ "PE 查壳工具") <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/Exeinfo-PE) </sub>
+| [LoadPE](# "PE32 修复工具") <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/LordPE) </sub>
+| [*Dependency Walker*](http://dependencywalker.com/ "PE 依赖查询工具") <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/Dependency-Walker) </sub>
+| [*Resource Hacker*](http://angusj.com/resourcehacker/ "PE 资源编辑工具") <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/ResourceHacker) </sub>
+| [*Explorer Suite*](https://ntcore.com/?page_id=388 "PE 编辑套件") <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/Explorer-Suite) </sub>,
+  CFF Explorer <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/Explorer-Suite/CFF-Explorer) </sub>,
+  PE Detective <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/Explorer-Suite/PE-Detective) </sub>,
+  Task Explorer <sub>
+      [*aldeid*](https://www.aldeid.com/wiki/Explorer-Suite/Task-Explorer) </sub>
