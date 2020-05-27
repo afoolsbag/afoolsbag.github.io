@@ -18,7 +18,7 @@ nav:
         - CC/CC.md
         - CC/Vim.md
         - CC/Emacs.md
-        - CC/StarUML.md
+        - CC/UML.md
     - 音视频:
         - AV/AV.md
         - AV/FFmpeg.md

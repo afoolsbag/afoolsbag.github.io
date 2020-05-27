@@ -1,8 +1,20 @@
-# 统一建模语言工具 StarUML
+# 统一建模语言 UML
 
-官网 <http://staruml.io/>。
+___
+## PlantUML
 
-## 注册码
+官网 <https://plantuml.com/>。
+
+___
+## StarUML
+
+官网 <https://staruml.io/>。
+
+### 快捷键
+
+官方文档 <https://docs.staruml.io/user-guide/keyboard-shortcuts>。
+
+### 注册码
 
 请到官网购买以支持正版。
 

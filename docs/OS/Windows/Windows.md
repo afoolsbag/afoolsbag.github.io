@@ -126,6 +126,7 @@ PS *> scoop install gpu-z
 
 ```ps1
 PS *> scoop install graphviz
+PS *> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $Env:SCOOP 'shims\dot.exe'), 'User')
 ```
 
 [*IDA*](https://hex-rays.com/products/ida/)，一款反汇编调试器
@@ -181,6 +182,7 @@ PS *> scoop install pci-z
 
 ```ps1
 PS *> scoop install plantuml
+PS *> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $Env:SCOOP 'shims\plantuml.cmd'), 'User')
 ```
 
 [*Postman*](https://postman.com/)，一款 HTTP API 测试工具
