@@ -1,12 +1,12 @@
 # 统一建模语言 UML
 
-___
 ## PlantUML
+---
 
 官网 <https://plantuml.com/>。
 
-___
 ## StarUML
+---
 
 官网 <https://staruml.io/>。
 

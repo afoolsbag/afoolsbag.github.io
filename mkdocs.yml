@@ -34,16 +34,16 @@ nav:
             - OS/Windows/Scoop & Chocolatey.md
             - OS/Windows/Cmder.md
             - OS/Windows/Cheat Engine.md
+            - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
-            - OS/Linux/ELF.md
             - OS/Linux/fish.md
             - OS/Linux/grep.md
             - OS/Linux/link aggregation.md
-            - OS/Linux/netfilter.md
             - OS/Linux/tar.md
             - OS/Linux/top.md
             - OS/Linux/users.md
+            - OS/Linux/vsftpd.md
         - Debian:
             - OS/Debian/apt.md
             - OS/Debian/apt-toolchain.md
@@ -73,6 +73,15 @@ nav:
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
+
+theme:
+    name: mkdocs
+    hljs_languages:
+        - bash
+        - cmd
+        - nginx
+        - shell
+    navigation_depth: 4
 
 # Preview controls
 # https://www.mkdocs.org/user-guide/configuration/#preview-controls

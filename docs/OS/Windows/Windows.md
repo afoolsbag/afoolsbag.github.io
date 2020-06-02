@@ -1,15 +1,47 @@
 # Windows 操作系统
 
-___
-## 文件系统
+```cmd
+:: 关闭系统
+%USERPROFILE%> SHUTDOWN /S /T 60
 
-___
-## 可移植可执行格式 PE
+:: 重启系统
+%USERPROFILE%> SHUTDOWN /R /T 60
+```
+
+## 进程和内存
+---
+
+### 可移植可执行格式 PE
 
 适用于 Windows 操作系统的应用程序二进制接口规范 PE（Portable Executable）。
 
-___
-## 网络系统
+## 文件和存储
+---
+
+### 文件链接
+
+官方文档 <https://docs.microsoft.com/windows-server/administration/windows-commands/mklink>。
+
+SS64 上对于 `MKLINK` 命令的说明 <https://ss64.com/nt/mklink.html>。
+
+Stack Overflow 上关于多种链接的讨论 <https://stackoverflow.com/questions/9042542>。
+
+```cmd
+:: 文件符号链接
+%USERPROFILE%> MKLINK <Link> <Path>
+
+:: 文件硬链接
+%USERPROFILE%> MKLINK /H <Link> <AbsolutePath>
+
+:: 目录符号链接
+%USERPROFILE%> MKLINK /D <Link> <Path>
+
+:: 目录 Junction 链接
+%USERPROFILE%> MKLINK /J <Link> <AbsolutePath>
+```
+
+## 网络
+---
 
 ### `ipconfig`
 
@@ -19,21 +51,24 @@ ___
 
 官网文档 <https://docs.microsoft.com/windows-server/administration/windows-commands/arp>。
 
-___
+## 安全
+---
+
 ## Awesome
+---
 
 [*010 Editor*](https://sweetscape.com/010editor/)，一款二进制文件编辑器
 
 [*7-Zip*](https://www.7-zip.org/)
 
 ```ps1
-PS *> scoop install 7zip
+PS $env:USERPROFILE> scoop install 7zip
 ```
 
 [*AutoHotkey*](https://www.autohotkey.com/)，一款自动化脚本语言
 
 ```ps1
-PS *> scoop install autohotkey
+PS $env:USERPROFILE> scoop install autohotkey
 ```
 
 [*bettercap*](https://bettercap.org/)，一款网络嗅探工具
@@ -47,19 +82,19 @@ PS *> scoop install autohotkey
 [*Cheat Engine*](https://cheatengine.org/)，一款程序修改工具
 
 ```ps1
-PS *> scoop install cheat-engine
+PS $env:USERPROFILE> scoop install cheat-engine
 ```
 
 [*CMake*](https://cmake.org/)
 
 ```ps1
-PS *> scoop install cmake
+PS $env:USERPROFILE> scoop install cmake
 ```
 
 [*CPU-Z*](https://www.cpuid.com/softwares/cpu-z.html)
 
 ```ps1
-PS *> scoop install cpu-z
+PS $env:USERPROFILE> scoop install cpu-z
 ```
 
 [*DebugView*](https://docs.microsoft.com/sysinternals/downloads/debugview) <sub>
@@ -67,7 +102,7 @@ PS *> scoop install cpu-z
 一款调试输出显示工具
 
 ```ps1
-PS *> scoop install debugviewpp
+PS $env:USERPROFILE> scoop install debugviewpp
 ```
 
 [*Dependency Walker*](http://dependencywalker.com/) <sub>
@@ -75,13 +110,13 @@ PS *> scoop install debugviewpp
 一款 PE 依赖扫描工具
 
 ```ps1
-PS *> scoop install depends
+PS $env:USERPROFILE> scoop install depends
 ```
 
 [*Doxygen*](https://doxygen.nl/)
 
 ```ps1
-PS *> scoop install doxygen
+PS $env:USERPROFILE> scoop install doxygen
 ```
 
 [*dSniff*](https://monkey.org/~dugsong/dsniff/)，一款网络嗅探工具
@@ -91,7 +126,7 @@ PS *> scoop install doxygen
 [*Emacs*](https://www.gnu.org/software/emacs/)，一款文本编辑器
 
 ```ps1
-PS *> scoop install emacs
+PS $env:USERPROFILE> scoop install emacs
 ```
 
 [*Ettercap*](https://www.ettercap-project.org)，一款网络嗅探工具
@@ -107,26 +142,26 @@ PS *> scoop install emacs
 [*FastCopy*](https://fastcopy.jp/)，一款快速复制工具
 
 ```ps1
-PS *> scoop install fastcopy
+PS $env:USERPROFILE> scoop install fastcopy
 ```
 
 [*foobar2000*](https://www.foobar2000.org/)，一款音乐播放器
 
 ```ps1
-PS *> scoop install foobar2000
+PS $env:USERPROFILE> scoop install foobar2000
 ```
 
 [*GPU-Z*](https://www.techpowerup.com/download/techpowerup-gpu-z/)
 
 ```ps1
-PS *> scoop install gpu-z
+PS $env:USERPROFILE> scoop install gpu-z
 ```
 
 [*Graphviz*](https://graphviz.org/)
 
 ```ps1
-PS *> scoop install graphviz
-PS *> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $Env:SCOOP 'shims\dot.exe'), 'User')
+PS $env:USERPROFILE> scoop install graphviz
+PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $env:SCOOP 'shims\dot.exe'), 'User')
 ```
 
 [*IDA*](https://hex-rays.com/products/ida/)，一款反汇编调试器
@@ -136,7 +171,7 @@ PS *> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $E
 [*iPerf*](https://iperf.fr/)，一款网速测试工具
 
 ```ps1
-PS *> scoop install iperf3
+PS $env:USERPROFILE> scoop install iperf3
 ```
 
 [*Iris*](https://iristech.co/)，一款屏幕光调节工具，以缓解眼部疲劳
@@ -148,20 +183,20 @@ LoadPE <sub>
 [*MPC-BE*](https://mpc-be.org/)
 
 ```ps1
-PS *> scoop install mpc-be
+PS $env:USERPROFILE> scoop install mpc-be
 ```
 
 [*MPC-HC*](https://mpc-hc.org/) <sub>
     [*MPC-HC-Fork*](https://github.com/clsid2/mpc-hc) </sub>，
 
 ```ps1
-PS *> scoop install mpc-hc-fork
+PS $env:USERPROFILE> scoop install mpc-hc-fork
 ```
 
 [*NSSM*](https://nssm.cc/)，一款服务维护工具
 
 ```ps1
-PS *> scoop install nssm
+PS $env:USERPROFILE> scoop install nssm
 ```
 
 [*OllyDbg*](http://ollydbg.de/)，一款反汇编调试器
@@ -175,26 +210,26 @@ PEiD <sub>
 [*PCI-Z*](https://www.pci-z.com/)
 
 ```ps1
-PS *> scoop install pci-z
+PS $env:USERPROFILE> scoop install pci-z
 ```
 
 [*PlantUML*](https://plantuml.com/)
 
 ```ps1
-PS *> scoop install plantuml
-PS *> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $Env:SCOOP 'shims\plantuml.cmd'), 'User')
+PS $env:USERPROFILE> scoop install plantuml
+PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $env:SCOOP 'shims\plantuml.cmd'), 'User')
 ```
 
 [*Postman*](https://postman.com/)，一款 HTTP API 测试工具
 
 ```ps1
-PS *> scoop install postman
+PS $env:USERPROFILE> scoop install postman
 ```
 
 [*PotPlayer*](https://potplayer.daum.net/)
 
 ```ps1
-PS *> scoop install potplayer
+PS $env:USERPROFILE> scoop install potplayer
 ```
 
 [*qBittorrent*](https://qbittorrent.org/) <sub>
@@ -202,19 +237,19 @@ PS *> scoop install potplayer
 一款对等网络下载器
 
 ```ps1
-PS *> scoop install qbittorrent
+PS $env:USERPROFILE> scoop install qbittorrent
 ```
 
 [*radare*](https://radare.org/)，一款反汇编调试器
 
 ```ps1
-PS *> scoop install radare2
+PS $env:USERPROFILE> scoop install radare2
 ```
 
 [*Rapid Environment Editor*](https://rapidee.com/)，一款环境变量编辑器
 
 ```ps1
-PS *> scoop install rapidee
+PS $env:USERPROFILE> scoop install rapidee
 ```
 
 [*Resource Hacker*](http://angusj.com/resourcehacker/) <sub>
@@ -224,31 +259,31 @@ PS *> scoop install rapidee
 [*SSD-Z*](http://aezay.dk/aezay/ssdz/)
 
 ```ps1
-PS *> scoop install ssd-z
+PS $env:USERPROFILE> scoop install ssd-z
 ```
 
 [*Transmission*](https://transmissionbt.com/)，一款对等网络下载器
 
 ```ps1
-PS *> scoop install transmission
+PS $env:USERPROFILE> scoop install transmission
 ```
 
 [*Vim*](https://www.vim.org/)，一款文本编辑器
 
 ```ps1
-PS *> scoop install vim
+PS $env:USERPROFILE> scoop install vim
 ```
 
 [*Visual Studio Code*](https://code.visualstudio.com/)，一款文本编辑器
 
 ```ps1
-PS *> scoop install vscode
+PS $env:USERPROFILE> scoop install vscode
 ```
 
 [*VLC media player*](https://www.videolan.org/vlc/)
 
 ```ps1
-PS *> scoop install vlc
+PS $env:USERPROFILE> scoop install vlc
 ```
 
 [*WinDbg*](http://windbg.org/)，一款调试器
@@ -258,12 +293,12 @@ PS *> scoop install vlc
 [*Wireshark*](https://wireshark.org/)，一款流量分析工具
 
 ```ps1
-PS *> scoop install wireshark
+PS $env:USERPROFILE> scoop install wireshark
 ```
 
 [*WiX*](https://wixtoolset.org/)，一款安装包制作工具
 
 ```ps1
-PS *> scoop install wixtoolset
+PS $env:USERPROFILE> scoop install wixtoolset
 ```
 [*Xlight*](https://xlightftpd.com/)，一款轻量 FTP 服务器

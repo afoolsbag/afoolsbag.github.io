@@ -1,98 +1,145 @@
 # GNU/Linux 操作系统
 
-___
-## 启动
-
 ```fish
-user@host *> sudo shutdown -r now  # 安全地重启系统
-user@host *> sudo shutdown -h now  # 安全地关闭系统
-user@host *> sudo halt             # 硬停机
-user@host *> sudo poweroff         # 硬掉电
-user@host *> sudo reboot           # 硬重启
+# 安全地重启系统
+user@host ~> sudo shutdown --reboot now
+# abbr.      sudo shutdown -r now
+
+# 安全地关闭系统
+user@host ~> sudo shutdown --poweroff now
+# abbr.      sudo shutdown -h now
+
+# 硬停机
+user@host ~> sudo halt
+
+# 硬掉电
+user@host ~> sudo poweroff
+
+# 硬重启
+user@host ~> sudo reboot
+
+
+# 查看发行版信息
+user@host ~> lsb_release -a (--all)
+# 或者
+user@host ~> cat /etc/os-release
+
+# CentOS
+user@host ~> cat /etc/redhat-release
+
+
+# 查看处理器信息
+user@host ~> cat /proc/cpuinfo
+
+# 查看内存信息
+user@host ~> free --human
+# abbr.      free -h
+
+# 查看硬盘信息
+user@host ~> lsblk
 ```
 
-[“第十九章、開機流程、模組管理與 Loader”](http://linux.vbird.org/linux_basic/0510osloader.php). *鳥哥的 Linux 私房菜*.
+鳥哥的 Linux 私房菜上的[第十九章、開機流程、模組管理與 Loader](http://linux.vbird.org/linux_basic/0510osloader.php)。
 
-0.  开机
-
-0.  非易失性存储器（NVM，Non-Volatile Memory）中的固件——基本输入输出系统（BIOS，Basic Input/Output System）或统一可扩展固件接口（UEFI，Unified Extensible Firmware Interface），被加载到主存并运行：
-
-    0.  加电自检（POST，Power-On Self-Test）
-
-    0.  启动设备（Boot Device）中的、可选的全局唯一标识分区表（GPT，GUID Partition Table）中的、主引导记录（MBR，Master Boot Record）中的、一阶段引导程序（1st-Stage Boot Loader），被加载到主存并运行
-
-        常见的一阶段引导程序：
+1.  开机
+2.  加载 BIOS 或 UEFI
+    1.  加电自检
+    2.  加载 BootDevice -> GPT -> MBR -> 1stStageBootLoader
         *   coreboot
         *   Libreboot
         *   Das U-Boot
-
-    0.  可选的，引导分区（Boot Partition）中的、引导扇区（Boot Sector）中的、二阶段引导程序（2nd-Stage Boot Loader），被加载到主存并运行
-
-        常见的二阶段引导程序：
-        *   GRUB (UNIX-like)
+    3.  加载 BootPartition -> BootSector -> 2ndStageBootLoader
+        *   GRUB (*NIX)
         *   BOOTMGR
         *   NTLDR (Windows)
         *   BootX (macOS)
         *   SYSLINUX (Linux)
+    4.  加载 Linux 内核 `/boot/vmlinuz`
+    5.  解压、加载并挂载虚拟文件系统 `/boot/initrd` 或 `/boot/initramfs`
+3.  Linux 操作系统首次调用 `systemd`
+    1.  执行 `initrd.target`
+    2.  硬件检测
+    3.  加载内核模块 `/lib/modules/$(uname -r)/kernel`，主要为存储设备的驱动程序
+    4.  卸载虚拟文件系统
+    5.  挂载实体文件系统
+    6.  硬件就绪
+4.  Linux 操作系统再次调用 `systemd`，进程标识 `1`
+    1.  执行 `/etc/systemd/system/default.target`
+        *   系统 target `/usr/lib/systemd/system/*.target[.wants]`
+        *   用户 target `/etc/systemd/system/*.target[.wants]`
+        *   为与 SystemV 兼容，有以下链接
+            *   `/usr/lib/systemd/system/runlevel0.target -> poweroff.target`
+            *   `/usr/lib/systemd/system/runlevel1.target -> rescue.target`
+            *   `/usr/lib/systemd/system/runlevel2.target -> multi-user.target`
+            *   `/usr/lib/systemd/system/runlevel3.target -> multi-user.target`
+            *   `/usr/lib/systemd/system/runlevel4.target -> multi-user.target`
+            *   `/usr/lib/systemd/system/runlevel5.target -> graphical.target`
+            *   `/usr/lib/systemd/system/runlevel6.target -> reboot.target`
+            *   `systemctl list-dependencies default.target`
+    2.  `graphical` -> `multi-user` -> `basic` -> `sysinit` -> `systemd-modules-load`
+        1.  依据 `/etc/modules-load.d/*.conf` 加载额外核心模块
+        2.  依据 `/etc/modprobe.d/*.conf` 加载额外核心模块参数
+    3.  `graphical` -> `multi-user` -> `basic` -> `sysinit` -> `systemd-sysctl`
+        1.  依据 `/etc/sysctl.conf` 加载核心参数
+        2.  依据 `/etc/sysctl.d/*.conf` 加载额外核心参数
+    4.  `graphical` -> `multi-user` -> `basic`
+        1.  依据 `/etc/rc.modules` 和 `/etc/sysconfig/modules/*.modules` 加载模块
+    5.  `graphical` -> `multi-user`
+        1.  为与 System V 兼容，若 `/etc/rc.local` 可读可执行，则执行。<br/>
+            若 `/etc/rc.local -> /etc/rc.d/rc.local`，则二者都须可读和可执行。
 
-    0.  Linux 内核（`/boot/vmlinuz`）被解压并加载到主存
+## 进程和内存
+---
 
-    0.  虚拟文件系统（`/boot/initrd` 或 `/boot/initramfs`）被解压、加载到主存、并挂载为根目录
+### 可执行与可链接格式 ELF
 
-    0.  引导程序将控制权交予操作系统
+适用于 GNU/Linux 操作系统的应用程序二进制接口规范 ELF（Executable and Linkable Format）。
 
-0.  操作系统第一次调用 `systemd` 守护进程，执行 `initrd.target`：
+#### 常用命令组合
 
-    0.  执行硬件检测
+```fish
+```
 
-    0.  从虚拟文件系统中加载内核模块（`/lib/modules/$(uname -r)/kernel`）到主存，主要是存储设备的驱动程序
+#### `objdump` 常见选项释义
 
-    0.  卸载虚拟文件系统
+[*objdump 官网*](https://www.gnu.org/software/binutils/)，
+[*objdump 官方文档*](https://sourceware.org/binutils/docs/binutils/objdump.html)。
 
-    0.  挂载实际文件系统到根目录
+#### `readelf` 常见选项释义
 
-    0.  硬件就绪（Ready）
+[*readelf 官网*](https://www.gnu.org/software/binutils/)，
+[*readelf 官方文档*](https://sourceware.org/binutils/docs/binutils/readelf.html)。
 
-0.  操作系统第二次调用 `systemd` 守护进程，进程标识 `1` 号：
+```fish
+user@host ~> readelf <option>... <elf-file>...
+```
 
-    0.  执行 `/etc/systemd/system/default.target`，通常链接为 `/usr/lib/systemd/system/multi-user.target` 或 `/usr/lib/systemd/system/graphical.target`，假定链接为后者
+```sh
+-a, --all                          # 全部，等同于 -h -l -S -s -r -d -V -A -I
+-h, --file-header                  # 文件头
+-l, --program-headers, --segments  # 程序头
+-S, --section-headers, --sections  # 段表
+-s, --syms, --symbols              # 符号段（.symtab）
+-r, --relocs                       # 重定位段（如果存在）
+-d, --dynamic                      # 动态段（如果存在）
+-V, --version-info                 # 版本段（如果存在）
+-I, --histogram                    # 直方图
 
-        系统定义的 `*.target[.wants]` 置于 `/usr/lib/systemd/system`，用户定义的 `*.target[.wants]` 置于 `/etc/systemd/system`，为与 System V 兼容，系统 `*.target` 有以下别名：
+    --dyn-syms                     # 动态符号表
+```
 
-        ```shell script
-        /usr/lib/systemd/system/runlevel0.target  # poweroff.target
-                                runlevel1.target  # rescue.target
-                                runlevel2.target  # multi-user.target
-                                runlevel3.target  # multi-user.target
-                                runlevel4.target  # multi-user.target
-                                runlevel5.target  # graphical.target
-                                runlevel6.target  # reboot.target
-        ```
+#### `ldd` 常见选项释义
 
-        使用 `systemctl list-dependencies default.target` 可以列出完整依赖列表，下述按执行顺序，选取关注项列出：
+[*ldd 官方文档*](http://man7.org/linux/man-pages/man1/ldd.1.html)。
 
-    0.  执行 `sysinit.target` 初始化系统，由 `basic.target` 依赖
+```fish
+user@host ~> ldd [option]... <file>...
+```
 
-        0.  依据 `/etc/modules-load.d/*.conf` 加载额外核心模块
+## 文件和存储
+---
 
-        0.  依据 `/etc/modprobe.d/*.conf` 加载额外核心模块参数
-
-        0.  依据 `/etc/sysctl.conf` 加载核心参数，依据 `/etc/sysctl.d/*.conf` 加载额外核心参数
-
-    0.  执行 `basic.target` 准备系统，由 `multi-user.target` 依赖
-
-        0.  依据 `/etc/rc.modules` 和 `/etc/sysconfig/modules/*.modules` 加载模块
-
-    0.  执行 `multi-user.target`，由 `graphical.target` 依赖
-
-        0.  为与 System V 兼容，若 `/etc/rc.local` 可读可执行，则执行
-
-            若 `/etc/rc.local` 链接到 `/etc/rc.d/rc.local`，则此二者都需要可读和可执行权限
-
-    0.  执行 `graphical.target`，由 `default.target` 链接
-
-___
-## 目录结构说明
+### 目录结构说明
 
 ```text
 /              #                             根目录
@@ -131,32 +178,42 @@ ___
   + pid        # process identifier          进程标识符目录
 ```
 
-___
-## 系统信息
+### 文件链接
 
 ```fish
-# 查看发行版信息
-user@host *> lsb_release -a (--all)
-# 或者
-user@host *> cat /etc/os-release
+user@host ~> ln --symbolic <path> <link>  # 符号链接
+# abbr.      ln -s <path> <link>
 
-# CentOS
-user@host *> cat /etc/redhat-release
-
-
-# 查看处理器信息
-user@host *> cat /proc/cpuinfo
-
-# 查看内存信息
-user@host *> free --human
-# abbr.      free -h
-
-# 查看硬盘信息
-user@host *> lsblk
+user@host ~> ln <path> <link>             # 硬链接
 ```
 
-## 符号链接
+## 网络
+---
 
-```sh
-ln -s <target-path> <new-path>
+### 数据包过滤框架 netfilter
+
+适用于 Linux 2.4.x 及更高版本内核的数据包过滤框架，官网 <https://netfilter.org/>。
+
+#### 常用命令组合
+
+```fish
+user@host ~> systemctl status firewalld  # 查看 FirewallD 服务状态
+
+user@host ~> sudo firewall-cmd --list-all  # 列出所有规则
+
+user@host ~> sudo firewall-cmd --query-port=<port>/<protocol>               # 查询一条规则
+user@host ~> sudo firewall-cmd --permanent --add-port=<port>/<protocol>     # 持久添加一条规则
+user@host ~> sudo firewall-cmd --permanent --remove-port=<port>/<protocol>  # 持久移除一条规则
+
+user@host ~> sudo firewall-cmd --reload  # 重新加载配置
 ```
+
+### 查找端口占用
+
+```fish
+user@host ~> ss --all --numeric --processes | grep <:port>
+# abbr.      ss -anp | grep <:port>
+```
+
+## 安全
+---

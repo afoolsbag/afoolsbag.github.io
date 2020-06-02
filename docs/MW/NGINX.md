@@ -7,18 +7,18 @@ ___
 
 ### CentOS
 
-```shell
+```bash
 [user@host *]$ sudo yum install nginx
 ```
 
 ### Ubuntu
 
-```shell
+```bash
 user@host:*$ sudo apt install nginx
 ```
 
 ___
-## 常用命令
+## 常用命令组合
 
 ```fish
 user@host *> nginx -v  # 版本
@@ -43,7 +43,7 @@ ___
 user@host *> vim /etc/nginx/nginx.conf
 ```
 
-```nginx.conf
+```nginx
 # 工作用户和组（https://nginx.org/docs/ngx_core_module.html#user）
 user nobody nobody;
 
@@ -98,7 +98,7 @@ ___
 
 ### 简单静态页面
 
-```nginx.conf
+```nginx
 worker_processes auto;
 events {
     worker_connections 1024;

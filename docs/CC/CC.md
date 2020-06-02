@@ -1,7 +1,9 @@
 # Codes & Coding
 
-___
-## 字符
+## Awesome
+---
+
+### 字符
 
 字符画
 | [*ASCII Figlet Generator*](https://askapache.com/online-tools/figlet-ascii/)
@@ -18,8 +20,7 @@ ___
 | [*GB/T 15834-2011*](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=22EA6D162E4110E752259661E1A0D0A8),
   [*在《少数派》上的一篇关于部分标点符号用法的指南*](https://sspai.com/post/45516)
 
-___
-## 代码
+### 代码
 
 语言代码
 | [*ISO 639*](https://iso.org/iso-639-language-codes.html)
@@ -35,8 +36,7 @@ ___
 许可证代码
 | [*SPDX License List*](https://spdx.org/licenses/)
 
-___
-## 辞典
+### 辞典
 
 [*The Free Dictionary*](https://thefreedictionary.com/)
 
@@ -53,8 +53,7 @@ English Dictionaries
 汉语辞典
 | [*漢典*](https://zdic.net/)
 
-___
-## 风格
+### 风格
 
 引文风格
 | [*ISO 690:2010*](https://iso.org/standard/43320.html),
@@ -62,8 +61,10 @@ ___
 | [*GB/T 7714-2015*](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C),
   [*Style Guides*](http://www.citethisforme.com/guides/chinese-gb7714-2005-numeric)
 
-___
-## 语法
+### 句法
+
+EBNF
+| [*ISO/IEC 14977:1996*](https://www.iso.org/standard/26153.html)
 
 Markdown
 | [*Markdown*](https://daringfireball.net/markdown/)
@@ -71,7 +72,8 @@ Markdown
   [*Cheatsheet*](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet),
   [*Syntax High Lighting*](https://help.github.com/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting),
   [*linguist languages.yml*](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
-| [*MkDocs*](https://www.mkdocs.org/)
+| [*MkDocs*](https://www.mkdocs.org/),
+  [*highlight.js Supported Languages*](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md)
 
 reStructuredText
 | [*reStructuredText*](http://docutils.sourceforge.net/rst.html)

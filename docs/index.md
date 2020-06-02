@@ -2,8 +2,8 @@
 
 一份为 zhengrr 定制化的技术备忘。
 
-___
 ## 挑选趁手的家伙
+---
 
 > Everyone knows it's a mistake to write your whole program by hand in machine language.
 > What's less often understood is that there is a more general principle here:
@@ -18,35 +18,33 @@ ___
 >
 > *黑客与画家*. 2004.
 
-___
-## 搜索
+## Awesome
+---
+
+### 搜索
 
 | [*Wolfram|Alpha*](https://wolframalpha.com/)
 | [*Wolfram MathWorld*](http://mathworld.wolfram.com/)
 
-___
-## 新闻
+### 新闻
 
 | [*InfoQ*](https://infoq.cn/)
 | [*好奇心日报*](https://www.qdaily.com/),
   [*后续*](https://houxuapp.com/)
 | [*蓝点网*](https://landiannews.com/)
 
-___
-## 指数
+### 指数
 
 | [*TIOBE Index*](https://tiobe.com/tiobe-index/)
 
-___
-## 黄页
+### 黄页
 
 | [*awesome*](https://awesome.re/)
 | [*DevDocs*](https://devdocs.io/)
 | [*OverAPI.com*](http://overapi.com/)
 | [*ProgramCreek.com*](https://programcreek.com/)
 
-___
-## 书籍
+### 书籍
 
 | [free-programming-books](https://ebookfoundation.github.io/free-programming-books/)
 | [计算机书籍控](http://bestcbooks.com/)
