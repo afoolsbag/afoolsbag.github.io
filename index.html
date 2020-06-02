@@ -17,6 +17,10 @@
         <script src="js/jquery-1.10.2.min.js" defer></script>
         <script src="js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="OS/Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="OS/Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="OS/Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="OS/Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="OS/Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="OS/Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="OS/Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -309,24 +313,28 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">搜索</a>
+            <li class="nav-item" data-level="2"><a href="#awesome" class="nav-link">Awesome</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">搜索</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">新闻</a>
+            <li class="nav-item" data-level="3"><a href="#_3" class="nav-link">新闻</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">指数</a>
+            <li class="nav-item" data-level="3"><a href="#_4" class="nav-link">指数</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">黄页</a>
+            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">黄页</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">书籍</a>
+            <li class="nav-item" data-level="3"><a href="#_6" class="nav-link">书籍</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -338,8 +346,8 @@
 
 <h1 id="zhengrrs-docs">zhengrr's docs</h1>
 <p>一份为 zhengrr 定制化的技术备忘。</p>
-<hr />
 <h2 id="_1">挑选趁手的家伙</h2>
+<hr />
 <blockquote>
 <p>Everyone knows it's a mistake to write your whole program by hand in machine language.
 What's less often understood is that there is a more general principle here:
@@ -351,27 +359,24 @@ that if you have a choice of several languages, it is, all other things being eq
 只有在那些不太成熟、容易出问题的地方，你才应该加上注释，提醒读者注意那里，就好像公路上只有在急转弯处才会出现警示标志一样。</p>
 <p><em>黑客与画家</em>. 2004.</p>
 </blockquote>
+<h2 id="awesome">Awesome</h2>
 <hr />
-<h2 id="_2">搜索</h2>
+<h3 id="_2">搜索</h3>
 <p>| <a href="https://wolframalpha.com/"><em>Wolfram|Alpha</em></a>
 | <a href="http://mathworld.wolfram.com/"><em>Wolfram MathWorld</em></a></p>
-<hr />
-<h2 id="_3">新闻</h2>
+<h3 id="_3">新闻</h3>
 <p>| <a href="https://infoq.cn/"><em>InfoQ</em></a>
 | <a href="https://www.qdaily.com/"><em>好奇心日报</em></a>,
   <a href="https://houxuapp.com/"><em>后续</em></a>
 | <a href="https://landiannews.com/"><em>蓝点网</em></a></p>
-<hr />
-<h2 id="_4">指数</h2>
+<h3 id="_4">指数</h3>
 <p>| <a href="https://tiobe.com/tiobe-index/"><em>TIOBE Index</em></a></p>
-<hr />
-<h2 id="_5">黄页</h2>
+<h3 id="_5">黄页</h3>
 <p>| <a href="https://awesome.re/"><em>awesome</em></a>
 | <a href="https://devdocs.io/"><em>DevDocs</em></a>
 | <a href="http://overapi.com/"><em>OverAPI.com</em></a>
 | <a href="https://programcreek.com/"><em>ProgramCreek.com</em></a></p>
-<hr />
-<h2 id="_6">书籍</h2>
+<h3 id="_6">书籍</h3>
 <p>| <a href="https://ebookfoundation.github.io/free-programming-books/">free-programming-books</a>
 | <a href="http://bestcbooks.com/">计算机书籍控</a></p></div>
             </div>
@@ -458,5 +463,5 @@ that if you have a choice of several languages, it is, all other things being eq
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-05-26 03:49:09.947885+00:00
+Build Date UTC : 2020-06-02 05:36:32.492818+00:00
 -->

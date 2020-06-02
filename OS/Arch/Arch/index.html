@@ -17,6 +17,10 @@
         <script src="../../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../../Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../../Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -317,6 +321,14 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">验证启动模式</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_3" class="nav-link">连接到互联网</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -324,6 +336,10 @@
             
             <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">若异常可尝试：</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">建立硬盘分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -349,6 +365,10 @@
             
             <li class="nav-item" data-level="1"><a href="#4g-linux-swap" class="nav-link">4G           Linux swap  交换分区</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_7" class="nav-link">挂载分区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -364,6 +384,26 @@
             
             <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">检查分区挂载</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_10" class="nav-link">安装基本系统</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_11" class="nav-link">切换根目录</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_12" class="nav-link">设置本地化</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_13" class="nav-link">系统管理员密码</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_14" class="nav-link">重启</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>

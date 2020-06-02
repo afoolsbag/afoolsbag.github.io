@@ -17,6 +17,10 @@
         <script src="../../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -317,6 +321,62 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#scoop" class="nav-link">Scoop</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#scoop_1" class="nav-link">安装 Scoop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#scoop_2" class="nav-link">维护 Scoop</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#_1" class="nav-link">配置用户安装路径</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_2" class="nav-link">配置全局安装路径</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_3" class="nav-link">维护桶</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#scoop_3" class="nav-link">更新 scoop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#scoop_4" class="nav-link">卸载 scoop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#scoop_5" class="nav-link">通过 Scoop 维护应用</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#_4" class="nav-link">当前状态</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_5" class="nav-link">搜索应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_6" class="nav-link">列出已安装应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_7" class="nav-link">安装应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_8" class="nav-link">更新应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_9" class="nav-link">卸载应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -330,76 +390,76 @@
 <p>适用于 Windows 操作系统的包管理器 Scoop 和 Chocolatey，
 Scoop 官网 <a href="https://scoop.sh/">https://scoop.sh/</a>，
 Chocolatey 官网 <a href="https://chocolatey.org/">https://chocolatey.org/</a>。</p>
-<hr />
 <h2 id="scoop">Scoop</h2>
+<hr />
 <p>GitHub Scoop Wiki 上的 <a href="https://github.com/lukesampson/scoop/wiki/So-What#but-i-already-use-x-why-should-i-use-scoop">But I already use X, why should I use Scoop?</a></p>
 <h3 id="scoop_1">安装 Scoop</h3>
 <pre><code class="ps1"># 修改执行策略
-PS *&gt; Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+PS $env:USERPROFILE&gt; Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 可选的，配置用户安装路径
-PS *&gt; $Env:SCOOP='%USERPROFILE%\scoop'
-PS *&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $Env:SCOOP, 'User')
+PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
 
 # 安装 scoop
-PS *&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-# ab. Invoke-WebRequest -UseBasicParsing 'get.scoop.sh' | Invoke-Expression
-# ab. iwr -useb get.scoop.sh | iex
+PS $env:USERPROFILE&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# abbr.              Invoke-WebRequest -UseBasicParsing 'get.scoop.sh' | Invoke-Expression
+# abbr.              iwr -useb get.scoop.sh | iex
 
 # 添加 extras 桶
-PS *&gt; scoop bucket add extras
+PS $env:USERPROFILE&gt; scoop bucket add extras
 </code></pre>
 
 <h3 id="scoop_2">维护 Scoop</h3>
 <h4 id="_1">配置用户安装路径</h4>
-<pre><code class="ps1">PS *&gt; $Env:SCOOP='%USERPROFILE%\scoop'
-PS *&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $Env:SCOOP, 'User')
+<pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
 </code></pre>
 
 <h4 id="_2">配置全局安装路径</h4>
-<pre><code class="ps1">PS *&gt; $Env:SCOOP_GLOBAL='%PROGRAMDATA%\scoop'
-PS *&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL', $Env:SCOOP_GLOBAL, 'Machine')
+<pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP_GLOBAL='%PROGRAMDATA%\scoop'
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 </code></pre>
 
 <h4 id="_3">维护桶</h4>
-<pre><code class="ps1">PS *&gt; scoop bucket known              # 列出已知桶
-PS *&gt; scoop bucket list               # 列出已用桶
-PS *&gt; scoop bucket add &lt;name&gt; [repo]  # 添加桶
-PS *&gt; scoop bucket rm &lt;name&gt;          # 移除桶
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop bucket known              # 列出已知桶
+PS $env:USERPROFILE&gt; scoop bucket list               # 列出已用桶
+PS $env:USERPROFILE&gt; scoop bucket add &lt;name&gt; [repo]  # 添加桶
+PS $env:USERPROFILE&gt; scoop bucket rm &lt;name&gt;          # 移除桶
 </code></pre>
 
 <h4 id="scoop_3">更新 scoop</h4>
-<pre><code class="ps1">PS *&gt; scoop update
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop update
 </code></pre>
 
 <h4 id="scoop_4">卸载 scoop</h4>
-<pre><code class="ps1">PS *&gt; scoop uninstall scoop
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop uninstall scoop
 </code></pre>
 
-<h3 id="_4">维护应用</h3>
-<h4 id="_5">当前状态</h4>
-<pre><code class="ps1">PS *&gt; scoop status
+<h3 id="scoop_5">通过 Scoop 维护应用</h3>
+<h4 id="_4">当前状态</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop status
 </code></pre>
 
-<h4 id="_6">搜索应用</h4>
-<pre><code class="ps1">PS *&gt; scoop search &lt;query&gt;
+<h4 id="_5">搜索应用</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop search &lt;query&gt;
 </code></pre>
 
-<h4 id="_7">列出已安装应用</h4>
-<pre><code class="ps1">PS *&gt; scoop list
+<h4 id="_6">列出已安装应用</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop list
 </code></pre>
 
-<h4 id="_8">安装应用</h4>
-<pre><code class="ps1">PS *&gt; scoop install &lt;app&gt;
+<h4 id="_7">安装应用</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop install &lt;app&gt;
 </code></pre>
 
-<h4 id="_9">更新应用</h4>
-<pre><code class="ps1">PS *&gt; scoop update &lt;app&gt;  # 更新指定应用
-PS *&gt; scoop update *      # 更新全部应用
+<h4 id="_8">更新应用</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop update &lt;app&gt;  # 更新指定应用
+PS $env:USERPROFILE&gt; scoop update *      # 更新全部应用
 </code></pre>
 
-<h4 id="_10">卸载应用</h4>
-<pre><code class="ps1">PS *&gt; scoop uninstall &lt;app&gt;
+<h4 id="_9">卸载应用</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop uninstall &lt;app&gt;
 </code></pre></div>
             </div>
         </div>

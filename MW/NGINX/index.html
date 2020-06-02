@@ -17,6 +17,10 @@
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../../OS/Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../../OS/Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../OS/Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../OS/Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../OS/Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -317,9 +321,17 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#centos" class="nav-link">CentOS</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">常用命令</a>
+            <li class="nav-item" data-level="3"><a href="#ubuntu" class="nav-link">Ubuntu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -329,6 +341,10 @@
             </li>
             <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">配置示例</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">简单静态页面</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -343,15 +359,15 @@
 <hr />
 <h2 id="_1">安装</h2>
 <h3 id="centos">CentOS</h3>
-<pre><code class="shell">[user@host *]$ sudo yum install nginx
+<pre><code class="bash">[user@host *]$ sudo yum install nginx
 </code></pre>
 
 <h3 id="ubuntu">Ubuntu</h3>
-<pre><code class="shell">user@host:*$ sudo apt install nginx
+<pre><code class="bash">user@host:*$ sudo apt install nginx
 </code></pre>
 
 <hr />
-<h2 id="_2">常用命令</h2>
+<h2 id="_2">常用命令组合</h2>
 <pre><code class="fish">user@host *&gt; nginx -v  # 版本
 user@host *&gt; nginx -h  # 帮助
 user@host *&gt; nginx -t  # 测试
@@ -372,7 +388,7 @@ user@host *&gt; nginx -s reopen  # 重新打开日志文件
 <pre><code class="fish">user@host *&gt; vim /etc/nginx/nginx.conf
 </code></pre>
 
-<pre><code class="nginx.conf"># 工作用户和组（https://nginx.org/docs/ngx_core_module.html#user）
+<pre><code class="nginx"># 工作用户和组（https://nginx.org/docs/ngx_core_module.html#user）
 user nobody nobody;
 
 # 工作线程数（https://nginx.org/docs/ngx_core_module.html#worker_processes）
@@ -424,7 +440,7 @@ http {
 <hr />
 <h2 id="_4">配置示例</h2>
 <h3 id="_5">简单静态页面</h3>
-<pre><code class="nginx.conf">worker_processes auto;
+<pre><code class="nginx">worker_processes auto;
 events {
     worker_connections 1024;
 }

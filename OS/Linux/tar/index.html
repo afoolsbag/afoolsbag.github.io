@@ -17,6 +17,10 @@
         <script src="../../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../../Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../../Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="./" class="dropdown-item active">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -283,7 +287,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../netfilter/" class="nav-link">
+                                <a rel="prev" href="../link%20aggregation/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -321,6 +325,26 @@
             </li>
             <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">常见选项释义</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#main-operation-mode" class="nav-link">主要操作模式（Main operation mode）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#device-selection-and-switching" class="nav-link">设备选择和切换（Device selection and switching）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#compression-options" class="nav-link">压缩选项（Compression options）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#local-file-selection" class="nav-link">本地文件选择（Local file selection）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#informative-output" class="nav-link">信息输出（Informative output:）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -332,21 +356,21 @@
 
 <h1 id="tar">归档打包工具 tar</h1>
 <p>适用于 GNU/Linux 操作系统的归档打包工具 <code>tar</code>（tape archive），官网 <a href="https://gnu.org/software/tar/">https://gnu.org/software/tar/</a>。</p>
-<hr />
 <h2 id="_1">常用命令组合</h2>
+<hr />
 <pre><code class="fish"># 压缩
-user@host *&gt; tar --create --auto-compress --verbose --file=&lt;archive.tar.*&gt; &lt;source&gt;...
+user@host ~&gt; tar --create --auto-compress --verbose --file=&lt;archive.tar.*&gt; &lt;source&gt;...
 # abbr.      tar -cavf &lt;archive.tar.*&gt; &lt;source&gt;...
 
 # 解压
-user@host *&gt; tar --extract --auto-compress --verbose --file=&lt;archive.tar.*&gt; [--directory=&lt;dir&gt;]
-user@host *&gt; tar -xavf &lt;archive.tar.*&gt; [-C &lt;dir&gt;]
+user@host ~&gt; tar --extract --auto-compress --verbose --file=&lt;archive.tar.*&gt; [--directory=&lt;dir&gt;]
+# abbr.      tar -xavf &lt;archive.tar.*&gt; [-C &lt;dir&gt;]
 </code></pre>
 
-<hr />
 <h2 id="_2">常见选项释义</h2>
+<hr />
 <h3 id="main-operation-mode">主要操作模式（Main operation mode）</h3>
-<pre><code class="bash">-A, --catenate, --concatenate  # 连接归档
+<pre><code class="sh">-A, --catenate, --concatenate  # 连接归档
 -c, --create                   # 创建
 -d, --diff, --compare          # 比较
     --delete                   # 删除
@@ -358,11 +382,11 @@ user@host *&gt; tar -xavf &lt;archive.tar.*&gt; [-C &lt;dir&gt;]
 </code></pre>
 
 <h3 id="device-selection-and-switching">设备选择和切换（Device selection and switching）</h3>
-<pre><code class="bash">-f, --file=&lt;archive&gt;  # 存储为文件
+<pre><code class="sh">-f, --file=&lt;archive&gt;  # 存储为文件
 </code></pre>
 
 <h3 id="compression-options">压缩选项（Compression options）</h3>
-<pre><code class="bash">-a, --auto-compress             # 通过后缀名识别压缩算法
+<pre><code class="sh">-a, --auto-compress             # 通过后缀名识别压缩算法
 -j, --bzip2                     # .tbz, .tb2, .tar.bz2
 -J, --xz                        # .txz, .tar.xz
     --lzip                      #
@@ -373,11 +397,11 @@ user@host *&gt; tar -xavf &lt;archive.tar.*&gt; [-C &lt;dir&gt;]
 </code></pre>
 
 <h3 id="local-file-selection">本地文件选择（Local file selection）</h3>
-<pre><code class="bash">-C, --directory=&lt;dir&gt;  # 改到 &lt;dir&gt; 文件夹
+<pre><code class="sh">-C, --directory=&lt;dir&gt;  # 改到 &lt;dir&gt; 文件夹
 </code></pre>
 
 <h3 id="informative-output">信息输出（Informative output:）</h3>
-<pre><code class="bash">-v --verbose  # 详细列出已处理的文件
+<pre><code class="sh">-v --verbose  # 详细列出已处理的文件
 </code></pre></div>
             </div>
         </div>

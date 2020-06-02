@@ -17,6 +17,10 @@
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../../OS/Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../../OS/Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../OS/Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../OS/Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../OS/Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -317,14 +321,42 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">配置</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">为当前用户设置名称和邮箱</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#ssh" class="nav-link">生成 SSH 密钥对</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#repositorygit" class="nav-link">版本库（Repository，.git）</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_3" class="nav-link">在本地创建版本库</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_4" class="nav-link">从远端复制版本库</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#branch" class="nav-link">分支（Branch）</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">提交</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#merge" class="nav-link">合并分支（Merge）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#tag" class="nav-link">标签（Tag）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#index" class="nav-link">暂存区（index）</a>
@@ -333,10 +365,18 @@
             </li>
             <li class="nav-item" data-level="2"><a href="#working-directorywdir" class="nav-link">工作区（Working Directory，wdir）</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#stash" class="nav-link">藏匿（Stash）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">服务</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#ubuntu" class="nav-link">Ubuntu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>

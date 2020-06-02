@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/OS/Linux/ELF/">
+        <link rel="canonical" href="https://afoolsbag.github.io/OS/Windows/WSL/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>可执行与可链接格式 ELF - zhengrr's docs</title>
+        <title>适用于 GNU/Linux 的 Windows 子系统 - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -17,6 +17,10 @@
         <script src="../../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -101,19 +105,23 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../Windows/Windows/" class="dropdown-item">Windows 操作系统</a>
+    <a href="../Windows/" class="dropdown-item">Windows 操作系统</a>
 </li>
             
 <li>
-    <a href="../../Windows/Scoop%20%26%20Chocolatey/" class="dropdown-item">包管理器 Scoop 和 Chocolatey</a>
+    <a href="../Scoop%20%26%20Chocolatey/" class="dropdown-item">包管理器 Scoop 和 Chocolatey</a>
 </li>
             
 <li>
-    <a href="../../Windows/Cmder/" class="dropdown-item">命令行壳层 Cmder</a>
+    <a href="../Cmder/" class="dropdown-item">命令行壳层 Cmder</a>
 </li>
             
 <li>
-    <a href="../../Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
+    <a href="../Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">适用于 GNU/Linux 的 Windows 子系统</a>
 </li>
     </ul>
   </li>
@@ -123,39 +131,35 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+    <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">可执行与可链接格式 ELF</a>
+    <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
+    <a href="../../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
 </li>
             
 <li>
-    <a href="../grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../../Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
 </li>
             
 <li>
-    <a href="../link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
 <li>
-    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
+    <a href="../../Linux/top/" class="dropdown-item">进程查看工具 top</a>
 </li>
             
 <li>
-    <a href="../tar/" class="dropdown-item">归档打包工具 tar</a>
+    <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
 </li>
             
 <li>
-    <a href="../top/" class="dropdown-item">进程查看工具 top</a>
-</li>
-            
-<li>
-    <a href="../users/" class="dropdown-item">用户管理工具套件 users 等</a>
+    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -283,12 +287,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Linux/" class="nav-link">
+                                <a rel="prev" href="../Cheat%20Engine/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../fish/" class="nav-link">
+                                <a rel="next" href="../../Linux/Linux/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -313,14 +317,14 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#elf" class="nav-link">可执行与可链接格式 ELF</a>
+            <li class="nav-item" data-level="1"><a href="#gnulinux-windows" class="nav-link">适用于 GNU/Linux 的 Windows 子系统</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#lxssmanager" class="nav-link">维护 LxssManager 服务</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">常见选项释义</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
@@ -330,39 +334,21 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="elf">可执行与可链接格式 ELF</h1>
-<p>适用于 GNU/Linux 操作系统的应用程序二进制接口规范 ELF（Executable and Linkable Format）。</p>
-<hr />
+<h1 id="gnulinux-windows">适用于 GNU/Linux 的 Windows 子系统</h1>
 <h2 id="_1">常用命令组合</h2>
-<pre><code class="fish"></code></pre>
-
 <hr />
-<h2 id="_2">常见选项释义</h2>
-<h3 id="objdump"><code>objdump</code></h3>
-<p>官网 <a href="https://www.gnu.org/software/binutils/">https://www.gnu.org/software/binutils/</a>，
-官方文档 <a href="https://sourceware.org/binutils/docs/binutils/objdump.html">https://sourceware.org/binutils/docs/binutils/objdump.html</a>。</p>
-<h3 id="readelf"><code>readelf</code></h3>
-<p>官网 <a href="https://www.gnu.org/software/binutils/">https://www.gnu.org/software/binutils/</a>，
-官方文档 <a href="https://sourceware.org/binutils/docs/binutils/readelf.html">https://sourceware.org/binutils/docs/binutils/readelf.html</a>。</p>
-<pre><code class="fish">user@host *&gt; readelf &lt;option(s)&gt; &lt;elf-file(s)&gt;
-</code></pre>
+<h3 id="lxssmanager">维护 <code>LxssManager</code> 服务</h3>
+<pre><code class="cmd">:: 查询服务状态
+%USERPROFILE%&gt; SC QUERYEX LxssManager
 
-<pre><code class="bash">-a, --all                          # 全部，等同于 -h -l -S -s -r -d -V -A -I
--h, --file-header                  # 文件头
--l, --program-headers, --segments  # 程序头
--S, --section-headers, --sections  # 段表
--s, --syms, --symbols              # 符号段（.symtab）
--r, --relocs                       # 重定位段（如果存在）
--d, --dynamic                      # 动态段（如果存在）
--V, --version-info                 # 版本段（如果存在）
--I, --histogram                    # 直方图
+:: 启动服务
+%USERPROFILE%&gt; SC START LxssManager
 
-    --dyn-syms                     # 动态符号表
-</code></pre>
+:: 停止服务
+%USERPROFILE%&gt; SC STOP LxssManager
 
-<h3 id="ldd"><code>ldd</code></h3>
-<p>官方文档 <a href="http://man7.org/linux/man-pages/man1/ldd.1.html">http://man7.org/linux/man-pages/man1/ldd.1.html</a>。</p>
-<pre><code class="fish">user@host *&gt; ldd [option(s)] &lt;file(s)&gt;
+:: 重启服务
+%USERPROFILE%&gt; SC STOP LxssManager &amp;&amp; TIMEOUT /T 1 /NOBREAK &amp;&amp; SC START LxssManager
 </code></pre></div>
             </div>
         </div>

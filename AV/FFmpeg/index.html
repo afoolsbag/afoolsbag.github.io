@@ -17,6 +17,10 @@
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../../OS/Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../../OS/Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../OS/Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../OS/Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../OS/Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../OS/Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -315,12 +319,36 @@
             
             <li class="nav-item" data-level="1"><a href="#ffmpeg" class="nav-link">多媒体处理套件 FFmpeg</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令组合</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">改变封装格式</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">命令说明</a>
+            <li class="nav-item" data-level="3"><a href="#_3" class="nav-link">生成缩略图</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#rtmp" class="nav-link">读取文件流转换为 RTMP 流</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#rtsp-rtmp" class="nav-link">读取 RTSP 流转换为 RTMP 流</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">常见选项释义</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#global_options" class="nav-link">global_options</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#inputoutput_file_options" class="nav-link">input/output_file_options</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -331,77 +359,84 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="ffmpeg">多媒体处理套件 FFmpeg</h1>
-<p>官网 <a href="https://ffmpeg.org/">https://ffmpeg.org/</a>。</p>
+<p>官网 <a href="https://ffmpeg.org/">https://ffmpeg.org/</a>，
+官方文档 <a href="https://ffmpeg.org/ffmpeg-all.html">https://ffmpeg.org/ffmpeg-all.html</a>。</p>
+<h2 id="_1">常用命令组合</h2>
 <hr />
-<h2 id="_1">常用命令</h2>
 <h3 id="_2">改变封装格式</h3>
-<pre><code class="batchfile">λ ffmpeg -i &lt;input-video-path&gt; ^
-         -c copy &lt;output-video-path&gt;
+<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -i &lt;input&gt; ^
+                      -codec copy &lt;output&gt;
+:: abbr.       ffmpeg -i &lt;input&gt; -c copy &lt;output&gt;
 </code></pre>
 
 <h3 id="_3">生成缩略图</h3>
-<pre><code class="batchfile">λ ffmpeg -i &lt;video-path&gt; ^
-         -f mjpeg -ss 1 -frames:v 1 &lt;image-path&gt;
+<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -i &lt;video&gt; ^
+                      -f mjpeg -ss 1 -frames:v 1 &lt;image&gt;
+:: abbr.       ffmpeg -i &lt;video&gt; -f mjpeg -ss 1 -frames:v 1 &lt;image&gt;
 </code></pre>
 
-<h3 id="rtmp">转文件流到 RTMP 流</h3>
-<pre><code class="batchfile">λ ffmpeg -re -i &lt;/path/to/video.flv&gt; ^
-         -f flv -c copy rtmp://host/live/&lt;stream&gt;
+<h3 id="rtmp">读取文件流转换为 RTMP 流</h3>
+<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -re -i &lt;/path/to/video.flv&gt; ^
+                      -f flv -codec copy &lt;rtmp://host/path/to/stream&gt;
+:: abbr.       ffmpeg -re -i &lt;/path/to/video.flv&gt; -f flv -c copy &lt;rtmp://host/path/to/stream&gt;
 </code></pre>
 
-<h3 id="rtsp-rtmp">转 RTSP 流到 RTMP 流</h3>
-<pre><code class="batchfile">λ ffmpeg -i rtsp://host/&lt;path/to/stream&gt; ^
-         -f flv -c copy rtmp://host/live/&lt;stream&gt;
+<h3 id="rtsp-rtmp">读取 RTSP 流转换为 RTMP 流</h3>
+<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -i &lt;rtsp://host/path/to/stream&gt; ^
+                      -f flv -codec copy &lt;rtmp://host/path/to/stream&gt;
+:: abbr.       ffmpeg -i &lt;rtsp://host/path/to/stream&gt; -f flv -c copy &lt;rtmp://host/path/to/stream&gt;
 </code></pre>
 
+<h2 id="_4">常见选项释义</h2>
 <hr />
-<h2 id="_4">命令说明</h2>
-<pre><code class="batchfile">λ ffmpeg [global_options] ^
-         {[input_file_options] -i input_url} ... ^
-         {[output_file_options] output_url} ...
+<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg [global_option]... ^
+                      { [input_file_option]... -i &lt;input_url&gt; } ... ^
+                      { [output_file_option]... &lt;output_url&gt; } ...
 </code></pre>
 
 <h3 id="global_options"><code>global_options</code></h3>
-<pre><code class="batchfile">         -loglevel          # 设定日志级别：
-         -v        quiet    # 沉默
-                   panic    # 崩溃错误
-                   fatal    # 致命错误
-                   error    # 错误（可能可恢复）
-                   warning  # 警告
-                   info     # 信息
-                   verbose  # 更啰嗦的信息
-                   debug    # 调试，输出所有信息
-                   trace    # 跟踪
+<p>参见 <a href="https://ffmpeg.org/ffmpeg-all.html#Generic-options">https://ffmpeg.org/ffmpeg-all.html#Generic-options</a>。</p>
+<pre><code class="sh">-loglevel          # 设定日志级别：
+-v        quiet    # 沉默
+          panic    # 崩溃错误
+          fatal    # 致命错误
+          error    # 错误（可能可恢复）
+          warning  # 警告
+          info     # 信息
+          verbose  # 更啰嗦的信息
+          debug    # 调试，输出所有信息
+          trace    # 跟踪
 </code></pre>
 
 <h3 id="inputoutput_file_options"><code>input/output_file_options</code></h3>
-<pre><code class="batchfile">         -f &lt;fmt&gt;                                 # 指定文件格式
+<p>参见 <a href="https://ffmpeg.org/ffmpeg-all.html#Main-options">https://ffmpeg.org/ffmpeg-all.html#Main-options</a>。</p>
+<pre><code class="sh">-f &lt;fmt&gt;                                 # 指定文件格式
 
-         -y                                       # 覆盖输出而不询问
+-y                                       # 覆盖输出而不询问
 
-         -codec[:stream_specifier] &lt;codec&gt;        # 指定编解码器
-         -c[:stream_specifier] &lt;codec&gt;
+-codec[:stream_specifier] &lt;codec&gt;        # 指定编解码器
+-c[:stream_specifier] &lt;codec&gt;
 
-         -codec:v &lt;codec&gt;                         # 指定视频流编解码器
-         -c:v &lt;codec&gt;
-         -vcodec &lt;codec&gt;
+-codec:v &lt;codec&gt;                         # 指定视频流编解码器
+-c:v &lt;codec&gt;
+-vcodec &lt;codec&gt;
 
-         -codec:a &lt;codec&gt;                         # 指定音频流编解码器
-         -c:a &lt;codec&gt;
-         -acodec &lt;codec&gt;
+-codec:a &lt;codec&gt;                         # 指定音频流编解码器
+-c:a &lt;codec&gt;
+-acodec &lt;codec&gt;
 
-         -codec:s &lt;codec&gt;                         # 指定字幕流编解码器
-         -c:s &lt;codec&gt;
-         -scodec &lt;codec&gt;
+-codec:s &lt;codec&gt;                         # 指定字幕流编解码器
+-c:s &lt;codec&gt;
+-scodec &lt;codec&gt;
 
-         -ss &lt;position&gt;                           # 指定位置
+-ss &lt;position&gt;                           # 指定位置
 
-         -frames[:stream_specifier] &lt;framecount&gt;  # 设定输出帧数（仅限输出选项）
+-frames[:stream_specifier] &lt;framecount&gt;  # 设定输出帧数（仅限输出选项）
 
-         -vn                                      # video    忽略视频流
-         -an                                      # audio    忽略音频流
-         -sn                                      # subtitle 忽略字幕流
-         -dn                                      # data     忽略数据流
+-vn                                      # video    忽略视频流
+-an                                      # audio    忽略音频流
+-sn                                      # subtitle 忽略字幕流
+-dn                                      # data     忽略数据流
 </code></pre></div>
             </div>
         </div>

@@ -17,6 +17,10 @@
         <script src="../../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../../Windows/Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../../Windows/WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -319,12 +323,20 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">维护：语言环境</a>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">语言环境维护</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">维护：网络</a>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">网络维护</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#networkmanager" class="nav-link">使用 NetworkManager 维护网络</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#network" class="nav-link">使用 network 维护网络</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -335,39 +347,39 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="gnulinux-centos">GNU/Linux 发行版 CentOS 操作系统</h1>
-<p>官网 <a href="https://centos.org/">https://centos.org/</a>。</p>
-<hr />
+<p><a href="https://centos.org/"><em>CentOS 官网</em></a>。</p>
 <h2 id="_1">安装</h2>
 <hr />
-<h2 id="_2">维护：语言环境</h2>
-<pre><code class="shell"># 可能的，安装语言环境
-[user@host *]$ sudo yum install glibc-locale-source
-[user@host *]$ sudo yum install glibc-langpack-en
+<h2 id="_2">语言环境维护</h2>
+<hr />
+<pre><code class="sh"># 可能的，安装语言环境
+[user@host ~]$ sudo yum install glibc-locale-source
+[user@host ~]$ sudo yum install glibc-langpack-en
 
 # 可能的，定义语言环境
-[user@host *]$ sudo localedef --inputfile=en_US --charmap=UTF-8 --verbose en_US.UTF-8
+[user@host ~]$ sudo localedef --inputfile=en_US --charmap=UTF-8 --verbose en_US.UTF-8
 # abbr.        sudo localedef -i en_US -f UTF-8 -v en_US.UTF-8
 
 # 可能的，修改会话语言环境
-[user@host *]$ locale                              # 当前会话语言环境
-[user@host *]$ locale --all-locales                # 列出可用语言环境
+[user@host ~]$ locale                              # 当前会话语言环境
+[user@host ~]$ locale --all-locales                # 列出可用语言环境
 # abbr.        locale -a
-[user@host *]$ vim ~/.bash_profile                 # 设置语言环境
+[user@host ~]$ vim ~/.bash_profile                 # 设置语言环境
 </code></pre>
 
-<pre><code class="shell"># ~/.bash_profile
+<pre><code class="sh"># ~/.bash_profile
 
 LANG=&quot;zh_CN.utf8&quot;
 </code></pre>
 
-<pre><code class="shell"># 可能的，修改系统语言环境
-[user@host *]$ localectl status                    # 当前系统语言环境
-[user@host *]$ localectl list-locales              # 列出可用语言环境
-[user@host *]$ sudo localectl set-locale &lt;locale&gt;  # 设置语言环境
+<pre><code class="sh"># 可能的，修改系统语言环境
+[user@host ~]$ localectl status                    # 当前系统语言环境
+[user@host ~]$ localectl list-locales              # 列出可用语言环境
+[user@host ~]$ sudo localectl set-locale &lt;locale&gt;  # 设置语言环境
 </code></pre>
 
+<h2 id="_3">网络维护</h2>
 <hr />
-<h2 id="_3">维护：网络</h2>
 <p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/"><em>Red Hat Enterprise Linux 7 联网指南</em></a></p>
 <pre><code class="ini"># /etc/sysconfig/network-scripts/ifcfg-en&lt;*&gt;
 
@@ -384,27 +396,27 @@ DNS2=8.8.8.8
 </code></pre>
 
 <h3 id="networkmanager">使用 NetworkManager 维护网络</h3>
-<p>NetworkManager 官网 <a href="https://wiki.gnome.org/Projects/NetworkManager">https://wiki.gnome.org/Projects/NetworkManager</a>。
-其提供一个 CLI 工具 <code>nmcli</code> 和一个 TUI 工具 <code>nmtui</code>。
-其使用的大多数配置位于 <code>/etc/sysconfig/</code> 目录下，VPN、移动宽带和 PPPoE 配置位于 <code>/etc/NetworkManager/</code> 目录下。</p>
-<p>注意：远程配置网络要谨慎，不要试图远程停止（<code>stop</code>）再启动接口，而是使用重载（<code>reload</code>）、重启（<code>restart</code>）或直接覆盖启动（<code>start</code>）。</p>
-<pre><code class="shell">[user@host *]$ systemctl status NetworkManager  # 查看服务状态
+<p>NetworkManager 官网 <a href="https://wiki.gnome.org/Projects/NetworkManager">https://wiki.gnome.org/Projects/NetworkManager</a>。</p>
+<p>NetworkManager 提供一个 CLI 工具 <code>nmcli</code> 和一个 TUI 工具 <code>nmtui</code>。</p>
+<p>NetworkManager 使用的大多数配置位于 <code>/etc/sysconfig/</code> 目录下，VPN、移动宽带和 PPPoE 配置位于 <code>/etc/NetworkManager/</code> 目录下。</p>
+<p>注意：远程配置网络要谨慎，一旦离线便脱离控制，警惕 <code>stop</code> 命令，警惕 TUI。</p>
+<pre><code class="shell">[user@host ~]$ systemctl status NetworkManager  # 查看服务状态
 
-[user@host *]$ nmcli                            # 概览
+[user@host ~]$ nmcli                            # 概览
 
-[user@host *]$ sudo nmcli connection reload     # 重载所有配置
+[user@host ~]$ sudo nmcli connection reload     # 重载所有配置
 # abbr.        sudo nmcli c reload
 
-[user@host *]$ sudo nmcli connection up &lt;interface-name&gt;  # 为指定接口的连接应用配置
+[user@host ~]$ sudo nmcli connection up &lt;interface-name&gt;  # 为指定接口的连接应用配置
 # abbr.        sudo nmcli c up &lt;interface-name&gt;
 </code></pre>
 
 <h3 id="network">使用 network 维护网络</h3>
-<pre><code class="shell">[user@host *]$ systemctl status network        # 查看服务状态
+<pre><code class="shell">[user@host ~]$ systemctl status network        # 查看服务状态
 
-[user@host *]$ sudo ifconfig                   # 概览
+[user@host ~]$ sudo ifconfig                   # 概览
 
-[user@host *]$ sudo systemctl restart network  # 重载所有配置并应用
+[user@host ~]$ sudo systemctl restart network  # 重载所有配置并应用
 </code></pre></div>
             </div>
         </div>

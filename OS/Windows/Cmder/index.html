@@ -17,6 +17,10 @@
         <script src="../../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -50,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../../../CC/StarUML/" class="dropdown-item">统一建模语言工具 StarUML</a>
+    <a href="../../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -115,6 +119,10 @@
 <li>
     <a href="../Cheat%20Engine/" class="dropdown-item">单人游戏修改器 Cheat Engine</a>
 </li>
+            
+<li>
+    <a href="../WSL/" class="dropdown-item">适用于 GNU/Linux 的 Windows 子系统</a>
+</li>
     </ul>
   </li>
                                     
@@ -124,10 +132,6 @@
             
 <li>
     <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Linux/ELF/" class="dropdown-item">可执行与可链接格式 ELF</a>
 </li>
             
 <li>
@@ -143,10 +147,6 @@
 </li>
             
 <li>
-    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 [*netfilter*](https://netfilter.org/)</a>
-</li>
-            
-<li>
     <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
@@ -156,6 +156,10 @@
             
 <li>
     <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+</li>
+            
+<li>
+    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
 </li>
     </ul>
   </li>
@@ -317,6 +321,18 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#cmder_1" class="nav-link">安装 Cmder</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_1" class="nav-link">通过安装包安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#scoop" class="nav-link">通过 Scoop 安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">快捷键</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
@@ -334,7 +350,116 @@
 <p>见官网，详略。</p>
 <h3 id="scoop">通过 Scoop 安装</h3>
 <pre><code class="ps1">PS *&gt; scoop install cmder-full
-</code></pre></div>
+</code></pre>
+
+<hr />
+<h2 id="_2">快捷键</h2>
+<table>
+<thead>
+<tr>
+<th align="center">shortcut key</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">窗口</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>`</kbd></td>
+<td align="left"><strong>全局</strong>召唤</td>
+</tr>
+<tr>
+<td align="center"><kbd>Alt</kbd> + <kbd>Enter</kbd></td>
+<td align="left">全屏</td>
+</tr>
+<tr>
+<td align="center">标签页</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>T</kbd></td>
+<td align="left">新建标签页……</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>1</kbd></td>
+<td align="left">新建 CMD 管理员标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>2</kbd></td>
+<td align="left">新建 CMD 标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>3</kbd></td>
+<td align="left">新建 PowerShell 管理员标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>4</kbd></td>
+<td align="left">新建 PowerShell 标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>5</kbd></td>
+<td align="left">新建 mintty 管理员标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>6</kbd></td>
+<td align="left">新建 mintty 标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>7</kbd></td>
+<td align="left">新建 Bash 管理员标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>8</kbd></td>
+<td align="left">新建 Bash 标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>9</kbd></td>
+<td align="left">新建 WSL Bash 标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td>
+<td align="left">切换到右一标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td>
+<td align="left">切换到左一标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>#</kbd></td>
+<td align="left">切换到第 <code>#</code> 个标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>W</kbd></td>
+<td align="left">关闭当前标签页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>D</kbd></td>
+<td align="left">若没有命令，则关闭当前标签页</td>
+</tr>
+<tr>
+<td align="center">命令</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td>
+<td align="left">返回上级目录</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>R</kbd></td>
+<td align="left">历史命令搜索</td>
+</tr>
+<tr>
+<td align="center">配置</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd></td>
+<td align="left">设置……</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 
