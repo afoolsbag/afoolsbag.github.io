@@ -1,40 +1,52 @@
 # 分布式版本控制系统 Git
 
-官网 <https://git-scm.com/>。
+官网 <https://git-scm.com/>，
+[*官方文档*](https://git-scm.com/doc)。
 
-*   [*Git 教程*](https://liaoxuefeng.com/wiki/896043488029600)
-*   [*Sourcetree*](https://sourcetreeapp.com/)
+Git 图形用户界面 [*Sourcetree*](https://sourcetreeapp.com/) 和 [*TortoiseGit*](https://tortoisegit.org/)。
 
-___
+[*廖雪峰的 Git 教程*](https://liaoxuefeng.com/wiki/896043488029600)。
+
 ## 配置
+---
 
 ```fish
-user@host *> git config --list           # 列出配置
+# 列出配置
+user@host ~> git config --list
 # abbr.      git config -l
-user@host *> git config --system --list  # 系统配置（/etc/gitconfig）
-user@host *> git config --global --list  # 用户配置（~/.gitconfig）
-user@host *> git config --local  --list  # 项目配置（.git/config）
+
+# 系统配置（`/etc/gitconfig`）
+user@host ~> git config --system --list
+# abbr.      git config --system -l
+
+# 用户配置（`~/.gitconfig`）
+user@host ~> git config --global --list
+# abbr.      git config --global -l
+
+# 项目配置（`.git/config`）
+user@host ~> git config --local --list
+# abbr.      git config --local -l
 ```
 
 ### 为当前用户设置名称和邮箱
 
 ```fish
-user@host *> git config --global user.name "<name>"
-user@host *> git config --global user.email "<email@example.com>"
+user@host ~> git config --global user.name "<name>"
+user@host ~> git config --global user.email "<email@example.com>"
 ```
 
 ### 生成 SSH 密钥对
 
 ```fish
-user@host *> ssh-keygen -t rsa -C "<email@example.com>"  # ~/.ssh
-user@host *> cd ~/.ssh
+user@host ~> ssh-keygen -t rsa -C "<email@example.com>"
 ```
 
-___
-## 版本库（Repository，`.git`）
+## 版本库
+---
 
 ```fish
-user@host ~/wdir> git remote --verbose  # 列出远端库
+# 列出远端库
+user@host ~/wdir> git remote --verbose
 # abbr.           git remote -v
 ```
 
@@ -66,22 +78,26 @@ user@host ~/wdir> git branch --set-upstream-to=<origin/dev> <dev>
 # abbr.           git branch -u <origin/dev> <dev>
 ```
 
-___
-## 分支（Branch）
+## 分支
+---
 
 ```fish
-user@host ~/wdir> git branch          # 展示分支
+# 展示分支
+user@host ~/wdir> git branch
 
-user@host ~/wdir> git branch <dev>    # 创建分支
+# 创建分支
+user@host ~/wdir> git branch <dev>
 
-user@host ~/wdir> git --delete <dev>  # 删除分支
+# 删除分支
+user@host ~/wdir> git --delete <dev>
 # abbr.           git -d <dev>
 
-user@host ~/wdir> git switch <dev>    # 切换分支
+# 切换分支
+user@host ~/wdir> git switch <dev>
 # depr.           git checkout <dev>
 
-
-user@host ~/wdir> git switch --create <dev>  # 创建并切换分支
+# 创建并切换分支
+user@host ~/wdir> git switch --create <dev>
 # abbr.           git switch -c <dev>
 # depr.           git checkout -b <dev>
 ```
@@ -90,100 +106,143 @@ user@host ~/wdir> git switch --create <dev>  # 创建并切换分支
 
 ```fish
 # 查看提交历史
-user@host ~/wdri> git log
-user@host ~/wdri> git log --abbrev-commit --graph --pretty=oneline
-# abbr.           git log --graph --online
+user@host ~/wdir> git log [--abbrev-commit --graph --pretty=oneline]
+# abbr.           git log [--graph --online]
 ```
 
-### 合并分支（Merge）
+### 合并分支
 
 ```fish
-user@host ~/wdir (dev)> git checkout <master>  # 切换到主分支
-user@host ~/wdir (master)> git merge <dev>     # 合并分支
+# 切换到主分支
+user@host ~/wdir (dev)> git checkout <master>
+
+# 合并分支
+user@host ~/wdir (master)> git merge <dev>
 
 # 禁用快进模式，带记录地合并分支
 user@host ~/wdir (master)> git merge --no-ff -m "<merge with no-ff>" <dev>
-
-# 若有冲突
-user@host ~/wdir (master)> git status          # 查看冲突
-# ......                                       # 解决冲突
-user@host ~/wdir (master)> git add <file>      # 提交修改
-user@host ~/wdir (master)> git commit -m "<conflict fixed>"
 
 # 若希望整理提交历史，将分岔合并
 user@host ~/wdir (master)> git rebase
 ```
 
-### 标签（Tag）
+### 解决冲突
 
 ```fish
+# 出现冲突
+
+# 查看冲突
+user@host ~/wdir> git status
+
+# 解决冲突
+# ......
+
+# 添加修改
+user@host ~/wdir> git add <file>
+
+# 提交修改
+user@host ~/wdir> git commit -m "<conflict fixed>"
 ```
 
-## 暂存区（`index`）
+### 标签
 
 ```fish
-user@host ~/wdir> git diff --cached                 # 比较暂存区与版本库
+# 列出标签
+user@host ~/wdir> git tag 
 
-user@host ~/wdir> git commit --message="<message>"  # 提交暂存区修改到版本库 `index` >> `branch`
+# 查看标签
+user@host ~/wdir> git show <tagname>
+
+# 打标签
+user@host ~/wdir> git tag <tagname> [commit]
+
+# 制作一个带注释的标签
+user@host ~/wdir> git tag --annotate --message='<message>' <tagname> [commit]
+# abbr.           git tag -a -m '<message>' <tagname> [commit]
+```
+
+## 暂存区
+
+```fish
+# 比较暂存区与版本库
+user@host ~/wdir> git diff --cached
+
+# 从暂存区，将修改提交到版本库（`index` >> `branch`）
+user@host ~/wdir> git commit --message="<message>"
 # abbr.           git commit -m "<message>"
 
-user@host ~/wdir> git restore --staged <file>...    # 回退暂存区修改到工作区
+# 从暂存区，将修改回退到工作区
+user@host ~/wdir> git restore --staged <file>...
 # depr.           git reset HEAD [file]...
 ```
 
-___
-## 工作区（Working Directory，`wdir`）
+## 工作区
+---
 
 ```fish
-user@host ~/wdir> git status                 # 查看工作区状态
+# 查看工作区状态
+user@host ~/wdir> git status
 
-user@host ~/wdir> git diff HEAD              # 比较工作区与版本库
-user@host ~/wdir> git diff                   # 比较工作区与暂存区
+# 比较工作区与版本库
+user@host ~/wdir> git diff HEAD
 
-user@host ~/wdir> git add <file>...          # 添加工作区修改到暂存区 `wdir` >> `index`
+# 比较工作区与暂存区
+user@host ~/wdir> git diff
 
-user@host ~/wdir> git restore <file>...      # 放弃工作区修改
+# 从工作区，将修改添加到暂存区（`wdir` >> `index`）
+user@host ~/wdir> git add <file>...          
+
+# 放弃工作区修改
+user@host ~/wdir> git restore <file>...
 # depr.           git checkout -- <file>...
 ```
 
-### 藏匿（Stash）
+### 藏匿
 
 ```fish
-user@host ~/wdir> git stash                 # 藏匿脏工作区，以处理突发事件，譬如漏洞修复
+# 藏匿脏工作区，以处理突发事件，譬如漏洞修复
+user@host ~/wdir> git stash
+
 # ......
-user@host ~/wdir> git stash pop             # 恢复脏工作区，继续之前的工作
 
-user@host ~/wdir> git cherry-pick <commit>  # 复制特定提交到当前分支
-                                            # 常用于将主分支的漏洞修复，应用到开发分支
-
-
-user@host ~/wdir> git stash list               # 列出存储的脏工作区
-user@host ~/wdir> git stash apply [stash@{0}]  # 恢复指定的脏工作区，且不将其丢弃
-user@host ~/wdir> git stash drop [stash@{0}]   # 丢弃指定的脏工作区
+# 恢复脏工作区，继续之前的工作
+user@host ~/wdir> git stash pop
 ```
 
-___
+```fish
+# 复制特定提交到当前分支
+# 常用于将主分支的漏洞修复，应用到开发分支
+user@host ~/wdir> git cherry-pick <commit>
+
+# 列出存储的脏工作区
+user@host ~/wdir> git stash list
+
+# 恢复指定的脏工作区，且不将其丢弃
+user@host ~/wdir> git stash apply [stash@{0}]
+
+# 丢弃指定的脏工作区
+user@host ~/wdir> git stash drop [stash@{0}]
+```
+
 ## 服务
+---
 
-### Ubuntu
-
-```shell
+```sh
 # 安装 git
-user@host:*$ sudo apt install git
+# ......
 
-# 创建名为 git 用户，并禁用其默认 Shell
-user@host:*$ sudo adduser git
-user@host:*$ sudo vim /etc/passwd
-# git:x:1001:1001:user for git service:/home/git:/usr/bin/git-shell
+# 创建 git 用户
+user@host ~> sudo useradd --comment 'user for git service' --create-home --shell /usr/bin/git-shell git
+# abbr.      sudo useradd -c 'user for git service' -m -s /usr/bin/git-shell git
 
-# 导入证书
-user@host:*$ cd /home/git
-user@host:~$ sudo --user=git mkdir .ssh
-# abbr.      sudo -u git mkdir .ssh
-user@host:~$ sudo --user=git vim .ssh/authorized_keys  # 一行一条
-# abbr.      sudo -u git vim .ssh/authorized_keys
+# 导入证书，一行一条
+user@host ~> cd /home/git
+user@host /h/git> sudo --user=git mkdir .ssh
+# abbr.           sudo -u git mkdir .ssh
+user@host:/h/git> sudo --user=git vim .ssh/authorized_keys  
+# abbr.           sudo -u git vim .ssh/authorized_keys
 
 # 初始化仓库
-user@host:~$ sudo --user=git git init --bare <wdir.git>
-# abbr.      sudo -u git git init --bare <wdir.git>
+user@host:/h/git> sudo --user=git git init --bare <wdir.git>
+# abbr.           sudo -u git git init --bare <wdir.git>
 ```

@@ -21,12 +21,48 @@
 指数
 | <https://alternative.me/crypto/>
 
-___
+
+电子货币[*列表*](https://www.feixiaohao.com/)
+
+*   比特币（BTC），发行于 2009 年 01 月 03 日
+*   莱特币（LTC），发行于 2011 年 11 月 09 日
+*   以太坊（ETH），发行于 2015 年 03 月 20 日
+*   柚子（EOS），
+
+交易所[*列表*](https://www.feixiaohao.com/exchange/)
+
+*   [*火币*](https://www.huobi.com/zh-cn/)
+*   [*币安*](https://www.binance.com/cn)
+*   [*OKEx*](https://www.okex.com/)
+
+## 期货
+---
+
+*   现货：一手交钱，一手交货。
+*   远期合约：货物尚未产出，提前签订合约，待货物产出后按合约履行。
+    *   套期保值；
+    *   毁约风险：其时价差甚于定金，以利计，不如毁约；
+    *   质量风险：货物质量须买方自行查验；
+    *   交易风险：卖方因故无法产出货物。
+*   标准期货合约：规定了商品质量、商品数量、交割时间、交割地点和交割方式。
+    *   卖方：提供仓单证明或保证金，持有卖方合约，待交割后退还保证金；
+    *   买方：提供保证金，持有买方合约，交割时保证金用作预付款；
+    *   保证金交易制度：假定 `10%` 保证金，有
+
+|  合约价格 |  结余 | 保证金 |      现金 |        |      现金 | 保证金 |  结余 | 说明 |
+| ---------:| -----:| ------:| ---------:|:------:| ---------:| ------:| -----:|:---- |
+| **10000** |     0 |   1000 | **-1000** |        | **-1000** |   1000 |     0 | **开仓**
+| **11000** | -1000 |   1100 | **-2100** | >1000> | **-1000** |   2000 | +1000 | 合约**上涨 10%**
+| **16500** | -6500 |   1650 | **-8150** | >5500> | **-1000** |   7500 | +6500 | 合约**上涨 50%**
+|  **8250** | +1750 |   9900 | **-8150** | <8250< | **-2575** |    825 | -1750 | 合约**下跌 50%**
+|  **8250** | +1750 |      0 | **+1750** |        | **-1750** |      0 | -1750 | **平仓**
+
 ## 门罗币（MXR）
+---
 
 门罗币（Monero）发行于 2014 年 04 月 18 日，官网 <https://getmonero.org/>。
 
-CryptoNote 的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf) 。
+CryptoNote 的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf)。
 
 头等仓上的《精通门罗币》翻译连载：
 
@@ -64,58 +100,60 @@ CryptoNote 的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf
 
 矿机和矿池：
 
-*   矿机 [*XMRig*](https://github.com/xmrig/xmrig)
-*   矿机 [*XMRig-AMD*](https://github.com/xmrig/xmrig-amd)
-*   矿机 [*XMRig-NVIDIA*](https://github.com/xmrig/xmrig-nvidia)
-*   [矿池](https://miningpoolstats.stream/monero)
+*   [*矿机推荐列表*](https://web.getmonero.org/get-started/mining/)
+*   [*XMRig*](https://github.com/xmrig/xmrig)
+*   [*XMRig-AMD*](https://github.com/xmrig/xmrig-amd)
+*   [*XMRig-NVIDIA*](https://github.com/xmrig/xmrig-nvidia)
+*   [*矿池推荐列表*](https://miningpoolstats.stream/monero)
+*   [*F2Pool*](https://www.f2pool.com/)
 
 #### Windows+CPU+XMRig+F2Pool 简易挖矿流程
 
-```bat
+```cmd
 %USERPROFILE%> CD %TMP%
 %TMP%> _
-:: 下载 https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-msvc-win64.zip 并解压
-%TMP%> CD xmrig-5.11.1
-%USERPROFILE%\xmrig-5.11.1> xmrig --url=stratum+tcp://xmr.f2pool.com:13531 ^
-                                  --user=<wallet_address>.<custom_name> ^
-                                  --pass=x ^
-                                  --keepalive ^
-                                  --donate-level=1 ^
-                                  --cpu-priority=0 ^
-                                  --cpu-max-threads-hint=80
-:: abbr.                    xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 --cpu-max-threads-hint=80
+:: 下载 https://github.com/xmrig/xmrig/releases/download/v5.11.2/xmrig-5.11.2-msvc-win64.zip 并解压
+%TMP%> CD xmrig-5.11.2
+%TMP%\xmrig-5.11.2> xmrig --url=stratum+tcp://xmr.f2pool.com:13531 ^
+                          --user=<wallet_address>.<custom_name> ^
+                          --pass=x ^
+                          --keepalive ^
+                          --donate-level=1 ^
+                          --cpu-priority=0 ^
+                          --background
+:: abbr.            xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
 ```
 
 #### CentOS+CPU+XMRig+F2Pool 简易挖矿流程
 
-```bash
-[user@host *]$ cd /tmp
-[user@host tmp]$ curl -O https://github.com/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-gcc-win64.zip
-[user@host tmp]$ tar -xavf xmrig-5.11.1-xenial-x64.tar.gz
-[user@host tmp]$ cd xmrig-5.11.1
-[user@host xmrig-5.11.1]$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
+```sh
+[user@host ~]$ cd /tmp
+[user@host tmp]$ curl -O https://github.com/xmrig/xmrig/releases/download/v5.11.2/xmrig-5.11.2-xenial-x64.tar.gz
+[user@host tmp]$ tar -xavf xmrig-5.11.2-xenial-x64.tar.gz
+[user@host tmp]$ cd xmrig-5.11.2
+[user@host xmrig-5.11.2]$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
                                   --user=<wallet_address>.<custom_name> \
                                   --pass=x \
                                   --keepalive \
                                   --donate-level=1 \
                                   --cpu-priority=0 \
-                                  --cpu-max-threads-hint=80
-# abbr.                   ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 --cpu-max-threads-hint=80
+                                  --background
+# abbr.                   ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
 ```
 
 #### Ubuntu+CPU+XMRig+F2Pool 简易挖矿流程
 
-```bash
-user@host:*$ cd /tmp
-user@host:/tmp$ wget https://github.com.cnpmjs.org/xmrig/xmrig/releases/download/v5.11.1/xmrig-5.11.1-xenial-x64.tar.gz
-user@host:/tmp$ tar -xavf xmrig-5.11.1-xenial-x64.tar.gz
-user@host:/tmp$ cd xmrig-5.11.1
-user@host:/tmp/xmrig-5.11.1$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
+```sh
+user@host:~$ cd /tmp
+user@host:/tmp$ wget https://github.com/xmrig/xmrig/releases/download/v5.11.2/xmrig-5.11.2-xenial-x64.tar.gz
+user@host:/tmp$ tar -xavf xmrig-5.11.2-xenial-x64.tar.gz
+user@host:/tmp$ cd xmrig-5.11.2
+user@host:/tmp/xmrig-5.11.2$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
                                      --user=<wallet_address>.<custom_name> \
                                      --pass=x \
                                      --keepalive \
                                      --donate-level=1 \
                                      --cpu-priority=0 \
-                                     --cpu-max-threads-hint=80
-# abbr.                      ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 --cpu-max-threads-hint=80
+                                     --background
+# abbr.                      ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
 ```

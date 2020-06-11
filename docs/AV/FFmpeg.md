@@ -1,7 +1,30 @@
 # 多媒体处理套件 FFmpeg
 
 官网 <https://ffmpeg.org/>，
-官方文档 <https://ffmpeg.org/ffmpeg-all.html>。
+[*FFmpeg 官方文档*](https://ffmpeg.org/ffmpeg-all.html)。
+
+## 编译安装
+---
+
+```fish
+# 拉取源码
+user@host *> cd /usr/local/src
+user@host /u/l/src> sudo wget https://ffmpeg.org/releases/ffmpeg-4.2.3.tar.bz2
+user@host /u/l/src> sudo tar -xavf ffmpeg-4.2.3.tar.bz2
+user@host /u/l/src> cd ffmpeg-4.2.3
+
+# 配置项目
+user@host /u/l/s/ffmpeg-4.2.3> ./configure --enable-shared
+
+# 编译项目
+user@host /u/l/s/ffmpeg-4.2.3> make -j
+
+# 安装产物
+user@host /u/l/s/ffmpeg-4.2.3> sudo make install
+
+# 注册安装的共享库
+user@host *> sudo ldconfig
+```
 
 ## 常用命令组合
 ---

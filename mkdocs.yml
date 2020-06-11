@@ -24,9 +24,13 @@ nav:
         - AV/FFmpeg.md
         - AV/VLC.md
     - 中间件:
+        - MW/Ceph.md
+        - MW/FTP.md
+        - MW/Kafka.md
         - MW/MySQL.md
         - MW/NGINX.md
         - MW/nginx-rtmp-module.md
+        - MW/ZooKeeper.md
     - 操作系统:
         - OS/OS.md
         - Windows:
@@ -37,26 +41,17 @@ nav:
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
+            - OS/Linux/Arch.md
+            - OS/Linux/apt.md
+            - OS/Linux/yum.md
+            - OS/Linux/pacman.md
             - OS/Linux/fish.md
-            - OS/Linux/grep.md
-            - OS/Linux/link aggregation.md
+            - OS/Linux/netfilter.md
+            - OS/Linux/networking.md
             - OS/Linux/tar.md
             - OS/Linux/top.md
             - OS/Linux/users.md
-            - OS/Linux/vsftpd.md
-        - Debian:
-            - OS/Debian/apt.md
-            - OS/Debian/apt-toolchain.md
-        - Arch:
-            - OS/Arch/Arch.md
-            - OS/Arch/pacman.md
-            - OS/Arch/pacman-devel.md
-        - CentOS:
-            - OS/CentOS/CentOS.md
-            - OS/CentOS/yum.md
-            - OS/CentOS/yum-devtoolset.md
         - Kali:
-            - OS/Kali/Kali.md
             - OS/Kali/DirBuster.md
             - OS/Kali/Nmap.md
             - OS/Kali/skipfish.md
@@ -79,8 +74,10 @@ theme:
     hljs_languages:
         - bash
         - cmd
+        - cmder
         - nginx
-        - shell
+        - zsh
+    prev_next_buttons_location: none
     navigation_depth: 4
 
 # Preview controls

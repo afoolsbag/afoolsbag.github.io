@@ -6,6 +6,9 @@
 
 :: 重启系统
 %USERPROFILE%> SHUTDOWN /R /T 60
+
+:: 查看系统信息
+%USERPROFILE%> SYSTEMINFO
 ```
 
 ## 进程和内存
@@ -20,11 +23,9 @@
 
 ### 文件链接
 
-官方文档 <https://docs.microsoft.com/windows-server/administration/windows-commands/mklink>。
-
-SS64 上对于 `MKLINK` 命令的说明 <https://ss64.com/nt/mklink.html>。
-
-Stack Overflow 上关于多种链接的讨论 <https://stackoverflow.com/questions/9042542>。
+[*Microsoft Docs 上的 mklink 官方文档*](https://docs.microsoft.com/windows-server/administration/windows-commands/mklink)，
+[*SS64 上的 MKLink 文档*](https://ss64.com/nt/mklink.html)，
+[*Stack Overflow 上关于多种链接的讨论*](https://stackoverflow.com/questions/9042542)。
 
 ```cmd
 :: 文件符号链接
@@ -45,260 +46,111 @@ Stack Overflow 上关于多种链接的讨论 <https://stackoverflow.com/questio
 
 ### `ipconfig`
 
-官方文档 <https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig>。
+[*Microsoft Docs 上的 ipconfig 官方文档*](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)。
 
 ### `arp`
 
-官网文档 <https://docs.microsoft.com/windows-server/administration/windows-commands/arp>。
-
-## 安全
----
+[*Microsoft Docs 上的 arp 官网文档*](https://docs.microsoft.com/windows-server/administration/windows-commands/arp)。
 
 ## Awesome
 ---
 
-[*010 Editor*](https://sweetscape.com/010editor/)，一款二进制文件编辑器
-
-[*7-Zip*](https://www.7-zip.org/)
+Scoop 安装应用的命令：
 
 ```ps1
-PS $env:USERPROFILE> scoop install 7zip
+PS $env:USERPROFILE> scoop install <app>
 ```
 
-[*AutoHotkey*](https://www.autohotkey.com/)，一款自动化脚本语言
+Chocolatey 安装包的命令：
 
 ```ps1
-PS $env:USERPROFILE> scoop install autohotkey
+PS $env:ALLUSERSPROFILE> cinst <pkg> [--dir="$env:ProgramFiles"]
 ```
 
-[*bettercap*](https://bettercap.org/)，一款网络嗅探工具
+| Program                                                | scoop app      | Note |
+|:------------------------------------------------------ |:-------------- |:---- |
+| [*010 Editor*]                                         |                | 一款二进制文件编辑器
+| [*7-Zip*](https://www.7-zip.org/)                      | `7zip`         |
+| [*AutoHotkey*](https://www.autohotkey.com/)            | `autohotkey`   | 一款自动化脚本语言
+| [*bettercap*](https://bettercap.org/)                  |                | 一款网络嗅探工具
+| [*Conan*](https://conan.io/)                           | `conan`        |
+| [*Beyond Compare*](https://scootersoftware.com/)       |                | 一款文件比较工具
+| [*Bing Wallpaper*]                                     |                | 一款壁纸应用
+| [*cFosSpeed*](https://cfos.de/)                        |                | 一款网络优化工具
+| [*Cheat Engine*](https://cheatengine.org/)             | `cheat-engine` | 一款程序修改工具
+| [*CMake*](https://cmake.org/)                          | `cmake`        | 
+| [*CPU-Z*]                                              | `cpu-z`        |
+| [*DebugView*]                                          |                | 一款调试输出显示工具
+| [*Debugview++*]                                        | `debugviewpp`  | 一款调试输出显示工具
+| [*Dependency Walker*](http://dependencywalker.com/)    | `depends`      | 一款 PE 依赖扫描工具，[*on aldeid*](https://www.aldeid.com/wiki/Dependency-Walker)
+| [*Doxygen*](https://doxygen.nl/)                       | `doxygen`      |
+| [*dSniff*]                                             |                | 一款网络嗅探工具
+| [*EasyPHP*](https://easyphp.org/)                      |                | 一款轻量 Web 服务器
+| [*Emacs*]                                              | `emacs`        | 一款文本编辑器
+| [*Ettercap*](https://www.ettercap-project.org)         |                | 一款网络嗅探工具
+| [*Exeinfo PE*](http://exeinfo.xn.pl/)                  |                | 一款 PE 查壳工具，[*on aldeid*](https://www.aldeid.com/wiki/Exeinfo-PE)
+| [*Explorer Suite*]                                     |                | 一款 PE 编辑套件，[*on aldeid*](https://www.aldeid.com/wiki/Explorer-Suite)
+| [*FastCopy*](https://fastcopy.jp/)                     | `fastcopy`     | 一款快速复制工具
+| [*foobar2000*](https://www.foobar2000.org/)            | `foobar2000`   | 一款音乐播放器
+| [*GPU-Z*]                                              | `gpu-z`        |
+| [*Graphviz*](https://graphviz.org/)                    | `graphviz` *1  |
+| [*IDA*]                                                |                | 一款反汇编调试器
+| [*IDM*](https://www.internetdownloadmanager.com/)      |                | 一款中心网络下载器
+| [*iPerf*](https://iperf.fr/)                           | `iperf3`       | 一款网速测试工具
+| [*Iris*](https://iristech.co/)                         |                | 一款屏幕光调节工具，以缓解眼部疲劳
+| LoadPE                                                 |                | 一款 PE32 修复工具，[*on aldeid*](https://www.aldeid.com/wiki/LordPE)
+| [*MPC-BE*](https://mpc-be.org/)                        | `mpc-be`       |
+| [*MPC-HC*](https://mpc-hc.org/)                        |                |
+| [*MPC-HC-Fork*]                                        | `mpc-hc-fork`  |
+| [*NSSM*](https://nssm.cc/)                             | `nssm`         | 一款服务维护工具
+| [*OllyDbg*](http://ollydbg.de/)                        |                | 一款反汇编调试器
+| [*PC Hunter*](http://xuetr.com/)                       |                | 一款杀毒辅助工具
+| PEiD                                                   |                | 一款 PE32 查壳工具，[*on aldeid*](https://www.aldeid.com/wiki/PEiD)
+| [*PCI-Z*](https://www.pci-z.com/)                      | `pci-z`        |
+| [*PlantUML*](https://plantuml.com/)                    | `plantuml` *2  |
+| [*Postman*](https://postman.com/)                      | `postman`      | 一款 HTTP API 测试工具
+| [*PotPlayer*](https://potplayer.daum.net/)             | `potplayer`    |
+| [*qBittorrent*](https://qbittorrent.org/)              | `qbittorrent`  | 一款对等网络下载器
+| [*qBittorrent-Enhanced-Edition*]                       |                | 一款对等网络下载器
+| [*radare*](https://radare.org/)                        | `radare2`      | 一款反汇编调试器
+| [*Rapid Environment Editor*](https://rapidee.com/)     | `rapidee`      | 一款环境变量编辑器
+| [*Resource Hacker*]                                    |                | 一款 PE 资源编辑工具，[*on aldeid*](https://www.aldeid.com/wiki/ResourceHacker)
+| [*SSD-Z*]                                              | `ssd-z`        |
+| [*Sourcetree*](https://www.sourcetreeapp.com/)         | `sourcetree`   | 一款 Git 图形用户接口
+| [*SWIG*](http://swig.org/)                             | `swig`         |
+| [*Transmission*](https://transmissionbt.com/)          | `transmission` | 一款对等网络下载器
+| [*Vim*](https://www.vim.org/)                          | `vim`          | 一款文本编辑器
+| [*Visual Studio Code*](https://code.visualstudio.com/) | `vscode`       | 一款文本编辑器
+| [*VLC media player*](https://www.videolan.org/vlc/)    | `vlc`          |
+| [*WinDbg*](http://windbg.org/)                         |                | 一款调试器
+| [*WinHex*](http://winhex.com/winhex/)                  |                | 一款二进制文件编辑器
+| [*Wireshark*](https://wireshark.org/)                  | `wireshark`    | 一款流量分析工具
+| [*WiX*](https://wixtoolset.org/)                       | `wixtoolset`   | 一款安装包制作工具
+| [*Xlight*](https://xlightftpd.com/)                    |                | 一款轻量 FTP 服务器
 
-[*Beyond Compare*](https://scootersoftware.com/)，一款文件比较工具
+[*010 Editor*]: <https://sweetscape.com/010editor/>
+[*Bing Wallpaper*]: <https://www.microsoft.com/en-us/bing/bing-wallpaper>
+[*CPU-Z*]: <https://www.cpuid.com/softwares/cpu-z.html>
+[*DebugView*]: <https://docs.microsoft.com/sysinternals/downloads/debugview>
+[*Debugview++*]: <https://github.com/CobaltFusion/DebugViewPP>
+[*dSniff*]: <https://monkey.org/~dugsong/dsniff/>
+[*Emacs*]: <https://www.gnu.org/software/emacs/>
+[*Explorer Suite*]: <https://ntcore.com/?page_id=388> "CFF Explorer, PE Detective & Task Explorer"
+[*GPU-Z*]: <https://www.techpowerup.com/download/techpowerup-gpu-z/>
+[*IDA*]: <https://hex-rays.com/products/ida/>
+[*MPC-HC-Fork*]: <https://github.com/clsid2/mpc-hc>
+[*qBittorrent-Enhanced-Edition*]: <https://github.com/c0re100/qBittorrent-Enhanced-Edition>
+[*Resource Hacker*]: <http://angusj.com/resourcehacker/>
+[*SSD-Z*]: <http://aezay.dk/aezay/ssdz/>
 
-[*Bing Wallparer*](https://www.microsoft.com/en-us/bing/bing-wallpaper)，必应每日壁纸
-
-[*cFosSpeed*](https://cfos.de/)，一款网络优化工具
-
-[*Cheat Engine*](https://cheatengine.org/)，一款程序修改工具
-
-```ps1
-PS $env:USERPROFILE> scoop install cheat-engine
-```
-
-[*CMake*](https://cmake.org/)
-
-```ps1
-PS $env:USERPROFILE> scoop install cmake
-```
-
-[*CPU-Z*](https://www.cpuid.com/softwares/cpu-z.html)
-
-```ps1
-PS $env:USERPROFILE> scoop install cpu-z
-```
-
-[*DebugView*](https://docs.microsoft.com/sysinternals/downloads/debugview) <sub>
-    [*Debugview++*](https://github.com/CobaltFusion/DebugViewPP) </sub>，
-一款调试输出显示工具
-
-```ps1
-PS $env:USERPROFILE> scoop install debugviewpp
-```
-
-[*Dependency Walker*](http://dependencywalker.com/) <sub>
-      [*aldeid*](https://www.aldeid.com/wiki/Dependency-Walker) </sub>，
-一款 PE 依赖扫描工具
-
-```ps1
-PS $env:USERPROFILE> scoop install depends
-```
-
-[*Doxygen*](https://doxygen.nl/)
-
-```ps1
-PS $env:USERPROFILE> scoop install doxygen
-```
-
-[*dSniff*](https://monkey.org/~dugsong/dsniff/)，一款网络嗅探工具
-
-[*EasyPHP*](https://easyphp.org/)，一款轻量 Web 服务器
-
-[*Emacs*](https://www.gnu.org/software/emacs/)，一款文本编辑器
-
-```ps1
-PS $env:USERPROFILE> scoop install emacs
-```
-
-[*Ettercap*](https://www.ettercap-project.org)，一款网络嗅探工具
-
-[*Exeinfo PE*](http://exeinfo.xn.pl/) <sub>
-    [*aldeid*](https://www.aldeid.com/wiki/Exeinfo-PE) </sub>，
-一款 PE 查壳工具
-
-[*Explorer Suite*](https://ntcore.com/?page_id=388)（CFF Explorer、PE Detective、Task Explorer） <sub>
-    [*aldeid*](https://www.aldeid.com/wiki/Explorer-Suite) </sub>，
-一款 PE 编辑套件
-
-[*FastCopy*](https://fastcopy.jp/)，一款快速复制工具
-
-```ps1
-PS $env:USERPROFILE> scoop install fastcopy
-```
-
-[*foobar2000*](https://www.foobar2000.org/)，一款音乐播放器
-
-```ps1
-PS $env:USERPROFILE> scoop install foobar2000
-```
-
-[*GPU-Z*](https://www.techpowerup.com/download/techpowerup-gpu-z/)
-
-```ps1
-PS $env:USERPROFILE> scoop install gpu-z
-```
-
-[*Graphviz*](https://graphviz.org/)
-
+*1：
 ```ps1
 PS $env:USERPROFILE> scoop install graphviz
-PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $env:SCOOP 'shims\dot.exe'), 'User')
+PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $env:SCOOP 'shims\dot.exe'), [System.EnvironmentVariableTarget]::User)
 ```
 
-[*IDA*](https://hex-rays.com/products/ida/)，一款反汇编调试器
-
-[*IDM*](https://www.internetdownloadmanager.com/)，一款中心网络下载器
-
-[*iPerf*](https://iperf.fr/)，一款网速测试工具
-
-```ps1
-PS $env:USERPROFILE> scoop install iperf3
-```
-
-[*Iris*](https://iristech.co/)，一款屏幕光调节工具，以缓解眼部疲劳
-
-LoadPE <sub>
-    [*aldeid*](https://www.aldeid.com/wiki/LordPE) </sub>，
-一款 PE32 修复工具
-
-[*MPC-BE*](https://mpc-be.org/)
-
-```ps1
-PS $env:USERPROFILE> scoop install mpc-be
-```
-
-[*MPC-HC*](https://mpc-hc.org/) <sub>
-    [*MPC-HC-Fork*](https://github.com/clsid2/mpc-hc) </sub>，
-
-```ps1
-PS $env:USERPROFILE> scoop install mpc-hc-fork
-```
-
-[*NSSM*](https://nssm.cc/)，一款服务维护工具
-
-```ps1
-PS $env:USERPROFILE> scoop install nssm
-```
-
-[*OllyDbg*](http://ollydbg.de/)，一款反汇编调试器
-
-[*PC Hunter*](http://xuetr.com/)，一款杀毒辅助工具
-
-PEiD <sub>
-    [*aldeid*](https://www.aldeid.com/wiki/PEiD) </sub>，
-一款 PE32 查壳工具
-
-[*PCI-Z*](https://www.pci-z.com/)
-
-```ps1
-PS $env:USERPROFILE> scoop install pci-z
-```
-
-[*PlantUML*](https://plantuml.com/)
-
+*2
 ```ps1
 PS $env:USERPROFILE> scoop install plantuml
-PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $env:SCOOP 'shims\plantuml.cmd'), 'User')
+PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $env:SCOOP 'shims\plantuml.cmd'), [System.EnvironmentVariableTarget]::User)
 ```
-
-[*Postman*](https://postman.com/)，一款 HTTP API 测试工具
-
-```ps1
-PS $env:USERPROFILE> scoop install postman
-```
-
-[*PotPlayer*](https://potplayer.daum.net/)
-
-```ps1
-PS $env:USERPROFILE> scoop install potplayer
-```
-
-[*qBittorrent*](https://qbittorrent.org/) <sub>
-    [*qBittorrent-Enhanced-Edition*](https://github.com/c0re100/qBittorrent-Enhanced-Edition) </sub>，
-一款对等网络下载器
-
-```ps1
-PS $env:USERPROFILE> scoop install qbittorrent
-```
-
-[*radare*](https://radare.org/)，一款反汇编调试器
-
-```ps1
-PS $env:USERPROFILE> scoop install radare2
-```
-
-[*Rapid Environment Editor*](https://rapidee.com/)，一款环境变量编辑器
-
-```ps1
-PS $env:USERPROFILE> scoop install rapidee
-```
-
-[*Resource Hacker*](http://angusj.com/resourcehacker/) <sub>
-    [*aldeid*](https://www.aldeid.com/wiki/ResourceHacker) </sub>，
-一款 PE 资源编辑工具
-
-[*SSD-Z*](http://aezay.dk/aezay/ssdz/)
-
-```ps1
-PS $env:USERPROFILE> scoop install ssd-z
-```
-
-[*Transmission*](https://transmissionbt.com/)，一款对等网络下载器
-
-```ps1
-PS $env:USERPROFILE> scoop install transmission
-```
-
-[*Vim*](https://www.vim.org/)，一款文本编辑器
-
-```ps1
-PS $env:USERPROFILE> scoop install vim
-```
-
-[*Visual Studio Code*](https://code.visualstudio.com/)，一款文本编辑器
-
-```ps1
-PS $env:USERPROFILE> scoop install vscode
-```
-
-[*VLC media player*](https://www.videolan.org/vlc/)
-
-```ps1
-PS $env:USERPROFILE> scoop install vlc
-```
-
-[*WinDbg*](http://windbg.org/)，一款调试器
-
-[*WinHex*](http://winhex.com/winhex/)，一款二进制文件编辑器
-
-[*Wireshark*](https://wireshark.org/)，一款流量分析工具
-
-```ps1
-PS $env:USERPROFILE> scoop install wireshark
-```
-
-[*WiX*](https://wixtoolset.org/)，一款安装包制作工具
-
-```ps1
-PS $env:USERPROFILE> scoop install wixtoolset
-```
-[*Xlight*](https://xlightftpd.com/)，一款轻量 FTP 服务器

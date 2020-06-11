@@ -2,20 +2,13 @@
 
 跨平台的命令行壳层 fish（friendly interactive shell），官网 <https://fishshell.com/>。
 
-___
-## 查询当前壳层
-
-```fish
-[user@host *]$ user@host *> echo $SHELL
-```
-
-___
 ## 安装 fish
+---
 
 ### Arch
 
 ```bash
-sudo pacman -S fish
+[user@host *]$ sudo pacman --sync fish
 ```
 
 ### CentOS
@@ -40,7 +33,7 @@ user@host:*$ sudo apt install fish
 
 ### Ubuntu
 
-```bash
+```
 # 安装 fish 2
 user@host:*$ sudo apt install fish
 
@@ -50,20 +43,33 @@ user@host:*$ sudo apt update
 user@host:*$ sudo apt install fish
 ```
 
-___
-## 切换默认壳层
+## 常用命令组合
+---
 
 ```fish
-user@host *> cat /ect/shells       # 展示可用壳层
-user@host *> sudo vim /etc/shells  # 编辑可用壳层
+# 查看当前壳层
+user@host *> echo $SHELL
 
-user@host *> chsh --shell /usr/bin/fish  # 切换默认壳层（重新登陆以生效）
-# 或
-user@host *> sudo vim /etc/passwd        # 切换默认壳层（重新登录以生效）
+# 查看可用壳层
+user@host *> chsh --list-shells
+# abbr.      chsh -l
+
+# 切换默认壳层（重新登陆以生效）
+user@host *> chsh --shell /usr/bin/fish [username]
+# abbr.      chsh -s /usr/bin/fish [username]
+
+# 查看已配置的命令别名
+user@host *> alias
+
+# 设置一个命令别名
+user@host *> alias ll='ls --all -l --classify --color=auto'
+
+# 取消一个命令别名
+user@host *> unalias ll
 ```
 
-___
 ## 壳层环境
+---
 
 ### bash
 

@@ -18,75 +18,189 @@ user@host ~> sudo poweroff
 # 硬重启
 user@host ~> sudo reboot
 
+# 查看系统信息：内核名、网络节点主机名、内核发行号、内核版本、硬件架构名、处理器类型、硬件平台和操作系统名
+user@host ~> uname --all
+#abbr.       uname -a
 
 # 查看发行版信息
-user@host ~> lsb_release -a (--all)
-# 或者
-user@host ~> cat /etc/os-release
+user@host ~> cat /etc/*-release
 
-# CentOS
-user@host ~> cat /etc/redhat-release
-
+# 查看硬件信息
+user@host ~> sudo lshw [-short]
 
 # 查看处理器信息
-user@host ~> cat /proc/cpuinfo
+user@host ~> lscpu
 
-# 查看内存信息
-user@host ~> free --human
-# abbr.      free -h
+# 查看块设备信息
+user@host ~> lsblk --all
+# abbr.      lsblk -a
 
-# 查看硬盘信息
-user@host ~> lsblk
+# 查看外设互连总线信息
+user@host ~> lspci [-t|-v|-vv]
+
+# 查看通用串行总线信息
+user@host ~> lsusb [--tree|--verbose]
+# abbr.      lsusb [-t|-v]
 ```
 
-鳥哥的 Linux 私房菜上的[第十九章、開機流程、模組管理與 Loader](http://linux.vbird.org/linux_basic/0510osloader.php)。
+## 开机
+---
+
+[*《鳥哥的 Linux 私房菜》上的第十九章、開機流程、模組管理與 Loader*](http://linux.vbird.org/linux_basic/0510osloader.php)。
 
 1.  开机
-2.  加载 BIOS 或 UEFI
-    1.  加电自检
-    2.  加载 BootDevice -> GPT -> MBR -> 1stStageBootLoader
-        *   coreboot
-        *   Libreboot
-        *   Das U-Boot
-    3.  加载 BootPartition -> BootSector -> 2ndStageBootLoader
-        *   GRUB (*NIX)
-        *   BOOTMGR
-        *   NTLDR (Windows)
-        *   BootX (macOS)
-        *   SYSLINUX (Linux)
-    4.  加载 Linux 内核 `/boot/vmlinuz`
-    5.  解压、加载并挂载虚拟文件系统 `/boot/initrd` 或 `/boot/initramfs`
-3.  Linux 操作系统首次调用 `systemd`
-    1.  执行 `initrd.target`
-    2.  硬件检测
-    3.  加载内核模块 `/lib/modules/$(uname -r)/kernel`，主要为存储设备的驱动程序
-    4.  卸载虚拟文件系统
-    5.  挂载实体文件系统
-    6.  硬件就绪
-4.  Linux 操作系统再次调用 `systemd`，进程标识 `1`
+2.  加载 BIOS/UEFI
+    1.  从 CMOS 中加载配置
+    2.  加电自检（power-on self test）
+3.  加载引导设备（boot device）中的 MBR/GTP 中的引导程序（boot loader）
+    *   [*coreboot*](https://www.coreboot.org/)
+    *   [*Libreboot*](https://libreboot.org/)
+    *   [*Das U-Boot*](http://www.denx.de/wiki/U-Boot/)
+4.  加载引导分区（boot partition）中的引导扇区（boot sector）中的引导程序（boot loader）
+    *   [*GRUB*](https://www.gnu.org/software/grub/) (*NIX)
+    *   BOOTMGR (Windows)
+    *   NTLDR (Windows)
+    *   BootX (macOS)
+    *   [*SYSLINUX*](https://wiki.syslinux.org/) (Linux)
+5.  加载 Linux 操作系统
+    1.  加载 Linux 内核 `/boot/vmlinuz`
+    2.  解压、加载并挂载虚拟文件系统 `/boot/initrd` 或 `/boot/initramfs`
+    3.  首次调用 `systemd`
+    4.  执行 `default.target` -> `initrd.target` -> `...`
+    5.  硬件检测
+    6.  加载内核模块 `/lib/modules/$(uname --kernel-release)/kernel`，主要为存储设备的驱动程序
+    7.  卸载虚拟文件系统
+    8.  挂载实体文件系统
+    9.  硬件就绪
+6.  再次调用 `systemd`，进程标识 `1`
     1.  执行 `/etc/systemd/system/default.target`
-        *   系统 target `/usr/lib/systemd/system/*.target[.wants]`
-        *   用户 target `/etc/systemd/system/*.target[.wants]`
-        *   为与 SystemV 兼容，有以下链接
-            *   `/usr/lib/systemd/system/runlevel0.target -> poweroff.target`
-            *   `/usr/lib/systemd/system/runlevel1.target -> rescue.target`
-            *   `/usr/lib/systemd/system/runlevel2.target -> multi-user.target`
-            *   `/usr/lib/systemd/system/runlevel3.target -> multi-user.target`
-            *   `/usr/lib/systemd/system/runlevel4.target -> multi-user.target`
-            *   `/usr/lib/systemd/system/runlevel5.target -> graphical.target`
-            *   `/usr/lib/systemd/system/runlevel6.target -> reboot.target`
-            *   `systemctl list-dependencies default.target`
-    2.  `graphical` -> `multi-user` -> `basic` -> `sysinit` -> `systemd-modules-load`
-        1.  依据 `/etc/modules-load.d/*.conf` 加载额外核心模块
-        2.  依据 `/etc/modprobe.d/*.conf` 加载额外核心模块参数
-    3.  `graphical` -> `multi-user` -> `basic` -> `sysinit` -> `systemd-sysctl`
-        1.  依据 `/etc/sysctl.conf` 加载核心参数
-        2.  依据 `/etc/sysctl.d/*.conf` 加载额外核心参数
-    4.  `graphical` -> `multi-user` -> `basic`
-        1.  依据 `/etc/rc.modules` 和 `/etc/sysconfig/modules/*.modules` 加载模块
-    5.  `graphical` -> `multi-user`
-        1.  为与 System V 兼容，若 `/etc/rc.local` 可读可执行，则执行。<br/>
-            若 `/etc/rc.local -> /etc/rc.d/rc.local`，则二者都须可读和可执行。
+        *   系统 target 和 unit `/usr/lib/systemd/system/*.target[.wants]`
+        *   用户 target 和 unit `/etc/systemd/system/*.target[.wants]`
+        *   `/usr/lib/systemd/system/runlevel0.target` -> `poweroff.target`
+        *   `/usr/lib/systemd/system/runlevel1.target` -> `rescue.target`
+        *   `/usr/lib/systemd/system/runlevel2.target` -> `multi-user.target`
+        *   `/usr/lib/systemd/system/runlevel3.target` -> `multi-user.target`
+        *   `/usr/lib/systemd/system/runlevel4.target` -> `multi-user.target`
+        *   `/usr/lib/systemd/system/runlevel5.target` -> `graphical.target`
+        *   `/usr/lib/systemd/system/runlevel6.target` -> `reboot.target`
+
+一份 `user@hpst *> systemctl list-dependencies default.target` 输出示例：
+
+```text
+default.target -> graphical.target
++-- display-manager.service
++-- multi-user.target                   <-- 系统和网络服务
+    +-- dbus.service
+    +-- rc-local.service                <-- 当 /etc/rc.local -> /etc/rc.d/rc.local 都可执行时，通过该服务执行脚本
+    +-- sshd.service                    <-- SSH 服务
+    +-- systemd-ask-password-wall.path
+    +-- systemd-logind.service
+    +-- systemd-networkd.service        <-- 网络管理服务
+    +-- systemd-resolved.service        <-- 地址解析服务
+    +-- systemd-user-sessions.service
+    +-- basic.target                    <-- 准备系统：防火墙和外设驱动
+    |   +-- -.mount
+    |   +-- tmp.mount
+    |   +-- paths.target
+    |   +-- slices.target
+    |   |   +-- -.slice
+    |   |   +-- system.slice
+    |   |
+    |   +-- sockets.target
+    |   |   +-- dbus.socket
+    |   |   +-- dm-event.socket
+    |   |   +-- systemd-coredump.socket
+    |   |   +-- systemd-initctl.socket
+    |   |   +-- systemd-journald-audit.socket
+    |   |   +-- systemd-journald-dev-log.socket
+    |   |   +-- systemd-journald.socket
+    |   |   +-- systemd-networkd.socket
+    |   |   +-- systemd-udevd-control.socket
+    |   |   +-- systemd-udevd-kernel.socket
+    |   |   
+    |   +-- sysinit.target                              <-- 初始化系统：硬件检测和核心模块
+    |   |   +-- dev-hugepages.mount                     <-- 大页内存挂载
+    |   |   +-- dev-mqueue.mount                        <-- 消息队列挂载
+    |   |   +-- kmod-static-nodes.service
+    |   |   +-- ldconfig.service
+    |   |   +-- proc-sys-fs-binfmt_misc.automount
+    |   |   +-- sys-fs-fuse-connections.mount
+    |   |   +-- sys-kernel-config.mount
+    |   |   +-- sys-kernel-debug.mount
+    |   |   +-- sys-kernel-tracing.mount
+    |   |   +-- systemd-ask-password-console.path
+    |   |   +-- systemd-binfmt.service
+    |   |   +-- systemd-boot-system-token.service
+    |   |   +-- systemd-firstboot.service
+    |   |   +-- systemd-hwdb-update.service
+    |   |   +-- systemd-journal-catalog-update.service
+    |   |   +-- systemd-journal-flush.service
+    |   |   +-- systemd-journald.service                <-- 日志服务
+    |   |   +-- systemd-machine-id-commit.service
+    |   |   +-- systemd-modules-load.service  <-- 核心模块加载，依据以下配置文件
+    |   |   +-- systemd-random-seed.service       /etc/modules-load.d/*.conf  <-- 随机数生成器
+    |   |   +-- systemd-sysctl.service            /run/modules-load.d/*.conf  <-- 内核参数加载，依据以下配置文件
+    |   |   +-- systemd-sysusers.service          /usr/lib/modules-load.d/*.conf  /etc/sysctl.d/*.conf
+    |   |   +-- systemd-tmpfiles-setup-dev.service                                /run/sysctl.d/*.conf
+    |   |   +-- systemd-tmpfiles-setup.service                                    /usr/lib/sysctl.d/*.conf
+    |   |   +-- systemd-udev-trigger.service
+    |   |   +-- systemd-udevd.service
+    |   |   +-- systemd-update-done.service
+    |   |   +-- systemd-update-utmp.service
+    |   |   +-- cryptsetup.target
+    |   |   +-- local-fs.target                         <-- 本机文件系统初始化，依据 /etc/fstab 配置文件
+    |   |   |   +-- -.mount
+    |   |   |   +-- boot-EFI.mount
+    |   |   |   +-- systemd-fsck-root.service
+    |   |   |   +-- systemd-remount-fs.service
+    |   |   |   +-- tmp.mount
+    |   |   |
+    |   |   +-- swap.target                             <-- 交换区初始化，依据 /etc/fstab 配置文件
+    |   |       +-- dev-disk-by-uuid-xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx.swap
+    |   |
+    |   +-- timers.target
+    |       +-- man-db.timer
+    |       +-- shadow.timer
+    |       +-- systemd-tmpfiles-clean.timer
+    |
+    +-- getty.target
+    |   +-- getty@tty1.service
+    |
+    +-- remote-fs.target
+        +-- var-lib-machines.mount
+```
+
+## 语言环境维护 CentOS
+---
+
+```sh
+# 可能的，安装语言环境
+[user@host ~]$ sudo yum install glibc-locale-source
+[user@host ~]$ sudo yum install glibc-langpack-en
+
+# 可能的，定义语言环境
+[user@host ~]$ sudo localedef --inputfile=en_US --charmap=UTF-8 --verbose en_US.UTF-8
+# abbr.        sudo localedef -i en_US -f UTF-8 -v en_US.UTF-8
+
+# 可能的，修改会话语言环境
+[user@host ~]$ locale                              # 当前会话语言环境
+[user@host ~]$ locale --all-locales                # 列出可用语言环境
+# abbr.        locale -a
+[user@host ~]$ vim ~/.bash_profile                 # 设置语言环境
+```
+
+```sh
+# ~/.bash_profile
+
+LANG="zh_CN.utf8"
+```
+
+```sh
+# 可能的，修改系统语言环境
+[user@host ~]$ localectl status                    # 当前系统语言环境
+[user@host ~]$ localectl list-locales              # 列出可用语言环境
+[user@host ~]$ sudo localectl set-locale <locale>  # 设置语言环境
+```
 
 ## 进程和内存
 ---
@@ -98,6 +212,7 @@ user@host ~> lsblk
 #### 常用命令组合
 
 ```fish
+user@host ~> ldd <elf-file>  # load dependencies
 ```
 
 #### `objdump` 常见选项释义
@@ -130,11 +245,23 @@ user@host ~> readelf <option>... <elf-file>...
 
 #### `ldd` 常见选项释义
 
+适用于 GNU/Linux 操作系统的加载依赖查询工具 ldd（load dependencies），
 [*ldd 官方文档*](http://man7.org/linux/man-pages/man1/ldd.1.html)。
 
 ```fish
 user@host ~> ldd [option]... <file>...
 ```
+
+#### 配置搜索路径
+
+临时的：
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
+
+持久的：
+在 /etc/ld.so.conf.d/ 下新建文件
+
+以管理员权限运行，配置动态链接程序运行时绑定
+user@host ~> sudo ldconfig
 
 ## 文件和存储
 ---
@@ -187,33 +314,9 @@ user@host ~> ln --symbolic <path> <link>  # 符号链接
 user@host ~> ln <path> <link>             # 硬链接
 ```
 
-## 网络
----
-
-### 数据包过滤框架 netfilter
-
-适用于 Linux 2.4.x 及更高版本内核的数据包过滤框架，官网 <https://netfilter.org/>。
-
-#### 常用命令组合
-
-```fish
-user@host ~> systemctl status firewalld  # 查看 FirewallD 服务状态
-
-user@host ~> sudo firewall-cmd --list-all  # 列出所有规则
-
-user@host ~> sudo firewall-cmd --query-port=<port>/<protocol>               # 查询一条规则
-user@host ~> sudo firewall-cmd --permanent --add-port=<port>/<protocol>     # 持久添加一条规则
-user@host ~> sudo firewall-cmd --permanent --remove-port=<port>/<protocol>  # 持久移除一条规则
-
-user@host ~> sudo firewall-cmd --reload  # 重新加载配置
-```
-
 ### 查找端口占用
 
 ```fish
 user@host ~> ss --all --numeric --processes | grep <:port>
 # abbr.      ss -anp | grep <:port>
 ```
-
-## 安全
----
