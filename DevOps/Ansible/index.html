@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../../OS/Linux/Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="../../OS/Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../../OS/Linux/netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../../OS/Linux/networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="../../OS/Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../../OS/Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../../OS/Linux/users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>

@@ -8,7 +8,7 @@
         <meta name="author" content="zhengrr">
         <link rel="canonical" href="https://afoolsbag.github.io/OS/Linux/users/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>用户管理工具套件 users 等 - zhengrr's docs</title>
+        <title>用户管理套件 users 等 - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="./" class="dropdown-item active">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -292,7 +267,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../vsftpd/" class="nav-link">
+                                <a rel="next" href="../../Kali/DirBuster/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -317,10 +292,22 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#users" class="nav-link">用户管理工具套件 users 等</a>
+            <li class="nav-item" data-level="1"><a href="#users" class="nav-link">用户管理套件 users 等</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">查看信息</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_3" class="nav-link">禁止、允许用户登录</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_4" class="nav-link">新建、删除用户</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -330,27 +317,45 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="users">用户管理工具套件 users 等</h1>
-<hr />
+<h1 id="users">用户管理套件 users 等</h1>
 <h2 id="_1">常用命令组合</h2>
-<pre><code class="fish">user@host *&gt; users          # 输出已登陆用户的用户名
-user@host *&gt; who --heading  # 输出已登录用户的用户信息
+<hr />
+<h3 id="_2">查看信息</h3>
+<pre><code class="fish"># 输出已登陆用户的用户名
+user@host *&gt; users
+
+# 输出已登录用户的用户信息
+user@host *&gt; who --heading
 # abbr.      who -H
-user@host *&gt; w              # 输出已登录用户的用户信息，和他们正在做什么
 
-user@host *&gt; sudo usermod --shell /sbin/nologin &lt;username&gt;  # 禁止用户登录
+# 输出已登录用户的用户信息，和他们正在做什么
+user@host *&gt; w
+</code></pre>
+
+<h3 id="_3">禁止、允许用户登录</h3>
+<pre><code class="fish"># 禁止用户登录
+user@host *&gt; sudo usermod --shell /sbin/nologin &lt;username&gt;
 # abbr.      sudo usermod -s /sbin/nologin &lt;username&gt;
-user@host *&gt; sudo usermod --shell /bin/bash &lt;username&gt;      # 允许用户登录
-# abbr.      sudo usermod -s /bin/bash &lt;username&gt;
 
-user@host *&gt; useradd [--create-home] --shell /bin/bash &lt;username&gt;  # 新建用户[，并创建用户主目录]
+# 允许用户登录
+user@host *&gt; sudo usermod --shell /bin/bash &lt;username&gt;
+# abbr.      sudo usermod -s /bin/bash &lt;username&gt;
+</code></pre>
+
+<h3 id="_4">新建、删除用户</h3>
+<pre><code class="fish"># 新建用户[，并创建用户主目录]
+user@host *&gt; useradd [--create-home] --shell /bin/bash &lt;username&gt;
 # abbr.      useradd [-m] -s /bin/bash &lt;username&gt;
-user@host *&gt; passwd &lt;username&gt;                                     # 交互式修改用户密码
-user@host *&gt; userdel [--remove] &lt;username&gt;                         # 删除用户[，并移除用户主目录]
-# abbr.      userdel [-r] &lt;username&gt;
+
+# 交互式修改用户密码
+user@host *&gt; passwd &lt;username&gt;
 
 # 为用户赋予 `sudo` 权限
-user@host *&gt; echo &quot;&lt;username&gt; ALL=(ALL) NOPASSWD:ALL&quot; | sudo tee /etc/sudoers.d/&lt;username&gt;
+user@host *&gt; echo '&lt;username&gt; ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/&lt;username&gt;
+
+# 删除用户[，并移除用户主目录]
+user@host *&gt; userdel [--remove] &lt;username&gt;
+# abbr.      userdel [-r] &lt;username&gt;
 
 # 新建后门用户
 user@host *&gt; sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash &lt;username&gt;

@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../../Linux/Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../Linux/apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../../Linux/yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../../Linux/pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../../Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../../Linux/networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../../Linux/users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -335,43 +310,95 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_3" class="nav-link">维护桶</a>
+            <li class="nav-item" data-level="4"><a href="#_3" class="nav-link">配置代理</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#scoop_3" class="nav-link">更新 scoop</a>
+            <li class="nav-item" data-level="4"><a href="#_4" class="nav-link">维护桶</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#scoop_4" class="nav-link">卸载 scoop</a>
+            <li class="nav-item" data-level="4"><a href="#scoop_3" class="nav-link">更新 Scoop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#scoop_4" class="nav-link">卸载 Scoop</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
-            <li class="nav-item" data-level="3"><a href="#scoop_5" class="nav-link">通过 Scoop 维护应用</a>
+            <li class="nav-item" data-level="3"><a href="#scoop_5" class="nav-link">使用 Scoop 维护应用</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#_4" class="nav-link">当前状态</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#_5" class="nav-link">搜索应用</a>
+            <li class="nav-item" data-level="4"><a href="#_5" class="nav-link">当前状态</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_6" class="nav-link">列出已安装应用</a>
+            <li class="nav-item" data-level="4"><a href="#_6" class="nav-link">搜索应用</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_7" class="nav-link">安装应用</a>
+            <li class="nav-item" data-level="4"><a href="#_7" class="nav-link">列出已安装应用</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_8" class="nav-link">更新应用</a>
+            <li class="nav-item" data-level="4"><a href="#_8" class="nav-link">安装应用</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_9" class="nav-link">卸载应用</a>
+            <li class="nav-item" data-level="4"><a href="#_9" class="nav-link">更新应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_10" class="nav-link">卸载应用</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chocolatey" class="nav-link">Chocolatey</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#chocolatey_1" class="nav-link">安装 Chocolatey</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#chocolatey_2" class="nav-link">维护 Chocolatey</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#chocolatey_3" class="nav-link">更新 Chocolatey</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_11" class="nav-link">刷新环境变量</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#chocolatey_4" class="nav-link">卸载 Chocolatey</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#chocolatey_5" class="nav-link">使用 Chocolatey 维护包</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#_12" class="nav-link">搜索包</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_13" class="nav-link">列出已安装包</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_14" class="nav-link">安装包</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_15" class="nav-link">升级包</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_16" class="nav-link">卸载包</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -390,19 +417,20 @@
 <p>适用于 Windows 操作系统的包管理器 Scoop 和 Chocolatey，
 Scoop 官网 <a href="https://scoop.sh/">https://scoop.sh/</a>，
 Chocolatey 官网 <a href="https://chocolatey.org/">https://chocolatey.org/</a>。</p>
+<p>Slant 上的 <a href="https://www.slant.co/topics/1843/~best-windows-package-managers"><em>Best Windows package managers</em></a>。</p>
 <h2 id="scoop">Scoop</h2>
 <hr />
-<p>GitHub Scoop Wiki 上的 <a href="https://github.com/lukesampson/scoop/wiki/So-What#but-i-already-use-x-why-should-i-use-scoop">But I already use X, why should I use Scoop?</a></p>
+<p>GitHub Scoop Wiki 上的 <a href="https://github.com/lukesampson/scoop/wiki/So-What#but-i-already-use-x-why-should-i-use-scoop"><em>But I already use X, why should I use Scoop?</em></a></p>
 <h3 id="scoop_1">安装 Scoop</h3>
-<pre><code class="ps1"># 修改执行策略
+<pre><code class="ps1"># 配置执行策略
 PS $env:USERPROFILE&gt; Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 可选的，配置用户安装路径
 PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
 PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
 
-# 安装 scoop
-PS $env:USERPROFILE&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# 安装 Scoop
+PS $env:USERPROFILE&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh/')
 # abbr.              Invoke-WebRequest -UseBasicParsing 'get.scoop.sh' | Invoke-Expression
 # abbr.              iwr -useb get.scoop.sh | iex
 
@@ -413,53 +441,138 @@ PS $env:USERPROFILE&gt; scoop bucket add extras
 <h3 id="scoop_2">维护 Scoop</h3>
 <h4 id="_1">配置用户安装路径</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
-PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, [System.EnvironmentVariableTarget]::User)
 </code></pre>
 
 <h4 id="_2">配置全局安装路径</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP_GLOBAL='%PROGRAMDATA%\scoop'
-PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
+<pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP_GLOBAL='%ALLUSERSPROFILE%\scoop'
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, [System.EnvironmentVariableTarget]::Machine)
 </code></pre>
 
-<h4 id="_3">维护桶</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop bucket known              # 列出已知桶
-PS $env:USERPROFILE&gt; scoop bucket list               # 列出已用桶
-PS $env:USERPROFILE&gt; scoop bucket add &lt;name&gt; [repo]  # 添加桶
-PS $env:USERPROFILE&gt; scoop bucket rm &lt;name&gt;          # 移除桶
+<h4 id="_3">配置代理</h4>
+<pre><code class="ps1"># 显示当前代理配置
+PS $env:USERPROFILE&gt; scoop config
+
+# 配置代理
+PS $env:USERPROFILE&gt; scoop config proxy [username:password@]proxy.example.org:49152
+
+# 移除代理
+PS $env:USERPROFILE&gt; scoop rm config
 </code></pre>
 
-<h4 id="scoop_3">更新 scoop</h4>
+<h4 id="_4">维护桶</h4>
+<pre><code class="ps1"># 列出已知桶
+PS $env:USERPROFILE&gt; scoop bucket known
+
+# 列出已用桶
+PS $env:USERPROFILE&gt; scoop bucket list
+
+# 添加桶
+PS $env:USERPROFILE&gt; scoop bucket add &lt;name&gt; [repo]
+
+# 移除桶
+PS $env:USERPROFILE&gt; scoop bucket rm &lt;name&gt;
+</code></pre>
+
+<h4 id="scoop_3">更新 Scoop</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop update
 </code></pre>
 
-<h4 id="scoop_4">卸载 scoop</h4>
+<h4 id="scoop_4">卸载 Scoop</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop uninstall scoop
 </code></pre>
 
-<h3 id="scoop_5">通过 Scoop 维护应用</h3>
-<h4 id="_4">当前状态</h4>
+<h3 id="scoop_5">使用 Scoop 维护应用</h3>
+<h4 id="_5">当前状态</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop status
 </code></pre>
 
-<h4 id="_5">搜索应用</h4>
+<h4 id="_6">搜索应用</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop search &lt;query&gt;
 </code></pre>
 
-<h4 id="_6">列出已安装应用</h4>
+<h4 id="_7">列出已安装应用</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop list
 </code></pre>
 
-<h4 id="_7">安装应用</h4>
+<h4 id="_8">安装应用</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop install &lt;app&gt;
 </code></pre>
 
-<h4 id="_8">更新应用</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop update &lt;app&gt;  # 更新指定应用
-PS $env:USERPROFILE&gt; scoop update *      # 更新全部应用
+<h4 id="_9">更新应用</h4>
+<pre><code class="ps1"># 更新指定应用
+PS $env:USERPROFILE&gt; scoop update &lt;app&gt;
+
+# 更新全部应用
+PS $env:USERPROFILE&gt; scoop update *
 </code></pre>
 
-<h4 id="_9">卸载应用</h4>
+<h4 id="_10">卸载应用</h4>
 <pre><code class="ps1">PS $env:USERPROFILE&gt; scoop uninstall &lt;app&gt;
+</code></pre>
+
+<h2 id="chocolatey">Chocolatey</h2>
+<hr />
+<h3 id="chocolatey_1">安装 Chocolatey</h3>
+<pre><code class="ps1"># 配置执行策略
+PS $env:ALLUSERSPROFILE&gt; Set-ExecutionPolicy RemoteSigned -Scope Process -Force
+
+# 可选的，配置 Chocolatey 包管理器的安装路径
+PS $env:ALLUSERSPROFILE&gt; $env:ChocolateyInstall='%ALLUSERSPROFILE%\Chocolatey'
+PS $env:ALLUSERSPROFILE&gt; [System.Environment]::setEnvironmentVariable('ChocolateyInstall', $env:ChocolateyInstall, [System.EnvironmentVariableTarget]::Machine)
+
+# 安装 Chocolatey
+PS $env:ALLUSERSPROFILE&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
+# abbr.                  Invoke-WebRequest -UseBasicParsing 'chocolatey.org/install.ps1' | Invoke-Expression
+# abbr.                  iwr -useb chocolatey.org/install.ps1 | iex
+</code></pre>
+
+<h3 id="chocolatey_2">维护 Chocolatey</h3>
+<h4 id="chocolatey_3">更新 Chocolatey</h4>
+<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco upgrade chocolatey
+# abbr.                  cup chocolatey
+</code></pre>
+
+<h4 id="_11">刷新环境变量</h4>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; RefreshEnv
+</code></pre>
+
+<h4 id="chocolatey_4">卸载 Chocolatey</h4>
+<p>Chocolatey 官方文档上的 <a href="https://chocolatey.org/docs/uninstallation"><em>Uninstalling Chocolatey</em></a>。</p>
+<h3 id="chocolatey_5">使用 Chocolatey 维护包</h3>
+<h4 id="_12">搜索包</h4>
+<pre><code class="ps1"># 搜索
+PS $env:ALLUSERSPROFILE&gt; choco search &lt;filter&gt;
+
+# 信息
+PS $env:ALLUSERSPROFILE&gt; choco info &lt;pkg&gt;
+</code></pre>
+
+<h4 id="_13">列出已安装包</h4>
+<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco list --local-only
+# abbr.                  clist -l
+</code></pre>
+
+<h4 id="_14">安装包</h4>
+<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco install &lt;pkg&gt; [--install-directory=&quot;$env:ProgramFiles&quot;] [--install-arguments='']
+# abbr.                  cinst &lt;pkg&gt; [--dir=&quot;$env:ProgramFiles&quot;] [--ia='']
+</code></pre>
+
+<h4 id="_15">升级包</h4>
+<pre><code class="ps1"># 查询过期应用
+PS $env:ALLUSERSPROFILE&gt; choco outdated
+
+# 升级指定应用
+PS $env:ALLUSERSPROFILE&gt; choco upgrade &lt;pkg&gt;
+# abbr.                  cup &lt;pkg&gt;
+
+# 升级全部应用
+PS $env:ALLUSERSPROFILE&gt; choco upgrade all
+# abbr.                  cup all
+</code></pre>
+
+<h4 id="_16">卸载包</h4>
+<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco uninstall &lt;pkg&gt;
 </code></pre></div>
             </div>
         </div>

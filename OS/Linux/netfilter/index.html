@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/OS/CentOS/yum/">
+        <link rel="canonical" href="https://afoolsbag.github.io/OS/Linux/netfilter/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>包管理工具 yum（yellow dog updater, modified） - zhengrr's docs</title>
+        <title>数据包过滤框架 netfilter - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -131,85 +148,47 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+    <a href="../Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
 </li>
             
 <li>
-    <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
+    <a href="../Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
 </li>
             
 <li>
-    <a href="../../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../apt/" class="dropdown-item">包管理工具 apt</a>
 </li>
             
 <li>
-    <a href="../../Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../yum/" class="dropdown-item">包管理工具 yum</a>
 </li>
             
 <li>
-    <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
+    <a href="../pacman/" class="dropdown-item">包管理工具 pacman</a>
 </li>
             
 <li>
-    <a href="../../Linux/top/" class="dropdown-item">进程查看工具 top</a>
+    <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
+    <a href="./" class="dropdown-item active">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
+    <a href="../networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
-    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
+    <a href="../tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
 <li>
-    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
+    <a href="../top/" class="dropdown-item">进程查看工具 top</a>
 </li>
             
 <li>
-    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="./" class="dropdown-item active">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -287,12 +262,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../CentOS/" class="nav-link">
+                                <a rel="prev" href="../fish/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../yum-devtoolset/" class="nav-link">
+                                <a rel="next" href="../networking/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -317,22 +292,22 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#yumyellow-dog-updater-modified" class="nav-link">包管理工具 yum（yellow dog updater, modified）</a>
+            <li class="nav-item" data-level="1"><a href="#netfilter" class="nav-link">数据包过滤框架 netfilter</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">配置源、同步索引和更新包</a>
+            <li class="nav-item" data-level="2"><a href="#iptables-netfilter" class="nav-link">使用 iptables 管理 netfilter</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#centos" class="nav-link">CentOS</a>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#firewalld-netfilter" class="nav-link">使用 firewalld 管理 netfilter</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_1" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">搜索、展示、安装、卸载包</a>
+            <li class="nav-item" data-level="2"><a href="#ufw-netfilter" class="nav-link">使用 ufw 管理 netfilter</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#centos_1" class="nav-link">CentOS</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
               </ul>
@@ -342,39 +317,39 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="yumyellow-dog-updater-modified">包管理工具 yum（yellow dog updater, modified）</h1>
-<p>适用于 CentOS 和 RHEL 的包管理工具，使用 rpm（redhat package manager）格式安装包。</p>
-<h2 id="_1">配置源、同步索引和更新包</h2>
-<h3 id="centos">CentOS</h3>
-<pre><code class="sh"># 移除并备份原始源
-[user@host *]$ sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bck
+<h1 id="netfilter">数据包过滤框架 netfilter</h1>
+<p>适用于 Linux 2.4.x 及更高版本内核的数据包过滤框架，官网 <a href="https://www.netfilter.org/">https://www.netfilter.org/</a>。</p>
+<h2 id="iptables-netfilter">使用 iptables 管理 netfilter</h2>
+<hr />
+<p><a href="https://www.netfilter.org/projects/iptables/index.html"><em>iptables 官网</em></a>。</p>
+<h2 id="firewalld-netfilter">使用 firewalld 管理 netfilter</h2>
+<hr />
+<p><a href="https://firewalld.org/"><em>firewalld 官网</em></a>。
+CentOS 使用此前端管理 netfilter。</p>
+<h3 id="_1">常用命令组合</h3>
+<pre><code class="fish"># 查看服务状态
+user@host *&gt; systemctl status firewalld
 
-# 下载并应用阿里云镜像源（https://developer.aliyun.com/mirror/centos）
-[user@host *]$ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
-# CentOS 7     sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-# CentOS 8     sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+# 列出所有规则
+user@host *&gt; sudo firewall-cmd --list-all
 
-# 启用额外源：Software Collections（https://wiki.centos.org/AdditionalResources/Repositories/SCL）
-[user@host *]$ sudo yum install centos-release-scl
+# 查询一条规则
+user@host *&gt; sudo firewall-cmd --query-port=&lt;port&gt;/&lt;protocol&gt;
 
-# 启用额外源：Extra Packages for Enterprise（https://fedoraproject.org/wiki/EPEL）
-[user@host *]$ sudo yum install epel-release
+# 持久添加一条规则
+user@host *&gt; sudo firewall-cmd --permanent --add-port=&lt;port&gt;/&lt;protocol&gt;
 
-# 同步索引
-[user@host *]$ yum clean all
-[user@host *]$ yum makecache
+# 持久移除一条规则
+user@host *&gt; sudo firewall-cmd --permanent --remove-port=&lt;port&gt;/&lt;protocol&gt;
 
-# 更新包
-[user@host *]$ sudo yum update
+# 重新加载配置
+user@host *&gt; sudo firewall-cmd --reload
 </code></pre>
 
-<h2 id="_2">搜索、展示、安装、卸载包</h2>
-<h3 id="centos_1">CentOS</h3>
-<pre><code class="sh">[user@host *]$ yum search &lt;name&gt;           # 搜索
-[user@host *]$ yum info &lt;package&gt;          # 展示
-[user@host *]$ sudo yum install &lt;packege&gt;  # 安装
-[user@host *]$ sudo yum remove &lt;package&gt;   # 卸载
-</code></pre></div>
+<h2 id="ufw-netfilter">使用 ufw 管理 netfilter</h2>
+<hr />
+<p><a href="https://wiki.ubuntu.com/UncomplicatedFirewall"><em>ufw 官网</em></a>。
+Ubuntu 使用此前端管理 netfilter。</p></div>
             </div>
         </div>
 

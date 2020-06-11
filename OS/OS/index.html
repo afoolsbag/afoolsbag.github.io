@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../Linux/Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../Linux/apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../Linux/yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../Linux/pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="../Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../Linux/netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../Linux/networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="../Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../Linux/users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -287,7 +262,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../MW/nginx-rtmp-module/" class="nav-link">
+                                <a rel="prev" href="../../MW/ZooKeeper/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -319,6 +294,22 @@
             
             <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">操作系统</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">虚拟机</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">操作系统</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">环境支持</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">壳层</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -327,55 +318,298 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="_1">操作系统</h1>
-<p>环境
-| <a href="#" title="1985-11-20">Windows 1.0</a>,
-  <a href="#" title="1991-09-17">Linux 0.01</a>,
-  <a href="http://netbsd.org/" title="1993-04-19"><em>NetBSD</em></a>,
-  <a href="https://debian.org/" title="1993-08-16"><em>Debian</em></a>,
-  <a href="https://freebsd.org/" title="1993-11-01"><em>FreeBSD</em></a>,
-  <a href="https://opensuse.org/" title="1994-03-07"><em>SUSE</em></a>,
-  <a href="http://redhat.com/" title="1995-05-13, RedHat 企业版"><em>RHEL</em></a>,
-  <a href="http://microsoft.com/windows95" title="1995-08-15"><em>Windows 95</em></a>,
-  <a href="https://openbsd.org/" title="1996-10-01"><em>OpenBSD</em></a>,
-  <a href="#" title="1998-05-15">Windows 98</a>,
-  <a href="https://gentoo.org/" title="2000-07-26"><em>Gentoo</em></a>,
-  <a href="#" title="2001-08-24">Windows XP</a>,
-  <a href="https://archlinux.org/" title="2002-03-11"><em>Arch</em></a>,
-  <a href="https://getfedora.org/" title="2003-11-06, RedHat 试验版, Linus 使用此版"><em>Fedora</em></a>,
-  <a href="https://centos.org/" title="2004-05-14, RedHat 社区版"><em>CentOS</em></a>,
-  <a href="https://ubuntu.com/" title="2004-10-20"><em>Ubuntu</em></a>,
-  <a href="#" title="2009-07-22">Windows 7</a>,
-  <a href="https://manjaro.org/" title="2011-07-10"><em>Manjaro</em></a>,
-  <a href="https://kali.org/" title="2013-03-13"><em>Kali</em></a>,
-  <a href="https://windows.com/" title="2015-07-15"><em>Windows 10</em></a>
-| <a href="https://winehq.org/" title="1993-07-04"><em>Wine</em></a>,
-  <a href="https://cygwin.com/" title="1995, Cygnus Windows"><em>Cygwin</em></a>,
-  <a href="http://mingw.org/" title="1998-07-01, Minimalist GNU for Windows"><em>MinGW</em></a>,
-  <a href="https://mingw-w64.org/" title="2005"><em>Mingw-w64</em></a>,
-  <a href="https://www.msys2.org/" title="Minimal System"><em>MSYS2</em></a>
-| <a href="https://vmware.com/products/workstation-pro.html" title="1999"><em>VMware Workstation</em></a>,
-  <a href="https://virtualbox.org/" title="2007-01-15"><em>VirtualBox</em></a>,
-  <a href="https://linux-kvm.org/" title="2007-02-05"><em>KVM</em></a></p>
-<p>壳层
-| <a href="#" title="Bourne Shell, 1977">sh</a>,
-  <a href="#" title="C Shell, 1978">csh</a>,
-  <a href="http://tcsh.org/" title="TENEX C Shell, 1983"><em>tcsh</em></a>,
-  <a href="http://kornshell.com/" title="KornShell, 1983"><em>ksh</em></a>,
-  <a href="https://in-ulm.de/~mascheck/various/ash/" title="Almquist Shell, 1989-05-30"><em>ash</em></a>,
-  <a href="https://gnu.org/software/bash/" title="Bourne-Again Shell, 1989-06-08"><em>bash</em></a>,
-  <a href="https://zsh.org/" title="Z Shell, 1990"><em>zsh</em></a>,
-  <a href="https://scsh.net/" title="Scheme Shell, 1994-10-31"><em>scsh</em></a>,
-  <a href="https://fishshell.com/" title="Friendly Interactive Shell, 2005-02-13"><em>fish</em></a>
-| <a href="#" title="Command Prompt, 1987">CMD</a> <sub>
-      <a href="https://ss64.com/nt/"><em>doc</em></a> </sub>,
-  <a href="https://microsoft.com/powershell" title="PowerShell, 2006"><em>PowerShell</em></a> <sub>
-      <a href="https://ss64.com/ps/"><em>doc</em></a> </sub>,
-  <a href="https://conemu.github.io/" title="Console Emulator, 2007-03-09"><em>ConEmu</em></a>,
-  <a href="https://mridgers.github.io/clink/" title="2014-02-24"><em>Clink</em></a>,
-  <a href="https://cmder.net/" title="Console Emulator, 2017-07-17"><em>Cmder</em></a>
-| <a href="https://vandyke.com/products/securecrt/" title="SecureCRT, 1998-06"><em>SecureCRT</em></a>,
-  <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" title="PuTTY, 1999-01-22"><em>PuTTY</em></a>,
-  <a href="https://winscp.net/" title="WinSCP, 2000"><em>WinSCP</em></a></p></div>
+<h2 id="_2">虚拟机</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="left">Virtual machine</th>
+<th align="left">Date</th>
+<th align="left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://www.vmware.com/products/workstation-pro.html"><em>VMware</em></a></td>
+<td align="left">1999</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.virtualbox.org/"><em>VirtualBox</em></a></td>
+<td align="left">2007-01-15</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.linux-kvm.org/"><em>KVM</em></a></td>
+<td align="left">2007-02-05</td>
+<td align="left">Kernel Virtual Machine</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">操作系统</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="left">Operation system</th>
+<th align="left">Date</th>
+<th align="left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Windows 1.0</td>
+<td align="left">1985-11-20</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Linux 0.01</td>
+<td align="left">1991-09-17</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://netbsd.org/"><em>NetBSD</em></a></td>
+<td align="left">1993-04-19</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.debian.org/"><em>Debian</em></a></td>
+<td align="left">1993-08-16</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.freebsd.org/"><em>FreeBSD</em></a></td>
+<td align="left">1993-11-01</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.opensuse.org/"><em>SUSE</em></a></td>
+<td align="left">1994-03-07</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.redhat.com/"><em>RHEL</em></a></td>
+<td align="left">1995-05-13</td>
+<td align="left">Red Hat 企业版</td>
+</tr>
+<tr>
+<td align="left">Windows 95</td>
+<td align="left">1995-08-15</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.openbsd.org/"><em>OpenBSD</em></a></td>
+<td align="left">1996-10-01</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Windows 98</td>
+<td align="left">1998-05-15</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://gentoo.org/"><em>Gentoo</em></a></td>
+<td align="left">2000-07-26</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Windows XP</td>
+<td align="left">2001-08-24</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.archlinux.org/"><em>Arch</em></a></td>
+<td align="left">2002-03-11</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://getfedora.org/"><em>Fedora</em></a></td>
+<td align="left">2003-11-06</td>
+<td align="left">Red Hat 试验版, Linus 使用此 GNU/Linux</td>
+</tr>
+<tr>
+<td align="left"><a href="https://centos.org/"><em>CentOS</em></a></td>
+<td align="left">2004-05-14</td>
+<td align="left">Red Hat 社区版</td>
+</tr>
+<tr>
+<td align="left"><a href="https://ubuntu.com/"><em>Ubuntu</em></a></td>
+<td align="left">2004-10-20</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Windows 7</td>
+<td align="left">2009-07-22</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://manjaro.org/"><em>Manjaro</em></a></td>
+<td align="left">2011-07-10</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.kali.org/"><em>Kali</em></a></td>
+<td align="left">2013-03-13</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.windows.com/"><em>Windows 10</em></a></td>
+<td align="left">2015-07-15</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">环境支持</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="left">Environment support</th>
+<th align="left">Date</th>
+<th align="left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://www.winehq.org/"><em>Wine</em></a></td>
+<td align="left">1993-07-04</td>
+<td align="left">基于 POSIX 的 Windows 兼容层</td>
+</tr>
+<tr>
+<td align="left"><a href="https://cygwin.com/" title="Cygnus Windows"><em>Cygwin</em></a></td>
+<td align="left">1995</td>
+<td align="left">基于 Windows 的 POSIX 兼容层</td>
+</tr>
+<tr>
+<td align="left"><a href="http://mingw.org/" title="Minimalist GNU for Windows"><em>MinGW</em></a></td>
+<td align="left">1998-07-01</td>
+<td align="left">基于 Windows 32 的 POSIX 编译工具链</td>
+</tr>
+<tr>
+<td align="left"><a href="http://mingw-w64.org/"><em>MinGW-W64</em></a></td>
+<td align="left">2005</td>
+<td align="left">基于 Windows 32/64 的 POSIX 编译工具链</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.msys2.org/" title="Minimal System"><em>MSYS2</em></a></td>
+<td align="left"></td>
+<td align="left">基于 Windows 的 POSIX 软件分发和构建平台</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">壳层</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th align="left">Shell</th>
+<th align="left">Date</th>
+<th align="left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">POSIX</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">sh</td>
+<td align="left">1977</td>
+<td align="left">Bourne Shell</td>
+</tr>
+<tr>
+<td align="left">csh</td>
+<td align="left">1978</td>
+<td align="left">C Shell</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.tcsh.org/"><em>tcsh</em></a></td>
+<td align="left">1983</td>
+<td align="left">TENEX C Shell</td>
+</tr>
+<tr>
+<td align="left"><a href="http://kornshell.com/"><em>ksh</em></a></td>
+<td align="left">1983</td>
+<td align="left">Korn Shell</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.in-ulm.de/~mascheck/various/ash/"><em>ash</em></a></td>
+<td align="left">1989-05-30</td>
+<td align="left">Almquist Shell</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.gnu.org/software/bash/"><em>bash</em></a></td>
+<td align="left">1989-06-08</td>
+<td align="left">Bourne-Again Shell，<a href="https://ss64.com/bash/"><em>bash docs on SS64</em></a></td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.zsh.org/"><em>zsh</em></a></td>
+<td align="left">1990</td>
+<td align="left">Z Shell</td>
+</tr>
+<tr>
+<td align="left"><a href="https://scsh.net/"><em>scsh</em></a></td>
+<td align="left">1994-10-31</td>
+<td align="left">Scheme Shell</td>
+</tr>
+<tr>
+<td align="left"><a href="https://fishshell.com/"><em>fish</em></a></td>
+<td align="left">2005-02-13</td>
+<td align="left">Friendly Interactive Shell</td>
+</tr>
+<tr>
+<td align="left">Windows</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">CMD</td>
+<td align="left">1987</td>
+<td align="left">Command Prompt，<a href="https://ss64.com/nt/"><em>CMD docs on SS64</em></a></td>
+</tr>
+<tr>
+<td align="left"><a href="https://microsoft.com/powershell/"><em>PowerShell</em></a></td>
+<td align="left">2006</td>
+<td align="left"><a href="https://ss64.com/ps/"><em>PowerShell docs on SS64</em></a></td>
+</tr>
+<tr>
+<td align="left"><a href="https://conemu.github.io/"><em>ConEmu</em></a></td>
+<td align="left">2007-03-09</td>
+<td align="left">Console Emulator</td>
+</tr>
+<tr>
+<td align="left"><a href="https://mridgers.github.io/clink/"><em>Clink</em></a></td>
+<td align="left">2014-02-24</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://cmder.net/"><em>Cmder</em></a></td>
+<td align="left">2017-07-17</td>
+<td align="left">Console Emulator</td>
+</tr>
+<tr>
+<td align="left">Secure Shell</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><a href="https://vandyke.com/products/securecrt/"><em>SecureCRT</em></a></td>
+<td align="left">1998-06</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/"><em>PuTTY</em></a></td>
+<td align="left">1999-01-22</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://winscp.net/"><em>WinSCP</em></a></td>
+<td align="left">2000</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

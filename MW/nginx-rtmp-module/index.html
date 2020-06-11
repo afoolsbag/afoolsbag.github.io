@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="./" class="dropdown-item active">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../../OS/Linux/Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../../OS/Linux/pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="../../OS/Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../../OS/Linux/netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../../OS/Linux/link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../../OS/Linux/networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="../../OS/Linux/users/" class="dropdown-item">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../../OS/Linux/vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../../OS/Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../../OS/Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../OS/CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../../OS/CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../../OS/Linux/users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../OS/Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../OS/Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -292,7 +267,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../OS/OS/" class="nav-link">
+                                <a rel="next" href="../ZooKeeper/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -319,19 +294,11 @@
             
             <li class="nav-item" data-level="1"><a href="#nginx-rtmp-module" class="nav-link">流媒体服务器 nginx-rtmp-module</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#centos" class="nav-link">CentOS</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">编译安装</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="3"><a href="#ubuntu" class="nav-link">Ubuntu</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">配置</a>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">典型配置</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -344,78 +311,64 @@
 
 <h1 id="nginx-rtmp-module">流媒体服务器 nginx-rtmp-module</h1>
 <p>跨平台的流媒体服务器，官网 <a href="https://github.com/arut/nginx-rtmp-module">https://github.com/arut/nginx-rtmp-module</a>。</p>
+<h2 id="_1">编译安装</h2>
 <hr />
-<h2 id="_1">安装</h2>
-<h3 id="centos">CentOS</h3>
-<pre><code class="shell"># 安装默认版本 GCC
-[user@host *]$ sudo yum group install 'Development Tools'
-
+<p>参见 <a href="https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/">https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/</a>。</p>
+<p>配置编译环境（CentOS）</p>
+<pre><code class="sh"># 安装编译工具
+[user@host *] sudo yum group install 'Development Tools'
 # 安装 NGINX 依赖
-[user@host *]$ sudo yum install openssl-devel pcre-devel zlib-devel
-
-# 创建并切换到主目录下的项目源码目录
-[user@host *]$ mkdir ~/nginx-rtmp-src
-[user@host *]$ cd ~/nginx-rtmp-src
-
-# 拉取 NGINX 源码（https://nginx.org/en/download.html）
-[user@host nginx-rtmp-src]$ wget https://nginx.org/download/nginx-1.18.0.tar.gz
-[user@host nginx-rtmp-src]$ tar -xavf nginx-1.18.0.tar.gz
-
-# 拉取 nginx-rtmp-module 源码
-[user@host nginx-rtmp-src]$ git clone https://github.com/arut/nginx-rtmp-module.git
-
-# 切换到 NGINX 源码目录
-[user@host nginx-rtmp-src]$ cd nginx-1.18.0
-
-# 配置、编译、安装
-[user@host nginx-1.18.0]$ ./configure --prefix=&lt;/path/to/nginx-rtmp&gt; \
-                                      --add-module=../nginx-rtmp-module
-[user@host nginx-1.18.0]$ make
-[user@host nginx-1.18.0]$ make install
-
-# 创建录像目录
-[user@host *]$ sudo mkdir /var/nginx-rtmp-vod
-[user@host *]$ sudo chmod a+w /var/nginx-rtmp-vod
-
-# https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/
+[user@host *] sudo yum install openssl-devel pcre-devel zlib-devel
 </code></pre>
 
-<h3 id="ubuntu">Ubuntu</h3>
-<pre><code class="shell"># 安装 GCC
+<p>配置编译环境（Ubuntu）</p>
+<pre><code class="sh"># 安装编译工具
 user@host:*$ sudo apt install build-essential
-
 # 安装 NGINX 依赖
 user@host:*$ sudo apt install libpcre3-dev libssl-dev zlib1g-dev
-
-# 创建并切换到主目录下的项目源码目录
-user@host:*$ mkdir ~/nginx-rtmp-src
-user@host:*$ cd ~/nginx-rtmp-src
-
-# 拉取 NGINX 源码（https://nginx.org/en/download.html）
-user@host:~/nginx-rtmp-src$ wget https://nginx.org/download/nginx-1.18.0.tar.gz
-user@host:~/nginx-rtmp-src$ tar -xavf nginx-1.18.0.tar.gz
-
-# 拉取 nginx-rtmp-module 源码
-user@host:~/nginx-rtmp-src$ git clone https://github.com/arut/nginx-rtmp-module.git
-
-# 切换到 NGINX 源码目录
-user@host:~/nginx-rtmp-src$ cd nginx-1.18.0
-
-# 配置、编译、安装
-user@host:~/nginx/rtmp-src/nginx-1.18.0$ ./configure --prefix=&lt;/path/to/nginx-rtmp&gt; \
-                                                     --add-module=../nginx-rtmp-module
-user@host:~/nginx/rtmp-src/nginx-1.18.0$ make
-user@host:~/nginx/rtmp-src/nginx-1.18.0$ make install
-
-# 创建录像目录
-user@host:*$ sudo mkdir /var/nginx-rtmp-vod
-user@host:*$ sudo chmod a+w /var/nginx-rtmp-vod
-
-# https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/
 </code></pre>
 
+<p>拉取源码</p>
+<pre><code class="fish">user@host *&gt; cd /usr/local/src
+
+# 拉取 NGINX 源码（https://nginx.org/en/download.html）
+user@host /u/l/src&gt; wget https://nginx.org/download/nginx-1.18.0.tar.gz
+user@host /u/l/src&gt; tar -xavf nginx-1.18.0.tar.gz
+
+# 拉取 nginx-rtmp-module 源码
+user@host /u/l/src&gt; git clone https://github.com/arut/nginx-rtmp-module.git
+</code></pre>
+
+<p>配置、编译、安装</p>
+<pre><code class="fish">user@host *&gt; cd /usr/local/src/nginx-1.18.0
+
+# 配置
+user@host /u/l/s/nginx-1.18.0&gt; ./configure --prefix=&quot;/opt/nginx-rtmp&quot; \
+                                           --add-module=../nginx-rtmp-module
+
+# 编译
+user@host /u/l/s/nginx-1.18.0&gt; make -j
+
+# 安装
+user@host /u/l/s/nginx-1.18.0&gt; make install
+</code></pre>
+
+<p>创建录像目录</p>
+<pre><code>user@host *&gt; sudo mkdir --mode=777 /var/nginx-rtmp-vod
+</code></pre>
+
+<h2 id="_2">典型配置</h2>
 <hr />
-<h2 id="_2">配置</h2>
+<pre><code class="fish"># 启动服务
+user@host *&gt; /opt/nginx-rtmp/sbin/nginx
+
+# 停止服务
+user@host *&gt; /opt/nginx-rtmp/sbin/nginx -s quit
+
+# 编辑配置
+user@host *&gt; vim /opt/nginx-rtmp/conf/nginx.conf
+</code></pre>
+
 <pre><code class="nginx.conf">user &lt;user&gt;;
 worker_processes auto;
 events {
@@ -431,7 +384,7 @@ http {
             rtmp_stat_stylesheet stat.xsl;
         }
         location /stat.xsl {
-            root &lt;/path/to/nginx-rtmp-module&gt;;
+            root /usr/local/src/nginx-rtmp-module;
         }
         location /control {
             rtmp_control all;
@@ -490,11 +443,11 @@ rtmp {
 </code></pre>
 
 <ul>
-<li>状态：<code>http://host:80/stat</code></li>
-<li>推流（RTMP）：<code>rtmp://host/live/&lt;name&gt;</code></li>
-<li>拉流（RTMP）：<code>rtmp://host/live/&lt;name&gt;</code></li>
-<li>拉流（DASH）：<code>http://host/live/&lt;name&gt;/index.mpd</code></li>
-<li>拉流（HLS）：<code>http://host/live/&lt;name&gt;/index.m3u8</code></li>
+<li>状态：<code>http://host[:80]/stat</code></li>
+<li>推流（RTMP）：<code>rtmp://host[:1935]/live/&lt;name&gt;</code></li>
+<li>拉流（RTMP）：<code>rtmp://host[:1935]/live/&lt;name&gt;</code></li>
+<li>拉流（DASH）：<code>http://host[:80]/live/&lt;name&gt;/index.mpd</code></li>
+<li>拉流（HLS）：<code>http://host[:80]/live/&lt;name&gt;/index.m3u8</code></li>
 </ul></div>
             </div>
         </div>

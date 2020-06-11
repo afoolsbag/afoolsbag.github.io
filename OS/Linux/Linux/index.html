@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="../fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="../users/" class="dropdown-item">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -292,7 +267,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../fish/" class="nav-link">
+                                <a rel="next" href="../Arch/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -319,11 +294,19 @@
             
             <li class="nav-item" data-level="1"><a href="#gnulinux" class="nav-link">GNU/Linux 操作系统</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">进程和内存</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">开机</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#centos" class="nav-link">语言环境维护 CentOS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">进程和内存</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="3"><a href="#elf" class="nav-link">可执行与可链接格式 ELF</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#_2" class="nav-link">常用命令组合</a>
+            <li class="nav-item" data-level="4"><a href="#_3" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -339,40 +322,28 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">文件和存储</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#_4" class="nav-link">目录结构说明</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">文件链接</a>
+            <li class="nav-item" data-level="4"><a href="#_4" class="nav-link">配置搜索路径</a>
               <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">网络</a>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">文件和存储</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#netfilter" class="nav-link">数据包过滤框架 netfilter</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#_7" class="nav-link">常用命令组合</a>
+            <li class="nav-item" data-level="3"><a href="#_6" class="nav-link">目录结构说明</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="3"><a href="#_7" class="nav-link">文件链接</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="3"><a href="#_8" class="nav-link">查找端口占用</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">安全</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
@@ -400,104 +371,202 @@ user@host ~&gt; sudo poweroff
 # 硬重启
 user@host ~&gt; sudo reboot
 
+# 查看系统信息：内核名、网络节点主机名、内核发行号、内核版本、硬件架构名、处理器类型、硬件平台和操作系统名
+user@host ~&gt; uname --all
+#abbr.       uname -a
 
 # 查看发行版信息
-user@host ~&gt; lsb_release -a (--all)
-# 或者
-user@host ~&gt; cat /etc/os-release
+user@host ~&gt; cat /etc/*-release
 
-# CentOS
-user@host ~&gt; cat /etc/redhat-release
-
+# 查看硬件信息
+user@host ~&gt; sudo lshw [-short]
 
 # 查看处理器信息
-user@host ~&gt; cat /proc/cpuinfo
+user@host ~&gt; lscpu
 
-# 查看内存信息
-user@host ~&gt; free --human
-# abbr.      free -h
+# 查看块设备信息
+user@host ~&gt; lsblk --all
+# abbr.      lsblk -a
 
-# 查看硬盘信息
-user@host ~&gt; lsblk
+# 查看外设互连总线信息
+user@host ~&gt; lspci [-t|-v|-vv]
+
+# 查看通用串行总线信息
+user@host ~&gt; lsusb [--tree|--verbose]
+# abbr.      lsusb [-t|-v]
 </code></pre>
 
-<p>鳥哥的 Linux 私房菜上的<a href="http://linux.vbird.org/linux_basic/0510osloader.php">第十九章、開機流程、模組管理與 Loader</a>。</p>
+<h2 id="_1">开机</h2>
+<hr />
+<p><a href="http://linux.vbird.org/linux_basic/0510osloader.php"><em>《鳥哥的 Linux 私房菜》上的第十九章、開機流程、模組管理與 Loader</em></a>。</p>
 <ol>
 <li>开机</li>
-<li>加载 BIOS 或 UEFI<ol>
-<li>加电自检</li>
-<li>加载 BootDevice -&gt; GPT -&gt; MBR -&gt; 1stStageBootLoader<ul>
-<li>coreboot</li>
-<li>Libreboot</li>
-<li>Das U-Boot</li>
-</ul>
-</li>
-<li>加载 BootPartition -&gt; BootSector -&gt; 2ndStageBootLoader<ul>
-<li>GRUB (*NIX)</li>
-<li>BOOTMGR</li>
-<li>NTLDR (Windows)</li>
-<li>BootX (macOS)</li>
-<li>SYSLINUX (Linux)</li>
-</ul>
-</li>
-<li>加载 Linux 内核 <code>/boot/vmlinuz</code></li>
-<li>解压、加载并挂载虚拟文件系统 <code>/boot/initrd</code> 或 <code>/boot/initramfs</code></li>
+<li>加载 BIOS/UEFI<ol>
+<li>从 CMOS 中加载配置</li>
+<li>加电自检（power-on self test）</li>
 </ol>
 </li>
-<li>Linux 操作系统首次调用 <code>systemd</code><ol>
-<li>执行 <code>initrd.target</code></li>
+<li>加载引导设备（boot device）中的 MBR/GTP 中的引导程序（boot loader）<ul>
+<li><a href="https://www.coreboot.org/"><em>coreboot</em></a></li>
+<li><a href="https://libreboot.org/"><em>Libreboot</em></a></li>
+<li><a href="http://www.denx.de/wiki/U-Boot/"><em>Das U-Boot</em></a></li>
+</ul>
+</li>
+<li>加载引导分区（boot partition）中的引导扇区（boot sector）中的引导程序（boot loader）<ul>
+<li><a href="https://www.gnu.org/software/grub/"><em>GRUB</em></a> (*NIX)</li>
+<li>BOOTMGR (Windows)</li>
+<li>NTLDR (Windows)</li>
+<li>BootX (macOS)</li>
+<li><a href="https://wiki.syslinux.org/"><em>SYSLINUX</em></a> (Linux)</li>
+</ul>
+</li>
+<li>加载 Linux 操作系统<ol>
+<li>加载 Linux 内核 <code>/boot/vmlinuz</code></li>
+<li>解压、加载并挂载虚拟文件系统 <code>/boot/initrd</code> 或 <code>/boot/initramfs</code></li>
+<li>首次调用 <code>systemd</code></li>
+<li>执行 <code>default.target</code> -&gt; <code>initrd.target</code> -&gt; <code>...</code></li>
 <li>硬件检测</li>
-<li>加载内核模块 <code>/lib/modules/$(uname -r)/kernel</code>，主要为存储设备的驱动程序</li>
+<li>加载内核模块 <code>/lib/modules/$(uname --kernel-release)/kernel</code>，主要为存储设备的驱动程序</li>
 <li>卸载虚拟文件系统</li>
 <li>挂载实体文件系统</li>
 <li>硬件就绪</li>
 </ol>
 </li>
-<li>Linux 操作系统再次调用 <code>systemd</code>，进程标识 <code>1</code><ol>
+<li>再次调用 <code>systemd</code>，进程标识 <code>1</code><ol>
 <li>执行 <code>/etc/systemd/system/default.target</code><ul>
-<li>系统 target <code>/usr/lib/systemd/system/*.target[.wants]</code></li>
-<li>用户 target <code>/etc/systemd/system/*.target[.wants]</code></li>
-<li>为与 SystemV 兼容，有以下链接<ul>
-<li><code>/usr/lib/systemd/system/runlevel0.target -&gt; poweroff.target</code></li>
-<li><code>/usr/lib/systemd/system/runlevel1.target -&gt; rescue.target</code></li>
-<li><code>/usr/lib/systemd/system/runlevel2.target -&gt; multi-user.target</code></li>
-<li><code>/usr/lib/systemd/system/runlevel3.target -&gt; multi-user.target</code></li>
-<li><code>/usr/lib/systemd/system/runlevel4.target -&gt; multi-user.target</code></li>
-<li><code>/usr/lib/systemd/system/runlevel5.target -&gt; graphical.target</code></li>
-<li><code>/usr/lib/systemd/system/runlevel6.target -&gt; reboot.target</code></li>
-<li><code>systemctl list-dependencies default.target</code></li>
+<li>系统 target 和 unit <code>/usr/lib/systemd/system/*.target[.wants]</code></li>
+<li>用户 target 和 unit <code>/etc/systemd/system/*.target[.wants]</code></li>
+<li><code>/usr/lib/systemd/system/runlevel0.target</code> -&gt; <code>poweroff.target</code></li>
+<li><code>/usr/lib/systemd/system/runlevel1.target</code> -&gt; <code>rescue.target</code></li>
+<li><code>/usr/lib/systemd/system/runlevel2.target</code> -&gt; <code>multi-user.target</code></li>
+<li><code>/usr/lib/systemd/system/runlevel3.target</code> -&gt; <code>multi-user.target</code></li>
+<li><code>/usr/lib/systemd/system/runlevel4.target</code> -&gt; <code>multi-user.target</code></li>
+<li><code>/usr/lib/systemd/system/runlevel5.target</code> -&gt; <code>graphical.target</code></li>
+<li><code>/usr/lib/systemd/system/runlevel6.target</code> -&gt; <code>reboot.target</code></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><code>graphical</code> -&gt; <code>multi-user</code> -&gt; <code>basic</code> -&gt; <code>sysinit</code> -&gt; <code>systemd-modules-load</code><ol>
-<li>依据 <code>/etc/modules-load.d/*.conf</code> 加载额外核心模块</li>
-<li>依据 <code>/etc/modprobe.d/*.conf</code> 加载额外核心模块参数</li>
-</ol>
-</li>
-<li><code>graphical</code> -&gt; <code>multi-user</code> -&gt; <code>basic</code> -&gt; <code>sysinit</code> -&gt; <code>systemd-sysctl</code><ol>
-<li>依据 <code>/etc/sysctl.conf</code> 加载核心参数</li>
-<li>依据 <code>/etc/sysctl.d/*.conf</code> 加载额外核心参数</li>
-</ol>
-</li>
-<li><code>graphical</code> -&gt; <code>multi-user</code> -&gt; <code>basic</code><ol>
-<li>依据 <code>/etc/rc.modules</code> 和 <code>/etc/sysconfig/modules/*.modules</code> 加载模块</li>
-</ol>
-</li>
-<li><code>graphical</code> -&gt; <code>multi-user</code><ol>
-<li>为与 System V 兼容，若 <code>/etc/rc.local</code> 可读可执行，则执行。<br/>
-    若 <code>/etc/rc.local -&gt; /etc/rc.d/rc.local</code>，则二者都须可读和可执行。</li>
 </ol>
 </li>
 </ol>
-</li>
-</ol>
-<h2 id="_1">进程和内存</h2>
+<p>一份 <code>user@hpst *&gt; systemctl list-dependencies default.target</code> 输出示例：</p>
+<pre><code class="text">default.target -&gt; graphical.target
++-- display-manager.service
++-- multi-user.target                   &lt;-- 系统和网络服务
+    +-- dbus.service
+    +-- rc-local.service                &lt;-- 当 /etc/rc.local -&gt; /etc/rc.d/rc.local 都可执行时，通过该服务执行脚本
+    +-- sshd.service                    &lt;-- SSH 服务
+    +-- systemd-ask-password-wall.path
+    +-- systemd-logind.service
+    +-- systemd-networkd.service        &lt;-- 网络管理服务
+    +-- systemd-resolved.service        &lt;-- 地址解析服务
+    +-- systemd-user-sessions.service
+    +-- basic.target                    &lt;-- 准备系统：防火墙和外设驱动
+    |   +-- -.mount
+    |   +-- tmp.mount
+    |   +-- paths.target
+    |   +-- slices.target
+    |   |   +-- -.slice
+    |   |   +-- system.slice
+    |   |
+    |   +-- sockets.target
+    |   |   +-- dbus.socket
+    |   |   +-- dm-event.socket
+    |   |   +-- systemd-coredump.socket
+    |   |   +-- systemd-initctl.socket
+    |   |   +-- systemd-journald-audit.socket
+    |   |   +-- systemd-journald-dev-log.socket
+    |   |   +-- systemd-journald.socket
+    |   |   +-- systemd-networkd.socket
+    |   |   +-- systemd-udevd-control.socket
+    |   |   +-- systemd-udevd-kernel.socket
+    |   |   
+    |   +-- sysinit.target                              &lt;-- 初始化系统：硬件检测和核心模块
+    |   |   +-- dev-hugepages.mount                     &lt;-- 大页内存挂载
+    |   |   +-- dev-mqueue.mount                        &lt;-- 消息队列挂载
+    |   |   +-- kmod-static-nodes.service
+    |   |   +-- ldconfig.service
+    |   |   +-- proc-sys-fs-binfmt_misc.automount
+    |   |   +-- sys-fs-fuse-connections.mount
+    |   |   +-- sys-kernel-config.mount
+    |   |   +-- sys-kernel-debug.mount
+    |   |   +-- sys-kernel-tracing.mount
+    |   |   +-- systemd-ask-password-console.path
+    |   |   +-- systemd-binfmt.service
+    |   |   +-- systemd-boot-system-token.service
+    |   |   +-- systemd-firstboot.service
+    |   |   +-- systemd-hwdb-update.service
+    |   |   +-- systemd-journal-catalog-update.service
+    |   |   +-- systemd-journal-flush.service
+    |   |   +-- systemd-journald.service                &lt;-- 日志服务
+    |   |   +-- systemd-machine-id-commit.service
+    |   |   +-- systemd-modules-load.service  &lt;-- 核心模块加载，依据以下配置文件
+    |   |   +-- systemd-random-seed.service       /etc/modules-load.d/*.conf  &lt;-- 随机数生成器
+    |   |   +-- systemd-sysctl.service            /run/modules-load.d/*.conf  &lt;-- 内核参数加载，依据以下配置文件
+    |   |   +-- systemd-sysusers.service          /usr/lib/modules-load.d/*.conf  /etc/sysctl.d/*.conf
+    |   |   +-- systemd-tmpfiles-setup-dev.service                                /run/sysctl.d/*.conf
+    |   |   +-- systemd-tmpfiles-setup.service                                    /usr/lib/sysctl.d/*.conf
+    |   |   +-- systemd-udev-trigger.service
+    |   |   +-- systemd-udevd.service
+    |   |   +-- systemd-update-done.service
+    |   |   +-- systemd-update-utmp.service
+    |   |   +-- cryptsetup.target
+    |   |   +-- local-fs.target                         &lt;-- 本机文件系统初始化，依据 /etc/fstab 配置文件
+    |   |   |   +-- -.mount
+    |   |   |   +-- boot-EFI.mount
+    |   |   |   +-- systemd-fsck-root.service
+    |   |   |   +-- systemd-remount-fs.service
+    |   |   |   +-- tmp.mount
+    |   |   |
+    |   |   +-- swap.target                             &lt;-- 交换区初始化，依据 /etc/fstab 配置文件
+    |   |       +-- dev-disk-by-uuid-xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx.swap
+    |   |
+    |   +-- timers.target
+    |       +-- man-db.timer
+    |       +-- shadow.timer
+    |       +-- systemd-tmpfiles-clean.timer
+    |
+    +-- getty.target
+    |   +-- getty@tty1.service
+    |
+    +-- remote-fs.target
+        +-- var-lib-machines.mount
+</code></pre>
+
+<h2 id="centos">语言环境维护 CentOS</h2>
+<hr />
+<pre><code class="sh"># 可能的，安装语言环境
+[user@host ~]$ sudo yum install glibc-locale-source
+[user@host ~]$ sudo yum install glibc-langpack-en
+
+# 可能的，定义语言环境
+[user@host ~]$ sudo localedef --inputfile=en_US --charmap=UTF-8 --verbose en_US.UTF-8
+# abbr.        sudo localedef -i en_US -f UTF-8 -v en_US.UTF-8
+
+# 可能的，修改会话语言环境
+[user@host ~]$ locale                              # 当前会话语言环境
+[user@host ~]$ locale --all-locales                # 列出可用语言环境
+# abbr.        locale -a
+[user@host ~]$ vim ~/.bash_profile                 # 设置语言环境
+</code></pre>
+
+<pre><code class="sh"># ~/.bash_profile
+
+LANG=&quot;zh_CN.utf8&quot;
+</code></pre>
+
+<pre><code class="sh"># 可能的，修改系统语言环境
+[user@host ~]$ localectl status                    # 当前系统语言环境
+[user@host ~]$ localectl list-locales              # 列出可用语言环境
+[user@host ~]$ sudo localectl set-locale &lt;locale&gt;  # 设置语言环境
+</code></pre>
+
+<h2 id="_2">进程和内存</h2>
 <hr />
 <h3 id="elf">可执行与可链接格式 ELF</h3>
 <p>适用于 GNU/Linux 操作系统的应用程序二进制接口规范 ELF（Executable and Linkable Format）。</p>
-<h4 id="_2">常用命令组合</h4>
-<pre><code class="fish"></code></pre>
+<h4 id="_3">常用命令组合</h4>
+<pre><code class="fish">user@host ~&gt; ldd &lt;elf-file&gt;  # load dependencies
+</code></pre>
 
 <h4 id="objdump"><code>objdump</code> 常见选项释义</h4>
 <p><a href="https://www.gnu.org/software/binutils/"><em>objdump 官网</em></a>，
@@ -522,13 +591,21 @@ user@host ~&gt; lsblk
 </code></pre>
 
 <h4 id="ldd"><code>ldd</code> 常见选项释义</h4>
-<p><a href="http://man7.org/linux/man-pages/man1/ldd.1.html"><em>ldd 官方文档</em></a>。</p>
+<p>适用于 GNU/Linux 操作系统的加载依赖查询工具 ldd（load dependencies），
+<a href="http://man7.org/linux/man-pages/man1/ldd.1.html"><em>ldd 官方文档</em></a>。</p>
 <pre><code class="fish">user@host ~&gt; ldd [option]... &lt;file&gt;...
 </code></pre>
 
-<h2 id="_3">文件和存储</h2>
+<h4 id="_4">配置搜索路径</h4>
+<p>临时的：
+export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib</p>
+<p>持久的：
+在 /etc/ld.so.conf.d/ 下新建文件</p>
+<p>以管理员权限运行，配置动态链接程序运行时绑定
+user@host ~&gt; sudo ldconfig</p>
+<h2 id="_5">文件和存储</h2>
 <hr />
-<h3 id="_4">目录结构说明</h3>
+<h3 id="_6">目录结构说明</h3>
 <pre><code class="text">/              #                             根目录
 + bin          # binary                      预装程序目录（由系统发行商维护）
 + boot         # boot                        启动相关目录
@@ -565,36 +642,17 @@ user@host ~&gt; lsblk
   + pid        # process identifier          进程标识符目录
 </code></pre>
 
-<h3 id="_5">文件链接</h3>
+<h3 id="_7">文件链接</h3>
 <pre><code class="fish">user@host ~&gt; ln --symbolic &lt;path&gt; &lt;link&gt;  # 符号链接
 # abbr.      ln -s &lt;path&gt; &lt;link&gt;
 
 user@host ~&gt; ln &lt;path&gt; &lt;link&gt;             # 硬链接
 </code></pre>
 
-<h2 id="_6">网络</h2>
-<hr />
-<h3 id="netfilter">数据包过滤框架 netfilter</h3>
-<p>适用于 Linux 2.4.x 及更高版本内核的数据包过滤框架，官网 <a href="https://netfilter.org/">https://netfilter.org/</a>。</p>
-<h4 id="_7">常用命令组合</h4>
-<pre><code class="fish">user@host ~&gt; systemctl status firewalld  # 查看 FirewallD 服务状态
-
-user@host ~&gt; sudo firewall-cmd --list-all  # 列出所有规则
-
-user@host ~&gt; sudo firewall-cmd --query-port=&lt;port&gt;/&lt;protocol&gt;               # 查询一条规则
-user@host ~&gt; sudo firewall-cmd --permanent --add-port=&lt;port&gt;/&lt;protocol&gt;     # 持久添加一条规则
-user@host ~&gt; sudo firewall-cmd --permanent --remove-port=&lt;port&gt;/&lt;protocol&gt;  # 持久移除一条规则
-
-user@host ~&gt; sudo firewall-cmd --reload  # 重新加载配置
-</code></pre>
-
 <h3 id="_8">查找端口占用</h3>
 <pre><code class="fish">user@host ~&gt; ss --all --numeric --processes | grep &lt;:port&gt;
 # abbr.      ss -anp | grep &lt;:port&gt;
-</code></pre>
-
-<h2 id="_9">安全</h2>
-<hr /></div>
+</code></pre></div>
             </div>
         </div>
 

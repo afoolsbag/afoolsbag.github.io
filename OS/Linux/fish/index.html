@@ -19,8 +19,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cmder.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/nginx.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/zsh.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -80,6 +81,18 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+</li>
+                                    
+<li>
     <a href="../../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
@@ -89,6 +102,10 @@
                                     
 <li>
     <a href="../../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+</li>
+                                    
+<li>
+    <a href="../../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -135,15 +152,31 @@
 </li>
             
 <li>
+    <a href="../Arch/" class="dropdown-item">GNU/Linux 发行版 Arch 操作系统</a>
+</li>
+            
+<li>
+    <a href="../apt/" class="dropdown-item">包管理工具 apt</a>
+</li>
+            
+<li>
+    <a href="../yum/" class="dropdown-item">包管理工具 yum</a>
+</li>
+            
+<li>
+    <a href="../pacman/" class="dropdown-item">包管理工具 pacman</a>
+</li>
+            
+<li>
     <a href="./" class="dropdown-item active">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../grep/" class="dropdown-item">[*grep*](https://gnu.org/software/grep/)</a>
+    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../link%20aggregation/" class="dropdown-item">链路聚合</a>
+    <a href="../networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
@@ -155,61 +188,7 @@
 </li>
             
 <li>
-    <a href="../users/" class="dropdown-item">用户管理工具套件 users 等</a>
-</li>
-            
-<li>
-    <a href="../vsftpd/" class="dropdown-item">Vsftpd</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Debian</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Debian/apt/" class="dropdown-item">包管理工具 apt（advanced packaging tool）</a>
-</li>
-            
-<li>
-    <a href="../../Debian/apt-toolchain/" class="dropdown-item">使用 `apt` 安装开发工具链的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">Arch</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Arch/Arch/" class="dropdown-item">GNU/Linux 发行版 [*Arch*](https://archlinux.org/) 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman/" class="dropdown-item">包管理工具 [*pacman*](https://www.archlinux.org/pacman/)</a>
-</li>
-            
-<li>
-    <a href="../../Arch/pacman-devel/" class="dropdown-item">使用 `pacman` 安装开发工具的示例</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">CentOS</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../CentOS/CentOS/" class="dropdown-item">GNU/Linux 发行版 CentOS 操作系统</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum/" class="dropdown-item">包管理工具 yum（yellow dog updater, modified）</a>
-</li>
-            
-<li>
-    <a href="../../CentOS/yum-devtoolset/" class="dropdown-item">使用 `yum` 安装开发工具集的示例</a>
+    <a href="../users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -217,10 +196,6 @@
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Kali</a>
     <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../Kali/Kali/" class="dropdown-item">GNU/Linux 发行版 Kali 操作系统</a>
-</li>
             
 <li>
     <a href="../../Kali/DirBuster/" class="dropdown-item">网站目录扫描工具 DieBuster</a>
@@ -287,12 +262,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Linux/" class="nav-link">
+                                <a rel="prev" href="../pacman/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../grep/" class="nav-link">
+                                <a rel="next" href="../netfilter/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -319,10 +294,6 @@
             
             <li class="nav-item" data-level="1"><a href="#fish" class="nav-link">命令行壳层 fish</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">查询当前壳层</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-level="2"><a href="#fish_1" class="nav-link">安装 fish</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="3"><a href="#arch" class="nav-link">Arch</a>
@@ -343,11 +314,11 @@
             </li>
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">切换默认壳层</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令组合</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">壳层环境</a>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">壳层环境</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="3"><a href="#bash" class="nav-link">bash</a>
               <ul class="nav flex-column">
@@ -368,15 +339,10 @@
 
 <h1 id="fish">命令行壳层 fish</h1>
 <p>跨平台的命令行壳层 fish（friendly interactive shell），官网 <a href="https://fishshell.com/">https://fishshell.com/</a>。</p>
-<hr />
-<h2 id="_1">查询当前壳层</h2>
-<pre><code class="fish">[user@host *]$ user@host *&gt; echo $SHELL
-</code></pre>
-
-<hr />
 <h2 id="fish_1">安装 fish</h2>
+<hr />
 <h3 id="arch">Arch</h3>
-<pre><code class="bash">sudo pacman -S fish
+<pre><code class="bash">[user@host *]$ sudo pacman --sync fish
 </code></pre>
 
 <h3 id="centos">CentOS</h3>
@@ -396,7 +362,7 @@ user@host:*$ sudo apt install fish
 </code></pre>
 
 <h3 id="ubuntu">Ubuntu</h3>
-<pre><code class="bash"># 安装 fish 2
+<pre><code># 安装 fish 2
 user@host:*$ sudo apt install fish
 
 # 安装 fish 3
@@ -405,18 +371,31 @@ user@host:*$ sudo apt update
 user@host:*$ sudo apt install fish
 </code></pre>
 
+<h2 id="_1">常用命令组合</h2>
 <hr />
-<h2 id="_2">切换默认壳层</h2>
-<pre><code class="fish">user@host *&gt; cat /ect/shells       # 展示可用壳层
-user@host *&gt; sudo vim /etc/shells  # 编辑可用壳层
+<pre><code class="fish"># 查看当前壳层
+user@host *&gt; echo $SHELL
 
-user@host *&gt; chsh --shell /usr/bin/fish  # 切换默认壳层（重新登陆以生效）
-# 或
-user@host *&gt; sudo vim /etc/passwd        # 切换默认壳层（重新登录以生效）
+# 查看可用壳层
+user@host *&gt; chsh --list-shells
+# abbr.      chsh -l
+
+# 切换默认壳层（重新登陆以生效）
+user@host *&gt; chsh --shell /usr/bin/fish [username]
+# abbr.      chsh -s /usr/bin/fish [username]
+
+# 查看已配置的命令别名
+user@host *&gt; alias
+
+# 设置一个命令别名
+user@host *&gt; alias ll='ls --all -l --classify --color=auto'
+
+# 取消一个命令别名
+user@host *&gt; unalias ll
 </code></pre>
 
+<h2 id="_2">壳层环境</h2>
 <hr />
-<h2 id="_3">壳层环境</h2>
 <h3 id="bash">bash</h3>
 <ul>
 <li>系统环境变量（键值对列表）<ul>
