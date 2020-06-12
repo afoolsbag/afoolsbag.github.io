@@ -83,6 +83,7 @@ PS $env:ALLUSERSPROFILE> cinst <pkg> [--dir="$env:ProgramFiles"]
 | [*DebugView*]                                          |                | 一款调试输出显示工具
 | [*Debugview++*]                                        | `debugviewpp`  | 一款调试输出显示工具
 | [*Dependency Walker*](http://dependencywalker.com/)    | `depends`      | 一款 PE 依赖扫描工具，[*on aldeid*](https://www.aldeid.com/wiki/Dependency-Walker)
+| [*Docker*](https://www.docker.com/)                    | `docker`       |
 | [*Doxygen*](https://doxygen.nl/)                       | `doxygen`      |
 | [*dSniff*]                                             |                | 一款网络嗅探工具
 | [*EasyPHP*](https://easyphp.org/)                      |                | 一款轻量 Web 服务器

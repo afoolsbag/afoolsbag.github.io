@@ -2,7 +2,7 @@
 
 官网 <https://www.vim.org/>，Vim 始于 1991 年 11 月 02 日。
 
-官方文档的中译本 <http://vimcdoc.sourceforge.net/>，
+[*官方文档的中译本*](http://vimcdoc.sourceforge.net/)，
 及其中的帮助总览 [*help*](http://vimcdoc.sourceforge.net/doc/help.html)、
 快速参考 [*quickref*](http://vimcdoc.sourceforge.net/doc/quickref.html)、
 命令索引 [*index*](http://vimcdoc.sourceforge.net/doc/index.html)、
@@ -11,7 +11,7 @@
 用户手册 [*usr_toc*](http://vimcdoc.sourceforge.net/doc/usr_toc.html)
 和参考手册 [*reference_toc*](http://vimcdoc.sourceforge.net/doc/help.html#reference_toc)。
 
-rtorr.com 上的 Vim 备忘单 <https://vim.rtorr.com/lang/zh_cn>。
+[*rtorr.com 上的 Vim 备忘单*](https://vim.rtorr.com/lang/zh_cn)。
 
 vi 官网 <http://ex-vi.sourceforge.net/>，vi 始于 1976 年。
 
@@ -72,7 +72,7 @@ N+2 gI|      I|^a          Bi|Ba     gEi|gEa     Wi|Wa      Ei|Ea         g_i|g_
 N+3  ||   O-> |              |          |          |          |              |       ||
 N+4  |        example-word   example-word    █     example-word   example-word        \n
 N+5  ||   o->                        |  |    |     |     |                            |
-N+6  ||0a                          bi|ba|   i|a  wi|ea ei|ea                          |
+N+6  ||0a                          bi|ba|   i|a  wi|wa ei|ea                          |
 N+7  |                               gei|gea                                          |
 N+8  |                                                                                |
 ```
@@ -93,14 +93,42 @@ N+ 8 |                                      P|p               Paste          inn
 N+ 9 || yy, Y --------------------------------------------->| Yank         word iw aw |
 N+10 |                                                                     WORD iW aW |
 N+11 |                                                                 sentence is as |
-N+12 |       v |          s-----------------------------|             paragraph ip ap |
-N+13 |         |-----------------------------e          |               (block) ib ab |
+N+12 |       v |          s-----------------------------| o           paragraph ip ap |
+N+13 |         |-----------------------------e          | s<->e         (block) ib ab |
 N+14 |                                                                    [...] i] a] |
-N+15 |       V |s---------------------------------------|               {Block} iB aB |
-N+16 |         |e---------------------------------------|                 <...> i> a> |
+N+15 |       V |s---------------------------------------| o             {Block} iB aB |
+N+16 |         |e---------------------------------------| s<->e           <...> i> a> |
 N+17 |                                                           <tag>...</tag> it at |
-N+18 |  CTRL-V |          s-------------------          |                 '...' i' a' |
-N+19 |         |          -------------------e          |                 "..." i" a" |
+N+18 |  CTRL-V |          s------------------s'         | o     O         '...' i' a' |
+N+19 |         |          -------------------e          | s<->e s<->s'    "..." i" a" |
 N+20 |                                                                    `...` i` a` |
      '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ```
+
+### 修改和替换文本
+
+```text
+      1       10        20        30        40        50        60        70        80
+     .|________|_________|_________|_________|_________|_________|_________|_________|.
+N+ 1 |                                                                 switch case:   |
+N+ 2 || cc, S --------------------------------------------->|            ~ g~{motion} |
+N+ 3 |                                       | c$, C ------>| Change   lowercase:     |
+N+ 4 |                                       s                             gu{motion} |
+N+ 5 |                                       |                         uppercase:     |
+N+ 6 |    The The quick brown fox jumps over █he lazy dog.   \N            gU{motion} |
+N+ 7 |                                       |                         ROT13:         |
+N+ 8 | filter:                               r                Replace      g?{motion} |
+N+ 9 |   == ={motion}                                                  adding:        |
+N+10 | shift:                                                            CTRL-A       |
+N+11 |   << <{motion}                                                  subtracting:   |
+N+12 |   >> >{motion}                                                    CTRL-X       |
+N+13 |                                                                                |
+```
+
+### 重复改动
+
+*   <kbd>.</kbd> 重复改动
+*   <kbd>q</kbd><kbd>{register}</kbd> 开始录制宏
+*   <kbd>q</kbd> 结束录制宏
+*   <kbd>@</kbd><kbd>{register}</kbd> 执行宏
+*   <kbd>@</kbd><kbd>@</kbd> 重复执行宏
