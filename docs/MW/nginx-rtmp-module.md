@@ -44,8 +44,8 @@ user@host /u/l/src> git clone https://github.com/arut/nginx-rtmp-module.git
 user@host *> cd /usr/local/src/nginx-1.18.0
 
 # 配置
-user@host /u/l/s/nginx-1.18.0> ./configure --prefix="/opt/nginx-rtmp" \
-                                           --add-module=../nginx-rtmp-module
+user@host /u/l/s/nginx-1.18.0> ./configure --prefix='/opt/nginx-rtmp' \
+                                           --add-module='../nginx-rtmp-module'
 
 # 编译
 user@host /u/l/s/nginx-1.18.0> make -j

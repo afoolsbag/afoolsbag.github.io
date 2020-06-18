@@ -168,9 +168,8 @@ root@archiso ~ # arch-chroot /mnt
 
 # 配置本地静态域名解析
 [root@archiso /]# vim /etc/hosts     
-# 127.0.0.1       localhost
-# ::1             localhost
-# 127.0.0.1       <zrrsarch>.localdomain  <zrrsarch>
+# 127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+# ::1             localhost localhost.localdomain localhost6 localhost6.localdomain6
 ```
 
 选用 systemd-networkd 进行网络管理

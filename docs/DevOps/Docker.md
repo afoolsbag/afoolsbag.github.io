@@ -21,6 +21,9 @@ user@host *> sudo yum-config-manager --add-repo https://download.docker.com/linu
 
 # 安装 Docker 引擎、命令行工具和容器运行时
 user@host *> sudo dnf install docker-ce docker-ce-cli containerd.io
+
+# 将 Docker 网桥标记至信任域
+user@host *> sudo firewall-cmd --permanent --zone=trusted --change-interface=docker0
 ```
 
 ### 启动 Docker 服务
@@ -59,10 +62,26 @@ user@host *> docker-compose --version
 
 ```fish
 # 查看 Docker 版本
+user@host *> docker --version
+# 详细信息
 user@host *> docker version
+# 系统信息
+user@host *> docker info
 
 # 从镜像新建一个容器，在容器结束时自动删除容器文件
-user@host *> docker run -rm <image>
+user@host *> docker container run --rm <image>
+# abbr.      docker run --rm <image>
+
+# ……并且在后台运行
+user@host *> docker container run --detach --rm <image>
+# abbr.      docker run -d --rm <image>
+
+# 测试容器网络
+user@host *> docker run --rm busybox ping -c 1 193.0.14.129
+# 测试容器域名解析
+user@host *> docker run --rm busybox nslookup k.root-servers.net
+# 根域名服务器 K，位于伦敦，由欧洲IP网络资源协调中心（RIPE NCC）管理
+# 见 https://www.iana.org/domains/root/servers
 ```
 
 ### 镜像（`image`）
@@ -205,6 +224,9 @@ FROM scratch AS build-time
 # 不同于简单复制，ADD 允许 <host-src> 为链接地址，且若 <host-src> 是本机压缩文件，ADD 会自动将其解压
 # ADD <host-src> <container-dst>
 
+# 运行命令
+# RUN <command>
+
 # 假定 /build/hello-world 是编译生成的产品
 COPY --from=hello-world /hello /build/hello-world
 
@@ -241,4 +263,13 @@ CMD [ "/app/hello-world" ]
 [*Docker Documentation 上的 Compose file reference*](https://docs.docker.com/compose/compose-file/)
 
 ```yml
+version: "3.8"
+services:
+
+  <service-name>:
+    image: <image-name>
+    ports:
+      - "<host>:<container>[/{tcp|udp}]"
+    volumes:
+      - "<host>:<container>[:{rw|ro}]"
 ```

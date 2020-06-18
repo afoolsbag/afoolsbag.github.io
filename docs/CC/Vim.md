@@ -132,3 +132,13 @@ N+13 |                                                                          
 *   <kbd>q</kbd> 结束录制宏
 *   <kbd>@</kbd><kbd>{register}</kbd> 执行宏
 *   <kbd>@</kbd><kbd>@</kbd> 重复执行宏
+
+## 常用命令组合
+---
+
+设置行尾序列
+
+```vim
+:set fileformat={dos|unix|mac}
+:set ff={dos|unix|mac}
+```

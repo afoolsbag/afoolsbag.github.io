@@ -74,7 +74,7 @@ user@host *> sudo dnf install devtoolset-6 devtoolset-7 devtoolset-8 devtoolset-
 user@host *> scl enable devtoolset-9 bash
 
 # 若有需要，编译安装最新版 Git（https://git-scm.com/download/linux）
-user@host *> sudo dnf install asciidoc xmlto docbook2x
+user@host *> sudo dnf install asciidoc curl-devel xmlto docbook2x
 user@host *> sudo dnf remove git
 user@host *> cd /usr/local/src
 user@host /u/l/src> sudo wget https://www.kernel.org/pub/software/scm/git/git-2.27.0.tar.gz

@@ -52,6 +52,13 @@
 
 [*Microsoft Docs 上的 arp 官网文档*](https://docs.microsoft.com/windows-server/administration/windows-commands/arp)。
 
+## 常见问题
+---
+
+问：**USB 设备不识别，特别是 U 盘不识别。**
+
+答：重启 Plug and Play 服务后重试。
+
 ## Awesome
 ---
 
