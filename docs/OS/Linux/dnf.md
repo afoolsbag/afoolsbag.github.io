@@ -41,6 +41,9 @@ user@host *> dnf check-update
 # 升级
 user@host *> sudo dnf upgrade
 
+# 列出组
+user@host *> dnf group list
+
 # 搜索
 user@host *> dnf search <query>
 

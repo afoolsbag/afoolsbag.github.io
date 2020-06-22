@@ -58,6 +58,8 @@ DNS2=8.8.8.8
 
 ### 常用命令组合
 
+#### 配置网络
+
 ```fish
 # 查看服务状态
 user@host *> systemctl status network
@@ -73,6 +75,13 @@ user@host *> sudo ifup <interface-name>
 # 停用网络接口
 user@host *> sudo ifdown <interface-name>
 # 将触发 /etc/sysconfig/network-script/ifdown-<interface-name> 脚本
+```
+
+#### 查找端口占用
+
+```fish
+user@host ~> ss --all --numeric --processes | grep <:port>
+# abbr.      ss -anp | grep <:port>
 ```
 
 ## 使用 NetworkManager 维护网络

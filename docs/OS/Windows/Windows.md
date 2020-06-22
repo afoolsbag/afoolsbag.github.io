@@ -1,14 +1,14 @@
 # Windows 操作系统
 
-```cmd
+```cmder
 :: 关闭系统
-%USERPROFILE%> SHUTDOWN /S /T 60
+%USERPROFILE% λ SHUTDOWN /S /T 60
 
 :: 重启系统
-%USERPROFILE%> SHUTDOWN /R /T 60
+%USERPROFILE% λ SHUTDOWN /R /T 60
 
 :: 查看系统信息
-%USERPROFILE%> SYSTEMINFO
+%USERPROFILE% λ SYSTEMINFO
 ```
 
 ## 进程和内存
@@ -27,18 +27,18 @@
 [*SS64 上的 MKLink 文档*](https://ss64.com/nt/mklink.html)，
 [*Stack Overflow 上关于多种链接的讨论*](https://stackoverflow.com/questions/9042542)。
 
-```cmd
+```cmder
 :: 文件符号链接
-%USERPROFILE%> MKLINK <Link> <Path>
+%USERPROFILE% λ MKLINK <Link> <Path>
 
 :: 文件硬链接
-%USERPROFILE%> MKLINK /H <Link> <AbsolutePath>
+%USERPROFILE% λ MKLINK /H <Link> <AbsolutePath>
 
 :: 目录符号链接
-%USERPROFILE%> MKLINK /D <Link> <Path>
+%USERPROFILE% λ MKLINK /D <Link> <Path>
 
 :: 目录 Junction 链接
-%USERPROFILE%> MKLINK /J <Link> <AbsolutePath>
+%USERPROFILE% λ MKLINK /J <Link> <AbsolutePath>
 ```
 
 ## 网络
@@ -55,9 +55,16 @@
 ## 常见问题
 ---
 
-问：**USB 设备不识别，特别是 U 盘不识别。**
+### 图标显示异常
 
-答：重启 Plug and Play 服务后重试。
+重置图标缓存数据库，
+
+*   旧版 Windows 使用 `ie4uinit -ClearIconCache`，
+*   Windows 10 使用 `ie4uinit -Show`。
+
+### USB 设备不识别
+
+重启 Plug and Play 服务后重试。
 
 ## Awesome
 ---
@@ -162,3 +169,56 @@ PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT'
 PS $env:USERPROFILE> scoop install plantuml
 PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $env:SCOOP 'shims\plantuml.cmd'), [System.EnvironmentVariableTarget]::User)
 ```
+
+## 注册码
+---
+
+请到官网购买以支持正版。
+
+<!--
+  据《中华人民共和国著作权法（2010年2月26日第二次修正版）》第二十二条，
+  下述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+
+  流下了贫穷的泪水 ( TдT)
+
+  1. 访问十分钟邮箱 https://10minutemail.com/
+     以获取一个临时邮箱
+
+  2. 另开标签页，访问 My Digital Life 论坛注册页面 https://forums.mydigitallife.net/register/
+     填入必选信息开始注册
+
+  3. 返回十分钟邮箱标签页，此时应当会收到一封邮件
+     邮件内有确认账户链接，形如 https://forums.mydigitallife.net/account-confirmation/*
+     点击以完成注册
+
+     这里有一个先前注册好的账户，不保证依然有效：
+     Name: curious1029
+     Email: tcziyrlcnirbltbtmq@awdrt.com
+     Password: Jl2VZ5IzKTdCdIozweRA
+     Date of Birth: 1980-01-01
+
+  4. 访问 KMSpico 官方话题帖 https://forums.mydigitallife.net/threads/kmspico-official-thread.65739/
+     该页面需要登录
+     登陆后访问页面并获取下载链接
+
+     这里有一个先前获取的磁力链接，不保证依然有效：
+     magnet:?xt=urn:btih:E954AB6B5A93071E8F1A41C509E77F35A50B1B11&dn=KMSpico_v10.2.0
+
+  5. 临时停用 Windows Defender 实时保护
+
+  6. 下载 KMSpico
+     运行 KMSpico_v10.2.0/KMSpico Install/KMSpico_setup.exe 并安装到默认位置
+
+  7. 在 Windows Defender 中配置排除项
+     %ProgramFiles%\KMSpico\KMSELDI.exe
+     %ProgramFiles%\KMSpico\Service_KMS.exe
+     %ProgramFiles%\KMSpico\AutoPico.exe
+     %WinDir%\SECOH-QAD.exe
+     %WinDir%\SECOH-QAD.dll
+
+  8. 恢复启用 Windows Defender 实时保护
+
+  9. 运行 KMSpico
+
+  10. 上述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+-->
