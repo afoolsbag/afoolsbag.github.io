@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/OS/Linux/fish/">
+        <link rel="canonical" href="https://afoolsbag.github.io/OS/Ubuntu/Ubuntu/">
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>命令行壳层 fish - zhengrr's docs</title>
+        <title>GNU/Linux 发行版 Ubuntu 操作系统 - zhengrr's docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -143,31 +143,31 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
+    <a href="../../Linux/Linux/" class="dropdown-item">GNU/Linux 操作系统</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">命令行壳层 fish</a>
+    <a href="../../Linux/fish/" class="dropdown-item">命令行壳层 fish</a>
 </li>
             
 <li>
-    <a href="../netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
+    <a href="../../Linux/netfilter/" class="dropdown-item">数据包过滤框架 netfilter</a>
 </li>
             
 <li>
-    <a href="../networking/" class="dropdown-item">网络</a>
+    <a href="../../Linux/networking/" class="dropdown-item">网络</a>
 </li>
             
 <li>
-    <a href="../tar/" class="dropdown-item">归档打包工具 tar</a>
+    <a href="../../Linux/tar/" class="dropdown-item">归档打包工具 tar</a>
 </li>
             
 <li>
-    <a href="../top/" class="dropdown-item">进程查看工具 top</a>
+    <a href="../../Linux/top/" class="dropdown-item">进程查看工具 top</a>
 </li>
             
 <li>
-    <a href="../users/" class="dropdown-item">用户管理套件 users 等</a>
+    <a href="../../Linux/users/" class="dropdown-item">用户管理套件 users 等</a>
 </li>
     </ul>
   </li>
@@ -205,11 +205,11 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../Ubuntu/Ubuntu/" class="dropdown-item">GNU/Linux 发行版 Ubuntu 操作系统</a>
+    <a href="./" class="dropdown-item active">GNU/Linux 发行版 Ubuntu 操作系统</a>
 </li>
             
 <li>
-    <a href="../../Ubuntu/apt/" class="dropdown-item">包管理工具 apt</a>
+    <a href="../apt/" class="dropdown-item">包管理工具 apt</a>
 </li>
     </ul>
   </li>
@@ -297,12 +297,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../Linux/" class="nav-link">
+                                <a rel="prev" href="../../CentOS/dnf/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../netfilter/" class="nav-link">
+                                <a rel="next" href="../apt/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -327,44 +327,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#fish" class="nav-link">命令行壳层 fish</a>
+            <li class="nav-item" data-level="1"><a href="#gnulinux-ubuntu" class="nav-link">GNU/Linux 发行版 Ubuntu 操作系统</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#fish_1" class="nav-link">安装 fish</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#arch" class="nav-link">Arch</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#centos" class="nav-link">CentOS</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#kali" class="nav-link">Kali</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#ubuntu" class="nav-link">Ubuntu</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">常用命令组合</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">壳层环境</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#bash" class="nav-link">bash</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#fish_2" class="nav-link">fish</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -372,114 +336,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="fish">命令行壳层 fish</h1>
-<p>跨平台的命令行壳层 fish（friendly interactive shell），官网 <a href="https://fishshell.com/">https://fishshell.com/</a>。</p>
-<h2 id="fish_1">安装 fish</h2>
-<hr />
-<h3 id="arch">Arch</h3>
-<pre><code class="bash">[user@host *]$ sudo pacman --sync fish
-</code></pre>
-
-<h3 id="centos">CentOS</h3>
-<pre><code class="bash"># 安装 fish 2
-[user@host *]$ sudo yum install fish
-
-# 安装 fish 3
-[user@host *]$ sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/RedHat_RHEL-6/shells:fish:release:3.repo
-# CentOS 7     sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/RHEL_7/shells:fish:release:3.repo
-# CentOS 8     sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/CentOS_8/shells:fish:release:3.repo
-[user@host *]$ sudo yum install fish
-</code></pre>
-
-<h3 id="kali">Kali</h3>
-<pre><code class="bash"># 安装 fish 3
-user@host:*$ sudo apt install fish
-</code></pre>
-
-<h3 id="ubuntu">Ubuntu</h3>
-<pre><code># 安装 fish 2
-user@host:*$ sudo apt install fish
-
-# 安装 fish 3
-user@host:*$ sudo apt-add-repository ppa:fish-shell/release-3
-user@host:*$ sudo apt update
-user@host:*$ sudo apt install fish
-</code></pre>
-
-<h2 id="_1">常用命令组合</h2>
-<hr />
-<pre><code class="fish"># 查看当前壳层
-user@host *&gt; echo $SHELL
-
-# 查看可用壳层
-user@host *&gt; chsh --list-shells
-# abbr.      chsh -l
-
-# 切换默认壳层（重新登陆以生效）
-user@host *&gt; chsh --shell /usr/bin/fish [username]
-# abbr.      chsh -s /usr/bin/fish [username]
-
-# 查看已配置的命令别名
-user@host *&gt; alias
-
-# 设置一个命令别名
-user@host *&gt; alias ll='ls --all -l --classify --color=auto'
-
-# 取消一个命令别名
-user@host *&gt; unalias ll
-</code></pre>
-
-<h2 id="_2">壳层环境</h2>
-<hr />
-<h3 id="bash">bash</h3>
-<ul>
-<li>系统环境变量（键值对列表）<ul>
-<li><code>/etc/environment</code></li>
-</ul>
-</li>
-<li>系统配置（脚本）<ul>
-<li><code>/etc/profile</code></li>
-<li><code>/etc/profile.d/*.sh</code></li>
-<li><code>/etc/profile.d/sh.local</code>（CentOS）</li>
-</ul>
-</li>
-<li>系统壳层配置（脚本）<ul>
-<li><code>/etc/bash.bashrc</code>（Ubuntu）</li>
-<li><code>/etc/bashrc</code>（CentOS）</li>
-</ul>
-</li>
-<li>用户环境变量（键值对）<ul>
-<li><code>~/.pam_environment</code>（Ubuntu）</li>
-</ul>
-</li>
-<li>用户配置（脚本）<ul>
-<li><code>~/.profile</code></li>
-</ul>
-</li>
-<li>用户壳层配置（脚本）<ul>
-<li><code>~/.bash_profile</code></li>
-<li><code>~/.bashrc</code></li>
-</ul>
-</li>
-</ul>
-<pre><code class="bash">export PATH=&quot;${PATH}:/path/to/directory&quot;
-</code></pre>
-
-<h3 id="fish_2">fish</h3>
-<ul>
-<li>系统配置（脚本）<ul>
-<li><code>/etc/fish/config.fish</code></li>
-<li><code>/etc/fish/conf.d/*.fish</code></li>
-</ul>
-</li>
-<li>用户配置（脚本）<ul>
-<li><code>~/.config/fish/config.fish</code></li>
-<li><code>~/.config/fish/conf.d/*.fish</code></li>
-</ul>
-</li>
-</ul>
-<pre><code class="fish">set --export PATH {$PATH} /path/to/directory
-</code></pre></div>
+<h1 id="gnulinux-ubuntu">GNU/Linux 发行版 Ubuntu 操作系统</h1></div>
             </div>
         </div>
 
