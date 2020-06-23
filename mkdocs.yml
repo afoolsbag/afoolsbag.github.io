@@ -41,19 +41,25 @@ nav:
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
-            - OS/Linux/Ubuntu.md
-            - OS/Linux/apt.md
-            - OS/Linux/CentOS.md
-            - OS/Linux/dnf.md
-            - OS/Linux/Arch.md
-            - OS/Linux/pacman.md
             - OS/Linux/fish.md
             - OS/Linux/netfilter.md
             - OS/Linux/networking.md
             - OS/Linux/tar.md
             - OS/Linux/top.md
             - OS/Linux/users.md
+        - Arch:
+            - OS/Arch/Arch.md
+            - OS/Arch/pacman.md
+        - CentOS:
+            - OS/CentOS/CentOS.md
+            - OS/CentOS/dnf.md
+        - Ubuntu:
+            - OS/Ubuntu/Ubuntu.md
+            - OS/Ubuntu/apt.md
+        - Tails:
+            - OS/Tails/Tails.md
         - Kali:
+            - OS/Kali/Kali.md
             - OS/Kali/DirBuster.md
             - OS/Kali/Nmap.md
             - OS/Kali/skipfish.md

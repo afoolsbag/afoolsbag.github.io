@@ -21,30 +21,52 @@
 ## Awesome
 ---
 
-### 搜索
+### 黄页
 
-| [*Wolfram|Alpha*](https://wolframalpha.com/)
-| [*Wolfram MathWorld*](http://mathworld.wolfram.com/)
+| Name                                            | Note |
+|:----------------------------------------------- |:---- |
+| [*awesome*](https://awesome.re/)                |
+| [*DevDocs*](https://devdocs.io/)                | API 文档
+| [*free-programming-books*](https://ebookfoundation.github.io/free-programming-books/) |
+| [*OverAPI.com*](http://overapi.com/)            | API 备忘单
+| [*ProgramCreek.com*](https://programcreek.com/) |
+| [*计算机书籍控*](http://bestcbooks.com/)        |
 
 ### 新闻
 
-| [*InfoQ*](https://infoq.cn/)
-| [*好奇心日报*](https://www.qdaily.com/),
-  [*后续*](https://houxuapp.com/)
-| [*蓝点网*](https://landiannews.com/)
+| Name                                            | Note |
+|:----------------------------------------------- |:---- |
+| [*InfoQ*](https://infoq.cn/)                    |
+| [*好奇心日报*](https://www.qdaily.com/)         |
+| [*后续*](https://houxuapp.com/)                 |
+| [*蓝点网*](https://landiannews.com/)            |
 
-### 指数
+### 搜索引擎
 
-| [*TIOBE Index*](https://tiobe.com/tiobe-index/)
+| Name                                          | Note |
+|:--------------------------------------------- |:---- |
+| [*Baidu*](https://www.baidu.com/)             | 百度
+| [*Bing*](https://bing.com/)                   | 必应
+| [*DuckDuckGo*](https://duckduckgo.com/)       |
+| [*Dogpile.com*](https://www.dogpile.com/)     |
+| [*Google*](https://www.google.com/)           | 谷歌
+| [*Soso*](http://soso.com/)                    | 搜搜
+| [*Sogou*](https://www.sogou.com/)             | 搜狗
+| [*Wolfram\|Alpha*](https://wolframalpha.com/) |
+| [*Yahoo!*](https://search.yahoo.com/)         | 雅虎
+| [*Yandex*](https://yandex.com/)               |
 
-### 黄页
+### BitTorrent 搜索引擎
 
-| [*awesome*](https://awesome.re/)
-| [*DevDocs*](https://devdocs.io/)
-| [*OverAPI.com*](http://overapi.com/)
-| [*ProgramCreek.com*](https://programcreek.com/)
+| Name                                          | Note |
+|:--------------------------------------------- |:---- |
+| [*BTDigg*](https://btdig.com/)                | 先驱
+| [*BTSOW*](https://btsow.com/)                 |
+| [*The Pirate Bay*](https://thepiratebay.org/) | 海盗湾
 
-### 书籍
+### 指数和排名
 
-| [free-programming-books](https://ebookfoundation.github.io/free-programming-books/)
-| [计算机书籍控](http://bestcbooks.com/)
+| Name                                            | Note |
+|:-  -------------------------------------------- |:---- |
+| [*Alexa Internet*](https://www.alexa.com/)      | 网络流量
+| [*TIOBE Index*](https://tiobe.com/tiobe-index/) | 编程语言

@@ -32,6 +32,7 @@
 | [*Fedora*](https://getfedora.org/)       | 2003-11-06 | Red Hat 试验版, Linus 使用此 GNU/Linux
 | [*CentOS*](https://centos.org/)          | 2004-05-14 | Red Hat 社区版
 | [*Ubuntu*](https://ubuntu.com/)          | 2004-10-20 |
+| [*Tails*](https://tails.boum.org/)       | 2009-06-23 |
 | Windows 7                                | 2009-07-22 |
 | [*Manjaro*](https://manjaro.org/)        | 2011-07-10 |
 | [*Kali*](https://www.kali.org/)          | 2013-03-13 |
