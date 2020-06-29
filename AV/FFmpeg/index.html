@@ -63,7 +63,15 @@
 </li>
                                     
 <li>
+    <a href="../Blender/" class="dropdown-item">三维创作套件 Blender</a>
+</li>
+                                    
+<li>
     <a href="./" class="dropdown-item active">多媒体处理套件 FFmpeg</a>
+</li>
+                                    
+<li>
+    <a href="../GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
@@ -297,12 +305,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../AV/" class="nav-link">
+                                <a rel="prev" href="../Blender/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../VLC/" class="nav-link">
+                                <a rel="next" href="../GIMP/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -329,8 +337,16 @@
             
             <li class="nav-item" data-level="1"><a href="#ffmpeg" class="nav-link">多媒体处理套件 FFmpeg</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">编译安装</a>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#gnulinux" class="nav-link">在 GNU/Linux 操作系统上从源码编译安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#windows-scoop" class="nav-link">在 Windows 操作系统上通过 Scoop 安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">常用命令组合</a>
@@ -375,8 +391,9 @@
 <h1 id="ffmpeg">多媒体处理套件 FFmpeg</h1>
 <p>官网 <a href="https://ffmpeg.org/">https://ffmpeg.org/</a>，
 <a href="https://ffmpeg.org/ffmpeg-all.html"><em>FFmpeg 官方文档</em></a>。</p>
-<h2 id="_1">编译安装</h2>
+<h2 id="_1">安装</h2>
 <hr />
+<h3 id="gnulinux">在 GNU/Linux 操作系统上从源码编译安装</h3>
 <pre><code class="fish"># 拉取源码
 user@host *&gt; cd /usr/local/src
 user@host /u/l/src&gt; sudo wget https://ffmpeg.org/releases/ffmpeg-4.2.3.tar.bz2
@@ -394,6 +411,10 @@ user@host /u/l/s/ffmpeg-4.2.3&gt; sudo make install
 
 # 注册安装的共享库
 user@host *&gt; sudo ldconfig
+</code></pre>
+
+<h3 id="windows-scoop">在 Windows 操作系统上通过 Scoop 安装</h3>
+<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop install ffmpeg
 </code></pre>
 
 <h2 id="_2">常用命令组合</h2>

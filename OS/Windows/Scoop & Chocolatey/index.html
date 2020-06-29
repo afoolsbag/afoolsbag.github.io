@@ -63,7 +63,15 @@
 </li>
                                     
 <li>
+    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+</li>
+                                    
+<li>
     <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+</li>
+                                    
+<li>
+    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
@@ -462,7 +470,7 @@ PS $env:USERPROFILE&gt; Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 可选的，配置用户安装路径
 PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
-PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, [System.EnvironmentVariableTarget]::User)
 
 # 安装 Scoop
 PS $env:USERPROFILE&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh/')
@@ -486,13 +494,13 @@ PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOB
 
 <h4 id="_3">配置代理</h4>
 <pre><code class="ps1"># 显示当前代理配置
-PS $env:USERPROFILE&gt; scoop config
+PS $env:USERPROFILE&gt; scoop config proxy
 
 # 配置代理
 PS $env:USERPROFILE&gt; scoop config proxy [username:password@]proxy.example.org:49152
 
 # 移除代理
-PS $env:USERPROFILE&gt; scoop rm config
+PS $env:USERPROFILE&gt; scoop config rm proxy
 </code></pre>
 
 <h4 id="_4">维护桶</h4>
