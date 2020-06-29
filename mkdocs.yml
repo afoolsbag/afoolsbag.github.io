@@ -21,7 +21,9 @@ nav:
         - CC/UML.md
     - 音视频:
         - AV/AV.md
+        - AV/Blender.md
         - AV/FFmpeg.md
+        - AV/GIMP.md
         - AV/VLC.md
     - 中间件:
         - MW/Ceph.md

@@ -3,8 +3,10 @@
 官网 <https://ffmpeg.org/>，
 [*FFmpeg 官方文档*](https://ffmpeg.org/ffmpeg-all.html)。
 
-## 编译安装
+## 安装
 ---
+
+### 在 GNU/Linux 操作系统上从源码编译安装
 
 ```fish
 # 拉取源码
@@ -24,6 +26,12 @@ user@host /u/l/s/ffmpeg-4.2.3> sudo make install
 
 # 注册安装的共享库
 user@host *> sudo ldconfig
+```
+
+### 在 Windows 操作系统上通过 Scoop 安装
+
+```ps1
+PS $env:USERPROFILE> scoop install ffmpeg
 ```
 
 ## 常用命令组合

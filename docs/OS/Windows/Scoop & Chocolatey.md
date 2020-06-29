@@ -19,7 +19,7 @@ PS $env:USERPROFILE> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 可选的，配置用户安装路径
 PS $env:USERPROFILE> $env:SCOOP='%USERPROFILE%\scoop'
-PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
+PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, [System.EnvironmentVariableTarget]::User)
 
 # 安装 Scoop
 PS $env:USERPROFILE> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh/')
@@ -50,13 +50,13 @@ PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL'
 
 ```ps1
 # 显示当前代理配置
-PS $env:USERPROFILE> scoop config
+PS $env:USERPROFILE> scoop config proxy
 
 # 配置代理
 PS $env:USERPROFILE> scoop config proxy [username:password@]proxy.example.org:49152
 
 # 移除代理
-PS $env:USERPROFILE> scoop rm config
+PS $env:USERPROFILE> scoop config rm proxy
 ```
 
 #### 维护桶
