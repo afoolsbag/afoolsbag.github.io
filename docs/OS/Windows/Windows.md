@@ -144,7 +144,7 @@ PS $env:ALLUSERSPROFILE> cinst <pkg> [--dir="$env:ProgramFiles"]
 | [*Xlight*](https://xlightftpd.com/)                    |                | 一款轻量 FTP 服务器
 
 [*010 Editor*]: <https://sweetscape.com/010editor/>
-[*Bing Wallpaper*]: <https://www.microsoft.com/en-us/bing/bing-wallpaper>
+[*Bing Wallpaper*]: <https://www.microsoft.com/bing/bing-wallpaper>
 [*CPU-Z*]: <https://www.cpuid.com/softwares/cpu-z.html>
 [*DebugView*]: <https://docs.microsoft.com/sysinternals/downloads/debugview>
 [*Debugview++*]: <https://github.com/CobaltFusion/DebugViewPP>

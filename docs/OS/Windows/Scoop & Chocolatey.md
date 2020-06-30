@@ -11,7 +11,7 @@ Slant 上的 [*Best Windows package managers*](https://www.slant.co/topics/1843/
 
 GitHub Scoop Wiki 上的 [*But I already use X, why should I use Scoop?*](https://github.com/lukesampson/scoop/wiki/So-What#but-i-already-use-x-why-should-i-use-scoop)
 
-### 安装 Scoop
+### 安装
 
 ```ps1
 # 配置执行策略
@@ -26,11 +26,17 @@ PS $env:USERPROFILE> Invoke-Expression (New-Object System.Net.WebClient).Downloa
 # abbr.              Invoke-WebRequest -UseBasicParsing 'get.scoop.sh' | Invoke-Expression
 # abbr.              iwr -useb get.scoop.sh | iex
 
+# 安装 aria2 启用多连接下载
+PS $env:USERPROFILE> scoop install aria2
+
+# 安装 git 启用 Scoop 自更新
+PS $env:USERPROFILE> scoop install git
+
 # 添加 extras 桶
 PS $env:USERPROFILE> scoop bucket add extras
 ```
 
-### 维护 Scoop
+### 维护
 
 #### 配置用户安装路径
 
@@ -75,19 +81,19 @@ PS $env:USERPROFILE> scoop bucket add <name> [repo]
 PS $env:USERPROFILE> scoop bucket rm <name>
 ```
 
-#### 更新 Scoop
+#### 更新
 
 ```ps1
 PS $env:USERPROFILE> scoop update
 ```
 
-#### 卸载 Scoop
+#### 卸载
 
 ```ps1
 PS $env:USERPROFILE> scoop uninstall scoop
 ```
 
-### 使用 Scoop 维护应用
+### 维护应用
 
 #### 当前状态
 
@@ -132,7 +138,7 @@ PS $env:USERPROFILE> scoop uninstall <app>
 ## Chocolatey
 ---
 
-### 安装 Chocolatey
+### 安装
 
 ```ps1
 # 配置执行策略
@@ -148,9 +154,9 @@ PS $env:ALLUSERSPROFILE> Invoke-Expression (New-Object System.Net.WebClient).Dow
 # abbr.                  iwr -useb chocolatey.org/install.ps1 | iex
 ```
 
-### 维护 Chocolatey
+### 维护
 
-#### 更新 Chocolatey
+#### 更新
 
 ```ps1
 PS $env:ALLUSERSPROFILE> choco upgrade chocolatey
@@ -163,11 +169,11 @@ PS $env:ALLUSERSPROFILE> choco upgrade chocolatey
 PS $env:USERPROFILE> RefreshEnv
 ```
 
-#### 卸载 Chocolatey
+#### 卸载
 
 Chocolatey 官方文档上的 [*Uninstalling Chocolatey*](https://chocolatey.org/docs/uninstallation)。
 
-### 使用 Chocolatey 维护包
+### 维护包
 
 #### 搜索包
 
