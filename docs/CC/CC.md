@@ -31,7 +31,8 @@
 | [*ISO 3166*](https://iso.org/iso-3166-country-codes.html)
 
 日期和时间代码
-| [*ISO 8601*](https://iso.org/iso-8601-date-and-time-format.html)
+| [*ISO 8601*](https://iso.org/iso-8601-date-and-time-format.html),
+  [*Time.is*](https://time.is/)
 
 许可证代码
 | [*SPDX License List*](https://spdx.org/licenses/)
