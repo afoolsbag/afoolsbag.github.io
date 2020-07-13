@@ -1,7 +1,6 @@
 @ECHO OFF
 CHCP 65001
 SETLOCAL ENABLEEXTENSIONS
-SET script_directory=%~dp0
 
 WHERE /Q scoop ^
         || ECHO The scoop executable not found. ^
