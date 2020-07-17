@@ -52,6 +52,65 @@
 
 [*Microsoft Docs 上的 arp 官网文档*](https://docs.microsoft.com/windows-server/administration/windows-commands/arp)。
 
+## 键盘快捷方式
+---
+
+[*Windows Help 上的《Windows 中的键盘快捷方式》*](https://support.microsoft.com/help/12445)。
+
+### 任务栏
+
+*   “开始”：<kbd>Win</kbd> 或 <kbd>Ctrl</kbd>+<kbd>Esc</kbd>
+    *   账户
+        *   “锁定”：<kbd>Win</kbd>+<kbd>L</kbd>
+*   “快速链接”：<kbd>Win</kbd>+<kbd>X</kbd>
+    *   “任务管理器”：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>
+    *   “设置”：<kbd>Win</kbd>+<kbd>I</kbd>
+    *   “文件资源管理器”：<kbd>Win</kbd>+<kbd>E</kbd>
+    *   “搜索”：<kbd>Win</kbd>+<kbd>Q</kbd> 或 <kbd>Win</kbd>+<kbd>S</kbd>
+    *   “运行”：<kbd>Win</kbd>+<kbd>R</kbd>
+*   “任务视图”：<kbd>Win</kbd>+<kbd>Tab</kbd>
+    *   新建桌面：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>D</kbd>
+    *   关闭桌面：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>F4</kbd>
+    *   切换桌面：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>←</kbd> 和 <kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>→</kbd>
+*   “任务栏按钮”：<kbd>Win</kbd>+<kbd>T</kbd>
+    *   新建窗口：<kbd>Win</kbd>+<kbd>Shift</kbd>+`#`
+    *   以管理员身份新建窗口：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+`#`
+    *   关闭窗口：<kbd>Alt</kbd>+<kbd>F4</kbd>
+    *   切换窗口：<kbd>Alt</kbd>+<kbd>Tab</kbd> 和 <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> 和 <kbd>Win</kbd>+`#`
+    *   “跳转列表”：<kbd>Win</kbd>+<kbd>Alt</kbd>+`#`
+*   “通知区域”：<kbd>Win</kbd>+<kbd>B</kbd>
+    *   “输入指示”
+        *   开关中文输入：<kbd>Ctrl</kbd>+<kbd>Space</kbd>
+        *   切换输入法：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>
+        *   切换语言：<kbd>Win</kbd>+<kbd>Space</kbd>
+    *   “日期和时间”：<kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd>
+    *   “操作中心”：<kbd>Win</kbd>+<kbd>A</kbd>
+        *   “投影”：<kbd>Win</kbd>+<kbd>P</kbd>
+        *   “连接”：<kbd>Win</kbd>+<kbd>K</kbd>
+        *   “屏幕截图”：<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>
+*   “显示桌面”：<kbd>Win</kbd>+<kbd>D</kbd>
+    *   切换焦点区域：<kbd>F6</kbd>
+
+### 此电脑
+
+*   打开快捷菜单：右击标题栏，或 <kbd>Alt</kbd> + <kbd>Space</kbd>
+
+### 常规导航
+
+| 按键                                         | 操作   | 按键                        | 操作   |
+|:-------------------------------------------- |:------ |:--------------------------- |:------ |
+| <kbd>Alt</kbd>+<kbd>R</kbd> 或 <kbd>F5</kbd> | 刷新。 |
+| <kbd>Alt</kbd>+<kbd>←</kbd>                  | 后退。 | <kbd>Alt</kbd>+<kbd>→</kbd> | 前进。 |
+
+### 常规编辑
+
+| 按键                                                              | 操作   | 按键                                                               | 操作   |
+|:----------------------------------------------------------------- |:------ |:------------------------------------------------------------------ |:------ |
+| <kbd>Ctrl</kbd>+<kbd>Z</kbd>                                      | 撤消。 | <kbd>Ctrl</kbd>+<kbd>Y</kbd>                                       | 恢复。 |
+| <kbd>Ctrl</kbd>+<kbd>A</kbd>                                      | 全选。
+| <kbd>Ctrl</kbd>+<kbd>C</kbd> 或 <kbd>Ctrl</kbd>+<kbd>Insert</kbd> | 复制。 | <kbd>Ctrl</kbd>+<kbd>V</kbd> 或 <kbd>Shift</kbd>+<kbd>Insert</kbd> | 粘贴。 |
+| <kbd>Ctrl</kbd>+<kbd>X</kbd>                                      | 剪切。 | <kbd>Ctrl</kbd>+<kbd>D</kbd> 或 <kbd>Delete</kbd>                  | 删除。 |
+
 ## 常见问题
 ---
 

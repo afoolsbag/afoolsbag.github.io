@@ -21,6 +21,7 @@ nav:
         - CC/UML.md
     - 音视频:
         - AV/AV.md
+        - AV/Audacity.md
         - AV/Blender.md
         - AV/FFmpeg.md
         - AV/GIMP.md
