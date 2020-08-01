@@ -114,6 +114,10 @@
 ## 常见问题
 ---
 
+### 旧游戏卡顿
+
+参见 <http://www.illusion.jp/support/windows10.html>。
+
 ### 图标显示异常
 
 重置图标缓存数据库，
