@@ -64,6 +64,12 @@
 | [*BTSOW*](https://btsow.com/)                 |
 | [*The Pirate Bay*](https://thepiratebay.org/) | 海盗湾
 
+### 数学搜索
+
+| Name                                          | Note |
+|:--------------------------------------------- |:---- |
+| [*OEIS*](https://oeis.org/)                   | 整数序列搜索
+
 ### 指数和排名
 
 | Name                                            | Note |
