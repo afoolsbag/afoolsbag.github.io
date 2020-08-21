@@ -72,6 +72,7 @@ nav:
     - 开发运维:
         - DevOps/DevOps.md
         - DevOps/Git.md
+        - DevOps/GitFlow.md
         - DevOps/GitLab.md
         - DevOps/Jenkins.md
         - DevOps/Docker.md
