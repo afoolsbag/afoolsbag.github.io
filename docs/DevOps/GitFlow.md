@@ -20,13 +20,13 @@ user@host */wdir (master)> git flow init
 
 ```txt
         develop
-        /
+        ^
        /
-      v
+      /
 feature
-      \
+      ^
        \
-        v
+        \
         develop
 ```
 
@@ -44,15 +44,15 @@ user@host */wdir (feature/name)> git flow feature finish <name>
 ## 版本发布
 
 ```txt
-        develop
-              \
-               \
-                v
-                release
-                /     \
-               /       \
-              v         v
         develop         master
+              ^         ^
+               \       /
+                \     /
+                release
+                ^
+               /
+              /
+        develop
 ```
 
 ```fish
@@ -69,15 +69,15 @@ user@host */wdir (release/version)> git flow release finish <version>
 ## 漏洞修复
 
 ```txt
-                       master
-                       /
-                      /
-                     v
-                hotfix
-                /    \
-               /      \
-              v        v
         develop        master
+              ^        ^
+               \      /
+                \    /
+                hotfix
+                     ^
+                      \
+                       \
+                       master
 ```
 
 ```fish
