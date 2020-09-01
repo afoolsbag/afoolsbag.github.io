@@ -33,6 +33,7 @@ nav:
         - MW/MySQL.md
         - MW/NGINX.md
         - MW/nginx-rtmp-module.md
+        - MW/PostgreSQL.md
         - MW/ZooKeeper.md
     - 操作系统:
         - OS/OS.md
