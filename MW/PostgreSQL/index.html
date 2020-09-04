@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/CC/CC/">
+        <link rel="canonical" href="https://afoolsbag.github.io/MW/PostgreSQL/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Codes & Coding - zhengrr's docs</title>
+        <title>关系型数据库管理系统 PostgreSQL - zhengrr's docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,24 +33,24 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">码代码 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Codes & Coding</a>
+    <a href="../../CC/CC/" class="dropdown-item">Codes & Coding</a>
 </li>
                                     
 <li>
-    <a href="../Vim/" class="dropdown-item">文本编辑器 Vim</a>
+    <a href="../../CC/Vim/" class="dropdown-item">文本编辑器 Vim</a>
 </li>
                                     
 <li>
-    <a href="../Emacs/" class="dropdown-item">文本编辑器 Emacs</a>
+    <a href="../../CC/Emacs/" class="dropdown-item">文本编辑器 Emacs</a>
 </li>
                                     
 <li>
-    <a href="../UML/" class="dropdown-item">统一建模语言 UML</a>
+    <a href="../../CC/UML/" class="dropdown-item">统一建模语言 UML</a>
 </li>
                                 </ul>
                             </li>
@@ -83,40 +83,40 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">中间件 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../MW/Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
+    <a href="../Ceph/" class="dropdown-item">分布式文件系统 Ceph</a>
 </li>
                                     
 <li>
-    <a href="../../MW/FTP/" class="dropdown-item">文件传输协议 FTP</a>
+    <a href="../FTP/" class="dropdown-item">文件传输协议 FTP</a>
 </li>
                                     
 <li>
-    <a href="../../MW/Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
+    <a href="../Kafka/" class="dropdown-item">分布式消息服务 Kafka</a>
 </li>
                                     
 <li>
-    <a href="../../MW/MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
+    <a href="../MySQL/" class="dropdown-item">关系型数据库管理系统 MySQL</a>
 </li>
                                     
 <li>
-    <a href="../../MW/NGINX/" class="dropdown-item">网页服务器 NGINX</a>
+    <a href="../NGINX/" class="dropdown-item">网页服务器 NGINX</a>
 </li>
                                     
 <li>
-    <a href="../../MW/nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
+    <a href="../nginx-rtmp-module/" class="dropdown-item">流媒体服务器 nginx-rtmp-module</a>
 </li>
                                     
 <li>
-    <a href="../../MW/PostgreSQL/" class="dropdown-item">关系型数据库管理系统 PostgreSQL</a>
+    <a href="./" class="dropdown-item active">关系型数据库管理系统 PostgreSQL</a>
 </li>
                                     
 <li>
-    <a href="../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
+    <a href="../ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
                             </li>
@@ -317,12 +317,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../nginx-rtmp-module/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Vim/" class="nav-link">
+                                <a rel="next" href="../ZooKeeper/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -347,30 +347,30 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#codes-coding" class="nav-link">Codes &amp; Coding</a>
+            <li class="nav-item" data-level="1"><a href="#postgresql" class="nav-link">关系型数据库管理系统 PostgreSQL</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#awesome" class="nav-link">Awesome</a>
+            <li class="nav-item" data-level="2"><a href="#postgresql_1" class="nav-link">安装并配置 PostgreSQL</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="3"><a href="#_1" class="nav-link">字符</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">代码</a>
+            <li class="nav-item" data-level="3"><a href="#centos-7-8" class="nav-link">CentOS 7, 8</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="3"><a href="#_3" class="nav-link">辞典</a>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#psql" class="nav-link">psql 常用命令</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_1" class="nav-link">列出所有数据库</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="3"><a href="#_4" class="nav-link">风格</a>
+            <li class="nav-item" data-level="3"><a href="#_2" class="nav-link">创建普通用户并分配数据库</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">句法</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#pgadmin" class="nav-link">可选的，安装并配置 pgAdmin</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
               </ul>
@@ -380,67 +380,122 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="codes-coding">Codes &amp; Coding</h1>
-<h2 id="awesome">Awesome</h2>
+<h1 id="postgresql">关系型数据库管理系统 PostgreSQL</h1>
+<p>官网 <a href="https://www.postgresql.org/">https://www.postgresql.org/</a>。</p>
+<h2 id="postgresql_1">安装并配置 PostgreSQL</h2>
 <hr />
-<h3 id="_1">字符</h3>
-<p>字符画
-| <a href="https://askapache.com/online-tools/figlet-ascii/"><em>ASCII Figlet Generator</em></a></p>
-<p>统一码
-| <a href="https://unicode.org/"><em>Unicode</em></a>,
-  <a href="https://unicode-table.com/"><em>Character Table</em></a></p>
-<p>绘文字
-| <a href="https://emojipedia.org/"><em>Emojipedia</em></a>,
-  <a href="https://github.com/ikatyang/emoji-cheat-sheet"><em>emoji-cheat-sheet</em></a></p>
-<p>标点符号用法
-| <a href="http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=22EA6D162E4110E752259661E1A0D0A8"><em>GB/T 15834-2011</em></a>,
-  <a href="https://sspai.com/post/45516"><em>在《少数派》上的一篇关于部分标点符号用法的指南</em></a></p>
-<h3 id="_2">代码</h3>
-<p>语言代码
-| <a href="https://iso.org/iso-639-language-codes.html"><em>ISO 639</em></a>
-| <a href="https://tools.ietf.org/html/bcp47"><em>BCP 47</em></a>,
-  <a href="https://r12a.github.io/app-subtags/"><em>Language Subtag Lookup App</em></a></p>
-<p>国家地区代码
-| <a href="https://iso.org/iso-3166-country-codes.html"><em>ISO 3166</em></a></p>
-<p>日期和时间代码
-| <a href="https://iso.org/iso-8601-date-and-time-format.html"><em>ISO 8601</em></a>,
-  <a href="https://time.is/"><em>Time.is</em></a></p>
-<p>许可证代码
-| <a href="https://spdx.org/licenses/"><em>SPDX License List</em></a></p>
-<h3 id="_3">辞典</h3>
-<p><a href="https://thefreedictionary.com/"><em>The Free Dictionary</em></a></p>
-<p>English Dictionaries
-| <a href="https://www.abbreviations.com/"><em>Abbreviations.com</em></a>,
-  <a href="https://allacronyms.com/"><em>All Acronyms</em></a>
-| <a href="https://dictionary.com/"><em>Dictionary.com</em></a>,
-  <a href="https://thesaurus.com/"><em>Thesaurus.com</em></a>
-| <a href="https://dictionary.cambridge.org/"><em>Cambridge</em></a>,
-  <a href="https://ldoceonline.com/"><em>Longman</em></a>,
-  <a href="https://merriam-webster.com/"><em>Merriam-Webster</em></a>,
-  <a href="https://lexico.com/"><em>Oxford</em></a></p>
-<p>汉语辞典
-| <a href="https://zdic.net/"><em>漢典</em></a></p>
-<h3 id="_4">风格</h3>
-<p>引文风格
-| <a href="https://iso.org/standard/43320.html"><em>ISO 690:2010</em></a>,
-  <a href="http://citationmachine.net/iso690-numeric-en/"><em>Format Citation Generator</em></a>
-| <a href="http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C"><em>GB/T 7714-2015</em></a>,
-  <a href="http://www.citethisforme.com/guides/chinese-gb7714-2005-numeric"><em>Style Guides</em></a></p>
-<h3 id="_5">句法</h3>
-<p>EBNF
-| <a href="https://www.iso.org/standard/26153.html"><em>ISO/IEC 14977:1996</em></a></p>
-<p>Markdown
-| <a href="https://daringfireball.net/markdown/"><em>Markdown</em></a>
-| <a href="https://help.github.com/github/writing-on-github"><em>GitHub Flavored Markdown</em></a>,
-  <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"><em>Cheatsheet</em></a>,
-  <a href="https://help.github.com/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting"><em>Syntax High Lighting</em></a>,
-  <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml"><em>linguist languages.yml</em></a>
-| <a href="https://www.mkdocs.org/"><em>MkDocs</em></a>,
-  <a href="https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md"><em>highlight.js Supported Languages</em></a></p>
-<p>reStructuredText
-| <a href="http://docutils.sourceforge.net/rst.html"><em>reStructuredText</em></a></p>
-<p>YAML
-| <a href="https://yaml.org/"><em>YAML</em></a></p></div>
+<h3 id="centos-7-8">CentOS 7, 8</h3>
+<pre><code class="sh"># ------------------------------------------------------------------------------
+# 安装并启动
+
+# 安装
+sudoer@host *&gt; sudo dnf install postgresql-server
+
+# 初始化
+sudoer@host *&gt; sudo postgresql-setup --initdb
+
+# 启用并启动
+sudoer@host *&gt; sudo systemctl enable postgresql
+sudoer@host *&gt; sudo systemctl start postgresql
+
+# ------------------------------------------------------------------------------
+# 配置系统用户
+
+# 用户 postgres 在安上述装时将被创建，修改其密码，以允许登录
+sudoer@host *&gt; sudo passwd postgres
+
+# 切换到 postgres 用户
+sudoer@host *&gt; su - postgres
+
+# ------------------------------------------------------------------------------
+# 配置数据库，以允许远程访问
+
+# 修改连接配置：
+# 监听来自任何地址的连接请求
+postgres@host /v/l/pgsql&gt; vim data/postgresql.conf
+</code></pre>
+
+<pre><code class="conf"># ......
+#listen_addresses = 'localhost'         # what IP address(es) to listen on;
+                                        # comma-separated list of addresses;
+                                        # defaults to 'localhost'; use '*' for all
+                                        # (change requires restart)
+listen_addresses = '*'
+# ......
+</code></pre>
+
+<pre><code class="sh"># 修改安全认证：
+# 允许来自任何地址的，经 SCRAM 加密密码的请求
+postgres@host /v/l/pgsql&gt; vim data/pg_hba.conf
+</code></pre>
+
+<pre><code class="conf"># ......
+# Put your actual configuration here
+# ----------------------------------
+host    all             all             0.0.0.0/0               md5
+host    all             all             ::/0                    md5
+# ......
+</code></pre>
+
+<pre><code class="sh"># 退出到 sudoer 用户
+postgres@host /v/l/pgsql&gt; exit
+
+# 重启服务以使配置生效
+sudoer@host *&gt; sudo systemctl restart postgresql
+
+# 配置防火墙，打开 5432 端口
+sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=5432/tcp
+sudoer@host *&gt; sudo firewall-cmd --reload
+
+# ------------------------------------------------------------------------------
+# 配置数据库内的管理员用户，用于远程管理
+
+# 以 postgres 系统用户运行 psql，通过 peer 授权以 postgres 数据库用户登录数据库
+sudoer@host *&gt; sudo --user=postgres psql
+# abbr.        sudo -u postgres psql
+</code></pre>
+
+<pre><code class="psql"># 创建管理员用户
+postgres=# CREATE USER &quot;administrator&quot; PASSWORD 'password'
+postgres-# CREATEDB CREATEROLE REPLICATION BYPASSRLS;
+
+# 退出
+postgres=# \quit
+# abbr.    \q
+</code></pre>
+
+<h2 id="psql">psql 常用命令</h2>
+<hr />
+<h3 id="_1">列出所有数据库</h3>
+<pre><code class="psql">postgres=# \list
+# abbr.    \l
+</code></pre>
+
+<h3 id="_2">创建普通用户并分配数据库</h3>
+<pre><code class="psql"># 创建用户
+postgres=# CREATE USER &quot;username&quot; PASSWORD 'password';
+
+# 为用户创建数据库
+postgres=# CREATE DATABASE &quot;database&quot; OWNER &quot;username&quot;;
+
+# 在该数据库上，授予该用户所有权限
+postgres=# GRANT ALL ON DATABASE &quot;database&quot; TO &quot;username&quot;;
+</code></pre>
+
+<h2 id="pgadmin">可选的，安装并配置 pgAdmin</h2>
+<hr />
+<pre><code class="fish"># pgAdmin
+
+# 更新仓库（https://www.pgadmin.org/download/pgadmin-4-rpm/）
+user@host *&gt; sudo rpm --erase pgadmin4-redhat-repo
+user@host *&gt; sudo rpm --install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-redhat-repo-1-1.noarch.rpm
+
+# 安装
+user@host *&gt; sudo dnf install pgadmin4-web
+
+# 运行
+user@host *&gt; sudo /usr/pgadmin4/bin/setup-web.sh
+</code></pre></div>
             </div>
         </div>
 

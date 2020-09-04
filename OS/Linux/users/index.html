@@ -112,6 +112,10 @@
 </li>
                                     
 <li>
+    <a href="../../../MW/PostgreSQL/" class="dropdown-item">关系型数据库管理系统 PostgreSQL</a>
+</li>
+                                    
+<li>
     <a href="../../../MW/ZooKeeper/" class="dropdown-item">分布式协调服务 ZooKeeper</a>
 </li>
                                 </ul>
@@ -284,6 +288,10 @@
 </li>
                                     
 <li>
+    <a href="../../../DevOps/GitFlow/" class="dropdown-item">Git 分支模型 GitFlow</a>
+</li>
+                                    
+<li>
     <a href="../../../DevOps/GitLab/" class="dropdown-item">开发管理 GitLab</a>
 </li>
                                     
@@ -357,6 +365,18 @@
             </li>
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">相关文件格式</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#etcpasswd" class="nav-link">/etc/passwd</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#etcshadow" class="nav-link">/etc/shadow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -408,7 +428,52 @@ user@host *&gt; userdel [--remove] &lt;username&gt;
 user@host *&gt; sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash &lt;username&gt;
 # abbr.      sudo useradd -d /dev/null -g root -l -M -s /bin/bash &lt;username&gt;
 user@host *&gt; sudo passwd &lt;username&gt;
-</code></pre></div>
+</code></pre>
+
+<h2 id="_5">相关文件格式</h2>
+<hr />
+<h3 id="etcpasswd"><code>/etc/passwd</code></h3>
+<p>用户账号相关文件，每个用户一行，每行由冒号（<code>:</code>）分隔为七个部分：</p>
+<pre><code class="passwd">username:x:uid:gid:info:/path/to/home:/path/to/shell
+|______/ | |_/ |_/ |__/ |___________/ |____________/
+|        | |   |   |    |             登录壳层
+|        | |   |   |    |             设置为 /sbin/nologin 可在用户尝试登录时，
+|        | |   |   |    |             友善地提醒该账户不允许登录
+|        | |   |   |    登录目录
+|        | |   |   用户信息
+|        | |   组 ID
+|        | 用户 ID
+|        密码
+|        x 表示密码存储在 /etc/shadow 中
+用户名
+</code></pre>
+
+<h3 id="etcshadow"><code>/etc/shadow</code></h3>
+<p>用户密码相关文件，每个用户一行，每行由冒号（<code>:</code>）分隔为九个部分：</p>
+<pre><code class="shadow">username:$1$salt$b305cadbb3bce54f3aa59c64fec00dea:18506:0:99999:7:7:36525:
+|______/ |/|___/|_______________________________/ |___/ | |___/ | | |     |
+|        | |    |                                 |     | |     | | |     保留
+|        | |    |                                 |     | |     | | 账户过期日期
+|        | |    |                                 |     | |     | 过期后多少天禁用
+|        | |    |                                 |     | |     过期前多少天提醒
+|        | |    |                                 |     | 密码修改后的有效天数
+|        | |    |                                 |     修改密码最短间隔天数
+|        | |    |                                 密码的最后修改日期
+|        | |    $密码散列值
+|        | $盐
+|        $加密格式：
+|        $1 为 MD5
+|        $2 为 Blowfish
+|        $5 为 SHA-256
+|        $6 位 SHA-512
+|        |______________________________________/
+|        密码：
+|        若为 * 表示该账户为被锁定的服务账户
+|        若为 ! 表示该账户为被锁定的用户账户
+用户名
+</code></pre>
+
+<p>其中的日期值为距 1970-01-01 的天数。</p></div>
             </div>
         </div>
 
