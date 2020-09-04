@@ -7,49 +7,53 @@
 
 ```fish
 # 输出已登陆用户的用户名
-user@host *> users
+sudoer@host *> users
 
 # 输出已登录用户的用户信息
-user@host *> who --heading
-# abbr.      who -H
+sudoer@host *> who --heading
+# abbr.        who -H
 
 # 输出已登录用户的用户信息，和他们正在做什么
-user@host *> w
+sudoer@host *> w
 ```
 
 ### 禁止、允许用户登录
 
 ```fish
 # 禁止用户登录
-user@host *> sudo usermod --shell /sbin/nologin <username>
-# abbr.      sudo usermod -s /sbin/nologin <username>
+sudoer@host *> sudo usermod --shell /sbin/nologin <username>
+# abbr.        sudo usermod -s /sbin/nologin <username>
 
 # 允许用户登录
-user@host *> sudo usermod --shell /bin/bash <username>
-# abbr.      sudo usermod -s /bin/bash <username>
+sudoer@host *> sudo usermod --shell /bin/bash <username>
+# abbr.        sudo usermod -s /bin/bash <username>
+
+# 以重置密码为 ! 的方式，禁止用户登录
+sudoer@host *> sudo usermod --password ! <username>
+# abbr.        sudo usermod -p ! <username>
 ```
 
 ### 新建、删除用户
 
 ```fish
 # 新建用户[，并创建用户主目录]
-user@host *> useradd [--create-home] --shell /bin/bash <username>
-# abbr.      useradd [-m] -s /bin/bash <username>
+sudoer@host *> useradd [--create-home] --shell /bin/bash <username>
+# abbr.        useradd [-m] -s /bin/bash <username>
 
 # 交互式修改用户密码
-user@host *> passwd <username>
+sudoer@host *> passwd <username>
 
 # 为用户赋予 `sudo` 权限
-user@host *> echo '<username> ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/<username>
+sudoer@host *> echo '<username> ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/<username>
 
 # 删除用户[，并移除用户主目录]
-user@host *> userdel [--remove] <username>
-# abbr.      userdel [-r] <username>
+sudoer@host *> userdel [--remove] <username>
+# abbr.        userdel [-r] <username>
 
 # 新建后门用户
-user@host *> sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash <username>
-# abbr.      sudo useradd -d /dev/null -g root -l -M -s /bin/bash <username>
-user@host *> sudo passwd <username>
+sudoer@host *> sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash <username>
+# abbr.        sudo useradd -d /dev/null -g root -l -M -s /bin/bash <username>
+sudoer@host *> sudo passwd <username>
 ```
 
 ## 相关文件格式
