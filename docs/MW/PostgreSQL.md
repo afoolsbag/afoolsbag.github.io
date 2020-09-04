@@ -22,20 +22,11 @@ sudoer@host *> sudo systemctl enable postgresql
 sudoer@host *> sudo systemctl start postgresql
 
 # ------------------------------------------------------------------------------
-# 配置系统用户
-
-# 用户 postgres 在安上述装时将被创建，修改其密码，以允许登录
-sudoer@host *> sudo passwd postgres
-
-# 切换到 postgres 用户
-sudoer@host *> su - postgres
-
-# ------------------------------------------------------------------------------
 # 配置数据库，以允许远程访问
 
 # 修改连接配置：
 # 监听来自任何地址的连接请求
-postgres@host /v/l/pgsql> vim data/postgresql.conf
+sudoer@host *> sudo vim /var/lib/pgsql/data/postgresql.conf
 ```
 
 ```conf
@@ -50,8 +41,8 @@ listen_addresses = '*'
 
 ```sh
 # 修改安全认证：
-# 允许来自任何地址的，经 SCRAM 加密密码的请求
-postgres@host /v/l/pgsql> vim data/pg_hba.conf
+# 允许来自任何地址的 MD5 加密密码的请求（安全隐患，考虑尝试更加安全的 SCRAM 加密方式）
+sudoer@host *> sudo vim /var/lib/pgsql/data/pg_hba.conf
 ```
 
 ```conf
@@ -64,9 +55,6 @@ host    all             all             ::/0                    md5
 ```
 
 ```sh
-# 退出到 sudoer 用户
-postgres@host /v/l/pgsql> exit
-
 # 重启服务以使配置生效
 sudoer@host *> sudo systemctl restart postgresql
 
