@@ -51,5 +51,6 @@ LANG="zh_CN.utf8"
 [user@host *]$ localectl list-locales
 
 # 设置语言环境
+# 强烈建议选用 .utf8 后缀的语言环境
 [user@host *]$ sudo localectl set-locale <locale>
 ```
