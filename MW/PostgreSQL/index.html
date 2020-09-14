@@ -79,6 +79,10 @@
 </li>
                                     
 <li>
+    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+</li>
+                                    
+<li>
     <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
@@ -388,6 +392,8 @@
 <pre><code class="sh"># ------------------------------------------------------------------------------
 # 安装并启动
 
+# 注意：PostgreSQL 依据系统的语言环境确定字符编码，若需要 UTF-8 编码则须确保系统语言环境支持
+
 # 安装
 sudoer@host *&gt; sudo dnf install postgresql-server
 
@@ -399,20 +405,11 @@ sudoer@host *&gt; sudo systemctl enable postgresql
 sudoer@host *&gt; sudo systemctl start postgresql
 
 # ------------------------------------------------------------------------------
-# 配置系统用户
-
-# 用户 postgres 在安上述装时将被创建，修改其密码，以允许登录
-sudoer@host *&gt; sudo passwd postgres
-
-# 切换到 postgres 用户
-sudoer@host *&gt; su - postgres
-
-# ------------------------------------------------------------------------------
 # 配置数据库，以允许远程访问
 
 # 修改连接配置：
 # 监听来自任何地址的连接请求
-postgres@host /v/l/pgsql&gt; vim data/postgresql.conf
+sudoer@host *&gt; sudo vim /var/lib/pgsql/data/postgresql.conf
 </code></pre>
 
 <pre><code class="conf"># ......
@@ -425,8 +422,8 @@ listen_addresses = '*'
 </code></pre>
 
 <pre><code class="sh"># 修改安全认证：
-# 允许来自任何地址的，经 SCRAM 加密密码的请求
-postgres@host /v/l/pgsql&gt; vim data/pg_hba.conf
+# 允许来自任何地址的 MD5 加密密码的请求（安全隐患，考虑尝试更加安全的 SCRAM 加密方式）
+sudoer@host *&gt; sudo vim /var/lib/pgsql/data/pg_hba.conf
 </code></pre>
 
 <pre><code class="conf"># ......
@@ -437,10 +434,7 @@ host    all             all             ::/0                    md5
 # ......
 </code></pre>
 
-<pre><code class="sh"># 退出到 sudoer 用户
-postgres@host /v/l/pgsql&gt; exit
-
-# 重启服务以使配置生效
+<pre><code class="sh"># 重启服务以使配置生效
 sudoer@host *&gt; sudo systemctl restart postgresql
 
 # 配置防火墙，打开 5432 端口

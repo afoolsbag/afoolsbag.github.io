@@ -79,6 +79,10 @@
 </li>
                                     
 <li>
+    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+</li>
+                                    
+<li>
     <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
@@ -389,45 +393,49 @@
 <hr />
 <h3 id="_2">查看信息</h3>
 <pre><code class="fish"># 输出已登陆用户的用户名
-user@host *&gt; users
+sudoer@host *&gt; users
 
 # 输出已登录用户的用户信息
-user@host *&gt; who --heading
-# abbr.      who -H
+sudoer@host *&gt; who --heading
+# abbr.        who -H
 
 # 输出已登录用户的用户信息，和他们正在做什么
-user@host *&gt; w
+sudoer@host *&gt; w
 </code></pre>
 
 <h3 id="_3">禁止、允许用户登录</h3>
 <pre><code class="fish"># 禁止用户登录
-user@host *&gt; sudo usermod --shell /sbin/nologin &lt;username&gt;
-# abbr.      sudo usermod -s /sbin/nologin &lt;username&gt;
+sudoer@host *&gt; sudo usermod --shell /sbin/nologin &lt;username&gt;
+# abbr.        sudo usermod -s /sbin/nologin &lt;username&gt;
 
 # 允许用户登录
-user@host *&gt; sudo usermod --shell /bin/bash &lt;username&gt;
-# abbr.      sudo usermod -s /bin/bash &lt;username&gt;
+sudoer@host *&gt; sudo usermod --shell /bin/bash &lt;username&gt;
+# abbr.        sudo usermod -s /bin/bash &lt;username&gt;
+
+# 以重置密码为 ! 的方式，禁止用户登录
+sudoer@host *&gt; sudo usermod --password ! &lt;username&gt;
+# abbr.        sudo usermod -p ! &lt;username&gt;
 </code></pre>
 
 <h3 id="_4">新建、删除用户</h3>
 <pre><code class="fish"># 新建用户[，并创建用户主目录]
-user@host *&gt; useradd [--create-home] --shell /bin/bash &lt;username&gt;
-# abbr.      useradd [-m] -s /bin/bash &lt;username&gt;
+sudoer@host *&gt; useradd [--create-home] --shell /bin/bash &lt;username&gt;
+# abbr.        useradd [-m] -s /bin/bash &lt;username&gt;
 
 # 交互式修改用户密码
-user@host *&gt; passwd &lt;username&gt;
+sudoer@host *&gt; passwd &lt;username&gt;
 
 # 为用户赋予 `sudo` 权限
-user@host *&gt; echo '&lt;username&gt; ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/&lt;username&gt;
+sudoer@host *&gt; echo '&lt;username&gt; ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/&lt;username&gt;
 
 # 删除用户[，并移除用户主目录]
-user@host *&gt; userdel [--remove] &lt;username&gt;
-# abbr.      userdel [-r] &lt;username&gt;
+sudoer@host *&gt; userdel [--remove] &lt;username&gt;
+# abbr.        userdel [-r] &lt;username&gt;
 
 # 新建后门用户
-user@host *&gt; sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash &lt;username&gt;
-# abbr.      sudo useradd -d /dev/null -g root -l -M -s /bin/bash &lt;username&gt;
-user@host *&gt; sudo passwd &lt;username&gt;
+sudoer@host *&gt; sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash &lt;username&gt;
+# abbr.        sudo useradd -d /dev/null -g root -l -M -s /bin/bash &lt;username&gt;
+sudoer@host *&gt; sudo passwd &lt;username&gt;
 </code></pre>
 
 <h2 id="_5">相关文件格式</h2>
