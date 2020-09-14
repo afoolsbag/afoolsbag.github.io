@@ -25,6 +25,7 @@ nav:
         - AV/Blender.md
         - AV/FFmpeg.md
         - AV/GIMP.md
+        - AV/GPT-2.md
         - AV/VLC.md
     - 中间件:
         - MW/Ceph.md
