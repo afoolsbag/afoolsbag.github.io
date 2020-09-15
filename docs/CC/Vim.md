@@ -62,7 +62,7 @@ N+24 |    example-word\n                                                CTRL-T :
      '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ```
 
-### 从普通模式切换至插入模式
+### 普通模式到插入模式
 
 ```text
       1       10        20        30        40        50        60        70        80
@@ -136,7 +136,34 @@ N+13 |                                                                          
 ## 常用命令组合
 ---
 
-设置行尾序列
+### 替代
+
+```vim
+:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
+
+" range ::= {line}
+"         | {line-start}, {line-stop-after-cursor}
+"         | {line-start}; {line-stop-after-start}
+"         | ...
+"
+" line* ::= {number}                                行号
+"         | .                                       当前行
+"         | $                                       文件的最后一行
+"         | %                                       全文件，等同于 1, &
+"         | ...
+"
+" flags :+= c                                       确认每个替代
+"         | e                                       忽略错误
+"         | g                                       对所有匹配，而不是首个匹配进行替代
+"         | ...
+"         | n                                       报告匹配次数，而不真的替代
+"         | ...
+
+" 在整个文件替换，逐个确认
+:%s/{pattern}/{string}/cg
+```
+
+### 设置行尾序列
 
 ```vim
 :set fileformat={dos|unix|mac}
