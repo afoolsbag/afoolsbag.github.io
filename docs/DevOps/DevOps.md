@@ -4,6 +4,8 @@ InfoQ 上的一篇介绍 DevOps 的[*文章*](https://xie.infoq.cn/article/be516
 
 ![DevOps](DevOps.png)
 
+[*Awesome Sysadmin*](https://github.com/n1trux/awesome-sysadmin)
+
 ## 持续开发
 
 源码管理
@@ -37,4 +39,13 @@ InfoQ 上的一篇介绍 DevOps 的[*文章*](https://xie.infoq.cn/article/be516
 
 ## 持续监控
 
+日志系统
+| [*Splunk*](https://www.splunk.com/)（闭源）
+| [*Sumo Logic*](https://www.sumologic.com/)（闭源）
+| [*Elastic*](https://www.elastic.co/) <sub>
+      [*Beats*](https://www.elastic.co/beats/),
+      [*Logstash*](https://www.elastic.co/logstash),
+      [*Elasticsearch*](https://www.elastic.co/elasticsearch/),
+      [*Kibana*](https://www.elastic.co/kibana) </sub>
+| [*GrayLog*](https://www.graylog.org/)
 ## 持续反馈

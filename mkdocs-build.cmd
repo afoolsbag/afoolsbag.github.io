@@ -8,7 +8,7 @@ WHERE /Q mkdocs ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
-CD %script_directory% ^
+CD "%script_directory%" ^
         || ECHO Change directory to project directory failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2
