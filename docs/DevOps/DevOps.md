@@ -37,6 +37,9 @@ InfoQ 上的一篇介绍 DevOps 的[*文章*](https://xie.infoq.cn/article/be516
 
 ## 持续部署
 
+控制面板
+| [*Cockpit*](https://cockpit-project.org)
+
 ## 持续监控
 
 日志系统
@@ -48,4 +51,5 @@ InfoQ 上的一篇介绍 DevOps 的[*文章*](https://xie.infoq.cn/article/be516
       [*Elasticsearch*](https://www.elastic.co/elasticsearch/),
       [*Kibana*](https://www.elastic.co/kibana) </sub>
 | [*GrayLog*](https://www.graylog.org/)
+
 ## 持续反馈

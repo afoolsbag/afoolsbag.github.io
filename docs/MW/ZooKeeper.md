@@ -64,10 +64,18 @@ WantedBy=multi-user.target
 # 重新加载服务单元
 sudoer@host *> sudo systemctl daemon-reload
 
-# 启动并启用 zookeeper
-sudoer@host *> sudo systemctl start zookeeper
-sudoer@host *> sudo systemctl enable zookeeper
+# 立即启用 ZooKeeper
+sudoer@host *> sudo systemctl enable --now zookeeper
 
 # 检查进程
 sudoer@host *> sudo jps
+
+# 配置防火墙，打开 2181、2888、3888 端口
+#    Client:? -> 2181:ZooKeeper
+# Followers:? -> 2888:Leader
+#      Peer:? -> 3888:Peer      (leader election phase)
+sudoer@host *> sudo firewall-cmd --permanent --add-port=2181/tcp
+sudoer@host *> sudo firewall-cmd --permanent --add-port=2888/tcp
+sudoer@host *> sudo firewall-cmd --permanent --add-port=3888/tcp
+sudoer@host *> sudo firewall-cmd --reload
 ```

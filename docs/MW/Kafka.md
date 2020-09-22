@@ -2,7 +2,9 @@
 
 官网 <https://kafka.apache.org/>。
 
-一款图形用户界面客户端 [*Kafka Tools*](https://kafkatool.com/)。
+*   [*GitOps for Apache Kafka*](https://devshawn.github.io/kafka-gitops/)
+*   [*Kafka Tools*](https://kafkatool.com/)，一款图形用户界面客户端
+*   [*Apache Kafka: Topic Naming Conventions*](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)，话题命名风格
 
 ## 安装并配置 Kafka
 ---
@@ -63,12 +65,15 @@ WantedBy=multi-user.target
 # 重新加载服务单元
 sudoer@host *> sudo systemctl daemon-reload
 
-# 启动并启用 zookeeper
-sudoer@host *> sudo systemctl start kafka
-sudoer@host *> sudo systemctl enable kafka
+# 立即启用 Kafka 
+sudoer@host *> sudo systemctl enable --now kafka
 
 # 检查进程
 sudoer@host *> sudo jps
+
+# 配置防火墙，打开 9092 端口
+sudoer@host *> sudo firewall-cmd --permanent --add-port=9092/tcp
+sudoer@host *> sudo firewall-cmd --reload
 ```
 
 ## 常用命令组合
