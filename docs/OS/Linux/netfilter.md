@@ -11,28 +11,34 @@
 ---
 
 [*firewalld 官网*](https://firewalld.org/)。
-CentOS 使用此前端管理 netfilter。
+CentOS 使用该前端管理 netfilter。
 
 ### 常用命令组合
 
-```fish
+```sh
 # 查看服务状态
-user@host *> systemctl status firewalld
+sudoer@host *> systemctl status firewalld
 
 # 列出所有规则
-user@host *> sudo firewall-cmd --list-all
+sudoer@host *> sudo firewall-cmd --list-all
 
-# 查询一条规则
-user@host *> sudo firewall-cmd --query-port=<port>/<protocol>
+# 列、增、删、查端口规则
+sudoer@host *> sudo firewall-cmd --list-ports
+sudoer@host *> sudo firewall-cmd --permanent --add-port=<port>/<protocol>
+soduer@host *> sudo firewall-cmd --permanent --remove-port=<port>/<protocol>
+sudoer@host *> sudo firewall-cmd --query-port=<port>/<protocol>
 
-# 持久添加一条规则
-user@host *> sudo firewall-cmd --permanent --add-port=<port>/<protocol>
-
-# 持久移除一条规则
-user@host *> sudo firewall-cmd --permanent --remove-port=<port>/<protocol>
+# 列、增、删、查服务规则
+# 缺省服务配置位于 /usr/lib/firewalld/services 目录下
+# 系统服务配置位于 /etc/firewalld/services 目录下
+sudoer@host *> sudo firewall-cmd --get-services
+sudoer@host *> sudo firewall-cmd --list-services
+sudoer@host *> sudo firewall-cmd --permanent --add-service=<service>
+soduer@host *> sudo firewall-cmd --permanent --remove-service=<service>
+sudoer@host *> sudo firewall-cmd --query-service=<service>
 
 # 重新加载配置
-user@host *> sudo firewall-cmd --reload
+sudoer@host *> sudo firewall-cmd --reload
 ```
 
 ## 使用 ufw 管理 netfilter
