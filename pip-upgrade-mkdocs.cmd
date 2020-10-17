@@ -7,11 +7,17 @@ WHERE /Q pip ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
+pip install --upgrade pymdown-extensions ^
+        && ECHO pip update pymdown-extensions succeed. ^
+        || ECHO pip update pymdown-extensions failed. ^
+        && CALL :pause_if_double_click ^
+        && EXIT /B 2
+
 pip install --upgrade mkdocs ^
         && ECHO pip update mkdocs succeed. ^
         || ECHO pip update mkdocs failed. ^
         && CALL :pause_if_double_click ^
-        && EXIT /B 2
+        && EXIT /B 3
 
 CALL :pause_if_double_click
 EXIT /B 0

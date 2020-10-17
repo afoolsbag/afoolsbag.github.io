@@ -282,3 +282,6 @@ theme:
 
 # Formatting options
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
+
+markdown_extensions:
+    - pymdownx.superfences
