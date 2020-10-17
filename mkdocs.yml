@@ -284,4 +284,5 @@ theme:
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
 
 markdown_extensions:
+    - sane_lists
     - pymdownx.superfences
