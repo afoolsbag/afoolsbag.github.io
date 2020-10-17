@@ -7,9 +7,9 @@ WHERE /Q scoop ^
         && CALL :pause_if_double_click ^
         && EXIT /B 1
 
-scoop cleanup * ^
-        && ECHO Scoop cleanup succeed. ^
-        || ECHO Scoop cleanup failed. ^
+scoop cache rm * ^
+        && ECHO Scoop cache rm succeed. ^
+        || ECHO Scoop cache rm failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2
 
