@@ -34,15 +34,39 @@ sudoer@host /opt> sudo tar -xavf kafka_2.13-2.6.0.tgz
 sudoer@host /opt> sudo ln -s kafka_2.13-2.6.0 kafka
 sudoer@host /opt> sudo chown -R kafka:kafka kafka_2.13-2.6.0 kafka
 
-# 编辑配置文件
+# 编辑配置文件，配置 Host 使用 IP 地址而非计算机名
 sudoer@host /opt> sudo vim kafka/config/server.properties
+```
 
+```toml
+# /opt/kafka/config/server.properties
+
+# ......
+# The address the socket server listens on. It will get the value returned from 
+# java.net.InetAddress.getCanonicalHostName() if not configured.
+#   FORMAT:
+#     listeners = listener_name://host_name:port
+#   EXAMPLE:
+#     listeners = PLAINTEXT://your.host.name:9092
+#listeners=PLAINTEXT://:9092
+
+# Hostname and port the broker will advertise to producers and consumers. If not set, 
+# it uses the value for "listeners" if configured.  Otherwise, it will use the value
+# returned from java.net.InetAddress.getCanonicalHostName().
+#advertised.listeners=PLAINTEXT://your.host.name:9092
+advertised.listeners=PLAINTEXT://192.0.2.1:9092
+# ......
+```
+
+```sh
 # 创建服务单元
 # 参见 <http://www.jinbuguo.com/systemd/systemd.service.html>
 sudoer@host *> sudo vim /etc/systemd/system/kafka.service
 ```
 
-```
+```toml
+# /etc/systemd/system/kafka.service
+
 [Unit]
 Description=Apache Kafka
 Requires=zookeeper.service
