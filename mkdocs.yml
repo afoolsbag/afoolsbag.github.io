@@ -19,14 +19,14 @@ nav:
         - CC/Vim.md
         - CC/Emacs.md
         - CC/UML.md
-    - 音视频:
-        - AV/AV.md
-        - AV/Audacity.md
-        - AV/Blender.md
-        - AV/FFmpeg.md
-        - AV/GIMP.md
-        - AV/GPT-2.md
-        - AV/VLC.md
+    - 多媒体:
+        - MM/MM.md
+        - MM/Audacity.md
+        - MM/Blender.md
+        - MM/FFmpeg.md
+        - MM/GIMP.md
+        - MM/GPT-2.md
+        - MM/VLC.md
     - 中间件:
         - MW/Ceph.md
         - MW/FTP.md
