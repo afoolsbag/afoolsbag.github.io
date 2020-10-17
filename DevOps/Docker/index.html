@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -585,7 +585,7 @@
 <h2 id="docker_1">安装 Docker</h2>
 <hr />
 <h3 id="dnf-docker">使用 dnf 安装 Docker</h3>
-<pre><code class="fish"># 安装 yum-utils 工具
+<pre class="highlight"><code class="language-fish"># 安装 yum-utils 工具
 user@host *&gt; sudo dnf install yum-utils
 
 # 启用 docker-ce 源
@@ -595,11 +595,9 @@ user@host *&gt; sudo yum-config-manager --add-repo https://download.docker.com/l
 user@host *&gt; sudo dnf install docker-ce docker-ce-cli containerd.io
 
 # 将 Docker 网桥标记至信任域
-user@host *&gt; sudo firewall-cmd --permanent --zone=trusted --change-interface=docker0
-</code></pre>
-
+user@host *&gt; sudo firewall-cmd --permanent --zone=trusted --change-interface=docker0</code></pre>
 <h3 id="docker_2">启动 Docker 服务</h3>
-<pre><code class="fish"># 启动 Docker 服务
+<pre class="highlight"><code class="language-fish"># 启动 Docker 服务
 user@host *&gt; sudo systemctl start docker
 
 # 测试 Docker 是否安装正确
@@ -608,25 +606,19 @@ user@host *&gt; sudo docker run hello-world
 # 将当前用户加入 docker 用户组，以免除当前用户对 docker 命令的 sudo 前缀
 user@host *&gt; sudo usermod --append --groups docker $USER
 # abbr.      sudo usermod -aG docker $USER
-# 重新登陆以生效
-</code></pre>
-
+# 重新登陆以生效</code></pre>
 <h3 id="gnulinux-docker-compose">在 GNU/Linux 安装 Docker Compose</h3>
-<pre><code class="bash"># 下载 docker-compose
+<pre class="highlight"><code class="language-bash"># 下载 docker-compose
 $ sudo curl --output /usr/local/bin/docker-compose \
-            --location &quot;https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname --kernel-name)-$(uname --machine)&quot;
-</code></pre>
-
-<pre><code class="fish"># 赋予 docker-compose 可执行权限
+            --location "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname --kernel-name)-$(uname --machine)"</code></pre>
+<pre class="highlight"><code class="language-fish"># 赋予 docker-compose 可执行权限
 user@host *&gt; sudo chmod +x /usr/local/bin/docker/compose
 
 # 验证 docker-compose 可执行
-user@host *&gt; docker-compose --version
-</code></pre>
-
+user@host *&gt; docker-compose --version</code></pre>
 <h2 id="_1">常用命令组合</h2>
 <hr />
-<pre><code class="fish"># 查看 Docker 版本
+<pre class="highlight"><code class="language-fish"># 查看 Docker 版本
 user@host *&gt; docker --version
 # 详细信息
 user@host *&gt; docker version
@@ -646,12 +638,10 @@ user@host *&gt; docker run --rm busybox ping -c 1 193.0.14.129
 # 测试容器域名解析
 user@host *&gt; docker run --rm busybox nslookup k.root-servers.net
 # 根域名服务器 K，位于伦敦，由欧洲IP网络资源协调中心（RIPE NCC）管理
-# 见 https://www.iana.org/domains/root/servers
-</code></pre>
-
+# 见 https://www.iana.org/domains/root/servers</code></pre>
 <h3 id="image">镜像（<code>image</code>）</h3>
 <p><a href="https://hub.docker.com/"><em>官方的 Docker 镜像托管网站</em></a>。</p>
-<pre><code class="fish"># 列出镜像文件
+<pre class="highlight"><code class="language-fish"># 列出镜像文件
 user@host *&gt; docker image ls
 # abbr.      docker images
 
@@ -673,12 +663,10 @@ user@host *&gt; docker image save &lt;image&gt; | gzip &gt; &lt;archive.tgz&gt;
 
 # 从归档文件导入镜像
 user@host *&gt; docker image load --input &lt;archive.tar[.bz|.gz|.xz]&gt;
-# abbr.      docker load -i &lt;archive.tar[.bz|.gz|.xz]&gt;
-</code></pre>
-
+# abbr.      docker load -i &lt;archive.tar[.bz|.gz|.xz]&gt;</code></pre>
 <h3 id="container">容器（<code>container</code>）</h3>
 <p>镜像和容器</p>
-<pre><code class="fish"># 列出正在运行的容器
+<pre class="highlight"><code class="language-fish"># 列出正在运行的容器
 user@host *&gt; docker container ls
 # abbr.      docker ps
 
@@ -696,11 +684,9 @@ user@host *&gt; docker container kill &lt;container&gt;
 
 # 移除容器文件
 user@host *&gt; docker container rm &lt;container&gt;
-# abbr.      docker rm &lt;container&gt;
-</code></pre>
-
+# abbr.      docker rm &lt;container&gt;</code></pre>
 <p>运行时容器</p>
-<pre><code class="fish"># 查看容器输出
+<pre class="highlight"><code class="language-fish"># 查看容器输出
 user@host *&gt; docker container logs &lt;container&gt;
 # abbr.      docker logs &lt;container&gt;
 
@@ -728,11 +714,9 @@ user@host *&gt; docker container start &lt;container&gt;
 
 # 重新运行容器
 user@host *&gt; docker container restart &lt;container&gt;
-# abbr.      docker restart &lt;container&gt;
-</code></pre>
-
+# abbr.      docker restart &lt;container&gt;</code></pre>
 <p>容器输入输出映射</p>
-<pre><code class="fish"># 容器停止后自动删除容器文件
+<pre class="highlight"><code class="language-fish"># 容器停止后自动删除容器文件
 user@host *&gt; docker container run --rm &lt;image&gt;
 # abbr.      docker run --rm &lt;image&gt;
 
@@ -750,20 +734,16 @@ user@host *&gt; docker container run --volume &lt;/local/path/to/file&gt;:&lt;/c
 
 # 生成一个本机匿名路径，形如 /var/lib/docker/volumes/.../_data，将其与容器的 /container/path/to/file 绑定
 user@host *&gt; docker container run --volume &lt;/container/path/to/file&gt; &lt;image&gt;
-# abbr.      docker run -v &lt;/container/path/to/file&gt; &lt;image&gt;
-</code></pre>
-
+# abbr.      docker run -v &lt;/container/path/to/file&gt; &lt;image&gt;</code></pre>
 <h3 id="builder">构建（<code>builder</code>）</h3>
-<pre><code class="fish"># 依据 Dockerfile 构建镜像
+<pre class="highlight"><code class="language-fish"># 依据 Dockerfile 构建镜像
 user@host *&gt; docker builder build --tag &lt;name&gt;[:tag] &lt;path&gt;
-# abbr.      docker build -t &lt;name&gt;[:tag] &lt;path&gt;
-</code></pre>
-
+# abbr.      docker build -t &lt;name&gt;[:tag] &lt;path&gt;</code></pre>
 <h3 id="compose">构成（<code>compose</code>）</h3>
 <h2 id="dockerfile"><code>Dockerfile</code></h2>
 <hr />
 <p><a href="https://docs.docker.com/engine/reference/builder/"><em>Docker Documentation 上的 Dockerfile reference</em></a>。</p>
-<pre><code class="dockerfile">#-------------------------------------------------------------------------------
+<pre class="highlight"><code class="language-dockerfile">#-------------------------------------------------------------------------------
 # 编译时
 FROM scratch AS build-time
 
@@ -799,26 +779,23 @@ COPY --from=build-time /build /dist
 # VOLUME /data
 
 # 程序入口点，可以被 docker run 的 --entrypoint 选项覆盖
-ENTRYPOINT [ &quot;exec&quot; ]
-# ENTRYPOINT [ &quot;/bin/sh&quot;, &quot;-c&quot; ]
+ENTRYPOINT [ "exec" ]
+# ENTRYPOINT [ "/bin/sh", "-c" ]
 
 # 默认命令，可以被 docker run 的 [command] 参数覆盖
-CMD [ &quot;/app/hello-world&quot; ]
-</code></pre>
-
+CMD [ "/app/hello-world" ]</code></pre>
 <h2 id="docker-composeyml"><code>docker-compose.yml</code></h2>
 <hr />
 <p><a href="https://docs.docker.com/compose/compose-file/"><em>Docker Documentation 上的 Compose file reference</em></a></p>
-<pre><code class="yml">version: &quot;3.8&quot;
+<pre class="highlight"><code class="language-yml">version: "3.8"
 services:
 
   &lt;service-name&gt;:
     image: &lt;image-name&gt;
     ports:
-      - &quot;&lt;host&gt;:&lt;container&gt;[/{tcp|udp}]&quot;
+      - "&lt;host&gt;:&lt;container&gt;[/{tcp|udp}]"
     volumes:
-      - &quot;&lt;host&gt;:&lt;container&gt;[:{rw|ro}]&quot;
-</code></pre></div>
+      - "&lt;host&gt;:&lt;container&gt;[:{rw|ro}]"</code></pre></div>
             </div>
         </div>
 

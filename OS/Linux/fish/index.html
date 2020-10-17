@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -574,38 +574,30 @@
 <h2 id="fish_1">安装 fish</h2>
 <hr />
 <h3 id="arch">Arch</h3>
-<pre><code class="bash">[user@host *]$ sudo pacman --sync fish
-</code></pre>
-
+<pre class="highlight"><code class="language-bash">[user@host *]$ sudo pacman --sync fish</code></pre>
 <h3 id="centos">CentOS</h3>
-<pre><code class="bash"># 安装 fish 2
+<pre class="highlight"><code class="language-bash"># 安装 fish 2
 [user@host *]$ sudo yum install fish
 
 # 安装 fish 3
 [user@host *]$ sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/RedHat_RHEL-6/shells:fish:release:3.repo
 # CentOS 7     sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/RHEL_7/shells:fish:release:3.repo
 # CentOS 8     sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/CentOS_8/shells:fish:release:3.repo
-[user@host *]$ sudo yum install fish
-</code></pre>
-
+[user@host *]$ sudo yum install fish</code></pre>
 <h3 id="kali">Kali</h3>
-<pre><code class="bash"># 安装 fish 3
-user@host:*$ sudo apt install fish
-</code></pre>
-
+<pre class="highlight"><code class="language-bash"># 安装 fish 3
+user@host:*$ sudo apt install fish</code></pre>
 <h3 id="ubuntu">Ubuntu</h3>
-<pre><code># 安装 fish 2
+<pre class="highlight"><code># 安装 fish 2
 user@host:*$ sudo apt install fish
 
 # 安装 fish 3
 user@host:*$ sudo apt-add-repository ppa:fish-shell/release-3
 user@host:*$ sudo apt update
-user@host:*$ sudo apt install fish
-</code></pre>
-
+user@host:*$ sudo apt install fish</code></pre>
 <h2 id="_1">常用命令组合</h2>
 <hr />
-<pre><code class="fish"># 查看当前壳层
+<pre class="highlight"><code class="language-fish"># 查看当前壳层
 user@host *&gt; echo $SHELL
 
 # 查看可用壳层
@@ -623,9 +615,7 @@ user@host *&gt; alias
 user@host *&gt; alias ll='ls --all -l --classify --color=auto'
 
 # 取消一个命令别名
-user@host *&gt; unalias ll
-</code></pre>
-
+user@host *&gt; unalias ll</code></pre>
 <h2 id="_2">壳层环境</h2>
 <hr />
 <h3 id="bash">bash</h3>
@@ -659,9 +649,7 @@ user@host *&gt; unalias ll
 </ul>
 </li>
 </ul>
-<pre><code class="bash">export PATH=&quot;${PATH}:/path/to/directory&quot;
-</code></pre>
-
+<pre class="highlight"><code class="language-bash">export PATH="${PATH}:/path/to/directory"</code></pre>
 <h3 id="fish_2">fish</h3>
 <ul>
 <li>系统配置（脚本）<ul>
@@ -675,8 +663,7 @@ user@host *&gt; unalias ll
 </ul>
 </li>
 </ul>
-<pre><code class="fish">set --export PATH {$PATH} /path/to/directory
-</code></pre></div>
+<pre class="highlight"><code class="language-fish">set --export PATH {$PATH} /path/to/directory</code></pre></div>
             </div>
         </div>
 

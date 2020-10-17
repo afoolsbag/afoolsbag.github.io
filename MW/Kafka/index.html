@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -554,38 +554,44 @@
 </ul>
 <h2 id="kafka_1">安装并配置 Kafka</h2>
 <hr />
-<p>前置需要安装 OpenJDK 和 ZooKeeper，参见<a href="../ZooKeeper"><em>相关文档</em></a>。</p>
 <h3 id="centos-7-8">CentOS 7, 8</h3>
-<pre><code class="sh"># 创建 kafka 用户
-sudoer@host *&gt; sudo useradd --comment 'Kafka Server' \
+<p><strong>注意：前置需要安装 OpenJDK 和 ZooKeeper，参见<a href="../ZooKeeper"><em>相关文档</em></a>。</strong></p>
+<p><em>下载并解压程序：</em></p>
+<ol>
+<li>
+<p>切换到 <code>/opt</code> 目录</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; cd /opt</code></pre>
+</li>
+<li>
+<p>下载 Kafka 压缩包，参见 <a href="https://mirrors.tuna.tsinghua.edu.cn/apache/kafka">https://mirrors.tuna.tsinghua.edu.cn/apache/kafka</a></p>
+<pre class="highlight"><code class="language-sh">sudoer@host /opt&gt; sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz</code></pre>
+</li>
+<li>
+<p>解压缩并建立链接</p>
+<pre class="highlight"><code class="language-sh">sudoer@host /opt&gt; sudo tar --extract --auto-compress --verbose --file=kafka_2.13-2.6.0.tgz
+sudoer@host /opt&gt; sudo ln --symbolic kafka_2.13-2.6.0 kafka</code></pre>
+</li>
+</ol>
+<p><em>将程序注册为服务：</em></p>
+<ol start="4">
+<li>
+<p>创建 <code>kafka</code> 用户</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo useradd --comment 'Kafka Server' \
                             --home-dir /opt/kafka \
                             --no-create-home \
                             --password !! \
                             --shell /sbin/nologin \
-                            kafka
-
-# 切换到 /opt 目录
-sudoer@host *&gt; cd /opt
-
-# 获取 zookeeper 压缩包
-# 参见 &lt;https://mirrors.tuna.tsinghua.edu.cn/apache/kafka&gt;
-sudoer@host /opt&gt; sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz
-
-# 解压缩，建立链接，切换所有权
-sudoer@host /opt&gt; sudo tar -xavf kafka_2.13-2.6.0.tgz
-sudoer@host /opt&gt; sudo ln -s kafka_2.13-2.6.0 kafka
-sudoer@host /opt&gt; sudo chown -R kafka:kafka kafka_2.13-2.6.0 kafka
-
-# 编辑配置文件
-sudoer@host /opt&gt; sudo vim kafka/config/server.properties
-
-# 创建服务单元
-# 参见 &lt;http://www.jinbuguo.com/systemd/systemd.service.html&gt;
-sudoer@host *&gt; sudo vim /etc/systemd/system/kafka.service
-</code></pre>
-
-<pre><code>[Unit]
-Description=Apache Kafka
+                            kafka</code></pre>
+</li>
+<li>
+<p>切换程序所在目录的所有权</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo chown --recursive kafka:kafka /opt/kafka_2.13-2.6.0 /opt/kafka</code></pre>
+</li>
+<li>
+<p>创建服务单元，参见 <a href="http://www.jinbuguo.com/systemd/systemd.service.html">http://www.jinbuguo.com/systemd/systemd.service.html</a></p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo vim /etc/systemd/system/kafka.service</code></pre>
+<pre class="highlight"><code class="language-ini">[Unit]
+Description=Kafka Server
 Requires=zookeeper.service
 After=zookeeper.service
 
@@ -599,26 +605,71 @@ ExecStart=/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properti
 ExecStop=/opt/kafka/bin/kafka-server-stop.sh
 
 [Install]
-WantedBy=multi-user.target
-</code></pre>
+WantedBy=multi-user.target</code></pre>
+</li>
+<li>
+<p>重新加载服务单元</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl daemon-reload</code></pre>
+</li>
+<li>
+<p>创建 firewalld 服务描述文件</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo vim /etc/firewalld/services/kafka.xml</code></pre>
+<pre class="highlight"><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;service&gt;
+  &lt;short&gt;Kafka&lt;/short&gt;
+  &lt;description&gt;Kafka Server&lt;/description&gt;
+  &lt;port protocol="tcp" port="9092"/&gt;
+&lt;/service&gt;</code></pre>
+</li>
+<li>
+<p>重新加载 firewalld 服务描述文件</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo firewall-cmd --reload</code></pre>
+</li>
+<li>
+<p>立即启用服务</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl enable --now kafka</code></pre>
+</li>
+<li>
+<p>配置防火墙，开放服务所需端口</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo firewall-cmd --permanent --add-service=kafka
+sudoer@host *&gt; sudo firewall-cmd --reload</code></pre>
+</li>
+</ol>
+<p><em>配置、启用并确认服务：</em></p>
+<ol start="12">
+<li>
+<p>编辑配置文件，配置 Host 使用 IP 地址而非计算机名</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo vim /opt/kafka/config/server.properties</code></pre>
+<pre class="highlight"><code class="language-ini"># /opt/kafka/config/server.properties
 
-<pre><code class="sh"># 重新加载服务单元
-sudoer@host *&gt; sudo systemctl daemon-reload
+# ......
+# The address the socket server listens on. It will get the value returned from 
+# java.net.InetAddress.getCanonicalHostName() if not configured.
+#   FORMAT:
+#     listeners = listener_name://host_name:port
+#   EXAMPLE:
+#     listeners = PLAINTEXT://your.host.name:9092
+#listeners=PLAINTEXT://:9092
 
-# 立即启用 Kafka 
-sudoer@host *&gt; sudo systemctl enable --now kafka
-
-# 检查进程
-sudoer@host *&gt; sudo jps
-
-# 配置防火墙，打开 9092 端口
-sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=9092/tcp
-sudoer@host *&gt; sudo firewall-cmd --reload
-</code></pre>
-
+# Hostname and port the broker will advertise to producers and consumers. If not set, 
+# it uses the value for "listeners" if configured.  Otherwise, it will use the value
+# returned from java.net.InetAddress.getCanonicalHostName().
+#advertised.listeners=PLAINTEXT://your.host.name:9092
+advertised.listeners=PLAINTEXT://192.0.2.1:9092
+# ......</code></pre>
+</li>
+<li>
+<p>重启服务以使配置生效</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl restart kafka</code></pre>
+</li>
+<li>
+<p>检查进程</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo jps</code></pre>
+</li>
+</ol>
 <h2 id="_1">常用命令组合</h2>
 <hr />
-<pre><code class="fish">user@host ~&gt; cd kafka/bin
+<pre class="highlight"><code class="language-fish">user@host ~&gt; cd kafka/bin
 
 # 列出可用话题
 user@host ~/k/bin&gt; ./kafka-topics.sh --bootstrap-server &lt;host1:9092&gt;[,host2:9092]... --list
@@ -627,8 +678,7 @@ user@host ~/k/bin&gt; ./kafka-topics.sh --bootstrap-server &lt;host1:9092&gt;[,h
 user@host ~/k/bin&gt; ./kafka-topics.sh --bootstrap-server &lt;host1:9092&gt;[,host2:9092]... --describe --topic &lt;topic&gt;
 
 # 查看话题中是否有消息
-user@host ~/k/bin&gt; ./kafka-console-consumer.sh --bootstrap-server &lt;host1:9092&gt;[,host2:9092]... --topic &lt;topic&gt; --from-beginning
-</code></pre></div>
+user@host ~/k/bin&gt; ./kafka-console-consumer.sh --bootstrap-server &lt;host1:9092&gt;[,host2:9092]... --topic &lt;topic&gt; --from-beginning</code></pre></div>
             </div>
         </div>
 

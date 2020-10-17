@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -608,7 +608,7 @@
 <p><a href="https://liaoxuefeng.com/wiki/896043488029600"><em>廖雪峰的 Git 教程</em></a>。</p>
 <h2 id="_1">配置</h2>
 <hr />
-<pre><code class="fish"># 列出配置
+<pre class="highlight"><code class="language-fish"># 列出配置
 user@host *&gt; git config --list
 # abbr.      git config -l
 
@@ -622,27 +622,19 @@ user@host *&gt; git config --global --list
 
 # 项目配置（`.git/config`）
 user@host *&gt; git config --local --list
-# abbr.      git config --local -l
-</code></pre>
-
+# abbr.      git config --local -l</code></pre>
 <h3 id="_2">为当前用户设置名称和邮箱</h3>
-<pre><code class="fish">user@host *&gt; git config --global user.name &quot;&lt;name&gt;&quot;
-user@host *&gt; git config --global user.email &quot;&lt;email@example.com&gt;&quot;
-</code></pre>
-
+<pre class="highlight"><code class="language-fish">user@host *&gt; git config --global user.name "&lt;name&gt;"
+user@host *&gt; git config --global user.email "&lt;email@example.com&gt;"</code></pre>
 <h3 id="ssh">生成 SSH 密钥对</h3>
-<pre><code class="fish">user@host ~&gt; ssh-keygen -t rsa -C &quot;&lt;email@example.com&gt;&quot;
-</code></pre>
-
+<pre class="highlight"><code class="language-fish">user@host ~&gt; ssh-keygen -t rsa -C "&lt;email@example.com&gt;"</code></pre>
 <h2 id="_3">版本库</h2>
 <hr />
-<pre><code class="fish"># 列出远端库
+<pre class="highlight"><code class="language-fish"># 列出远端库
 user@host ~/wdir&gt; git remote --verbose
-# abbr.           git remote -v
-</code></pre>
-
+# abbr.           git remote -v</code></pre>
 <h3 id="_4">在本地创建版本库</h3>
-<pre><code class="fish"># 初始化版本库
+<pre class="highlight"><code class="language-fish"># 初始化版本库
 user@host */wdir&gt; git init
 
 # 添加远端库
@@ -653,21 +645,17 @@ user@host */wdir&gt; git branch --set-upstream-to=&lt;origin&gt;
 # abbr.           git branch -u &lt;origin&gt;
 
 # 推送本地提交到远端库
-user@host */wdir&gt; git push &lt;origin&gt; &lt;master&gt;
-</code></pre>
-
+user@host */wdir&gt; git push &lt;origin&gt; &lt;master&gt;</code></pre>
 <h3 id="_5">从远端复制版本库</h3>
-<pre><code class="fish"># 从远端复制版本库
+<pre class="highlight"><code class="language-fish"># 从远端复制版本库
 user@host *&gt; git clone &lt;git@host:wdir.git&gt;
 
 # 创建远端分支到本地
 user@host */wdir&gt; git branch --set-upstream-to=&lt;origin/dev&gt; &lt;dev&gt;
-# abbr.           git branch -u &lt;origin/dev&gt; &lt;dev&gt;
-</code></pre>
-
+# abbr.           git branch -u &lt;origin/dev&gt; &lt;dev&gt;</code></pre>
 <h2 id="_6">分支</h2>
 <hr />
-<pre><code class="fish"># 展示分支
+<pre class="highlight"><code class="language-fish"># 展示分支
 user@host */wdir&gt; git branch
 
 # 展示远端分支
@@ -688,31 +676,25 @@ user@host */wdir&gt; git switch &lt;dev&gt;
 # 创建并切换分支
 user@host */wdir&gt; git switch --create &lt;dev&gt;
 # abbr.           git switch -c &lt;dev&gt;
-# depr.           git checkout -b &lt;dev&gt;
-</code></pre>
-
+# depr.           git checkout -b &lt;dev&gt;</code></pre>
 <h3 id="_7">提交</h3>
-<pre><code class="fish"># 查看提交历史
+<pre class="highlight"><code class="language-fish"># 查看提交历史
 user@host */wdir&gt; git log [--abbrev-commit --graph --pretty=oneline]
-# abbr.           git log [--graph --online]
-</code></pre>
-
+# abbr.           git log [--graph --online]</code></pre>
 <h3 id="_8">合并分支</h3>
-<pre><code class="fish"># 切换到主分支
+<pre class="highlight"><code class="language-fish"># 切换到主分支
 user@host */wdir (dev)&gt; git checkout &lt;master&gt;
 
 # 合并分支
 user@host */wdir (master)&gt; git merge &lt;dev&gt;
 
 # 禁用快进模式，带记录地合并分支
-user@host */wdir (master)&gt; git merge --no-ff -m &quot;&lt;merge with no-ff&gt;&quot; &lt;dev&gt;
+user@host */wdir (master)&gt; git merge --no-ff -m "&lt;merge with no-ff&gt;" &lt;dev&gt;
 
 # 若希望整理提交历史，将分岔合并
-user@host */wdir (master)&gt; git rebase
-</code></pre>
-
+user@host */wdir (master)&gt; git rebase</code></pre>
 <h3 id="_9">解决冲突</h3>
-<pre><code class="fish"># 出现冲突
+<pre class="highlight"><code class="language-fish"># 出现冲突
 
 # 查看冲突
 user@host */wdir&gt; git status
@@ -724,11 +706,9 @@ user@host */wdir&gt; git status
 user@host */wdir&gt; git add &lt;file&gt;
 
 # 提交修改
-user@host */wdir&gt; git commit -m &quot;&lt;conflict fixed&gt;&quot;
-</code></pre>
-
+user@host */wdir&gt; git commit -m "&lt;conflict fixed&gt;"</code></pre>
 <h3 id="_10">标签</h3>
-<pre><code class="fish"># 列出标签
+<pre class="highlight"><code class="language-fish"># 列出标签
 user@host */wdir&gt; git tag 
 
 # 查看标签
@@ -739,27 +719,23 @@ user@host */wdir&gt; git tag &lt;tagname&gt; [commit]
 
 # 制作一个带注释的标签
 user@host */wdir&gt; git tag --annotate --message='&lt;message&gt;' &lt;tagname&gt; [commit]
-# abbr.           git tag -a -m '&lt;message&gt;' &lt;tagname&gt; [commit]
-</code></pre>
-
+# abbr.           git tag -a -m '&lt;message&gt;' &lt;tagname&gt; [commit]</code></pre>
 <h2 id="_11">暂存区</h2>
 <hr />
-<pre><code class="fish"># 比较暂存区与版本库
+<pre class="highlight"><code class="language-fish"># 比较暂存区与版本库
 user@host */wdir&gt; git diff --cached
 
 # 从暂存区，将修改提交到版本库（`index` &gt;&gt; `branch`）
-user@host */wdir&gt; git commit --message=&quot;&lt;message&gt;&quot;
-# abbr.           git commit -m &quot;&lt;message&gt;&quot;
+user@host */wdir&gt; git commit --message="&lt;message&gt;"
+# abbr.           git commit -m "&lt;message&gt;"
 
 # 从暂存区，将修改回退到工作区
 user@host */wdir&gt; git restore --staged &lt;file&gt;...
-# depr.           git reset HEAD [file]...
-</code></pre>
-
+# depr.           git reset HEAD [file]...</code></pre>
 <h2 id="_12">工作区</h2>
 <hr />
 <h3 id="_13">常用工作区操作</h3>
-<pre><code class="fish"># 查看工作区状态
+<pre class="highlight"><code class="language-fish"># 查看工作区状态
 user@host */wdir&gt; git status
 
 # 比较工作区与版本库
@@ -773,21 +749,17 @@ user@host */wdir&gt; git add &lt;file&gt;...
 
 # 放弃工作区修改
 user@host */wdir&gt; git restore &lt;file&gt;...
-# depr.           git checkout -- &lt;file&gt;...
-</code></pre>
-
+# depr.           git checkout -- &lt;file&gt;...</code></pre>
 <h3 id="_14">藏匿</h3>
-<pre><code class="fish"># 藏匿脏工作区，以处理突发事件，譬如漏洞修复
+<pre class="highlight"><code class="language-fish"># 藏匿脏工作区，以处理突发事件，譬如漏洞修复
 user@host */wdir&gt; git stash
 
 # ......
 
 # 恢复脏工作区，继续之前的工作
-user@host */wdir&gt; git stash pop
-</code></pre>
-
+user@host */wdir&gt; git stash pop</code></pre>
 <h3 id="_15">其它藏匿操作</h3>
-<pre><code class="fish"># 复制特定提交到当前分支
+<pre class="highlight"><code class="language-fish"># 复制特定提交到当前分支
 # 常用于将主分支的漏洞修复，应用到开发分支
 user@host */wdir&gt; git cherry-pick &lt;commit&gt;
 
@@ -798,12 +770,10 @@ user@host */wdir&gt; git stash list
 user@host */wdir&gt; git stash apply [stash@{0}]
 
 # 丢弃指定的脏工作区
-user@host */wdir&gt; git stash drop [stash@{0}]
-</code></pre>
-
+user@host */wdir&gt; git stash drop [stash@{0}]</code></pre>
 <h2 id="_16">服务</h2>
 <hr />
-<pre><code class="sh"># 安装 git
+<pre class="highlight"><code class="language-sh"># 安装 git
 # ......
 
 # 创建 git 用户
@@ -819,8 +789,7 @@ user@host /h/git&gt; sudo --user=git vim .ssh/authorized_keys
 
 # 初始化仓库
 user@host /h/git&gt; sudo --user=git git init --bare &lt;wdir.git&gt;
-# abbr.           sudo -u git git init --bare &lt;wdir.git&gt;
-</code></pre></div>
+# abbr.           sudo -u git git init --bare &lt;wdir.git&gt;</code></pre></div>
             </div>
         </div>
 

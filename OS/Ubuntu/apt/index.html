@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -563,7 +563,7 @@
 <h2 id="_1">配置源</h2>
 <hr />
 <h3 id="kali">Kali</h3>
-<pre><code class="bash"># 备份原始源
+<pre class="highlight"><code class="language-bash"># 备份原始源
 user@host:*$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 # 配置中科大镜像源（https://mirrors.ustc.edu.cn/kali/）
@@ -572,11 +572,9 @@ user@host:*$ sudo vim /etc/apt/sources.list
 # deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 
 # 同步索引
-user@host:*$ sudo apt update
-</code></pre>
-
+user@host:*$ sudo apt update</code></pre>
 <h3 id="ubuntu">Ubuntu</h3>
-<pre><code class="bash"># 备份原始源
+<pre class="highlight"><code class="language-bash"># 备份原始源
 user@host:*$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bck
 
 # 配置阿里云镜像源 (https://developer.aliyun.com/mirror/ubuntu)
@@ -584,12 +582,10 @@ user@host:*$ sudo vim /etc/apt/sources.list
 # :%s/archive\.ubuntu\.com/mirrors.aliyun.com/g
 
 # 同步索引
-user@host:*$ sudo apt update
-</code></pre>
-
+user@host:*$ sudo apt update</code></pre>
 <h2 id="_2">常用命令组合</h2>
 <hr />
-<pre><code class="fish"># 更新包
+<pre class="highlight"><code class="language-fish"># 更新包
 user@host *&gt; sudo apt upgrade
 
 # 搜索
@@ -605,12 +601,10 @@ user@host *&gt; sudo apt install &lt;package&gt;
 user@host *&gt; sudo apt remove &lt;package&gt;
 
 # 卸载残留依赖
-user@host *&gt; sudo apt autoremove
-</code></pre>
-
+user@host *&gt; sudo apt autoremove</code></pre>
 <h2 id="apt_1">使用 apt 安装开发工具链的示例</h2>
 <hr />
-<pre><code class="fish"># 安装 Open SSH Server 并启用
+<pre class="highlight"><code class="language-fish"># 安装 Open SSH Server 并启用
 user@host *&gt; sudo apt install openssh-server
 user@host *&gt; sudo systemctl enable sshd
 user@host *&gt; sudo systemctl start sshd
@@ -647,9 +641,7 @@ user@host *&gt; sudo /usr/local/src/cmake-3.17.3-Linux-x86_64.sh --prefix=/usr/l
 user@host *&gt; pip3 install conan
 # 或从官网安装包安装
 user@host *&gt; sudo wget --directory-prefix=/usr/local/src https://dl.bintray.com/conan/installers/conan-ubuntu-64_1_26_0.deb
-user@host *&gt; sudo dpkg --install /usr/local/src/conan-ubuntu-64_1_26_0.deb
-</code></pre>
-
+user@host *&gt; sudo dpkg --install /usr/local/src/conan-ubuntu-64_1_26_0.deb</code></pre>
 <h2 id="keryx">离线安装、更新工具 Keryx</h2>
 <hr />
 <p>官网 <a href="https://launchpad.net/keryx">https://launchpad.net/keryx</a>。</p></div>

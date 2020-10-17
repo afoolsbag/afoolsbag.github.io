@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -557,27 +557,31 @@
 <h2 id="firewalld-netfilter">使用 firewalld 管理 netfilter</h2>
 <hr />
 <p><a href="https://firewalld.org/"><em>firewalld 官网</em></a>。
-CentOS 使用此前端管理 netfilter。</p>
+CentOS 使用该前端管理 netfilter。</p>
 <h3 id="_1">常用命令组合</h3>
-<pre><code class="fish"># 查看服务状态
-user@host *&gt; systemctl status firewalld
+<pre class="highlight"><code class="language-sh"># 查看服务状态
+sudoer@host *&gt; systemctl status firewalld
 
 # 列出所有规则
-user@host *&gt; sudo firewall-cmd --list-all
+sudoer@host *&gt; sudo firewall-cmd --list-all
 
-# 查询一条规则
-user@host *&gt; sudo firewall-cmd --query-port=&lt;port&gt;/&lt;protocol&gt;
+# 列、增、删、查端口规则
+sudoer@host *&gt; sudo firewall-cmd --list-ports
+sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=&lt;port&gt;/&lt;protocol&gt;
+soduer@host *&gt; sudo firewall-cmd --permanent --remove-port=&lt;port&gt;/&lt;protocol&gt;
+sudoer@host *&gt; sudo firewall-cmd --query-port=&lt;port&gt;/&lt;protocol&gt;
 
-# 持久添加一条规则
-user@host *&gt; sudo firewall-cmd --permanent --add-port=&lt;port&gt;/&lt;protocol&gt;
-
-# 持久移除一条规则
-user@host *&gt; sudo firewall-cmd --permanent --remove-port=&lt;port&gt;/&lt;protocol&gt;
+# 列、增、删、查服务规则
+# 缺省服务配置位于 /usr/lib/firewalld/services 目录下
+# 系统服务配置位于 /etc/firewalld/services 目录下
+sudoer@host *&gt; sudo firewall-cmd --get-services
+sudoer@host *&gt; sudo firewall-cmd --list-services
+sudoer@host *&gt; sudo firewall-cmd --permanent --add-service=&lt;service&gt;
+soduer@host *&gt; sudo firewall-cmd --permanent --remove-service=&lt;service&gt;
+sudoer@host *&gt; sudo firewall-cmd --query-service=&lt;service&gt;
 
 # 重新加载配置
-user@host *&gt; sudo firewall-cmd --reload
-</code></pre>
-
+sudoer@host *&gt; sudo firewall-cmd --reload</code></pre>
 <h2 id="ufw-netfilter">使用 ufw 管理 netfilter</h2>
 <hr />
 <p><a href="https://wiki.ubuntu.com/UncomplicatedFirewall"><em>ufw 官网</em></a>。

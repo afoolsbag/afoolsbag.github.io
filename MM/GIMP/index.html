@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/AV/VLC/">
+        <link rel="canonical" href="https://afoolsbag.github.io/MM/GIMP/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>多媒体播放器 VLC Media Player - zhengrr's docs</title>
+        <title>图像处理程序 GIMP - zhengrr's docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -228,11 +228,11 @@
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../AV/" class="dropdown-item">音视频</a>
+    <a href="../MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
@@ -248,7 +248,7 @@
 </li>
                                     
 <li>
-    <a href="../GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="./" class="dropdown-item active">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
@@ -256,7 +256,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">多媒体播放器 VLC Media Player</a>
+    <a href="../VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -494,12 +494,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../GPT-2/" class="nav-link">
+                                <a rel="prev" href="../FFmpeg/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../MW/Ceph/" class="nav-link">
+                                <a rel="next" href="../GPT-2/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -524,7 +524,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#vlc-media-player" class="nav-link">多媒体播放器 VLC Media Player</a>
+            <li class="nav-item" data-level="1"><a href="#gimp" class="nav-link">图像处理程序 GIMP</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">安装</a>
               <ul class="nav flex-column">
@@ -538,6 +538,18 @@
             </li>
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">常用操作</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#_4" class="nav-link">导出图像</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#_5" class="nav-link">缩放图像</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -545,15 +557,105 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="vlc-media-player">多媒体播放器 VLC Media Player</h1>
-<p>官网 <a href="https://videolan.org/vlc/">https://videolan.org/vlc/</a>。</p>
+<h1 id="gimp">图像处理程序 GIMP</h1>
+<p>官网 <a href="https://www.gimp.org/">https://www.gimp.org/</a>。</p>
 <h2 id="_1">安装</h2>
 <hr />
 <h3 id="_2">通过安装包安装</h3>
 <p>略。</p>
 <h3 id="scoop">通过 Scoop 安装</h3>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop install vlc
-</code></pre></div>
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop install gimp</code></pre>
+<h2 id="_3">常用操作</h2>
+<hr />
+<h3 id="_4">导出图像</h3>
+<p>GIMP Documentation 上的<a href="https://docs.gimp.org/zh_CN/gimp-images-out.html"><em>相关内容</em></a>，及其有效<a href="https://docs.gimp.org/2.2/zh_CN/gimp-images-out.html"><em>中译版</em></a>。<br/>
+图形界面：主界面 → 菜单栏 → 文件（File） → 导出为（Export As）...<br/>
+热键：<kbd>Alt</kbd>+<kbd>F</kbd> → <kbd>X</kbd><br/>
+快捷键：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd></p>
+<p>常见图像类型：</p>
+<table>
+<thead>
+<tr>
+<th align="left">MIME 类型</th>
+<th align="left">压缩支持</th>
+<th align="left">颜色支持</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>image/bmp</code></td>
+<td align="left">不压缩</td>
+<td align="left">最深 8 索引色<br/>最深 32 位直接色<br/>支持 α 通道透明色</td>
+<td align="left">Bitmap Image File<br/>位图图像文件</td>
+</tr>
+<tr>
+<td align="left"><code>image/tiff</code></td>
+<td align="left">无损压缩</td>
+<td align="left">最深 8 位索引色<br/>最深 24 位直接色<br/>支持透明色</td>
+<td align="left">Tagged Image File Format<br/>标签图像文件格式<br/>始于 1986 年</td>
+</tr>
+<tr>
+<td align="left"><code>image/gif</code></td>
+<td align="left">无损压缩</td>
+<td align="left">最深 8 位索引色<br/>支持索引透明色</td>
+<td align="left">Graphics Interchange Format<br/>图像互换格式<br/>始于 1987 年</td>
+</tr>
+<tr>
+<td align="left"><code>image/jpeg</code></td>
+<td align="left">有损压缩</td>
+<td align="left">最深 24 位直接色</td>
+<td align="left">Joint Photographic Experts Group<br/>联合图像专家小组<br/>始于 1992 年</td>
+</tr>
+<tr>
+<td align="left"><code>image/png</code></td>
+<td align="left">无损压缩</td>
+<td align="left">最深 8 位索引色<br/>最深 24 位直接色<br/>支持 α 通道透明色</td>
+<td align="left">Portable Network Graphics<br/>便携式网络图形<br/>始于 1996 年</td>
+</tr>
+<tr>
+<td align="left"><code>image/heif</code></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">High Efficiency Image File Format<br/>高效图像文件格式<br/>始于 2013 年</td>
+</tr>
+</tbody>
+</table>
+<p>常见图像元数据类型：</p>
+<table>
+<thead>
+<tr>
+<th align="left">缩写</th>
+<th align="left">全称</th>
+<th align="left">译名</th>
+<th align="left">始于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Exif</td>
+<td align="left">Exchangeable image file format</td>
+<td align="left">可交换图像文件格式</td>
+<td align="left">1995</td>
+</tr>
+<tr>
+<td align="left">XMP</td>
+<td align="left">Extensible Metadata Platform</td>
+<td align="left">可扩展元数据平台</td>
+<td align="left">2001</td>
+</tr>
+<tr>
+<td align="left">IPTC Core</td>
+<td align="left">International Press Telecommunications Council Core</td>
+<td align="left">国际新闻电信理事会图像元数据</td>
+<td align="left">2008</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">缩放图像</h3>
+<p>GIMP Documentation 上的<a href="https://docs.gimp.org/zh_CN/gimp-image-scale.html"><em>相关内容</em></a>，及其有效<a href="https://docs.gimp.org/2.2/zh_CN/gimp-image-scale.html"><em>中译版</em></a>。<br/>
+图形界面：主界面 → 菜单栏 → 图像（Image） → 缩放图像（Scale Image）...<br/>
+热键：<kbd>Alt</kbd>+<kbd>I</kbd> → <kbd>S</kbd></p></div>
             </div>
         </div>
 

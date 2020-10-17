@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="zhengrr">
-        <link rel="canonical" href="https://afoolsbag.github.io/AV/FFmpeg/">
+        <link rel="canonical" href="https://afoolsbag.github.io/MM/FFmpeg/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>多媒体处理套件 FFmpeg - zhengrr's docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -228,11 +228,11 @@
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../AV/" class="dropdown-item">音视频</a>
+    <a href="../MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
@@ -583,7 +583,7 @@
 <h2 id="_1">安装</h2>
 <hr />
 <h3 id="gnulinux">在 GNU/Linux 操作系统上从源码编译安装</h3>
-<pre><code class="fish"># 拉取源码
+<pre class="highlight"><code class="language-fish"># 拉取源码
 user@host *&gt; cd /usr/local/src
 user@host /u/l/src&gt; sudo wget https://ffmpeg.org/releases/ffmpeg-4.2.3.tar.bz2
 user@host /u/l/src&gt; sudo tar -xavf ffmpeg-4.2.3.tar.bz2
@@ -599,49 +599,35 @@ user@host /u/l/s/ffmpeg-4.2.3&gt; make -j
 user@host /u/l/s/ffmpeg-4.2.3&gt; sudo make install
 
 # 注册安装的共享库
-user@host *&gt; sudo ldconfig
-</code></pre>
-
+user@host *&gt; sudo ldconfig</code></pre>
 <h3 id="windows-scoop">在 Windows 操作系统上通过 Scoop 安装</h3>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop install ffmpeg
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop install ffmpeg</code></pre>
 <h2 id="_2">常用命令组合</h2>
 <hr />
 <h3 id="_3">改变封装格式</h3>
-<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -i &lt;input&gt; ^
+<pre class="highlight"><code class="language-cmd">%USERPROFILE%&gt; ffmpeg -i &lt;input&gt; ^
                       -codec copy &lt;output&gt;
-:: abbr.       ffmpeg -i &lt;input&gt; -c copy &lt;output&gt;
-</code></pre>
-
+:: abbr.       ffmpeg -i &lt;input&gt; -c copy &lt;output&gt;</code></pre>
 <h3 id="_4">生成缩略图</h3>
-<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -i &lt;video&gt; ^
+<pre class="highlight"><code class="language-cmd">%USERPROFILE%&gt; ffmpeg -i &lt;video&gt; ^
                       -f mjpeg -ss 1 -frames:v 1 &lt;image&gt;
-:: abbr.       ffmpeg -i &lt;video&gt; -f mjpeg -ss 1 -frames:v 1 &lt;image&gt;
-</code></pre>
-
+:: abbr.       ffmpeg -i &lt;video&gt; -f mjpeg -ss 1 -frames:v 1 &lt;image&gt;</code></pre>
 <h3 id="rtmp">读取文件流转换为 RTMP 流</h3>
-<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -re -i &lt;/path/to/video.flv&gt; ^
+<pre class="highlight"><code class="language-cmd">%USERPROFILE%&gt; ffmpeg -re -i &lt;/path/to/video.flv&gt; ^
                       -f flv -codec copy &lt;rtmp://host/path/to/stream&gt;
-:: abbr.       ffmpeg -re -i &lt;/path/to/video.flv&gt; -f flv -c copy &lt;rtmp://host/path/to/stream&gt;
-</code></pre>
-
+:: abbr.       ffmpeg -re -i &lt;/path/to/video.flv&gt; -f flv -c copy &lt;rtmp://host/path/to/stream&gt;</code></pre>
 <h3 id="rtsp-rtmp">读取 RTSP 流转换为 RTMP 流</h3>
-<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg -i &lt;rtsp://host/path/to/stream&gt; ^
+<pre class="highlight"><code class="language-cmd">%USERPROFILE%&gt; ffmpeg -i &lt;rtsp://host/path/to/stream&gt; ^
                       -f flv -codec copy &lt;rtmp://host/path/to/stream&gt;
-:: abbr.       ffmpeg -i &lt;rtsp://host/path/to/stream&gt; -f flv -c copy &lt;rtmp://host/path/to/stream&gt;
-</code></pre>
-
+:: abbr.       ffmpeg -i &lt;rtsp://host/path/to/stream&gt; -f flv -c copy &lt;rtmp://host/path/to/stream&gt;</code></pre>
 <h2 id="_5">常见选项释义</h2>
 <hr />
-<pre><code class="cmd">%USERPROFILE%&gt; ffmpeg [global_option]... ^
+<pre class="highlight"><code class="language-cmd">%USERPROFILE%&gt; ffmpeg [global_option]... ^
                       { [input_file_option]... -i &lt;input_url&gt; } ... ^
-                      { [output_file_option]... &lt;output_url&gt; } ...
-</code></pre>
-
+                      { [output_file_option]... &lt;output_url&gt; } ...</code></pre>
 <h3 id="global_options"><code>global_options</code></h3>
 <p>参见 <a href="https://ffmpeg.org/ffmpeg-all.html#Generic-options">https://ffmpeg.org/ffmpeg-all.html#Generic-options</a>。</p>
-<pre><code class="sh">-loglevel          # 设定日志级别：
+<pre class="highlight"><code class="language-sh">-loglevel          # 设定日志级别：
 -v        quiet    # 沉默
           panic    # 崩溃错误
           fatal    # 致命错误
@@ -650,12 +636,10 @@ user@host *&gt; sudo ldconfig
           info     # 信息
           verbose  # 更啰嗦的信息
           debug    # 调试，输出所有信息
-          trace    # 跟踪
-</code></pre>
-
+          trace    # 跟踪</code></pre>
 <h3 id="inputoutput_file_options"><code>input/output_file_options</code></h3>
 <p>参见 <a href="https://ffmpeg.org/ffmpeg-all.html#Main-options">https://ffmpeg.org/ffmpeg-all.html#Main-options</a>。</p>
-<pre><code class="sh">-f &lt;fmt&gt;                                 # 指定文件格式
+<pre class="highlight"><code class="language-sh">-f &lt;fmt&gt;                                 # 指定文件格式
 
 -y                                       # 覆盖输出而不询问
 
@@ -681,8 +665,7 @@ user@host *&gt; sudo ldconfig
 -vn                                      # video    忽略视频流
 -an                                      # audio    忽略音频流
 -sn                                      # subtitle 忽略字幕流
--dn                                      # data     忽略数据流
-</code></pre></div>
+-dn                                      # data     忽略数据流</code></pre></div>
             </div>
         </div>
 

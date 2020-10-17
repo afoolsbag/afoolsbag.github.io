@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -551,19 +551,15 @@
 
 <h1 id="git-gitflow">Git 分支模型 GitFlow</h1>
 <p>官网 <a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a>。</p>
-<pre><code class="txt">feature develop release hotfix master
-</code></pre>
-
+<pre class="highlight"><code class="language-txt">feature develop release hotfix master</code></pre>
 <h2 id="gitflow">初始化 GitFlow</h2>
-<pre><code class="fish"># 展示分支
+<pre class="highlight"><code class="language-fish"># 展示分支
 user@host */wdir (master)&gt; git branch
 
 # 初始化 GitFlow
-user@host */wdir (master)&gt; git flow init
-</code></pre>
-
+user@host */wdir (master)&gt; git flow init</code></pre>
 <h2 id="_1">功能开发</h2>
-<pre><code class="txt">        develop
+<pre class="highlight"><code class="language-txt">        develop
         ^
        /
       /
@@ -571,21 +567,17 @@ feature
       ^
        \
         \
-        develop
-</code></pre>
-
-<pre><code class="fish"># 开始功能开发
+        develop</code></pre>
+<pre class="highlight"><code class="language-fish"># 开始功能开发
 user@host */wdir (develop)&gt; git flow feature start &lt;name&gt;
 
 # 开发功能并提交
 # ......
 
 # 完成功能开发
-user@host */wdir (feature/name)&gt; git flow feature finish &lt;name&gt; 
-</code></pre>
-
+user@host */wdir (feature/name)&gt; git flow feature finish &lt;name&gt; </code></pre>
 <h2 id="_2">版本发布</h2>
-<pre><code class="txt">        develop         master
+<pre class="highlight"><code class="language-txt">        develop         master
               ^         ^
                \       /
                 \     /
@@ -593,21 +585,17 @@ user@host */wdir (feature/name)&gt; git flow feature finish &lt;name&gt;
                 ^
                /
               /
-        develop
-</code></pre>
-
-<pre><code class="fish"># 开始版本发布
+        develop</code></pre>
+<pre class="highlight"><code class="language-fish"># 开始版本发布
 user@host */wdir (develop)&gt; git flow release start &lt;version&gt;
 
 # 同步版本号、文档、测试等发布相关内容，并提交
 # ......
 
 # 完成版本发布
-user@host */wdir (release/version)&gt; git flow release finish &lt;version&gt;
-</code></pre>
-
+user@host */wdir (release/version)&gt; git flow release finish &lt;version&gt;</code></pre>
 <h2 id="_3">漏洞修复</h2>
-<pre><code class="txt">        develop        master
+<pre class="highlight"><code class="language-txt">        develop        master
               ^        ^
                \      /
                 \    /
@@ -615,18 +603,15 @@ user@host */wdir (release/version)&gt; git flow release finish &lt;version&gt;
                      ^
                       \
                        \
-                       master
-</code></pre>
-
-<pre><code class="fish"># 开始漏洞修复
+                       master</code></pre>
+<pre class="highlight"><code class="language-fish"># 开始漏洞修复
 user@host */wdir (master)&gt; git flow hotfix start &lt;name&gt;
 
 # 修复漏洞并提交
 # ......
 
 # 完成漏洞修复
-user@host */wdir (hotfix/name)&gt; git flow hotfix finish &lt;name&gt; 
-</code></pre></div>
+user@host */wdir (hotfix/name)&gt; git flow hotfix finish &lt;name&gt; </code></pre></div>
             </div>
         </div>
 

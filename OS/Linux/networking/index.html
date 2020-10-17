@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -644,10 +644,8 @@
 <hr />
 <p><a href="https://wiki.linuxfoundation.org/networking/iproute2"><em>iproute2 官网</em></a>。</p>
 <h3 id="_2">典型配置</h3>
-<pre><code class="fish">user@host *&gt; vim /etc/sysconfig/network-scripts/ifcfg-&lt;interface-name&gt;
-</code></pre>
-
-<pre><code class="ini"># 动态网络配置
+<pre class="highlight"><code class="language-fish">user@host *&gt; vim /etc/sysconfig/network-scripts/ifcfg-&lt;interface-name&gt;</code></pre>
+<pre class="highlight"><code class="language-ini"># 动态网络配置
 BOOTPROTO=dhcp
 
 # 静态网络配置
@@ -656,12 +654,10 @@ IPADDR=192.168.0.1
 NETMASK=255.255.255.0
 GATEWAY=192.168.0.254
 DNS1=223.6.6.6
-DNS2=8.8.8.8
-</code></pre>
-
+DNS2=8.8.8.8</code></pre>
 <h3 id="_3">常用命令组合</h3>
 <h4 id="_4">配置网络</h4>
-<pre><code class="fish"># 查看服务状态
+<pre class="highlight"><code class="language-fish"># 查看服务状态
 user@host *&gt; systemctl status network
 
 # 重载所有配置并应用
@@ -674,21 +670,17 @@ user@host *&gt; sudo ifup &lt;interface-name&gt;
 
 # 停用网络接口
 user@host *&gt; sudo ifdown &lt;interface-name&gt;
-# 将触发 /etc/sysconfig/network-script/ifdown-&lt;interface-name&gt; 脚本
-</code></pre>
-
+# 将触发 /etc/sysconfig/network-script/ifdown-&lt;interface-name&gt; 脚本</code></pre>
 <h4 id="_5">查找端口占用</h4>
-<pre><code class="fish">user@host ~&gt; ss --all --numeric --processes | grep &lt;:port&gt;
-# abbr.      ss -anp | grep &lt;:port&gt;
-</code></pre>
-
+<pre class="highlight"><code class="language-fish">user@host ~&gt; ss --all --numeric --processes | grep &lt;:port&gt;
+# abbr.      ss -anp | grep &lt;:port&gt;</code></pre>
 <h2 id="networkmanager">使用 NetworkManager 维护网络</h2>
 <hr />
 <p><a href="https://wiki.gnome.org/Projects/NetworkManager"><em>NetworkManager 官网</em></a>，
 其提供 CLI 工具 <code>nmcli</code> 和 TUI 工具 <code>nmtui</code>。</p>
 <p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/"><em>Red Hat Enterprise Linux 7 联网指南</em></a>。</p>
 <h3 id="_6">常用命令组合</h3>
-<pre><code class="fish"># 查看服务状态
+<pre class="highlight"><code class="language-fish"># 查看服务状态
 user@host *&gt; systemctl status NetworkManager
 
 # 概览
@@ -700,20 +692,16 @@ user@host *&gt; sudo nmcli connection reload
 
 # 为指定接口的连接应用配置
 user@host *&gt; sudo nmcli connection up &lt;interface-name&gt;
-# abbr.      sudo nmcli c up &lt;interface-name&gt;
-</code></pre>
-
+# abbr.      sudo nmcli c up &lt;interface-name&gt;</code></pre>
 <h2 id="systemd-networkd">使用 systemd-networkd 维护网络</h2>
 <hr />
 <p><a href="https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html"><em>systemd-networkd 官网</em></a>，中译本 <a href="http://www.jinbuguo.com/systemd/systemd-networkd.service.html"><em>systemd-networkd.service 中文手册</em></a>。</p>
 <h3 id="_7">常用命令组合</h3>
-<pre><code class="fish"># 查看服务状态
+<pre class="highlight"><code class="language-fish"># 查看服务状态
 user@host *&gt; systemctl status systemd-networkd
 
 # 概览
-user@host *&gt; networkctl
-</code></pre>
-
+user@host *&gt; networkctl</code></pre>
 <h2 id="netplan">使用 netplan 维护网络</h2>
 <hr />
 <p><a href="https://netplan.io/"><em>netplan 官网</em></a>。</p>

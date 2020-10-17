@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -620,7 +620,7 @@
 </tbody>
 </table>
 <p>IPv4 地址分配</p>
-<pre><code class="text">  0.  *.  *.  */8   本网络（RFC 5735）
+<pre class="highlight"><code class="language-text">  0.  *.  *.  */8   本网络（RFC 5735）
  10.  *.  *.  */8   A 类专用网络（RFC 1918）
 100. 64.  *.  */10  运营商级网络地址转换（RFC 6598）
     127             ↵
@@ -640,21 +640,17 @@
 239                 ↵
 240.  *.  *.  */4   保留（RFC 1700）
 255                 ↵
-255.255.255.255     受限广播（RFC 919）
-</code></pre>
-
+255.255.255.255     受限广播（RFC 919）</code></pre>
 <hr />
 <h2 id="_1">命令示例</h2>
-<pre><code class="fish">root@host *# nmap -sn &lt;target&gt;                   # 主机发现
+<pre class="highlight"><code class="language-fish">root@host *# nmap -sn &lt;target&gt;                   # 主机发现
 root@host *# nmap &lt;target&gt;                       # 端口扫描
 root@host *# nmap -p- &lt;target&gt;                   # 全端口扫描
-root@host *# nmap -v -oA &lt;basename&gt; -A &lt;target&gt;  # 信息探测
-</code></pre>
-
+root@host *# nmap -v -oA &lt;basename&gt; -A &lt;target&gt;  # 信息探测</code></pre>
 <hr />
 <h2 id="_2">命令说明</h2>
 <h3 id="_3">主机发现</h3>
-<pre><code class="fish">root@host *# nmap -sL &lt;target&gt;  # 列表扫描，不发送报文
+<pre class="highlight"><code class="language-fish">root@host *# nmap -sL &lt;target&gt;  # 列表扫描，不发送报文
 
 root@host *# nmap -sn &lt;target&gt;  # Ping 扫描，使用以下 4 种数据包探测主机是否在线
                                 # 1. ICMP Echo Request 包
@@ -669,11 +665,9 @@ root@host *# nmap -PY[port,]... &lt;target&gt;  # SCTP INIT Ping 扫描，默认
 
 root@host *# nmap -PE &lt;target&gt;  # ICMP Echo Request Ping 扫描
 root@host *# nmap -PP &lt;target&gt;  # ICMP Timestamp Request Ping 扫描
-root@host *# nmap -PM &lt;target&gt;  # ICMP Address Mask Request Ping 扫描
-</code></pre>
-
+root@host *# nmap -PM &lt;target&gt;  # ICMP Address Mask Request Ping 扫描</code></pre>
 <h3 id="_4">端口扫描</h3>
-<pre><code class="fish">root@host *# nmap &lt;target&gt;            # 常用端口扫描
+<pre class="highlight"><code class="language-fish">root@host *# nmap &lt;target&gt;            # 常用端口扫描
 root@host *# nmap -p0-65535 &lt;target&gt;  # 全端口扫描
 # abbr.      nmap -p- &lt;target&gt;
 
@@ -692,21 +686,17 @@ root@host *# nmap -sX &lt;target&gt;  # TCP Xmas（FIN、PSH、URG） 扫描
 root@host *# nmap -sY &lt;target&gt;  # SCTP INIT 扫描
 root@host *# nmap -sZ &lt;target&gt;  # SCTP COOKIE-ECHO 扫描
 
-root@host *# nmap -sO &lt;target&gt;  # IP 协议扫描
-</code></pre>
-
+root@host *# nmap -sO &lt;target&gt;  # IP 协议扫描</code></pre>
 <h3 id="_5">信息探测</h3>
 <p>依据端口扫描得到的信息，可以进一步探测其所提供的服务和版本，并据此猜测其所用操作系统。</p>
-<pre><code class="fish">root@host *# nmap -sV &lt;target&gt;  # 启用服务版本探测
+<pre class="highlight"><code class="language-fish">root@host *# nmap -sV &lt;target&gt;  # 启用服务版本探测
 root@host *# nmap -O &lt;target&gt;   # 启用操作系统探测
 
 root@host *# nmap -sC &lt;target&gt;  # 启用脚本扫描
 
-root@host *# nmap -A &lt;target&gt;   # 激烈扫描模式
-</code></pre>
-
+root@host *# nmap -A &lt;target&gt;   # 激烈扫描模式</code></pre>
 <h3 id="_6">杂项</h3>
-<pre><code class="fish">root@host *# nmap -v &lt;target&gt;   # 增强详细程度
+<pre class="highlight"><code class="language-fish">root@host *# nmap -v &lt;target&gt;   # 增强详细程度
 root@host *# nmap -vv &lt;target&gt;  # 增强更多详细程度
 root@host *# nmap -d &lt;target&gt;   # 增强调试级别
 root@host *# nmap -dd &lt;target&gt;  # 增强更多调试级别
@@ -714,9 +704,7 @@ root@host *# nmap -dd &lt;target&gt;  # 增强更多调试级别
 root@host *# nmap -oN &lt;file.nmap&gt; &lt;target&gt;  # 标准输出
 root@host *# nmap -oX &lt;file.xml&gt; &lt;target&gt;   # XML 输出
 root@host *# nmap -oG &lt;file.gnmap&gt; &lt;target&gt; # 可 Grep 输出
-root@host *# nmap -oA &lt;basename&gt; &lt;target&gt;   # 以上三种输出
-</code></pre>
-
+root@host *# nmap -oA &lt;basename&gt; &lt;target&gt;   # 以上三种输出</code></pre>
 <p>运行时交互：</p>
 <ul>
 <li><code>v</code>（<code>V</code>） 增强（减弱）详细程度</li>

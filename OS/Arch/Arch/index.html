@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -591,32 +591,26 @@
 <hr />
 <p><a href="https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)"><em>ArchWiki 上的安装教程</em></a>。</p>
 <h3 id="_2">检查主板启动模式</h3>
-<pre><code class="zsh">root@archiso ~ # ls /sys/firmware/efi/efivars
-</code></pre>
-
+<pre class="highlight"><code class="language-zsh">root@archiso ~ # ls /sys/firmware/efi/efivars</code></pre>
 <p>若目录存在，表明主板使用 UEFI 模式启动；若目录不存在，表明主板使用 BIOS 或 CSM 模式启动。</p>
 <h3 id="arch-iso">为 Arch ISO 配置网络</h3>
-<pre><code class="zsh"># 检查网卡
+<pre class="highlight"><code class="language-zsh"># 检查网卡
 root@archiso ~ # ip link
 
 # 启用 DHCPCD 服务获取网络地址
 root@archiso ~ # systemctl enable dhcpcd
 
 # 检查网络连接
-root@archiso ~ # ping archlinux.org
-</code></pre>
-
+root@archiso ~ # ping archlinux.org</code></pre>
 <h3 id="arch-iso_1">为 Arch ISO 同步时间</h3>
-<pre><code class="zsh"># 检查服务状态
+<pre class="highlight"><code class="language-zsh"># 检查服务状态
 root@archiso ~ # timedatectl statutimeds        
 
 # 启用网络时间同步
-root@archiso ~ # timedatectl set-ntp true
-</code></pre>
-
+root@archiso ~ # timedatectl set-ntp true</code></pre>
 <h3 id="_3">硬盘分区、格式化并挂载</h3>
 <p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-swapspace"><em>Red Hat Enterprise Linux 7 对于交换分区的建议</em></a>。</p>
-<pre><code class="zsh"># 列出块设备
+<pre class="highlight"><code class="language-zsh"># 列出块设备
 root@archiso ~ # lsblk
 
 # 为块设备分区
@@ -658,44 +652,34 @@ root@archiso ~ # mkdir --parents /mnt/boot/EFI
 root@archiso ~ # mount /dev/&lt;sda2&gt; /mnt/boot/EFI
 
 # 检查分区挂载
-root@archiso ~ # lsblk
-</code></pre>
-
+root@archiso ~ # lsblk</code></pre>
 <h3 id="arch-iso_2">为 Arch ISO 选择镜像</h3>
-<pre><code class="zsh">root@archiso ~ # vim /etc/pacman.d/mirrorlist
-</code></pre>
-
+<pre class="highlight"><code class="language-zsh">root@archiso ~ # vim /etc/pacman.d/mirrorlist</code></pre>
 <p>越靠前的镜像优先级越高，且该配置将被复制到新系统，须正确调整：</p>
-<pre><code class="vim">## Alibaba
+<pre class="highlight"><code class="language-vim">## Alibaba
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ## Tencent
 Server = https://mirrors.cloud.tencent.com/archlinux/$repo/os/$arch
 
-......
-</code></pre>
-
+......</code></pre>
 <h3 id="_4">安装基本系统</h3>
-<pre><code class="zsh">root@archiso ~ # pacstrap /mnt linux linux-firmware base base-devel vim
+<pre class="highlight"><code class="language-zsh">root@archiso ~ # pacstrap /mnt linux linux-firmware base base-devel vim
 #                              内核
 #                                    固件
 #                                                   基础软件包
 #                                                        开发软件包
-#                                                                   编辑器
-</code></pre>
-
+#                                                                   编辑器</code></pre>
 <h3 id="_5">为新系统配置分区表</h3>
-<pre><code class="zsh"># 生成分区表
+<pre class="highlight"><code class="language-zsh"># 生成分区表
 root@archiso ~ # genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 
 # 检查分区表
 root@archiso ~ # cat /mnt/etc/fstab
 
 # 切换到新系统
-root@archiso ~ # arch-chroot /mnt
-</code></pre>
-
+root@archiso ~ # arch-chroot /mnt</code></pre>
 <h3 id="_6">为新系统配置时间</h3>
-<pre><code class="bash"># 建立软连接，将时区设置为东八区
+<pre class="highlight"><code class="language-bash"># 建立软连接，将时区设置为东八区
 [root@archiso /]# ln --symbolic --force /usr/share/zoneinfo/&lt;Asia/Chongqing&gt; /etc/localtime
 # abbr.           ln -sf /usr/share/zoneinfo/&lt;Asia/Chongqing&gt; /etc/localtime
 
@@ -703,11 +687,9 @@ root@archiso ~ # arch-chroot /mnt
 [root@archiso /]# hwclock --systohc --utc
 
 # 检查当前时间
-[root@archiso /]# date
-</code></pre>
-
+[root@archiso /]# date</code></pre>
 <h3 id="_7">为新系统配置本地化</h3>
-<pre><code class="bash"># 取消注释，以启用对应的本地化支持
+<pre class="highlight"><code class="language-bash"># 取消注释，以启用对应的本地化支持
 [root@archiso /]# vim /etc/locale.gen
 # en_US.UTF-8 UTF-8
 # zh_CN.UTF-8 UTF-8
@@ -717,22 +699,18 @@ root@archiso ~ # arch-chroot /mnt
 
 # 选择本地化配置
 [root@archiso /]# vim /etc/locale.conf
-# LANG=en_US.UTF-8
-</code></pre>
-
+# LANG=en_US.UTF-8</code></pre>
 <h3 id="_8">为新系统配置网络</h3>
-<pre><code class="bash"># 配置主机名
+<pre class="highlight"><code class="language-bash"># 配置主机名
 [root@archiso /]# vim /etc/hostname
 # &lt;zrrsarch&gt;
 
 # 配置本地静态域名解析
 [root@archiso /]# vim /etc/hosts     
 # 127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
-# ::1             localhost localhost.localdomain localhost6 localhost6.localdomain6
-</code></pre>
-
+# ::1             localhost localhost.localdomain localhost6 localhost6.localdomain6</code></pre>
 <p>选用 systemd-networkd 进行网络管理</p>
-<pre><code class="bash"># 查看网卡
+<pre class="highlight"><code class="language-bash"># 查看网卡
 [root@archiso /]# ip link
 
 # 为所有未配置的 en* 网卡配置的动态地址，用作保底
@@ -756,56 +734,45 @@ root@archiso ~ # arch-chroot /mnt
 
 # 启用 systemd-networkd 服务
 [root@archiso /]# systemctl enable systemd-networkd
-[root@archiso /]# systemctl reload-or-restart systemd-networkd
-</code></pre>
-
+[root@archiso /]# systemctl reload-or-restart systemd-networkd</code></pre>
 <p>选用 systemd-resolved 进行域名解析</p>
-<pre><code class="bash"># 建立软连接，以向旧兼容
+<pre class="highlight"><code class="language-bash"># 建立软连接，以向旧兼容
 [root@archiso /]# ln --symbolic --force /run/systemd/resolve/resolv.conf /etc/resolv.conf
 # abbr.           ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 # 启用 systemd-resolved 服务
-[root@archiso /]# systemctl enable systemd-resolved
-</code></pre>
-
+[root@archiso /]# systemctl enable systemd-resolved</code></pre>
 <h3 id="_9">为新系统安装引导</h3>
 <p>若主板使用 BIOS 模式启动，则：</p>
-<pre><code class="bash"># 安装引导程序
+<pre class="highlight"><code class="language-bash"># 安装引导程序
 [root@archiso /]# pacman --sync grub
 
 # 向分区装载引导
 [root@archiso /]# grub-install --recheck /dev/sda
 
 # 生成引导配置
-[root@archiso /]# grub-mkconfig --output=/boot/grub/grub.cfg
-</code></pre>
-
+[root@archiso /]# grub-mkconfig --output=/boot/grub/grub.cfg</code></pre>
 <p>若主板使用 UEFI 模式启动，则：</p>
-<pre><code class="bash"># 安装引导程序
+<pre class="highlight"><code class="language-bash"># 安装引导程序
 [root@archiso /]# pacman --sync efibootmgr grub
 
 # 向分区装载引导
 [root@archiso /]# grub-install --recheck /dev/sda
 
 # 生成引导配置
-[root@archiso /]# grub-mkconfig --output=/boot/grub/grub.cfg
-</code></pre>
-
+[root@archiso /]# grub-mkconfig --output=/boot/grub/grub.cfg</code></pre>
 <h3 id="_10">重启，从新系统启动</h3>
-<pre><code class="bash"># 为 root 用户配置密码
+<pre class="highlight"><code class="language-bash"># 为 root 用户配置密码
 [root@archiso /]# passwd
 
 # 退出 chroot 环境
-[root@archiso /]# exit
-</code></pre>
-
-<pre><code class="zsh"># 卸载分区，以检查分区是否仍繁忙，避免数据丢失
+[root@archiso /]# exit</code></pre>
+<pre class="highlight"><code class="language-zsh"># 卸载分区，以检查分区是否仍繁忙，避免数据丢失
 root@archiso / # umount --recursive /mnt
 # abbr.        # umount -R /mnt
 
 # 硬重启
-root@archiso / # reboot
-</code></pre></div>
+root@archiso / # reboot</code></pre></div>
             </div>
         </div>
 

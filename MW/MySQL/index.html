@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -536,13 +536,11 @@
 <h1 id="mysql">关系型数据库管理系统 MySQL</h1>
 <p>官网 <a href="https://mysql.com/">https://mysql.com/</a>。</p>
 <hr />
-<p>登录和登出</p>
-<pre><code class="fish">fish&gt; mysql -u NAME (--user=USR) -p (--password=PWD)
-mysql&gt; exit
-</code></pre>
-
-<p>允许远程管理（允许 <code>root</code> 用户远程登录）</p>
-<pre><code class="fish"># 切换到 `mysql` 数据库
+<p>登录和登出
+<pre class="highlight"><code class="language-fish">fish&gt; mysql -u NAME (--user=USR) -p (--password=PWD)
+mysql&gt; exit</code></pre></p>
+<p>允许远程管理（允许 <code>root</code> 用户远程登录）
+<pre class="highlight"><code class="language-fish"># 切换到 `mysql` 数据库
 mysql&gt; use mysql;
 
 # 查询 `root` 用户的登录限制
@@ -555,11 +553,9 @@ mysql&gt; UPDATE user SET Host='%' WHERE User='root';
 mysql&gt; SELECT Host, User FROM user WHERE User='root';
 
 # 使其立刻生效
-mysql&gt; flush privileges;
-</code></pre>
-
-<p>禁用 SSL</p>
-<pre><code class="fish"># 检查是否启用 SSL
+mysql&gt; flush privileges;</code></pre></p>
+<p>禁用 SSL
+<pre class="highlight"><code class="language-fish"># 检查是否启用 SSL
 mysql&gt; SHOW VARIABLES LIKE '%ssl%';
 
 # 禁用 SSL
@@ -570,8 +566,7 @@ vim&gt; skip_ssl  # 在尾部追加
 fish&gt; service mysql restart
 
 # 再次检查是否启用 SSL
-mysql&gt; SHOW VARIABLES LIKE '%ssl%';
-</code></pre></div>
+mysql&gt; SHOW VARIABLES LIKE '%ssl%';</code></pre></p></div>
             </div>
         </div>
 

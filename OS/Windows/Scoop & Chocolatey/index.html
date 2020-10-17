@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -654,7 +654,7 @@ Chocolatey 官网 <a href="https://chocolatey.org/">https://chocolatey.org/</a>�
 <hr />
 <p>GitHub Scoop Wiki 上的 <a href="https://github.com/lukesampson/scoop/wiki/So-What#but-i-already-use-x-why-should-i-use-scoop"><em>But I already use X, why should I use Scoop?</em></a></p>
 <h3 id="_1">安装</h3>
-<pre><code class="ps1"># 配置执行策略
+<pre class="highlight"><code class="language-ps1"># 配置执行策略
 PS $env:USERPROFILE&gt; Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 可选的，配置用户安装路径
@@ -673,33 +673,25 @@ PS $env:USERPROFILE&gt; scoop install aria2
 PS $env:USERPROFILE&gt; scoop install git
 
 # 添加 extras 桶
-PS $env:USERPROFILE&gt; scoop bucket add extras
-</code></pre>
-
+PS $env:USERPROFILE&gt; scoop bucket add extras</code></pre>
 <h3 id="_2">维护</h3>
 <h4 id="_3">配置用户安装路径</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
-PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, [System.EnvironmentVariableTarget]::User)
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; $env:SCOOP='%USERPROFILE%\scoop'
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, [System.EnvironmentVariableTarget]::User)</code></pre>
 <h4 id="_4">配置全局安装路径</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; $env:SCOOP_GLOBAL='%ALLUSERSPROFILE%\scoop'
-PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, [System.EnvironmentVariableTarget]::Machine)
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; $env:SCOOP_GLOBAL='%ALLUSERSPROFILE%\scoop'
+PS $env:USERPROFILE&gt; [System.Environment]::setEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, [System.EnvironmentVariableTarget]::Machine)</code></pre>
 <h4 id="_5">配置代理</h4>
-<pre><code class="ps1"># 显示当前代理配置
+<pre class="highlight"><code class="language-ps1"># 显示当前代理配置
 PS $env:USERPROFILE&gt; scoop config proxy
 
 # 配置代理
 PS $env:USERPROFILE&gt; scoop config proxy [username:password@]proxy.example.org:49152
 
 # 移除代理
-PS $env:USERPROFILE&gt; scoop config rm proxy
-</code></pre>
-
+PS $env:USERPROFILE&gt; scoop config rm proxy</code></pre>
 <h4 id="_6">维护桶</h4>
-<pre><code class="ps1"># 列出已知桶
+<pre class="highlight"><code class="language-ps1"># 列出已知桶
 PS $env:USERPROFILE&gt; scoop bucket known
 
 # 列出已用桶
@@ -709,50 +701,32 @@ PS $env:USERPROFILE&gt; scoop bucket list
 PS $env:USERPROFILE&gt; scoop bucket add &lt;name&gt; [repo]
 
 # 移除桶
-PS $env:USERPROFILE&gt; scoop bucket rm &lt;name&gt;
-</code></pre>
-
+PS $env:USERPROFILE&gt; scoop bucket rm &lt;name&gt;</code></pre>
 <h4 id="_7">更新</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop update
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop update</code></pre>
 <h4 id="_8">卸载</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop uninstall scoop
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop uninstall scoop</code></pre>
 <h3 id="_9">维护应用</h3>
 <h4 id="_10">当前状态</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop status
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop status</code></pre>
 <h4 id="_11">搜索应用</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop search &lt;query&gt;
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop search &lt;query&gt;</code></pre>
 <h4 id="_12">列出已安装应用</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop list
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop list</code></pre>
 <h4 id="_13">安装应用</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop install &lt;app&gt;
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop install &lt;app&gt;</code></pre>
 <h4 id="_14">更新应用</h4>
-<pre><code class="ps1"># 更新指定应用
+<pre class="highlight"><code class="language-ps1"># 更新指定应用
 PS $env:USERPROFILE&gt; scoop update &lt;app&gt;
 
 # 更新全部应用
-PS $env:USERPROFILE&gt; scoop update *
-</code></pre>
-
+PS $env:USERPROFILE&gt; scoop update *</code></pre>
 <h4 id="_15">卸载应用</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; scoop uninstall &lt;app&gt;
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; scoop uninstall &lt;app&gt;</code></pre>
 <h2 id="chocolatey">Chocolatey</h2>
 <hr />
 <h3 id="_16">安装</h3>
-<pre><code class="ps1"># 配置执行策略
+<pre class="highlight"><code class="language-ps1"># 配置执行策略
 PS $env:ALLUSERSPROFILE&gt; Set-ExecutionPolicy RemoteSigned -Scope Process -Force
 
 # 可选的，配置 Chocolatey 包管理器的安装路径
@@ -762,42 +736,30 @@ PS $env:ALLUSERSPROFILE&gt; [System.Environment]::setEnvironmentVariable('Chocol
 # 安装 Chocolatey
 PS $env:ALLUSERSPROFILE&gt; Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
 # abbr.                  Invoke-WebRequest -UseBasicParsing 'chocolatey.org/install.ps1' | Invoke-Expression
-# abbr.                  iwr -useb chocolatey.org/install.ps1 | iex
-</code></pre>
-
+# abbr.                  iwr -useb chocolatey.org/install.ps1 | iex</code></pre>
 <h3 id="_17">维护</h3>
 <h4 id="_18">更新</h4>
-<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco upgrade chocolatey
-# abbr.                  cup chocolatey
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:ALLUSERSPROFILE&gt; choco upgrade chocolatey
+# abbr.                  cup chocolatey</code></pre>
 <h4 id="_19">刷新环境变量</h4>
-<pre><code class="ps1">PS $env:USERPROFILE&gt; RefreshEnv
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:USERPROFILE&gt; RefreshEnv</code></pre>
 <h4 id="_20">卸载</h4>
 <p>Chocolatey 官方文档上的 <a href="https://chocolatey.org/docs/uninstallation"><em>Uninstalling Chocolatey</em></a>。</p>
 <h3 id="_21">维护包</h3>
 <h4 id="_22">搜索包</h4>
-<pre><code class="ps1"># 搜索
+<pre class="highlight"><code class="language-ps1"># 搜索
 PS $env:ALLUSERSPROFILE&gt; choco search &lt;filter&gt;
 
 # 信息
-PS $env:ALLUSERSPROFILE&gt; choco info &lt;pkg&gt;
-</code></pre>
-
+PS $env:ALLUSERSPROFILE&gt; choco info &lt;pkg&gt;</code></pre>
 <h4 id="_23">列出已安装包</h4>
-<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco list --local-only
-# abbr.                  clist -l
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:ALLUSERSPROFILE&gt; choco list --local-only
+# abbr.                  clist -l</code></pre>
 <h4 id="_24">安装包</h4>
-<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco install &lt;pkg&gt; [--install-directory=&quot;$env:ProgramFiles&quot;] [--install-arguments='']
-# abbr.                  cinst &lt;pkg&gt; [--dir=&quot;$env:ProgramFiles&quot;] [--ia='']
-</code></pre>
-
+<pre class="highlight"><code class="language-ps1">PS $env:ALLUSERSPROFILE&gt; choco install &lt;pkg&gt; [--install-directory="$env:ProgramFiles"] [--install-arguments='']
+# abbr.                  cinst &lt;pkg&gt; [--dir="$env:ProgramFiles"] [--ia='']</code></pre>
 <h4 id="_25">升级包</h4>
-<pre><code class="ps1"># 查询过期应用
+<pre class="highlight"><code class="language-ps1"># 查询过期应用
 PS $env:ALLUSERSPROFILE&gt; choco outdated
 
 # 升级指定应用
@@ -806,12 +768,9 @@ PS $env:ALLUSERSPROFILE&gt; choco upgrade &lt;pkg&gt;
 
 # 升级全部应用
 PS $env:ALLUSERSPROFILE&gt; choco upgrade all
-# abbr.                  cup all
-</code></pre>
-
+# abbr.                  cup all</code></pre>
 <h4 id="_26">卸载包</h4>
-<pre><code class="ps1">PS $env:ALLUSERSPROFILE&gt; choco uninstall &lt;pkg&gt;
-</code></pre></div>
+<pre class="highlight"><code class="language-ps1">PS $env:ALLUSERSPROFILE&gt; choco uninstall &lt;pkg&gt;</code></pre></div>
             </div>
         </div>
 

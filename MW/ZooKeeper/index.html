@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -547,40 +547,46 @@
 <h2 id="zookeeper_1">安装并配置 ZooKeeper</h2>
 <hr />
 <h3 id="centos-7-8">CentOS 7, 8</h3>
-<pre><code class="sh"># 创建 zookeeper 用户
-sudoer@host *&gt; sudo useradd --comment 'ZooKeeper Server' \
+<p><em>安装依赖，下载并解压程序：</em></p>
+<ol>
+<li>
+<p>安装 OpenJDK 及开发工具</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo dnf install java-latest-openjdk java-latest-openjdk-devel</code></pre>
+</li>
+<li>
+<p>切换到 <code>/opt</code> 目录</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; cd /opt</code></pre>
+</li>
+<li>
+<p>下载 ZooKeeper 压缩包，参见 <a href="https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current">https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current</a></p>
+<pre class="highlight"><code class="language-sh">sudoer@host /opt&gt; sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current/apache-zookeeper-3.6.2-bin.tar.gz</code></pre>
+</li>
+<li>
+<p>解压缩并建立链接</p>
+<pre class="highlight"><code class="language-sh">sudoer@host /opt&gt; sudo tar --extract --auto-compress --verbose --file=apache-zookeeper-3.6.2-bin.tar.gz
+sudoer@host /opt&gt; sudo ln --symbolic apache-zookeeper-3.6.2-bin zookeeper</code></pre>
+</li>
+</ol>
+<p><em>将程序注册为服务：</em></p>
+<ol start="5">
+<li>
+<p>创建 <code>zookeeper</code> 用户</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo useradd --comment 'ZooKeeper Server' \
                             --home-dir /opt/zookeeper \
                             --no-create-home \
                             --password !! \
                             --shell /sbin/nologin \
-                            zookeeper
-
-# 安装 OpenJDK 及开发工具
-sudoer@host *&gt; sudo dnf install java-latest-openjdk java-latest-openjdk-devel
-
-# 切换到 /opt 目录
-sudoer@host *&gt; cd /opt
-
-# 获取 zookeeper 压缩包
-# 参见 &lt;https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current&gt;
-sudoer@host /opt&gt; wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current/apache-zookeeper-3.6.2-bin.tar.gz
-
-# 解压缩，建立链接，切换所有权
-sudoer@host /opt&gt; sudo tar -xavf apache-zookeeper-3.6.2-bin.tar.gz
-sudoer@host /opt&gt; sudo ln -s apache-zookeeper-3.6.2-bin zookeeper
-sudoer@host /opt&gt; sudo chown -R zookeeper:zookeeper apache-zookeeper-3.6.2-bin zookeeper
-
-# 编辑配置文件
-sudoer@host /opt&gt; sudo -u zookeeper cp zookeeper/conf/zoo_sample.cfg zookeeper/conf/zoo.cfg
-sudoer@host /opt&gt; sudo vim zookeeper/conf/zoo.cfg
-
-# 创建服务单元
-# 参见 &lt;http://www.jinbuguo.com/systemd/systemd.service.html&gt;
-sudoer@host *&gt; sudo vim /etc/systemd/system/zookeeper.service
-</code></pre>
-
-<pre><code>[Unit]
-Description=Apache ZooKeeper
+                            zookeeper</code></pre>
+</li>
+<li>
+<p>切换程序所在目录的所有权</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo chown --recursive zookeeper:zookeeper /opt/apache-zookeeper-3.6.2-bin /opt/zookeeper</code></pre>
+</li>
+<li>
+<p>创建服务单元，参见 <a href="http://www.jinbuguo.com/systemd/systemd.service.html">http://www.jinbuguo.com/systemd/systemd.service.html</a></p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo vim /etc/systemd/system/zookeeper.service</code></pre>
+<pre class="highlight"><code class="language-ini">[Unit]
+Description=ZooKeeper Server
 After=syslog.target network.target
 
 [Service]
@@ -593,27 +599,58 @@ ExecStart=/opt/zookeeper/bin/zkServer.sh start-foreground
 ExecStop=/opt/zookeeper/bin/zkServer.sh stop
 
 [Install]
-WantedBy=multi-user.target
-</code></pre>
-
-<pre><code class="sh"># 重新加载服务单元
-sudoer@host *&gt; sudo systemctl daemon-reload
-
-# 立即启用 ZooKeeper
-sudoer@host *&gt; sudo systemctl enable --now zookeeper
-
-# 检查进程
-sudoer@host *&gt; sudo jps
-
-# 配置防火墙，打开 2181、2888、3888 端口
-#    Client:? -&gt; 2181:ZooKeeper
+WantedBy=multi-user.target</code></pre>
+</li>
+<li>
+<p>重新加载服务单元</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl daemon-reload</code></pre>
+</li>
+<li>
+<p>创建 firewalld 服务描述文件</p>
+<pre class="highlight"><code class="language-sh">#    Client:? -&gt; 2181:ZooKeeper
 # Followers:? -&gt; 2888:Leader
 #      Peer:? -&gt; 3888:Peer      (leader election phase)
-sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=2181/tcp
-sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=2888/tcp
-sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=3888/tcp
-sudoer@host *&gt; sudo firewall-cmd --reload
-</code></pre></div>
+
+sudoer@host *&gt; sudo vim /etc/firewalld/services/zookeeper.xml</code></pre>
+<pre class="highlight"><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;service&gt;
+  &lt;short&gt;ZooKeeper&lt;/short&gt;
+  &lt;description&gt;ZooKeeper Server&lt;/description&gt;
+  &lt;port protocol="tcp" port="2181"/&gt;
+  &lt;port protocol="tcp" port="2888"/&gt;
+  &lt;port protocol="tcp" port="3888"/&gt;
+&lt;/service&gt;</code></pre>
+</li>
+<li>
+<p>重新加载 firewalld 服务描述文件</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo firewall-cmd --reload</code></pre>
+</li>
+<li>
+<p>立即启用服务</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl enable --now zookeeper</code></pre>
+</li>
+<li>
+<p>配置防火墙，开放服务所需端口</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo firewall-cmd --permanent --add-service=zookeeper
+sudoer@host *&gt; sudo firewall-cmd --reload</code></pre>
+</li>
+</ol>
+<p><em>配置、启用并确认服务：</em></p>
+<ol start="13">
+<li>
+<p>编辑配置文件</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo --user=zookeeper cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
+sudoer@host *&gt; sudo vim /opt/zookeeper/conf/zoo.cfg</code></pre>
+</li>
+<li>
+<p>重启服务以使配置生效</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl restart zookeeper</code></pre>
+</li>
+<li>
+<p>检查进程</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo jps</code></pre>
+</li>
+</ol></div>
             </div>
         </div>
 

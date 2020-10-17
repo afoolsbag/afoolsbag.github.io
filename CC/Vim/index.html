@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -584,7 +584,7 @@
 <h2 id="_1">速查</h2>
 <hr />
 <h3 id="_2">移动光标</h3>
-<pre><code class="text">      1       10        20        30        40        50        60        70        80
+<pre class="highlight"><code class="language-text">      1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
    1 |    example-word\n                                                              |
    2 |    \                                                                           |
@@ -622,11 +622,9 @@ N+24 |    example-word\n                                                CTRL-T :
   -3 |     G                                                                          |
   -2 |    /                                                                           |
   -1 |    example-word\n                                                              |
-     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-</code></pre>
-
+     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'</code></pre>
 <h3 id="_3">普通模式到插入模式</h3>
-<pre><code class="text">      1       10        20        30        40        50        60        70        80
+<pre class="highlight"><code class="language-text">      1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
 N+1  |                                                                                |
 N+2 gI|      I|^a          Bi|Ba     gEi|gEa     Wi|Wa      Ei|Ea         g_i|g_a  $i|A
@@ -635,18 +633,16 @@ N+4  |        example-word   example-word    █     example-word   example-word
 N+5  ||   o-&gt;                        |  |    |     |     |                            |
 N+6  ||0a                          bi|ba|   i|a  wi|wa ei|ea                          |
 N+7  |                               gei|gea                                          |
-N+8  |                                                                                |
-</code></pre>
-
+N+8  |                                                                                |</code></pre>
 <h3 id="_4">移动文本</h3>
-<pre><code class="text">      1       10        20        30        40        50        60        70        80
+<pre class="highlight"><code class="language-text">      1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
 N+ 1 |                                                                   :reg[isters] |
-N+ 2 || dd ------------------------------------------------&gt;|            &quot;{0-9}       |
-N+ 3 |                                       | D ----------&gt;| Delete     &quot;{a-z}       |
-N+ 4 |                                      Xx                           &quot;*   primary |
-N+ 5 |                                      ||                           &quot;+ clipboard |
-N+ 6 |    The The quick brown fox jumps over █he lazy dog.   \n          &quot;~      drop |
+N+ 2 || dd ------------------------------------------------&gt;|            "{0-9}       |
+N+ 3 |                                       | D ----------&gt;| Delete     "{a-z}       |
+N+ 4 |                                      Xx                           "*   primary |
+N+ 5 |                                      ||                           "+ clipboard |
+N+ 6 |    The The quick brown fox jumps over █he lazy dog.   \n          "~      drop |
 N+ 7 |                                       |                                        |
 N+ 8 |                                      P|p               Paste          inner a  |
 N+ 9 || yy, Y ---------------------------------------------&gt;| Yank         word iw aw |
@@ -659,13 +655,11 @@ N+15 |       V |s---------------------------------------| o             {Block} 
 N+16 |         |e---------------------------------------| s&lt;-&gt;e           &lt;...&gt; i&gt; a&gt; |
 N+17 |                                                           &lt;tag&gt;...&lt;/tag&gt; it at |
 N+18 |  CTRL-V |          s------------------s'         | o     O         '...' i' a' |
-N+19 |         |          -------------------e          | s&lt;-&gt;e s&lt;-&gt;s'    &quot;...&quot; i&quot; a&quot; |
+N+19 |         |          -------------------e          | s&lt;-&gt;e s&lt;-&gt;s'    "..." i" a" |
 N+20 |                                                                    `...` i` a` |
-     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-</code></pre>
-
+     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'</code></pre>
 <h3 id="_5">修改和替换文本</h3>
-<pre><code class="text">      1       10        20        30        40        50        60        70        80
+<pre class="highlight"><code class="language-text">      1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
 N+ 1 |                                                                 switch case:   |
 N+ 2 || cc, S ---------------------------------------------&gt;|            ~ g~{motion} |
@@ -679,9 +673,7 @@ N+ 9 |   == ={motion}                                                  adding:  
 N+10 | shift:                                                            CTRL-A       |
 N+11 |   &lt;&lt; &lt;{motion}                                                  subtracting:   |
 N+12 |   &gt;&gt; &gt;{motion}                                                    CTRL-X       |
-N+13 |                                                                                |
-</code></pre>
-
+N+13 |                                                                                |</code></pre>
 <h3 id="_6">重复改动</h3>
 <ul>
 <li><kbd>.</kbd> 重复改动</li>
@@ -693,34 +685,31 @@ N+13 |                                                                          
 <h2 id="_7">常用命令组合</h2>
 <hr />
 <h3 id="_8">替代</h3>
-<pre><code class="vim">:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
+<pre class="highlight"><code class="language-vim">:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
 
-&quot; range ::= {line}
-&quot;         | {line-start}, {line-stop-after-cursor}
-&quot;         | {line-start}; {line-stop-after-start}
-&quot;         | ...
-&quot;
-&quot; line* ::= {number}                                行号
-&quot;         | .                                       当前行
-&quot;         | $                                       文件的最后一行
-&quot;         | %                                       全文件，等同于 1, &amp;
-&quot;         | ...
-&quot;
-&quot; flags :+= c                                       确认每个替代
-&quot;         | e                                       忽略错误
-&quot;         | g                                       对所有匹配，而不是首个匹配进行替代
-&quot;         | ...
-&quot;         | n                                       报告匹配次数，而不真的替代
-&quot;         | ...
+" range ::= {line}
+"         | {line-start}, {line-stop-after-cursor}
+"         | {line-start}; {line-stop-after-start}
+"         | ...
+"
+" line* ::= {number}                                行号
+"         | .                                       当前行
+"         | $                                       文件的最后一行
+"         | %                                       全文件，等同于 1, &amp;
+"         | ...
+"
+" flags :+= c                                       确认每个替代
+"         | e                                       忽略错误
+"         | g                                       对所有匹配，而不是首个匹配进行替代
+"         | ...
+"         | n                                       报告匹配次数，而不真的替代
+"         | ...
 
-&quot; 在整个文件替换，逐个确认
-:%s/{pattern}/{string}/cg
-</code></pre>
-
+" 在整个文件替换，逐个确认
+:%s/{pattern}/{string}/cg</code></pre>
 <h3 id="_9">设置行尾序列</h3>
-<pre><code class="vim">:set fileformat={dos|unix|mac}
-:set ff={dos|unix|mac}
-</code></pre></div>
+<pre class="highlight"><code class="language-vim">:set fileformat={dos|unix|mac}
+:set ff={dos|unix|mac}</code></pre></div>
             </div>
         </div>
 

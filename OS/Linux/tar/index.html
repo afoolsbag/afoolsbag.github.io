@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -565,19 +565,17 @@
 <p>适用于 GNU/Linux 操作系统的归档打包工具 <code>tar</code>（tape archive），官网 <a href="https://gnu.org/software/tar/">https://gnu.org/software/tar/</a>。</p>
 <h2 id="_1">常用命令组合</h2>
 <hr />
-<pre><code class="fish"># 压缩
+<pre class="highlight"><code class="language-fish"># 压缩
 user@host ~&gt; tar --create --auto-compress --verbose --file=&lt;archive.tar.*&gt; &lt;source&gt;...
 # abbr.      tar -cavf &lt;archive.tar.*&gt; &lt;source&gt;...
 
 # 解压
 user@host ~&gt; tar --extract --auto-compress --verbose --file=&lt;archive.tar.*&gt; [--directory=&lt;dir&gt;]
-# abbr.      tar -xavf &lt;archive.tar.*&gt; [-C &lt;dir&gt;]
-</code></pre>
-
+# abbr.      tar -xavf &lt;archive.tar.*&gt; [-C &lt;dir&gt;]</code></pre>
 <h2 id="_2">常见选项释义</h2>
 <hr />
 <h3 id="main-operation-mode">主要操作模式（Main operation mode）</h3>
-<pre><code class="sh">-A, --catenate, --concatenate  # 连接归档
+<pre class="highlight"><code class="language-sh">-A, --catenate, --concatenate  # 连接归档
 -c, --create                   # 创建
 -d, --diff, --compare          # 比较
     --delete                   # 删除
@@ -585,31 +583,22 @@ user@host ~&gt; tar --extract --auto-compress --verbose --file=&lt;archive.tar.*
 -t, --list                     # 列出内容
     --test-label
 -u, --update                   # 更新文件
--x, --extract                  # 提取
-</code></pre>
-
+-x, --extract                  # 提取</code></pre>
 <h3 id="device-selection-and-switching">设备选择和切换（Device selection and switching）</h3>
-<pre><code class="sh">-f, --file=&lt;archive&gt;  # 存储为文件
-</code></pre>
-
+<pre class="highlight"><code class="language-sh">-f, --file=&lt;archive&gt;  # 存储为文件</code></pre>
 <h3 id="compression-options">压缩选项（Compression options）</h3>
-<pre><code class="sh">-a, --auto-compress             # 通过后缀名识别压缩算法
+<pre class="highlight"><code class="language-sh">-a, --auto-compress             # 通过后缀名识别压缩算法
 -j, --bzip2                     # .tbz, .tb2, .tar.bz2
 -J, --xz                        # .txz, .tar.xz
     --lzip                      #
     --lzma                      # .tlz, .tar.lzma
     --lzop                      #
 -z, --gzip, --gunzip, --ungzip  # .tgz, .tar.gz
--Z, --compress, --uncompress    # .taz, .tar.Z
-</code></pre>
-
+-Z, --compress, --uncompress    # .taz, .tar.Z</code></pre>
 <h3 id="local-file-selection">本地文件选择（Local file selection）</h3>
-<pre><code class="sh">-C, --directory=&lt;dir&gt;  # 改到 &lt;dir&gt; 文件夹
-</code></pre>
-
+<pre class="highlight"><code class="language-sh">-C, --directory=&lt;dir&gt;  # 改到 &lt;dir&gt; 文件夹</code></pre>
 <h3 id="informative-output">信息输出（Informative output:）</h3>
-<pre><code class="sh">-v --verbose  # 详细列出已处理的文件
-</code></pre></div>
+<pre class="highlight"><code class="language-sh">-v --verbose  # 详细列出已处理的文件</code></pre></div>
             </div>
         </div>
 

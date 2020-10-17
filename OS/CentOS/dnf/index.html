@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -556,7 +556,7 @@
 <h2 id="_1">配置源</h2>
 <hr />
 <h3 id="centos">CentOS</h3>
-<pre><code class="bash"># 移除并备份原始源
+<pre class="highlight"><code class="language-bash"># 移除并备份原始源
 [user@host *]$ sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bck
 
 # 下载并应用阿里云镜像源（https://developer.aliyun.com/mirror/centos）
@@ -572,12 +572,10 @@
 
 # 同步索引
 [user@host *]$ dnf clean all
-[user@host *]$ dnf makecache
-</code></pre>
-
+[user@host *]$ dnf makecache</code></pre>
 <h2 id="_2">常用命令组合</h2>
 <hr />
-<pre><code class="fish"># 检查可用升级
+<pre class="highlight"><code class="language-fish"># 检查可用升级
 user@host *&gt; dnf check-update
 
 # 升级
@@ -596,12 +594,10 @@ user@host *&gt; dnf info &lt;package&gt;
 user@host *&gt; sudo dnf install &lt;package&gt;
 
 # 卸载包
-user@host *&gt; sudo dnf remove &lt;package&gt;
-</code></pre>
-
+user@host *&gt; sudo dnf remove &lt;package&gt;</code></pre>
 <h2 id="dnf_1">使用 dnf 安装开发工具集的示例</h2>
 <hr />
-<pre><code class="fish"># 安装 Open SSH Server 并启用
+<pre class="highlight"><code class="language-fish"># 安装 Open SSH Server 并启用
 user@host *&gt; sudo dnf install openssh-server
 user@host *&gt; sudo systemctl enable sshd
 user@host *&gt; sudo systemctl start sshd
@@ -637,8 +633,7 @@ user@host *&gt; pip3 config set global.index-url https://pypi.doubanio.com/simpl
 user@host *&gt; pip3 install cmake
 
 # 安装 Conan
-user@host *&gt; pip3 install conan
-</code></pre></div>
+user@host *&gt; pip3 install conan</code></pre></div>
             </div>
         </div>
 

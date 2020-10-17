@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -547,32 +547,26 @@
 <hr />
 <p>参见 <a href="https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/">https://howtoforge.com/tutorial/how-to-install-nginx-with-rtmp-module-on-centos/</a>。</p>
 <p>配置编译环境（CentOS）</p>
-<pre><code class="sh"># 安装编译工具
+<pre class="highlight"><code class="language-sh"># 安装编译工具
 [user@host *] sudo yum group install 'Development Tools'
 # 安装 NGINX 依赖
-[user@host *] sudo yum install openssl-devel pcre-devel zlib-devel
-</code></pre>
-
+[user@host *] sudo yum install openssl-devel pcre-devel zlib-devel</code></pre>
 <p>配置编译环境（Ubuntu）</p>
-<pre><code class="sh"># 安装编译工具
+<pre class="highlight"><code class="language-sh"># 安装编译工具
 user@host:*$ sudo apt install build-essential
 # 安装 NGINX 依赖
-user@host:*$ sudo apt install libpcre3-dev libssl-dev zlib1g-dev
-</code></pre>
-
+user@host:*$ sudo apt install libpcre3-dev libssl-dev zlib1g-dev</code></pre>
 <p>拉取源码</p>
-<pre><code class="fish">user@host *&gt; cd /usr/local/src
+<pre class="highlight"><code class="language-fish">user@host *&gt; cd /usr/local/src
 
 # 拉取 NGINX 源码（https://nginx.org/en/download.html）
 user@host /u/l/src&gt; wget https://nginx.org/download/nginx-1.18.0.tar.gz
 user@host /u/l/src&gt; tar -xavf nginx-1.18.0.tar.gz
 
 # 拉取 nginx-rtmp-module 源码
-user@host /u/l/src&gt; git clone https://github.com/arut/nginx-rtmp-module.git
-</code></pre>
-
+user@host /u/l/src&gt; git clone https://github.com/arut/nginx-rtmp-module.git</code></pre>
 <p>配置、编译、安装</p>
-<pre><code class="fish">user@host *&gt; cd /usr/local/src/nginx-1.18.0
+<pre class="highlight"><code class="language-fish">user@host *&gt; cd /usr/local/src/nginx-1.18.0
 
 # 配置
 user@host /u/l/s/nginx-1.18.0&gt; ./configure --prefix='/opt/nginx-rtmp' \
@@ -582,26 +576,20 @@ user@host /u/l/s/nginx-1.18.0&gt; ./configure --prefix='/opt/nginx-rtmp' \
 user@host /u/l/s/nginx-1.18.0&gt; make -j
 
 # 安装
-user@host /u/l/s/nginx-1.18.0&gt; make install
-</code></pre>
-
+user@host /u/l/s/nginx-1.18.0&gt; make install</code></pre>
 <p>创建录像目录</p>
-<pre><code>user@host *&gt; sudo mkdir --mode=777 /var/nginx-rtmp-vod
-</code></pre>
-
+<pre class="highlight"><code>user@host *&gt; sudo mkdir --mode=777 /var/nginx-rtmp-vod</code></pre>
 <h2 id="_2">典型配置</h2>
 <hr />
-<pre><code class="fish"># 启动服务
+<pre class="highlight"><code class="language-fish"># 启动服务
 user@host *&gt; /opt/nginx-rtmp/sbin/nginx
 
 # 停止服务
 user@host *&gt; /opt/nginx-rtmp/sbin/nginx -s quit
 
 # 编辑配置
-user@host *&gt; vim /opt/nginx-rtmp/conf/nginx.conf
-</code></pre>
-
-<pre><code class="nginx.conf">user &lt;user&gt;;
+user@host *&gt; vim /opt/nginx-rtmp/conf/nginx.conf</code></pre>
+<pre class="highlight"><code class="language-nginx.conf">user &lt;user&gt;;
 worker_processes auto;
 events {
     worker_connections 1024;
@@ -671,9 +659,7 @@ rtmp {
             play /var/nginx-rtmp-vod;
         }
     }
-}
-</code></pre>
-
+}</code></pre>
 <ul>
 <li>状态：<code>http://host[:80]/stat</code></li>
 <li>推流（RTMP）：<code>rtmp://host[:1935]/live/&lt;name&gt;</code></li>

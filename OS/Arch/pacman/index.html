@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -555,7 +555,7 @@
 <h2 id="_1">配置源</h2>
 <hr />
 <h3 id="arch">Arch</h3>
-<pre><code class="fish"># 对于最简系统，没有预安装文本编辑器，而默认源的带宽不理想
+<pre class="highlight"><code class="language-fish"># 对于最简系统，没有预安装文本编辑器，而默认源的带宽不理想
 # 推荐安装小巧的 nano 文本编辑器，使用 nano 编辑器编辑镜像源，以改善带宽
 [sudoer@host *]$ sudo pacman -S nano
 
@@ -564,12 +564,10 @@
 
 # 同步索引
 [sudoer@host *]$ sudo pacman --sync --refresh
-# abbr.          sudo pacman -Sy
-</code></pre>
-
+# abbr.          sudo pacman -Sy</code></pre>
 <h2 id="_2">常用命令组合</h2>
 <hr />
-<pre><code class="fish"># 同步索引并更新包
+<pre class="highlight"><code class="language-fish"># 同步索引并更新包
 sudoer@host *&gt; sudo pacman --sync --refresh --sysupgrade
 # abbr.        sudo pacman -Syu
 
@@ -591,12 +589,10 @@ sudoer@host *&gt; sudo pacman --remove &lt;package&gt;
 
 # 卸载残留依赖
 sudoer@host *&gt; sudo pacman --remove --recursive $(pacman --query --unrequired --deps --quiet)
-# abbr.        sudo pacman -Rs $(pacman -Qtdq)
-</code></pre>
-
+# abbr.        sudo pacman -Rs $(pacman -Qtdq)</code></pre>
 <h3 id="pacman_1">使用 pacman 安装开发工具的示例</h3>
 <hr />
-<pre><code class="fish"># 安装并启用 Open SSH Server
+<pre class="highlight"><code class="language-fish"># 安装并启用 Open SSH Server
 sudoer@host *&gt; sudo pacman -S openssh
 sudoer@host *&gt; sudo systemctl enable sshd
 sudoer@host *&gt; sudo systemctl start sshd
@@ -613,8 +609,7 @@ sudoer@host *&gt; pip config set global.index-url https://pypi.doubanio.com/simp
 sudoer@host *&gt; pip install cmake
 
 # 安装 Conan
-sudoer@host *&gt; pip install conan
-</code></pre></div>
+sudoer@host *&gt; pip install conan</code></pre></div>
             </div>
         </div>
 

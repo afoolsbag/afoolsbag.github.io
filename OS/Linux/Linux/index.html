@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -578,7 +578,7 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="gnulinux">GNU/Linux 操作系统</h1>
-<pre><code class="fish"># 安全地重启系统
+<pre class="highlight"><code class="language-fish"># 安全地重启系统
 user@host ~&gt; sudo shutdown --reboot now
 # abbr.      sudo shutdown -r now
 
@@ -617,9 +617,7 @@ user@host ~&gt; lspci [-t|-v|-vv]
 
 # 查看通用串行总线信息
 user@host ~&gt; lsusb [--tree|--verbose]
-# abbr.      lsusb [-t|-v]
-</code></pre>
-
+# abbr.      lsusb [-t|-v]</code></pre>
 <h2 id="_1">开机</h2>
 <hr />
 <p><a href="http://linux.vbird.org/linux_basic/0510osloader.php"><em>《鳥哥的 Linux 私房菜》上的第十九章、開機流程、模組管理與 Loader</em></a>。</p>
@@ -673,7 +671,7 @@ user@host ~&gt; lsusb [--tree|--verbose]
 </li>
 </ol>
 <p>一份 <code>user@hpst *&gt; systemctl list-dependencies default.target</code> 输出示例：</p>
-<pre><code class="text">default.target -&gt; graphical.target
+<pre class="highlight"><code class="language-text">default.target -&gt; graphical.target
 +-- display-manager.service
 +-- multi-user.target                   &lt;-- 系统和网络服务
     +-- dbus.service
@@ -753,27 +751,21 @@ user@host ~&gt; lsusb [--tree|--verbose]
     |   +-- getty@tty1.service
     |
     +-- remote-fs.target
-        +-- var-lib-machines.mount
-</code></pre>
-
+        +-- var-lib-machines.mount</code></pre>
 <h2 id="_2">进程和内存</h2>
 <hr />
 <h3 id="elf">可执行与可链接格式 ELF</h3>
 <p>适用于 GNU/Linux 操作系统的应用程序二进制接口规范 ELF（Executable and Linkable Format）。</p>
 <h4 id="_3">常用命令组合</h4>
-<pre><code class="fish">user@host ~&gt; ldd &lt;elf-file&gt;  # load dependencies
-</code></pre>
-
+<pre class="highlight"><code class="language-fish">user@host ~&gt; ldd &lt;elf-file&gt;  # load dependencies</code></pre>
 <h4 id="objdump"><code>objdump</code> 常见选项释义</h4>
 <p><a href="https://www.gnu.org/software/binutils/"><em>objdump 官网</em></a>，
 <a href="https://sourceware.org/binutils/docs/binutils/objdump.html"><em>objdump 官方文档</em></a>。</p>
 <h4 id="readelf"><code>readelf</code> 常见选项释义</h4>
 <p><a href="https://www.gnu.org/software/binutils/"><em>readelf 官网</em></a>，
 <a href="https://sourceware.org/binutils/docs/binutils/readelf.html"><em>readelf 官方文档</em></a>。</p>
-<pre><code class="fish">user@host ~&gt; readelf &lt;option&gt;... &lt;elf-file&gt;...
-</code></pre>
-
-<pre><code class="sh">-a, --all                          # 全部，等同于 -h -l -S -s -r -d -V -A -I
+<pre class="highlight"><code class="language-fish">user@host ~&gt; readelf &lt;option&gt;... &lt;elf-file&gt;...</code></pre>
+<pre class="highlight"><code class="language-sh">-a, --all                          # 全部，等同于 -h -l -S -s -r -d -V -A -I
 -h, --file-header                  # 文件头
 -l, --program-headers, --segments  # 程序头
 -S, --section-headers, --sections  # 段表
@@ -783,15 +775,11 @@ user@host ~&gt; lsusb [--tree|--verbose]
 -V, --version-info                 # 版本段（如果存在）
 -I, --histogram                    # 直方图
 
-    --dyn-syms                     # 动态符号表
-</code></pre>
-
+    --dyn-syms                     # 动态符号表</code></pre>
 <h4 id="ldd"><code>ldd</code> 常见选项释义</h4>
 <p>适用于 GNU/Linux 操作系统的加载依赖查询工具 ldd（load dependencies），
 <a href="http://man7.org/linux/man-pages/man1/ldd.1.html"><em>ldd 官方文档</em></a>。</p>
-<pre><code class="fish">user@host ~&gt; ldd [option]... &lt;file&gt;...
-</code></pre>
-
+<pre class="highlight"><code class="language-fish">user@host ~&gt; ldd [option]... &lt;file&gt;...</code></pre>
 <h4 id="_4">配置搜索路径</h4>
 <p>临时的：
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib</p>
@@ -802,7 +790,7 @@ user@host ~&gt; sudo ldconfig</p>
 <h2 id="_5">文件和存储</h2>
 <hr />
 <h3 id="_6">目录结构说明</h3>
-<pre><code class="text">/              #                             根目录
+<pre class="highlight"><code class="language-text">/              #                             根目录
 + bin          # binary                      预装程序目录（由系统发行商维护）
 + boot         # boot                        启动相关目录
 + dev          # device                      设备目录
@@ -835,15 +823,12 @@ user@host ~&gt; sudo ldconfig</p>
 | + src        # (user) source               用户源文件目录（由包管理器维护）
 + var          # variable                    变量目录
   + log        #                             日志目录
-  + pid        # process identifier          进程标识符目录
-</code></pre>
-
+  + pid        # process identifier          进程标识符目录</code></pre>
 <h3 id="_7">文件链接</h3>
-<pre><code class="fish">user@host ~&gt; ln --symbolic &lt;path&gt; &lt;link&gt;  # 符号链接
+<pre class="highlight"><code class="language-fish">user@host ~&gt; ln --symbolic &lt;path&gt; &lt;link&gt;  # 符号链接
 # abbr.      ln -s &lt;path&gt; &lt;link&gt;
 
-user@host ~&gt; ln &lt;path&gt; &lt;link&gt;             # 硬链接
-</code></pre></div>
+user@host ~&gt; ln &lt;path&gt; &lt;link&gt;             # 硬链接</code></pre></div>
             </div>
         </div>
 

@@ -228,35 +228,35 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">音视频 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">多媒体 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../AV/AV/" class="dropdown-item">音视频</a>
+    <a href="../../MM/MM/" class="dropdown-item">多媒体</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
+    <a href="../../MM/Audacity/" class="dropdown-item">音频编辑和录制工具 Audacity</a>
 </li>
                                     
 <li>
-    <a href="../../AV/Blender/" class="dropdown-item">三维创作套件 Blender</a>
+    <a href="../../MM/Blender/" class="dropdown-item">三维创作套件 Blender</a>
 </li>
                                     
 <li>
-    <a href="../../AV/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
+    <a href="../../MM/FFmpeg/" class="dropdown-item">多媒体处理套件 FFmpeg</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
+    <a href="../../MM/GIMP/" class="dropdown-item">图像处理程序 GIMP</a>
 </li>
                                     
 <li>
-    <a href="../../AV/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
+    <a href="../../MM/GPT-2/" class="dropdown-item">自回归语言模型 GPT-2</a>
 </li>
                                     
 <li>
-    <a href="../../AV/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
+    <a href="../../MM/VLC/" class="dropdown-item">多媒体播放器 VLC Media Player</a>
 </li>
                                 </ul>
                             </li>
@@ -546,10 +546,6 @@
             </li>
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#pgadmin" class="nav-link">可选的，安装并配置 pgAdmin</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -562,107 +558,85 @@
 <h2 id="postgresql_1">安装并配置 PostgreSQL</h2>
 <hr />
 <h3 id="centos-7-8">CentOS 7, 8</h3>
-<pre><code class="sh"># ------------------------------------------------------------------------------
-# 安装并启动
-
-# 注意：PostgreSQL 依据系统的语言环境确定字符编码，若需要 UTF-8 编码则须确保系统语言环境支持
-
-# 安装
-sudoer@host *&gt; sudo dnf install postgresql-server
-
-# 初始化
-sudoer@host *&gt; sudo postgresql-setup --initdb
-
-# 启用并启动
-sudoer@host *&gt; sudo systemctl enable postgresql
-sudoer@host *&gt; sudo systemctl start postgresql
-
-# ------------------------------------------------------------------------------
-# 配置数据库，以允许远程访问
-
-# 修改连接配置：
-# 监听来自任何地址的连接请求
-sudoer@host *&gt; sudo vim /var/lib/pgsql/data/postgresql.conf
-</code></pre>
-
-<pre><code class="conf"># ......
+<p><strong>注意：PostgreSQL 依据系统的语言环境确定字符编码，若需要 UTF-8 编码则须确保系统语言环境支持。</strong></p>
+<p><em>安装并启动：</em></p>
+<ol>
+<li>
+<p>安装服务</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo dnf install postgresql-server</code></pre>
+</li>
+<li>
+<p>初始化服务</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo postgresql-setup --initdb</code></pre>
+</li>
+<li>
+<p>立即启用服务</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl enable --now postgresql</code></pre>
+</li>
+<li>
+<p>配置防火墙，开放服务所需 5432/tcp 端口</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo firewall-cmd --permanent --add-service=postgresql
+sudoer@host *&gt; sudo firewall-cmd --reload</code></pre>
+</li>
+</ol>
+<p><em>修改配置，以允许远程访问：</em></p>
+<ol start="5">
+<li>
+<p>修改连接配置，监听来自任何地址的连接请求</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo vim /var/lib/pgsql/data/postgresql.conf</code></pre>
+<pre class="highlight"><code class="language-conf"># ......
 #listen_addresses = 'localhost'         # what IP address(es) to listen on;
                                         # comma-separated list of addresses;
                                         # defaults to 'localhost'; use '*' for all
                                         # (change requires restart)
 listen_addresses = '*'
-# ......
-</code></pre>
-
-<pre><code class="sh"># 修改安全认证：
-# 允许来自任何地址的 MD5 加密密码的请求（安全隐患，考虑尝试更加安全的 SCRAM 加密方式）
-sudoer@host *&gt; sudo vim /var/lib/pgsql/data/pg_hba.conf
-</code></pre>
-
-<pre><code class="conf"># ......
+# ......</code></pre>
+</li>
+<li>
+<p>修改安全认证，允许来自任何地址的 MD5 加密密码的请求</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo vim /var/lib/pgsql/data/pg_hba.conf</code></pre>
+<pre class="highlight"><code class="language-conf"># ......
 # Put your actual configuration here
 # ----------------------------------
 host    all             all             0.0.0.0/0               md5
 host    all             all             ::/0                    md5
-# ......
-</code></pre>
-
-<pre><code class="sh"># 重启服务以使配置生效
-sudoer@host *&gt; sudo systemctl restart postgresql
-
-# 配置防火墙，打开 5432 端口
-sudoer@host *&gt; sudo firewall-cmd --permanent --add-port=5432/tcp
-sudoer@host *&gt; sudo firewall-cmd --reload
-
-# ------------------------------------------------------------------------------
-# 配置数据库内的管理员用户，用于远程管理
-
-# 以 postgres 系统用户运行 psql，通过 peer 授权以 postgres 数据库用户登录数据库
-sudoer@host *&gt; sudo --user=postgres psql
-# abbr.        sudo -u postgres psql
-</code></pre>
-
-<pre><code class="psql"># 创建管理员用户
-postgres=# CREATE USER &quot;administrator&quot; PASSWORD 'password'
-postgres-# CREATEDB CREATEROLE REPLICATION BYPASSRLS;
-
-# 退出
-postgres=# \quit
-# abbr.    \q
-</code></pre>
-
+# ......</code></pre>
+</li>
+<li>
+<p>重启服务以使配置生效</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo systemctl restart postgresql</code></pre>
+</li>
+</ol>
+<p><em>配置数据库内的管理员用户，以允许远程管理：</em></p>
+<ol start="8">
+<li>
+<p>以 <code>postgres</code> 系统用户运行 <code>psql</code>，通过 peer 授权以 <code>postgres</code> 数据库用户登录数据库</p>
+<pre class="highlight"><code class="language-sh">sudoer@host *&gt; sudo --user=postgres psql</code></pre>
+</li>
+<li>
+<p>创建管理员用户</p>
+<pre class="highlight"><code class="language-psql">postgres=# CREATE USER "administrator" PASSWORD 'password'
+postgres-# CREATEDB CREATEROLE REPLICATION BYPASSRLS;</code></pre>
+</li>
+<li>
+<p>退出 <code>psql</code></p>
+<pre class="highlight"><code class="language-psql">postgres=# \quit</code></pre>
+</li>
+</ol>
 <h2 id="psql">psql 常用命令</h2>
 <hr />
 <h3 id="_1">列出所有数据库</h3>
-<pre><code class="psql">postgres=# \list
-# abbr.    \l
-</code></pre>
-
+<pre class="highlight"><code class="language-psql">postgres=# \list
+# abbr.    \l</code></pre>
 <h3 id="_2">创建普通用户并分配数据库</h3>
-<pre><code class="psql"># 创建用户
-postgres=# CREATE USER &quot;username&quot; PASSWORD 'password';
+<pre class="highlight"><code class="language-psql"># 创建用户
+postgres=# CREATE USER "username" PASSWORD 'password';
 
 # 为用户创建数据库
-postgres=# CREATE DATABASE &quot;database&quot; OWNER &quot;username&quot;;
+postgres=# CREATE DATABASE "database" OWNER "username";
 
 # 在该数据库上，授予该用户所有权限
-postgres=# GRANT ALL ON DATABASE &quot;database&quot; TO &quot;username&quot;;
-</code></pre>
-
-<h2 id="pgadmin">可选的，安装并配置 pgAdmin</h2>
-<hr />
-<pre><code class="fish"># pgAdmin
-
-# 更新仓库（https://www.pgadmin.org/download/pgadmin-4-rpm/）
-user@host *&gt; sudo rpm --erase pgadmin4-redhat-repo
-user@host *&gt; sudo rpm --install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-redhat-repo-1-1.noarch.rpm
-
-# 安装
-user@host *&gt; sudo dnf install pgadmin4-web
-
-# 运行
-user@host *&gt; sudo /usr/pgadmin4/bin/setup-web.sh
-</code></pre></div>
+postgres=# GRANT ALL ON DATABASE "database" TO "username";</code></pre></div>
             </div>
         </div>
 
