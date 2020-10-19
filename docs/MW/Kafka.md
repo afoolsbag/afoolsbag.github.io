@@ -6,6 +6,52 @@
 *   [*Kafka Tools*](https://kafkatool.com/)，一款图形用户界面客户端
 *   [*Apache Kafka: Topic Naming Conventions*](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)，话题命名风格
 
+## 主题命名约定
+---
+
+```ebnf
+(* 主题名 *)
+topic name = [data center , '.'] , domain , '.' , classification , '.' , description , '.' , version ;
+
+(* 数据中心 *)
+data center    = ? data center ? ;
+(* 领域 *)
+domain         = ? domain ? ;
+(* 类别 *)
+classification = "fct" |  (* FaCT 事实， *)
+                 "cmd" |  (* CoMmanD 命令 *)
+                 "sys" |  (* SYStem 系统 *)
+                 ? more ? ;
+(* 描述 *)
+description    = ? description ? ;
+(* 版本 *)
+version        = ? number ? ;
+```
+
+例如：
+
+```txt
+crawling.fct.anti-crawl-logging
+crawling.cmd.do-crawl.0
+crawling.cmd.crawl-done.0
+
+CNWUHGAS-D003
+|/|_/||/ |__/
+| |  ||  开发 3 号机
+| |  ||
+| |  |应用服务器
+| |  |
+| |  借指光谷机房
+| |
+| GB/T 2260-2007 标准中的武汉代码
+|
+ISO 3166-1:2013 标准中的中国代码
+```
+
+参见：
+
+*   [*Apache Kafka: Topic Naming Conventions*](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)
+
 ## 安装并配置 Kafka
 ---
 

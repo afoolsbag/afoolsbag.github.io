@@ -285,4 +285,5 @@ theme:
 
 markdown_extensions:
     - sane_lists
+    - pymdownx.keys
     - pymdownx.superfences

@@ -1,15 +1,69 @@
 # 操作系统
 
+## 主机命名约定
+---
+
+```ebnf
+(* 主机名 *)
+host name = country code , location code , unique site code , device role , '-' , service level , serial number ;
+
+(* 国家或地区代码 *)
+country code     = ? ISO 3166-1:2013 ? ;
+(* 国家或地区的主要子行政区代码 *)
+location code    = ? ISO 3166-2:2013 ? | ? GB/T 2260-2007 ? ;
+(* 唯一地点代码 *)
+unique site code = ? customize code ? ;
+(* 设备角色 *)
+device role      = "AS" |  (* Application Server 应用服务器 *)
+                   "CS" |  (* Computing Server 计算服务器 *)
+                   "DB" |  (* DataBase server 数据库服务器 *)
+                   "DC" |  (* Domain Controller 域控制器 *)
+                   "MQ" |  (* Message Queue server 消息队列服务器 *)
+                   "RT" |  (* RouTer 路由器 *)
+                   "SW" |  (* SWitch 交换机 *)
+                   "WS" |  (* Web Server 网页服务器 *)
+                   ? more ? ;
+(* 服务级别 *)
+service level    = 'D' | (* Development 开发 *)
+                   'T' | (* Testing 测试 *)
+                   'S' | (* Staging 预演 *)
+                   'P' ; (* Production 生产 *)
+(* 序列号 *)
+serial number    = ? number ? ;
+```
+
+例如：
+
+```txt
+CNWUHGAS-D003
+|/|_/||/ |__/
+| |  ||  开发 3 号机
+| |  ||
+| |  |应用服务器
+| |  |
+| |  借指光谷机房
+| |
+| GB/T 2260-2007 标准中的武汉代码
+|
+ISO 3166-1:2013 标准中的中国代码
+```
+
+参见：
+
+*   [*ISO 3166-1:2013*](https://www.iso.org/standard/63545.html)
+*   [*ISO 3166-2:2013*](https://www.iso.org/standard/63546.html)
+*   [*GB/T 2260-2007*](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C9C488FD717AFDCD52157F41C3302C6D)
+*   [*Wikipedia 上的 Deployment environment*](https://wikipedia.org/wiki/Deployment_environment)
+*   [*Device42 上的 Standardizing Host and Server Naming Conventions*](https://www.device42.com/blog/2014/02/standardizing-host-and-server-naming-conventions/)
+
 ## 虚拟机
 ---
 
-| Virtual machine                             | Date       | Note |
-|:------------------------------------------- |:---------- |:---- |
-| [*VMware*]                                  | 1999       |
-| [*VirtualBox*](https://www.virtualbox.org/) | 2007-01-15 |
-| [*KVM*](https://www.linux-kvm.org/)         | 2007-02-05 | Kernel Virtual Machine
-
-[*VMware*]: <https://www.vmware.com/products/workstation-pro.html>
+| Virtual machine                                                  | Date       | Note |
+|:---------------------------------------------------------------- |:---------- |:---- |
+| [*VMware*](https://www.vmware.com/products/workstation-pro.html) | 1999       |
+| [*VirtualBox*](https://www.virtualbox.org/)                      | 2007-01-15 |
+| [*KVM*](https://www.linux-kvm.org/)                              | 2007-02-05 | Kernel Virtual Machine
 
 ## 操作系统
 ---
@@ -52,32 +106,25 @@
 ## 壳层
 ---
 
-| Shell                                 | Date       | Note |
-|:------------------------------------- |:---------- |:---- |
-| POSIX                                 | -          | -
-| sh                                    | 1977       | Bourne Shell
-| csh                                   | 1978       | C Shell
-| [*tcsh*](https://www.tcsh.org/)       | 1983       | TENEX C Shell
-| [*ksh*](http://kornshell.com/)        | 1983       | Korn Shell
-| [*ash*]                               | 1989-05-30 | Almquist Shell
-| [*bash*]                              | 1989-06-08 | Bourne-Again Shell，[*bash docs on SS64*](https://ss64.com/bash/)
-| [*zsh*](http://www.zsh.org/)          | 1990       | Z Shell
-| [*scsh*](https://scsh.net/)           | 1994-10-31 | Scheme Shell
-| [*fish*](https://fishshell.com/)      | 2005-02-13 | Friendly Interactive Shell
-| Windows                               | -          | -
-| CMD                                   | 1987       | Command Prompt，[*CMD docs on SS64*](https://ss64.com/nt/)
-| [*PowerShell*]                        | 2006       | [*PowerShell docs on SS64*](https://ss64.com/ps/)
-| [*ConEmu*](https://conemu.github.io/) | 2007-03-09 | Console Emulator
-| [*Clink*]                             | 2014-02-24 |
-| [*Cmder*](https://cmder.net/)         | 2017-07-17 | Console Emulator
-| Secure Shell                          | -          | -
-| [*SecureCRT*]                         | 1998-06    |
-| [*PuTTY*]                             | 1999-01-22 |
-| [*WinSCP*](https://winscp.net/)       | 2000       |
-
-[*ash*]: <https://www.in-ulm.de/~mascheck/various/ash/>
-[*bash*]: <https://www.gnu.org/software/bash/>
-[*PowerShell*]: <https://microsoft.com/powershell/>
-[*Clink*]: <https://mridgers.github.io/clink/>
-[*SecureCRT*]: <https://vandyke.com/products/securecrt/>
-[*PuTTY*]: <https://www.chiark.greenend.org.uk/~sgtatham/putty/>
+| Shell                                                          | Date       | Note |
+|:-------------------------------------------------------------- |:---------- |:---- |
+| POSIX                                                          | -          | -
+| sh                                                             | 1977       | Bourne Shell
+| csh                                                            | 1978       | C Shell
+| [*tcsh*](https://www.tcsh.org/)                                | 1983       | TENEX C Shell
+| [*ksh*](http://kornshell.com/)                                 | 1983       | Korn Shell
+| [*ash*](https://www.in-ulm.de/~mascheck/various/ash/)          | 1989-05-30 | Almquist Shell
+| [*bash*](https://www.gnu.org/software/bash/)                   | 1989-06-08 | Bourne-Again Shell，[*bash docs on SS64*](https://ss64.com/bash/)
+| [*zsh*](http://www.zsh.org/)                                   | 1990       | Z Shell
+| [*scsh*](https://scsh.net/)                                    | 1994-10-31 | Scheme Shell
+| [*fish*](https://fishshell.com/)                               | 2005-02-13 | Friendly Interactive Shell
+| Windows                                                        | -          | -
+| CMD                                                            | 1987       | Command Prompt，[*CMD docs on SS64*](https://ss64.com/nt/)
+| [*PowerShell*](https://microsoft.com/powershell/)              | 2006       | [*PowerShell docs on SS64*](https://ss64.com/ps/)
+| [*ConEmu*](https://conemu.github.io/)                          | 2007-03-09 | Console Emulator
+| [*Clink*](https://mridgers.github.io/clink/)                   | 2014-02-24 |
+| [*Cmder*](https://cmder.net/)                                  | 2017-07-17 | Console Emulator
+| Secure Shell                                                   | -          | -
+| [*SecureCRT*](https://vandyke.com/products/securecrt/)         | 1998-06    |
+| [*PuTTY*](https://www.chiark.greenend.org.uk/~sgtatham/putty/) | 1999-01-22 |
+| [*WinSCP*](https://winscp.net/)                                | 2000       |

@@ -1,6 +1,6 @@
 # Windows 操作系统
 
-```cmder
+```bat
 :: 关闭系统
 %USERPROFILE% λ SHUTDOWN /S /T 60
 
@@ -27,7 +27,7 @@
 [*SS64 上的 MKLink 文档*](https://ss64.com/nt/mklink.html)，
 [*Stack Overflow 上关于多种链接的讨论*](https://stackoverflow.com/questions/9042542)。
 
-```cmder
+```bat
 :: 文件符号链接
 %USERPROFILE% λ MKLINK <Link> <Path>
 
@@ -59,57 +59,61 @@
 
 ### 任务栏
 
-*   “开始”：<kbd>Win</kbd> 或 <kbd>Ctrl</kbd>+<kbd>Esc</kbd>
-    *   账户
-        *   “锁定”：<kbd>Win</kbd>+<kbd>L</kbd>
-*   “快速链接”：<kbd>Win</kbd>+<kbd>X</kbd>
-    *   “任务管理器”：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd>
-    *   “设置”：<kbd>Win</kbd>+<kbd>I</kbd>
-    *   “文件资源管理器”：<kbd>Win</kbd>+<kbd>E</kbd>
-    *   “搜索”：<kbd>Win</kbd>+<kbd>Q</kbd> 或 <kbd>Win</kbd>+<kbd>S</kbd>
-    *   “运行”：<kbd>Win</kbd>+<kbd>R</kbd>
-*   “任务视图”：<kbd>Win</kbd>+<kbd>Tab</kbd>
-    *   新建桌面：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>D</kbd>
-    *   关闭桌面：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>F4</kbd>
-    *   切换桌面：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>←</kbd> 和 <kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>→</kbd>
-*   “任务栏按钮”：<kbd>Win</kbd>+<kbd>T</kbd>
-    *   新建窗口：<kbd>Win</kbd>+<kbd>Shift</kbd>+`#`
-    *   以管理员身份新建窗口：<kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+`#`
-    *   关闭窗口：<kbd>Alt</kbd>+<kbd>F4</kbd>
-    *   切换窗口：<kbd>Alt</kbd>+<kbd>Tab</kbd> 和 <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> 和 <kbd>Win</kbd>+`#`
-    *   “跳转列表”：<kbd>Win</kbd>+<kbd>Alt</kbd>+`#`
-*   “通知区域”：<kbd>Win</kbd>+<kbd>B</kbd>
-    *   “输入指示”
-        *   开关中文输入：<kbd>Ctrl</kbd>+<kbd>Space</kbd>
-        *   切换输入法：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>
-        *   切换语言：<kbd>Win</kbd>+<kbd>Space</kbd>
-    *   “日期和时间”：<kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>D</kbd>
-    *   “操作中心”：<kbd>Win</kbd>+<kbd>A</kbd>
-        *   “投影”：<kbd>Win</kbd>+<kbd>P</kbd>
-        *   “连接”：<kbd>Win</kbd>+<kbd>K</kbd>
-        *   “屏幕截图”：<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>
-*   “显示桌面”：<kbd>Win</kbd>+<kbd>D</kbd>
-    *   切换焦点区域：<kbd>F6</kbd>
+|              |                      |              | 按键                                            |
+|:------------ |:-------------------- |:------------ |:----------------------------------------------- |
+| “开始”       |                      |              | ++win++ 或 ++ctrl+esc++                         |
+|              | 账户                 |              |                                                 |
+|              |                      | “锁定”       | ++win+l++                                       |
+| “快速链接”   |                      |              | ++win+x++                                       |
+|              | “任务管理器”         |              | ++ctrl+shift+esc++                              |
+|              | “设置”               |              | ++win+i++                                       |
+|              |                      | “轻松使用”   | ++win+u++                                       |
+|              | “文件资源管理器”     |              | ++win+e++                                       |
+|              | “搜索”               |              | ++win+q++ 或 ++win+s++                          |
+|              | “运行”               |              | ++win+r++                                       |
+| “任务视图”   |                      |              | ++win+tab++                                     |
+|              | 新建桌面             |              | ++win+ctrl+d++                                  |
+|              | 关闭桌面             |              | ++win+ctrl+f4++                                 |
+|              | 切换桌面             |              | ++win+ctrl+left++ 和 ++win+ctrl+right++         |
+| “任务栏按钮” |                      |              | ++win+t++                                       |
+|              | 新建窗口             |              | ++win+shift+"#"++                               |
+|              | 以管理员身份新建窗口 |              | ++win+ctrl+shift+"#"++                          |
+|              | 关闭窗口             |              | ++alt+f4++                                      |
+|              | 切换窗口             |              | ++alt+tab++ 和 ++alt+shift+tab++ 和 ++win+"#"++ |
+|              | “跳转列表”           |              | ++win+alt+"#"++                                 |
+| “通知区域”   |                      |              | ++win+b++                                       |
+|              | “输入指示”           |              |                                                 |
+|              |                      | 开关中文输入 | ++ctrl+spc++                                    |
+|              |                      | 切换输入法   | ++ctrl+shift++                                  |
+|              |                      | 切换语言     | ++win+spc++                                     |
+|              | “日期和时间”         |              | ++win+alt+d++                                   |
+|              | “操作中心”           |              | ++win+a++                                       |
+|              |                      | “投影”       | ++win+p++                                       |
+|              |                      | “连接”       | ++win+k++                                       |
+|              |                      | “屏幕截图”   | ++win+shift+s++                                 |
+| “速览桌面”   |                      |              | ++win+comma++                                   |
+| “显示桌面”   |                      |              | ++win+d++                                       |
+|              | 切换焦点区域         |              | ++f6++                                          |
 
 ### 此电脑
 
-*   打开快捷菜单：右击标题栏，或 <kbd>Alt</kbd> + <kbd>Space</kbd>
+*   打开快捷菜单：右击标题栏，或 ++alt+spc++
 
 ### 常规导航
 
-| 按键                                         | 操作   | 按键                        | 操作   |
-|:-------------------------------------------- |:------ |:--------------------------- |:------ |
-| <kbd>Alt</kbd>+<kbd>R</kbd> 或 <kbd>F5</kbd> | 刷新。 |
-| <kbd>Alt</kbd>+<kbd>←</kbd>                  | 后退。 | <kbd>Alt</kbd>+<kbd>→</kbd> | 前进。 |
+| 按键                | 操作   | 按键          | 操作   |
+|:------------------- |:------ |:------------- |:------ |
+| ++alt+r++ 或 ++f5++ | 刷新。 |
+| ++alt+left++        | 后退。 | ++alt+right++ | 前进。 |
 
 ### 常规编辑
 
-| 按键                                                              | 操作   | 按键                                                               | 操作   |
-|:----------------------------------------------------------------- |:------ |:------------------------------------------------------------------ |:------ |
-| <kbd>Ctrl</kbd>+<kbd>Z</kbd>                                      | 撤消。 | <kbd>Ctrl</kbd>+<kbd>Y</kbd>                                       | 恢复。 |
-| <kbd>Ctrl</kbd>+<kbd>A</kbd>                                      | 全选。
-| <kbd>Ctrl</kbd>+<kbd>C</kbd> 或 <kbd>Ctrl</kbd>+<kbd>Insert</kbd> | 复制。 | <kbd>Ctrl</kbd>+<kbd>V</kbd> 或 <kbd>Shift</kbd>+<kbd>Insert</kbd> | 粘贴。 |
-| <kbd>Ctrl</kbd>+<kbd>X</kbd>                                      | 剪切。 | <kbd>Ctrl</kbd>+<kbd>D</kbd> 或 <kbd>Delete</kbd>                  | 删除。 |
+| 按键                       | 操作   | 按键                        | 操作   |
+|:-------------------------- |:------ |:--------------------------- |:------ |
+| ++ctrl+z++                 | 撤消。 | ++ctrl+y++                  | 恢复。 |
+| ++ctrl+a++                 | 全选。 |
+| ++ctrl+c++ 或 ++ctrl+ins++ | 复制。 | ++ctrl+v++ 或 ++shift+ins++ | 粘贴。 |
+| ++ctrl+x++                 | 剪切。 | ++ctrl+d++ 或 ++del++       | 删除。 |
 
 ## 常见问题
 ---
