@@ -1,6 +1,6 @@
 # GNU/Linux 操作系统
 
-```fish
+```{.sh}
 # 安全地重启系统
 user@host ~> sudo shutdown --reboot now
 # abbr.      sudo shutdown -r now
