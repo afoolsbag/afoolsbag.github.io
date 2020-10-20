@@ -3,6 +3,7 @@
 
 # Project information
 # https://www.mkdocs.org/user-guide/configuration/#project-information
+
 site_name: zhengrr's docs
 site_url: https://afoolsbag.github.io/
 repo_url: https://github.com/afoolsbag/afoolsbag.github.io/
@@ -13,11 +14,13 @@ copyright: CC0-1.0
 
 # Documentation layout
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+
 nav:
     - 码代码:
         - CC/CC.md
-        - CC/Vim.md
         - CC/Emacs.md
+        - CC/Markdown.md
+        - CC/Vim.md
         - CC/UML.md
     - 多媒体:
         - MM/MM.md
@@ -82,9 +85,9 @@ nav:
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
+
 theme:
-    name: material
-    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    name: material  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
     favicon: assets/images/book-open-page-variant.png
     features:
         - header.autohide
@@ -99,6 +102,7 @@ theme:
     palette:
         scheme: preference
     # https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md
+
 extra_javascript:
     - assets/javascripts/highlight.pack.js
 
@@ -107,13 +111,16 @@ extra_javascript:
 
 # Formatting options
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
+
 markdown_extensions:
+    - markdown.extensions.footnotes
     - markdown.extensions.sane_lists
     - markdown.extensions.toc:
         permalink: true
         slugify: !!python/name:pymdownx.slugs.uslugify
     - pymdownx.keys
     - pymdownx.superfences
+
 plugins:
     - git-revision-date-localized
     - minify:
