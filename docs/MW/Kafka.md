@@ -1,6 +1,6 @@
-# 分布式消息服务 Kafka
+# Kafka
 
-官网 <https://kafka.apache.org/>。
+kafka 是一款分布式消息服务，官网 <https://kafka.apache.org/>。
 
 *   [*GitOps for Apache Kafka*](https://devshawn.github.io/kafka-gitops/)
 *   [*Kafka Tools*](https://kafkatool.com/)，一款图形用户界面客户端
@@ -9,7 +9,7 @@
 ## 主题命名约定
 ---
 
-```ebnf
+``` ebnf
 (* 主题名 *)
 topic name = [data center , '.'] , domain , '.' , classification , '.' , description , '.' , version ;
 
@@ -30,22 +30,10 @@ version        = ? number ? ;
 
 例如：
 
-```txt
+``` txt
 crawling.fct.anti-crawl-logging
 crawling.cmd.do-crawl.0
 crawling.cmd.crawl-done.0
-
-CNWUHGAS-D003
-|/|_/||/ |__/
-| |  ||  开发 3 号机
-| |  ||
-| |  |应用服务器
-| |  |
-| |  借指光谷机房
-| |
-| GB/T 2260-2007 标准中的武汉代码
-|
-ISO 3166-1:2013 标准中的中国代码
 ```
 
 参见：
@@ -59,32 +47,32 @@ ISO 3166-1:2013 标准中的中国代码
 
 **注意：前置需要安装 OpenJDK 和 ZooKeeper，参见[*相关文档*](../ZooKeeper)。**
 
-*下载并解压程序：*
+#### 下载并解压程序
 
 1.  切换到 `/opt` 目录
 
-    ```sh
+    ``` sh
     sudoer@host *> cd /opt
     ```
 
 0.  下载 Kafka 压缩包，参见 <https://mirrors.tuna.tsinghua.edu.cn/apache/kafka>
 
-    ```sh
+    ``` sh
     sudoer@host /opt> sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz
     ```
 
 0.  解压缩并建立链接
 
-    ```sh
+    ``` sh
     sudoer@host /opt> sudo tar --extract --auto-compress --verbose --file=kafka_2.13-2.6.0.tgz
     sudoer@host /opt> sudo ln --symbolic kafka_2.13-2.6.0 kafka
     ```
 
-*将程序注册为服务：*
+#### 将程序注册为服务
 
 4.  创建 `kafka` 用户
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo useradd --comment 'Kafka Server' \
                                 --home-dir /opt/kafka \
                                 --no-create-home \
@@ -95,17 +83,17 @@ ISO 3166-1:2013 标准中的中国代码
 
 0.  切换程序所在目录的所有权
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo chown --recursive kafka:kafka /opt/kafka_2.13-2.6.0 /opt/kafka
     ```
 
 0.  创建服务单元，参见 <http://www.jinbuguo.com/systemd/systemd.service.html>
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo vim /etc/systemd/system/kafka.service
     ```
 
-    ```ini
+    ``` ini
     [Unit]
     Description=Kafka Server
     Requires=zookeeper.service
@@ -126,17 +114,17 @@ ISO 3166-1:2013 标准中的中国代码
 
 0.  重新加载服务单元
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo systemctl daemon-reload
     ```
 
 0.  创建 firewalld 服务描述文件
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo vim /etc/firewalld/services/kafka.xml
     ```
 
-    ```xml
+    ``` xml
     <?xml version="1.0" encoding="utf-8"?>
     <service>
       <short>Kafka</short>
@@ -147,32 +135,32 @@ ISO 3166-1:2013 标准中的中国代码
 
 0.  重新加载 firewalld 服务描述文件
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo firewall-cmd --reload
     ```
 
 0.  立即启用服务
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo systemctl enable --now kafka
     ```
 
 0.  配置防火墙，开放服务所需端口
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo firewall-cmd --permanent --add-service=kafka
     sudoer@host *> sudo firewall-cmd --reload
     ```
 
-*配置、启用并确认服务：*
+#### 配置、启用并确认服务
 
 12. 编辑配置文件，配置 Host 使用 IP 地址而非计算机名
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo vim /opt/kafka/config/server.properties
     ```
 
-    ```ini
+    ``` ini
     # /opt/kafka/config/server.properties
     
     # ......
@@ -194,28 +182,49 @@ ISO 3166-1:2013 标准中的中国代码
 
 0.  重启服务以使配置生效
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo systemctl restart kafka
     ```
 
 0.  检查进程
 
-    ```sh
+    ``` sh
     sudoer@host *> sudo jps
     ```
 
 ## 常用命令组合
 ---
 
-```fish
-user@host ~> cd kafka/bin
+假定工作目录为 `*/path/to/kafka/bin`。
 
-# 列出可用话题
-user@host ~/k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... --list
+### `kafka-topics`
 
-# 查看某话题的描述
-user@host ~/k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... --describe --topic <topic>
+#### 列出话题
 
-# 查看话题中是否有消息
-user@host ~/k/bin> ./kafka-console-consumer.sh --bootstrap-server <host1:9092>[,host2:9092]... --topic <topic> --from-beginning
+``` sh
+kafka@host */k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                      --list
+```
+
+#### 查看某话题的描述
+
+``` sh
+kafka@host */k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                      --describe --topic <topic>
+```
+
+#### 修改某话题的分区数
+
+``` sh
+kafka@host */k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                      --alter --topic <topic> --partitions <number>
+```
+
+### `kafka-console-consumer`
+
+#### 查看话题中是否有消息
+
+``` sh
+kafka@host */k/bin> ./kafka-console-consumer.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                                --topic <topic> --from-beginning
 ```
