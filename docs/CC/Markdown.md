@@ -171,15 +171,15 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 ### CodeHilite 扩展
 
-[CodeHilite] 使用 [Pygments] 或配合 [highlight.js] 实现高亮。
+[CodeHilite] 使用 [Pygments] 或配合 [highlight.js] 实现代码高亮。
 
-Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。一些常用的高亮环境：
+Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。列举若干常用的语言标识：
 
 | Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
 |:-------------------------- |:------------------------------------------------ |:---------------------------------------------------- |
 | AutoHotkey                 | `autohotkey`, `ahk`                              | `autohotkey`                                         |
 | Bash                       | `bash`, `sh`, `ksh`, `zsh`, `shell`              | `bash`, `sh`, `zsh`                                  |
-| Bash session               | `console`, `shell-session`                       | `console`, `shell`                                   |
+| Bash Session               | `console`, `shell-session`                       | `console`, `shell`                                   |
 | Batchfile                  | `bat`, `batch`, `dosbatch`, `winbatch`           | `bat`, `cmd`, `dos`                                  |
 | BNF                        | `bnf`                                            | `bnf`                                                |
 | C                          | `c`                                              | `c`, `h`                                             |
@@ -188,7 +188,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 | CMake                      | `cmake`                                          | `cmake`, `cmake.in`                                  |
 | CSS                        | `css`                                            | `css`                                                |
 | Dockerfile                 | `dockerfile`, `docker`                           | `dockerfile`, `docker`                               |
-| DOS session                | `doscon`                                         |                                                      |
+| DOS Session                | `doscon`                                         |                                                      |
 | EBNF                       | `ebnf`                                           | `ebnf`                                               |
 | Go                         | `go`                                             | `go`, `golang`                                       |
 | Groovy                     | `groovy`                                         | `groovy`                                             |
@@ -205,13 +205,14 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 | Nginx                      | `nginx`                                          | `nginx`, `nginxconf`                                 |
 | Plaintext                  | `text`                                           | `plaintext`, `txt`, `text`                           |
 | PostgreSQL                 | `postgresql`, `postgres`                         | `postgresql`, `postgres`, `pgsql`                    |
-| PostgreSQL console session | `postgresql-console`, `postgres-console`, `psql` |                                                      |
+| PostgreSQL Console Session | `postgresql-console`, `postgres-console`, `psql` |                                                      |
 | PowerShell                 | `powershell`, `ps1`, `posh`, `psm1`              | `powershell`, `ps1`, `ps`                            |
-| PowerShell session         | `ps1con`                                         |                                                      |
+| PowerShell Session         | `ps1con`                                         |                                                      |
+| Properties                 | `properties`, `jproperties`                      |                                                      |
 | Python                     | `python`, `py`                                   | `python`, `py`, `gyp`                                |
-| Python console session     | `pycon`                                          | `pycon`, `python-repl`                               |
+| Python Console Session     | `pycon`                                          | `pycon`, `python-repl`                               |
 | Ruby                       | `ruby`, `rb`                                     | `ruby`, `rb`                                         |
-| Ruby console session       | `rbcon`, `irb`                                   | `irb`                                                |
+| Ruby Console Session       | `rbcon`, `irb`                                   | `irb`                                                |
 | Scala                      | `scala`                                          | `scala`                                              |
 | SQL                        | `sql`                                            | `sql`                                                |
 | TOML                       | `toml`                                           | `toml`                                               |
@@ -226,7 +227,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 ## PyMdown Extensions
 ---
 
-[PyMdown Extensions] 是 Python-Markdown 的第三方扩展，提供了更多扩展：
+[PyMdown Extensions] 是 Python-Markdown 的第三方扩展包，提供了更多扩展：
 
 ### Arithmatex 扩展
 

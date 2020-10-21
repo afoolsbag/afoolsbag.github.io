@@ -1,6 +1,6 @@
 # Kafka
 
-kafka 是一款分布式消息服务，官网 <https://kafka.apache.org/>。
+[kafka] 是一款分布式消息服务。
 
 *   [*GitOps for Apache Kafka*](https://devshawn.github.io/kafka-gitops/)
 *   [*Kafka Tools*](https://kafkatool.com/)，一款图形用户界面客户端
@@ -51,49 +51,49 @@ crawling.cmd.crawl-done.0
 
 1.  切换到 `/opt` 目录
 
-    ``` sh
-    sudoer@host *> cd /opt
+    ``` console
+    [sudoer@host ~]$ cd /opt
     ```
 
 0.  下载 Kafka 压缩包，参见 <https://mirrors.tuna.tsinghua.edu.cn/apache/kafka>
 
-    ``` sh
-    sudoer@host /opt> sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz
+    ``` console
+    [sudoer@host opt]$ sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz
     ```
 
 0.  解压缩并建立链接
 
-    ``` sh
-    sudoer@host /opt> sudo tar --extract --auto-compress --verbose --file=kafka_2.13-2.6.0.tgz
-    sudoer@host /opt> sudo ln --symbolic kafka_2.13-2.6.0 kafka
+    ``` console
+    [sudoer@host /opt]$ sudo tar --extract --auto-compress --verbose --file=kafka_2.13-2.6.0.tgz
+    [sudoer@host /opt]$ sudo ln --symbolic kafka_2.13-2.6.0 kafka
     ```
 
 #### 将程序注册为服务
 
 4.  创建 `kafka` 用户
 
-    ``` sh
-    sudoer@host *> sudo useradd --comment 'Kafka Server' \
-                                --home-dir /opt/kafka \
-                                --no-create-home \
-                                --password !! \
-                                --shell /sbin/nologin \
-                                kafka
+    ``` console
+    [sudoer@host ~]$ sudo useradd --comment 'Kafka Server' \
+                                  --home-dir /opt/kafka \
+                                  --no-create-home \
+                                  --password !! \
+                                  --shell /sbin/nologin \
+                                  kafka
     ```
 
 0.  切换程序所在目录的所有权
 
-    ``` sh
-    sudoer@host *> sudo chown --recursive kafka:kafka /opt/kafka_2.13-2.6.0 /opt/kafka
+    ``` console
+    [sudoer@host ~]$ sudo chown --recursive kafka:kafka /opt/kafka_2.13-2.6.0 /opt/kafka
     ```
 
 0.  创建服务单元，参见 <http://www.jinbuguo.com/systemd/systemd.service.html>
 
-    ``` sh
-    sudoer@host *> sudo vim /etc/systemd/system/kafka.service
+    ``` console
+    [sudoer@host ~]$ sudo vim /etc/systemd/system/kafka.service
     ```
 
-    ``` ini
+    ``` toml
     [Unit]
     Description=Kafka Server
     Requires=zookeeper.service
@@ -114,14 +114,14 @@ crawling.cmd.crawl-done.0
 
 0.  重新加载服务单元
 
-    ``` sh
-    sudoer@host *> sudo systemctl daemon-reload
+    ``` console
+    [sudoer@host ~]$ sudo systemctl daemon-reload
     ```
 
 0.  创建 firewalld 服务描述文件
 
-    ``` sh
-    sudoer@host *> sudo vim /etc/firewalld/services/kafka.xml
+    ``` console
+    [sudoer@host ~]$ sudo vim /etc/firewalld/services/kafka.xml
     ```
 
     ``` xml
@@ -135,34 +135,32 @@ crawling.cmd.crawl-done.0
 
 0.  重新加载 firewalld 服务描述文件
 
-    ``` sh
-    sudoer@host *> sudo firewall-cmd --reload
+    ``` console
+    [sudoer@host ~]$ sudo firewall-cmd --reload
     ```
 
 0.  立即启用服务
 
-    ``` sh
-    sudoer@host *> sudo systemctl enable --now kafka
+    ``` console
+    [sudoer@host ~]$ sudo systemctl enable --now kafka
     ```
 
 0.  配置防火墙，开放服务所需端口
 
-    ``` sh
-    sudoer@host *> sudo firewall-cmd --permanent --add-service=kafka
-    sudoer@host *> sudo firewall-cmd --reload
+    ``` console
+    [sudoer@host ~]$ sudo firewall-cmd --permanent --add-service=kafka
+    [sudoer@host ~]$ sudo firewall-cmd --reload
     ```
 
 #### 配置、启用并确认服务
 
 12. 编辑配置文件，配置 Host 使用 IP 地址而非计算机名
 
-    ``` sh
-    sudoer@host *> sudo vim /opt/kafka/config/server.properties
+    ``` console
+    [sudoer@host ~]$ sudo vim /opt/kafka/config/server.properties
     ```
 
-    ``` ini
-    # /opt/kafka/config/server.properties
-    
+    ``` properties
     # ......
     # The address the socket server listens on. It will get the value returned from 
     # java.net.InetAddress.getCanonicalHostName() if not configured.
@@ -182,49 +180,53 @@ crawling.cmd.crawl-done.0
 
 0.  重启服务以使配置生效
 
-    ``` sh
-    sudoer@host *> sudo systemctl restart kafka
+    ``` console
+    [sudoer@host ~]$ sudo systemctl restart kafka
     ```
 
 0.  检查进程
 
-    ``` sh
-    sudoer@host *> sudo jps
+    ``` console
+    [sudoer@host ~]$ sudo jps
     ```
 
 ## 常用命令组合
 ---
 
-假定工作目录为 `*/path/to/kafka/bin`。
+假定工作目录为 `/path/to/kafka/bin`。
 
 ### `kafka-topics`
 
 #### 列出话题
 
-``` sh
-kafka@host */k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
-                                      --list
+``` console
+[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                    --list
 ```
 
 #### 查看某话题的描述
 
-``` sh
-kafka@host */k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
-                                      --describe --topic <topic>
+``` console
+[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                    --describe --topic <topic>
 ```
 
 #### 修改某话题的分区数
 
-``` sh
-kafka@host */k/bin> ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
-                                      --alter --topic <topic> --partitions <number>
+``` console
+[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                    --alter --topic <topic> --partitions <number>
 ```
 
 ### `kafka-console-consumer`
 
 #### 查看话题中是否有消息
 
-``` sh
-kafka@host */k/bin> ./kafka-console-consumer.sh --bootstrap-server <host1:9092>[,host2:9092]... \
-                                                --topic <topic> --from-beginning
+``` console
+[kafka@host bin]$ ./kafka-console-consumer.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+                                              --topic <topic> --from-beginning
 ```
+
+<!----------------------------------------------------------------------------->
+
+[Kafka]: https://kafka.apache.org/
