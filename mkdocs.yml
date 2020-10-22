@@ -118,14 +118,14 @@ markdown_extensions:
 #   # - markdown.extensions.footnotes
 #   # - markdown.extensions.md_in_html
 #   # - markdown.extensions.tables       # DEFAULT
-#   - markdown.extensions.admonition
-    - markdown.extensions.codehilite
+    - markdown.extensions.admonition
+#   - markdown.extensions.codehilite
 #   - markdown.extensions.legacy_attrs
 #   - markdown.extensions.legacy_em
 #   - markdown.extensions.meta           # DEFAULT
 #   - markdown.extensions.nl2br
     - markdown.extensions.sane_lists
-#   - markdown.extensions.smarty
+    - markdown.extensions.smarty
     - markdown.extensions.toc:           # DEFAULT
         permalink: true
         slugify: !!python/name:pymdownx.slugs.uslugify
@@ -141,27 +141,27 @@ markdown_extensions:
 #   # - markdown.extensions.tables       # DEFAULT
 #   - pymdownx.arithmatex
 #   - pymdownx.b64
-#   - pymdownx.caret
+    - pymdownx.caret
 #   - pymdownx.critic
-#   - pymdownx.details
+    - pymdownx.details
     - pymdownx.emoji:
         emoji_index: !!python/name:materialx.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
 #   - pymdownx.escapeall
     - pymdownx.highlight
-    - pymdownx.inlinehilite
+#   - pymdownx.inlinehilite
     - pymdownx.keys
-#   - pymdownx.magiclink
-#   - pymdownx.mark
+    - pymdownx.magiclink
+    - pymdownx.mark
 #   - pymdownx.pathconverter
 #   - pymdownx.progressbar
-#   - pymdownx.saneheaders
-#   - pymdownx.smartsymbols
+    - pymdownx.saneheaders
+    - pymdownx.smartsymbols
 #   - pymdownx.snippets
-#   - pymdownx.striphtml
-#   - pymdownx.tabbed
-#   - pymdownx.tasklist
-#   - pymdownx.tilde
+    - pymdownx.striphtml
+    - pymdownx.tabbed
+    - pymdownx.tasklist
+    - pymdownx.tilde
 
 plugins:
     - git-revision-date-localized

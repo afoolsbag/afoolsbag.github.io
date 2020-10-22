@@ -7,173 +7,355 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 标准 [Markdown] 支持以下语法：
 
-### 段落和折行（`<p>` 和 `<br>`）
+### 段落和折行
 
-> 段落是简单的一个或多个连续的文本行，由一个或多个空行分隔。（空行是指任何看起来像空行的行——除了空格或制表符之外什么都没有的行被认为是空行）。正常的段落不应该用空格或制表符缩进。
->
-> 当你想使用 Markdown 插入一个折行标签（`<br />`）时，你可以用两个或更多的空格来结束一行，然后输入回车。
+参见 [Daring Fireball: Markdown Syntax Documentation § PARAGRAPHS AND LINE BREAKS](https://daringfireball.net/projects/markdown/syntax#p)。
 
-### Setext 风格的标题（`<h#>`）
+### Setext 风格标题
 
-> [Setext] 风格的标题使用等号（对于一级标题）和破折号（对于二级标题）来“做下划线”。例如：
->
-> ``` md
-> 这是一级标题
-> ===========
->
-> 这是二级标题
-> -----------
-> ```
->
-> 任何数量的 `=` 或 `-` “做下划线”都可以。
+!!! example "Setext 风格标题示例"
 
-### atx 风格的标题（`<h#>`）
+    === "Markdown 输入"
 
-> [atx] 风格的标题在行首使用 1-6 个井号，对应 1-6 级标题。例如：
->
-> ``` md
-> # 这是一级标题
->
-> ## 这是二级标题
->
-> ###### 这是六级标题
-> ```
+        ``` md
+        This is an H1
+        =============
 
-### 块级引文（`<blockquote>`）
+        This is an H2
+        -------------
+        ```
 
-> Markdown 使用电子邮件风格的 `>` 字符进行块级引用。例如：
->
-> ``` md
-> > 这是有两个段落的引文，这是第一个段落。
-> >
-> > 这是第二个段落。
-> ```
+    === "HTML 输出"
 
-### 无序列表（`<ul>`）
+        渲染冲突，略。
 
-> 无序列表使用星号（`*`）、加号（`+`）和减号（`-`）作为列表标记。例如：
->
-> ``` md
-> *   无序列表项 A
-> *   无序列表项 B
-> *   无序列表项 C
-> ```
+参见 [Daring Fireball: Markdown Syntax Documentation § HEADERS](https://daringfireball.net/projects/markdown/syntax#header)。
 
-### 有序列表（`<ol>`）
+### atx 风格标题
 
-> 有序列表使用数字后加句点作为列表标记。例如：
->
-> ``` md
-> 1.  有序列表项 1
-> 1.  有序列表项 2
-> 1.  有序列表项 3
-> ```
+!!! example "atx 风格标题示例"
 
-### 缩进风格的代码块（`<pre>`）
+    === "Markdown 输入"
 
-> 要在 Markdown 中生成一个代码块，只需将代码块的每一行缩进至少 4 个空格或 1 个制表符。例如：
->
-> ``` md
->     main( ) {
->             printf("hello, world\n");
->     }
-> ```
+        ``` md
+        # This is an H1
 
-### 水平线（`<hr>`）
+        ## This is an H2
 
-> 你可以通过在一行上单独放置三个或更多的连字符（`-`）、星号（`*`）或下划线（`_`）来生成一个水平线（`<hr />`）。如果你愿意，可以在连字符（`-`）或星号（`*`）之间使用空格。
+        ###### This is an H6
+        ```
 
-### 内联风格的链接（`<a>`）
+    === "HTML 输出"
 
-> 要创建一个内联风格的链接，使用方括号括住链接文本，并紧跟着一对小括号。在小括号内，放入你想要链接指向的 URL，以及可选的用引号包围的标题。例如：
->
-> ``` md
-> 这是内联风格链接的 [一个示例](http://example.com/ "标题")。
->
-> [这个链接](http://example.net/) 没有标题属性。
-> ```
+        渲染冲突，略。
 
-### 参考风格的链接（`<a>`）
+参见 [Daring Fireball: Markdown Syntax Documentation § HEADERS](https://daringfireball.net/projects/markdown/syntax#header)。
 
-> 参考风格的链接使用第二对方括号，在方括号内放置一个您选择的标识，以识别链接。例如：
->
-> ``` md
-> 这是参考风格链接的 [一个示例][标识]。
->
-> [这个链接][] 隐去了链接标识。
->
-> [标识]: http://example.com/ "可选的标题"
-> [这个链接]: http://example.com/
-> ```
+### 块级引文
 
-### 自动链接（`<a>`）
+!!! example "块级引文示例"
 
-> Markdown 支持一种为 URL 和电子邮件地址创建“自动”链接的快捷样式：简单地用尖括号包围 URL 或电子邮件地址。例如：
->
-> ``` md
-> <http://example.com/>
-> ```
+    === "Markdown 输入"
 
-### 强调（`<em>` 和 `<strong>`）
+        ``` md
+        > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+        > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+        > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+        > 
+        > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+        > id sem consectetuer libero luctus adipiscing.
+        ```
 
-> Markdown 将星号（`*`）和下划线（`_`）用作强调的标志。用一个 `*` 或 `_` 包装的文本将用 `<em>` 标签包装；双 `*` 或 `_` 将用 `<strong>` 标签包装。例如：
->
-> ``` md
-> 这个词被标注为*强调*。
->
-> 这个词被标注为**重要**。
-> ```
+    === "HTML 输出"
 
-### 行内代码（`<code>`）
+        > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+        > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+        > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+        > 
+        > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+        > id sem consectetuer libero luctus adipiscing.
 
-> 要表示一个行内代码，请用反引号（`` ` ``）将其括起来，例如：
->
-> ``` md
-> Markdown 以反引号（`` ` ``）标注行内代码。
-> ```
+参见 [Daring Fireball: Markdown Syntax Documentation § BLOCKQUOTES](https://daringfireball.net/projects/markdown/syntax#blockquote)。
 
-### 图片（`<img>`）
+### 无序列表
 
-> 图片类似于链接，同样支持内联风格和参考风格，但在第一个中括号前紧置一个感叹号（`!`）。例如：
->
-> ``` md
-> 这是一张图片： ![替代文本](url/to/image "可选的标题")。
->
-> 这也是一张图片： ![替代文本][标识]。
->
-> [标识]: url/to/image "可选的标题"
-> ```
+!!! example "无序列表示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        *   Red
+        *   Green
+        *   Blue
+        ```
+
+    === "HTML 输出"
+
+        *   Red
+        *   Green
+        *   Blue
+
+参见 [Daring Fireball: Markdown Syntax Documentation § LISTS](https://daringfireball.net/projects/markdown/syntax#list)。
+
+### 有序列表
+
+!!! example "有序列表示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        1.  Bird
+        1.  McHale
+        1.  Parish
+        ```
+
+    === "HTML 输出"
+
+        1.  Bird
+        1.  McHale
+        1.  Parish
+
+参见 [Daring Fireball: Markdown Syntax Documentation § LISTS](https://daringfireball.net/projects/markdown/syntax#list)。
+
+### 缩进风格代码块
+
+!!! example "缩进风格代码块示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        This is a normal paragraph:
+
+            This is a code block.
+        ```
+
+    === "HTML 输出"
+
+        This is a normal paragraph:
+
+            This is a code block.
+
+参见 [Daring Fireball: Markdown Syntax Documentation § CODE BLOCKS](https://daringfireball.net/projects/markdown/syntax#precode)。
+
+### 水平线
+
+!!! example "水平线示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        * * *
+
+        ***
+
+        *****
+
+        - - -
+
+        ---------------------------------------
+        ```
+
+    === "HTML 输出"
+
+        * * *
+
+        ***
+
+        *****
+
+        - - -
+
+        ---------------------------------------
+
+参见 [Daring Fireball: Markdown Syntax Documentation § HORIZONTAL RULES](https://daringfireball.net/projects/markdown/syntax#hr)。
+
+### 内联风格链接
+
+!!! example "内联风格链接示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        This is [an example](http://example.com/ "Title") inline link.
+
+        [This link](http://example.net/) has no title attribute.
+        ```
+
+    === "HTML 输出"
+
+        This is [an example](http://example.com/ "Title") inline link.
+
+        [This link](http://example.net/) has no title attribute.
+
+参见 [Daring Fireball: Markdown Syntax Documentation § LINKS](https://daringfireball.net/projects/markdown/syntax#link)。
+
+### 参考风格链接
+
+!!! example "参考风格链接示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        This is [an example][id] reference-style link.
+
+        [id]: http://example.com/  "Optional Title Here"
+        ```
+
+    === "HTML 输出"
+
+        This is [an example][id] reference-style link.
+
+[id]: http://example.com/  "Optional Title Here"
+
+参见 [Daring Fireball: Markdown Syntax Documentation § LINKS](https://daringfireball.net/projects/markdown/syntax#link)。
+
+### 自动链接
+
+!!! example "自动链接示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        <http://example.com/>
+        ```
+
+    === "HTML 输出"
+
+        <http://example.com/>
+
+参见 [Daring Fireball: Markdown Syntax Documentation § AUTOMATIC LINKS](https://daringfireball.net/projects/markdown/syntax#autolink)。
+
+### 强调
+
+!!! example "强调示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        *single asterisks*
+
+        _single underscores_
+
+        **double asterisks**
+
+        __double underscores__
+        ```
+
+    === "HTML 输出"
+
+        *single asterisks*
+
+        _single underscores_
+
+        **double asterisks**
+
+        __double underscores__
+
+参见 [Daring Fireball: Markdown Syntax Documentation § EMPHASIS](https://daringfireball.net/projects/markdown/syntax#em)。
+
+### 行内代码
+
+!!! example "行内代码示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        Use the `printf()` function.
+        ```
+
+    === "HTML 输出"
+
+        Use the `printf()` function.
+
+参见 [Daring Fireball: Markdown Syntax Documentation § CODE](https://daringfireball.net/projects/markdown/syntax#code)。
+
+### 图片
+
+!!! example "图片示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        ![Alt text](/path/to/img.jpg)
+
+        ![Alt text](/path/to/img.jpg "Optional title")
+        ```
+
+    === "HTML 输出"
+
+        ![Alt text](/path/to/img.jpg)
+
+        ![Alt text](/path/to/img.jpg "Optional title")
+
+参见 [Daring Fireball: Markdown Syntax Documentation § IMAGES](https://daringfireball.net/projects/markdown/syntax#img)。
+
+### 转义
+
+参见 [Daring Fireball: Markdown Syntax Documentation § BACKSLASH ESCAPES](https://daringfireball.net/projects/markdown/syntax#backslash)。
 
 ## Python-Markdown
 ---
 
 [Python-Markdown] 是 Markdown 的 Python 实现，并提供了若干扩展：
 
-### Abbreviations 扩展（`<abbr>`）
+### Abbreviations 扩展
 
-> ``` md
-> The HTML specification is maintained by the W3C.
->
-> *[HTML]: Hyper Text Markup Language
-> *[W3C]:  World Wide Web Consortium
-> ```
+!!! example "缩写示例"
 
-### Definition Lists 扩展（`<dl>`）
+    === "Markdown 输入"
 
-> ``` md
-> Apple
-> :   Pomaceous fruit of plants of the genus Malus in
->     the family Rosaceae.
->
-> Orange
-> :   The fruit of an evergreen tree of the genus Citrus.
-> ```
+        ``` md
+        The HTML specification
+        is maintained by the W3C.
+
+        *[HTML]: Hyper Text Markup Language
+        *[W3C]:  World Wide Web Consortium
+        ```
+
+    === "HTML 输出"
+
+        The HTML specification
+        is maintained by the W3C.
+
+*[HTML]: Hyper Text Markup Language
+*[W3C]:  World Wide Web Consortium
+
+参见 [Abbreviations — Python-Markdown documentation](https://python-markdown.github.io/extensions/abbreviations/)。
+
+### Admonition 扩展
+
+!!! example "告诫示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        !!! type "optional explicit title within double quotes"
+
+            Any number of other indented markdown elements.
+
+            This is the second paragraph.
+        ```
+
+    === "HTML 输出"
+
+        !!! type "optional explicit title within double quotes"
+
+            Any number of other indented markdown elements.
+
+            This is the second paragraph.
+
+参见 [reStructuredText Directives § Specific Admonitions](https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions)；  
+参见 [Admonition — Python-Markdown documentation](https://python-markdown.github.io/extensions/admonition/)。
+
+### Attribute Lists 扩展
+
+参见 [Attribute Lists — Python-Markdown documentation](https://python-markdown.github.io/extensions/attr_list/)。
 
 ### CodeHilite 扩展
 
-[CodeHilite] 使用 [Pygments] 或配合 [highlight.js] 实现代码高亮。
-
-Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。列举若干常用的语言标识：
+[CodeHilite] 通过 [Pygments] 或配合 [highlight.js] 实现代码高亮。
+Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。
+常用的语言标识整理如下：
 
 | Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
 |:-------------------------- |:------------------------------------------------ |:---------------------------------------------------- |
@@ -222,7 +404,150 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 | XML                        | `xml`                                            | `xml`                                                |
 | YAML                       | `yaml`                                           | `yaml`, `yml`                                        |
 
+参见 [CodeHilite — Python-Markdown documentation](https://python-markdown.github.io/extensions/code_hilite/)。
+
+### Definition Lists 扩展
+
+!!! example "定义列表示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        Apple
+        :   Pomaceous fruit of plants of the genus Malus in
+            the family Rosaceae.
+
+        Orange
+        :   The fruit of an evergreen tree of the genus Citrus.
+        ```
+
+    === "HTML 输出"
+
+        Apple
+        :   Pomaceous fruit of plants of the genus Malus in
+            the family Rosaceae.
+
+        Orange
+        :   The fruit of an evergreen tree of the genus Citrus.
+
+参见 [Definition Lists — Python-Markdown documentation](https://python-markdown.github.io/extensions/definition_lists/)。
+
+### Fenced Code Blocks 扩展
+
+!!! example "围栏风格代码块示例"
+
+    === "Markdown 输入"
+
+        ```` md
+        a paragraph before the code block.
+
+        ```
+        a one-line code block
+        ```
+
+        a paragraph after the code block.
+        ````
+
+    === "HTML 输出"
+
+        a paragraph before the code block.
+
+        ```
+        a one-line code block
+        ```
+
+        a paragraph after the code block.
+
+参见 [Fenced Code Blocks — Python-Markdown documentation](https://python-markdown.github.io/extensions/fenced_code_blocks/)。
+
+### Footnotes 扩展
+
+!!! example "脚注示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        Footnotes[^1] have a label[^@#$%] and the footnote's content.
+
+        [^1]: This is a footnote content.
+        [^@#$%]: A footnote on the label: "@#$%".
+        ```
+
+    === "HTML 输出"
+
+        Footnotes[^1] have a label[^@#$%] and the footnote's content.
+
+[^1]: This is a footnote content.
+[^@#$%]: A footnote on the label: "@#$%".
+
+参见 [Footnotes — Python-Markdown documentation](https://python-markdown.github.io/extensions/footnotes/)。
+
+### Legacy Attributes 扩展
+
+参见 [Legacy Attributes — Python-Markdown documentation](https://python-markdown.github.io/extensions/legacy_attrs/)。
+
+### Legacy Emphasis 扩展
+
+参见 [Legacy Emphasis — Python-Markdown documentation](https://python-markdown.github.io/extensions/legacy_em/)。
+
+### Markdown in HTML 扩展
+
+参见 [Markdown in HTML — Python-Markdown documentation](https://python-markdown.github.io/extensions/md_in_html/)。
+
+### Meta-Data 扩展
+
+参见 [Meta-Data — Python-Markdown documentation](https://python-markdown.github.io/extensions/meta_data/)。
+
+### New Line to Break 扩展
+
+参见 [New Line to Break — Python-Markdown documentation](https://python-markdown.github.io/extensions/nl2br/)。
+
+### Sane Lists 扩展
+
+参见 [Sane Lists — Python-Markdown documentation](https://python-markdown.github.io/extensions/sane_lists/)。
+
+### SmartyPants 扩展
+
+| Markdown 输入 | HTML 输出 |
+|:------------- |:--------- |
+| `'abc'`       | 'abc'     |
+| `"abc"`       | "abc"     |
+| `...`         | ...       |
+| `--`          | --        |
+| `---`         | ---       |
+
+参见 [SmartyPants — Python-Markdown documentation](https://python-markdown.github.io/extensions/smarty/)。
+
 ### Table of Contents 扩展
+
+参见 [Table of Contents — Python-Markdown documentation](https://python-markdown.github.io/extensions/toc/)。
+
+### Tables 扩展
+
+!!! example "表格示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        First Header  | Second Header
+        ------------- | -------------
+        Content Cell  | Content Cell
+        Content Cell  | Content Cell
+        ```
+
+    === "HTML 输出"
+
+        First Header  | Second Header
+        ------------- | -------------
+        Content Cell  | Content Cell
+        Content Cell  | Content Cell
+
+参见 [PHP Markdown Extra § Tables](https://michelf.ca/projects/php-markdown/extra/#table)；  
+参见 [Tables — Python-Markdown documentation](https://python-markdown.github.io/extensions/tables/)。
+
+### WikiLinks 扩展
+
+参见 [WikiLinks — Python-Markdown documentation](https://python-markdown.github.io/extensions/wikilinks/)。
 
 ## PyMdown Extensions
 ---
@@ -231,15 +556,269 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ### Arithmatex 扩展
 
+参见 [Arithmatex - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)。
+
+### B64 扩展
+
+参见 [B64 - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/b64/)。
+
+### BetterEm 扩展
+
+参见 [BetterEm - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/betterem/)。
+
+### Caret 扩展
+
+!!! example "Caret 示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        ^^Insert me^^
+
+        H^2^0
+
+        text^a\ superscript^
+        ```
+
+    === "HTML 输出"
+
+        ^^Insert me^^
+
+        H^2^0
+
+        text^a\ superscript^
+
+参见 [Caret - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/caret/)。
+
+### Critic 扩展
+
+参见 [Critic - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/critic/)。
+
+### Details 扩展
+
+!!! example "Caret 示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        ???+ note "Open styled details"
+
+            ??? danger "Nested details!"
+
+                And more content again.
+        ```
+
+    === "HTML 输出"
+
+        ???+ note "Open styled details"
+
+            ??? danger "Nested details!"
+
+                And more content again.
+
+参见 [Details - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/details/)。
+
+### Emoji 扩展
+
+参见 [Emoji - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)。
+
+### EscapeAll 扩展
+
+参见 [EscapeAll - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/escapeall/)。
+
+### Highlight 扩展
+
+参见 [Highlight - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/)。
+
+### InlineHilite 扩展
+
+参见 [InlineHilite - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/)。
+
+### Keys 扩展
+
+!!! example "按键示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        ++ctrl+alt+delete++
+        ```
+
+    === "HTML 输出"
+
+        ++ctrl+alt+delete++
+
+参见 [Keys - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/keys/)。
+
+### MagicLink 扩展
+
+参见 [MagicLink - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/)。
+
+### Mark 扩展
+
+!!! example "标记示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        ==mark me==
+
+        ==smart==mark==
+        ```
+
+    === "HTML 输出"
+
+        ==mark me==
+
+        ==smart==mark==
+
+参见 [Mark - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/mark/)。
+
+### PathConverter 扩展
+
+参见 [PathConverter - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/pathconverter/)。
+
+### ProgressBar 扩展
+
+参见 [ProgressBar - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/progressbar/)。
+
+### SaneHeaders 扩展
+
+参见 [SaneHeaders - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/saneheaders/)。
+
+### SmartSymbols 扩展
+
+| Markdown 输入     | HTML 输出     |
+|:----------------- |:------------- |
+| `(tm)`            | (tm)          |
+| `(c)`             | (c)           |
+| `(r)`             | (r)           |
+| `c/o`             | c/o           |
+| `+/-`             | +/-           |
+| `-->`             | -->           |
+| `<--`             | <--           |
+| `<-->`            | <-->          |
+| `=/=`             | =/=           |
+| `1/2`, `2/3`, ... | 1/2, 2/3, ... |
+| `1st`, `2nd`, ... | 1st, 2nd, ... |
+
+参见 [SmartSymbols - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/)。
+
+### Snippets 扩展
+
+参见 [Snippets - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/)。
+
+### StripHTML 扩展
+
+参见 [StripHTML - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/striphtml/)。
+
+### SuperFences 扩展
+
+参见 [SuperFences - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/)。
+
+### Tabbed 扩展
+
+!!! example "标签页示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        === "Tab 1"
+            Markdown **content**.
+
+            Multiple paragraphs.
+
+        === "Tab 2"
+            More Markdown **content**.
+
+            - list item a
+            - list item b
+        ```
+
+    === "HTML 输出"
+
+        === "Tab 1"
+            Markdown **content**.
+
+            Multiple paragraphs.
+
+        === "Tab 2"
+            More Markdown **content**.
+
+            - list item a
+            - list item b
+
+参见 [Tabbed - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/)。
+
+### Tasklist 扩展
+
+!!! example "任务列表示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        Task List
+
+        - [X] item 1
+            * [X] item A
+            * [ ] item B
+                more text
+                + [x] item a
+                + [ ] item b
+                + [x] item c
+            * [X] item C
+        - [ ] item 2
+        - [ ] item 3
+        ```
+
+    === "HTML 输出"
+
+        Task List
+
+        - [X] item 1
+            * [X] item A
+            * [ ] item B
+                more text
+                + [x] item a
+                + [ ] item b
+                + [x] item c
+            * [X] item C
+        - [ ] item 2
+        - [ ] item 3
+
+参见 [Tasklist - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/)。
+
+### Tilde 扩展
+
+!!! example "Tilde 示例"
+
+    === "Markdown 输入"
+
+        ``` md
+        ~~Delete me~~
+
+        CH~3~CH~2~OH
+
+        text~a\ subscript~
+        ```
+
+    === "HTML 输出"
+
+        ~~Delete me~~
+
+        CH~3~CH~2~OH
+
+        text~a\ subscript~
+
+参见 [Tilde - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/)。
+
 <!----------------------------------------------------------------------------->
 
-[atx]:                http://www.aaronsw.com/2002/atx/
 [CodeHilite]:         https://python-markdown.github.io/extensions/code_hilite/
 [highlight.js]:       https://highlightjs.org/
 [Markdown]:           https://daringfireball.net/projects/markdown/
 [Pygments]:           https://pygments.org/
 [PyMdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
 [Python-Markdown]:    https://python-markdown.github.io/
-[Setext]:             https://docutils.sourceforge.io/mirror/setext.html
 
 [^Markdown on Wikipedia]: [Markdown - Wikipedia](https://wikipedia.org/wiki/Markdown).
