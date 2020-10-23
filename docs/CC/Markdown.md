@@ -330,7 +330,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
         ``` md
         !!! type "optional explicit title within double quotes"
-
             Any number of other indented markdown elements.
 
             This is the second paragraph.
@@ -339,11 +338,37 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
     === "HTML 输出"
 
         !!! type "optional explicit title within double quotes"
-
             Any number of other indented markdown elements.
 
             This is the second paragraph.
 
+??? tldr "支持的告诫类型"
+
+    !!! abstract "`abstract`, `summary`, `tldr`"
+
+    !!! attention "`attention`, `caution`, `warning`"
+
+    !!! bug "`bug`"
+
+    !!! check "`check`, `done`, `success`"
+
+    !!! cite "`cite`, `quote`"
+
+    !!! danger "`danger`, `error`"
+
+    !!! example "`example`"
+
+    !!! fail "`fail`, `failure`, `missing`"
+
+    !!! faq "`faq`, `help`, `question`"
+
+    !!! hint "`hint`, `important`, `tip`"
+
+    !!! info "`info`, `todo`"
+
+    !!! note "`note`"
+
+参见 [pymdown-extensions/_admonition.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_admonition.scss)；  
 参见 [reStructuredText Directives § Specific Admonitions](https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions)；  
 参见 [Admonition — Python-Markdown documentation](https://python-markdown.github.io/extensions/admonition/)。
 
@@ -355,54 +380,55 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 [CodeHilite] 通过 [Pygments] 或配合 [highlight.js] 实现代码高亮。
 Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。
-常用的语言标识整理如下：
 
-| Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
-|:-------------------------- |:------------------------------------------------ |:---------------------------------------------------- |
-| AutoHotkey                 | `autohotkey`, `ahk`                              | `autohotkey`                                         |
-| Bash                       | `bash`, `sh`, `ksh`, `zsh`, `shell`              | `bash`, `sh`, `zsh`                                  |
-| Bash Session               | `console`, `shell-session`                       | `console`, `shell`                                   |
-| Batchfile                  | `bat`, `batch`, `dosbatch`, `winbatch`           | `bat`, `cmd`, `dos`                                  |
-| BNF                        | `bnf`                                            | `bnf`                                                |
-| C                          | `c`                                              | `c`, `h`                                             |
-| C#                         | `csharp`, `c#`                                   | `csharp`, `cs`                                       |
-| C++                        | `cpp`, `c++`                                     | `cpp`, `hpp`, `cc`, `hh`, `c++`, `h++`, `cxx`, `hxx` |
-| CMake                      | `cmake`                                          | `cmake`, `cmake.in`                                  |
-| CSS                        | `css`                                            | `css`                                                |
-| Dockerfile                 | `dockerfile`, `docker`                           | `dockerfile`, `docker`                               |
-| DOS Session                | `doscon`                                         |                                                      |
-| EBNF                       | `ebnf`                                           | `ebnf`                                               |
-| Go                         | `go`                                             | `go`, `golang`                                       |
-| Groovy                     | `groovy`                                         | `groovy`                                             |
-| HTML                       | `html`                                           | `html`                                               |
-| HTTP                       | `http`                                           | `http`, `https`                                      |
-| INI                        | `ini`, `cfg`, `dosini`                           | `ini`                                                |
-| JSON                       | `json`                                           | `json`                                               |
-| Java                       | `java`                                           | `java`                                               |
-| JavaScript                 | `javascript`, `js`                               | `javascript`, `js`                                   |
-| (La)TeX                    | `tex`, `latex`                                   | `tex`                                                |
-| Lua                        | `lua`                                            | `lua`                                                |
-| Makefile                   | `makefile`, `make`, `mf`, `bsdmake`              | `makefile`, `mk`, `mak`                              |
-| Markdown                   | `md`                                             | `markdown`, `md`, `mkdown`, `mkd`                    |
-| Nginx                      | `nginx`                                          | `nginx`, `nginxconf`                                 |
-| Plaintext                  | `text`                                           | `plaintext`, `txt`, `text`                           |
-| PostgreSQL                 | `postgresql`, `postgres`                         | `postgresql`, `postgres`, `pgsql`                    |
-| PostgreSQL Console Session | `postgresql-console`, `postgres-console`, `psql` |                                                      |
-| PowerShell                 | `powershell`, `ps1`, `posh`, `psm1`              | `powershell`, `ps1`, `ps`                            |
-| PowerShell Session         | `ps1con`                                         |                                                      |
-| Properties                 | `properties`, `jproperties`                      |                                                      |
-| Python                     | `python`, `py`                                   | `python`, `py`, `gyp`                                |
-| Python Console Session     | `pycon`                                          | `pycon`, `python-repl`                               |
-| Ruby                       | `ruby`, `rb`                                     | `ruby`, `rb`                                         |
-| Ruby Console Session       | `rbcon`, `irb`                                   | `irb`                                                |
-| Scala                      | `scala`                                          | `scala`                                              |
-| SQL                        | `sql`                                            | `sql`                                                |
-| TOML                       | `toml`                                           | `toml`                                               |
-| TypeScript                 | `typescript`, `ts`                               | `typescript`, `ts`                                   |
-| VimL                       | `vim`                                            | `vim`                                                |
-| x86 Assembly               |                                                  | `x86asm`                                             |
-| XML                        | `xml`                                            | `xml`                                                |
-| YAML                       | `yaml`                                           | `yaml`, `yml`                                        |
+??? tldr "常用的语言标识"
+
+    | Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
+    |:-------------------------- |:------------------------------------------------ |:---------------------------------------------------- |
+    | AutoHotkey                 | `autohotkey`, `ahk`                              | `autohotkey`                                         |
+    | Bash                       | `bash`, `sh`, `ksh`, `zsh`, `shell`              | `bash`, `sh`, `zsh`                                  |
+    | Bash Session               | `console`, `shell-session`                       | `console`, `shell`                                   |
+    | Batchfile                  | `bat`, `batch`, `dosbatch`, `winbatch`           | `bat`, `cmd`, `dos`                                  |
+    | BNF                        | `bnf`                                            | `bnf`                                                |
+    | C                          | `c`                                              | `c`, `h`                                             |
+    | C#                         | `csharp`, `c#`                                   | `csharp`, `cs`                                       |
+    | C++                        | `cpp`, `c++`                                     | `cpp`, `hpp`, `cc`, `hh`, `c++`, `h++`, `cxx`, `hxx` |
+    | CMake                      | `cmake`                                          | `cmake`, `cmake.in`                                  |
+    | CSS                        | `css`                                            | `css`                                                |
+    | Dockerfile                 | `dockerfile`, `docker`                           | `dockerfile`, `docker`                               |
+    | DOS Session                | `doscon`                                         |                                                      |
+    | EBNF                       | `ebnf`                                           | `ebnf`                                               |
+    | Go                         | `go`                                             | `go`, `golang`                                       |
+    | Groovy                     | `groovy`                                         | `groovy`                                             |
+    | HTML                       | `html`                                           | `html`                                               |
+    | HTTP                       | `http`                                           | `http`, `https`                                      |
+    | INI                        | `ini`, `cfg`, `dosini`                           | `ini`                                                |
+    | JSON                       | `json`                                           | `json`                                               |
+    | Java                       | `java`                                           | `java`                                               |
+    | JavaScript                 | `javascript`, `js`                               | `javascript`, `js`                                   |
+    | (La)TeX                    | `tex`, `latex`                                   | `tex`                                                |
+    | Lua                        | `lua`                                            | `lua`                                                |
+    | Makefile                   | `makefile`, `make`, `mf`, `bsdmake`              | `makefile`, `mk`, `mak`                              |
+    | Markdown                   | `md`                                             | `markdown`, `md`, `mkdown`, `mkd`                    |
+    | Nginx                      | `nginx`                                          | `nginx`, `nginxconf`                                 |
+    | Plaintext                  | `text`                                           | `plaintext`, `txt`, `text`                           |
+    | PostgreSQL                 | `postgresql`, `postgres`                         | `postgresql`, `postgres`, `pgsql`                    |
+    | PostgreSQL Console Session | `postgresql-console`, `postgres-console`, `psql` |                                                      |
+    | PowerShell                 | `powershell`, `ps1`, `posh`, `psm1`              | `powershell`, `ps1`, `ps`                            |
+    | PowerShell Session         | `ps1con`                                         |                                                      |
+    | Properties                 | `properties`, `jproperties`                      |                                                      |
+    | Python                     | `python`, `py`                                   | `python`, `py`, `gyp`                                |
+    | Python Console Session     | `pycon`                                          | `pycon`, `python-repl`                               |
+    | Ruby                       | `ruby`, `rb`                                     | `ruby`, `rb`                                         |
+    | Ruby Console Session       | `rbcon`, `irb`                                   | `irb`                                                |
+    | Scala                      | `scala`                                          | `scala`                                              |
+    | SQL                        | `sql`                                            | `sql`                                                |
+    | TOML                       | `toml`                                           | `toml`                                               |
+    | TypeScript                 | `typescript`, `ts`                               | `typescript`, `ts`                                   |
+    | VimL                       | `vim`                                            | `vim`                                                |
+    | x86 Assembly               |                                                  | `x86asm`                                             |
+    | XML                        | `xml`                                            | `xml`                                                |
+    | YAML                       | `yaml`                                           | `yaml`, `yml`                                        |
 
 参见 [CodeHilite — Python-Markdown documentation](https://python-markdown.github.io/extensions/code_hilite/)。
 
@@ -596,7 +622,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ### Details 扩展
 
-!!! example "Caret 示例"
+!!! example "详情示例"
 
     === "Markdown 输入"
 
@@ -604,7 +630,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         ???+ note "Open styled details"
 
             ??? danger "Nested details!"
-
                 And more content again.
         ```
 
@@ -613,13 +638,41 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         ???+ note "Open styled details"
 
             ??? danger "Nested details!"
-
                 And more content again.
 
+??? tldr "支持的详情类型"
+
+    ??? abstract "`abstract`, `summary`, `tldr`"
+
+    ??? attention "`attention`, `caution`, `warning`"
+
+    ??? bug "`bug`"
+
+    ??? check "`check`, `done`, `success`"
+
+    ??? cite "`cite`, `quote`"
+
+    ??? danger "`danger`, `error`"
+
+    ??? example "`example`"
+
+    ??? fail "`fail`, `failure`, `missing`"
+
+    ??? faq "`faq`, `help`, `question`"
+
+    ??? hint "`hint`, `important`, `tip`"
+
+    ??? info "`info`, `todo`"
+
+    ??? note "`note`"
+
+参见 [pymdown-extensions/_admonition.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_admonition.scss)；  
+参见 [pymdown-extensions/_details.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_details.scss)  
 参见 [Details - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/details/)。
 
 ### Emoji 扩展
 
+参见 [Icons + Emojis - Material for MkDocs § Usage](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage)；  
 参见 [Emoji - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)。
 
 ### EscapeAll 扩展
@@ -814,11 +867,11 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 <!----------------------------------------------------------------------------->
 
+[^Markdown on Wikipedia]: [Markdown - Wikipedia](https://wikipedia.org/wiki/Markdown).
+
 [CodeHilite]:         https://python-markdown.github.io/extensions/code_hilite/
 [highlight.js]:       https://highlightjs.org/
 [Markdown]:           https://daringfireball.net/projects/markdown/
 [Pygments]:           https://pygments.org/
 [PyMdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
 [Python-Markdown]:    https://python-markdown.github.io/
-
-[^Markdown on Wikipedia]: [Markdown - Wikipedia](https://wikipedia.org/wiki/Markdown).

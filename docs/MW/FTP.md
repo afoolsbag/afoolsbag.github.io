@@ -1,33 +1,44 @@
-# 文件传输协议 FTP
+# FTP
 
-## 服务端
+文件传输协议（FTP）是一个用于在计算机网络上在客户端和服务器之间进行文件传输的应用层协议。[^FTP on Wikipedia]
+
+## FTP 服务器：vsftpd
 ---
 
-### vsftpd
+[vsftpd] 是一款类 Unix 操作系统上的 FTP 服务器。[^vsftdp on Wikipedia]
 
-官网 <https://security.appspot.com/vsftpd.html>。
+### :material-centos: CentOS
 
-#### CentOS
+参见 [Chapter 16. File and Print Servers Red Hat Enterprise Linux 7 | Red Hat Customer Portal § FTP](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-file_and_print_servers#s1-FTP)。
 
-[*Red Hat 上的 FTP 帮助文档*](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/s1-ftp)。
+### :material-ubuntu: Ubuntu
 
-#### Ubuntu
-
-[*Ubuntu 上的 vsftpd 帮助文档*](https://help.ubuntu.com/community/vsftpd)。
-
-```fish
-user@host ~> vim /etc/vsftpd.conf
+``` console
+[user@host ~]$ vim /etc/vsftpd.conf
 ```
 
-## 客户端
+参见 [vsftpd - Community Help Wiki](https://help.ubuntu.com/community/vsftpd)。
+
+## FTP 客户端：lftp
 ---
 
-### lftp
+[lftp] 是一款类 Unix 操作系统上的 FTP 命令行界面客户端。[^lftp on Wikipedia]
 
-官网 <https://lftp.tech/>
+### :material-centos: CentOS
 
-#### CentOS
-
-```fish
-user@host ~> lftp [-u <username>[,password]] <host>
+``` console
+[user@host ~]$ lftp [-u <username>[,password]] <host>
 ```
+
+<!----------------------------------------------------------------------------->
+
+[^FTP on Wikipedia]:    [File Transfer Protocol - Wikipedia](https://wikipedia.org/wiki/File_Transfer_Protocol)
+[^vsftdp on Wikipedia]: [vsftpd - Wikipedia](https://wikipedia.org/wiki/Vsftpd)
+[^lftp on Wikipedia]:   [lftp - Wikipedia](https://wikipedia.org/wiki/Lftp)
+
+[Ceph]:   https://ceph.io/
+[lftp]:   https://lftp.tech/
+[vsftpd]: https://security.appspot.com/vsftpd.html
+
+*[FTP]:    File Transfer Protocol
+*[vsftpd]: very secure FTP daemon
