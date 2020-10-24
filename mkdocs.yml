@@ -97,7 +97,7 @@ theme:
     features:
         - header.autohide
         - navigation.expand
-        - navigation.instant
+#       - navigation.instant
         - navigation.tabs
         - toc.autohide
     icon:
