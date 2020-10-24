@@ -38,6 +38,7 @@ nav:
         - MW/NGINX.md
         - MW/nginx-rtmp-module.md
         - MW/PostgreSQL.md
+        - MW/SQLPad.md
         - MW/ZooKeeper.md
     - 操作系统:
         - OS/OS.md
@@ -49,10 +50,12 @@ nav:
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
+            - OS/Linux/Cockpit.md
             - OS/Linux/fish.md
             - OS/Linux/netfilter.md
             - OS/Linux/networking.md
             - OS/Linux/tar.md
+            - OS/Linux/tldr.md
             - OS/Linux/top.md
             - OS/Linux/users.md
         - Arch:
@@ -76,12 +79,14 @@ nav:
         - OS/Xshell.md
     - 开发运维:
         - DevOps/DevOps.md
-        - DevOps/Git.md
-        - DevOps/GitFlow.md
-        - DevOps/GitLab.md
-        - DevOps/Jenkins.md
-        - DevOps/Docker.md
         - DevOps/Ansible.md
+        - DevOps/Docker.md
+        - DevOps/Git.md
+        - DevOps/GitLab.md
+        - DevOps/GitFlow.md
+        - DevOps/Jenkins.md
+        - DevOps/Podman.md
+        - DevOps/SQLPad.md
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories

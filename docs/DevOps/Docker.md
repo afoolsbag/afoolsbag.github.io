@@ -1,11 +1,52 @@
-# 持续容器 Docker
+# Docker
 
-官网 <https://docker.com/>。
+[Docker] 是一套平台即服务（PaaS）产品，它使用操作系统级的虚拟化来交付被称为容器的软件包。
 
-[*阮一峰的 Docker 入门教程*](http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)，
-[*阮一峰的 Docker 微服务教程*](http://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)。
+参见：
 
-在 Linux 上，Docker 是 Linux 容器（LXC，Linux Containers）的封装，提供一个简单易用的使用接口。
+*   [Docker 入门教程 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
+*   [Docker 微服务教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)
+
+## 运行 Docker
+
+### :material-centos: CentOS 8
+
+!!! hint
+
+    也许你需要的是 [Podman](../Podman/)？
+
+``` console
+[sudoer@host ~]$ sudo dnf remove docker \
+                                 docker-client \
+                                 docker-client-latest \
+                                 docker-common \
+                                 docker-latest \
+                                 docker-latest-logrotate \
+                                 docker-logrotate \
+                                 docker-engine
+
+[sudoer@host ~]$ sudo dnf config-manager --add-repo \
+                      https://download.docker.com/linux/centos/docker-ce.repo
+
+[sudoer@host ~]$ sudo dnf install docker-ce
+
+[sudoer@host ~]$ sudo systemctl enable --now docker
+
+[sudoer@host ~]$ sudo docker run hello-world
+```
+
+参见 [How to Install and Setup Docker on Centos 8 {Quickstart}](https://phoenixnap.com/kb/how-to-install-docker-on-centos-8)；  
+参见 [Install Docker Engine on CentOS | Docker Documentation](https://docs.docker.com/engine/install/centos/)。
+
+<!----------------------------------------------------------------------------->
+
+[^Docker on Wikipedia]: [Docker (software) - Wikipedia](https://wikipedia.org/wiki/Docker_(software))
+
+[Docker]: https://www.docker.com/
+
+*[PaaS]: Platform as a Service
+
+<!--
 
 ## 安装 Docker
 ---
@@ -273,3 +314,5 @@ services:
     volumes:
       - "<host>:<container>[:{rw|ro}]"
 ```
+
+-->

@@ -45,7 +45,7 @@ crawling.cmd.crawl-done.0
 
 ### :material-centos: CentOS 7, 8
 
-**注意：前置需要安装 OpenJDK 和 ZooKeeper，参见[*相关文档*](../ZooKeeper)。**
+**注意：前置需要安装 OpenJDK 和 ZooKeeper，参见[*相关文档*](../ZooKeeper/)。**
 
 #### 下载并解压程序
 
