@@ -190,40 +190,56 @@ crawling.cmd.crawl-done.0
     [sudoer@host ~]$ sudo jps
     ```
 
-## 常用命令组合
+## `kafka-*` 命令
 ---
 
-假定工作目录为 `/path/to/kafka/bin`。
+预设工作目录为 `/path/to/kafka/bin`。
 
-### `kafka-topics`
+### 话题
 
 #### 列出话题
 
 ``` console
-[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server localhost:9092 \
                                     --list
 ```
 
-#### 查看某话题的描述
+#### 查看话题描述
 
 ``` console
-[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server localhost:9092 \
                                     --describe --topic <topic>
 ```
 
-#### 修改某话题的分区数
+#### 修改话题分区数
 
 ``` console
-[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+[kafka@host bin]$ ./kafka-topics.sh --bootstrap-server localhost:9092 \
                                     --alter --topic <topic> --partitions <number>
 ```
 
-### `kafka-console-consumer`
+### 消费组
 
-#### 查看话题中是否有消息
+#### 列出消费组
 
 ``` console
-[kafka@host bin]$ ./kafka-console-consumer.sh --bootstrap-server <host1:9092>[,host2:9092]... \
+[kafka@host bin]$ ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 \
+                                             --list
+```
+
+#### 查看消费组描述
+
+``` console
+[kafka@host bin]$ ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 \
+                                             --describe --group <group>
+```
+
+### 命令行消费者
+
+#### 从头消费一条消息
+
+``` console
+[kafka@host bin]$ ./kafka-console-consumer.sh --bootstrap-server localhost:9092 \
                                               --topic <topic> --from-beginning
 ```
 
