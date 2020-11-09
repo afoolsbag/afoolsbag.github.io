@@ -1,26 +1,26 @@
-# 文本编辑器 Vim
+# Vim
 
-官网 <https://www.vim.org/>，Vim 始于 1991 年 11 月 02 日。
+[Vim] 是一款高度可配置的文本编辑器，它的建立使创建和更改任何类型的文本变得非常有效。
 
-[*官方文档的中译本*](http://vimcdoc.sourceforge.net/)，
-及其中的帮助总览 [*help*](http://vimcdoc.sourceforge.net/doc/help.html)、
-快速参考 [*quickref*](http://vimcdoc.sourceforge.net/doc/quickref.html)、
-命令索引 [*index*](http://vimcdoc.sourceforge.net/doc/index.html)、
-函数列表 [*functions*](http://vimcdoc.sourceforge.net/doc/eval.html#functions)、
-选项列表 [*option-list*](http://vimcdoc.sourceforge.net/doc/quickref.html#option-list)、
-用户手册 [*usr_toc*](http://vimcdoc.sourceforge.net/doc/usr_toc.html)
-和参考手册 [*reference_toc*](http://vimcdoc.sourceforge.net/doc/help.html#reference_toc)。
+参见：
 
-[*rtorr.com 上的 Vim 备忘单*](https://vim.rtorr.com/lang/zh_cn)。
-
-vi 官网 <http://ex-vi.sourceforge.net/>，vi 始于 1976 年。
+*   [Vim Cheat Sheet](https://vim.rtorr.com/lang/zh_cn)
+*   [Vim Chinese Documentation](http://vimcdoc.sourceforge.net/)
+    *   帮助总览 [VIM: help](http://vimcdoc.sourceforge.net/doc/help.html)
+    *   快速参考 [VIM: quickref](http://vimcdoc.sourceforge.net/doc/quickref.html)
+    *   命令索引 [VIM: index](http://vimcdoc.sourceforge.net/doc/index.html)
+    *   函数列表 [VIM: eval § functions](http://vimcdoc.sourceforge.net/doc/eval.html#functions)
+    *   选项列表 [VIM: quickref § option-list](http://vimcdoc.sourceforge.net/doc/quickref.html#option-list)
+    *   用户手册 [VIM: usr_toc](http://vimcdoc.sourceforge.net/doc/usr_toc.html)
+    *   参考手册 [VIM: help § reference_toc](http://vimcdoc.sourceforge.net/doc/help.html#reference_toc)
+*   [The Traditional Vi](http://ex-vi.sourceforge.net/)
+*   [ed.1](http://heirloom.sourceforge.net/man/ed.1.html)
 
 ## 速查
----
 
 ### 移动光标
 
-```text
+``` text
       1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
    1 |    example-word\n                                                              |
@@ -64,7 +64,7 @@ N+24 |    example-word\n                                                CTRL-T :
 
 ### 普通模式到插入模式
 
-```text
+``` text
       1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
 N+1  |                                                                                |
@@ -79,7 +79,7 @@ N+8  |                                                                          
 
 ### 移动文本
 
-```text
+``` text
       1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
 N+ 1 |                                                                   :reg[isters] |
@@ -107,7 +107,7 @@ N+20 |                                                                    `...` 
 
 ### 修改和替换文本
 
-```text
+``` text
       1       10        20        30        40        50        60        70        80
      .|________|_________|_________|_________|_________|_________|_________|_________|.
 N+ 1 |                                                                 switch case:   |
@@ -134,11 +134,10 @@ N+13 |                                                                          
 *   <kbd>@</kbd><kbd>@</kbd> 重复执行宏
 
 ## 常用命令组合
----
 
 ### 替代
 
-```vim
+``` vim
 :[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
 
 " range ::= {line}
@@ -146,17 +145,17 @@ N+13 |                                                                          
 "         | {line-start}; {line-stop-after-start}
 "         | ...
 "
-" line* ::= {number}                                行号
-"         | .                                       当前行
-"         | $                                       文件的最后一行
-"         | %                                       全文件，等同于 1, &
+" line* ::= {number}  行号
+"         | .         当前行
+"         | $         文件的最后一行
+"         | %         全文件，等同于 1,$
 "         | ...
 "
-" flags :+= c                                       确认每个替代
-"         | e                                       忽略错误
-"         | g                                       对所有匹配，而不是首个匹配进行替代
+" flags :+= c         确认每个替代
+"         | e         忽略错误
+"         | g         对所有匹配，而不是首个匹配进行替代
 "         | ...
-"         | n                                       报告匹配次数，而不真的替代
+"         | n         报告匹配次数，而不真的替代
 "         | ...
 
 " 在整个文件替换，逐个确认
@@ -165,7 +164,13 @@ N+13 |                                                                          
 
 ### 设置行尾序列
 
-```vim
+``` vim
 :set fileformat={dos|unix|mac}
 :set ff={dos|unix|mac}
 ```
+
+<!----------------------------------------------------------------------------->
+
+[Vim]: https://www.vim.org/
+
+*[PaaS]: Platform as a Service

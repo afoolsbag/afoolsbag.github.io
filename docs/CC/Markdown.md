@@ -27,7 +27,7 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
     === "HTML 输出"
 
-        渲染冲突，略。
+        !!! missing "渲染冲突，略。"
 
 参见 [Daring Fireball: Markdown Syntax Documentation § HEADERS](https://daringfireball.net/projects/markdown/syntax#header)。
 
@@ -47,7 +47,7 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
     === "HTML 输出"
 
-        渲染冲突，略。
+        !!! missing "渲染冲突，略。"
 
 参见 [Daring Fireball: Markdown Syntax Documentation § HEADERS](https://daringfireball.net/projects/markdown/syntax#header)。
 
@@ -368,9 +368,11 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
     !!! note "`note`"
 
-参见 [pymdown-extensions/_admonition.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_admonition.scss)；  
-参见 [reStructuredText Directives § Specific Admonitions](https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions)；  
-参见 [Admonition — Python-Markdown documentation](https://python-markdown.github.io/extensions/admonition/)。
+参见：
+
+*   [pymdown-extensions/_admonition.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_admonition.scss)
+*   [reStructuredText Directives § Specific Admonitions](https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions)
+*   [Admonition — Python-Markdown documentation](https://python-markdown.github.io/extensions/admonition/)
 
 ### Attribute Lists 扩展
 
@@ -568,8 +570,10 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         Content Cell  | Content Cell
         Content Cell  | Content Cell
 
-参见 [PHP Markdown Extra § Tables](https://michelf.ca/projects/php-markdown/extra/#table)；  
-参见 [Tables — Python-Markdown documentation](https://python-markdown.github.io/extensions/tables/)。
+参见：
+
+*   [PHP Markdown Extra § Tables](https://michelf.ca/projects/php-markdown/extra/#table)
+*   [Tables — Python-Markdown documentation](https://python-markdown.github.io/extensions/tables/)
 
 ### WikiLinks 扩展
 
@@ -582,7 +586,11 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ### Arithmatex 扩展
 
-参见 [Arithmatex - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)。
+参见：
+
+*   [KaTeX – The fastest math typesetting library for the web](https://katex.org/)
+*   [MathJax | Beautiful math in all browsers.](https://www.mathjax.org/)
+*   [Arithmatex - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
 
 ### B64 扩展
 
@@ -666,14 +674,21 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
     ??? note "`note`"
 
-参见 [pymdown-extensions/_admonition.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_admonition.scss)；  
-参见 [pymdown-extensions/_details.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_details.scss)  
-参见 [Details - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/details/)。
+参见：
+
+*   [pymdown-extensions/_admonition.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_admonition.scss)
+*   [pymdown-extensions/_details.scss at master · facelessuser/pymdown-extensions](https://github.com/facelessuser/pymdown-extensions/blob/master/docs/src/scss/extensions/_details.scss)
+*   [Details - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/details/)
 
 ### Emoji 扩展
 
-参见 [Icons + Emojis - Material for MkDocs § Usage](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage)；  
-参见 [Emoji - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)。
+参见：
+
+*   :material-material-design: [Material Design Icons](https://materialdesignicons.com/)
+*   :fontawesome-brands-font-awesome-flag: [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free)
+*   :octicons-mark-github-16: [Octicons](https://primer.style/octicons/)
+*   [Icons + Emojis - Material for MkDocs § Usage](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage)
+*   [Emoji - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)
 
 ### EscapeAll 扩展
 

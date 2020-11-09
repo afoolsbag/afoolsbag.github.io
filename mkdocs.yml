@@ -43,9 +43,10 @@ nav:
         - OS/OS.md
         - Windows:
             - OS/Windows/Windows.md
-            - OS/Windows/Scoop & Chocolatey.md
-            - OS/Windows/Cmder.md
             - OS/Windows/Cheat Engine.md
+            - OS/Windows/Chocolatey.md
+            - OS/Windows/Cmder.md
+            - OS/Windows/Scoop.md
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
@@ -107,6 +108,12 @@ theme:
         scheme: preference
     # https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md
 
+extra_css:
+#   - https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+
+extra_javascript:
+#   - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+
 # Preview controls
 # https://www.mkdocs.org/user-guide/configuration/#preview-controls
 
@@ -114,36 +121,42 @@ theme:
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
 
 markdown_extensions:
+#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #   - markdown.extensions.extra
-#   # - markdown.extensions.abbr
-#   # - markdown.extensions.attr_list
-#   # - markdown.extensions.def_list
-#   # - markdown.extensions.fenced_code  # DEFAULT
-#   # - markdown.extensions.footnotes
-#   # - markdown.extensions.md_in_html
-#   # - markdown.extensions.tables       # DEFAULT
+#   ||
+#   - markdown.extensions.abbr
+#   - markdown.extensions.attr_list
+#   - markdown.extensions.def_list
+#   - markdown.extensions.fenced_code  # DEFAULT
+#   - markdown.extensions.footnotes
+#   - markdown.extensions.md_in_html
+#   - markdown.extensions.tables       # DEFAULT
+#```````````````````````````````````````````````
     - markdown.extensions.admonition
 #   - markdown.extensions.codehilite
 #   - markdown.extensions.legacy_attrs
 #   - markdown.extensions.legacy_em
-#   - markdown.extensions.meta           # DEFAULT
+#   - markdown.extensions.meta         # DEFAULT
 #   - markdown.extensions.nl2br
     - markdown.extensions.sane_lists
-    - markdown.extensions.smarty
-    - markdown.extensions.toc:           # DEFAULT
+#   - markdown.extensions.smarty
+    - markdown.extensions.toc:         # DEFAULT
         permalink: true
         slugify: !!python/name:pymdownx.slugs.uslugify
 #   - markdown.extensions.wikilinks
-    - pymdownx.extra
-#   # - pymdownx.betterem
-#   # - markdown.extensions.abbr
-#   # - markdown.extensions.attr_list
-#   # - markdown.extensions.def_list
-#   # - pymdownx.superfences
-#   # - markdown.extensions.footnotes
-#   # - markdown.extensions.md_in_html
-#   # - markdown.extensions.tables       # DEFAULT
-#   - pymdownx.arithmatex
+#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#   - pymdownx.extra
+#   ||
+    - pymdownx.betterem
+    - markdown.extensions.abbr
+    - markdown.extensions.attr_list
+    - markdown.extensions.def_list
+    - pymdownx.superfences
+    - markdown.extensions.footnotes
+    - markdown.extensions.md_in_html
+    - markdown.extensions.tables       # DEFAULT
+#```````````````````````````````````````````````
+    - pymdownx.arithmatex
 #   - pymdownx.b64
     - pymdownx.caret
 #   - pymdownx.critic
@@ -160,7 +173,7 @@ markdown_extensions:
 #   - pymdownx.pathconverter
 #   - pymdownx.progressbar
     - pymdownx.saneheaders
-    - pymdownx.smartsymbols
+#   - pymdownx.smartsymbols
 #   - pymdownx.snippets
     - pymdownx.striphtml
     - pymdownx.tabbed
