@@ -169,4 +169,4 @@ PS $env:USERPROFILE> scoop uninstall <app>
 
 <!----------------------------------------------------------------------------->
 
-[Scoop]:      https://scoop.sh/
+[Scoop]: https://scoop.sh/

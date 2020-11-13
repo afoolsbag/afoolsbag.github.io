@@ -46,7 +46,9 @@ nav:
             - OS/Windows/Cheat Engine.md
             - OS/Windows/Chocolatey.md
             - OS/Windows/Cmder.md
+            - OS/Windows/Everything.md
             - OS/Windows/Scoop.md
+            - OS/Windows/WePE.md
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
