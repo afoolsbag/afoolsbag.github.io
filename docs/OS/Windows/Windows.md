@@ -262,6 +262,12 @@ Windows 10 使用
 [Ettercap](https://www.ettercap-project.org)
 :   一款网络嗅探工具。
 
+[Everything](https://www.voidtools.com/)
+:   一款适用于 Windows 操作系统的桌面搜索引擎。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install everything
+    ```
+
 [Exeinfo PE](http://exeinfo.xn.pl/)
 :   一款 PE 查壳工具，参见 [Exeinfo-PE - aldeid](https://www.aldeid.com/wiki/Exeinfo-PE)。
 
