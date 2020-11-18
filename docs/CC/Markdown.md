@@ -383,6 +383,8 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 [CodeHilite] 通过 [Pygments] 或配合 [highlight.js] 实现代码高亮。
 Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。
 
+另外，[GitHub] 使用 [Linguist] 实现代码高亮，支持的语言在 [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 列出。
+
 ??? tldr "常用的语言标识"
 
     | Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
@@ -885,7 +887,9 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 [^Markdown on Wikipedia]: [Markdown - Wikipedia](https://wikipedia.org/wiki/Markdown).
 
 [CodeHilite]:         https://python-markdown.github.io/extensions/code_hilite/
+[GitHub]:             https://github.com/
 [highlight.js]:       https://highlightjs.org/
+[Linguist]:           https://github.com/github/linguist
 [Markdown]:           https://daringfireball.net/projects/markdown/
 [Pygments]:           https://pygments.org/
 [PyMdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
