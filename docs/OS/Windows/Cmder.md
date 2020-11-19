@@ -1,22 +1,20 @@
 # Cmder
 
-适用于 Windows 操作系统的命令行壳层 [Cmder]（Console Emulator）。
+[Cmder] 是适用于 :material-microsoft-windows: Windows 操作系统的命令行壳层。
 
-## 安装 Cmder
----
+## 运行 Cmder
 
-### 通过安装包安装
+!!! hint
 
-略。
+    也许可以试试 [Terminal](../Terminal/)？
 
-### 通过 Scoop 安装
+### :material-microsoft-windows: Windows 10 和 Scoop
 
 ```ps1con
 PS $env:USERPROFILE> scoop install cmder-full
 ```
 
-## 快捷键
----
+## Cmder 快捷键
 
 | Shortcut Key       | Description |
 |:------------------ |:----------- |
@@ -36,7 +34,7 @@ PS $env:USERPROFILE> scoop install cmder-full
 | ++shift+alt+9++    | 新建 WSL Bash 标签页
 | ++ctrl+tab++       | 切换到右一标签页
 | ++ctrl+shift+tab++ | 切换到左一标签页
-| ++ctrl+"#"++       | 切换到第 `#` 个标签页
+| ++ctrl+"num"++     | 切换到第 `num` 个标签页
 | ++ctrl+w++         | 关闭当前标签页
 | ++ctrl+d++         | 若没有命令，则关闭当前标签页
 | 命令
@@ -48,3 +46,5 @@ PS $env:USERPROFILE> scoop install cmder-full
 <!----------------------------------------------------------------------------->
 
 [Cmder]: https://cmder.net/
+
+*[Cmder]: Console Emulator

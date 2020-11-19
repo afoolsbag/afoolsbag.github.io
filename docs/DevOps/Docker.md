@@ -13,7 +13,7 @@
 
 !!! hint
 
-    也许你需要的是 [Podman](../Podman/)？
+    也许需要的是 [Podman](../Podman/)？
 
 ``` console
 [sudoer@host ~]$ sudo dnf remove docker \

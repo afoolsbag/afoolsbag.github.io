@@ -18,6 +18,7 @@ copyright: CC0-1.0
 nav:
     - 码代码:
         - CC/CC.md
+        - CC/Crypt.md
         - CC/Emacs.md
         - CC/Markdown.md
         - CC/Vim.md
@@ -46,7 +47,9 @@ nav:
             - OS/Windows/Cheat Engine.md
             - OS/Windows/Chocolatey.md
             - OS/Windows/Cmder.md
+            - OS/Windows/Cygwin.md
             - OS/Windows/Scoop.md
+            - OS/Windows/Terminal.md
             - OS/Windows/WePE.md
             - OS/Windows/WSL.md
         - GNU/Linux:
@@ -61,7 +64,7 @@ nav:
             - OS/Linux/users.md
         - Arch:
             - OS/Arch/Arch.md
-            - OS/Arch/pacman.md
+            - OS/Arch/Pacman-rename.md
         - CentOS:
             - OS/CentOS/CentOS.md
             - OS/CentOS/dnf.md
