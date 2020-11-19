@@ -70,7 +70,7 @@ nav:
             - OS/CentOS/dnf.md
         - Ubuntu:
             - OS/Ubuntu/Ubuntu.md
-            - OS/Ubuntu/apt.md
+            - OS/Ubuntu/APT.md
         - Tails:
             - OS/Tails/Tails.md
         - Kali:
