@@ -11,6 +11,47 @@
 abbr.        > wsl -l [-v]
 ```
 
+### 运行分发
+
+``` doscon
+%USERPROFILE%> wsl [--distribution <分发版>]
+abbr.        > wsl [-d <分发版>]
+```
+
+设定默认分发：
+
+``` doscon
+%USERPROFILE%> wsl --set-default <分发版>
+abbr.        > wsl -s <分发版>
+```
+
+### 终止分发
+
+``` doscon
+%USERPROFILE%> wsl --terminate <分发版>
+abbr.        > wsl -t <分发版>
+```
+
+终止所有分发并停止虚拟机：
+
+``` doscon
+%USERPROFILE%> wsl --shutdown
+```
+
+### WSL 版本
+
+设定指定分发的版本：
+
+``` doscon
+%USERPROFILE%> wsl --set-version <分发版> <版本>
+```
+
+设定新分发的默认版本：
+
+``` doscon
+%USERPROFILE%> wsl --set-default-version <版本>
+```
+
 ## `LxssManager` 服务
 
 ### 查询服务状态
