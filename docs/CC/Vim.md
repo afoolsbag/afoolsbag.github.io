@@ -16,6 +16,85 @@
 *   [The Traditional Vi](http://ex-vi.sourceforge.net/)
 *   [ed.1](http://heirloom.sourceforge.net/man/ed.1.html)
 
+## 运行 Vim
+
+### :material-microsoft-windows: Windows 10 和 Scoop
+
+1.  安装 Vim
+
+    ``` doscon
+    %USERPROFILE%> scoop install vim
+    ```
+
+0.  编辑 `vimrc`
+
+    ``` doscon
+    %USERPROFILE%> vim %USERPROFILE%\_vimrc
+    ```
+
+0.  安装 [Vundle]
+
+    （Vundle 需要 Git 和 curl）
+
+    ``` doscon
+    %USERPROFILE%> git clone https://github.com/VundleVim/Vundle.vim.git %USERPROFILE%\vimfiles\bundle\Vundle.vim
+    ```
+
+0.  安装插件
+
+    ``` doscon
+    %USERPROFILE%> vim
+    ```
+
+    ``` vim
+    :PluginInstall
+    ```
+
+## 我偏爱的 `vimrc`
+
+``` vim
+" Vundle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if !has('win32')
+  set nocompatible
+endif
+filetype off
+if has('win32')
+  set shellslash
+endif
+
+if has('win32')
+  set runtimepath+=~/vimfiles/bundle/Vundle.vim
+  call vundle#begin('~/vimfiles/bundle')
+else
+  set runtimepath+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+endif
+Plugin 'VundleVim/Vundle.vim'
+
+" 在此处列出偏爱的插件：
+Plugin 'vim-airline/vim-airline'
+"Plugin 'Valloric/YouCompleteMe'
+" 偏爱的插件列表结束。
+
+call vundle#end()
+filetype plugin indent on
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" 默认配置
+source $VIMRUNTIME/defaults.vim
+
+" 编码
+set encoding=utf-8
+set fileencodings=utf-8
+set termencoding=utf-8
+```
+
+参见：
+
+*   [VundleVim/Vundle.vim: Vundle, the plug-in manager for Vim § Quick Start](https://github.com/VundleVim/Vundle.vim#quick-start)
+*   [Vundle for Windows · VundleVim/Vundle.vim Wiki § Vundle on Windows](https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows#vundle-on-windows)
+
 ## 速查
 
 ### 移动光标
@@ -133,7 +212,7 @@ N+13 |                                                                          
 *   <kbd>@</kbd><kbd>{register}</kbd> 执行宏
 *   <kbd>@</kbd><kbd>@</kbd> 重复执行宏
 
-## 常用命令组合
+## 常用命令
 
 ### 替代
 
@@ -162,15 +241,29 @@ N+13 |                                                                          
 :%s/{pattern}/{string}/cg
 ```
 
+### 设置编码
+
+``` vim
+:set encoding=utf-8
+"    end=utf-8
+
+:set fileencodings=utf-8
+"    fencs=utf-8
+
+:set termencoding=utf-8
+"    tenc=utf-8
+```
+
 ### 设置行尾序列
 
 ``` vim
 :set fileformat={dos|unix|mac}
-:set ff={dos|unix|mac}
+"    ff={dos|unix|mac}
 ```
 
 <!----------------------------------------------------------------------------->
 
-[Vim]: https://www.vim.org/
+[Vim]:    https://www.vim.org/
+[Vundle]: https://github.com/VundleVim/Vundle.vim
 
 *[PaaS]: Platform as a Service

@@ -6,21 +6,75 @@
 
 ## Terminal 快捷键
 
+### 窗口
+
+| 动作                             | 快捷键             |
+| :------------------------------- | :----------------- |
+| :material-close: 关闭窗口        | ++alt+f4++         |
+| :material-fullscreen: 切换全屏   | ++alt+enter++      |
+|                                  | ++f11++            |
+| :material-file-cog: 配置文件     | ++ctrl+comma++     |
+| :material-file-cog: 默认配置文件 | ++ctrl+alt+comma++ |
+| :material-text-search: 文本查找  | ++ctrl+shift+f++   |
+| :material-card-search: 命令查找  | ++ctrl+shift+p++   |
+
 ### 标签页
 
-*   新建标签页：++ctrl+shift+"数字"++
-*   标签页导航：++ctrl+tab++、  
-  \ 　　　　　　++ctrl+shift+tab++
+| 动作                                  | 快捷键                |
+| :------------------------------------ | :-------------------- |
+| :material-close: 关闭标签页           | 无                    |
+| :material-plus: 新建标签页            | ++ctrl+shift+t++      |
+| :material-chevron-down: 标签页下拉框  | ++ctrl+shift+space++  |
+| :material-tab: 下拉框标签页           | ++ctrl+shift+"数字"++ |
+| :material-tab-plus: 复制标签页        | ++ctrl+shift+d++      |
+| :material-swap-horizontal: 标签页导航 | ++ctrl+tab++          |
+|                                       | ++ctrl+shift+tab++    |
+|                                       | ++ctrl+alt+"数字"++   |
 
 ### 窗格
 
-*   水平拆分为左右两格：++alt+shift+plus++
-*   垂直拆分为上下两格：++alt+shift+minus++
-*   按最大面积自动拆分：++alt+shift+d++
-*   窗格导航：++alt+left++、  
-  \ 　　　　　++alt+down++、  
-  \ 　　　　　++alt+up++、  
-  \ 　　　　　++alt+right++
+| 动作                                       | 快捷键              |
+| :----------------------------------------- | :------------------ |
+| :material-close: 关闭窗格                  | ++ctrl+shift+w++    |
+| :material-arrow-split-vertical: 左右拆分   | ++alt+shift+plus++  |
+| :material-arrow-split-horizontal: 上下拆分 | ++alt+shift+minus++ |
+| :material-rhombus-split: 自动拆分          | ++alt+shift+d++     |
+| :material-move-resize: 调整尺寸            | ++alt+shift+left++  |
+|                                            | ++alt+shift+down++  |
+|                                            | ++alt+shift+up++    |
+|                                            | ++alt+shift+right++ |
+| :material-arrow-all: 窗格导航              | ++alt+left++        |
+|                                            | ++alt+down++        |
+|                                            | ++alt+up++          |
+|                                            | ++alt+right++       |
+
+### 剪切板
+
+| 动作                          | 快捷键           |
+| :---------------------------- | :--------------- |
+| :material-content-copy: 复制  | ++ctrl+insert++  |
+|                               | ++ctrl+shift+c++ |
+|                               | ++ctrl+c++       |
+| :material-content-paste: 粘贴 | ++shift+insert++ |
+|                               | ++ctrl+shift+v++ |
+|                               | ++ctrl+v++       |
+
+### 滚动
+
+| 动作                                    | 快捷键               |
+| :-------------------------------------- | :------------------- |
+| :material-chevron-double-up: 上滚一页   | ++ctrl+shift+pg-up++ |
+| :material-chevron-up: 上滚              | ++ctrl+shift+up++    |
+| :material-chevron-down: 下滚            | ++ctrl+shift+down++  |
+| :material-chevron-double-down: 下滚一页 | ++ctrl+shift+pg-dn++ |
+
+### 字体
+
+| 动作                                          | 快捷键         |
+| :-------------------------------------------- | :------------- |
+| :material-format-font-size-increase: 加大字号 | ++ctrl+plus++  |
+| :material-format-size: 重置字号               | ++ctrl+0++     |
+| :material-format-font-size-decrease: 缩小字号 | ++ctrl+minus++ |
 
 ## Cascadia Code 字体
 
@@ -49,7 +103,12 @@
 }
 ```
 
+## 更纱黑体
+
+[更纱黑体] 是一款中日韩字体集，其中包含等宽字体 `等宽更纱黑体 SC`。
+
 <!----------------------------------------------------------------------------->
 
 [Cascadia Code]: https://github.com/microsoft/cascadia-code
 [Terminal]:      https://github.com/microsoft/terminal
+[更纱黑体]:      https://github.com/be5invis/Sarasa-Gothic

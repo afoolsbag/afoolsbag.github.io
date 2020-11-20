@@ -1,6 +1,6 @@
 # Scoop
 
-[Scoop] 是一款适用于 Windows 操作系统的应用管理器。
+[Scoop] 是一款适用于 :material-microsoft-windows: Windows 操作系统的应用管理器。
 
 参见：
 
@@ -142,6 +142,8 @@ PS $env:USERPROFILE> scoop status
 ```ps1con
 PS $env:USERPROFILE> scoop search <query>
 ```
+
+参见 [Scoop Directory: A directory of buckets for the scoop package manager for Windows](https://github.com/rasa/scoop-directory)。
 
 #### 列出本地应用
 
