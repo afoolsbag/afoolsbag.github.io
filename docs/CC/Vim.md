@@ -32,15 +32,14 @@
     %USERPROFILE%> vim %USERPROFILE%\_vimrc
     ```
 
-0.  安装 [Vundle]
-
-    （Vundle 需要 Git 和 curl）
+0.  安装 [Vundle]（需要 Git 和 curl）
 
     ``` doscon
-    %USERPROFILE%> git clone https://github.com/VundleVim/Vundle.vim.git %USERPROFILE%\vimfiles\bundle\Vundle.vim
+    %USERPROFILE%> git clone https://github.com/VundleVim/Vundle.vim.git ^
+                             %USERPROFILE%\vimfiles\bundle\Vundle.vim
     ```
 
-0.  安装插件
+0.  通过 Vundle 安装插件
 
     ``` doscon
     %USERPROFILE%> vim
@@ -51,6 +50,10 @@
     ```
 
 ## 我偏爱的 `vimrc`
+
+``` vim
+:edit $MYVIMRC
+```
 
 ``` vim
 " Vundle
@@ -73,8 +76,9 @@ endif
 Plugin 'VundleVim/Vundle.vim'
 
 " 在此处列出偏爱的插件：
-Plugin 'vim-airline/vim-airline'
-"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'ycm-core/YouCompleteMe'  " https://github.com/ycm-core/YouCompleteMe  智能补全
+Plugin 'yianwillis/vimcdoc'       " https://github.com/yianwillis/vimcdoc      中文文档
+Plugin 'vim-airline/vim-airline'  " https://github.com/vim-airline/vim-airline 状态栏
 " 偏爱的插件列表结束。
 
 call vundle#end()
@@ -84,10 +88,42 @@ filetype plugin indent on
 " 默认配置
 source $VIMRUNTIME/defaults.vim
 
+" A
+
+" 自动缩进
+set autoindent
+
+" E
+
 " 编码
 set encoding=utf-8
 set fileencodings=utf-8
 set termencoding=utf-8
+
+" L
+
+" 呈现某些空白符
+" eol      U+23CE ⏎ Return Symbol
+" tab      U+205E ⁞ Vertical Four Dots
+" space    U+00B7 · Middle Dot
+" trail
+" extends  U+2026 … Horizontal Ellipsis
+" precedes U+2026 … Horizontal Ellipsis
+" conceal
+" nbsp     U+23B5 ⎵ Bottom Square Bracke
+set listchars=eol:⏎,tab:\ \ ⁞,space:·,extends:…,precedes:…,nbsp:⎵
+set list
+
+" N
+
+" 显示行号
+"set number
+
+" T
+
+" 制表符
+"set tabstop=4
+"set expandtab
 ```
 
 参见：
@@ -95,171 +131,210 @@ set termencoding=utf-8
 *   [VundleVim/Vundle.vim: Vundle, the plug-in manager for Vim § Quick Start](https://github.com/VundleVim/Vundle.vim#quick-start)
 *   [Vundle for Windows · VundleVim/Vundle.vim Wiki § Vundle on Windows](https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows#vundle-on-windows)
 
-## 速查
+## Vim 备忘
 
-### 移动光标
+该备忘基于 Vim 用户手册，可视作 Vim 用户手册的阅读笔记。
 
-``` text
-      1       10        20        30        40        50        60        70        80
-     .|________|_________|_________|_________|_________|_________|_________|_________|.
-   1 |    example-word\n                                                              |
-   2 |    \                                                                           |
-   3 |     gg                                                                         |
-     '                                                                                '    ^  CTRL-B
-     :                                                                                :   [ ] CTRL-U
-     .________________________________________________________________________________.       CTRL-Y
-N+ 1 |    example-word\n                                                :marks        |   <-o
-N+ 2 |    \                                                             m{a-z} `{a-z} |    ^
-N+ 3 |     H                                                            m{A-Z} `{A-Z} |    |
-N+ 4 |                                                                         ``     |    |
-N+ 5 |                                                                  :ju[mps]      |    |
-N+ 6 |                                                                  CTRL-O CTRL-I |    |  zt
-N+ 7 |                                                                                |    |
-N+ 8 |                     F<m>             40|                                       |    |
-N+ 9 |                     |T<m>             |                                        |    |
-N+10 |    ^             B  ||      gE                   W          E             g_  $|    |
-N+11 |    |             |  ||      |    -    j          |          |             |   ||    |
-N+12 |    example-word  example-word       h █ l        example-word  example-word    \n   <-o zz
-N+13 ||   \                     |  |    +    k          | ||  |                       |    |
-N+14 |0    M                    b  ge                   w ||  e                       |    |
-N+15 |                                                    |f<m>                       |    |
-N+16 |                                                    t<m>                        |    |
-N+17 |                                                                                |    |
-N+18 |                                 ,  F T t f  ;                                  |    |  zb
-N+19 |                                                                                |    |
-N+20 |                                   N  ? /  n                      :help         |    |
-N+21 |                                      # *                                       |    |
-N+22 |     L                                                            :tags         |    |
-N+23 |    /                                                             CTRL-] :tag   |    v
-N+24 |    example-word\n                                                CTRL-T :po[p] |   <-o
-     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'       CTRL-E
-     :                                                                                :   [ ] CTRL-D
-     .                                                                                .    v  CTRL-F
-  -3 |     G                                                                          |
-  -2 |    /                                                                           |
-  -1 |    example-word\n                                                              |
-     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-```
+### ++f1++ 帮助
 
-### 普通模式到插入模式
+| 效果         | 行为                   |
+| :----------- | :--------------------- |
+| 打开帮助窗口 | `:h[elp] [<主题>]`     |
+| 跳转到主题   | ++ctrl+bracket-right++ |
+| 跳回         | ++ctrl+o++             |
+| 关闭帮助窗口 | `:q[uit]`              |
+| -            |
+| 主帮助文件   | ++f1++<br>`:h[elp]`    |
+| 用户手册目录 | `:h[elp] usr_toc`      |
+| 全屏帮助窗口 | `:on[ly]`              |
+
+### `usr_02` Vim 初步
+
+#### `02.2` 插入文本
 
 ``` text
-      1       10        20        30        40        50        60        70        80
-     .|________|_________|_________|_________|_________|_________|_________|_________|.
-N+1  |                                                                                |
-N+2 gI|      I|^a          Bi|Ba     gEi|gEa     Wi|Wa      Ei|Ea         g_i|g_a  $i|A
-N+3  ||   O-> |              |          |          |          |              |       ||
-N+4  |        example-word   example-word    █     example-word   example-word        \n
-N+5  ||   o->                        |  |    |     |     |                            |
-N+6  ||0a                          bi|ba|   i|a  wi|wa ei|ea                          |
-N+7  |                               gei|gea                                          |
-N+8  |                                                                                |
+  :
+ gI| I|^a   Bi|Ba        gEi|gEa     Wi|Wa         Ei|Ea   g_i|g_a
+O :|  |       |             |          |             |        |
+  :   example example-example     █    example-example example.  \n
+o :|                 /      |     |    |     |                  |
+  :|0a            bi/ba  gei|gea i|a wi|wa ei|ea              $i|A
+  :
 ```
 
-### 移动文本
+### `usr_03` 移动
 
-``` text
-      1       10        20        30        40        50        60        70        80
-     .|________|_________|_________|_________|_________|_________|_________|_________|.
-N+ 1 |                                                                   :reg[isters] |
-N+ 2 || dd ------------------------------------------------>|            "{0-9}       |
-N+ 3 |                                       | D ---------->| Delete     "{a-z}       |
-N+ 4 |                                      Xx                           "*   primary |
-N+ 5 |                                      ||                           "+ clipboard |
-N+ 6 |    The The quick brown fox jumps over █he lazy dog.   \n          "~      drop |
-N+ 7 |                                       |                                        |
-N+ 8 |                                      P|p               Paste          inner a  |
-N+ 9 || yy, Y --------------------------------------------->| Yank         word iw aw |
-N+10 |                                                                     WORD iW aW |
-N+11 |                                                                 sentence is as |
-N+12 |       v |          s-----------------------------| o           paragraph ip ap |
-N+13 |         |-----------------------------e          | s<->e         (block) ib ab |
-N+14 |                                                                    [...] i] a] |
-N+15 |       V |s---------------------------------------| o             {Block} iB aB |
-N+16 |         |e---------------------------------------| s<->e           <...> i> a> |
-N+17 |                                                           <tag>...</tag> it at |
-N+18 |  CTRL-V |          s------------------s'         | o     O         '...' i' a' |
-N+19 |         |          -------------------e          | s<->e s<->s'    "..." i" a" |
-N+20 |                                                                    `...` i` a` |
-     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-```
+|     左     |     下     |     上     |    右     |
+| :--------: | :--------: | :--------: | :-------: |
+|  ++'h'++   |  ++'j'++   |  ++'k'++   |  ++'l'++  |
+|  ++left++  |  ++down++  |   ++up++   | ++right++ |
+| ++ctrl+h++ | ++ctrl+j++ |
+|  ++bksp++  |            |            | ++space++ |
+|            | ++ctrl+n++ | ++ctrl+p++ |           |
 
-### 修改和替换文本
+#### `03.1` 词移动
 
-``` text
-      1       10        20        30        40        50        60        70        80
-     .|________|_________|_________|_________|_________|_________|_________|_________|.
-N+ 1 |                                                                 switch case:   |
-N+ 2 || cc, S --------------------------------------------->|            ~ g~{motion} |
-N+ 3 |                                       | c$, C ------>| Change   lowercase:     |
-N+ 4 |                                       s                             gu{motion} |
-N+ 5 |                                       |                         uppercase:     |
-N+ 6 |    The The quick brown fox jumps over █he lazy dog.   \N            gU{motion} |
-N+ 7 |                                       |                         ROT13:         |
-N+ 8 | filter:                               r                Replace      g?{motion} |
-N+ 9 |   == ={motion}                                                  adding:        |
-N+10 | shift:                                                            CTRL-A       |
-N+11 |   << <{motion}                                                  subtracting:   |
-N+12 |   >> >{motion}                                                    CTRL-X       |
-N+13 |                                                                                |
-```
+|  文本对象  |             上一个对象头部              |           上一个对象尾部           |            下一个对象头部            |           下一个对象尾部            |
+| :--------: | :-------------------------------------: | :--------------------------------: | :----------------------------------: | :---------------------------------: |
+|    单词    | ++'b'++<br>++shift+left++<br>(backward) |        ++'g'++ ++'e'++<br>         | ++'w'++<br>++shift+right++<br>(word) |          ++'e'++<br>(end)           |
+|    字串    | ++'B'++<br>++ctrl+left++<br>(Backward)  |        ++'g'++ ++'E'++<br>         | ++'W'++<br>++ctrl+right++<br>(WORD)  |          ++'E'++<br>(End)           |
+|    句子    |                 ++'('++                 |                                    |               ++')'++                |
+|    段落    |             ++brace-left++              |                                    |           ++brace-right++            |
+|    小节    |    ++bracket-left++ ++bracket-left++    | ++bracket-left++ ++bracket-right++ |  ++bracket-right++ ++bracket-left++  | ++bracket-right++ ++bracket-right++ |
+|   圆括号   |        ++bracket-left++ ++'('++         |                                    |                                      |      ++bracket-right++ ++')'++      |
+|   花括号   |     ++bracket-left++ ++brace-left++     |                                    |                                      |  ++bracket-right++ ++brace-right++  |
+|    方法    |        ++bracket-left++ ++'m'++         |      ++bracket-left++ ++'M'++      |      ++bracket-right++ ++'m'++       |      ++bracket-right++ ++'M'++      |
+| 预处理分支 |        ++bracket-left++ ++'#'++         |                                    |                                      |      ++bracket-right++ ++'#'++      |
+|   块注释   |        ++bracket-left++ ++'*'++         |                                    |                                      |      ++bracket-right++ ++'*'++      |
 
-### 重复改动
+#### `03.2` 移动到行首或行尾
 
-*   <kbd>.</kbd> 重复改动
-*   <kbd>q</kbd><kbd>{register}</kbd> 开始录制宏
-*   <kbd>q</kbd> 结束录制宏
-*   <kbd>@</kbd><kbd>{register}</kbd> 执行宏
-*   <kbd>@</kbd><kbd>@</kbd> 重复执行宏
+|        |       行首        |              非空行首               |       指定列       |        非空行尾        |        行尾        |
+| :----: | :---------------: | :---------------------------------: | :----------------: | :--------------------: | :----------------: |
+| 上一行 |                   |              ++minus++              |                    |
+|  本行  | ++0++<br>++home++ |               ++'^'++               | ++"列号"++ ++bar++ | ++'g'++ ++underscore++ | ++'$'++<br>++end++ |
+| 下一行 |                   | ++plus++<br>++ctrl+m++<br>++enter++ |                    |
 
-## 常用命令
+#### `03.3` 移动到一个指定的字符
 
-### 替代
+|           向左寻找           |           向左直到           |           向右直到           |           向右寻找           |
+| :--------------------------: | :--------------------------: | :--------------------------: | :--------------------------: |
+| ++'F'++ ++"字符"++<br>(Find) | ++'T'++ ++"字符"++<br>(Till) | ++'t'++ ++"字符"++<br>(till) | ++'f'++ ++"字符"++<br>(find) |
 
-``` vim
-:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
+| 反向重复  |   同向重复    |
+| :-------: | :-----------: |
+| ++comma++ | ++semicolon++ |
 
-" range ::= {line}
-"         | {line-start}, {line-stop-after-cursor}
-"         | {line-start}; {line-stop-after-start}
-"         | ...
-"
-" line* ::= {number}  行号
-"         | .         当前行
-"         | $         文件的最后一行
-"         | %         全文件，等同于 1,$
-"         | ...
-"
-" flags :+= c         确认每个替代
-"         | e         忽略错误
-"         | g         对所有匹配，而不是首个匹配进行替代
-"         | ...
-"         | n         报告匹配次数，而不真的替代
-"         | ...
+#### `03.4` 括号匹配
 
-" 在整个文件替换，逐个确认
-:%s/{pattern}/{string}/cg
-```
+++"%"++
 
-### 设置编码
+#### `03.5` 移动到指定的行
 
-``` vim
-:set encoding=utf-8
-"    end=utf-8
+|   目的行   |            行为            |       行为2        |
+| :--------: | :------------------------: | :----------------: |
+|    首行    |      ++'g'++ ++'g'++       |   ++ctrl+home++    |
+| 按行号指定 | ++"行号"++ ++'g'++ ++'g'++ | ++"行号"++ ++'G'++ |
+| 按进度指定 |     ++"进度"++ ++'%'++     |
+|    尾行    |          ++'G'++           |    ++ctrl+end++    |
 
-:set fileencodings=utf-8
-"    fencs=utf-8
+| 页内目的行 |  行为   |   助记   |
+| :--------: | :-----: | :------: |
+|  本页顶部  | ++'H'++ |  (High)  |
+|  本页中部  | ++'M'++ | (Middle) |
+|  本页底部  | ++'L'++ |  (Low)   |
 
-:set termencoding=utf-8
-"    tenc=utf-8
-```
+#### `03.6` 确定当前位置
 
-### 设置行尾序列
+++ctrl+g++
 
-``` vim
-:set fileformat={dos|unix|mac}
-"    ff={dos|unix|mac}
-```
+#### `03.7` 滚屏
+
+|   视口   |           行为            |   行为 2    |  行为 3   |
+| :------: | :-----------------------: | :---------: | :-------: |
+| 上移一页 | ++ctrl+b++<br>(Backwards) | ++shift+u++ | ++pg-up++ |
+| 上移半页 |  ++ctrl+u++<br>(Upwards)  |
+| 上移一行 |        ++ctrl+y++         |
+| 下移一行 |   ++ctrl+e++<br>(Extra)   |
+| 下移半页 | ++ctrl+d++<br>(Downwards) |
+| 下移一页 | ++ctrl+f++<br>(Forwards)  | ++shift+d++ | ++pg-dn++ |
+
+|    效果    |            行为             |    并左移到句首    |
+| :--------: | :-------------------------: | :----------------: |
+| 当前行居上 |  ++'z'++ ++'t'++<br>(top)   | ++'z'++ ++enter++  |
+| 当前行居中 |       ++'z'++ ++'z'++       | ++'z'++ ++period++ |
+| 当前行居下 | ++'z'++ ++'b'++<br>(bottom) | ++'z'++ ++minus++  |
+
+#### `03.8` 简单查找
+
+|  逆向查找   |  顺向查找   |
+| :---------: | :---------: |
+| `?<字符串>` | `/<字符串>` |
+
+|          | 逆向查找光标下单词 | 顺向查找光标下单词 |
+| :------: | :----------------: | :----------------: |
+| 全字匹配 |      ++'#'++       |      ++'*'++       |
+| 部分匹配 |  ++'g'++ ++'#'++   |  ++'#'++ ++'*'++   |
+
+| 反向重复 | 同向重复 |
+| :------: | :------: |
+| ++'N'++  | ++'n'++  |
+
+#### `03.10` 使用标记
+
+|     效果     |         缓冲区标记         |          全局标记          |
+| :----------: | :------------------------: | :------------------------: |
+|   设定标记   |     ++'m'++ ++"a-z"++      |     ++'m'++ ++"A-Z"++      |
+|  跳转到标记  |    ++grave++ ++"a-z"++     |    ++grave++ ++"A-Z"++     |
+| ～的非空行首 | ++single-quote++ ++"a-z"++ | ++single-quote++ ++"A-Z"++ |
+|  列出标记表  |          `:marks`          |
+
+| 列出跳转表 |   跳转到更早的标记    |   跳转到上一标记    |   跳转到更新的标记    |
+| :--------: | :-------------------: | :-----------------: | :-------------------: |
+| `:ju[mps]` | ++ctrl+o++<br>(Older) | ++grave++ ++grave++ | ++ctrl+i++<br>++tab++ |
+
+### `usr_04` 做小改动
+
+|       操作符＼动作       |            整行            | ++'h'++ | ++'l'++ | ++'$'++ |
+| :----------------------: | :------------------------: | :-----: | :-----: | :-----: |
+| 删除 ++'d'++<br>(delete) |      ++'d'++ ++'d'++       | ++'X'++ | ++'x'++ | ++'D'++ |
+| 修改 ++'c'++<br>(change) | ++'c'++ ++'c'++<br>++'S'++ |         | ++'s'++ | ++'C'++ |
+|  抽出 ++'y'++<br>(yank)  | ++'y'++ ++'y'++<br>++'Y'++ |
+
+| 效果  |  行为   |   助记    |
+| :---: | :-----: | :-------: |
+| 插入  | ++'i'++ | (insert)  |
+| 附加  | ++'a'++ | (append)  |
+| 替换  | ++'r'++ | (replace) |
+| 放置  | ++'p'++ |   (put)   |
+| 放置  | ++'P'++ |   (Put)   |
+
+#### `04.3` 重复一个修改
+
+++period++
+
+#### `04.4` 可视模式
+
+|   效果   |    行为    |   助记   |
+| :------: | :--------: | :------: |
+| 可视模式 |  ++'v'++   | (visual) |
+| 按行选择 |  ++'V'++   | (Visual) |
+| 列块选择 | ++ctrl+v++ |          |
+|  水平端  |  ++'o'++   | (other)  |
+|  对角端  |  ++'O'++   | (Other)  |
+
+#### `04.7` 使用剪贴板
+
+| 操作                            | 效果                 |
+| :------------------------------ | :------------------- |
+| `:reg[isters]`                  | 列出编号和命名寄存器 |
+| ++double-quote++ ++"0-9"++      | 编号寄存器           |
+| ++double-quote++ ++"a-z"++      | 命名寄存器           |
+| ++double-quote++ ++'*'++        | 主选择区寄存器       |
+| ++double-quote++ ++plus++       | 剪切板寄存器         |
+| ++double-quote++ ++tilde++      | 拖放寄存器           |
+| ++double-quote++ ++underscore++ | 黑洞寄存器           |
+
+#### `04.8` 文本对象
+
+|                  |                             (inner 内含)                             |                               (a 一个)                               |
+| :--------------: | :------------------------------------------------------------------: | :------------------------------------------------------------------: |
+|   (word 单词)    |                           ++'i'++ ++'w'++                            |                           ++'a'++ ++'w'++                            |
+|   (WORD 字串)    |                           ++'i'++ ++'W'++                            |                           ++'a'++ ++'W'++                            |
+| (sentence 句子)  |                           ++'i'++ ++'s'++                            |                           ++'a'++ ++'s'++                            |
+| (paragraph 段落) |                           ++'i'++ ++'p'++                            |                           ++'a'++ ++'p'++                            |
+|  (block 圆括号)  |        ++'i'++ ++'b'++<br>++'i'++ ++'('++<br>++'i'++ ++')'++         |        ++'a'++ ++'b'++<br>++'a'++ ++'('++<br>++'a'++ ++')'++         |
+|     (方括号)     |        ++'i'++ ++bracket-left++<br>++'i'++ ++bracket-right++         |        ++'a'++ ++bracket-left++<br>++'a'++ ++bracket-right++         |
+|  (Block 花括号)  | ++'i'++ ++'B'++<br>++'i'++ ++brace-left++<br>++'i'++ ++brace-right++ | ++'a'++ ++'B'++<br>++'a'++ ++brace-left++<br>++'a'++ ++brace-right++ |
+|     (尖括号)     |               ++'i'++ ++less++<br>++'i'++ ++greater++                |               ++'a'++ ++less++<br>++'a'++ ++greater++                |
+|    (tag 标签)    |                           ++'i'++ ++'t'++                            |                           ++'a'++ ++'t'++                            |
+|  (双引号字符串)  |                       ++'i'++ ++double-quote++                       |                       ++'a'++ ++double-quote++                       |
+|  (单引号字符串)  |                       ++'i'++ ++single-quote++                       |                       ++'a'++ ++single-quote++                       |
+|  (反引号字符串)  |                          ++'i'++ ++grave++                           |                          ++'a'++ ++grave++                           |
+
+#### `04.9` 替换模式
+
+++'R'++
 
 <!----------------------------------------------------------------------------->
 
@@ -267,3 +342,6 @@ N+13 |                                                                          
 [Vundle]: https://github.com/VundleVim/Vundle.vim
 
 *[PaaS]: Platform as a Service
+*[Vim]:  Vi IMproved
+
+<!-- vim: set ts=4 et: -->
