@@ -4,6 +4,7 @@
 
 参见：
 
+*   [Vim Awesome](https://vimawesome.com/)
 *   [Vim Cheat Sheet](https://vim.rtorr.com/lang/zh_cn)
 *   [Vim Chinese Documentation](http://vimcdoc.sourceforge.net/)
     *   帮助总览 [VIM: help](http://vimcdoc.sourceforge.net/doc/help.html)
@@ -32,11 +33,51 @@
     %USERPROFILE%> vim %USERPROFILE%\_vimrc
     ```
 
+0.  安装 [vim-plug]
+
+    ``` ps1con
+    PS $env:USERPROFILE> Invoke-WebRequest -UseBasicParsing https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+                         New-Item $HOME\vimfiles\autoload\plug.vim -Force
+    PS abbr.           > iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+                         ni $HOME\vimfiles\autoload\plug.vim -f
+    ```
+
+<!--
 0.  安装 [Vundle]（需要 Git 和 curl）
 
     ``` doscon
     %USERPROFILE%> git clone https://github.com/VundleVim/Vundle.vim.git ^
                              %USERPROFILE%\vimfiles\bundle\Vundle.vim
+    ```
+
+0.  Vundle 需要的 `vimrc`
+
+    ``` vim
+    " Vundle
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    if !has('win32')
+      set nocompatible
+    endif
+    filetype off
+    if has('win32')
+      set shellslash
+    endif
+    
+    if has('win32')
+      set runtimepath+=~/vimfiles/bundle/Vundle.vim
+      call vundle#begin('~/vimfiles/bundle')
+    else
+      set runtimepath+=~/.vim/bundle/Vundle.vim
+      call vundle#begin()
+    endif
+    Plugin 'VundleVim/Vundle.vim'
+    
+    " 在此处列出偏爱的插件：
+    " 偏爱的插件列表结束。
+
+    call vundle#end()
+    filetype plugin indent on
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     ```
 
 0.  通过 Vundle 安装插件
@@ -48,6 +89,7 @@
     ``` vim
     :PluginInstall
     ```
+-->
 
 ## 我偏爱的 `vimrc`
 
@@ -56,33 +98,39 @@
 ```
 
 ``` vim
-" Vundle
+" vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if !has('win32')
-  set nocompatible
-endif
-filetype off
 if has('win32')
-  set shellslash
-endif
-
-if has('win32')
-  set runtimepath+=~/vimfiles/bundle/Vundle.vim
-  call vundle#begin('~/vimfiles/bundle')
+  call plug#begin('~/vimfiles/plugged')
 else
-  set runtimepath+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+  call plug#begin('~/.vim/plugged')
 endif
-Plugin 'VundleVim/Vundle.vim'
 
 " 在此处列出偏爱的插件：
-"Plugin 'ycm-core/YouCompleteMe'  " https://github.com/ycm-core/YouCompleteMe  智能补全
-Plugin 'yianwillis/vimcdoc'       " https://github.com/yianwillis/vimcdoc      中文文档
-Plugin 'vim-airline/vim-airline'  " https://github.com/vim-airline/vim-airline 状态栏
+Plug 'altercation/vim-colors-solarized'  " 主题
+Plug 'airblade/vim-gitgutter'            " 文本内 Git 变更呈现
+Plug 'flazz/vim-colorschemes'            " 主题包
+Plug 'godlygeek/tabular'                 " 文本对齐
+Plug 'junegunn/goyo.vim'                 " 黑屋子模式
+Plug 'junegunn/limelight.vim'            " 焦点外虚化
+Plug 'kien/ctrlp.vim'                    " 转到文件
+Plug 'luochen1990/rainbow'               " 彩虹括号
+Plug 'mhinz/vim-startify'                " 起始页
+"Plug 'neoclide/coc.nvim'                " 基于 LSP 的智能补全，需要 nodejs >= 10.12
+Plug 'sheerun/vim-polyglot'              " 扩展语言包
+Plug 'scrooloose/nerdtree'               " 文件树浏览器
+Plug 'tpope/vim-commentary'              " 注释编辑
+Plug 'tpope/vim-repeat'                  " 更好的重复
+Plug 'tpope/vim-speeddating'             " 日期增减
+Plug 'tpope/vim-surround'                " 括号编辑
+Plug 'vim-airline/vim-airline'           " 状态栏
+Plug 'vim-scripts/YankRing.vim'          " 剪贴板可视化
+Plug 'w0rp/ale'                          " 语法检查
+"Plug 'ycm-core/YouCompleteMe'           " 基于 Clang 的智能补全
+Plug 'yianwillis/vimcdoc'                " 中文文档
 " 偏爱的插件列表结束。
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 默认配置
@@ -111,7 +159,7 @@ set termencoding=utf-8
 " precedes U+2026 … Horizontal Ellipsis
 " conceal
 " nbsp     U+23B5 ⎵ Bottom Square Bracke
-set listchars=eol:⏎,tab:\ \ ⁞,space:·,extends:…,precedes:…,nbsp:⎵
+set listchars=eol:⏎,tab:⁞\ ,space:·,extends:…,precedes:…,nbsp:⎵
 set list
 
 " N
@@ -338,8 +386,9 @@ o :|                 /      |     |    |     |                  |
 
 <!----------------------------------------------------------------------------->
 
-[Vim]:    https://www.vim.org/
-[Vundle]: https://github.com/VundleVim/Vundle.vim
+[Vim]:      https://www.vim.org/
+[vim-plug]: https://github.com/junegunn/vim-plug
+[Vundle]:   https://github.com/VundleVim/Vundle.vim
 
 *[PaaS]: Platform as a Service
 *[Vim]:  Vi IMproved
