@@ -19,6 +19,39 @@
 
 ## 运行 Vim
 
+### :material-ubuntu: Ubuntu
+
+1.  安装 Vim
+
+    ``` console
+    [sudoer@host ~]$ sudo apt install vim
+    ```
+
+0.  编辑 `vimrc`
+
+    ``` console
+    [sudoer@host ~]$ vim ~/.vimrc
+    ```
+
+0.  安装 [vim-plug]
+
+    ``` console
+    [sudoer@host ~]$ curl --fail --location --output ~/.vim/autoload/plug.vim --create-dirs \
+                     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    [abbr.        ]$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+                     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    ```
+
+0.  通过 vim-plug 安装插件
+
+    ``` console
+    [sudoer@host ~]$ vim
+    ```
+
+    ``` vim
+    :PlugInstall
+    ```
+
 ### :material-microsoft-windows: Windows 10 和 Scoop
 
 1.  安装 Vim

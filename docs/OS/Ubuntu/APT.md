@@ -27,7 +27,7 @@ APT 使用 dpkg 格式安装包，可以通过 [Keryx] 进行离线安装、升�
 
     参见 <https://mirrors.ustc.edu.cn/kali/>。
 
-0.  同步索引
+0.  更新索引
 
     ``` console
     [sudoer@host ~]$ sudo apt update
@@ -53,13 +53,19 @@ APT 使用 dpkg 格式安装包，可以通过 [Keryx] 进行离线安装、升�
 
     参见 <https://developer.aliyun.com/mirror/ubuntu>。
 
-0.  同步索引
+0.  更新索引
 
     ``` console
     [sudoer@host ~]$ sudo apt update
     ```
 
 ## `apt` 命令
+
+### 更新索引
+
+``` console
+[sudoer@host ~]$ sudo apt update
+```
 
 ### 更新包
 
