@@ -1,6 +1,6 @@
-# Cross the Great Firewall
+# GFW
 
-执剑而礼。
+执剑而礼。[^Great Firewall on Wikipedia]
 
 ## 域名解析服务提供商
 
@@ -40,7 +40,11 @@
 
 <!----------------------------------------------------------------------------->
 
+[^Great Firewall on Wikipedia]: [Great Firewall - Wikipedia](https://wikipedia.org/wiki/Great_Firewall)
+
 [阿里 DNS]:   https://alidns.com/
 [百度 DNS]:   https://dudns.baidu.com/intro/publicdns/
 [Google DNS]: https://developers.google.com/speed/public-dns/
 [OpenDNS]:    https://www.opendns.com/
+
+*[GFW]: Great Firewall

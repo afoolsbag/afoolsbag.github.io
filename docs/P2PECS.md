@@ -1,68 +1,57 @@
-# 点对点电子货币系统
+# P2PECS
 
-点对点电子货币系统（Peer-to-Peer Electronic Cash Systems）
+点对点电子货币系统（P2PECS）。[^Cryptocurrency on Wikipedia]
 
-[*Bitcoin: A Peer-to-Peer Electronic Cash System*](https://bitcoin.org/bitcoin.pdf) <sub>
-    [*cmn-Hans*](https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf) </sub>
+参见 [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) ([cmn-Hans](https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf))。
 
-资讯
-| [*巴比特*](https://8btc.com/)
-| [*币世界*](https://bishijie.com/)
-| [*链闻*](https://chainnews.com/)
-| [*金色财经*](https://jinse.com/)
-| [*Readhub - 区块链快讯*](https://readhub.cn/blockchain)
-| [*陀螺财金*](https://tuoluocaijing.cn/)
+## 资讯
 
-行情
-| [*CoinMarketCap*](https://coinmarketcap.com/)
-| [*非小号*](https://feixiaohao.com/)
-| [*Tokenview*](https://tokenview.com/)
+恐慌和贪婪指数：[Crypto Dashboard](https://alternative.me/crypto/)
 
-指数
-| <https://alternative.me/crypto/>
+[巴比特](https://8btc.com/)
+| [币世界](https://bishijie.com/)
+| [链闻](https://chainnews.com/)
+| [金色财经](https://jinse.com/)
+| [Readhub](https://readhub.cn/blockchain)
+| [陀螺财金](https://tuoluocaijing.cn/)
 
+## 币种
 
-电子货币[*列表*](https://www.feixiaohao.com/)
+| 发行时间   | 币种              |               符号                | 共识机制        |
+| :--------- | :---------------- | :-------------------------------: | :-------------- |
+| 2018-01-31 | 柚子币 [EOS.IO]   |               `EOS`               |
+| 2015-07-30 | 以太坊 [Ethereum] |     :material-ethereum: `ETH`     | PoW: Ethash     |
+| 2014-10-06 | 泰达币 [Tether]   |             ₮ `USDT`              |
+| 2014-04-18 | 门罗币 [Monero]   | :fontawesome-brands-monero: `XMR` | PoW: CryptoNote |
+| 2012       | 瑞波币 [Ripple]   |               `XRP`               |
+| 2011-10-07 | 莱特币 [Litecoin] |     :material-litecoin: `LTC`     | PoW: Scrypt     |
+| 2009-01-03 | 比特币 [Bitcoin]  |     :material-bitcoin: `BTC`      | PoW: SHA-256    |
 
-*   比特币（BTC），发行于 2009 年 01 月 03 日
-*   莱特币（LTC），发行于 2011 年 11 月 09 日
-*   以太坊（ETH），发行于 2015 年 03 月 20 日
-*   柚子（EOS），
+参见：
 
-交易所[*列表*](https://www.feixiaohao.com/exchange/)
+*   [非小号 § 行情](https://www.feixiaohao.com/)
+*   [Tokenview](https://tokenview.com/)
+*   [CoinMarketCap](https://coinmarketcap.com/)
 
-*   [*火币*](https://www.huobi.com/zh-cn/)
-*   [*币安*](https://www.binance.com/cn)
-*   [*OKEx*](https://www.okex.com/)
+## 交易所
 
-## 期货
----
+[币安](https://www.binance.com/cn) | [火币](https://www.huobi.com/zh-cn/) | [OKEx](https://www.okex.com/)
 
-*   现货：一手交钱，一手交货。
-*   远期合约：货物尚未产出，提前签订合约，待货物产出后按合约履行。
-    *   套期保值；
-    *   毁约风险：其时价差甚于定金，以利计，不如毁约；
-    *   质量风险：货物质量须买方自行查验；
-    *   交易风险：卖方因故无法产出货物。
-*   标准期货合约：规定了商品质量、商品数量、交割时间、交割地点和交割方式。
-    *   卖方：提供仓单证明或保证金，持有卖方合约，待交割后退还保证金；
-    *   买方：提供保证金，持有买方合约，交割时保证金用作预付款；
-    *   保证金交易制度：假定 `10%` 保证金，有
+参见：
 
-|  合约价格 |  结余 | 保证金 |      现金 |        |      现金 | 保证金 |  结余 | 说明 |
-| ---------:| -----:| ------:| ---------:|:------:| ---------:| ------:| -----:|:---- |
-| **10000** |     0 |   1000 | **-1000** |        | **-1000** |   1000 |     0 | **开仓**
-| **11000** | -1000 |   1100 | **-2100** | >1000> | **-1000** |   2000 | +1000 | 合约**上涨 10%**
-| **16500** | -6500 |   1650 | **-8150** | >5500> | **-1000** |   7500 | +6500 | 合约**上涨 50%**
-|  **8250** | +1750 |   9900 | **-8150** | <8250< | **-2575** |    825 | -1750 | 合约**下跌 50%**
-|  **8250** | +1750 |      0 | **+1750** |        | **-1750** |      0 | -1750 | **平仓**
+*    [非小号 § 平台](https://www.feixiaohao.com/exchange/)
 
-## 门罗币（MXR）
----
+## 交易方式
 
-门罗币（Monero）发行于 2014 年 04 月 18 日，官网 <https://getmonero.org/>。
+### 现货
 
-CryptoNote 的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf)。
+### 期货
+
+### 期权
+
+## 门罗币（:fontawesome-brands-monero: `XMR`）
+
+### 教程
 
 头等仓上的《精通门罗币》翻译连载：
 
@@ -82,78 +71,89 @@ CryptoNote 的白皮书 [CryptoNote v 2.0](https://cryptonote.org/whitepaper.pdf
 
 ### 钱包
 
-*   种子密语（seed）：需要严格保密
-*   私钥（private keys）：由种子密语生成，需要严格保密
-*   查看公钥（public view keys）：由种子密语生成，
-*   花费公钥（public spend keys）：由种子密语生成，
-*   主地址：由公钥生成，唯一，以 `4` 起头的 95 位字符串
-*   子地址：由公钥生成，以 `8` 起头的 95 位字符串
+| 术语     | 英文              | 笔记                                        |
+| :------- | :---------------- | :------------------------------------------ |
+| 种子密语 | seed              | 需要严格保密                                |
+| 私钥     | private keys      | 由种子密语生成，需要严格保密                |
+| 查看公钥 | public view keys  | 由种子密语生成                              |
+| 花费公钥 | public spend keys | 由种子密语生成                              |
+| 主地址   |                   | 由公钥生成，唯一，以 `4` 起头的 95 位字符串 |
+| 子地址   |                   | 由公钥生成，以 `8` 起头的 95 位字符串       |
 
 ### 挖矿
 
-速率单位：
+1 GH/s = 10^3^ MH/s = 10^6^ kH/s = 10^9^ H/s
 
-*   每秒散列，H/s，hashes per seconds
-*   每秒千散列，kH/s，kilo-hashes per seconds
-*   每秒百万散列，MH/s，mega-hashes per seconds
-*   每秒十亿散列，GH/s，giga-hashes per seconds
+[矿机推荐列表](https://web.getmonero.org/get-started/mining/)
 
-矿机和矿池：
+*   [XMRig](https://github.com/xmrig/xmrig)
+*   [XMRig-AMD](https://github.com/xmrig/xmrig-amd)
+*   [XMRig-NVIDIA](https://github.com/xmrig/xmrig-nvidia)
 
-*   [*矿机推荐列表*](https://web.getmonero.org/get-started/mining/)
-*   [*XMRig*](https://github.com/xmrig/xmrig)
-*   [*XMRig-AMD*](https://github.com/xmrig/xmrig-amd)
-*   [*XMRig-NVIDIA*](https://github.com/xmrig/xmrig-nvidia)
-*   [*矿池推荐列表*](https://miningpoolstats.stream/monero)
-*   [*F2Pool*](https://www.f2pool.com/)
+[矿池推荐列表](https://miningpoolstats.stream/monero)
 
-#### Windows+CPU+XMRig+F2Pool 简易挖矿流程
+*   [F2Pool](https://www.f2pool.com/)
 
-```cmd
-%USERPROFILE%> CD %TMP%
-%TMP%> _
-:: 下载 https://github.com/xmrig/xmrig/releases/download/v5.11.2/xmrig-5.11.2-msvc-win64.zip 并解压
-%TMP%> CD xmrig-5.11.2
-%TMP%\xmrig-5.11.2> xmrig --url=stratum+tcp://xmr.f2pool.com:13531 ^
-                          --user=<wallet_address>.<custom_name> ^
-                          --pass=x ^
-                          --keepalive ^
-                          --donate-level=1 ^
-                          --cpu-priority=0 ^
-                          --background
-:: abbr.            xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
+#### :material-microsoft-windows: Windows + :material-cpu-64-bit: CPU + XMRig + F2Pool
+
+``` ps1con
+#                    Set-Variable
+PS $env:USERPROFILE> set url https://github.com/xmrig/xmrig/releases/download/v6.6.2/xmrig-6.6.2-msvc-win64.zip
+PS $env:USERPROFILE> set zip $env:TMP\xmrig-6.6.2-msvc-win64.zip
+PS $env:USERPROFILE> set dir $env:TMP\xmrig-6.6.2
+
+PS $env:USERPROFILE> Invoke-WebRequest -UseBasicParsing $url -OutFile $zip
+PS abbr.           > iwr -useb $url -o $zip
+
+PS $env:USERPROFILE> Expand-Archive $zip $dir\..
+
+PS $env:USERPROFILE> $dir\xmrig --url=stratum+tcp://xmr.f2pool.com:13531 ^
+                                --user=<wallet_address>.<custom_name> ^
+                                --pass=x ^
+                                --keepalive ^
+                                --donate-level=1 ^
+                                --cpu-priority=0 ^
+                                --background
+PS abbr.           > $dir\xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
 ```
 
-#### CentOS+CPU+XMRig+F2Pool 简易挖矿流程
+#### :material-linux: Linux + :material-cpu-64-bit: CPU + XMRig + F2Pool
 
-```sh
+``` console
 [user@host ~]$ cd /tmp
-[user@host tmp]$ curl -O https://github.com/xmrig/xmrig/releases/download/v5.11.2/xmrig-5.11.2-xenial-x64.tar.gz
-[user@host tmp]$ tar -xavf xmrig-5.11.2-xenial-x64.tar.gz
-[user@host tmp]$ cd xmrig-5.11.2
-[user@host xmrig-5.11.2]$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
+
+[user@host tmp]$ curl -O https://github.com/xmrig/xmrig/releases/download/v6.6.2/xmrig-6.6.2-linux-x64.tar.gz
+
+[user@host tmp]$ tar -xavf xmrig-6.6.2-linux-x64.tar.gz
+
+[user@host tmp]$ cd xmrig-6.6.2
+
+[user@host xmrig-6.6.2]$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
                                   --user=<wallet_address>.<custom_name> \
                                   --pass=x \
                                   --keepalive \
                                   --donate-level=1 \
                                   --cpu-priority=0 \
                                   --background
-# abbr.                   ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
+[abbr.                 ]$ ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
 ```
 
-#### Ubuntu+CPU+XMRig+F2Pool 简易挖矿流程
+<!----------------------------------------------------------------------------->
 
-```sh
-user@host:~$ cd /tmp
-user@host:/tmp$ wget https://github.com/xmrig/xmrig/releases/download/v5.11.2/xmrig-5.11.2-xenial-x64.tar.gz
-user@host:/tmp$ tar -xavf xmrig-5.11.2-xenial-x64.tar.gz
-user@host:/tmp$ cd xmrig-5.11.2
-user@host:/tmp/xmrig-5.11.2$ ./xmrig --url=stratum+tcp://xmr.f2pool.com:13531 \
-                                     --user=<wallet_address>.<custom_name> \
-                                     --pass=x \
-                                     --keepalive \
-                                     --donate-level=1 \
-                                     --cpu-priority=0 \
-                                     --background
-# abbr.                      ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u <wallet_address>.<custom_name> -p x -k --donate-level=1 --cpu-priority=0 -B
-```
+[^Cryptocurrency on Wikipedia]: [Cryptocurrency - Wikipedia](https://wikipedia.org/wiki/Cryptocurrency).
+
+[Bitcoin]:  https://bitcoin.org/
+[EOS.IO]:   https://eos.io/
+[Ethereum]: https://ethereum.org/
+[Litecoin]: https://litecoin-foundation.org/
+[Monero]:   https://getmonero.org/
+[Ripple]:   https://xrpl.org/
+[Tether]:   https://tether.to/
+
+*[H/s]:    Hashes per Seconds
+*[kH/s]:   Kilo-Hashes per Seconds
+*[MH/s]:   Mega-Hashes per Seconds
+*[GH/s]:   Giga-Hashes per Seconds
+*[P2PECS]: Peer-to-Peer Electronic Cash Systems
+*[PoS]:    Proof-of-Stake
+*[PoW]:    Proof-of-Work
