@@ -1,0 +1,194 @@
+# MkDocs 配置文件
+# https://www.mkdocs.org/user-guide/configuration/
+
+# Project information
+# https://www.mkdocs.org/user-guide/configuration/#project-information
+
+site_name: zhengrr's docs
+site_url: https://afoolsbag.github.io/
+repo_url: https://github.com/afoolsbag/afoolsbag.github.io/
+edit_uri: 'tree/mkdocs/docs'
+site_description: 一份为 zhengrr 定制化的技术备忘。
+site_author: zhengrr
+copyright: CC0-1.0
+
+# Documentation layout
+# https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+
+nav:
+    - index.md
+    - GFW.md
+    - P2PECS.md
+    - 码代码:
+        - CC/CC.md
+        - CC/Crypt.md
+        - CC/Emacs.md
+        - CC/Markdown.md
+        - CC/Vim.md
+        - CC/UML.md
+    - 多媒体:
+        - MM/MM.md
+        - MM/Audacity.md
+        - MM/Blender.md
+        - MM/FFmpeg.md
+        - MM/GIMP.md
+        - MM/GPT-2.md
+        - MM/VLC.md
+    - 中间件:
+        - MW/Ceph.md
+        - MW/FTP.md
+        - MW/Kafka.md
+        - MW/MySQL.md
+        - MW/NGINX.md
+        - MW/nginx-rtmp-module.md
+        - MW/PostgreSQL.md
+        - MW/ZooKeeper.md
+    - 操作系统:
+        - OS/OS.md
+        - Windows:
+            - OS/Windows/Windows.md
+            - OS/Windows/Cheat Engine.md
+            - OS/Windows/Chocolatey.md
+            - OS/Windows/Cmder.md
+            - OS/Windows/Cygwin.md
+            - OS/Windows/Scoop.md
+            - OS/Windows/Terminal.md
+            - OS/Windows/WePE.md
+            - OS/Windows/WSL.md
+        - GNU/Linux:
+            - OS/Linux/Linux.md
+            - OS/Linux/Cockpit.md
+            - OS/Linux/fish.md
+            - OS/Linux/netfilter.md
+            - OS/Linux/networking.md
+            - OS/Linux/tar.md
+            - OS/Linux/tldr.md
+            - OS/Linux/top.md
+            - OS/Linux/users.md
+        - Arch:
+            - OS/Arch/Arch.md
+            - OS/Arch/Pacman.md
+        - CentOS:
+            - OS/CentOS/CentOS.md
+            - OS/CentOS/dnf.md
+        - Ubuntu:
+            - OS/Ubuntu/Ubuntu.md
+            - OS/Ubuntu/APT.md
+        - Tails:
+            - OS/Tails/Tails.md
+        - Kali:
+            - OS/Kali/Kali.md
+            - OS/Kali/DirBuster.md
+            - OS/Kali/Nmap.md
+            - OS/Kali/skipfish.md
+        - OS/VMware.md
+        - OS/VirtualBox.md
+        - OS/Xshell.md
+    - 开发运维:
+        - DevOps/DevOps.md
+        - DevOps/Ansible.md
+        - DevOps/Docker.md
+        - DevOps/Git.md
+        - DevOps/GitLab.md
+        - DevOps/GitFlow.md
+        - DevOps/Jenkins.md
+        - DevOps/Podman.md
+        - DevOps/SQLPad.md
+
+# Build directories
+# https://www.mkdocs.org/user-guide/configuration/#build-directories
+
+theme:
+    name: material  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    favicon: assets/images/book-open-page-variant.png
+    features:
+        - header.autohide
+        - navigation.expand
+#       - navigation.instant
+        - navigation.tabs
+        - toc.autohide
+    icon:
+        logo: material/book-open-page-variant
+        repo: fontawesome/brands/github
+    language: zh
+    palette:
+        scheme: preference
+    # https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md
+
+extra_css:
+#   - https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+
+extra_javascript:
+#   - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+
+# Preview controls
+# https://www.mkdocs.org/user-guide/configuration/#preview-controls
+
+# Formatting options
+# https://www.mkdocs.org/user-guide/configuration/#formatting-options
+
+markdown_extensions:
+#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#   - markdown.extensions.extra
+#   ||
+#   - markdown.extensions.abbr
+#   - markdown.extensions.attr_list
+#   - markdown.extensions.def_list
+#   - markdown.extensions.fenced_code  # DEFAULT
+#   - markdown.extensions.footnotes
+#   - markdown.extensions.md_in_html
+#   - markdown.extensions.tables       # DEFAULT
+#```````````````````````````````````````````````
+    - markdown.extensions.admonition
+#   - markdown.extensions.codehilite
+#   - markdown.extensions.legacy_attrs
+#   - markdown.extensions.legacy_em
+#   - markdown.extensions.meta         # DEFAULT
+#   - markdown.extensions.nl2br
+    - markdown.extensions.sane_lists
+#   - markdown.extensions.smarty
+    - markdown.extensions.toc:         # DEFAULT
+        permalink: true
+        slugify: !!python/name:pymdownx.slugs.uslugify
+#   - markdown.extensions.wikilinks
+#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#   - pymdownx.extra
+#   ||
+    - pymdownx.betterem
+    - markdown.extensions.abbr
+    - markdown.extensions.attr_list
+    - markdown.extensions.def_list
+    - pymdownx.superfences
+    - markdown.extensions.footnotes
+    - markdown.extensions.md_in_html
+    - markdown.extensions.tables       # DEFAULT
+#```````````````````````````````````````````````
+    - pymdownx.arithmatex
+#   - pymdownx.b64
+    - pymdownx.caret
+#   - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+#   - pymdownx.escapeall
+    - pymdownx.highlight
+#   - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink
+    - pymdownx.mark
+#   - pymdownx.pathconverter
+#   - pymdownx.progressbar
+    - pymdownx.saneheaders
+#   - pymdownx.smartsymbols
+#   - pymdownx.snippets
+    - pymdownx.striphtml
+    - pymdownx.tabbed
+    - pymdownx.tasklist
+    - pymdownx.tilde
+
+plugins:
+    - git-revision-date-localized
+    - minify:
+        minify_html: true
+    - search
