@@ -14,7 +14,7 @@ CD "%script_directory%" ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2
 
-mkdocs gh-deploy --remote-branch master --strict --site-dir "%site_directory%" ^
+mkdocs gh-deploy --remote-branch "www" --strict --site-dir "%site_directory%" ^
         && ECHO MkDocs gh-deploy succeed. ^
         || ECHO MkDocs gh-deploy failed. ^
         && CALL :pause_if_double_click ^
