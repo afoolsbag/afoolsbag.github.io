@@ -10,51 +10,35 @@
 
 ### :material-microsoft-windows: Windows 10 和 Scoop
 
-```ps1con
-PS $env:USERPROFILE> scoop install cmder-full
+``` ps1con
+PS $env:USERPROFILE> scoop install cmder[-full]
 ```
 
 ## Cmder 快捷键
 
-### 窗口
+!!! cite
 
-| 动作                           | 快捷键         |
-| :----------------------------- | :------------- |
-| 全局召唤                       | ++ctrl+grave++ |
-| :material-fullscreen: 切换全屏 | ++alt+enter++  |
+    Tab manipulation
+    
+    * <kbd>Ctrl</kbd> + <kbd>T</kbd> : New tab dialog (maybe you want to open cmd as admin?)
+    * <kbd>Ctrl</kbd> + <kbd>W</kbd> : Close tab
+    * <kbd>Ctrl</kbd> + <kbd>D</kbd> : Close tab (if pressed on empty command)
+    * <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>#Number</kbd> : Fast new tab: <kbd>1</kbd> - CMD, <kbd>2</kbd> - PowerShell
+    * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> : Switch to next tab
+    * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> : Switch to previous tab
+    * <kbd>Ctrl</kbd> + <kbd>#Number</kbd> : Switch to tab #Number
+    * <kbd>Alt</kbd> + <kbd>Enter</kbd>: Fullscreen
+    
+    Shell
+    
+    * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd> : Traverse up in directory structure (lovely feature!)
+    * <kbd>End</kbd>, <kbd>Home</kbd>, <kbd>Ctrl</kbd> : Traversing text with as usual on Windows
+    * <kbd>Ctrl</kbd> + <kbd>R</kbd> : History search
+    * <kbd>Shift</kbd> + Mouse : Select and copy text from buffer
+    
+    _(Some shortcuts are not yet documented, though they exist - please document them here)_
 
-### 标签页
-
-| 动作                                               | 快捷键             |
-| :------------------------------------------------- | :----------------- |
-| 新建标签页……                                       | ++ctrl+t++         |
-| 新建 CMD 管理员标签页                              | ++shift+alt+1++    |
-| 新建 CMD 标签页                                    | ++shift+alt+2++    |
-| 新建 :material-powershell: PowerShell 管理员标签页 | ++shift+alt+3++    |
-| 新建 :material-powershell: PowerShell 标签页       | ++shift+alt+4++    |
-| 新建 mintty 管理员标签页                           | ++shift+alt+5++    |
-| 新建 mintty 标签页                                 | ++shift+alt+6++    |
-| 新建 :material-bash: Bash 管理员标签页             | ++shift+alt+7++    |
-| 新建 :material-bash: Bash 标签页                   | ++shift+alt+8++    |
-| 新建 :material-bash: WSL Bash 标签页               | ++shift+alt+9++    |
-| 切换到右一标签页                                   | ++ctrl+tab++       |
-| 切换到左一标签页                                   | ++ctrl+shift+tab++ |
-| 切换到第 ++"数字"++ 个标签页                       | ++ctrl+"数字"++    |
-| 关闭当前标签页                                     | ++ctrl+w++         |
-| 若没有命令，则关闭当前标签页                       | ++ctrl+d++         |
-
-### 命令
-
-| 动作         | 快捷键         |
-| :----------- | :------------- |
-| 返回上级目录 | ++ctrl+alt+u++ |
-| 历史命令搜索 | ++ctrl+r++     |
-
-### 配置
-
-| 动作   | 快捷键        |
-| :----- | :------------ |
-| 设置…… | ++win+alt+p++ |
+参见 [Cmder § Keyboard shortcuts](https://github.com/cmderdev/cmder/blob/master/README.md#keyboard-shortcuts)。
 
 <!----------------------------------------------------------------------------->
 

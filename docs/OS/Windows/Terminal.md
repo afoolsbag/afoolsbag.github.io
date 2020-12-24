@@ -78,6 +78,8 @@
 | :material-format-size: 重置字号               | ++ctrl+0++     |
 | :material-format-font-size-decrease: 缩小字号 | ++ctrl+minus++ |
 
+参见 [Windows Terminal Actions | Microsoft Docs](https://docs.microsoft.com/windows/terminal/customize-settings/actions)。
+
 ## Terminal 个性化
 
 ``` json

@@ -33,7 +33,7 @@ serial number    = ? number ? ;
 
 例如：
 
-``` txt
+``` text
 CNWUHGAS-D003
 |/|_/||/ |__/
 | |  ||  开发 3 号机
@@ -57,72 +57,120 @@ ISO 3166-1:2013 标准中的中国代码
 
 ## Awesome
 
-### 虚拟机
+### 壳层
 
-| Virtual machine                                                | Date       | Note |
-|:-------------------------------------------------------------- |:---------- |:---- |
-| [VMware](https://www.vmware.com/products/workstation-pro.html) | 1999       |
-| [VirtualBox](https://www.virtualbox.org/)                      | 2007-01-15 |
-| [KVM](https://www.linux-kvm.org/)                              | 2007-02-05 | Kernel Virtual Machine
+| 发行日     | POSIX  | Windows      | SSH         | 备注                    |
+| :--------- | :----- | :----------- | :---------- | :---------------------- |
+| 2019-05-13 |        | [Terminal]   |
+| 2017-07-17 |        | [Cmder]      |
+| 2014-02-24 |        | [Clink]      |
+| 2007-03-09 |        | [ConEmu]     |
+| 2006       |        | [PowerShell] |             | [PowerShell - SS64.com] |
+| 2005-02-13 | [fish] |
+| 2000       |        |              | [WinSCP]    |
+| 1999-01-22 |        |              | [PuTTY]     |
+| 1998-06    |        |              | [SecureCRT] |
+| 1994-10-31 | [scsh] |
+| 1990       | [zsh]  |
+| 1989-06-08 | [bash] |              |             | [bash - SS64.com]       |
+| 1989-05-30 | [ash]  |
+| 1987       |        | CMD          |             | [CMD - SS64.com]        |
+| 1983       | [ksh]  |
+| 1983       | [tcsh] |
+| 1978       | csh    |
+| 1977       | sh     |
 
-### 操作系统
-
-| Operation system                       | Date       | Note |
-|:-------------------------------------- |:---------- |:---- |
-| Windows 1.0                            | 1985-11-20 |
-| Linux 0.01                             | 1991-09-17 |
-| [NetBSD](https://netbsd.org/)          | 1993-04-19 |
-| [Debian](https://www.debian.org/)      | 1993-08-16 |
-| [FreeBSD](https://www.freebsd.org/)    | 1993-11-01 |
-| [SUSE](https://www.opensuse.org/)      | 1994-03-07 |
-| [RHEL](https://www.redhat.com/)        | 1995-05-13 | Red Hat 企业版
-| Windows 95                             | 1995-08-15 |
-| [OpenBSD](https://www.openbsd.org/)    | 1996-10-01 |
-| Windows 98                             | 1998-05-15 |
-| [Gentoo](https://gentoo.org/)          | 2000-07-26 |
-| Windows XP                             | 2001-08-24 |
-| [Arch](https://www.archlinux.org/)     | 2002-03-11 |
-| [Fedora](https://getfedora.org/)       | 2003-11-06 | Red Hat 试验版, Linus 使用此 GNU/Linux
-| [CentOS](https://centos.org/)          | 2004-05-14 | Red Hat 社区版
-| [Ubuntu](https://ubuntu.com/)          | 2004-10-20 |
-| [Tails](https://tails.boum.org/)       | 2009-06-23 |
-| Windows 7                              | 2009-07-22 |
-| [Manjaro](https://manjaro.org/)        | 2011-07-10 |
-| [Kali](https://www.kali.org/)          | 2013-03-13 |
-| [Windows 10](https://www.windows.com/) | 2015-07-15 |
+另见 [awesome-console-services](https://github.com/chubin/awesome-console-services#URL-Shortener)。
 
 ### 环境支持
 
-| Environment support                                     | Date       | Note |
-|:------------------------------------------------------- |:---------- |:---- |
-| [Wine](https://www.winehq.org/)                         | 1993-07-04 | 基于 POSIX 的 Windows 兼容层
-| [Cygwin](https://cygwin.com/ "Cygnus Windows")          | 1995       | 基于 Windows 的 POSIX 兼容层
-| [MinGW](http://mingw.org/ "Minimalist GNU for Windows") | 1998-07-01 | 基于 Windows 32 的 POSIX 编译工具链
-| [MinGW-W64](http://mingw-w64.org/)                      | 2005       | 基于 Windows 32/64 的 POSIX 编译工具链
-| [MSYS2](https://www.msys2.org/ "Minimal System")        |            | 基于 Windows 的 POSIX 软件分发和构建平台
+| 发行日     | 环境支持    | 备注                                     |
+| :--------- | :---------- | :--------------------------------------- |
+|            | [MSYS2]     | 基于 Windows 的 POSIX 软件分发和构建平台 |
+| 2005       | [MinGW-W64] | 基于 Windows 32/64 的 POSIX 编译工具链   |
+| 1998-07-01 | [MinGW]     | 基于 Windows 32 的 POSIX 编译工具链      |
+| 1995       | [Cygwin]    | 基于 Windows 的 POSIX 兼容层             |
+| 1993-07-04 | [Wine]      | 基于 POSIX 的 Windows 兼容层             |
 
-### 壳层
+### 操作系统
 
-| Shell                                                        | Date       | Note |
-|:------------------------------------------------------------ |:---------- |:---- |
-| POSIX                                                        | -          | -
-| sh                                                           | 1977       | Bourne Shell
-| csh                                                          | 1978       | C Shell
-| [tcsh](https://www.tcsh.org/)                                | 1983       | TENEX C Shell
-| [ksh](http://kornshell.com/)                                 | 1983       | Korn Shell
-| [ash](https://www.in-ulm.de/~mascheck/various/ash/)          | 1989-05-30 | Almquist Shell
-| [bash](https://www.gnu.org/software/bash/)                   | 1989-06-08 | Bourne-Again Shell，[bash docs on SS64](https://ss64.com/bash/)
-| [zsh](http://www.zsh.org/)                                   | 1990       | Z Shell
-| [scsh](https://scsh.net/)                                    | 1994-10-31 | Scheme Shell
-| [fish](https://fishshell.com/)                               | 2005-02-13 | Friendly Interactive Shell
-| Windows                                                      | -          | -
-| CMD                                                          | 1987       | Command Prompt，[CMD docs on SS64](https://ss64.com/nt/)
-| [PowerShell](https://microsoft.com/powershell/)              | 2006       | [PowerShell docs on SS64](https://ss64.com/ps/)
-| [ConEmu](https://conemu.github.io/)                          | 2007-03-09 | Console Emulator
-| [Clink](https://mridgers.github.io/clink/)                   | 2014-02-24 |
-| [Cmder](https://cmder.net/)                                  | 2017-07-17 | Console Emulator
-| [Terminal](https://github.com/microsoft/terminal)            | 2019-05-13 |
-| Secure Shell                                                 | -          | -
-| [SecureCRT](https://vandyke.com/products/securecrt/)         | 1998-06    |
-| [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/) | 1999-01-22 |
-| [WinSCP](https://winscp.net/)                                | 2000       |
+| 发行日     | 操作系统     | 备注                                   |
+| :--------- | :----------- | :------------------------------------- |
+| 2015-07-15 | [Windows 10] |
+| 2013-03-13 | [Kali]       |
+| 2011-07-10 | [Manjaro]    |
+| 2009-07-22 | Windows 7    |
+| 2009-06-23 | [Tails]      |
+| 2004-10-20 | [Ubuntu]     |
+| 2004-05-14 | [CentOS]     | Red Hat 社区版                         |
+| 2003-11-06 | [Fedora]     | Red Hat 试验版，Linus 使用此 GNU/Linux |
+| 2002-03-11 | [Arch]       |
+| 2001-08-24 | Windows XP   |
+| 2000-07-26 | [Gentoo]     |
+| 1998-05-15 | Windows 98   |
+| 1996-10-01 | [OpenBSD]    |
+| 1995-08-15 | Windows 95   |
+| 1995-05-13 | [RHEL]       | Red Hat 企业版                         |
+| 1994-03-07 | [SUSE]       |
+| 1993-11-01 | [FreeBSD]    |
+| 1993-08-16 | [Debian]     |
+| 1993-04-19 | [NetBSD]     |
+| 1991-09-17 | Linux 0.01   |
+| 1985-11-20 | Windows 1.0  |
+
+### 虚拟机
+
+| 发行日     | 虚拟机       | 备注 |
+| :--------- | :----------- | :--- |
+| 2007-02-05 | [KVM]        |
+| 2007-01-15 | [VirtualBox] |
+| 1999       | [VMware]     |
+
+<!----------------------------------------------------------------------------->
+
+[Arch]:                  https://www.archlinux.org/
+[ash]:                   https://www.in-ulm.de/~mascheck/various/ash/ "Almquist Shell"
+[bash]:                  https://www.gnu.org/software/bash/ "Bourne-Again Shell"
+[bash - SS64.com]:       https://ss64.com/bash/
+[CentOS]:                https://centos.org/ "Community Enterprise Operating System"
+[Clink]:                 https://mridgers.github.io/clink/
+[CMD - SS64.com]:        https://ss64.com/nt/
+[Cmder]:                 https://cmder.net/ "Console Emulator"
+[ConEmu]:                https://conemu.github.io/ "Console Emulator"
+[Cygwin]:                https://cygwin.com/ "Cygnus Windows"
+[Debian]:                https://www.debian.org/
+[Fedora]:                https://getfedora.org/
+[fish]:                  https://fishshell.com/ "Friendly Interactive Shell"
+[FreeBSD]:               https://www.freebsd.org/ "Free Berkeley Software Distribution"
+[Gentoo]:                https://gentoo.org/
+[Kali]:                  https://www.kali.org/
+[ksh]:                   http://kornshell.com/ "Korn Shell"
+[KVM]:                   https://www.linux-kvm.org/ "Kernel Virtual Machine"
+[Manjaro]:               https://manjaro.org/
+[MinGW]:                 http://mingw.org/ "Minimalist GNU for Windows"
+[MinGW-W64]:             http://mingw-w64.org/
+[MSYS2]:                 https://www.msys2.org/ "Minimal System"
+[NetBSD]:                https://netbsd.org/ "Net Berkeley Software Distribution"
+[OpenBSD]:               https://www.openbsd.org/ "Open Berkeley Software Distribution"
+[PowerShell]:            https://microsoft.com/powershell/
+[PowerShell - SS64.com]: https://ss64.com/ps/
+[PuTTY]:                 https://www.chiark.greenend.org.uk/~sgtatham/putty/
+[RHEL]:                  https://www.redhat.com/ "Red Hat Enterprise Linux"
+[scsh]:                  https://scsh.net/ "Scheme Shell"
+[SecureCRT]:             https://vandyke.com/products/securecrt/
+[SUSE]:                  https://www.opensuse.org/ "Software- und System-Entwicklung"
+[tcsh]:                  https://www.tcsh.org/ "TENEX C Shell"
+[Tails]:                 https://tails.boum.org/
+[Terminal]:              https://github.com/microsoft/terminal
+[Ubuntu]:                https://ubuntu.com/
+[VirtualBox]:            https://www.virtualbox.org/
+[VMware]:                https://www.vmware.com/products/workstation-pro.html
+[Wine]:                  https://www.winehq.org/
+[Windows 10]:            https://www.windows.com/
+[WinSCP]:                https://winscp.net/
+[zsh]:                   http://www.zsh.org/ "Z Shell"
+
+*[CMD]: Command Prompt
+*[csh]: C Shell
+*[sh]:  Bourne Shell
+*[SSH]: Secure Shell

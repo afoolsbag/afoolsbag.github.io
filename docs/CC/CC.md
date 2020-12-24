@@ -62,7 +62,7 @@ English Dictionaries
 | [*GB/T 7714-2015*](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C),
   [*Style Guides*](http://www.citethisforme.com/guides/chinese-gb7714-2005-numeric)
 
-### 句法
+### 语法
 
 EBNF
 | [*ISO/IEC 14977:1996*](https://www.iso.org/standard/26153.html)
@@ -81,3 +81,18 @@ reStructuredText
 
 YAML
 | [*YAML*](https://yaml.org/)
+
+[DevDocs](https://devdocs.io/)
+:   API 文档。
+
+[free-programming-books](https://ebookfoundation.github.io/free-programming-books/)
+:   自由编程书籍。
+
+[OverAPI.com](http://overapi.com/)
+:   API 备忘单。
+
+[ProgramCreek.com](https://programcreek.com/)
+:   略。
+
+[计算机书籍控](http://bestcbooks.com/)
+:   略。

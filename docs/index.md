@@ -23,49 +23,49 @@
 
 此时，一位
 
-|                  |                                 |     |
-| ----------------:|:------------------------------- |:--- |
-| 最近普适共同祖先 | Last Universal Common Ancestor  | 【岩石细胞】<br>＋核糖核酸<br>＋诸关键有机分子<br>＋脱氧核糖核酸<br>＋蛋白质
-|         古细菌＋ | +Archeabacteria                 | ＋脂质外膜<br>＋视黄醛
-|         真细菌＋ | +Eubacteria                     | ＋脂质外膜<br>＋卟啉和光合作用<br>【大氧化事件】<br>【休伦冰河期】<br>＋有氧呼吸
-| 最近真核共同祖先 | Last Eukaryotic Common Ancestor | 【内共生】
-|           真核域 | Eukaryota                       | ＋细胞核<br>＋线粒体
+|                  |                                 |                                                                                  |
+| ---------------: | :------------------------------ | :------------------------------------------------------------------------------- |
+| 最近普适共同祖先 | Last Universal Common Ancestor  | 【岩石细胞】<br>＋核糖核酸<br>＋诸关键有机分子<br>＋脱氧核糖核酸<br>＋蛋白质     |
+|         古细菌＋ | +Archeabacteria                 | ＋脂质外膜<br>＋视黄醛                                                           |
+|         真细菌＋ | +Eubacteria                     | ＋脂质外膜<br>＋卟啉和光合作用<br>【大氧化事件】<br>【休伦冰河期】<br>＋有氧呼吸 |
+| 最近真核共同祖先 | Last Eukaryotic Common Ancestor | 【内共生】                                                                       |
+|           真核域 | Eukaryota                       | ＋细胞核<br>＋线粒体                                                             |
 |       单鞭毛生物 | Unikonta                        |
 |       后鞭毛生物 | Opisthokonta                    |
 |           动物界 | Animalia                        |
 |   真后生动物亚界 | Eumetazoa                       |
 |   两侧对称动物类 | Bilateria                       |
 |       肾管动物类 | Nephrozoa                       |
-|     后口动物总门 | Deuterostomia                   | ＋鳃孔
-|       脊索动物门 | Chordata                        | ＋脊索
+|     后口动物总门 | Deuterostomia                   | ＋鳃孔                                                                           |
+|       脊索动物门 | Chordata                        | ＋脊索                                                                           |
 |           有头类 | Craniata                        |
-|     脊椎动物亚门 | Vertebrata                      | ＋脊椎（－脊索）<br>＋髓鞘<br>＋偶鳍
-|         有颌下门 | Gnathostomata                   | ＋下颌（－两对鳃弓）
+|     脊椎动物亚门 | Vertebrata                      | ＋脊椎（－脊索）<br>＋髓鞘<br>＋偶鳍                                             |
+|         有颌下门 | Gnathostomata                   | ＋下颌（－两对鳃弓）                                                             |
 |       真有颔小门 | Eugnathostomata                 |
 |           真口类 | Teleostomi                      |
-|       硬骨鱼高纲 | Osteichthyes                    | ＋鱼鳔
-|         肉鳍鱼类 | Sarcopterygii                   | 【淡水】
-|         四足形类 | Tetrapodomorpha                 | 【泥盆纪末灭绝】<br>＋肺（－鱼鳔）
+|       硬骨鱼高纲 | Osteichthyes                    | ＋鱼鳔                                                                           |
+|         肉鳍鱼类 | Sarcopterygii                   | 【淡水】                                                                         |
+|         四足形类 | Tetrapodomorpha                 | 【泥盆纪末灭绝】<br>＋肺（－鱼鳔）                                               |
 |         始四足类 | Eotetrapodiformes               |
 |         希望螈类 | Elpistostegalia                 |
 |           坚头类 | Stegocephalia                   |
-|         四足总纲 | Tetrapoda                       | 【陆地】<br>＋鼓膜<br>＋五指
-|         爬行形类 | Reptiliomorpha                  | 【干旱】<br>＋角质层<br>＋指甲
-|         羊膜动物 | Amniota                         | ＋羊膜卵
-|           合弓纲 | Synapsida                       | ＋牙齿分化<br>＋四肢着地
+|         四足总纲 | Tetrapoda                       | 【陆地】<br>＋鼓膜<br>＋五指                                                     |
+|         爬行形类 | Reptiliomorpha                  | 【干旱】<br>＋角质层<br>＋指甲                                                   |
+|         羊膜动物 | Amniota                         | ＋羊膜卵                                                                         |
+|           合弓纲 | Synapsida                       | ＋牙齿分化<br>＋四肢着地                                                         |
 |       真盘龙亚目 | Eupelycosauria                  |
 |         楔齿龙类 | Sphenacodontia                  |
 |       楔齿龙超科 | Sphenacodontoidea               |
-|           兽孔目 | Therapsida                      | 【奥尔森灭绝】
+|           兽孔目 | Therapsida                      | 【奥尔森灭绝】                                                                   |
 |           兽齿类 | Theriodontia                    |
-|         真兽齿类 | Eutheriodontia                  | ＋汗腺<br>＋毛发<br>（恒温）<br>＋腭（鼻腔）<br>【二叠纪末大灭绝】
+|         真兽齿类 | Eutheriodontia                  | ＋汗腺<br>＋毛发<br>（恒温）<br>＋腭（鼻腔）<br>【二叠纪末大灭绝】               |
 |       犬齿兽亚目 | Cynodontia                      |
 |       外犬齿兽类 | Epicynodontia                   |
 |     真犬齿兽下目 | Eucynodontia                    |
 |       新颌兽小目 | Probainognathia                 |
 |   奇尼瓜齿兽总科 | Chiniquodontoidea               |
 |       原带齿兽类 | Prozostrodontia                 |
-|       哺乳形态类 | Mammaliamorpha                  | ＋嗅觉<br>＋听觉<br>＋新脑皮质
+|       哺乳形态类 | Mammaliamorpha                  | ＋嗅觉<br>＋听觉<br>＋新脑皮质                                                   |
 |         哺乳形类 | Mammaliaformes                  |
 |         哺乳动物 | Mammalia                        |
 |         兽形亚纲 | Theriiformes                    |
@@ -100,82 +100,50 @@
 *   [Taxonomy - NCBI](https://www.ncbi.nlm.nih.gov/taxonomy)（美国国家生物技术信息中心）
 *   [International Commission on Stratigraphy § 国际年代地层表](https://stratigraphy.org/chart)
 
-## Awesome
+## [Awesome](https://awesome.re/)
 
-[awesome](https://awesome.re/)
-:   Awesome awesome.
+### 资讯
 
-[Alexa Internet](https://www.alexa.com/)
-:   网络流量排名。
+| 资讯                          | 备注 |
+| :---------------------------- | :--- |
+| [后续](https://houxuapp.com/) | 新闻 |
 
-[Baidu](https://www.baidu.com/)
-:   百度搜索。
 
-[Bing](https://bing.com/)
-:   必应搜索。
+#### 行业资讯
 
-[BTDigg](https://btdig.com/)
-:   BitTorrent 搜索。
+| 行业资讯                                      | 备注         |
+| :-------------------------------------------- | :----------- |
+| [Alexa Internet](https://www.alexa.com/)      | 网络流量排名 |
+| [TIOBE Index](https://tiobe.com/tiobe-index/) | 编程语言指数 |
+| [InfoQ](https://infoq.cn/)                    | 新闻         |
+| [好奇心日报](https://www.qdaily.com/)         | 新闻         |
+| [蓝点网](https://landiannews.com/)            | 新闻         |
 
-[BTSOW](https://btsow.com/)
-:   BitTorrent 搜索。
+### 搜索
 
-[DevDocs](https://devdocs.io/)
-:   API 文档。
+| 搜索                                    | 备注     |
+| :-------------------------------------- | :------- |
+| [Baidu](https://www.baidu.com/)         | 百度搜索 |
+| [Bing](https://bing.com/)               | 必应搜索 |
+| [Dogpile.com](https://www.dogpile.com/) |          |
+| [DuckDuckGo](https://duckduckgo.com/)   |          |
+| [Google](https://www.google.com/)       | 谷歌搜索 |
+| [Soso](http://soso.com/)                | 搜搜搜索 |
+| [Sogou](https://www.sogou.com/)         | 搜狗搜索 |
+| [Yandex](https://yandex.com/)           |
+| [Yahoo!](https://search.yahoo.com/)     | 雅虎搜索 |
 
-[Dogpile.com](https://www.dogpile.com/)
-:   搜索。
+#### BitTorrent 搜索
 
-[DuckDuckGo](https://duckduckgo.com/)
-:   搜索。
+| BitTorrent 搜索                             | 备注   |
+| :------------------------------------------ | :----- |
+| [BTDigg](https://btdig.com/)                |
+| [BTSOW](https://btsow.com/)                 |
+| [The Pirate Bay](https://thepiratebay.org/) | 海盗湾 |
 
-[free-programming-books](https://ebookfoundation.github.io/free-programming-books/)
-:   自由编程书籍。
+#### 数学搜索
 
-[Google](https://www.google.com/)
-:   谷歌搜索。
-
-[InfoQ](https://infoq.cn/)
-:   新闻。
-
-[OEIS](https://oeis.org/)
-:   整数序列搜索。
-
-[OverAPI.com](http://overapi.com/)
-:   API 备忘单。
-
-[The Pirate Bay](https://thepiratebay.org/)
-:   海盗湾 BitTorrent 搜索。
-
-[ProgramCreek.com](https://programcreek.com/)
-:   略。
-
-[Soso](http://soso.com/)
-:   搜搜搜索。
-
-[Sogou](https://www.sogou.com/)
-:   搜狗搜索。
-
-[TIOBE Index](https://tiobe.com/tiobe-index/)
-:   编程语言指数。
-
-[Wolfram|Alpha](https://wolframalpha.com/)
-:   数学搜索。
-
-[Yahoo!](https://search.yahoo.com/)
-:   雅虎搜索。
-
-[Yandex](https://yandex.com/)
-:   搜索。
-
-[计算机书籍控](http://bestcbooks.com/)
-:   略。
-
-[好奇心日报](https://www.qdaily.com/)
-:   新闻。
-
-[后续](https://houxuapp.com/)
-:   新闻。
-
-[蓝点网](https://landiannews.com/)
-:   新闻。
+| 数学搜索                                    | 备注         |
+| :------------------------------------------ | :----------- |
+| [OEIS](https://oeis.org/)                   | 整数序列搜索 |
+| [Wolfram\|Alpha](https://wolframalpha.com/) | 数学搜索     |

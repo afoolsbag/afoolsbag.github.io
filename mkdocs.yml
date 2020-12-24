@@ -16,11 +16,8 @@ copyright: CC0-1.0
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 
 nav:
-    - index.md
-    - GFW.md
-    - P2PECS.md
     - 码代码:
-        - CC/CC.md
+        - '码代码': CC/CC.md
         - CC/Crypt.md
         - CC/Emacs.md
         - CC/Markdown.md
