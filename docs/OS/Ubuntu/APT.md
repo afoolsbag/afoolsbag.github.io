@@ -76,13 +76,13 @@ APT 使用 dpkg 格式安装包，可以通过 [Keryx] 进行离线安装、升�
 ### 搜索包
 
 ``` console
-[sudoer@host ~]$ sudo apt search <name>
+[sudoer@host ~]$ apt search <name>
 ```
 
 ### 展示包
 
 ``` console
-[sudoer@host ~]$ sudo apt show <package>
+[sudoer@host ~]$ apt show <package>
 ```
 
 ### 安装包
