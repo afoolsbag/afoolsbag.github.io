@@ -102,7 +102,9 @@ theme:
         - header.autohide
         - navigation.expand
 #       - navigation.instant
+#       - navigation.sections
         - navigation.tabs
+#       - navigation.tabs.sticky
         - toc.autohide
     icon:
         logo: material/book-open-page-variant
@@ -188,4 +190,5 @@ plugins:
     - git-revision-date-localized
     - minify:
         minify_html: true
-    - search
+    - search:
+        prebuild_index: true
