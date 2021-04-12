@@ -8,46 +8,39 @@ WHERE /Q pip ^
         && EXIT /B 1
 
 WHERE /Q pyenv ^
-        && START "" /B /WAIT CMD /C ^
-                pyenv rehash
+        && START "" /B /WAIT CMD /C pyenv rehash
 
-START "" /B /WAIT CMD /C ^
-        pip install --upgrade mkdocs-material ^
+START "" /B /WAIT CMD /C pip install --upgrade mkdocs-material ^
         && ECHO pip update mkdocs-material succeed. ^
         || ECHO pip update mkdocs-material failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2
 
 WHERE /Q pyenv ^
-        && START "" /B /WAIT CMD /C ^
-                pyenv rehash
+        && START "" /B /WAIT CMD /C pyenv rehash
 
-START "" /B /WAIT CMD /C ^
-        pip install --upgrade mkdocs-git-revision-date-localized-plugin ^
+START "" /B /WAIT CMD /C pip install --upgrade mkdocs-git-revision-date-localized-plugin ^
         && ECHO pip update mkdocs-git-revision-date-localized-plugin succeed. ^
         || ECHO pip update mkdocs-git-revision-date-localized-plugin failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 3
 
 WHERE /Q pyenv ^
-        && START "" /B /WAIT CMD /C ^
-                pyenv rehash
+        && START "" /B /WAIT CMD /C pyenv rehash
 
-START "" /B /WAIT CMD /C ^
-        pip install --upgrade mkdocs-minify-plugin ^
+START "" /B /WAIT CMD /C pip install --upgrade mkdocs-minify-plugin ^
         && ECHO pip update mkdocs-minify-plugin succeed. ^
         || ECHO pip update mkdocs-minify-plugin failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 4
 
 WHERE /Q pyenv ^
-        && START "" /B /WAIT CMD /C ^
-                pyenv rehash
+        && START "" /B /WAIT CMD /C pyenv rehash
 
 CALL :pause_if_double_click
 EXIT /B 0
 
 :pause_if_double_click
-        ECHO %CMDCMDLINE% | FINDSTR /L %COMSPEC% > NUL ^
+        ECHO %CMDCMDLINE% | FINDSTR /L /B %COMSPEC% > NUL ^
                 && PAUSE
         EXIT /B 0

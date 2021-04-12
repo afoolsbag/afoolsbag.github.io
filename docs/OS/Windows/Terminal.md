@@ -154,7 +154,7 @@ Terminal + Cmder 可以将该能力集成：
         [
             {
                 "guid": "{6d953325-a939-475d-a151-940cbd0302fb}",
-                "commandline": "CMD /K %CMDER_ROOT%\\vendor\\init.bat",
+                "commandline": "cmd /k \"\"%CMDER_ROOT%\\vendor\\init.bat\" \"",
                 "name": "Cmder",
                 "icon": "%CMDER_ROOT%\\icons\\cmder.ico",
                 "hidden": false
