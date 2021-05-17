@@ -1,6 +1,6 @@
 # Kafka
 
-[kafka] 是一款分布式消息服务。
+[Kafka] 是一款分布式消息服务。
 
 *   [*GitOps for Apache Kafka*](https://devshawn.github.io/kafka-gitops/)
 *   [*Kafka Tools*](https://kafkatool.com/)，一款图形用户界面客户端

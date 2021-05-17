@@ -15,6 +15,10 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "Setext 风格标题示例"
 
+    === "HTML 输出"
+
+        !!! missing "渲染冲突，略。"
+
     === "Markdown 输入"
 
         ``` md
@@ -25,15 +29,15 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         -------------
         ```
 
-    === "HTML 输出"
-
-        !!! missing "渲染冲突，略。"
-
 参见 [Daring Fireball: Markdown Syntax Documentation § HEADERS](https://daringfireball.net/projects/markdown/syntax#header)。
 
 ### atx 风格标题
 
 !!! example "atx 风格标题示例"
+
+    === "HTML 输出"
+
+        !!! missing "渲染冲突，略。"
 
     === "Markdown 输入"
 
@@ -45,15 +49,20 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         ###### This is an H6
         ```
 
-    === "HTML 输出"
-
-        !!! missing "渲染冲突，略。"
-
 参见 [Daring Fireball: Markdown Syntax Documentation § HEADERS](https://daringfireball.net/projects/markdown/syntax#header)。
 
 ### 块级引文
 
 !!! example "块级引文示例"
+
+    === "HTML 输出"
+
+        > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+        > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+        > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+        > 
+        > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+        > id sem consectetuer libero luctus adipiscing.
 
     === "Markdown 输入"
 
@@ -65,15 +74,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
         > id sem consectetuer libero luctus adipiscing.
         ```
-
-    === "HTML 输出"
-
-        > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-        > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-        > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-        > 
-        > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-        > id sem consectetuer libero luctus adipiscing.
 
 参见 [Daring Fireball: Markdown Syntax Documentation § BLOCKQUOTES](https://daringfireball.net/projects/markdown/syntax#blockquote)。
 
@@ -81,6 +81,12 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "无序列表示例"
 
+    === "HTML 输出"
+
+        *   Red
+        *   Green
+        *   Blue
+
     === "Markdown 输入"
 
         ``` md
@@ -88,12 +94,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         *   Green
         *   Blue
         ```
-
-    === "HTML 输出"
-
-        *   Red
-        *   Green
-        *   Blue
 
 参见 [Daring Fireball: Markdown Syntax Documentation § LISTS](https://daringfireball.net/projects/markdown/syntax#list)。
 
@@ -101,6 +101,12 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "有序列表示例"
 
+    === "HTML 输出"
+
+        1.  Bird
+        1.  McHale
+        1.  Parish
+
     === "Markdown 输入"
 
         ``` md
@@ -108,12 +114,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         1.  McHale
         1.  Parish
         ```
-
-    === "HTML 输出"
-
-        1.  Bird
-        1.  McHale
-        1.  Parish
 
 参见 [Daring Fireball: Markdown Syntax Documentation § LISTS](https://daringfireball.net/projects/markdown/syntax#list)。
 
@@ -121,6 +121,12 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "缩进风格代码块示例"
 
+    === "HTML 输出"
+
+        This is a normal paragraph:
+
+            This is a code block.
+
     === "Markdown 输入"
 
         ``` md
@@ -128,12 +134,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
             This is a code block.
         ```
-
-    === "HTML 输出"
-
-        This is a normal paragraph:
-
-            This is a code block.
 
 参见 [Daring Fireball: Markdown Syntax Documentation § CODE BLOCKS](https://daringfireball.net/projects/markdown/syntax#precode)。
 
@@ -141,6 +141,18 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "水平线示例"
 
+    === "HTML 输出"
+
+        * * *
+
+        ***
+
+        *****
+
+        - - -
+
+        ---------------------------------------
+
     === "Markdown 输入"
 
         ``` md
@@ -154,18 +166,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
         ---------------------------------------
         ```
-
-    === "HTML 输出"
-
-        * * *
-
-        ***
-
-        *****
-
-        - - -
-
-        ---------------------------------------
 
 参见 [Daring Fireball: Markdown Syntax Documentation § HORIZONTAL RULES](https://daringfireball.net/projects/markdown/syntax#hr)。
 
@@ -173,6 +173,12 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "内联风格链接示例"
 
+    === "HTML 输出"
+
+        This is [an example](http://example.com/ "Title") inline link.
+
+        [This link](http://example.net/) has no title attribute.
+
     === "Markdown 输入"
 
         ``` md
@@ -181,17 +187,17 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         [This link](http://example.net/) has no title attribute.
         ```
 
-    === "HTML 输出"
-
-        This is [an example](http://example.com/ "Title") inline link.
-
-        [This link](http://example.net/) has no title attribute.
-
 参见 [Daring Fireball: Markdown Syntax Documentation § LINKS](https://daringfireball.net/projects/markdown/syntax#link)。
 
 ### 参考风格链接
 
 !!! example "参考风格链接示例"
+
+    === "HTML 输出"
+
+        This is [an example][id] reference-style link.
+
+        [id]: http://example.com/  "Optional Title Here"
 
     === "Markdown 输入"
 
@@ -201,27 +207,21 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
         [id]: http://example.com/  "Optional Title Here"
         ```
 
-    === "HTML 输出"
-
-        This is [an example][id] reference-style link.
-
-[id]: http://example.com/  "Optional Title Here"
-
 参见 [Daring Fireball: Markdown Syntax Documentation § LINKS](https://daringfireball.net/projects/markdown/syntax#link)。
 
 ### 自动链接
 
 !!! example "自动链接示例"
 
+    === "HTML 输出"
+
+        <http://example.com/>
+
     === "Markdown 输入"
 
         ``` md
         <http://example.com/>
         ```
-
-    === "HTML 输出"
-
-        <http://example.com/>
 
 参见 [Daring Fireball: Markdown Syntax Documentation § AUTOMATIC LINKS](https://daringfireball.net/projects/markdown/syntax#autolink)。
 
@@ -229,6 +229,16 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "强调示例"
 
+    === "HTML 输出"
+
+        *single asterisks*
+
+        _single underscores_
+
+        **double asterisks**
+
+        __double underscores__
+
     === "Markdown 输入"
 
         ``` md
@@ -240,16 +250,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
         __double underscores__
         ```
-
-    === "HTML 输出"
-
-        *single asterisks*
-
-        _single underscores_
-
-        **double asterisks**
-
-        __double underscores__
 
 参见 [Daring Fireball: Markdown Syntax Documentation § EMPHASIS](https://daringfireball.net/projects/markdown/syntax#em)。
 
@@ -257,15 +257,15 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "行内代码示例"
 
+    === "HTML 输出"
+
+        Use the `printf()` function.
+
     === "Markdown 输入"
 
         ``` md
         Use the `printf()` function.
         ```
-
-    === "HTML 输出"
-
-        Use the `printf()` function.
 
 参见 [Daring Fireball: Markdown Syntax Documentation § CODE](https://daringfireball.net/projects/markdown/syntax#code)。
 
@@ -273,6 +273,12 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "图片示例"
 
+    === "HTML 输出"
+
+        ![Alt text](/path/to/img.jpg)
+
+        ![Alt text](/path/to/img.jpg "Optional title")
+
     === "Markdown 输入"
 
         ``` md
@@ -280,12 +286,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
         ![Alt text](/path/to/img.jpg "Optional title")
         ```
-
-    === "HTML 输出"
-
-        ![Alt text](/path/to/img.jpg)
-
-        ![Alt text](/path/to/img.jpg "Optional title")
 
 参见 [Daring Fireball: Markdown Syntax Documentation § IMAGES](https://daringfireball.net/projects/markdown/syntax#img)。
 
@@ -302,23 +302,23 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "缩写示例"
 
+    === "HTML 输出"
+
+        The HTML5 specification
+        is maintained by the W3C.
+
+        *[HTML5]: Hyper Text Markup Language 5th Version
+        *[W3C]:  World Wide Web Consortium
+
     === "Markdown 输入"
 
         ``` md
-        The HTML specification
+        The HTML5 specification
         is maintained by the W3C.
 
-        *[HTML]: Hyper Text Markup Language
+        *[HTML5]: Hyper Text Markup Language 5th Version
         *[W3C]:  World Wide Web Consortium
         ```
-
-    === "HTML 输出"
-
-        The HTML specification
-        is maintained by the W3C.
-
-*[HTML]: Hyper Text Markup Language
-*[W3C]:  World Wide Web Consortium
 
 参见 [Abbreviations — Python-Markdown documentation](https://python-markdown.github.io/extensions/abbreviations/)。
 
@@ -326,6 +326,13 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
 !!! example "告诫示例"
 
+    === "HTML 输出"
+
+        !!! type "optional explicit title within double quotes"
+            Any number of other indented markdown elements.
+
+            This is the second paragraph.
+
     === "Markdown 输入"
 
         ``` md
@@ -334,13 +341,6 @@ Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2
 
             This is the second paragraph.
         ```
-
-    === "HTML 输出"
-
-        !!! type "optional explicit title within double quotes"
-            Any number of other indented markdown elements.
-
-            This is the second paragraph.
 
 ??? tldr "支持的告诫类型"
 
@@ -385,7 +385,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 另外，[GitHub] 使用 [Linguist] 实现代码高亮，支持的语言在 [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 列出。
 
-??? tldr "常用的语言标识"
+???+ tldr "常用的语言标识"
 
     | Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
     |:-------------------------- |:------------------------------------------------ |:---------------------------------------------------- |
@@ -440,6 +440,15 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 !!! example "定义列表示例"
 
+    === "HTML 输出"
+
+        Apple
+        :   Pomaceous fruit of plants of the genus Malus in
+            the family Rosaceae.
+
+        Orange
+        :   The fruit of an evergreen tree of the genus Citrus.
+
     === "Markdown 输入"
 
         ``` md
@@ -451,20 +460,21 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         :   The fruit of an evergreen tree of the genus Citrus.
         ```
 
-    === "HTML 输出"
-
-        Apple
-        :   Pomaceous fruit of plants of the genus Malus in
-            the family Rosaceae.
-
-        Orange
-        :   The fruit of an evergreen tree of the genus Citrus.
-
 参见 [Definition Lists — Python-Markdown documentation](https://python-markdown.github.io/extensions/definition_lists/)。
 
 ### Fenced Code Blocks 扩展
 
 !!! example "围栏风格代码块示例"
+
+    === "HTML 输出"
+
+        a paragraph before the code block.
+
+        ```
+        a one-line code block
+        ```
+
+        a paragraph after the code block.
 
     === "Markdown 输入"
 
@@ -478,21 +488,15 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         a paragraph after the code block.
         ````
 
-    === "HTML 输出"
-
-        a paragraph before the code block.
-
-        ```
-        a one-line code block
-        ```
-
-        a paragraph after the code block.
-
 参见 [Fenced Code Blocks — Python-Markdown documentation](https://python-markdown.github.io/extensions/fenced_code_blocks/)。
 
 ### Footnotes 扩展
 
 !!! example "脚注示例"
+
+    === "HTML 输出"
+
+        Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
     === "Markdown 输入"
 
@@ -502,10 +506,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         [^1]: This is a footnote content.
         [^@#$%]: A footnote on the label: "@#$%".
         ```
-
-    === "HTML 输出"
-
-        Footnotes[^1] have a label[^@#$%] and the footnote's content.
 
 [^1]: This is a footnote content.
 [^@#$%]: A footnote on the label: "@#$%".
@@ -538,13 +538,13 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ### SmartyPants 扩展
 
-| Markdown 输入 | HTML 输出 |
-|:------------- |:--------- |
-| `'abc'`       | 'abc'     |
-| `"abc"`       | "abc"     |
-| `...`         | ...       |
-| `--`          | --        |
-| `---`         | ---       |
+| HTML 输出 | Markdown 输入 |
+|:--------- |:------------- |
+| 'abc'     | `'abc'`       |
+| "abc"     | `"abc"`       |
+| ...       | `...`         |
+| --        | `--`          |
+| ---       | `---`         |
 
 参见 [SmartyPants — Python-Markdown documentation](https://python-markdown.github.io/extensions/smarty/)。
 
@@ -556,6 +556,13 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 !!! example "表格示例"
 
+    === "HTML 输出"
+
+        First Header  | Second Header
+        ------------- | -------------
+        Content Cell  | Content Cell
+        Content Cell  | Content Cell
+
     === "Markdown 输入"
 
         ``` md
@@ -564,13 +571,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         Content Cell  | Content Cell
         Content Cell  | Content Cell
         ```
-
-    === "HTML 输出"
-
-        First Header  | Second Header
-        ------------- | -------------
-        Content Cell  | Content Cell
-        Content Cell  | Content Cell
 
 参见：
 
@@ -604,7 +604,15 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ### Caret 扩展
 
-!!! example "Caret 示例"
+!!! example "上标和下划线示例"
+
+    === "HTML 输出"
+
+        ^^Insert me^^
+
+        H^2^0
+
+        text^a\ superscript^
 
     === "Markdown 输入"
 
@@ -615,14 +623,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
         text^a\ superscript^
         ```
-
-    === "HTML 输出"
-
-        ^^Insert me^^
-
-        H^2^0
-
-        text^a\ superscript^
 
 参见 [Caret - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/caret/)。
 
@@ -634,6 +634,13 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 !!! example "详情示例"
 
+    === "HTML 输出"
+
+        ???+ note "Open styled details"
+
+            ??? danger "Nested details!"
+                And more content again.
+
     === "Markdown 输入"
 
         ``` md
@@ -642,13 +649,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
             ??? danger "Nested details!"
                 And more content again.
         ```
-
-    === "HTML 输出"
-
-        ???+ note "Open styled details"
-
-            ??? danger "Nested details!"
-                And more content again.
 
 ??? tldr "支持的详情类型"
 
@@ -708,15 +708,15 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 !!! example "按键示例"
 
+    === "HTML 输出"
+
+        ++ctrl+alt+delete++
+
     === "Markdown 输入"
 
         ``` md
         ++ctrl+alt+delete++
         ```
-
-    === "HTML 输出"
-
-        ++ctrl+alt+delete++
 
 参见 [Keys - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/keys/)。
 
@@ -728,6 +728,12 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 !!! example "标记示例"
 
+    === "HTML 输出"
+
+        ==mark me==
+
+        ==smart==mark==
+
     === "Markdown 输入"
 
         ``` md
@@ -735,12 +741,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
         ==smart==mark==
         ```
-
-    === "HTML 输出"
-
-        ==mark me==
-
-        ==smart==mark==
 
 参见 [Mark - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/mark/)。
 
@@ -758,19 +758,19 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ### SmartSymbols 扩展
 
-| Markdown 输入     | HTML 输出     |
-|:----------------- |:------------- |
-| `(tm)`            | (tm)          |
-| `(c)`             | (c)           |
-| `(r)`             | (r)           |
-| `c/o`             | c/o           |
-| `+/-`             | +/-           |
-| `-->`             | -->           |
-| `<--`             | <--           |
-| `<-->`            | <-->          |
-| `=/=`             | =/=           |
-| `1/2`, `2/3`, ... | 1/2, 2/3, ... |
-| `1st`, `2nd`, ... | 1st, 2nd, ... |
+| HTML 输出     | Markdown 输入     |
+|:------------- |:----------------- |
+| (tm)          | `(tm)`            |
+| (c)           | `(c)`             |
+| (r)           | `(r)`             |
+| c/o           | `c/o`             |
+| +/-           | `+/-`             |
+| -->           | `-->`             |
+| <--           | `<--`             |
+| <-->          | `<-->`            |
+| =/=           | `=/=`             |
+| 1/2, 2/3, ... | `1/2`, `2/3`, ... |
+| 1st, 2nd, ... | `1st`, `2nd`, ... |
 
 参见 [SmartSymbols - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/)。
 
@@ -790,6 +790,19 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 !!! example "标签页示例"
 
+    === "HTML 输出"
+
+        === "Tab 1"
+            Markdown **content**.
+
+            Multiple paragraphs.
+
+        === "Tab 2"
+            More Markdown **content**.
+
+            - list item a
+            - list item b
+
     === "Markdown 输入"
 
         ``` md
@@ -804,25 +817,27 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
             - list item a
             - list item b
         ```
-
-    === "HTML 输出"
-
-        === "Tab 1"
-            Markdown **content**.
-
-            Multiple paragraphs.
-
-        === "Tab 2"
-            More Markdown **content**.
-
-            - list item a
-            - list item b
 
 参见 [Tabbed - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/)。
 
-### Tasklist 扩展
+### TaskList 扩展
 
 !!! example "任务列表示例"
+
+    === "HTML 输出"
+
+        Task List
+
+        - [X] item 1
+            * [X] item A
+            * [ ] item B
+                more text
+                + [x] item a
+                + [ ] item b
+                + [x] item c
+            * [X] item C
+        - [ ] item 2
+        - [ ] item 3
 
     === "Markdown 输入"
 
@@ -840,27 +855,20 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
         - [ ] item 2
         - [ ] item 3
         ```
-
-    === "HTML 输出"
-
-        Task List
-
-        - [X] item 1
-            * [X] item A
-            * [ ] item B
-                more text
-                + [x] item a
-                + [ ] item b
-                + [x] item c
-            * [X] item C
-        - [ ] item 2
-        - [ ] item 3
 
 参见 [Tasklist - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/)。
 
 ### Tilde 扩展
 
-!!! example "Tilde 示例"
+!!! example "下标和删除线示例"
+
+    === "HTML 输出"
+
+        ~~Delete me~~
+
+        CH~3~CH~2~OH
+
+        text~a\ subscript~
 
     === "Markdown 输入"
 
@@ -871,14 +879,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
         text~a\ subscript~
         ```
-
-    === "HTML 输出"
-
-        ~~Delete me~~
-
-        CH~3~CH~2~OH
-
-        text~a\ subscript~
 
 参见 [Tilde - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/)。
 
