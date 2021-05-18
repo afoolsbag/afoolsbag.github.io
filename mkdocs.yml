@@ -44,6 +44,7 @@ nav:
         - OS/OS.md
         - Windows:
             - OS/Windows/Windows.md
+            - OS/Windows/CertUtil.md
             - OS/Windows/Cheat Engine.md
             - OS/Windows/Chocolatey.md
             - OS/Windows/Cmder.md
@@ -54,6 +55,7 @@ nav:
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
+            - OS/Linux/Coreutils.md
             - OS/Linux/Cockpit.md
             - OS/Linux/fish.md
             - OS/Linux/netfilter.md
@@ -96,29 +98,56 @@ nav:
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
 
 theme:
-    name: material  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    # 使用 Material 主题
+    # https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
+    name: material
+
+    # 颜色
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+              icon: material/weather-sunny
+              name: 切换到夜间模式
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+              icon: material/weather-night
+              name: 切换到日常模式
+
+    # 语言
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
+    language: zh
+
+    # 图标
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
+    logo:    assets/images/book-open-page-variant.png
     favicon: assets/images/book-open-page-variant.png
+    icon:
+        repo: fontawesome/brands/github
+
+    # 功能
     features:
-        - header.autohide
         - navigation.expand
-#       - navigation.instant
+        - navigation.instant
 #       - navigation.sections
         - navigation.tabs
 #       - navigation.tabs.sticky
-        - toc.autohide
-    icon:
-        logo: material/book-open-page-variant
-        repo: fontawesome/brands/github
-    language: zh
-    palette:
-        scheme: preference
-    # https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md
+        - navigation.top
+        - header.autohide
 
 extra_css:
 #   - https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
 
 extra_javascript:
 #   - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/afoolsbag
+          name: afoolsbag on GitHub
 
 # Preview controls
 # https://www.mkdocs.org/user-guide/configuration/#preview-controls

@@ -1,6 +1,6 @@
 # Git
 
-[Git] 是一款分布式版本控制系统。[^Git on Wikipedia]
+:material-git: [Git] 是一款分布式版本控制系统。[^Git on Wikipedia]
 
 参见：
 
@@ -8,7 +8,7 @@
 *   [Sourcetree | Free Git GUI for Mac and Windows](https://sourcetreeapp.com/)
 *   [TortoiseGit – Windows Shell Interface to Git](https://tortoisegit.org/)
 
-## 运行 Git
+## 运行 :material-git: Git
 
 ### :material-microsoft-windows: Windows 10 和 Scoop
 
@@ -353,16 +353,16 @@ depr.             > git checkout -- <file>...
 复制特定提交到当前分支，常用于将主分支的漏洞修复，应用到开发分支：
 
 ``` doscon
-%USERPROFILE\wdir> git cherry-pick <commit>
+%USERPROFILE%\wdir> git cherry-pick <commit>
 ```
 
 ## 服务
 
-1.  安装 git
+1.  安装 :material-git: Git
 
     ……
 
-0.  创建 git 用户
+0.  创建 `git` 用户
 
     ``` console
     [user@host ~]$ sudo useradd --comment 'user for git service' --create-home --shell /usr/bin/git-shell git

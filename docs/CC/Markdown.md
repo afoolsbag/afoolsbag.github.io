@@ -1,11 +1,11 @@
 # Markdown
 
-Markdown 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2004 年发明。[^Markdown on Wikipedia]
+[:material-language-markdown: Markdown][Markdown] 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2004 年发明。[^Markdown on Wikipedia]
 
 ## Markdown
 ---
 
-标准 [Markdown] 支持以下语法：
+标准 [:material-language-markdown: Markdown][Markdown] 支持以下语法：
 
 ### 段落和折行
 
@@ -890,7 +890,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 [GitHub]:             https://github.com/
 [highlight.js]:       https://highlightjs.org/
 [Linguist]:           https://github.com/github/linguist
-[Markdown]:           https://daringfireball.net/projects/markdown/
+[Markdown]:           https://daringfireball.net/projects/markdown/             "Daring Fireball: Markdown"
 [Pygments]:           https://pygments.org/
 [PyMdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
 [Python-Markdown]:    https://python-markdown.github.io/

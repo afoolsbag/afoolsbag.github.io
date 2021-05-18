@@ -8,7 +8,7 @@
 > What's less often understood is that there is a more general principle here:
 > that if you have a choice of several languages, it is, all other things being equal, a mistake to program in anything but the most powerful one.
 >
-> [*Beating the Averages*](http://paulgraham.com/avg.html). April 2001, rev. April 2003.
+> [*Beating the Averages*](http://paulgraham.com/avg.html "Beating the Averages"). April 2001, rev. April 2003.
 
 \ 
 
@@ -20,6 +20,8 @@
 > *黑客与画家*. 2004.
 
 ## 仰望星空
+
+[Dollar Street](https://gapminder.org/dollar-street "Dollar Street - photos as data to kill country stereotypes")
 
 此时，一位
 

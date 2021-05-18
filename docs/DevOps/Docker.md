@@ -1,19 +1,19 @@
 # Docker
 
-[Docker] 是一套平台即服务（PaaS）产品，它使用操作系统级的虚拟化来交付被称为容器的软件包。
+:material-docker: [Docker] 是一套平台即服务（PaaS）产品，它使用操作系统级的虚拟化来交付被称为容器的软件包。[^Docker on Wikipedia]
 
 参见：
 
 *   [Docker 入门教程 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
 *   [Docker 微服务教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)
 
-## 运行 Docker
+## 运行 :material-docker: Docker
 
 ### :material-centos: CentOS 8
 
 !!! hint
 
-    也许需要的是 [Podman](../Podman/)？
+    也许你需要的是 [Podman](../Podman/)？
 
 ``` console
 [sudoer@host ~]$ sudo dnf remove docker \
@@ -35,8 +35,10 @@
 [sudoer@host ~]$ sudo docker run hello-world
 ```
 
-参见 [How to Install and Setup Docker on Centos 8 {Quickstart}](https://phoenixnap.com/kb/how-to-install-docker-on-centos-8)；  
-参见 [Install Docker Engine on CentOS | Docker Documentation](https://docs.docker.com/engine/install/centos/)。
+参见：
+
+*   [How to Install and Setup Docker on Centos 8 {Quickstart}](https://phoenixnap.com/kb/how-to-install-docker-on-centos-8)
+*   [Install Docker Engine on CentOS | Docker Documentation](https://docs.docker.com/engine/install/centos/)
 
 <!----------------------------------------------------------------------------->
 
