@@ -1,6 +1,6 @@
 # 操作系统
 
-## 主机命名约定
+## :material-rename-box: 主机命名约定
 
 ``` ebnf
 (* 主机名 *)
@@ -35,16 +35,19 @@ serial number    = ? number ? ;
 
 ``` text
 CNWUHGAS-D003
-|/|_/||/ |__/
-| |  ||  开发 3 号机
-| |  ||
-| |  |应用服务器
-| |  |
-| |  借指光谷机房
-| |
-| GB/T 2260-2007 标准中的武汉代码
+中国武汉光谷应用服务器开发 3 号机
+
+CN WUH G AS - D003
+|  |   | |    |
+|  |   | |    开发 3 号机
+|  |   | |
+|  |   | 应用服务器
+|  |   |
+|  |   借指“光谷”机房
+|  |
+|  GB/T 2260-2007 标准中的“武汉”代码
 |
-ISO 3166-1:2013 标准中的中国代码
+ISO 3166-1:2013 标准中的“中国”代码
 ```
 
 参见：
@@ -55,30 +58,49 @@ ISO 3166-1:2013 标准中的中国代码
 *   [Deployment environment - Wikipedia](https://wikipedia.org/wiki/Deployment_environment)
 *   [Standardizing Host and Server Naming Conventions | The Official Device42 Blog](https://www.device42.com/blog/2014/02/standardizing-host-and-server-naming-conventions/)
 
+## :material-usb-flash-drive: 运维优盘
+
+### WePE
+
+[WePE] 是 Windows 的轻量版本，主要用于系统维护。[^Windows Preinstallation Environment on Wikipedia]
+
+### 图吧工具箱
+
+[图吧工具箱] 是由 [图拉丁吧] 吧友收集整理的实用工具集合。
+
+### :material-disc: 光盘镜像
+
+| 操作系统                                         | 光盘镜像下载地址                      | 最后更新时间 |
+| :----------------------------------------------- | :------------------------------------ | -----------: |
+| :material-centos: CentOS 8/7                     | <https://centos.org/centos-linux/>    |   2021-06-11 |
+| :material-ubuntu: Ubuntu Desktop 21.04/20.04 LTS | <https://ubuntu.com/download/desktop> |   2021-06-11 |
+| :material-ubuntu: Ubuntu Server 21.04/20.04 LTS  | <https://ubuntu.com/download/server>  |   2021-06-11 |
+| :material-microsoft-windows: Windows 10          | <https://msdn.itellyou.cn/>           |   2021-06-11 |
+
 ## Awesome
 
 ### 壳层
 
-| 发行日     | POSIX  | Windows      | SSH         | 备注                    |
-| :--------- | :----- | :----------- | :---------- | :---------------------- |
-| 2019-05-13 |        | [Terminal]   |
-| 2017-07-17 |        | [Cmder]      |
-| 2014-02-24 |        | [Clink]      |
-| 2007-03-09 |        | [ConEmu]     |
-| 2006       |        | [PowerShell] |             | [PowerShell - SS64.com] |
-| 2005-02-13 | [fish] |
-| 2000       |        |              | [WinSCP]    |
-| 1999-01-22 |        |              | [PuTTY]     |
-| 1998-06    |        |              | [SecureCRT] |
-| 1994-10-31 | [scsh] |
-| 1990       | [zsh]  |
-| 1989-06-08 | [bash] |              |             | [bash - SS64.com]       |
-| 1989-05-30 | [ash]  |
-| 1987       |        | CMD          |             | [CMD - SS64.com]        |
-| 1983       | [ksh]  |
-| 1983       | [tcsh] |
-| 1978       | csh    |
-| 1977       | sh     |
+| 发行日     | POSIX                  | Windows                            | SSH         | 备注                    |
+| :--------- | :--------------------- | :--------------------------------- | :---------- | :---------------------- |
+| 2019-05-13 |                        | :material-console: [Terminal]      |
+| 2017-07-17 |                        | :material-lambda: [Cmder]          |
+| 2014-02-24 |                        | [Clink]                            |
+| 2007-03-09 |                        | [ConEmu]                           |
+| 2006       |                        | :material-powershell: [PowerShell] |             | [PowerShell - SS64.com] |
+| 2005-02-13 | [fish]                 |
+| 2000       |                        |                                    | [WinSCP]    |
+| 1999-01-22 |                        |                                    | [PuTTY]     |
+| 1998-06    |                        |                                    | [SecureCRT] |
+| 1994-10-31 | [scsh]                 |
+| 1990       | [zsh]                  |
+| 1989-06-08 | :material-bash: [bash] |                                    |             | [bash - SS64.com]       |
+| 1989-05-30 | [ash]                  |
+| 1987       |                        | CMD                                |             | [CMD - SS64.com]        |
+| 1983       | [ksh]                  |
+| 1983       | [tcsh]                 |
+| 1978       | csh                    |
+| 1977       | sh                     |
 
 另见 [awesome-console-services](https://github.com/chubin/awesome-console-services#URL-Shortener)。
 
@@ -94,29 +116,29 @@ ISO 3166-1:2013 标准中的中国代码
 
 ### 操作系统
 
-| 发行日     | 操作系统     | 备注                                   |
-| :--------- | :----------- | :------------------------------------- |
-| 2015-07-15 | [Windows 10] |
-| 2013-03-13 | [Kali]       |
-| 2011-07-10 | [Manjaro]    |
-| 2009-07-22 | Windows 7    |
-| 2009-06-23 | [Tails]      |
-| 2004-10-20 | [Ubuntu]     |
-| 2004-05-14 | [CentOS]     | Red Hat 社区版                         |
-| 2003-11-06 | [Fedora]     | Red Hat 试验版，Linus 使用此 GNU/Linux |
-| 2002-03-11 | [Arch]       |
-| 2001-08-24 | Windows XP   |
-| 2000-07-26 | [Gentoo]     |
-| 1998-05-15 | Windows 98   |
-| 1996-10-01 | [OpenBSD]    |
-| 1995-08-15 | Windows 95   |
-| 1995-05-13 | [RHEL]       | Red Hat 企业版                         |
-| 1994-03-07 | [SUSE]       |
-| 1993-11-01 | [FreeBSD]    |
-| 1993-08-16 | [Debian]     |
-| 1993-04-19 | [NetBSD]     |
-| 1991-09-17 | Linux 0.01   |
-| 1985-11-20 | Windows 1.0  |
+| 发行日     | 操作系统                                          | 备注                                   |
+| :--------- | :------------------------------------------------ | :------------------------------------- |
+| 2015-07-15 | :material-microsoft-windows: [Windows 10]         |
+| 2013-03-13 | [Kali]                                            |
+| 2011-07-10 | [Manjaro]                                         |
+| 2009-07-22 | :material-microsoft-windows: Windows 7            |
+| 2009-06-23 | [Tails]                                           |
+| 2004-10-20 | :material-ubuntu: [Ubuntu]                        |
+| 2004-05-14 | :material-centos: [CentOS]                        | Red Hat 社区版                         |
+| 2003-11-06 | :material-fedora: [Fedora]                        | Red Hat 试验版，Linus 使用此 GNU/Linux |
+| 2002-03-11 | :material-arch: [Arch]                            |
+| 2001-08-24 | :material-microsoft-windows: Windows XP           |
+| 2000-07-26 | :material-gentoo: [Gentoo]                        |
+| 1998-05-15 | :material-microsoft-windows-classic: Windows 98   |
+| 1996-10-01 | [OpenBSD]                                         |
+| 1995-08-15 | :material-microsoft-windows-classic: Windows 95   |
+| 1995-05-13 | :material-redhat: [RHEL]                          | Red Hat 企业版                         |
+| 1994-03-07 | :fontawesome-brands-suse: [SUSE]                  |
+| 1993-11-01 | :material-freebsd: [FreeBSD]                      |
+| 1993-08-16 | :material-debian: [Debian]                        |
+| 1993-04-19 | [NetBSD]                                          |
+| 1991-09-17 | :material-linux: Linux 0.01                       |
+| 1985-11-20 | :material-microsoft-windows-classic: Windows 1.0  |
 
 ### 虚拟机
 
@@ -127,6 +149,8 @@ ISO 3166-1:2013 标准中的中国代码
 | 1999       | [VMware]     |
 
 <!----------------------------------------------------------------------------->
+
+[^Windows Preinstallation Environment on Wikipedia]: [Windows Preinstallation Environment - Wikipedia](https://wikipedia.org/wiki/Windows_Preinstallation_Environment)
 
 [Arch]:                  https://www.archlinux.org/
 [ash]:                   https://www.in-ulm.de/~mascheck/various/ash/ "Almquist Shell"
@@ -165,10 +189,13 @@ ISO 3166-1:2013 标准中的中国代码
 [Ubuntu]:                https://ubuntu.com/
 [VirtualBox]:            https://www.virtualbox.org/
 [VMware]:                https://www.vmware.com/products/workstation-pro.html
+[WePE]:                  http://www.wepe.com.cn/
 [Wine]:                  https://www.winehq.org/
 [Windows 10]:            https://www.windows.com/
 [WinSCP]:                https://winscp.net/
 [zsh]:                   http://www.zsh.org/ "Z Shell"
+[图吧工具箱]:            https://www.tbtool.cn/
+[图拉丁吧]:              https://tieba.baidu.com/图拉丁
 
 *[CMD]: Command Prompt
 *[csh]: C Shell

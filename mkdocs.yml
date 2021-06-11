@@ -51,7 +51,6 @@ nav:
             - OS/Windows/Cygwin.md
             - OS/Windows/Scoop.md
             - OS/Windows/Terminal.md
-            - OS/Windows/WePE.md
             - OS/Windows/WSL.md
         - GNU/Linux:
             - OS/Linux/Linux.md
@@ -129,7 +128,7 @@ theme:
 
     # 功能
     features:
-        - navigation.expand
+#       - navigation.expand
         - navigation.instant
 #       - navigation.sections
         - navigation.tabs
