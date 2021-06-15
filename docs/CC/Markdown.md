@@ -2,8 +2,12 @@
 
 [:material-language-markdown: Markdown][Markdown] 是一款轻量级标记语言，由 John Gruber 和 Aaron Swartz 在 2004 年发明。[^Markdown on Wikipedia]
 
+直达：
+
+*   [常用的语言标识](#codehilite-扩展)
+*   [Material for MkDocs 支持的图标](#emoji-扩展)
+
 ## Markdown
----
 
 标准 [:material-language-markdown: Markdown][Markdown] 支持以下语法：
 
@@ -294,7 +298,6 @@
 参见 [Daring Fireball: Markdown Syntax Documentation § BACKSLASH ESCAPES](https://daringfireball.net/projects/markdown/syntax#backslash)。
 
 ## Python-Markdown
----
 
 [Python-Markdown] 是 Markdown 的 Python 实现，并提供了若干扩展：
 
@@ -387,52 +390,52 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 ???+ tldr "常用的语言标识"
 
-    | Language                   | Pygments Laxer Names                             | highlight.js Classes                                 |
-    |:-------------------------- |:------------------------------------------------ |:---------------------------------------------------- |
-    | AutoHotkey                 | `autohotkey`, `ahk`                              | `autohotkey`                                         |
-    | Bash                       | `bash`, `sh`, `ksh`, `zsh`, `shell`              | `bash`, `sh`, `zsh`                                  |
-    | Bash Session               | `console`, `shell-session`                       | `console`, `shell`                                   |
-    | Batchfile                  | `bat`, `batch`, `dosbatch`, `winbatch`           | `bat`, `cmd`, `dos`                                  |
-    | BNF                        | `bnf`                                            | `bnf`                                                |
-    | C                          | `c`                                              | `c`, `h`                                             |
-    | C#                         | `csharp`, `c#`                                   | `csharp`, `cs`                                       |
-    | C++                        | `cpp`, `c++`                                     | `cpp`, `hpp`, `cc`, `hh`, `c++`, `h++`, `cxx`, `hxx` |
-    | CMake                      | `cmake`                                          | `cmake`, `cmake.in`                                  |
-    | CSS                        | `css`                                            | `css`                                                |
-    | Dockerfile                 | `dockerfile`, `docker`                           | `dockerfile`, `docker`                               |
-    | DOS Session                | `doscon`                                         |                                                      |
-    | EBNF                       | `ebnf`                                           | `ebnf`                                               |
-    | Go                         | `go`                                             | `go`, `golang`                                       |
-    | Groovy                     | `groovy`                                         | `groovy`                                             |
-    | HTML                       | `html`                                           | `html`                                               |
-    | HTTP                       | `http`                                           | `http`, `https`                                      |
-    | INI                        | `ini`, `cfg`, `dosini`                           | `ini`                                                |
-    | JSON                       | `json`                                           | `json`                                               |
-    | Java                       | `java`                                           | `java`                                               |
-    | JavaScript                 | `javascript`, `js`                               | `javascript`, `js`                                   |
-    | (La)TeX                    | `tex`, `latex`                                   | `tex`                                                |
-    | Lua                        | `lua`                                            | `lua`                                                |
-    | Makefile                   | `makefile`, `make`, `mf`, `bsdmake`              | `makefile`, `mk`, `mak`                              |
-    | Markdown                   | `md`                                             | `markdown`, `md`, `mkdown`, `mkd`                    |
-    | Nginx                      | `nginx`                                          | `nginx`, `nginxconf`                                 |
-    | Plaintext                  | `text`                                           | `plaintext`, `txt`, `text`                           |
-    | PostgreSQL                 | `postgresql`, `postgres`                         | `postgresql`, `postgres`, `pgsql`                    |
-    | PostgreSQL Console Session | `postgresql-console`, `postgres-console`, `psql` |                                                      |
-    | PowerShell                 | `powershell`, `ps1`, `posh`, `psm1`              | `powershell`, `ps1`, `ps`                            |
-    | PowerShell Session         | `ps1con`                                         |                                                      |
-    | Properties                 | `properties`, `jproperties`                      |                                                      |
-    | Python                     | `python`, `py`                                   | `python`, `py`, `gyp`                                |
-    | Python Console Session     | `pycon`                                          | `pycon`, `python-repl`                               |
-    | Ruby                       | `ruby`, `rb`                                     | `ruby`, `rb`                                         |
-    | Ruby Console Session       | `rbcon`, `irb`                                   | `irb`                                                |
-    | Scala                      | `scala`                                          | `scala`                                              |
-    | SQL                        | `sql`                                            | `sql`                                                |
-    | TOML                       | `toml`                                           | `toml`                                               |
-    | TypeScript                 | `typescript`, `ts`                               | `typescript`, `ts`                                   |
-    | VimL                       | `vim`                                            | `vim`                                                |
-    | x86 Assembly               |                                                  | `x86asm`                                             |
-    | XML                        | `xml`                                            | `xml`                                                |
-    | YAML                       | `yaml`                                           | `yaml`, `yml`                                        |
+    | Language                   | Pygments Laxer Name(s)                               | highlight.js Class(es)                                   | Linguist Name(s)                                        |
+    |:-------------------------- |:---------------------------------------------------- |:-------------------------------------------------------- |:------------------------------------------------------- |
+    | AutoHotkey                 | **`autohotkey`**, `ahk`                              | **`autohotkey`**                                         | **`autohotkey`**, `ahk`                                 |
+    | Bash                       | `bash`, `ksh`, **`sh`**, `shell`, `zsh`              | `bash`, **`sh`**, `zsh`                                  | `bash`, **`sh`**, `shell`, `shell-script`, `zsh`        |
+    | Bash Session               | **`console`**, `shell-session`                       | **`console`**, `shell`                                   | `bash session`, **`console`**, `shellsession`           |
+    | Batchfile                  | **`bat`**, `batch`, `dosbatch`, `winbatch`           | **`bat`**, `cmd`, `dos`                                  | **`bat`**, `batch`, `batchfile`, `dosbatch`, `winbatch` |
+    | BNF                        | `bnf`                                                | `bnf`                                                    |                                                         |
+    | C                          | **`c`**                                              | **`c`**, `h`                                             | **`c`**                                                 |
+    | C#                         | `c#`, **`csharp`**                                   | `cs`, **`csharp`**                                       | `c#`, `cake`, `cakescript`, **`csharp`**                |
+    | C++                        | **`c++`**, `cpp`                                     | **`c++`**, `cc`, `cpp`, `cxx`, `h++`, `hh`, `hpp`, `hxx` | **`c++`**, `cpp`                                        |
+    | CMake                      | **`cmake`**                                          | **`cmake`**, `cmake.in`                                  | **`cmake`**                                             |
+    | CSS                        | **`css`**                                            | **`css`**                                                | **`css`**                                               |
+    | Dockerfile                 | `docker`, **`dockerfile`**                           | `docker`, **`dockerfile`**                               | **`dockerfile`**                                        |
+    | DOS Session                | `doscon`                                             |                                                          |                                                         |
+    | EBNF                       | **`ebnf`**                                           | **`ebnf`**                                               | **`ebnf`**                                              |
+    | Go                         | **`go`**                                             | **`go`**, `golang`                                       | **`go`**, `golang`                                      |
+    | Groovy                     | **`groovy`**                                         | **`groovy`**                                             | **`groovy`**                                            |
+    | HTML                       | **`html`**                                           | **`html`**                                               | **`html`**, `xhtml`                                     |
+    | HTTP                       | **`http`**                                           | **`http`**, `https`                                      | **`http`**                                              |
+    | INI                        | `cfg`, `dosini`, **`ini`**                           | **`ini`**                                                | `dosini`, **`ini`**                                     |
+    | JSON                       | **`json`**                                           | **`json`**                                               | **`json`**                                              |
+    | Java                       | **`java`**                                           | **`java`**                                               | **`java`**                                              |
+    | JavaScript                 | `javascript`, **`js`**                               | `javascript`, **`js`**                                   | `javascript`, **`js`**, `node`                          |
+    | (La)TeX                    | `latex`, **`tex`**                                   | **`tex`**                                                | `latex`, **`tex`**                                      |
+    | Lua                        | **`lua`**                                            | **`lua`**                                                | **`lua`**                                               |
+    | Makefile                   | `bsdmake`, `make`, **`makefile`**, `mf`              | `mak`, **`makefile`**, `mk`                              | `bsdmake`, `make`, **`makefile`**, `mf`                 |
+    | Markdown                   | `md`                                                 | `markdown`, `md`, `mkd`, `mkdown`                        | `markdown`, `pandoc`                                    |
+    | Nginx                      | **`nginx`**                                          | **`nginx`**, `nginxconf`                                 | **`nginx`**, `nginx configuration file`                 |
+    | Plaintext                  | **`text`**                                           | `plaintext`, **`text`**, `txt`                           | `fundamental`, `plaintext`, **`text`**                  |
+    | PostgreSQL                 | `postgresql`, `postgres`                             | `postgresql`, `postgres`, `pgsql`                        |                                                         |
+    | PostgreSQL Console Session | `postgresql-console`, `postgres-console`, `psql`     |                                                          |                                                         |
+    | PowerShell                 | `posh`, **`powershell`**, `ps1`, `psm1`              | **`powershell`**, `ps1`, `ps`                            | `posh`, **`powershell`**, `pwsh`                        |
+    | PowerShell Session         | `ps1con`                                             |                                                          |                                                         |
+    | Properties                 | `properties`, `jproperties`                          |                                                          | `java properties`                                       |
+    | Python                     | `py`, **`python`**                                   | `gyp`, `py`, **`python`**                                | **`python`**, `python3`, `rusthon`                      |
+    | Python Console Session     | **`pycon`**                                          | **`pycon`**, `python-repl`                               | **`pycon`**, `python console`                           |
+    | Ruby                       | **`rb`**, `ruby`                                     | **`rb`**, `ruby`                                         | `jruby`, `macruby`, `rake`, **`rb`**, `rbx`, `ruby`     |
+    | Ruby Console Session       | `rbcon`, `irb`                                       | `irb`                                                    |                                                         |
+    | Scala                      | **`scala`**                                          | **`scala`**                                              | **`scala`**                                             |
+    | SQL                        | **`sql`**                                            | **`sql`**                                                | **`sql`**                                               |
+    | TOML                       | **`toml`**                                           | **`toml`**                                               | **`toml`**                                              |
+    | TypeScript                 | **`ts`**, `typescript`                               | **`ts`**, `typescript`                                   | **`ts`**, `typesctipy`                                  |
+    | Vim Script                 | **`vim`**                                            | **`vim`**                                                | `rvim`, **`vim`**, `vim script`, `viml`                 |
+    | x86 Assembly               |                                                      | `x86asm`                                                 |                                                         |
+    | XML                        | **`xml`**                                            | **`xml`**                                                | `rss`, `wsdl`, **`xml`**, `xsd`                         |
+    | YAML                       | **`yaml`**                                           | **`yaml`**, `yml`                                        | **`yaml`**, `yml`                                       |
 
 参见 [CodeHilite — Python-Markdown documentation](https://python-markdown.github.io/extensions/code_hilite/)。
 
@@ -582,7 +585,6 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 参见 [WikiLinks — Python-Markdown documentation](https://python-markdown.github.io/extensions/wikilinks/)。
 
 ## PyMdown Extensions
----
 
 [PyMdown Extensions] 是 Python-Markdown 的第三方扩展包，提供了更多扩展：
 
