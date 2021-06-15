@@ -17,7 +17,7 @@ copyright: CC0-1.0
 
 nav:
     - 码代码:
-        - '码代码': CC/CC.md
+        - CC/CC.md
         - CC/Crypt.md
         - CC/Emacs.md
         - CC/Markdown.md
