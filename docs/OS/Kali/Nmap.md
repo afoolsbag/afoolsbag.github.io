@@ -1,12 +1,15 @@
-# 网络嗅探工具 Nmap
+# Nmap
 
-官网 <https://nmap.org/>。
+[Nmap] 是一款网络嗅探工具。[^Nmap on Wikipedia]
 
-*   [*Reference Guide*](https://nmap.org/man/) <sub>
-        [*zh_cmn*](https://nmap.org/man/zh/) </sub>
-*   [*GUI*](https://nmap.org/zenmap/)
+参见：
 
-互联网协议套件
+*   [Nmap Reference Guide](https://nmap.org/man/)（[Nmap 参考指南](https://nmap.org/man/zh/)）
+*   [Zenmap](https://nmap.org/zenmap/)
+
+## 背景知识
+
+### 互联网协议套件
 
 |        | abbr. | term                                 | trans.
 |:-------|:------|:-------------------------------------|:------
@@ -18,9 +21,18 @@
 |        | ICMP  | Internet Control Message Protocol    | 网际控制消息协议
 | 链路层 |
 
-IPv4 地址分配
+### IPv4 地址表示
 
-```text
+``` doscon
+%USERPROFILE%> ping 127.0.0.1     :: 点分十进制表示
+%USERPROFILE%> ping 0x7F000001    :: 十六进制表示
+%USERPROFILE%> ping 2130706433    :: 十进制表示
+%USERPROFILE%> ping 017700000001  :: 八进制表示
+```
+
+### IPv4 地址分配
+
+``` text
   0.  *.  *.  */8   本网络（RFC 5735）
  10.  *.  *.  */8   A 类专用网络（RFC 1918）
 100. 64.  *.  */10  运营商级网络地址转换（RFC 6598）
@@ -44,90 +56,98 @@ IPv4 地址分配
 255.255.255.255     受限广播（RFC 919）
 ```
 
-___
-## 命令示例
+## 运行 Nmap
 
-```fish
-root@host *# nmap -sn <target>                   # 主机发现
-root@host *# nmap <target>                       # 端口扫描
-root@host *# nmap -p- <target>                   # 全端口扫描
-root@host *# nmap -v -oA <basename> -A <target>  # 信息探测
+### Kali
+
+系统自带。
+
+### :material-microsoft-windows: Windows 10 和 Scoop
+
+``` doscon
+%USERPROFILE%> scoop install nmap-portable
 ```
 
-___
-## 命令说明
+## `nmap` 命令
+
+``` console
+[root@host ~]# nmap -sn <target>                   # 主机发现
+[root@host ~]# nmap <target>                       # 端口扫描
+[root@host ~]# nmap -p- <target>                   # 全端口扫描
+[root@host ~]# nmap -v -oA <basename> -A <target>  # 信息探测
+```
 
 ### 主机发现
 
-```fish
-root@host *# nmap -sL <target>  # 列表扫描，不发送报文
+``` console
+[root@host ~]# nmap -sL <target>  # 列表扫描，不发送报文
 
-root@host *# nmap -sn <target>  # Ping 扫描，使用以下 4 种数据包探测主机是否在线
-                                # 1. ICMP Echo Request 包
-                                # 2. ICMP Timestamp Request 包
-                                # 3. TCP SYN 包，向 HTTPS 443 端口
-                                # 4. TCP ACK 包，向 HTTP 80 端口
+[root@host ~]# nmap -sn <target>  # Ping 扫描，使用以下 4 种数据包探测主机是否在线
+                                  # 1. ICMP Echo Request 包
+                                  # 2. ICMP Timestamp Request 包
+                                  # 3. TCP SYN 包，向 HTTPS 443 端口
+                                  # 4. TCP ACK 包，向 HTTP 80 端口
 
-root@host *# nmap -PS[port,]... <target>  # TCP SYN Ping 扫描，端口默认为 80
-root@host *# nmap -PA[port,]... <target>  # TCP ACK Ping 扫描，端口默认为 80
-root@host *# nmap -PU[port,]... <target>  # UDP Ping 扫描，端口默认为 40125
-root@host *# nmap -PY[port,]... <target>  # SCTP INIT Ping 扫描，默认端口为 80
+[root@host ~]# nmap -PS[port,]... <target>  # TCP SYN Ping 扫描，端口默认为 80
+[root@host ~]# nmap -PA[port,]... <target>  # TCP ACK Ping 扫描，端口默认为 80
+[root@host ~]# nmap -PU[port,]... <target>  # UDP Ping 扫描，端口默认为 40125
+[root@host ~]# nmap -PY[port,]... <target>  # SCTP INIT Ping 扫描，默认端口为 80
 
-root@host *# nmap -PE <target>  # ICMP Echo Request Ping 扫描
-root@host *# nmap -PP <target>  # ICMP Timestamp Request Ping 扫描
-root@host *# nmap -PM <target>  # ICMP Address Mask Request Ping 扫描
+[root@host ~]# nmap -PE <target>  # ICMP Echo Request Ping 扫描
+[root@host ~]# nmap -PP <target>  # ICMP Timestamp Request Ping 扫描
+[root@host ~]# nmap -PM <target>  # ICMP Address Mask Request Ping 扫描
 ```
 
 ### 端口扫描
 
-```fish
-root@host *# nmap <target>            # 常用端口扫描
-root@host *# nmap -p0-65535 <target>  # 全端口扫描
-# abbr.      nmap -p- <target>
+``` console
+[root@host ~]# nmap <target>            # 常用端口扫描
+[root@host ~]# nmap -p0-65535 <target>  # 全端口扫描
+[abbr.      ]# nmap -p- <target>
 
-root@host *# nmap -sS <target>  # TCP SYN 扫描，不完成 TCP 连接，半开放扫描
-root@host *# nmap -sT <target>  # TCP 连接扫描，将留下访问痕迹
-root@host *# nmap -sA <target>  # TCP ACK 扫描
-root@host *# nmap -sW <target>  # TCP 窗口扫描
-root@host *# nmap -sM <target>  # TCP Maimon 扫描
+[root@host ~]# nmap -sS <target>  # TCP SYN 扫描，不完成 TCP 连接，半开放扫描
+[root@host ~]# nmap -sT <target>  # TCP 连接扫描，将留下访问痕迹
+[root@host ~]# nmap -sA <target>  # TCP ACK 扫描
+[root@host ~]# nmap -sW <target>  # TCP 窗口扫描
+[root@host ~]# nmap -sM <target>  # TCP Maimon 扫描
 
-root@host *# nmap -sU <target>  # UDP 扫描
+[root@host ~]# nmap -sU <target>  # UDP 扫描
 
-root@host *# nmap -sN <target>  # TCP Null 扫描
-root@host *# nmap -sF <target>  # TCP FIN 扫描
-root@host *# nmap -sX <target>  # TCP Xmas（FIN、PSH、URG） 扫描
+[root@host ~]# nmap -sN <target>  # TCP Null 扫描
+[root@host ~]# nmap -sF <target>  # TCP FIN 扫描
+[root@host ~]# nmap -sX <target>  # TCP Xmas（FIN、PSH、URG） 扫描
 
-root@host *# nmap -sY <target>  # SCTP INIT 扫描
-root@host *# nmap -sZ <target>  # SCTP COOKIE-ECHO 扫描
+[root@host ~]# nmap -sY <target>  # SCTP INIT 扫描
+[root@host ~]# nmap -sZ <target>  # SCTP COOKIE-ECHO 扫描
 
-root@host *# nmap -sO <target>  # IP 协议扫描
+[root@host ~]# nmap -sO <target>  # IP 协议扫描
 ```
 
 ### 信息探测
 
 依据端口扫描得到的信息，可以进一步探测其所提供的服务和版本，并据此猜测其所用操作系统。
 
-```fish
-root@host *# nmap -sV <target>  # 启用服务版本探测
-root@host *# nmap -O <target>   # 启用操作系统探测
+``` console
+[root@host ~]# nmap -sV <target>  # 启用服务版本探测
+[root@host ~]# nmap -O <target>   # 启用操作系统探测
 
-root@host *# nmap -sC <target>  # 启用脚本扫描
+[root@host ~]# nmap -sC <target>  # 启用脚本扫描
 
-root@host *# nmap -A <target>   # 激烈扫描模式
+[root@host ~]# nmap -A <target>   # 激烈扫描模式
 ```
 
 ### 杂项
 
-```fish
-root@host *# nmap -v <target>   # 增强详细程度
-root@host *# nmap -vv <target>  # 增强更多详细程度
-root@host *# nmap -d <target>   # 增强调试级别
-root@host *# nmap -dd <target>  # 增强更多调试级别
+``` console
+[root@host ~]# nmap -v <target>   # 增强详细程度
+[root@host ~]# nmap -vv <target>  # 增强更多详细程度
+[root@host ~]# nmap -d <target>   # 增强调试级别
+[root@host ~]# nmap -dd <target>  # 增强更多调试级别
 
-root@host *# nmap -oN <file.nmap> <target>  # 标准输出
-root@host *# nmap -oX <file.xml> <target>   # XML 输出
-root@host *# nmap -oG <file.gnmap> <target> # 可 Grep 输出
-root@host *# nmap -oA <basename> <target>   # 以上三种输出
+[root@host ~]# nmap -oN <file.nmap> <target>  # 标准输出
+[root@host ~]# nmap -oX <file.xml> <target>   # XML 输出
+[root@host ~]# nmap -oG <file.gnmap> <target> # 可 Grep 输出
+[root@host ~]# nmap -oA <basename> <target>   # 以上三种输出
 ```
 
 运行时交互：
@@ -135,3 +155,10 @@ root@host *# nmap -oA <basename> <target>   # 以上三种输出
 *   `v`（`V`） 增强（减弱）详细程度
 *   `d`（`D`） 增强（减弱）调试级别
 *   `p`（`P`） 开启（关闭）包追踪
+
+<!----------------------------------------------------------------------------->
+
+[^Nmap on Wikipedia]: [Nmap - Wikipedia](https://wikipedia.org/wiki/Nmap).
+
+[Nmap]:     https://nmap.org/ "Nmap: the Network Mapper - Free Security Scanner"
+[RFC 5735]: https://www.rfc-editor.org/info/rfc5735
