@@ -1,16 +1,18 @@
 # Windows
 
-[Microsoft]\ [Windows] 是一系列操作系统的统称。[^Windows on Wikipedia]
+[:material-microsoft: Microsoft][Microsoft]\ [:material-microsoft-windows: Windows][Windows] 是一系列操作系统的统称。[^Windows on Wikipedia]
 
-## PE
+## 背景知识
+
+### PE
 
 可移植可执行格式（PE）是适用于 Windows 操作系统的应用程序二进制接口规范。
 
-## 键盘快捷方式
+## :material-keyboard: 键盘快捷方式
 
 参见 [Windows 的键盘快捷方式](https://support.microsoft.com/help/12445)。
 
-### 任务栏
+### :material-microsoft-windows: 任务栏
 
 |              |                      |              | 按键                                               |
 |:------------ |:-------------------- |:------------ |:-------------------------------------------------- |
@@ -48,18 +50,18 @@
 | “显示桌面”   |                      |              | ++win+d++                                          |
 |              | 切换焦点区域         |              | ++f6++                                             |
 
-### 此电脑
+### :material-laptop: 此电脑
 
 *   打开快捷菜单：右击标题栏，或 ++alt+spc++
 
-### 常规导航
+### :material-navigation: 常规导航
 
 | 按键                | 操作   | 按键          | 操作   |
 |:------------------- |:------ |:------------- |:------ |
 | ++alt+r++<br>++f5++ | 刷新。 |
 | ++alt+left++        | 后退。 | ++alt+right++ | 前进。 |
 
-### 常规编辑
+### :material-pencil: 常规编辑
 
 | 按键                       | 操作   | 按键                        | 操作   |
 |:-------------------------- |:------ |:--------------------------- |:------ |
@@ -72,25 +74,25 @@
 
 ### 系统
 
-#### 查看系统信息
+#### :material-information: 查看系统信息
 
 ``` doscon
 %USERPROFILE%> SYSTEMINFO
 ```
 
-#### 重启系统
+#### :material-restart: 重启系统
 
 ``` doscon
 %USERPROFILE%> SHUTDOWN /R /T 60
 ```
 
-#### 关闭系统
+#### :material-power: 关闭系统
 
 ``` doscon
 %USERPROFILE%> SHUTDOWN /S /T 60
 ```
 
-### 链接
+### :material-file-link: 链接
 
 参见：
 
@@ -122,7 +124,7 @@
 %USERPROFILE%> MKLINK /J <Link> <AbsolutePath>
 ```
 
-### 网络
+### :material-network: 网络
 
 参见：
 
@@ -493,55 +495,102 @@ PEiD
 
 ## 注册码
 
-请到官网购买以支持正版。
+请通过正规渠道获取以支持正版。
 
-<!--
-  据《中华人民共和国著作权法（2010年2月26日第二次修正版）》第二十二条，
-  下述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+??? cite "KMS_VL_ALL_AIO"
 
-  流下了贫穷的泪水 ( TдT)
+    !!! warning "声明"
 
-  1. 访问十分钟邮箱 https://10minutemail.com/
-     以获取一个临时邮箱
+        据《中华人民共和国著作权法（2010年2月26日第二次修正版）》第二十二条，下述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+    
+    1.  访问 [十分钟邮箱](https://10minutemail.com/) 或 [临时邮箱](https://temp-mail.org/) 以获取一个临时邮箱；
 
-  2. 另开标签页，访问 My Digital Life 论坛注册页面 https://forums.mydigitallife.net/register/
-     填入必选信息开始注册
+    0.  另开标签页，访问 [My Digital Life 论坛注册页面](https://forums.mydigitallife.net/register/)，填入必选信息开始注册；
 
-  3. 返回十分钟邮箱标签页，此时应当会收到一封邮件
-     邮件内有确认账户链接，形如 https://forums.mydigitallife.net/account-confirmation/*
-     点击以完成注册
+    0.  返回临时邮箱标签页，此时应当会收到一封邮件，内有确认账户链接，形如：
 
-     这里有一个先前注册好的账户，不保证依然有效：
-     Name: curious1029
-     Email: tcziyrlcnirbltbtmq@awdrt.com
-     Password: Jl2VZ5IzKTdCdIozweRA
-     Date of Birth: 1980-01-01
+        ``` text
+        https://forums.mydigitallife.net/account-confirmation/*
+        ```
 
-  4. 访问 KMSpico 官方话题帖 https://forums.mydigitallife.net/threads/kmspico-official-thread.65739/
-     该页面需要登录
-     登陆后访问页面并获取下载链接
+        点击以完成注册；
 
-     这里有一个先前获取的磁力链接，不保证依然有效：
-     magnet:?xt=urn:btih:E954AB6B5A93071E8F1A41C509E77F35A50B1B11&dn=KMSpico_v10.2.0
+        ??? example "这里有一个先前注册好的账户，但不保证仍然有效"
 
-  5. 临时停用 Windows Defender 实时保护
+            |               |                              |
+            |:------------- |:---------------------------- |
+            | Name          | curious1029                  |
+            | Email         | tcziyrlcnirbltbtmq@awdrt.com |
+            | Password      | Jl2VZ5IzKTdCdIozweRA         |
+            | Date of Birth | 1980-01-01                   |
 
-  6. 下载 KMSpico
-     运行 KMSpico_v10.2.0/KMSpico Install/KMSpico_setup.exe 并安装到默认位置
+    0.  访问 [KMS_VL_ALL_AIO 官方话题帖](https://forums.mydigitallife.net/threads/kms_vl_all-smart-activation-script.79535/)，该页面需要登录，登陆后访问页面并获取下载链接；
 
-  7. 在 Windows Defender 中配置排除项
-     %ProgramFiles%\KMSpico\KMSELDI.exe
-     %ProgramFiles%\KMSpico\Service_KMS.exe
-     %ProgramFiles%\KMSpico\AutoPico.exe
-     %WinDir%\SECOH-QAD.exe
-     %WinDir%\SECOH-QAD.dll
+        ??? example "或者直接访问其 GitHub 上的发布页面"
 
-  8. 恢复启用 Windows Defender 实时保护
+            <https://github.com/abbodi1406/KMS_VL_ALL_AIO/releases>
 
-  9. 运行 KMSpico
+    0.  创建 `%ProgramFiles%\KMS_VL_ALL_AIO` 文件夹，并在 Windows Defender 中将其配置为排除项：
 
-  10. 上述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
--->
+    0.  下载 `KMS_VL_ALL_AIO-*.7z`，将其解压到 `%ProgramFiles%\KMS_VL_ALL_AIO` 文件夹；
+
+    0.  运行 `KMS_VL_ALL_AIO.cmd`，参照 `[R] Read Me` 进行安装，通常：
+    
+        *   先运行 `[2] Install Activation Auto-Renewal`，
+        *   然后运行 `[1] Activate [Auto Renewal Mode]`；
+
+    0.  上述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+
+??? cite "KMSpico（年久失修）"
+
+    !!! warning "声明"
+
+        据《中华人民共和国著作权法（2010年2月26日第二次修正版）》第二十二条，下述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
+    
+    1.  访问 [十分钟邮箱](https://10minutemail.com/) 或 [临时邮箱](https://temp-mail.org/) 以获取一个临时邮箱；
+
+    0.  另开标签页，访问 [My Digital Life 论坛注册页面](https://forums.mydigitallife.net/register/)，填入必选信息开始注册；
+
+    0.  返回临时邮箱标签页，此时应当会收到一封邮件，内有确认账户链接，形如：
+
+        ``` text
+        https://forums.mydigitallife.net/account-confirmation/*
+        ```
+
+        点击以完成注册；
+
+        ??? example "这里有一个先前注册好的账户，但不保证仍然有效"
+
+            |               |                              |
+            |:------------- |:---------------------------- |
+            | Name          | curious1029                  |
+            | Email         | tcziyrlcnirbltbtmq@awdrt.com |
+            | Password      | Jl2VZ5IzKTdCdIozweRA         |
+            | Date of Birth | 1980-01-01                   |
+
+    0.  访问 [KMSpico 官方话题帖](https://forums.mydigitallife.net/threads/kmspico-official-thread.65739/)，该页面需要登录，登陆后访问页面并获取下载链接；
+
+        ??? example "这里有一个先前获取的磁力链接，但不保证仍然有效"
+
+            magnet:?xt=urn:btih:E954AB6B5A93071E8F1A41C509E77F35A50B1B11&dn=KMSpico_v10.2.0
+
+    0.  临时停用 Windows Defender 实时保护；
+
+    0.  下载 KMSpico，运行 `KMSpico_v10.2.0/KMSpico Install/KMSpico_setup.exe` 并安装到默认位置；
+
+    0.  在 Windows Defender 中配置排除项：
+
+        *   `%ProgramFiles%\KMSpico\KMSELDI.exe`，
+        *   `%ProgramFiles%\KMSpico\Service_KMS.exe`，
+        *   `%ProgramFiles%\KMSpico\AutoPico.exe`，
+        *   `%WinDir%\SECOH-QAD.exe`，
+        *   `%WinDir%\SECOH-QAD.dll`；
+
+    0.  恢复启用 Windows Defender 实时保护；
+
+    0.  运行 KMSpico；
+
+    0.  上述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
 
 <!----------------------------------------------------------------------------->
 
