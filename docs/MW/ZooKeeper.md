@@ -1,67 +1,86 @@
-# 分布式协调服务 ZooKeeper
+# ZooKeeper
 
-官网 <https://zookeeper.apache.org/>。
+[ZooKeeper] 是一款分布式协调服务。
 
-一款图形用户界面客户端 [*zktools*](https://blog.csdn.net/rongbaojian/article/details/82078368)。
+参见：
 
-## 安装并配置 ZooKeeper
----
+*   [zktools]，一款图形用户界面客户端
 
-### CentOS 7, 8
+## 运行 ZooKeeper
 
-*安装依赖，下载并解压程序：*
+### :material-centos: CentOS 7, 8
+
+#### 安装依赖
 
 1.  安装 OpenJDK 及开发工具
 
-    ```sh
-    sudoer@host *> sudo dnf install java-latest-openjdk java-latest-openjdk-devel
+    ``` console
+    [sudoer@host *]$ sudo dnf install java-latest-openjdk \
+                                      java-latest-openjdk-devel
     ```
 
-0.  切换到 `/opt` 目录
+#### 下载程序
 
-    ```sh
-    sudoer@host *> cd /opt
+2.  切换到 `/opt` 目录
+
+    ``` console
+    [sudoer@host ~]$ cd /opt
     ```
 
-0.  下载 ZooKeeper 压缩包，参见 <https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current>
+0.  下载 ZooKeeper 压缩包，参见 [清华大学 ZooKeeper 镜像站](https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current)，此处以 `3.7.0` 版本为例
 
-    ```sh
-    sudoer@host /opt> sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current/apache-zookeeper-3.6.2-bin.tar.gz
+    ``` console
+    [sudoer@host opt]$ sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/current/apache-zookeeper-3.7.0-bin.tar.gz
     ```
 
-0.  解压缩并建立链接
+0.  解压缩（注意实际版本号）
 
-    ```sh
-    sudoer@host /opt> sudo tar --extract --auto-compress --verbose --file=apache-zookeeper-3.6.2-bin.tar.gz
-    sudoer@host /opt> sudo ln --symbolic apache-zookeeper-3.6.2-bin zookeeper
+    ``` console
+    [sudoer@host opt]$ sudo tar --extract \
+                                --auto-compress \
+                                --verbose \
+                                --file=apache-zookeeper-3.7.0-bin.tar.gz
+    [abbr.          ]$ sudo tar -xavf apache-zookeeper-3.7.0-bin.tar.gz
     ```
 
-*将程序注册为服务：*
+0.  建立目录链接（注意实际版本号）
 
-5.  创建 `zookeeper` 用户
-
-    ```sh
-    sudoer@host *> sudo useradd --comment 'ZooKeeper Server' \
-                                --home-dir /opt/zookeeper \
-                                --no-create-home \
-                                --password !! \
-                                --shell /sbin/nologin \
-                                zookeeper
+    ``` console
+    [sudoer@host opt]$ sudo ln --symbolic \
+                               apache-zookeeper-3.7.0-bin \
+                               zookeeper
+    [abbr.          ]$ sudo ln -s apache-zookeeper-3.7.0-bin zookeeper
     ```
 
-0.  切换程序所在目录的所有权
+#### 注册服务
 
-    ```sh
-    sudoer@host *> sudo chown --recursive zookeeper:zookeeper /opt/apache-zookeeper-3.6.2-bin /opt/zookeeper
+6.  创建 `zookeeper` 用户
+
+    ``` console
+    [sudoer@host *]$ sudo useradd --comment 'ZooKeeper Server' \
+                                  --home-dir /opt/zookeeper \
+                                  --no-create-home \
+                                  --password !! \
+                                  --shell /sbin/nologin \
+                                  zookeeper
     ```
 
-0.  创建服务单元，参见 <http://www.jinbuguo.com/systemd/systemd.service.html>
+0.  切换程序所在目录的所有权（注意实际版本号）
 
-    ```sh
-    sudoer@host *> sudo vim /etc/systemd/system/zookeeper.service
+    ``` console
+    [sudoer@host *]$ sudo chown --recursive \
+                                zookeeper:zookeeper \
+                                /opt/apache-zookeeper-3.7.0-bin \
+                                /opt/zookeeper
     ```
 
-    ```ini
+0.  创建服务单元，参见 [systemd.service 中文手册](http://www.jinbuguo.com/systemd/systemd.service.html)
+
+    ``` console
+    [sudoer@host *]$ sudo vim /etc/systemd/system/zookeeper.service
+    ```
+
+    ``` ini
     [Unit]
     Description=ZooKeeper Server
     After=syslog.target network.target
@@ -81,21 +100,23 @@
 
 0.  重新加载服务单元
 
-    ```sh
-    sudoer@host *> sudo systemctl daemon-reload
+    ``` console
+    [sudoer@host *]$ sudo systemctl daemon-reload
     ```
 
 0.  创建 firewalld 服务描述文件
 
-    ```sh
-    #    Client:? -> 2181:ZooKeeper
-    # Followers:? -> 2888:Leader
-    #      Peer:? -> 3888:Peer      (leader election phase)
-
-    sudoer@host *> sudo vim /etc/firewalld/services/zookeeper.xml
+    ``` text
+       Client:? -> 2181:ZooKeeper
+    Followers:? -> 2888:Leader
+         Peer:? -> 3888:Peer      (leader election phase)
     ```
 
-    ```xml
+    ``` console
+    [sudoer@host *]$ sudo vim /etc/firewalld/services/zookeeper.xml
+    ```
+
+    ``` xml
     <?xml version="1.0" encoding="utf-8"?>
     <service>
       <short>ZooKeeper</short>
@@ -108,40 +129,51 @@
 
 0.  重新加载 firewalld 服务描述文件
 
-    ```sh
-    sudoer@host *> sudo firewall-cmd --reload
+    ``` console
+    [sudoer@host *]$ sudo firewall-cmd --reload
     ```
 
 0.  立即启用服务
 
-    ```sh
-    sudoer@host *> sudo systemctl enable --now zookeeper
+    ``` console
+    [sudoer@host *]$ sudo systemctl enable --now zookeeper
     ```
 
 0.  配置防火墙，开放服务所需端口
 
-    ```sh
-    sudoer@host *> sudo firewall-cmd --permanent --add-service=zookeeper
-    sudoer@host *> sudo firewall-cmd --reload
+    ``` console
+    [sudoer@host *]$ sudo firewall-cmd --permanent \
+                                       --add-service=zookeeper
+
+    [sudoer@host *]$ sudo firewall-cmd --reload
     ```
 
-*配置、启用并确认服务：*
+#### 配置、启用并确认服务
 
-13. 编辑配置文件
+14. 编辑配置文件
 
-    ```sh
-    sudoer@host *> sudo --user=zookeeper cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
-    sudoer@host *> sudo vim /opt/zookeeper/conf/zoo.cfg
+    ``` console
+    [sudoer@host *]$ sudo --user=zookeeper \
+                          cp /opt/zookeeper/conf/zoo_sample.cfg \
+                             /opt/zookeeper/conf/zoo.cfg
+    [abbr.        ]$ sudo -u zookeeper cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
+
+    [sudoer@host *]$ sudo vim /opt/zookeeper/conf/zoo.cfg
     ```
 
 0.  重启服务以使配置生效
 
-    ```sh
-    sudoer@host *> sudo systemctl restart zookeeper
+    ``` console
+    [sudoer@host *]$ sudo systemctl restart zookeeper
     ```
 
 0.  检查进程
 
-    ```sh
-    sudoer@host *> sudo jps
+    ``` console
+    [sudoer@host *]$ sudo jps
     ```
+
+<!----------------------------------------------------------------------------->
+
+[zktools]:   https://blog.csdn.net/rongbaojian/article/details/82078368 "zookeeper 可视化工具"
+[ZooKeeper]: https://zookeeper.apache.org/                              "Apache ZooKeeper"

@@ -2,12 +2,13 @@
 
 [Kafka] 是一款分布式消息服务。
 
-*   [*GitOps for Apache Kafka*](https://devshawn.github.io/kafka-gitops/)
-*   [*Kafka Tools*](https://kafkatool.com/)，一款图形用户界面客户端
-*   [*Apache Kafka: Topic Naming Conventions*](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)，话题命名风格
+参见：
+
+*   [GitOps for Apache Kafka](https://devshawn.github.io/kafka-gitops/)
+*   [Offset Explorer]，一款图形用户界面客户端
+*   [Apache Kafka: Topic Naming Conventions](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)，话题命名风格
 
 ## 主题命名约定
----
 
 ``` ebnf
 (* 主题名 *)
@@ -36,44 +37,56 @@ crawling.cmd.do-crawl.0
 crawling.cmd.crawl-done.0
 ```
 
-参见：
+参见 [Apache Kafka: Topic Naming Conventions](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)。
 
-*   [*Apache Kafka: Topic Naming Conventions*](https://devshawn.com/blog/apache-kafka-topic-naming-conventions/)
-
-## 安装并配置 Kafka
----
+## 运行 Kafka
 
 ### :material-centos: CentOS 7, 8
 
-**注意：前置需要安装 OpenJDK 和 ZooKeeper，参见[*相关文档*](../ZooKeeper/)。**
+#### 安装依赖
 
-#### 下载并解压程序
+1.  前置需要安装 OpenJDK 和 ZooKeeper，参见[相关文档](../ZooKeeper/)。
 
-1.  切换到 `/opt` 目录
+#### 下载程序
 
-    ``` console
-    [sudoer@host ~]$ cd /opt
-    ```
-
-0.  下载 Kafka 压缩包，参见 <https://mirrors.tuna.tsinghua.edu.cn/apache/kafka>
+2.  切换到 `/opt` 目录
 
     ``` console
-    [sudoer@host opt]$ sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz
+    [sudoer@host *]$ cd /opt
     ```
 
-0.  解压缩并建立链接
+0.  下载 Kafka 压缩包，参见 [清华大学 Kafka 镜像站](https://mirrors.tuna.tsinghua.edu.cn/apache/kafka)，此处以 `2.8.0` 版本为例
 
     ``` console
-    [sudoer@host /opt]$ sudo tar --extract --auto-compress --verbose --file=kafka_2.13-2.6.0.tgz
-    [sudoer@host /opt]$ sudo ln --symbolic kafka_2.13-2.6.0 kafka
+    [sudoer@host opt]$ sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.8.0/kafka_2.13-2.8.0.tgz
     ```
+
+0.  解压缩（注意实际版本号）
+
+    ``` console
+    [sudoer@host opt]$ sudo tar --extract \
+                                --auto-compress \
+                                --verbose \
+                                --file=kafka_2.13-2.8.0.tgz
+    [abbr.          ]$ sudo tar -xavf kafka_2.13-2.8.0.tgz
+    ```
+
+0.  建立目录链接（注意实际版本号）
+
+    ``` console
+    [sudoer@host opt]$ sudo ln --symbolic \
+                               kafka_2.13-2.8.0 \
+                               kafka
+    [abbr.          ]$ sudo ln -s kafka_2.13-2.8.0 kafka
+    ```
+
 
 #### 将程序注册为服务
 
-4.  创建 `kafka` 用户
+6.  创建 `kafka` 用户
 
     ``` console
-    [sudoer@host ~]$ sudo useradd --comment 'Kafka Server' \
+    [sudoer@host *]$ sudo useradd --comment 'Kafka Server' \
                                   --home-dir /opt/kafka \
                                   --no-create-home \
                                   --password !! \
@@ -81,19 +94,22 @@ crawling.cmd.crawl-done.0
                                   kafka
     ```
 
-0.  切换程序所在目录的所有权
+0.  切换程序所在目录的所有权（注意实际版本号）
 
     ``` console
-    [sudoer@host ~]$ sudo chown --recursive kafka:kafka /opt/kafka_2.13-2.6.0 /opt/kafka
+    [sudoer@host *]$ sudo chown --recursive \
+                                kafka:kafka \
+                                /opt/kafka_2.13-2.8.0 \
+                                /opt/kafka
     ```
 
-0.  创建服务单元，参见 <http://www.jinbuguo.com/systemd/systemd.service.html>
+0.  创建服务单元，参见 [systemd.service 中文手册](http://www.jinbuguo.com/systemd/systemd.service.html)
 
     ``` console
-    [sudoer@host ~]$ sudo vim /etc/systemd/system/kafka.service
+    [sudoer@host *]$ sudo vim /etc/systemd/system/kafka.service
     ```
 
-    ``` toml
+    ``` ini
     [Unit]
     Description=Kafka Server
     Requires=zookeeper.service
@@ -115,13 +131,13 @@ crawling.cmd.crawl-done.0
 0.  重新加载服务单元
 
     ``` console
-    [sudoer@host ~]$ sudo systemctl daemon-reload
+    [sudoer@host *]$ sudo systemctl daemon-reload
     ```
 
 0.  创建 firewalld 服务描述文件
 
     ``` console
-    [sudoer@host ~]$ sudo vim /etc/firewalld/services/kafka.xml
+    [sudoer@host *]$ sudo vim /etc/firewalld/services/kafka.xml
     ```
 
     ``` xml
@@ -136,28 +152,30 @@ crawling.cmd.crawl-done.0
 0.  重新加载 firewalld 服务描述文件
 
     ``` console
-    [sudoer@host ~]$ sudo firewall-cmd --reload
+    [sudoer@host *]$ sudo firewall-cmd --reload
     ```
 
 0.  立即启用服务
 
     ``` console
-    [sudoer@host ~]$ sudo systemctl enable --now kafka
+    [sudoer@host *]$ sudo systemctl enable --now kafka
     ```
 
 0.  配置防火墙，开放服务所需端口
 
     ``` console
-    [sudoer@host ~]$ sudo firewall-cmd --permanent --add-service=kafka
-    [sudoer@host ~]$ sudo firewall-cmd --reload
+    [sudoer@host *]$ sudo firewall-cmd --permanent \
+                                       --add-service=kafka
+
+    [sudoer@host *]$ sudo firewall-cmd --reload
     ```
 
 #### 配置、启用并确认服务
 
-12. 编辑配置文件，配置 Host 使用 IP 地址而非计算机名
+14. 编辑配置文件，配置 Host 使用 IP 地址而非计算机名（注意实际 IP 地址）
 
     ``` console
-    [sudoer@host ~]$ sudo vim /opt/kafka/config/server.properties
+    [sudoer@host *]$ sudo vim /opt/kafka/config/server.properties
     ```
 
     ``` properties
@@ -181,17 +199,16 @@ crawling.cmd.crawl-done.0
 0.  重启服务以使配置生效
 
     ``` console
-    [sudoer@host ~]$ sudo systemctl restart kafka
+    [sudoer@host *]$ sudo systemctl restart kafka
     ```
 
 0.  检查进程
 
     ``` console
-    [sudoer@host ~]$ sudo jps
+    [sudoer@host *]$ sudo jps
     ```
 
 ## `kafka-*` 命令
----
 
 预设工作目录为 `/path/to/kafka/bin`。
 
@@ -245,4 +262,5 @@ crawling.cmd.crawl-done.0
 
 <!----------------------------------------------------------------------------->
 
-[Kafka]: https://kafka.apache.org/
+[Kafka]:           https://kafka.apache.org/ "Apache Kafka"
+[Offset Explorer]: https://kafkatool.com/    "Offset Explorer"
