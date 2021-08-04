@@ -4,6 +4,7 @@
 
 参见：
 
+*   [ZooInspector]，一款图形用户界面客户端
 *   [zktools]，一款图形用户界面客户端
 
 ## 运行 ZooKeeper
@@ -175,5 +176,6 @@
 
 <!----------------------------------------------------------------------------->
 
-[zktools]:   https://blog.csdn.net/rongbaojian/article/details/82078368 "zookeeper 可视化工具"
-[ZooKeeper]: https://zookeeper.apache.org/                              "Apache ZooKeeper"
+[zktools]:      https://blog.csdn.net/rongbaojian/article/details/82078368                 "zookeeper 可视化工具"
+[ZooInspector]: https://issues.apache.org/jira/secure/attachment/12436620/ZooInspector.zip
+[ZooKeeper]:    https://zookeeper.apache.org/                                              "Apache ZooKeeper"
