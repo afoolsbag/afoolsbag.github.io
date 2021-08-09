@@ -79,6 +79,6 @@
 
 <!----------------------------------------------------------------------------->
 
-[CentOS]: https://www.centos.org/
+[CentOS]: <https://www.centos.org/>
 
 *[CentOS]: Community Enterprise Operating System

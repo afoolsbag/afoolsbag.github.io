@@ -1,75 +1,82 @@
-# 命令行壳层 fish
+# fish
 
-跨平台的命令行壳层 fish（friendly interactive shell），官网 <https://fishshell.com/>。
+[fish] 是一款跨平台的命令行壳层。
 
-## 安装 fish
----
+## 运行 fish
 
-### Arch
+### :material-arch: Arch
 
-```bash
-[user@host *]$ sudo pacman --sync fish
+``` console
+[sudoer@host *]$ sudo pacman --sync fish
 ```
 
-### CentOS
+### :material-centos: CentOS
 
-```bash
-# 安装 fish 2
-[user@host *]$ sudo yum install fish
+1.  启用 [EPEL] 仓库：
 
-# 安装 fish 3
-[user@host *]$ sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/RedHat_RHEL-6/shells:fish:release:3.repo
-# CentOS 7     sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/RHEL_7/shells:fish:release:3.repo
-# CentOS 8     sudo wget --directory-prefix=/etc/yum.repos.d https://download.opensuse.org/repositories/shells:fish:release:3/CentOS_8/shells:fish:release:3.repo
-[user@host *]$ sudo yum install fish
-```
+    ``` console
+    [sudoer@host *]$ sudo dnf install epel-release
+    ```
+
+0.  安装 fish：
+
+    ``` console
+    [sudoer@host *]$ sudo yum install fish
+    ```
 
 ### Kali
 
-```bash
-# 安装 fish 3
-user@host:*$ sudo apt install fish
+``` console
+sudoer@host:*$ sudo apt install fish
 ```
 
-### Ubuntu
+### :material-ubuntu: Ubuntu
 
-```
-# 安装 fish 2
-user@host:*$ sudo apt install fish
-
-# 安装 fish 3
-user@host:*$ sudo apt-add-repository ppa:fish-shell/release-3
-user@host:*$ sudo apt update
-user@host:*$ sudo apt install fish
+``` console
+sudoer@host:*$ sudo apt install fish
 ```
 
-## 常用命令组合
----
+## 常用命令
 
-```fish
-# 查看当前壳层
-user@host *> echo $SHELL
+*   查看当前壳层：
 
-# 查看可用壳层
-user@host *> chsh --list-shells
-# abbr.      chsh -l
+    ``` console
+    [user@host *]$ echo $SHELL
+    ```
 
-# 切换默认壳层（重新登陆以生效）
-user@host *> chsh --shell /usr/bin/fish [username]
-# abbr.      chsh -s /usr/bin/fish [username]
+*   查看可用壳层：
 
-# 查看已配置的命令别名
-user@host *> alias
+    ``` console
+    [user@host *]$ chsh --list-shells
+    [abbr.      ]$ chsh -l
+    ```
 
-# 设置一个命令别名
-user@host *> alias ll='ls --all -l --classify --color=auto'
+*   切换默认壳层（重新登陆以生效）：
 
-# 取消一个命令别名
-user@host *> unalias ll
-```
+    ``` console
+    [user@host *]$ chsh --shell /usr/bin/fish [username]
+    [abbr.      ]$ chsh -s /usr/bin/fish [username]
+    ```
+
+*   查看已配置的命令别名：
+
+    ``` console
+    [user@host *]$ alias
+    ```
+
+*   设置一个命令别名：
+
+    ``` console
+    [user@host *]$ alias ll='ls --all -l --classify --color=auto'
+    ```
+
+*   取消一个命令别名：
+
+    ``` console
+    [user@host *]$ unalias ll
+    ```
 
 ## 壳层环境
----
 
 ### bash
 
@@ -78,19 +85,19 @@ user@host *> unalias ll
 *   系统配置（脚本）
     *   `/etc/profile`
     *   `/etc/profile.d/*.sh`
-    *   `/etc/profile.d/sh.local`（CentOS）
+    *   `/etc/profile.d/sh.local`（:material-centos: CentOS）
 *   系统壳层配置（脚本）
-    *   `/etc/bash.bashrc`（Ubuntu）
-    *   `/etc/bashrc`（CentOS）
+    *   `/etc/bash.bashrc`（:material-ubuntu: Ubuntu）
+    *   `/etc/bashrc`（:material-centos: CentOS）
 *   用户环境变量（键值对）
-    *   `~/.pam_environment`（Ubuntu）
+    *   `~/.pam_environment`（:material-ubuntu: Ubuntu）
 *   用户配置（脚本）
     *   `~/.profile`
 *   用户壳层配置（脚本）
     *   `~/.bash_profile`
     *   `~/.bashrc`
 
-```bash
+``` sh
 export PATH="${PATH}:/path/to/directory"
 ```
 
@@ -103,6 +110,14 @@ export PATH="${PATH}:/path/to/directory"
     *   `~/.config/fish/config.fish`
     *   `~/.config/fish/conf.d/*.fish`
 
-```fish
+``` fish
 set --export PATH {$PATH} /path/to/directory
 ```
+
+<!----------------------------------------------------------------------------->
+
+[EPEL]: <https://fedoraproject.org/wiki/EPEL> "EPEL - Fedora Project Wiki"
+[fish]: <https://fishshell.com/>              "fish shell"
+
+*[EPEL]: Extra Packages for Enterprise Linux
+*[fish]: friendly interactive shell

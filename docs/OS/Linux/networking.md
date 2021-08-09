@@ -1,49 +1,79 @@
 # 网络
 
-## 使用 net-tools 维护网络
----
-
-[*net-tools 官网*](http://net-tools.sourceforge.net/)，
-[*Linux Foundation Wiki 上的 net-tools 文档*](https://wiki.linuxfoundation.org/networking/net-tools)。
+## 使用 [net-tools] 维护网络
 
 | net-tools         | iproute2      |
 |:----------------- |:------------- |
-| [`arp`][1]        | `ip neigh`
-| [`hostname`][2]   |
-| [`ifconfig`][3]   | `ip addr`
-| `ipmaddr`         | `ip maddr`
-| `iptunnel`        | `ip tunnel`
-| [`mii-tool`][6]   | `ethtool`
-| [`nameif`][7]     | `ifrename`
-| [`netstat`][8]    | `ss`
-| [`plipconfig`][9] |
-| [`rarp`][10]      |
-| [`route`][11]     | `ip route`
-| [`slattach`][12]  |
+| [`arp`][1]        | `ip neigh`    |
+| [`hostname`][2]   |               |
+| [`ifconfig`][3]   | `ip addr`     |
+| `ipmaddr`         | `ip maddr`    |
+| `iptunnel`        | `ip tunnel`   |
+| [`mii-tool`][6]   | `ethtool`     |
+| [`nameif`][7]     | `ifrename`    |
+| [`netstat`][8]    | `ss`          |
+| [`plipconfig`][9] |               |
+| [`rarp`][10]      |               |
+| [`route`][11]     | `ip route`    |
+| [`slattach`][12]  |               |
 
-[1]: <http://net-tools.sourceforge.net/man/arp.8.html>
-[2]: <http://net-tools.sourceforge.net/man/hostname.1.html>
-[3]: <http://net-tools.sourceforge.net/man/ifconfig.8.html>
-[6]: <http://net-tools.sourceforge.net/man/mii-tool.8.html>
-[7]: <http://net-tools.sourceforge.net/man/nameif.8.html>
-[8]: <http://net-tools.sourceforge.net/man/netstat.8.html>
-[9]: <http://net-tools.sourceforge.net/man/plipconfig.8.html>
-[10]: <http://net-tools.sourceforge.net/man/rarp.8.html>
-[11]: <http://net-tools.sourceforge.net/man/route.8.html>
-[12]: <http://net-tools.sourceforge.net/man/slattach.8.html>
+[1]:  <https://net-tools.sourceforge.io/man/arp.8.html>
+[2]:  <https://net-tools.sourceforge.io/man/hostname.1.html>
+[3]:  <https://net-tools.sourceforge.io/man/ifconfig.8.html>
+[6]:  <https://net-tools.sourceforge.io/man/mii-tool.8.html>
+[7]:  <https://net-tools.sourceforge.io/man/nameif.8.html>
+[8]:  <https://net-tools.sourceforge.io/man/netstat.8.html>
+[9]:  <https://net-tools.sourceforge.io/man/plipconfig.8.html>
+[10]: <https://net-tools.sourceforge.io/man/rarp.8.html>
+[11]: <https://net-tools.sourceforge.io/man/route.8.html>
+[12]: <https://net-tools.sourceforge.io/man/slattach.8.html>
 
-## 使用 iproute2 维护网络
----
+参见 [networking:net-tools \[Wiki\]](https://wiki.linuxfoundation.org/networking/net-tools)。
 
-[*iproute2 官网*](https://wiki.linuxfoundation.org/networking/iproute2)。
+## 使用 [iproute2] 维护网络
+
+*   查看服务状态：
+
+    ``` console
+    [sudoer@host *]$ systemctl status network
+    ```
+
+*   重载所有配置并应用：
+
+    ``` console
+    [sudoer@host *]$ sudo systemctl reload-or-restart network
+    ```
+
+*   启用网络接口：
+
+    ``` console
+    [sudoer@host *]$ sudo ifup <interface-name>
+    ```
+
+    将触发 `/etc/sysconfig/network-scripts/ifup-<interface-name>` 脚本，并依据 `/etc/sysconfig/network-scripts/ifcfg-<interface-name>` 进行配置。
+
+*   停用网络接口：
+
+    ``` console
+    [sudoer@host *]$ sudo ifdown <interface-name>
+    ```
+
+    将触发 `/etc/sysconfig/network-script/ifdown-<interface-name>` 脚本。
+
+*   查找端口占用：
+
+    ``` console
+    [sudoer@host ~]$ ss --all --numeric --processes | grep <:port>
+    [abbr.        ]$ ss -anp | grep <:port>
+    ```
 
 ### 典型配置
 
-```fish
-user@host *> vim /etc/sysconfig/network-scripts/ifcfg-<interface-name>
+``` console
+[sudoer@host *]$ vim /etc/sysconfig/network-scripts/ifcfg-<interface-name>
 ```
 
-```ini
+``` ini
 # 动态网络配置
 BOOTPROTO=dhcp
 
@@ -56,80 +86,83 @@ DNS1=223.6.6.6
 DNS2=8.8.8.8
 ```
 
-### 常用命令组合
-
-#### 配置网络
-
-```fish
-# 查看服务状态
-user@host *> systemctl status network
-
-# 重载所有配置并应用
-user@host *> sudo systemctl reload-or-restart network
-
-# 启用网络接口
-user@host *> sudo ifup <interface-name>
-# 将触发 /etc/sysconfig/network-scripts/ifup-<interface-name> 脚本
-# 并依据 /etc/sysconfig/network-scripts/ifcfg-<interface-name> 进行配置
-
-# 停用网络接口
-user@host *> sudo ifdown <interface-name>
-# 将触发 /etc/sysconfig/network-script/ifdown-<interface-name> 脚本
-```
-
-#### 查找端口占用
-
-```fish
-user@host ~> ss --all --numeric --processes | grep <:port>
-# abbr.      ss -anp | grep <:port>
-```
-
 ## 使用 NetworkManager 维护网络
----
 
-[*NetworkManager 官网*](https://wiki.gnome.org/Projects/NetworkManager)，
-其提供 CLI 工具 `nmcli` 和 TUI 工具 `nmtui`。
+[NetworkManager] 是 :material-redhat: RHEL 选用的默认网络服务。其提供 CLI 工具 `nmcli` 和 TUI 工具 `nmtui`，参见 [Red Hat Enterprise Linux 7 联网指南](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/)。
 
-[*Red Hat Enterprise Linux 7 联网指南*](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/)。
+*   查看服务状态：
 
+    ``` console
+    [sudoer@host *]$ systemctl status NetworkManager
+    ```
 
-### 常用命令组合
+*   概览：
 
-```fish
-# 查看服务状态
-user@host *> systemctl status NetworkManager
+    ``` console
+    [sudoer@host *]$ nmcli
+    ```
 
-# 概览
-user@host *> nmcli
+*   重载所有配置：
 
-# 重载所有配置
-user@host *> sudo nmcli connection reload
-# abbr.      sudo nmcli c reload
+    ``` console
+    [sudoer@host *]$ sudo nmcli connection reload
+    [abbr.        ]$ sudo nmcli c reload
+    ```
 
-# 为指定接口的连接应用配置
-user@host *> sudo nmcli connection up <interface-name>
-# abbr.      sudo nmcli c up <interface-name>
-```
+*   为指定接口的连接应用配置：
 
-## 使用 systemd-networkd 维护网络
----
+    ``` console
+    [sudoer@host *]$ sudo nmcli connection up <interface-name>
+    [abbr.        ]$ sudo nmcli c up <interface-name>
+    ```
 
-[*systemd-networkd 官网*](https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html)，中译本 [*systemd-networkd.service 中文手册*](http://www.jinbuguo.com/systemd/systemd-networkd.service.html)。
+### 使用 TUI 配置网络
 
+!!! danger "危险操作"
 
-### 常用命令组合
+    网络配置变动后，远程连接可能断开。
 
-```fish
-# 查看服务状态
-user@host *> systemctl status systemd-networkd
+1.  运行 TUI 程序：
 
-# 概览
-user@host *> networkctl
-```
+    ``` console
+    [sudoer@host *]$ sudo nmtui
+    ```
 
-## 使用 netplan 维护网络
----
+0.  在 TUI 中进行配置；
 
-[*netplan 官网*](https://netplan.io/)。
+0.  应用配置到网络接口：
 
-[*Ubuntu 网络配置文档*](https://ubuntu.com/server/docs/network-configuration)。
+    ``` console
+    [sudoer@host *]$ sudo nmcli connection up <interface-name>
+    [abbr.        ]$ sudo nmcli c up <interface-name>
+    ```
+
+## 使用 [systemd-networkd] 维护网络
+
+参见 [systemd-networkd.service 中文手册](http://www.jinbuguo.com/systemd/systemd-networkd.service.html)。
+
+*   查看服务状态：
+
+    ``` console
+    [sudoer@host *]$ systemctl status systemd-networkd
+    ```
+
+*   概览：
+
+    ``` console
+    [sudoer@host *]$ networkctl
+    ```
+
+## 使用 [netplan] 维护网络
+
+参见 [Ubuntu 网络配置文档](https://ubuntu.com/server/docs/network-configuration)。
+
+<!----------------------------------------------------------------------------->
+
+[iproute2]:         <https://wiki.linuxfoundation.org/networking/iproute2>                           "networking:iproute2 [Wiki]"
+[NetworkManager]:   <https://wiki.gnome.org/Projects/NetworkManager>                                 "Projects/NetworkManager - GNOME Wiki!"
+[net-tools]:        <https://net-tools.sourceforge.io/>                                              "net-tools - Project Home"
+[netplan]:          <https://netplan.io/>
+[systemd-networkd]: <https://www.freedesktop.org/software/systemd/man/systemd-networkd.service.html> "systemd-networkd.service"
+
+*[nmtui]: Network Manager Text-based User Interface
