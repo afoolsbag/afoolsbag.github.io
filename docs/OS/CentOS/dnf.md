@@ -1,101 +1,167 @@
-# 包管理工具 dnf
+# dnf
 
-适用于 CentOS、Fedora 和 RHEL 操作系统的包管理工具 dnf（dandified, yellow dog updater, modified），使用 rpm（redhat package manager）格式安装包。
-
-官网 <https://github.com/rpm-software-management/dnf>。
-
-已过时的 yum 的官网 <http://yum.baseurl.org/>。
+DNF 是适用于 :material-centos: CentOS、:material-fedora: Fedora 和 :material-redhat: RHEL 操作系统的包管理工具，使用 RPM 格式安装包。被设计用以替换 YUM 包管理工具。
 
 ## 配置源
----
 
-### CentOS
+### :material-centos: CentOS
 
-```bash
-# 移除并备份原始源
-[user@host *]$ sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bck
+新版本的 :material-centos: CentOS 已使用自动镜像源，无需手动配置。
 
-# 下载并应用阿里云镜像源（https://developer.aliyun.com/mirror/centos）
-[user@host *]$ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
-# CentOS 7     sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-# CentOS 8     sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
+??? cite "手动配置镜像源"
 
-# 启用额外源：Software Collections（https://wiki.centos.org/AdditionalResources/Repositories/SCL）
-[user@host *]$ sudo dnf install centos-release-scl
+    1.  移除并备份原始源：
 
-# 启用额外源：Extra Packages for Enterprise（https://fedoraproject.org/wiki/EPEL）
-[user@host *]$ sudo dnf install epel-release
+        ``` console
+        [sudoer@host *]$ sudo mv /etc/yum.repos.d/CentOS-Base.repo \
+                                /etc/yum.repos.d/CentOS-Base.repo.bck
+        ```
 
-# 同步索引
-[user@host *]$ dnf clean all
-[user@host *]$ dnf makecache
-```
+    0.  下载并应用[阿里云镜像源](https://developer.aliyun.com/mirror/centos)：
 
-## 常用命令组合
----
+        ``` console
+        [sudoer@host *]$ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo \
+                                    https://mirrors.aliyun.com/repo/Centos-6.repo
+        [CentOS 7     ]$ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo \
+                                    https://mirrors.aliyun.com/repo/Centos-7.repo
+        [CentOS 8     ]$ sudo curl -o /etc/yum.repos.d/CentOS-Base.repo \
+                                    https://mirrors.aliyun.com/repo/Centos-8.repo
+        ```
 
-```fish
-# 检查可用升级
-user@host *> dnf check-update
+    0.  启用 [Software Collections](https://wiki.centos.org/AdditionalResources/Repositories/SCL) 额外源：
 
-# 升级
-user@host *> sudo dnf upgrade
+        ``` console
+        [sudoer@host *]$ sudo dnf install centos-release-scl
+        ```
 
-# 列出组
-user@host *> dnf group list
+    0.  启用 [Extra Packages for Enterprise](https://fedoraproject.org/wiki/EPEL) 额外源：
 
-# 搜索
-user@host *> dnf search <query>
+        ``` console
+        [sudoer@host *]$ sudo dnf install epel-release
+        ```
 
-# 显示包信息
-user@host *> dnf info <package>
+    0.  同步索引：
 
-# 安装包
-user@host *> sudo dnf install <package>
+        ``` console
+        [sudoer@host *]$ dnf clean all
+        [sudoer@host *]$ dnf makecache
+        ```
 
-# 卸载包
-user@host *> sudo dnf remove <package>
-```
+## `dnf` 命令
 
-## 使用 dnf 安装开发工具集的示例
----
+*   检查可用升级
 
-```fish
-# 安装 Open SSH Server 并启用
-user@host *> sudo dnf install openssh-server
-user@host *> sudo systemctl enable sshd
-user@host *> sudo systemctl start sshd
+    ``` console
+    [sudoer@host *]$ dnf check-update
+    ```
 
-# 安装 Vim
-user@host *> sudo dnf install vim
+*   升级
 
-# 安装开发工具
-user@host *> sudo dfn group install 'Development Tools'
+    ``` console
+    [sudoer@host *]$ sudo dnf upgrade
+    ```
 
-# 若有需要，安装指定版本开发工具，并切换到指定开发环境
-user@host *> sudo dnf install devtoolset-6 devtoolset-7 devtoolset-8 devtoolset-9
-user@host *> scl enable devtoolset-9 bash
+*   列出组
 
-# 若有需要，编译安装最新版 Git（https://git-scm.com/download/linux）
-user@host *> sudo dnf install asciidoc curl-devel xmlto docbook2x
-user@host *> sudo dnf remove git
-user@host *> cd /usr/local/src
-user@host /u/l/src> sudo wget https://www.kernel.org/pub/software/scm/git/git-2.27.0.tar.gz
-user@host /u/l/src> sudo tar -xavf git-2.27.0.tar.gz
-user@host /u/l/src> cd git-2.27.0
-user@host /u/l/s/git-2.27.0> sudo make configure
-user@host /u/l/s/git-2.27.0> sudo ./configure
-user@host /u/l/s/git-2.27.0> sudo make all doc info
-user@host /u/l/s/git-2.27.0> sudo make install install-doc install-html install-info
+    ``` console
+    [sudoer@host *]$ dnf group list
+    ```
 
-# 安装 pip3 并配置源
-user@host *> sudo dnf install python3
-user@host *> pip3 config set global.index-url https://pypi.doubanio.com/simple
-# 确保 PATH 环境变量包含 $HOME/.local/bin
+*   搜索
 
-# 安装 CMake
-user@host *> pip3 install cmake
+    ``` console
+    [sudoer@host *]$ dnf search <query>
+    ```
 
-# 安装 Conan
-user@host *> pip3 install conan
-```
+*   显示包信息
+
+    ``` console
+    [sudoer@host *]$ dnf info <package>
+    ```
+
+*   安装包
+
+    ``` console
+    [sudoer@host *]$ sudo dnf install <package>
+    ```
+
+*   卸载包
+
+    ``` console
+    [sudoer@host *]$ sudo dnf remove <package>
+    ```
+
+## 使用 `dnf` 安装开发工具集的示例
+
+1.  安装 Open SSH Server 并启用：
+
+    ``` console
+    [sudoer@host *]$ sudo dnf install openssh-server
+    [sudoer@host *]$ sudo systemctl enable sshd
+    [sudoer@host *]$ sudo systemctl start sshd
+    ```
+
+0.  安装 Vim：
+
+    ``` console
+    [sudoer@host *]$ sudo dnf install vim
+    ```
+
+0.  安装开发工具：
+
+    ``` console
+    [sudoer@host *]$ sudo dfn group install 'Development Tools'
+    ```
+
+0.  若有需要，安装指定版本开发工具，并切换到指定开发环境：
+
+    ``` console
+    [sudoer@host *]$ sudo dnf install devtoolset-6 devtoolset-7 devtoolset-8 devtoolset-9
+    [sudoer@host *]$ scl enable devtoolset-9 bash
+    ```
+
+0.  若有需要，编译安装最新版 [Git](https://git-scm.com/download/linux)：
+
+    ``` console
+    [sudoer@host *]$ sudo dnf install asciidoc curl-devel xmlto docbook2x
+    [sudoer@host *]$ sudo dnf remove git
+    [sudoer@host *]$ cd /usr/local/src
+    [sudoer@host src]$ sudo wget https://www.kernel.org/pub/software/scm/git/git-2.32.0.tar.gz
+    [sudoer@host src]$ sudo tar -xavf git-2.32.0.tar.gz
+    [sudoer@host src]$ cd git-2.32.0
+    [sudoer@host git-2.32.0]$ sudo make configure
+    [sudoer@host git-2.32.0]$ sudo ./configure
+    [sudoer@host git-2.32.0]$ sudo make all doc info
+    [sudoer@host git-2.32.0]$ sudo make install install-doc install-html install-info
+    ```
+
+0.  安装 pip3 并配置源
+
+    ``` console
+    [sudoer@host *]$ sudo dnf install python3
+    [sudoer@host *]$ pip3 config set global.index-url https://pypi.doubanio.com/simple
+    ```
+
+    确保 `PATH` 环境变量包含 `$HOME/.local/bin`
+
+0.  安装 CMake
+
+    ``` console
+    [sudoer@host *]$ pip3 install cmake
+    ```
+
+0.  安装 Conan
+
+    ``` console
+    [sudoer@host *]$ pip3 install conan
+    ```
+
+<!----------------------------------------------------------------------------->
+
+[DNF]: https://rpm-software-management.github.io/
+[RPM]: https://rpm.org/
+[YUM]: http://yum.baseurl.org/
+
+*[DNF]: Dandified YUM
+*[RPM]: Red Hat Package Manager
+*[YUM]: Yellowdog Updater, Modified

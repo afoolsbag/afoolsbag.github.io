@@ -530,7 +530,7 @@ PEiD
 
             <https://github.com/abbodi1406/KMS_VL_ALL_AIO/releases>
 
-    0.  创建 `%ProgramFiles%\KMS_VL_ALL_AIO` 文件夹，并在 Windows Defender 中将其配置为排除项：
+    0.  创建 `%ProgramFiles%\KMS_VL_ALL_AIO` 文件夹，并在 Windows Defender 中将其配置为排除项；
 
     0.  下载 `KMS_VL_ALL_AIO-*.7z`，将其解压到 `%ProgramFiles%\KMS_VL_ALL_AIO` 文件夹；
 
