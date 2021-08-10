@@ -1,6 +1,6 @@
-# dnf
+# DNF
 
-DNF 是适用于 :material-centos: CentOS、:material-fedora: Fedora 和 :material-redhat: RHEL 操作系统的包管理工具，使用 RPM 格式安装包。被设计用以替换 YUM 包管理工具。
+[DNF] 是适用于 :material-centos: CentOS、:material-fedora: Fedora 和 :material-redhat: RHEL 操作系统的包管理工具，使用 [RPM] 格式安装包。被设计用以替换 [YUM] 包管理工具。
 
 ## 配置仓库
 

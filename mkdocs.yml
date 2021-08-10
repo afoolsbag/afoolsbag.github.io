@@ -68,7 +68,7 @@ nav:
             - OS/Arch/Pacman.md
         - CentOS:
             - OS/CentOS/CentOS.md
-            - OS/CentOS/dnf.md
+            - OS/CentOS/DNF.md
         - Ubuntu:
             - OS/Ubuntu/Ubuntu.md
             - OS/Ubuntu/APT.md
