@@ -37,6 +37,12 @@
 
 0.  安装依赖
 
+    :material-arch: Arch:
+
+    ``` console
+    [sudoer@host *]$ sudo pacman -S perl
+    ```
+
     :material-centos: CentOS：
 
     ``` console

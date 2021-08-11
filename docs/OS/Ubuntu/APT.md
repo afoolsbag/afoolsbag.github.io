@@ -1,6 +1,6 @@
 # APT
 
-APT 是适用于 :material-debian: Debian、:material-linux: Kali 和 :material-ubuntu: Ubuntu 操作系统的包管理工具。
+[APT] 是适用于 :material-debian: Debian、:material-linux: Kali 和 :material-ubuntu: Ubuntu 操作系统的包管理工具。
 
 APT 使用 dpkg 格式安装包，可以通过 [Keryx] 进行离线安装、升级。
 

@@ -72,6 +72,7 @@ ISO 3166-1:2013 标准中的“中国”代码
 
 | 操作系统                                         | 光盘镜像下载地址                      | 最后更新时间 |
 | :----------------------------------------------- | :------------------------------------ | -----------: |
+| :material-arch: Arch                             | <https://archlinux.org/download/>     |   2021-08-10 |
 | :material-centos: CentOS 8/7                     | <https://centos.org/centos-linux/>    |   2021-06-11 |
 | :material-ubuntu: Ubuntu Desktop 21.04/20.04 LTS | <https://ubuntu.com/download/desktop> |   2021-06-11 |
 | :material-ubuntu: Ubuntu Server 21.04/20.04 LTS  | <https://ubuntu.com/download/server>  |   2021-06-11 |

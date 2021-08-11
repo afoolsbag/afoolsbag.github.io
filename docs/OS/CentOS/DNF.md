@@ -14,7 +14,7 @@
 
             ``` console
             [sudoer@host *]$ sudo mv /etc/yum.repos.d/CentOS-Base.repo \
-                                    /etc/yum.repos.d/CentOS-Base.repo.bck
+                                     /etc/yum.repos.d/CentOS-Base.repo.bck
             ```
 
         0.  下载并应用[阿里云镜像仓库](https://developer.aliyun.com/mirror/centos)配置：
@@ -91,14 +91,16 @@
     [sudoer@host *]$ sudo dnf remove <package>
     ```
 
-## 使用 `dnf` 安装开发工具集的示例
+## `dnf` 示例
+
+### 安装开发工具集
 
 1.  安装 Open SSH Server 并启用：
 
     ``` console
     [sudoer@host *]$ sudo dnf install openssh-server
-    [sudoer@host *]$ sudo systemctl enable sshd
-    [sudoer@host *]$ sudo systemctl start sshd
+
+    [sudoer@host *]$ sudo systemctl enable --now sshd
     ```
 
 0.  安装 Vim：
