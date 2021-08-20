@@ -2,23 +2,23 @@
 
 ## 若干不可见字符
 
-| Unicode 编号                                | → |   字符   | ← | 描述                       |
+| Unicode 编号                                | 『 |   字符   | 』 | 描述                       |
 |:------------------------------------------- | -:|:--------:|:- |:---------------------------|
-| [`U+200B`](https://unicode-table.com/200B/) | → | &#x200B; | ← | 零宽空格                   |
-| [`U+200C`](https://unicode-table.com/200C/) | → | &#x200C; | ← | 零宽断开符                 |
-| [`U+200D`](https://unicode-table.com/200D/) | → | &#x200D; | ← | 零宽连接符                 |
-| [`U+200E`](https://unicode-table.com/200E/) | → | &#x200E; | ← | 从左至右标志               |
-| [`U+200F`](https://unicode-table.com/200F/) | → | &#x200F; | ← | 从右至左标志               |
-| [`U+202A`](https://unicode-table.com/202A/) | → | &#x202A; | ← | 方向格式化：从左至右嵌入   |
-| [`U+202B`](https://unicode-table.com/202B/) | → | &#x202B; | ← | 方向格式化：从右至左嵌入   |
-| [`U+202C`](https://unicode-table.com/200C/) | → | &#x202C; | ← | 方向格式化：弹出           |
-| [`U+202D`](https://unicode-table.com/202D/) | → | &#x202D; | ← | 方向格式化：从左至右覆盖   |
-| [`U+202E`](https://unicode-table.com/202E/) | → | &#x202E; | ← | 方向格式化：从右至左覆盖   |
-| [`U+2061`](https://unicode-table.com/2061/) | → | &#x2061; | ← | 函数应用                   |
-| [`U+2062`](https://unicode-table.com/2062/) | → | &#x2062; | ← | 不可见乘号                 |
-| [`U+2063`](https://unicode-table.com/2063/) | → | &#x2063; | ← | 不可见分隔符               |
-| [`U+2064`](https://unicode-table.com/2064/) | → | &#x2064; | ← | 不可见加号                 |
-| [`U+FEFF`](https://unicode-table.com/FEFF/) | → | &#xFEFF; | ← | 零宽不折行空格             |
+| [`U+200B`](https://unicode-table.com/200B/) | 『 | &#x200B; | 』 | 零宽空格                   |
+| [`U+200C`](https://unicode-table.com/200C/) | 『 | &#x200C; | 』 | 零宽断开符                 |
+| [`U+200D`](https://unicode-table.com/200D/) | 『 | &#x200D; | 』 | 零宽连接符                 |
+| [`U+200E`](https://unicode-table.com/200E/) | 『 | &#x200E; | 』 | 从左至右标志               |
+| [`U+200F`](https://unicode-table.com/200F/) | 『 | &#x200F; | 』 | 从右至左标志               |
+| [`U+202A`](https://unicode-table.com/202A/) | 『 | &#x202A; | 』 | 方向格式化：从左至右嵌入   |
+| [`U+202B`](https://unicode-table.com/202B/) | 『 | &#x202B; | 』 | 方向格式化：从右至左嵌入   |
+| [`U+202C`](https://unicode-table.com/200C/) | 『 | &#x202C; | 』 | 方向格式化：弹出           |
+| [`U+202D`](https://unicode-table.com/202D/) | 『 | &#x202D; | 』 | 方向格式化：从左至右覆盖   |
+| [`U+202E`](https://unicode-table.com/202E/) | 『 | &#x202E; | 』 | 方向格式化：从右至左覆盖   |
+| [`U+2061`](https://unicode-table.com/2061/) | 『 | &#x2061; | 』 | 函数应用                   |
+| [`U+2062`](https://unicode-table.com/2062/) | 『 | &#x2062; | 』 | 不可见乘号                 |
+| [`U+2063`](https://unicode-table.com/2063/) | 『 | &#x2063; | 』 | 不可见分隔符               |
+| [`U+2064`](https://unicode-table.com/2064/) | 『 | &#x2064; | 』 | 不可见加号                 |
+| [`U+FEFF`](https://unicode-table.com/FEFF/) | 『 | &#xFEFF; | 』 | 零宽不折行空格             |
 
 ## Awesome
 
@@ -81,13 +81,13 @@
 *[ISO]:     International Organization for Standardization（国际标准化组织）
 *[Unicode]: 统一码
 
-[Abbreviations.com]:            https://abbreviations.com/
-[All Acronyms]:                 https://allacronyms.com/
+[Abbreviations.com]:            https://abbreviations.com/                           "Abbreviations.com"
+[All Acronyms]:                 https://allacronyms.com/                             "All Acronyms - Top Acronyms and Abbreviations Dictionary"
 [ASCII Table]:                  https://ss64.com/ascii.html                          "ASCII Table - ASCII character codes - SS64.com"
 [ASCII Figlet Generator]:       https://askapache.com/online-tools/figlet-ascii/
 [BCP 47]:                       https://www.rfc-editor.org/info/bcp47
-[Cambridge]:                    https://dictionary.cambridge.org/
-[Dictionary.com]:               https://dictionary.com/
+[Cambridge]:                    https://dictionary.cambridge.org/                    "Cambridge Dictionary | English Dictionary, Translations & Thesaurus"
+[Dictionary.com]:               https://dictionary.com/                              "Dictionary.com | Meanings and Definitions of Words at Dictionary.com"
 [DevDocs]:                      https://devdocs.io/                                  "DevDocs API Documentation"
 [emoji-cheat-sheet]:            https://github.com/ikatyang/emoji-cheat-sheet        "GitHub - ikatyang/emoji-cheat-sheet: A markdown version emoji cheat sheet"
 [Emojipedia]:                   https://emojipedia.org/
@@ -104,14 +104,14 @@
 [ISO/IEC 646:1991]:             https://iso.org/standard/4777.html                   "ISO - ISO/IEC 646:1991 - Information technology — ISO 7-bit coded character set for information interchange"
 [ISO/IEC 10646:2017]:           https://iso.org/standard/69119.html                  "ISO - ISO/IEC 10646:2017 - Information technology — Universal Coded Character Set (UCS)"
 [Language Subtag Lookup App]:   https://r12a.github.io/app-subtags/
-[Longman]:                      https://ldoceonline.com/
-[Merriam-Webster]:              https://merriam-webster.com/
+[Longman]:                      https://ldoceonline.com/                             "Longman Dictionary of Contemporary English | LDOCE"
+[Merriam-Webster]:              https://merriam-webster.com/                         "Dictionary by Merriam-Webster: America's most-trusted online dictionary"
 [OverAPI.com]:                  https://overapi.com/                                 "OverAPI.com | Collecting all the cheat sheets"
-[Oxford]:                       https://lexico.com/
+[Oxford]:                       https://lexico.com/                                  "Definitions, Meanings, Synonyms, and Grammar by Oxford Dictionary on Lexico.com"
 [ProgramCreek.com]:             https://programcreek.com/
 [SPDX License List]:            https://spdx.org/licenses/                           "SPDX License List | Software Package Data Exchange (SPDX)"
-[The Free Dictionary]:          https://thefreedictionary.com/
-[Thesaurus.com]:                https://thesaurus.com/
+[The Free Dictionary]:          https://thefreedictionary.com/                       "Dictionary, Encyclopedia and Thesaurus - The Free Dictionary"
+[Thesaurus.com]:                https://thesaurus.com/                               "Synonyms and Antonyms of Words | Thesaurus.com"
 [Time.is]:                      https://time.is/
 [Unicode]:                      https://unicode.org/                                 "Unicode – The World Standard for Text and Emoji"
 [Unicode Character Table]:      https://unicode-table.com/
