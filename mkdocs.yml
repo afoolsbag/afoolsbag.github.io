@@ -16,6 +16,10 @@ copyright: CC0-1.0
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 
 nav:
+    - zhengrr's docs:
+        - index.md
+        - Doc/1929-12.md
+        - Doc/1947-10.md
     - 码代码:
         - CC/CC.md
         - CC/Crypt.md
@@ -84,12 +88,10 @@ nav:
         - OS/Xshell.md
     - 开发运维:
         - DevOps/DevOps.md
-        - DevOps/Ansible.md
-        - DevOps/Docker.md
         - DevOps/Git.md
-        - DevOps/GitLab.md
         - DevOps/GitFlow.md
-        - DevOps/Jenkins.md
+        - DevOps/GitLab.md
+        - DevOps/Docker.md
         - DevOps/Podman.md
         - DevOps/SQLPad.md
 

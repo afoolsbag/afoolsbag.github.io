@@ -1,55 +1,66 @@
 # 开发运维
 
-InfoQ 上的一篇介绍 DevOps 的[*文章*](https://xie.infoq.cn/article/be5164d597d29c9e6ba4180a6)。
+本文尝试对一种敏捷开发框架进行描述，该框架主要借鉴了 Scrum[^Scrum on Wikipedia]。
 
-![DevOps](DevOps.png)
+## 迭代团队
 
-[*Awesome Sysadmin*](https://github.com/n1trux/awesome-sysadmin)
+迭代团队的规模应控制在十人以内，由如下角色组成：
 
-## 持续开发
+*   产品负责人；
+*   开发人员若干名；
+*   迭代推进者一名。
 
-源码管理
-| [*CVS*](https://savannah.nongnu.org/projects/cvs "Concurrent Versions System, 1990-11-19")
-| [*SVN*](https://subversion.apache.org/ "Subversion, 2000-10-20") <sub>
-      [*tortoise*](https://tortoisesvn.net/) </sub>
-| [*Git*](https://git-scm.com/ "Git, 2005-04-07") <sub>
-      [*cheatsheet*](https://git-tower.com/blog/git-cheat-sheet/),
-      [*commit*](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines),
-      [*.gitignore*](https://github.com/github/gitignore),
-      [*教程*](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000),
-      [*tortoise*](https://tortoisegit.org/) </sub>
+## 迭代周期
 
-集成开发
-| [*CLion*](https://jetbrains.com/clion "一款集成开发环境") <sub>
-      [*icons*](https://plugins.jetbrains.com/plugin/10044),
-      [*vim*](https://plugins.jetbrains.com/plugin/164),
-      [*zh_cn*](https://github.com/pingfangx/jetbrains-in-chinese/tree/master/CLion) </sub>
-| [*Visual Studio*](https://visualstudio.com/ "一款集成开发环境") <sub>
-      [*r++*](https://jetbrains.com/resharper-cpp "ReSharper C++"),
-      [*va*](https://wholetomato.com/ "Visual Assist");
-      [*build*](https://incredibuild.com/ "IncrediBuild"),
-      [*leak*](https://kinddragon.github.io/vld/ "Visual Leak Detector"),
-      [*styles*](https://studiostyl.es/ "Studio Styles") </sub>
+每个迭代周期应控制在两周左右，最长不超过一个月：
 
-## 持续集成
+*   确立本次迭代目标
 
-## 持续测试
+*   每日站会
 
-## 持续部署
+    *   固定时间、固定地点、每日准时召开
+    *   
 
-控制面板
-| [*Cockpit*](https://cockpit-project.org)
+*   本次迭代审查
 
-## 持续监控
+    向利害相关者展示所做工作，并征求反馈意见。
 
-日志系统
-| [*Splunk*](https://www.splunk.com/)（闭源）
-| [*Sumo Logic*](https://www.sumologic.com/)（闭源）
-| [*Elastic*](https://www.elastic.co/) <sub>
-      [*Beats*](https://www.elastic.co/beats/),
-      [*Logstash*](https://www.elastic.co/logstash),
-      [*Elasticsearch*](https://www.elastic.co/elasticsearch/),
-      [*Kibana*](https://www.elastic.co/kibana) </sub>
-| [*GrayLog*](https://www.graylog.org/)
+*   本次迭代回顾
 
-## 持续反馈
+## 生产流
+
+|           | 计划<br>Plan | 编码<br>Code | 构建<br>Build | 测试<br>Test | 发布<br>Release | 部署<br>Deploy | 运营<br>Operate | 监测<br>Monitor |
+|:--------- |:------------:|:------------:|:-------------:|:------------:|:---------------:|:--------------:|:---------------:|:---------------:|
+| [CVS]     |              | ✓            |
+| [SVN]     |              | ✓            |
+| [Git]     |              | ✓            |
+| [Jenkins] |              |              | ✓             | ✓            | ✓               | ✓              |
+| [Docker]  |              |              |               |              |                 | ✓              |
+| [Podman]  |              |              |               |              |                 | ✓              |
+| [Ansible] |              |              |               |              |                 | ✓              |
+
+参见 [DevOps生命周期，你想知道的全都在这里了！ - InfoQ 写作平台](https://xie.infoq.cn/article/be5164d597d29c9e6ba4180a6)。
+
+## Awesome
+
+[Awesome Sysadmin](https://github.com/n1trux/awesome-sysadmin)
+
+<!----------------------------------------------------------------------------->
+
+[^Scrum on Wikipedia]: [Scrum (software development) - Wikipedia](https://wikipedia.org/wiki/Scrum_(software_development)).
+
+*[CVS]: Concurrent Versions System, 1990-11-19
+*[Git]: Git, 2005-04-07
+*[SVN]: Subversion, 2000-10-20
+
+[Ansible]:     <https://www.ansible.com/>
+[CLion]:       <https://jetbrains.com/clion>
+[CVS]:         <https://savannah.nongnu.org/projects/cvs>
+[Docker]:      <https://www.docker.com/>
+[Git]:         <https://git-scm.com/>
+[Jenkins]:     <https://www.jenkins.io/>
+[Podman]:      <https://podman.io/>
+[Sourcetree]:  <https://www.sourcetreeapp.com/>
+[SVN]:         <https://subversion.apache.org/>
+[TortoiseGit]: <https://tortoisegit.net/>
+[TortoiseSVN]: <https://tortoisesvn.net/>
