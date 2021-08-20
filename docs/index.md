@@ -10,7 +10,18 @@
 >
 > [*Beating the Averages*](http://paulgraham.com/avg.html "Beating the Averages"). April 2001, rev. April 2003.
 
-\ 
+参考：
+
+*   [AlternativeTo] ([AlternativeTo itself])
+*   [SimilarSites] ([SimilarSites itself])
+*   [Slant] ([Slant itself])
+
+[AlternativeTo]:        <https://alternativeto.net/>                                                 "AlternativeTo - Crowdsourced software recommendations"
+[AlternativeTo itself]: <https://alternativeto.net/software/alternativeto/>                          "AlternativeTo Alternatives and Similar Sites / Apps | AlternativeTo"
+[SimilarSites]:         <https://www.similarsites.com/>                                              "Similarsites.com - Easily Explore alternative websites"
+[SimilarSites itself]:  <https://www.similarsites.com/site/similarsites.com>                         "Similar Sites Like similarsites.com - Competitors & Alternatives"
+[Slant]:                <https://www.slant.co/>                                                      "Choose the best - Slant"
+[Slant itself]:         <https://www.slant.co/topics/5687/~alternative-to-or-equivalent-of-slant-co> "Best alternative to or equivalent of Slant.co - Slant"
 
 > 把代码写得便于阅读，并不是让你塞进去很多注释。
 > 我想引申一下 Abelson 和 Sussman 的那句话：“程序写出来是为了让人看懂它的算法，附带告诉计算机如何执行。”
