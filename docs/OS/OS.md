@@ -71,44 +71,50 @@ ISO 3166-1:2013 标准中的“中国”代码
 ### :material-disc: 光盘镜像
 
 | 操作系统                                         | 光盘镜像下载地址                      | 最后更新时间 |
-| :----------------------------------------------- | :------------------------------------ | -----------: |
+|:------------------------------------------------ |:------------------------------------- | ------------:|
 | :material-arch: Arch                             | <https://archlinux.org/download/>     |   2021-08-10 |
 | :material-centos: CentOS 8/7                     | <https://centos.org/centos-linux/>    |   2021-06-11 |
 | :material-ubuntu: Ubuntu Desktop 21.04/20.04 LTS | <https://ubuntu.com/download/desktop> |   2021-06-11 |
 | :material-ubuntu: Ubuntu Server 21.04/20.04 LTS  | <https://ubuntu.com/download/server>  |   2021-06-11 |
 | :material-microsoft-windows: Windows 10          | <https://msdn.itellyou.cn/>           |   2021-06-11 |
 
+## :material-server: 预启动执行环境服务
+
+### Serva
+
+[Serva] 是一款运行于 :material-microsoft-windows: Windows 操作系统的 PXE 服务。
+
 ## Awesome
 
 ### 壳层
 
-| 发行日     | POSIX                  | Windows                            | SSH         | 备注                    |
-| :--------- | :--------------------- | :--------------------------------- | :---------- | :---------------------- |
-| 2019-05-13 |                        | :material-console: [Terminal]      |
-| 2017-07-17 |                        | :material-lambda: [Cmder]          |
-| 2014-02-24 |                        | [Clink]                            |
-| 2007-03-09 |                        | [ConEmu]                           |
-| 2006       |                        | :material-powershell: [PowerShell] |             | [PowerShell - SS64.com] |
-| 2005-02-13 | [fish]                 |
-| 2000       |                        |                                    | [WinSCP]    |
-| 1999-01-22 |                        |                                    | [PuTTY]     |
-| 1998-06    |                        |                                    | [SecureCRT] |
-| 1994-10-31 | [scsh]                 |
-| 1990       | [zsh]                  |
-| 1989-06-08 | :material-bash: [bash] |                                    |             | [bash - SS64.com]       |
-| 1989-05-30 | [ash]                  |
-| 1987       |                        | CMD                                |             | [CMD - SS64.com]        |
-| 1983       | [ksh]                  |
-| 1983       | [tcsh]                 |
-| 1978       | csh                    |
-| 1977       | sh                     |
+| 发行日     | POSIX                        | Windows                                        | SSH         | 备注                    |
+|:---------- |:---------------------------- |:---------------------------------------------- |:----------- |:----------------------- |
+| 2019-05-13 |                              | [:material-console: Terminal][Terminal]        |
+| 2017-07-17 |                              | [:material-lambda: Cmder][Cmder]               |
+| 2014-02-24 |                              | [Clink]                                        |
+| 2007-03-09 |                              | [ConEmu]                                       |
+| 2006       |                              | [:material-powershell: PowerShell][PowerShell] |             | [PowerShell - SS64.com] |
+| 2005-02-13 | [fish]                       |
+| 2000       |                              |                                                | [WinSCP]    |
+| 1999-01-22 |                              |                                                | [PuTTY]     |
+| 1998-06    |                              |                                                | [SecureCRT] |
+| 1994-10-31 | [scsh]                       |
+| 1990       | [zsh]                        |
+| 1989-06-08 | [:material-bash: bash][bash] |                                                |             | [bash - SS64.com]       |
+| 1989-05-30 | [ash]                        |
+| 1987       |                              | CMD                                            |             | [CMD - SS64.com]        |
+| 1983       | [ksh]                        |
+| 1983       | [tcsh]                       |
+| 1978       | csh                          |
+| 1977       | sh                           |
 
 另见 [awesome-console-services](https://github.com/chubin/awesome-console-services#URL-Shortener)。
 
 ### 环境支持
 
 | 发行日     | 环境支持    | 备注                                     |
-| :--------- | :---------- | :--------------------------------------- |
+|:---------- |:----------- |:---------------------------------------- |
 |            | [MSYS2]     | 基于 Windows 的 POSIX 软件分发和构建平台 |
 | 2005       | [MinGW-W64] | 基于 Windows 32/64 的 POSIX 编译工具链   |
 | 1998-07-01 | [MinGW]     | 基于 Windows 32 的 POSIX 编译工具链      |
@@ -117,41 +123,382 @@ ISO 3166-1:2013 标准中的“中国”代码
 
 ### 操作系统
 
-| 发行日     | 操作系统                                          | 备注                                   |
-| :--------- | :------------------------------------------------ | :------------------------------------- |
-| 2015-07-15 | :material-microsoft-windows: [Windows 10]         |
-| 2013-03-13 | [Kali]                                            |
-| 2011-07-10 | [Manjaro]                                         |
-| 2009-07-22 | :material-microsoft-windows: Windows 7            |
-| 2009-06-23 | [Tails]                                           |
-| 2004-10-20 | :material-ubuntu: [Ubuntu]                        |
-| 2004-05-14 | :material-centos: [CentOS]                        | Red Hat 社区版                         |
-| 2003-11-06 | :material-fedora: [Fedora]                        | Red Hat 试验版，Linus 使用此 GNU/Linux |
-| 2002-03-11 | :material-arch: [Arch]                            |
-| 2001-08-24 | :material-microsoft-windows: Windows XP           |
-| 2000-07-26 | :material-gentoo: [Gentoo]                        |
-| 1998-05-15 | :material-microsoft-windows-classic: Windows 98   |
-| 1996-10-01 | [OpenBSD]                                         |
-| 1995-08-15 | :material-microsoft-windows-classic: Windows 95   |
-| 1995-05-13 | :material-redhat: [RHEL]                          | Red Hat 企业版                         |
-| 1994-03-07 | :fontawesome-brands-suse: [SUSE]                  |
-| 1993-11-01 | :material-freebsd: [FreeBSD]                      |
-| 1993-08-16 | :material-debian: [Debian]                        |
-| 1993-04-19 | [NetBSD]                                          |
-| 1991-09-17 | :material-linux: Linux 0.01                       |
-| 1985-11-20 | :material-microsoft-windows-classic: Windows 1.0  |
+| 发行日     | 操作系统                                             | 备注                                   |
+|:---------- |:---------------------------------------------------- |:-------------------------------------- |
+| 2015-07-15 | [:material-microsoft-windows:Windows 10][Windows 10] |
+| 2013-03-13 | [Kali]                                               |
+| 2011-07-10 | [Manjaro]                                            |
+| 2009-07-22 | :material-microsoft-windows: Windows 7               |
+| 2009-06-23 | [Tails]                                              |
+| 2004-10-20 | [:material-ubuntu: Ubuntu][Ubuntu]                   |
+| 2004-05-14 | [:material-centos: CentOS][CentOS]                   | Red Hat 社区版                         |
+| 2003-11-06 | [:material-fedora: Fedora][Fedora]                   | Red Hat 试验版，Linus 使用此 GNU/Linux |
+| 2002-03-11 | [:material-arch: Arch][Arch]                         |
+| 2001-08-24 | :material-microsoft-windows: Windows XP              |
+| 2000-07-26 | [:material-gentoo: Gentoo][Gentoo]                   |
+| 1998-05-15 | :material-microsoft-windows-classic: Windows 98      |
+| 1996-10-01 | [OpenBSD]                                            |
+| 1995-08-15 | :material-microsoft-windows-classic: Windows 95      |
+| 1995-05-13 | [:material-redhat: RHEL][RHEL]                       | Red Hat 企业版                         |
+| 1994-03-07 | [:fontawesome-brands-suse: SUSE][SUSE]               |
+| 1993-11-01 | [:material-freebsd: FreeBSD][FreeBSD]                |
+| 1993-08-16 | [:material-debian: Debian][Debian]                   |
+| 1993-04-19 | [NetBSD]                                             |
+| 1991-09-17 | :material-linux: Linux 0.01                          |
+| 1985-11-20 | :material-microsoft-windows-classic: Windows 1.0     |
 
 ### 虚拟机
 
 | 发行日     | 虚拟机       | 备注 |
-| :--------- | :----------- | :--- |
+|:---------- |:------------ |:---- |
 | 2007-02-05 | [KVM]        |
 | 2007-01-15 | [VirtualBox] |
 | 1999       | [VMware]     |
 
+### \#
+
+[010 Editor](https://sweetscape.com/010editor/)
+:   一款二进制文件编辑器。
+
+[7-Zip](https://www.7-zip.org/)
+:   一款压缩工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install 7zip
+    ```
+
+### A
+
+[AutoHotkey](https://www.autohotkey.com/)
+:   一款自动化脚本语言。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install autohotkey
+    ```
+
+### B
+
+[bettercap](https://bettercap.org/)
+:   一款网络嗅探工具。
+
+[Beyond Compare](https://scootersoftware.com/)
+:   一款文件比较工具。
+
+[Bing Wallpaper](https://www.microsoft.com/bing/bing-wallpaper)
+:   一款壁纸应用。
+
+### C
+
+[cFosSpeed](https://cfos.de/)
+:   一款网络优化工具。
+
+[Cheat Engine](https://cheatengine.org/)
+:   一款程序修改工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install cheat-engine
+    ```
+
+[CMake](https://cmake.org/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install cmake
+    ```
+
+[Conan](https://conan.io/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install conan
+    ```
+
+[CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install cpu-z
+    ```
+
+### D
+
+[DebugView](https://docs.microsoft.com/sysinternals/downloads/debugview)
+:   一款调试输出显示工具。
+
+[Debugview++](https://github.com/CobaltFusion/DebugViewPP)
+:   一款调试输出显示工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install debugviewpp
+    ```
+
+[Dependency Walker](http://dependencywalker.com/)
+:   一款 PE 依赖扫描工具，参见 [Dependency-Walker - aldeid](https://www.aldeid.com/wiki/Dependency-Walker)。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install depends
+    ```
+
+
+[Docker](https://www.docker.com/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install docker
+    ```
+
+[Doxygen](https://doxygen.nl/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install doxygen
+    ```
+
+[dSniff](https://monkey.org/~dugsong/dsniff/)
+:   一款网络嗅探工具。
+
+### E
+
+[EasyPHP](https://easyphp.org/)
+:   一款轻量 Web 服务器。
+
+[Emacs](https://www.gnu.org/software/emacs/)
+:   一款文本编辑器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install emacs
+    ```
+
+[Ettercap](https://www.ettercap-project.org)
+:   一款网络嗅探工具。
+
+[Everything](https://www.voidtools.com/)
+:   一款适用于 Windows 操作系统的桌面搜索引擎。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install everything
+    ```
+
+[Exeinfo PE](http://exeinfo.xn.pl/)
+:   一款 PE 查壳工具，参见 [Exeinfo-PE - aldeid](https://www.aldeid.com/wiki/Exeinfo-PE)。
+
+[Explorer Suite](https://ntcore.com/?page_id=388)
+:   一款 PE 编辑套件，[Explorer-Suite - aldeid](https://www.aldeid.com/wiki/Explorer-Suite)。
+
+### F
+
+[FastCopy](https://fastcopy.jp/)
+:   一款快速复制工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install fastcopy
+    ```
+
+[foobar2000](https://www.foobar2000.org/)
+:   一款音乐播放器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install foobar2000
+    ```
+
+### G
+
+[GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install gpu-z
+    ```
+
+[Graphviz](https://graphviz.org/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install graphviz
+
+    PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('GRAPHVIZ_DOT', (Join-Path $env:SCOOP 'shims\dot.exe'), [System.EnvironmentVariableTarget]::User)
+    ```
+
+### I
+
+[IDA](https://hex-rays.com/products/ida/)
+:   一款反汇编调试器。
+
+[IDM](https://www.internetdownloadmanager.com/)
+:   一款中心网络下载器。
+
+[iPerf](https://iperf.fr/)
+:   一款网速测试工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install iperf3
+    ```
+
+[Iris](https://iristech.co/)
+:   一款屏幕光调节工具，以缓解眼部疲劳。
+
+### L
+
+LoadPE
+:   一款 PE32 修复工具，参见 [LordPE - aldeid](https://www.aldeid.com/wiki/LordPE)。
+
+### M
+
+[MPC-BE](https://mpc-be.org/)
+:   一款视频播放器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install mpc-be
+    ```
+
+[MPC-HC](https://mpc-hc.org/)
+:   一款视频播放器。
+
+[MPC-HC-Fork](https://github.com/clsid2/mpc-hc)
+:   一款视频播放器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install mpc-hc-fork
+    ```
+
+### N
+
+[NSSM](https://nssm.cc/)
+:   一款服务维护工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install nssm
+    ```
+
+### O
+
+[OllyDbg](http://ollydbg.de/)
+:   一款反汇编调试器。
+
+### P
+
+[PC Hunter](http://xuetr.com/)
+:   一款杀毒辅助工具。
+
+PEiD
+:   一款 PE32 查壳工具，参见 [PEiD - aldeid](https://www.aldeid.com/wiki/PEiD)
+
+[PCI-Z](https://www.pci-z.com/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install pci-z
+    ```
+
+[PlantUML](https://plantuml.com/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install plantuml
+
+    PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('PLANTUML', (Join-Path $env:SCOOP 'shims\plantuml.cmd'), [System.EnvironmentVariableTarget]::User)
+    ```
+
+[Postman](https://postman.com/)
+:   一款 HTTP API 测试工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install postman
+    ```
+
+[PotPlayer](https://potplayer.daum.net/)
+:   一款视频播放器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install potplayer
+    ```
+
+### Q
+
+[qBittorrent](https://qbittorrent.org/)
+:   一款对等网络下载器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install qbittorrent
+    ```
+
+[qBittorrent-Enhanced-Edition](https://github.com/c0re100/qBittorrent-Enhanced-Edition)
+:   一款对等网络下载器。
+
+### R
+
+[radare](https://radare.org/)
+:   一款反汇编调试器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install radare2
+    ```
+
+[Rapid Environment Editor](https://rapidee.com/)
+:   一款环境变量编辑器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install rapidee
+    ```
+
+[Resource Hacker](http://angusj.com/resourcehacker/)
+:   一款 PE 资源编辑工具，参见 [ResourceHacker - aldeid](https://www.aldeid.com/wiki/ResourceHacker)。
+
+### S
+
+[SSD-Z](http://aezay.dk/aezay/ssdz/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install ssd-z
+    ```
+
+[Sourcetree](https://www.sourcetreeapp.com/)
+:   一款 Git 图形用户接口。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install sourcetree
+    ```
+
+[SWIG](http://swig.org/)
+:   略。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install swig
+    ```
+
+### T
+
+[Transmission](https://transmissionbt.com/)
+:   一款对等网络下载器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install transmission
+    ```
+
+### V
+
+[Vim](https://www.vim.org/)
+:   一款文本编辑器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install vim
+    ```
+
+[Visual Studio Code](https://code.visualstudio.com/)
+:   一款文本编辑器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install vscode
+    ```
+
+[VLC media player](https://www.videolan.org/vlc/)
+:   一款视频播放器。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install vlc
+    ```
+
+### W
+
+[WinDbg](http://windbg.org/)
+:   一款调试器。
+
+[WinHex](http://winhex.com/winhex/)
+:   一款二进制文件编辑器。
+
+[Wireshark](https://wireshark.org/)
+:   一款流量分析工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install wireshark
+    ```
+
+[WiX](https://wixtoolset.org/)
+:   一款安装包制作工具。
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install wixtoolset
+    ```
+
+### X
+
+[Xlight](https://xlightftpd.com/)
+:   一款轻量 FTP 服务器。
+
 <!----------------------------------------------------------------------------->
 
 [^Windows Preinstallation Environment on Wikipedia]: [Windows Preinstallation Environment - Wikipedia](https://wikipedia.org/wiki/Windows_Preinstallation_Environment)
+
+*[CMD]: Command Prompt
+*[csh]: C Shell
+*[PXE]: Preboot eXecution Environment
+*[sh]:  Bourne Shell
+*[SSH]: Secure Shell
 
 [Arch]:                  https://www.archlinux.org/
 [ash]:                   https://www.in-ulm.de/~mascheck/various/ash/ "Almquist Shell"
@@ -183,6 +530,7 @@ ISO 3166-1:2013 标准中的“中国”代码
 [RHEL]:                  https://www.redhat.com/ "Red Hat Enterprise Linux"
 [scsh]:                  https://scsh.net/ "Scheme Shell"
 [SecureCRT]:             https://vandyke.com/products/securecrt/
+[Serva]:                 https://vercot.com/~serva/
 [SUSE]:                  https://www.opensuse.org/ "Software- und System-Entwicklung"
 [tcsh]:                  https://www.tcsh.org/ "TENEX C Shell"
 [Tails]:                 https://tails.boum.org/
@@ -197,8 +545,3 @@ ISO 3166-1:2013 标准中的“中国”代码
 [zsh]:                   http://www.zsh.org/ "Z Shell"
 [图吧工具箱]:            https://www.tbtool.cn/
 [图拉丁吧]:              https://tieba.baidu.com/图拉丁
-
-*[CMD]: Command Prompt
-*[csh]: C Shell
-*[sh]:  Bourne Shell
-*[SSH]: Secure Shell
