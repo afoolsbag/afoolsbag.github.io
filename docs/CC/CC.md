@@ -1,24 +1,26 @@
 # 码代码
 
-## 若干不可见字符
+## 常用参考
 
-| Unicode 编号                                | 『 |   字符   | 』 | 描述                       |
-|:------------------------------------------- | -:|:--------:|:- |:---------------------------|
-| [`U+200B`](https://unicode-table.com/200B/) | 『 | &#x200B; | 』 | 零宽空格                   |
-| [`U+200C`](https://unicode-table.com/200C/) | 『 | &#x200C; | 』 | 零宽断开符                 |
-| [`U+200D`](https://unicode-table.com/200D/) | 『 | &#x200D; | 』 | 零宽连接符                 |
-| [`U+200E`](https://unicode-table.com/200E/) | 『 | &#x200E; | 』 | 从左至右标志               |
-| [`U+200F`](https://unicode-table.com/200F/) | 『 | &#x200F; | 』 | 从右至左标志               |
-| [`U+202A`](https://unicode-table.com/202A/) | 『 | &#x202A; | 』 | 方向格式化：从左至右嵌入   |
-| [`U+202B`](https://unicode-table.com/202B/) | 『 | &#x202B; | 』 | 方向格式化：从右至左嵌入   |
-| [`U+202C`](https://unicode-table.com/200C/) | 『 | &#x202C; | 』 | 方向格式化：弹出           |
-| [`U+202D`](https://unicode-table.com/202D/) | 『 | &#x202D; | 』 | 方向格式化：从左至右覆盖   |
-| [`U+202E`](https://unicode-table.com/202E/) | 『 | &#x202E; | 』 | 方向格式化：从右至左覆盖   |
-| [`U+2061`](https://unicode-table.com/2061/) | 『 | &#x2061; | 』 | 函数应用                   |
-| [`U+2062`](https://unicode-table.com/2062/) | 『 | &#x2062; | 』 | 不可见乘号                 |
-| [`U+2063`](https://unicode-table.com/2063/) | 『 | &#x2063; | 』 | 不可见分隔符               |
-| [`U+2064`](https://unicode-table.com/2064/) | 『 | &#x2064; | 』 | 不可见加号                 |
-| [`U+FEFF`](https://unicode-table.com/FEFF/) | 『 | &#xFEFF; | 』 | 零宽不折行空格             |
+??? tldr "若干不可见字符"
+
+    | Unicode 编号                                | 『 |   字符   | 』 | 描述                       |
+    |:------------------------------------------- | -:|:--------:|:- |:---------------------------|
+    | [`U+200B`](https://unicode-table.com/200B/) | 『 | &#x200B; | 』 | 零宽空格                   |
+    | [`U+200C`](https://unicode-table.com/200C/) | 『 | &#x200C; | 』 | 零宽断开符                 |
+    | [`U+200D`](https://unicode-table.com/200D/) | 『 | &#x200D; | 』 | 零宽连接符                 |
+    | [`U+200E`](https://unicode-table.com/200E/) | 『 | &#x200E; | 』 | 从左至右标志               |
+    | [`U+200F`](https://unicode-table.com/200F/) | 『 | &#x200F; | 』 | 从右至左标志               |
+    | [`U+202A`](https://unicode-table.com/202A/) | 『 | &#x202A; | 』 | 方向格式化：从左至右嵌入   |
+    | [`U+202B`](https://unicode-table.com/202B/) | 『 | &#x202B; | 』 | 方向格式化：从右至左嵌入   |
+    | [`U+202C`](https://unicode-table.com/200C/) | 『 | &#x202C; | 』 | 方向格式化：弹出           |
+    | [`U+202D`](https://unicode-table.com/202D/) | 『 | &#x202D; | 』 | 方向格式化：从左至右覆盖   |
+    | [`U+202E`](https://unicode-table.com/202E/) | 『 | &#x202E; | 』 | 方向格式化：从右至左覆盖   |
+    | [`U+2061`](https://unicode-table.com/2061/) | 『 | &#x2061; | 』 | 函数应用                   |
+    | [`U+2062`](https://unicode-table.com/2062/) | 『 | &#x2062; | 』 | 不可见乘号                 |
+    | [`U+2063`](https://unicode-table.com/2063/) | 『 | &#x2063; | 』 | 不可见分隔符               |
+    | [`U+2064`](https://unicode-table.com/2064/) | 『 | &#x2064; | 』 | 不可见加号                 |
+    | [`U+FEFF`](https://unicode-table.com/FEFF/) | 『 | &#xFEFF; | 』 | 零宽不折行空格             |
 
 ## Awesome
 
@@ -81,7 +83,7 @@
 *[ISO]:     International Organization for Standardization（国际标准化组织）
 *[Unicode]: 统一码
 
-[Abbreviations.com]:            https://abbreviations.com/                           "Abbreviations.com"
+[Abbreviations.com]:            https://www.abbreviations.com/                       "Abbreviations.com"
 [All Acronyms]:                 https://allacronyms.com/                             "All Acronyms - Top Acronyms and Abbreviations Dictionary"
 [ASCII Table]:                  https://ss64.com/ascii.html                          "ASCII Table - ASCII character codes - SS64.com"
 [ASCII Figlet Generator]:       https://askapache.com/online-tools/figlet-ascii/

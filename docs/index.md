@@ -10,7 +10,7 @@
 >
 > [*Beating the Averages*](http://paulgraham.com/avg.html "Beating the Averages"). April 2001, rev. April 2003.
 
-参考：
+若干“百兵谱”：
 
 *   [AlternativeTo] ([AlternativeTo itself])
 *   [SimilarSites] ([SimilarSites itself])
