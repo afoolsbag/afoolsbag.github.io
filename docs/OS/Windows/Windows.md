@@ -245,6 +245,47 @@
 
     重启 Plug and Play 服务后重试。
 
+???+ faq "如何彻底地变更用户名"
+
+    1.  重命名用户：
+
+        1.  运行（++win+r++）`compmgmt.msc`，打开“计算机管理”；
+        0.  `计算机管理(本地)`-->`系统工具`-->`本地用户和组`-->`用户`，找到当前用户；
+        0.  `右键`-->`重命名` 以变更名称；
+        0.  `右键`-->`属性` 以变更全名。
+
+    0.  启用 `Administrator` 用户：
+
+        1.  类似前述步骤，找到 `Administrator` 用户；
+        0.  `右键`-->`属性`-->取消勾选“账户已禁用”选项；
+        0.  注销当前用户；
+        0.  切换到 `Administrator` 用户。
+    
+    0.  重命名用户文件夹：
+
+        打开 `%PUBLIC%\..` 目录，找到目标用户文件夹，重命名。
+    
+    0.  修改注册表中的对应配置：
+
+        1.  运行（++win+r++）`regedit`，打开“注册表管理器”；
+        0.  打开 `计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`；
+        0.  遍历该键下的键，筛选 `ProfileImagePath` 指向旧用户目录的项，更新为新用户目录。
+
+    0.  禁用 `Administrator` 用户：
+
+        1.  注销 `Administrator` 用户；
+        0.  切换到目标用户；
+        0.  类似前述步骤，找到 `Administrator` 用户；
+        0.  `右键`-->`属性`-->勾选“账户已禁用”选项；
+
+    0.  修改用户环境变量中的对应配置：
+
+        遍历用户环境变量，筛选指向旧用户目录的项，更新为新用户目录。
+    
+    0.  重新启动。
+
+    参见 [Win10 将用户名修改为英文 - 白色泪光 - 博客园](https://www.cnblogs.com/WhiteTears/p/8947337.html)。
+
 ## Awesome
 
 ## 注册码
