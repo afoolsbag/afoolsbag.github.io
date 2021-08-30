@@ -16,13 +16,10 @@ copyright: CC0-1.0
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 
 nav:
-    - zhengrr's docs:
-        - index.md
-        - Doc/1929-12.md
-        - Doc/1947-10.md
     - 码代码:
         - CC/CC.md
         - CC/Crypt.md
+        - CC/IntCen.md
         - CC/Emacs.md
         - CC/Markdown.md
         - CC/Vim.md
@@ -48,12 +45,11 @@ nav:
         - OS/OS.md
         - Windows:
             - OS/Windows/Windows.md
-            - OS/Windows/CertUtil.md
-            - OS/Windows/Cheat Engine.md
             - OS/Windows/Chocolatey.md
+            - OS/Windows/Scoop.md
+            - OS/Windows/Cheat Engine.md
             - OS/Windows/Cmder.md
             - OS/Windows/Cygwin.md
-            - OS/Windows/Scoop.md
             - OS/Windows/Terminal.md
             - OS/Windows/WSL.md
         - GNU/Linux:

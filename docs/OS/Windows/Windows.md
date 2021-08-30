@@ -10,92 +10,92 @@
 
 ## 运行 :material-microsoft-windows: Windows
 
-### 通过 :material-server: PXE 安装 :material-microsoft-windows: Windows 10
+??? tldr "通过 :material-server: PXE 安装 :material-microsoft-windows: Windows 10"
 
-0.  确保维护机和目标机处于同一网络；
+    0.  确保维护机和目标机处于同一网络；
 
-1.  在维护机上，[下载 Serva 社区版](https://www.vercot.com/~serva/download.html)，并解压到应用程序目录（假定为 `C:\Serva\Program`），解压后的目录结构形如：
+    1.  在维护机上，[下载 Serva 社区版](https://www.vercot.com/~serva/download.html)，并解压到应用程序目录（假定为 `C:\Serva\Program`），解压后的目录结构形如：
 
-    ``` text
-    C:\Serva\Program\
-                     Serva.chm
-                     Serva32.exe
-                     Serva64.exe
-                     ServaEULA.pdf
-    ```
+        ``` text
+        C:\Serva\Program\
+                        Serva.chm
+                        Serva32.exe
+                        Serva64.exe
+                        ServaEULA.pdf
+        ```
 
-0.  准备一处空白文件夹作为工作目录（假定为 `C:\Serva\Workspace`），目录结构形如：
+    0.  准备一处空白文件夹作为工作目录（假定为 `C:\Serva\Workspace`），目录结构形如：
 
-    ``` text
-    C:\Serva\Workspace\
-    ```
+        ``` text
+        C:\Serva\Workspace\
+        ```
 
-0.  第一次运行 Serva 程序，进行配置：
+    0.  第一次运行 Serva 程序，进行配置：
 
-    1.  运行 `Serva64.exe` 或 `Serva32.exe`；
-    
-    0.  将自动弹出 `Serva Community v...` 对话框，等待并点选 `I'm a "Community" user` 按钮；
-    
-    0.  将自动弹出 `About/License Serva Commuity v...` 对话框，点选 `OK` 按钮；
-    
-    0.  单机标题栏图标、或右击标题栏、或右击系统托盘图标，选择 `Settings` 选单，或者直接双击标题栏图标打开 `Serva Community Settings` 对话框；
+        1.  运行 `Serva64.exe` 或 `Serva32.exe`；
+        
+        0.  将自动弹出 `Serva Community v...` 对话框，等待并点选 `I'm a "Community" user` 按钮；
+        
+        0.  将自动弹出 `About/License Serva Commuity v...` 对话框，点选 `OK` 按钮；
+        
+        0.  单机标题栏图标、或右击标题栏、或右击系统托盘图标，选择 `Settings` 选单，或者直接双击标题栏图标打开 `Serva Community Settings` 对话框；
 
-    0.  切换到 `TFTP` 选项卡，勾选 `TFTP Server` 选项框，在 `TFTP Server root directory` 中填入工作目录；
+        0.  切换到 `TFTP` 选项卡，勾选 `TFTP Server` 选项框，在 `TFTP Server root directory` 中填入工作目录；
 
-    0.  切换到 `DHCP` 选项卡，勾选 `DHCP Server` 和 `BINL` 选项框，填写 `IP Pool 1st addr`、`Pool size` 和 `Subnet Mask` 配置；
+        0.  切换到 `DHCP` 选项卡，勾选 `DHCP Server` 和 `BINL` 选项框，填写 `IP Pool 1st addr`、`Pool size` 和 `Subnet Mask` 配置；
 
-    0.  保存并退出程序。
+        0.  保存并退出程序。
 
-0.  第二次运行 Serva 程序，程序将自动加载配置并初始化工作目录，然后直接退出程序。初始化后的目录结构形如：
+    0.  第二次运行 Serva 程序，程序将自动加载配置并初始化工作目录，然后直接退出程序。初始化后的目录结构形如：
 
-    ``` text
-    C:\Serva\Workspace\
-                       BM\
-                       NWA_PXE\
-                       WIA_RIS\
-                       WIA_WDS\
-                               ServaReadme.txt
-                       astamp.dat
-                       ServaEULA.pdf
-    ```
+        ``` text
+        C:\Serva\Workspace\
+                        BM\
+                        NWA_PXE\
+                        WIA_RIS\
+                        WIA_WDS\
+                                ServaReadme.txt
+                        astamp.dat
+                        ServaEULA.pdf
+        ```
 
-0.  对生成的 `WIA_WDS` 文件夹进行高级共享，共享名为 `WIA_WDS_SHARE`；在其下新建 `W10_64` 文件夹；
+    0.  对生成的 `WIA_WDS` 文件夹进行高级共享，共享名为 `WIA_WDS_SHARE`；在其下新建 `W10_64` 文件夹；
 
-0.  [下载 Windows 10 镜像](https://msdn.itellyou.cn/)，将其加载到（虚拟）光驱，并将其中内容复制到 `W10_64` 文件夹中，目录结构形如：
+    0.  [下载 Windows 10 镜像](https://msdn.itellyou.cn/)，将其加载到（虚拟）光驱，并将其中内容复制到 `W10_64` 文件夹中，目录结构形如：
 
-    ``` text
-    C:\Serva\Workspace\
-                       BM\
-                       NWA_PXE\
-                       WIA_RIS\
-                       WIA_WDS\
-                               W10_64\
-                                      boot\
-                                      efi\
-                                      sources\
-                                      support\
-                                      autorun.inf
-                                      bootmgr
-                                      bootmgr.efi
-                                      setup.exe
-                               ServaReadme.txt
-                       astamp.dat
-                       ServaEULA.pdf
-    ```
+        ``` text
+        C:\Serva\Workspace\
+                        BM\
+                        NWA_PXE\
+                        WIA_RIS\
+                        WIA_WDS\
+                                W10_64\
+                                        boot\
+                                        efi\
+                                        sources\
+                                        support\
+                                        autorun.inf
+                                        bootmgr
+                                        bootmgr.efi
+                                        setup.exe
+                                ServaReadme.txt
+                        astamp.dat
+                        ServaEULA.pdf
+        ```
 
-0.  第三次运行 Serva 程序，提供 PXE 服务；
+    0.  第三次运行 Serva 程序，提供 PXE 服务；
 
-    !!! attention "注意"
+        !!! attention "注意"
 
-        服务将自动地在 `W10_64` 文件夹中生成 `$OEM$` 和 `_SERVA_` 文件夹，此二文件夹是不支持移动的，若移动则应手动删除并重新生成。
+            服务将自动地在 `W10_64` 文件夹中生成 `$OEM$` 和 `_SERVA_` 文件夹，此二文件夹是不支持移动的，若移动则应手动删除并重新生成。
 
-    !!! attention "注意"
-    
-        社区版 Serva 有 50 分钟运行时间的限制，警惕服务可能在安装途中中断。
+        !!! attention "注意"
+        
+            社区版 Serva 有 50 分钟运行时间的限制，警惕服务可能在安装途中中断。
 
-0.  在目标机上，变更 BIOS 的启动选项，选择从 PXE 引导、安装。
+    0.  在目标机上，变更 BIOS 的启动选项，选择从 PXE 引导、安装。
 
-参见 [使用 Serva 通过网络 PXE 方式安装 Windows10/CentOS - liqipeng - 博客园](https://www.cnblogs.com/liqipeng/p/6158922.html)。
+    参见 [使用 Serva 通过网络 PXE 方式安装 Windows10/CentOS - liqipeng - 博客园](https://www.cnblogs.com/liqipeng/p/6158922.html)。
 
 ## :material-keyboard: 键盘快捷方式
 
@@ -181,9 +181,9 @@
     %USERPROFILE%> SHUTDOWN /S /T 60
     ```
 
-### :material-file-link: 链接
+### :material-file-link: 文件链接
 
-??? tldr "建立文件符号链接"
+???+ tldr "建立文件符号链接"
 
     ``` doscon
     %USERPROFILE%> MKLINK <Link> <Path>
@@ -209,16 +209,61 @@
 
 参见：
 
-*   [windows - What is the difference between NTFS Junction Points and Symbolic Links? - Stack Overflow](https://stackoverflow.com/questions/9042542)
-*   [MKLink - Windows CMD - SS64.com](https://ss64.com/nt/mklink.html)
-*   [mklink | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/mklink)
+*   [windows - What is the difference between NTFS Junction Points and Symbolic Links? - Stack Overflow](https://stackoverflow.com/questions/9042542)；
+*   [MKLink - Windows CMD - SS64.com](https://ss64.com/nt/mklink.html)；
+*   [mklink | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/mklink)。
+
+### 文件散列
+
+CertUtil 是命令行程序，作为 :material-microsoft-windows: Windows 证书服务的一部分进行安装。
+
+???+ tldr "计算文件散列"
+
+    ``` doscon
+    %USERPROFILE%> CertUtil -hashfile <InFile> [HashAlgorithm]
+    ```
+
+    其中散列算法支持：`MD2`、`MD4`、`MD5`、`SHA1`、`SHA256`、`SHA384`、`SHA512`。参见 `CertUtil -hashfile -?`。
+
+参见 [certutil | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil)。
 
 ### :material-network: 网络
 
+???+ tldr "查看本机网络信息"
+
+    ``` doscon
+    %USERPROFILE%> ipconfig [/all]
+    ```
+
+??? tldr "编辑本地 `HOSTS` 文件"
+
+    1.  ++win+r++
+    0.  `notepad %SystemRoot%\System32\drivers\etc\hosts`
+    0.  ++ctrl+shift+enter++
+
+??? tldr "查看某域名解析"
+
+    ``` doscon
+    %USERPROFILE%> nslookup <Host> [Server]
+    ```
+
+??? tldr "显示 DNS 缓存"
+
+    ``` doscon
+    %USERPROFILE%> ipconfig /displaydns
+    ```
+
+??? tldr "清空 DNS 缓存"
+
+    ``` doscon
+    %USERPROFILE%> ipconfig /flushdns
+    ```
+
 参见：
 
-*   [ipconfig | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)。
-*   [arp | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/arp)。
+*   [arp | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/arp)；
+*   [ipconfig | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)；
+*   [nslookup](https://docs.microsoft.com/windows-server/administration/windows-commands/nslookup)。
 
 
 ## :material-frequently-asked-questions: 常见问题
@@ -241,7 +286,7 @@
     %USERPROFILE%> ie4uinit -Show
     ```
 
-??? faq "USB 设备不识别"
+???+ faq "USB 设备不识别"
 
     重启 Plug and Play 服务后重试。
 
@@ -292,7 +337,7 @@
 
 请通过正规渠道获取以支持正版。
 
-??? cite "KMS_VL_ALL_AIO"
+??? tldr "KMS_VL_ALL_AIO"
 
     !!! warning "声明"
 
@@ -336,7 +381,7 @@
 
     0.  上述行为及其影响仅可用于“为个人学习、研究或者欣赏”，不得用于其他用途。
 
-??? cite "KMSpico（年久失修）"
+??? tldr "KMSpico（年久失修）"
 
     !!! warning "声明"
 
