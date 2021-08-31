@@ -2,7 +2,7 @@
 
 [GitFlow] 是一种 :material-git: Git 工作流规范。[^GitFlow on Atlassian]
 
-???+ cite "流程一览"
+??? cite "流程一览"
 
     ![git-flow.png](GitFlow-Overview.png)
 

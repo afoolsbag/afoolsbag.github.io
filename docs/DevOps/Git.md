@@ -13,17 +13,327 @@
 
 ## 运行 :material-git: Git
 
-### :material-microsoft-windows: Windows 10 和 Scoop
+??? tldr "在 :material-microsoft-windows: Windows 10 中通过 Scoop 安装 :material-git: Git"
 
-``` doscon
-%USERPROFILE%> scoop install git
-```
+    ``` doscon
+    %USERPROFILE%> scoop install git
+    ```
+
+## 常用操作
+
+### 创建版本仓库
+
+???+ tldr "将一个文件夹初始化为版本仓库，交由 :material-git: Git 管理<br>:material-folder: Directory --> :material-source-repository: Repository"
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  运行 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在**主界面**的 **New tab** 标签页中，选中 **Create** 选项卡；
+        0.  填写**目标路径**编辑框，譬如 `D:\Workspace\ExampleRepository`；
+        0.  **名字**编辑框将自动填充，可以按需调整；
+        0.  点击**创建**按钮。
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  变换到目标目录：
+
+            ``` doscon
+            %USERPROFILE%> cd wdir
+            ```
+
+        0.  初始化版本库：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git init
+            ```
+
+<!--
+        0.  添加远端库：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git remote add <origin> <git@host:wdir.git>
+            ```
+
+        0.  绑定当前分支到远端 `origin` 库：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git branch --set-upstream-to=<origin>
+            abbr.             > git branch -u <origin>
+            ```
+
+        0.  推送本地提交到远端库：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git push <origin> <master>
+            ```
+-->
+
+???+ tldr "将一个远程版本仓库克隆到本地<br>:material-server: Remote --> (:material-source-repository: Repository) --> :material-laptop: Local"
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  启动 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在主界面的 **New tab** 标签页中，选中 **Clone** 选项卡；
+        0.  填写**源路径 / URL** 编辑框，譬如 `https://github.com/foobar/ExampleRepository.git`；
+        0.  **目标路径**编辑框和**名字**编辑框将自动填充，可以按需调整；
+        0.  点击**克隆**按钮。
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  变换到目标目录：
+
+            ``` doscon
+            %USERPROFILE%> cd wdir
+            ```
+
+        0.  从远端复制版本库：
+
+            ``` doscon
+            %USERPROFILE%> git clone <git@host:wdir.git>
+            ```
+
+        0.  创建远端分支到本地：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git branch --set-upstream-to=<origin/dev> <dev>
+            abbr.             > git branch -u <origin/dev> <dev>
+            ```
+
+### 工作区
+
+???+ tldr "将工作区的变动同步到暂存区<br>:material-folder: Working Directory --> (:material-file-multiple: Changes) --> :material-package: Stage"
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  运行 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在主界面的 **Local** 标签页中，双击目标存储仓库将其打开；
+        0.  点选侧边栏的**文件状态**选项卡，或使用快捷键 ++ctrl+1++，切换到文件状态界面；
+        0.  在**未暂存文件**列表区域里，点选想要暂存的文件，然后点击**暂存所选**按钮将其暂存；或点击**暂存所有**按钮将所有变动全部暂存。
+
+        !!! tip
+
+            若 :fontawesome-brands-sourcetree: Sourcetree 未及时检测到文件变动，可使用快捷键 ++f5++ 进行刷新。
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  查看工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+        0.  将文件同步到暂存区：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git add <file> ...
+            ```
+
+        0.  验证工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+???+ tldr "改动有误，需要将工作区的文件恢复原样<br>:material-trash-can: Trash <-- (:material-file-multiple: Changes) <-- :material-folder: Working Directory"
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  运行 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在主界面的 **Local** 标签页中，双击目标存储仓库将其打开；
+        0.  点选侧边栏的**文件状态**选项卡，或使用快捷键 ++ctrl+1++，切换到文件状态界面；
+        0.  在**未暂存文件**列表区域里，点选想要丢弃的文件，然后右击打开关联菜单，并点击**丢弃**选项，或使用 ++ctrl+shift+r++ 快捷键将其丢弃。
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  查看工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+        0.  将文件改动丢弃：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git restore <file>...
+            depr.             > git checkout -- <file>...
+            ```
+
+        0.  验证工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+
+### 暂存区
+
+???+ tldr "将暂存区中记录的变动，提交到版本仓库<br>:material-package: Stage --> (:material-file-multiple: Changes) --> :material-source-branch: Branch"
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  运行 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在主界面的 **Local** 标签页中，双击目标存储仓库将其打开；
+        0.  点选侧边栏的**文件状态**选项卡，或使用快捷键 ++ctrl+1++，切换到文件状态界面；
+        0.  在**已暂存文件**列表区域里确认将提交的变动；
+        0.  在提交消息编辑框中填写提交消息；
+        0.  点击**提交**按钮。
+
+        !!! tip
+
+            提交消息的编写格式可以参考 [Developing AngularJS § Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)。
+            
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  查看工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+        0.  将变动提交到版本仓库：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git commit --message="<message>"
+            abbr.             > git commit -m "<message>"
+            ```
+
+        0.  验证工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+???+ tldr "暂存有误，需要将已暂存的变动撤回到工作区<br>:material-folder: Working Directory <-- (:material-file-multiple: Changes) <-- :material-package: Stage"
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  运行 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在主界面的 **Local** 标签页中，双击目标存储仓库将其打开；
+        0.  点选侧边栏的**文件状态**选项卡，或使用快捷键 ++ctrl+1++，切换到文件状态界面；
+        0.  在**已暂存文件**列表区域里，点选想要撤回的文件，然后右击打开关联菜单，并点击**丢弃**选项，或使用 ++ctrl+shift+r++ 快捷键将其撤回。
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  查看工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+        0.  将变动撤回到工作区：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git restore --staged <file>...
+            depr.             > git reset HEAD [file]...
+            ```
+
+        0.  验证工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+### 版本回退
+
+???+ tldr "提交有误，譬如少提交了一个文件，需要将上次提交的变动撤回到暂存区<br>:material-package: Stage <-- (:material-file-multiple: Changes) <-- :material-source-branch: Branch"
+
+    !!! attention
+
+        操作前记得检查暂存区是否干净，以免将新旧暂存区混在一起，难以区分。
+
+    === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
+
+        1.  运行 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
+        0.  在主界面的 **Local** 标签页中，双击目标存储仓库将其打开；
+        0.  点选侧边栏的**文件状态**选项卡，或使用快捷键 ++ctrl+1++，切换到文件状态界面；
+        0.  检查**已暂存文件**列表区域是否干净；
+        0.  点选侧边栏的 **History** 选项卡，或使用快捷键 ++ctrl+2++，切换到历史界面；
+        0.  右击欲抵达的提交，打开关联菜单，点击**重置当前分支到此次提交**选项，选择**软合并 - 保持所有本地改动**模式，点击**确定**按钮。
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  查看工作区状态，检查暂存区是否干净：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+        0.  查看提交历史：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git log [--abbrev-commit --graph --pretty=oneline]
+            abbr.             > git log [--graph --online]
+            ```
+        
+        0.  撤回上次提交的变动到暂存区：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git reset --soft HEAD^
+            ```
+
+        0.  验证提交历史：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git log [--abbrev-commit --graph --pretty=oneline]
+            abbr.             > git log [--graph --online]
+            ```
+
+        0.  验证工作区状态：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+
+### 冲突处理
+
+???+ tldr "拉取代码，修修改改，推送代码，Duang——版本冲突 :fontawesome-regular-sad-tear:"
+
+    === "使用 :material-git: Git 命令行界面操作"
+
+        1.  查看工作区状态，检查工作区和暂存区是否干净：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git status
+            ```
+        
+        0.  向远端推送提交：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git push <remote> <branch>
+            ```
+
+        0.  冲突！
+
+        0.  从远端拉取提交，以更新版本仓库到最新：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git pull [branch]
+            ```
+
+        0.  查看冲突：
+
+            ``` doscon
+            %USERPROFILE%\wdir> git status
+            ```
+
+        0.  编辑冲突项，解决冲突，同步变动并提交：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git add <file> ...
+
+            %USERPROFILE%\wdir> git commit --message="<conflict fixed>"
+            abbr.             > git commit -m "<conflict fixed>"
+            ```
+
+        0.  向远端推送提交：
+
+            ``` doscon
+            %USERPROFILE%/wdir> git push <remote> <branch>
+            ```
 
 ## `git` 命令
 
-### 配置
-
-???+ tldr "列出所有配置"
+??? tldr "列出所有配置"
 
     ``` doscon
     %USERPROFILE%> git config --list
@@ -74,60 +384,14 @@
     %USERPROFILE%> ssh-keygen -t rsa -C "<email@example.com>"
     ```
 
-### 版本库
-
-???+ tldr "列出远端库"
+??? tldr "列出远端库"
 
     ``` doscon
     %USERPROFILE%\wdir> git remote --verbose
     abbr.             > git remote -v
     ```
 
-??? tldr "在本地创建版本库"
-
-    1.  初始化版本库：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git init
-        ```
-
-    0.  添加远端库：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git remote add <origin> <git@host:wdir.git>
-        ```
-
-    0.  绑定当前分支到远端 origin 库：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git branch --set-upstream-to=<origin>
-        abbr.             > git branch -u <origin>
-        ```
-
-    0.  推送本地提交到远端库：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git push <origin> <master>
-        ```
-
-??? tldr "从远端复制版本库"
-
-    1.  从远端复制版本库：
-
-        ``` doscon
-        %USERPROFILE%> git clone <git@host:wdir.git>
-        ```
-
-    0.  创建远端分支到本地：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git branch --set-upstream-to=<origin/dev> <dev>
-        abbr.             > git branch -u <origin/dev> <dev>
-        ```
-
-### 分支
-
-???+ tldr "展示分支"
+??? tldr "展示分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git branch
@@ -168,9 +432,7 @@
     depr.             > git checkout -b <dev>
     ```
 
-### 提交
-
-???+ tldr "查看提交历史"
+??? tldr "查看提交历史"
 
     ``` doscon
     %USERPROFILE%\wdir> git log [--abbrev-commit --graph --pretty=oneline]
@@ -203,37 +465,7 @@
         %USERPROFILE%\wdir (master)> git rebase
         ```
 
-??? tldr "解决冲突"
-
-    1.  出现冲突：
-
-        ……
-
-    0.  查看冲突：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git status
-        ```
-
-    0.  解决冲突：
-
-        ……
-
-    0.  添加修改：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git add <file>
-        ```
-
-    0.  提交修改：
-
-        ``` doscon
-        %USERPROFILE%\wdir> git commit -m "<conflict fixed>"
-        ```
-
-### 标签
-
-???+ tldr "列出标签"
+??? tldr "列出标签"
 
     ``` doscon
     %USERPROFILE%\wdir> git tag 
@@ -258,31 +490,13 @@
     abbr.             > git tag -a -m "<message>" <tagname> [commit]
     ```
 
-### 暂存区
-
-???+ tldr "与版本库比较"
+??? tldr "与版本库比较"
 
     ``` doscon
     %USERPROFILE%\wdir> git diff --cached
     ```
 
-??? tldr "提交修改到版本库"
-
-    ``` doscon
-    %USERPROFILE%\wdir> git commit --message="<message>"
-    abbr.             > git commit -m "<message>"
-    ```
-
-??? tldr "回退修改到工作区"
-
-    ``` doscon
-    %USERPROFILE%\wdir> git restore --staged <file>...
-    depr.             > git reset HEAD [file]...
-    ```
-
-### 工作区
-
-???+ tldr "查看工作区状态"
+??? tldr "查看工作区状态"
 
     ``` doscon
     %USERPROFILE%\wdir> git status
@@ -300,22 +514,7 @@
     %USERPROFILE%\wdir> git diff
     ```
 
-??? tldr "添加修改到暂存区"
-
-    ``` doscon
-    %USERPROFILE%\wdir> git add <file>...
-    ```
-
-??? tldr "放弃修改"
-
-    ``` doscon
-    %USERPROFILE%\wdir> git restore <file>...
-    depr.             > git checkout -- <file>...
-    ```
-
-### 贮藏
-
-???+ tldr "典型用法"
+??? tldr "典型用法"
 
     1.  贮藏脏工作区，以处理突发事件：
 
@@ -351,9 +550,7 @@
     %USERPROFILE%\wdir> git stash drop [stash@{0}]
     ```
 
-### 其它
-
-???+ tldr "复制特定提交到当前分支"
+??? tldr "复制特定提交到当前分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git cherry-pick <commit>
@@ -361,7 +558,7 @@
 
     常用于将主分支的漏洞修复，应用到开发分支。
 
-## 服务
+## :material-git: Git 服务
 
 1.  安装 :material-git: Git：
 
