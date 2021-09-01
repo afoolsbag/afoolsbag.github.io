@@ -82,7 +82,7 @@
 
         1.  启动 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
         0.  在主界面的 **New tab** 标签页中，选中 **Clone** 选项卡；
-        0.  填写**源路径 / URL** 编辑框，譬如 `git@github.com:afoolsbag/afoolsbag.github.io.git`；
+        0.  填写**源路径 / URL** 编辑框，譬如 `git@github.com:afoolsbag/ExampleRepository.git`；
         0.  **目标路径**编辑框和**名字**编辑框将自动填充，可以按需调整；
         0.  点击**克隆**按钮。
 
