@@ -13,6 +13,14 @@
 
 ## 运行 :material-git: Git
 
+??? tldr "在 :material-microsoft-windows: Windows 10 中安装 :material-git: Git"
+
+    官方网站：[:material-git: Git][Git]。
+
+??? tldr "在 :material-microsoft-windows: Windows 10 中通过 :fontawesome-brands-sourcetree: Sourcetree 安装 :material-git: Git"
+
+    [:fontawesome-brands-sourcetree: Sourcetree][Sourcetree] 中内置 :material-git: Git 支持。
+
 ??? tldr "在 :material-microsoft-windows: Windows 10 中通过 Scoop 安装 :material-git: Git"
 
     ``` doscon
@@ -74,7 +82,7 @@
 
         1.  启动 :fontawesome-brands-sourcetree: Sourcetree 应用程序；
         0.  在主界面的 **New tab** 标签页中，选中 **Clone** 选项卡；
-        0.  填写**源路径 / URL** 编辑框，譬如 `https://github.com/foobar/ExampleRepository.git`；
+        0.  填写**源路径 / URL** 编辑框，譬如 `git@github.com:afoolsbag/afoolsbag.github.io.git`；
         0.  **目标路径**编辑框和**名字**编辑框将自动填充，可以按需调整；
         0.  点击**克隆**按钮。
 
@@ -594,4 +602,6 @@
 
 [^Git on Wikipedia]: [Git - Wikipedia](https://wikipedia.org/wiki/Git).
 
-[Git]: https://git-scm.com/
+[Git]:        <https://git-scm.com/>
+[GitFlow]:    <https://github.com/nvie/gitflow> 
+[Sourcetree]: <https://www.sourcetreeapp.com/>
