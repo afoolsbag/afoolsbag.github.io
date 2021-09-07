@@ -8,7 +8,7 @@ WHERE /Q scoop ^
         && EXIT /B 1
 
 START "" /B /WAIT CMD /C scoop update * ^
-        && ECHO Scoop update succeed. ^
+        && ECHO Scoop update successful. ^
         || ECHO Scoop update failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2

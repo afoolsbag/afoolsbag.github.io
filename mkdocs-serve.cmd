@@ -18,7 +18,7 @@ START "Delaying Visit and Waiting Server Startup" /MIN CMD /C "TIMEOUT 15 /NOBRE
 
 TITLE MkDocs Development Server
 mkdocs serve --dev-addr 127.0.0.1:49152 ^
-        && ECHO MkDocs serve succeed. ^
+        && ECHO MkDocs serve successful. ^
         || ECHO MkDocs serve failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 3

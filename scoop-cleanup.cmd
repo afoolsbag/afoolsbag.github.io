@@ -8,13 +8,13 @@ WHERE /Q scoop ^
         && EXIT /B 1
 
 START "" /B /WAIT CMD /C scoop cleanup * ^
-        && ECHO Scoop cleanup succeed. ^
+        && ECHO Scoop cleanup successful. ^
         || ECHO Scoop cleanup failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2
 
 START "" /B /WAIT CMD /C scoop cache rm * ^
-        && ECHO Scoop cache rm succeed. ^
+        && ECHO Scoop cache rm successful. ^
         || ECHO Scoop cache rm failed. ^
         && CALL :pause_if_double_click ^
         && EXIT /B 3
