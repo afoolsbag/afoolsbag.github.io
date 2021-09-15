@@ -18,10 +18,10 @@
 
         ``` text
         C:\Serva\Program\
-                        Serva.chm
-                        Serva32.exe
-                        Serva64.exe
-                        ServaEULA.pdf
+                         Serva.chm
+                         Serva32.exe
+                         Serva64.exe
+                         ServaEULA.pdf
         ```
 
     0.  准备一处空白文件夹作为工作目录（假定为 `C:\Serva\Workspace`），目录结构形如：
@@ -50,13 +50,13 @@
 
         ``` text
         C:\Serva\Workspace\
-                        BM\
-                        NWA_PXE\
-                        WIA_RIS\
-                        WIA_WDS\
-                                ServaReadme.txt
-                        astamp.dat
-                        ServaEULA.pdf
+                           BM\
+                           NWA_PXE\
+                           WIA_RIS\
+                           WIA_WDS\
+                                   ServaReadme.txt
+                           astamp.dat
+                           ServaEULA.pdf
         ```
 
     0.  对生成的 `WIA_WDS` 文件夹进行高级共享，共享名为 `WIA_WDS_SHARE`；在其下新建 `W10_64` 文件夹；
@@ -65,22 +65,22 @@
 
         ``` text
         C:\Serva\Workspace\
-                        BM\
-                        NWA_PXE\
-                        WIA_RIS\
-                        WIA_WDS\
-                                W10_64\
-                                        boot\
-                                        efi\
-                                        sources\
-                                        support\
-                                        autorun.inf
-                                        bootmgr
-                                        bootmgr.efi
-                                        setup.exe
-                                ServaReadme.txt
-                        astamp.dat
-                        ServaEULA.pdf
+                           BM\
+                           NWA_PXE\
+                           WIA_RIS\
+                           WIA_WDS\
+                                   W10_64\
+                                          boot\
+                                          efi\
+                                          sources\
+                                          support\
+                                          autorun.inf
+                                          bootmgr
+                                          bootmgr.efi
+                                          setup.exe
+                                   ServaReadme.txt
+                           astamp.dat
+                           ServaEULA.pdf
         ```
 
     0.  第三次运行 Serva 程序，提供 PXE 服务；
