@@ -227,7 +227,7 @@ CertUtil 是命令行程序，作为 :material-microsoft-windows: Windows 证书
 
 参见 [certutil | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil)。
 
-### :material-network: 网络
+### :material-network: 本机网络
 
 ???+ tldr "查看本机网络信息"
 
@@ -265,6 +265,21 @@ CertUtil 是命令行程序，作为 :material-microsoft-windows: Windows 证书
 *   [ipconfig | Microsoft Docs](https://docs.microsoft.com/windows-server/administration/windows-commands/ipconfig)；
 *   [nslookup](https://docs.microsoft.com/windows-server/administration/windows-commands/nslookup)。
 
+### 在线网络
+
+???+ tldr "测试网络连通性"
+
+    使用预置程序 `PING.EXE`：
+
+    ``` doscon
+    %USERPROFILE%> ping <target_name> [-t]
+    ```
+
+    使用第三方程序 [iPerf](https://iperf.fr/)：
+
+    ``` ps1con
+    PS $env:USERPROFILE> scoop install iperf3
+    ```
 
 ## :material-frequently-asked-questions: 常见问题
 
@@ -290,7 +305,7 @@ CertUtil 是命令行程序，作为 :material-microsoft-windows: Windows 证书
 
     重启 Plug and Play 服务后重试。
 
-???+ faq "如何彻底地变更用户名"
+??? faq "彻底地变更用户名"
 
     1.  重命名用户：
 
@@ -330,6 +345,10 @@ CertUtil 是命令行程序，作为 :material-microsoft-windows: Windows 证书
     0.  重新启动。
 
     参见 [Win10 将用户名修改为英文 - 白色泪光 - 博客园](https://www.cnblogs.com/WhiteTears/p/8947337.html)。
+
+??? faq "家庭版的远程桌面连接"
+
+    使用 [RDP Wrapper Library by Stas'M](https://github.com/stascorp/rdpwrap)，注意下载相应版本的 `rdpwrap.ini` 配置。
 
 ## Awesome
 
