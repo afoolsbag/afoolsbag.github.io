@@ -4,6 +4,8 @@
 
 参见：
 
+*   [NDP Software :: Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
+*   [GitHub Git 备忘单 - GitHub Cheatsheets](https://training.github.com/)
 *   [Git Cheat Sheet | Tower Blog](https://www.git-tower.com/blog/git-cheat-sheet/)
 *   [Developing AngularJS § Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
 *   [A collection of .gitignore templates](https://github.com/github/gitignore)

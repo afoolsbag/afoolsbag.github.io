@@ -57,6 +57,10 @@
 | 汉语            | [漢典]                           |
 |                 | [标点符号用法][GB/T 15834-2011]  | [^1]     |
 
+附录：
+
+*   [Antonym List](https://gist.github.com/maxtruxa/b2ca551e42d3aead2b3d "A list of common terms used in programming and their respective antonyms.")
+
 ### 风格
 
 | 项目          | 标准             | 其它                          |
