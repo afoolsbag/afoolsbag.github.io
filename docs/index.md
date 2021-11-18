@@ -69,8 +69,8 @@
 
 #### 学术资源
 
-[创世纪图书馆](libgen.fun "成立于 2008") 影子图书馆，
-[Z-Library](z-lib.org "成立于 2009") 影子图书馆，
+[创世纪图书馆](https://libgen.fun/ "成立于 2008") 影子图书馆，
+[Z-Library](https://z-lib.org/ "成立于 2009") 影子图书馆，
 [Sci-Hub](https://sci-hub.se/ "成立于 2011-04-16") 影子图书馆。
 
 ## 仰望星空
