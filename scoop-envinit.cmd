@@ -74,13 +74,13 @@ IF %ERRORLEVEL% NEQ 0 (
                         && EXIT /B 10
         )
 
-        START "" /B /WAIT CMD /C nvm install 16.8.0 ^
+        START "" /B /WAIT CMD /C nvm install latest ^
                 && ECHO nvm install successful. ^
                 || ECHO nvm install failed. ^
                 && CALL :pause_if_double_click ^
                 && EXIT /B 11
 
-        START "" /B /WAIT CMD /C nvm use 16.8.0 ^
+        START "" /B /WAIT CMD /C nvm use newest ^
                 && ECHO nvm use successful. ^
                 || ECHO nvm use failed. ^
                 && CALL :pause_if_double_click ^

@@ -13,7 +13,7 @@ CD "%script_directory%" ^
         && CALL :pause_if_double_click ^
         && EXIT /B 2
 
-mkdocs build --strict ^
+START "" /B /WAIT CMD /C mkdocs build --strict ^
         && ECHO MkDocs build successful. ^
         || ECHO MkDocs build failed. ^
         && CALL :pause_if_double_click ^
