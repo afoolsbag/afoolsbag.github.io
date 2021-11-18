@@ -10,7 +10,7 @@
 >
 > [*Beating the Averages*](http://paulgraham.com/avg.html "Beating the Averages"). April 2001, rev. April 2003.
 
-若干“百兵谱”：
+参考：
 
 *   [AlternativeTo] ([AlternativeTo itself])
 *   [SimilarSites] ([SimilarSites itself])
@@ -29,6 +29,49 @@
 > 只有在那些不太成熟、容易出问题的地方，你才应该加上注释，提醒读者注意那里，就好像公路上只有在急转弯处才会出现警示标志一样。
 >
 > *黑客与画家*. 2004.
+
+## [Awesome](https://awesome.re/)
+
+### 资讯
+
+[后续](https://houxuapp.com/)新闻。
+
+#### 行业资讯
+
+[Alexa Internet](https://www.alexa.com/) 网络流量排名，
+[TIOBE Index](https://tiobe.com/tiobe-index/) 编程语言指数，
+[InfoQ](https://infoq.cn/) 新闻，
+[好奇心日报](https://www.qdaily.com/)新闻，
+[蓝点网](https://landiannews.com/)新闻。
+
+### 资源
+
+[Baidu](https://www.baidu.com/) 百度搜索，
+[Bing](https://bing.com/) 必应搜索，
+[Dogpile.com](https://www.dogpile.com/) 搜索，
+[DuckDuckGo](https://duckduckgo.com/) 搜索，
+[Google](https://www.google.com/) 谷歌搜索，
+[Soso](http://soso.com/) 搜搜搜索，
+[Sogou](https://www.sogou.com/) 搜狗搜索，
+[Yandex](https://yandex.com/) 搜索，
+[Yahoo!](https://search.yahoo.com/) 雅虎搜索。
+
+#### BitTorrent 资源
+
+[BTDigg](https://btdig.com/) 搜索，
+[BTSOW](https://btsow.com/) 搜索，
+[The Pirate Bay](https://thepiratebay.org/) 海盗湾。
+
+#### 数学资源
+
+[OEIS](https://oeis.org/) 整数序列搜索，
+[Wolfram\|Alpha](https://wolframalpha.com/) 数学搜索。
+
+#### 学术资源
+
+[创世纪图书馆](libgen.fun "成立于 2008") 影子图书馆，
+[Z-Library](z-lib.org "成立于 2009") 影子图书馆，
+[Sci-Hub](https://sci-hub.se/ "成立于 2011-04-16") 影子图书馆。
 
 ## 仰望星空
 
@@ -112,51 +155,3 @@
 *   [Homo sapiens sapiens - Wikispecies](https://species.wikimedia.org/wiki/Homo_sapiens_sapiens)
 *   [Taxonomy - NCBI](https://www.ncbi.nlm.nih.gov/taxonomy)（美国国家生物技术信息中心）
 *   [International Commission on Stratigraphy § 国际年代地层表](https://stratigraphy.org/chart)
-
-## [Awesome](https://awesome.re/)
-
-### 资讯
-
-| 资讯                          | 备注 |
-| :---------------------------- | :--- |
-| [后续](https://houxuapp.com/) | 新闻 |
-
-
-#### 行业资讯
-
-| 行业资讯                                      | 备注         |
-| :-------------------------------------------- | :----------- |
-| [Alexa Internet](https://www.alexa.com/)      | 网络流量排名 |
-| [TIOBE Index](https://tiobe.com/tiobe-index/) | 编程语言指数 |
-| [InfoQ](https://infoq.cn/)                    | 新闻         |
-| [好奇心日报](https://www.qdaily.com/)         | 新闻         |
-| [蓝点网](https://landiannews.com/)            | 新闻         |
-
-### 搜索
-
-| 搜索                                    | 备注     |
-| :-------------------------------------- | :------- |
-| [Baidu](https://www.baidu.com/)         | 百度搜索 |
-| [Bing](https://bing.com/)               | 必应搜索 |
-| [Dogpile.com](https://www.dogpile.com/) |          |
-| [DuckDuckGo](https://duckduckgo.com/)   |          |
-| [Google](https://www.google.com/)       | 谷歌搜索 |
-| [Soso](http://soso.com/)                | 搜搜搜索 |
-| [Sogou](https://www.sogou.com/)         | 搜狗搜索 |
-| [Yandex](https://yandex.com/)           |
-| [Yahoo!](https://search.yahoo.com/)     | 雅虎搜索 |
-
-#### BitTorrent 搜索
-
-| BitTorrent 搜索                             | 备注   |
-| :------------------------------------------ | :----- |
-| [BTDigg](https://btdig.com/)                |
-| [BTSOW](https://btsow.com/)                 |
-| [The Pirate Bay](https://thepiratebay.org/) | 海盗湾 |
-
-#### 数学搜索
-
-| 数学搜索                                    | 备注         |
-| :------------------------------------------ | :----------- |
-| [OEIS](https://oeis.org/)                   | 整数序列搜索 |
-| [Wolfram\|Alpha](https://wolframalpha.com/) | 数学搜索     |
