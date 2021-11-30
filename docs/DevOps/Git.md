@@ -15,15 +15,15 @@
 
 ## 运行 :material-git: Git
 
-??? tldr "在 :material-microsoft-windows: Windows 10 中安装 :material-git: Git"
+??? example "在 :material-microsoft-windows: Windows 10 中安装 :material-git: Git"
 
-    官方网站：[:material-git: Git][Git]。
+    官方网站 [:material-git: Git][Git]。
 
-??? tldr "在 :material-microsoft-windows: Windows 10 中通过 :fontawesome-brands-sourcetree: Sourcetree 安装 :material-git: Git"
+??? example "在 :material-microsoft-windows: Windows 10 中通过 :fontawesome-brands-sourcetree: Sourcetree 安装 :material-git: Git"
 
     [:fontawesome-brands-sourcetree: Sourcetree][Sourcetree] 中内置 :material-git: Git 支持。
 
-??? tldr "在 :material-microsoft-windows: Windows 10 中通过 Scoop 安装 :material-git: Git"
+??? example "在 :material-microsoft-windows: Windows 10 中通过 Scoop 安装 :material-git: Git"
 
     ``` doscon
     %USERPROFILE%> scoop install git
@@ -31,9 +31,22 @@
 
 ## 常用操作
 
+### 配置
+
+??? example "在用户级别配置代理"
+
+    ``` doscon
+    %USERPROFILE%> notepad %USERPROFILE%\.gitconfig
+    ```
+
+    ``` ini
+    [http "https://github.com"]
+    	proxy = http://127.0.0.1:41091
+    ```
+
 ### 创建版本仓库
 
-???+ tldr "将一个文件夹初始化为版本仓库，交由 :material-git: Git 管理<br>:material-folder: Directory --> :material-source-repository: Repository"
+??? example "将一个文件夹初始化为版本仓库，交由 :material-git: Git 管理<br>:material-folder: Directory --> :material-source-repository: Repository"
 
     === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
 
@@ -78,7 +91,7 @@
             ```
 -->
 
-???+ tldr "将一个远程版本仓库克隆到本地<br>:material-server: Remote --> (:material-source-repository: Repository) --> :material-laptop: Local"
+??? example "将一个远程版本仓库克隆到本地<br>:material-server: Remote --> (:material-source-repository: Repository) --> :material-laptop: Local"
 
     === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
 
@@ -111,7 +124,7 @@
 
 ### 工作区
 
-???+ tldr "将工作区的变动同步到暂存区<br>:material-folder: Working Directory --> (:material-file-multiple: Changes) --> :material-package: Stage"
+??? example "将工作区的变动同步到暂存区<br>:material-folder: Working Directory --> (:material-file-multiple: Changes) --> :material-package: Stage"
 
     === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
 
@@ -144,7 +157,7 @@
             %USERPROFILE%/wdir> git status
             ```
 
-???+ tldr "改动有误，需要将工作区的文件恢复原样<br>:material-trash-can: Trash <-- (:material-file-multiple: Changes) <-- :material-folder: Working Directory"
+??? example "改动有误，需要将工作区的文件恢复原样<br>:material-trash-can: Trash <-- (:material-file-multiple: Changes) <-- :material-folder: Working Directory"
 
     === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
 
@@ -177,7 +190,7 @@
 
 ### 暂存区
 
-???+ tldr "将暂存区中记录的变动，提交到版本仓库<br>:material-package: Stage --> (:material-file-multiple: Changes) --> :material-source-branch: Branch"
+??? example "将暂存区中记录的变动，提交到版本仓库<br>:material-package: Stage --> (:material-file-multiple: Changes) --> :material-source-branch: Branch"
 
     === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
 
@@ -213,7 +226,7 @@
             %USERPROFILE%/wdir> git status
             ```
 
-???+ tldr "暂存有误，需要将已暂存的变动撤回到工作区<br>:material-folder: Working Directory <-- (:material-file-multiple: Changes) <-- :material-package: Stage"
+??? example "暂存有误，需要将已暂存的变动撤回到工作区<br>:material-folder: Working Directory <-- (:material-file-multiple: Changes) <-- :material-package: Stage"
 
     === "使用 :fontawesome-brands-sourcetree: Sourcetree 图形化界面操作"
 
@@ -245,7 +258,7 @@
 
 ### 版本回退
 
-???+ tldr "提交有误，譬如少提交了一个文件，需要将上次提交的变动撤回到暂存区<br>:material-package: Stage <-- (:material-file-multiple: Changes) <-- :material-source-branch: Branch"
+??? example "提交有误，譬如少提交了一个文件，需要将上次提交的变动撤回到暂存区<br>:material-package: Stage <-- (:material-file-multiple: Changes) <-- :material-source-branch: Branch"
 
     !!! attention
 
@@ -296,7 +309,7 @@
 
 ### 冲突处理
 
-???+ tldr "拉取代码，修修改改，推送代码，Duang——版本冲突 :fontawesome-regular-sad-tear:"
+??? example "拉取代码，修修改改，推送代码，Duang——版本冲突 :fontawesome-regular-sad-tear:"
 
     === "使用 :material-git: Git 命令行界面操作"
 
@@ -343,14 +356,14 @@
 
 ## `git` 命令
 
-??? tldr "列出所有配置"
+??? example "列出所有配置"
 
     ``` doscon
     %USERPROFILE%> git config --list
     abbr.        > git config -l
     ```
 
-??? tldr "列出系统配置"
+??? example "列出系统配置"
 
     ``` doscon
     %USERPROFILE%> git config --system --list
@@ -360,7 +373,7 @@
     :material-linux: `/etc/gitconfig`  
     :material-microsoft-windows: `%ALLUSERSPROFILE%\Git\config`
 
-??? tldr "列出用户配置"
+??? example "列出用户配置"
 
     ``` doscon
     %USERPROFILE%> git config --global --list
@@ -370,7 +383,7 @@
     :material-linux: `~/.gitconfig`  
     :material-microsoft-windows: `%USERPROFILE%\.gitconfig`
 
-??? tldr "为当前用户设置名称和邮箱"
+??? example "为当前用户设置名称和邮箱"
 
     ``` doscon
     %USERPROFILE%> git config --global user.name "<name>"
@@ -378,7 +391,7 @@
     %USERPROFILE%> git config --global user.email "<email@example.com>"
     ```
 
-??? tldr "列出项目配置"
+??? example "列出项目配置"
 
     ``` doscon
     %USERPROFILE%> git config --local --list
@@ -388,53 +401,53 @@
     :material-linux: `.git/config`  
     :material-microsoft-windows: `.git\config`
 
-??? tldr "生成 SSH 密钥对"
+??? example "生成 SSH 密钥对"
 
     ``` doscon
     %USERPROFILE%> ssh-keygen -t rsa -C "<email@example.com>"
     ```
 
-??? tldr "列出远端库"
+??? example "列出远端库"
 
     ``` doscon
     %USERPROFILE%\wdir> git remote --verbose
     abbr.             > git remote -v
     ```
 
-??? tldr "展示分支"
+??? example "展示分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git branch
     ```
 
-??? tldr "展示远端分支"
+??? example "展示远端分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git branch --remote
     abbr.             > git branch -r
     ```
 
-??? tldr "创建分支"
+??? example "创建分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git branch <dev>
     ```
 
-??? tldr "删除分支"
+??? example "删除分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git --delete <dev>
     abbr.             > git -d <dev>
     ```
 
-??? tldr "切换分支"
+??? example "切换分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git switch <dev>
     depr.             > git checkout <dev>
     ```
 
-??? tldr "创建并切换分支"
+??? example "创建并切换分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git switch --create <dev>
@@ -442,14 +455,14 @@
     depr.             > git checkout -b <dev>
     ```
 
-??? tldr "查看提交历史"
+??? example "查看提交历史"
 
     ``` doscon
     %USERPROFILE%\wdir> git log [--abbrev-commit --graph --pretty=oneline]
     abbr.             > git log [--graph --online]
     ```
 
-??? tldr "合并分支"
+??? example "合并分支"
 
     1.  切换到主分支：
 
@@ -475,56 +488,56 @@
         %USERPROFILE%\wdir (master)> git rebase
         ```
 
-??? tldr "列出标签"
+??? example "列出标签"
 
     ``` doscon
     %USERPROFILE%\wdir> git tag 
     ```
 
-??? tldr "查看标签"
+??? example "查看标签"
 
     ``` doscon
     %USERPROFILE%\wdir> git show <tagname>
     ```
 
-??? tldr "打标签"
+??? example "打标签"
 
     ``` doscon
     %USERPROFILE%\wdir> git tag <tagname> [commit]
     ```
 
-??? tldr "制作一个带注释的标签"
+??? example "制作一个带注释的标签"
 
     ``` doscon
     %USERPROFILE%\wdir> git tag --annotate --message="<message>" <tagname> [commit]
     abbr.             > git tag -a -m "<message>" <tagname> [commit]
     ```
 
-??? tldr "与版本库比较"
+??? example "与版本库比较"
 
     ``` doscon
     %USERPROFILE%\wdir> git diff --cached
     ```
 
-??? tldr "查看工作区状态"
+??? example "查看工作区状态"
 
     ``` doscon
     %USERPROFILE%\wdir> git status
     ```
 
-??? tldr "与版本库比较"
+??? example "与版本库比较"
 
     ``` doscon
     %USERPROFILE%\wdir> git diff HEAD
     ```
 
-??? tldr "与暂存区比较"
+??? example "与暂存区比较"
 
     ``` doscon
     %USERPROFILE%\wdir> git diff
     ```
 
-??? tldr "典型用法"
+??? example "典型用法"
 
     1.  贮藏脏工作区，以处理突发事件：
 
@@ -542,25 +555,25 @@
         %USERPROFILE%\wdir> git stash pop
         ```
 
-??? tldr "列出脏工作区"
+??? example "列出脏工作区"
 
     ``` doscon
     %USERPROFILE%\wdir> git stash list
     ```
 
-??? tldr "恢复脏工作区"
+??? example "恢复脏工作区"
 
     ``` doscon
     %USERPROFILE%\wdir> git stash apply [stash@{0}]
     ```
 
-??? tldr "丢弃赃工作区"
+??? example "丢弃赃工作区"
 
     ``` doscon
     %USERPROFILE%\wdir> git stash drop [stash@{0}]
     ```
 
-??? tldr "复制特定提交到当前分支"
+??? example "复制特定提交到当前分支"
 
     ``` doscon
     %USERPROFILE%\wdir> git cherry-pick <commit>
