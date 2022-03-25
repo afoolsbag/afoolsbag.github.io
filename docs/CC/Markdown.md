@@ -4,8 +4,8 @@
 
 直达：
 
-*   [常用的语言标识](#codehilite-扩展)
-*   [Material for MkDocs 支持的图标](#emoji-扩展)
+*   [:fontawesome-solid-code: 常用的语言标识](#代码高亮)
+*   [:fontawesome-solid-icons: Material for MkDocs 支持的图标](#emoji-扩展)
 
 ## Markdown
 
@@ -301,9 +301,9 @@
 
 [Python-Markdown] 是 Markdown 的 Python 实现，并提供了若干扩展：
 
-### Abbreviations 扩展
+### 缩略语
 
-!!! example "缩写示例"
+!!! example "缩略语示例"
 
     === "HTML 输出"
 
@@ -325,7 +325,7 @@
 
 参见 [Abbreviations — Python-Markdown documentation](https://python-markdown.github.io/extensions/abbreviations/)。
 
-### Admonition 扩展
+### 告诫
 
 !!! example "告诫示例"
 
@@ -377,14 +377,16 @@
 *   [reStructuredText Directives § Specific Admonitions](https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions)
 *   [Admonition — Python-Markdown documentation](https://python-markdown.github.io/extensions/admonition/)
 
-### Attribute Lists 扩展
+### 属性
 
 参见 [Attribute Lists — Python-Markdown documentation](https://python-markdown.github.io/extensions/attr_list/)。
 
-### CodeHilite 扩展
+### 代码高亮
 
 [CodeHilite] 通过 [Pygments] 或配合 [highlight.js] 实现代码高亮。
 Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.js 支持的语言在 [Supported Languages](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md) 页面列出。
+
+[CodeHilite]: <https://python-markdown.github.io/extensions/code_hilite/>
 
 另外，[GitHub] 使用 [Linguist] 实现代码高亮，支持的语言在 [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 列出。
 
@@ -439,7 +441,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 参见 [CodeHilite — Python-Markdown documentation](https://python-markdown.github.io/extensions/code_hilite/)。
 
-### Definition Lists 扩展
+### 定义列表
 
 !!! example "定义列表示例"
 
@@ -465,7 +467,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 参见 [Definition Lists — Python-Markdown documentation](https://python-markdown.github.io/extensions/definition_lists/)。
 
-### Fenced Code Blocks 扩展
+### 围栏风格代码块
 
 !!! example "围栏风格代码块示例"
 
@@ -493,7 +495,7 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 参见 [Fenced Code Blocks — Python-Markdown documentation](https://python-markdown.github.io/extensions/fenced_code_blocks/)。
 
-### Footnotes 扩展
+### 脚注
 
 !!! example "脚注示例"
 
@@ -551,11 +553,11 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 参见 [SmartyPants — Python-Markdown documentation](https://python-markdown.github.io/extensions/smarty/)。
 
-### Table of Contents 扩展
+### 目录
 
 参见 [Table of Contents — Python-Markdown documentation](https://python-markdown.github.io/extensions/toc/)。
 
-### Tables 扩展
+### 表格
 
 !!! example "表格示例"
 
@@ -688,8 +690,9 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 参见：
 
+*   [Icons + Emojis - Material for MkDocs § Search](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search)
 *   :material-material-design: [Material Design Icons](https://materialdesignicons.com/)
-*   :fontawesome-brands-font-awesome-flag: [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free)
+*   :fontawesome-brands-font-awesome: [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free)
 *   :octicons-mark-github-16: [Octicons](https://primer.style/octicons/)
 *   [Icons + Emojis - Material for MkDocs § Usage](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#usage)
 *   [Emoji - PyMdown Extensions Documentation](https://facelessuser.github.io/pymdown-extensions/extensions/emoji/)
@@ -888,11 +891,5 @@ Pygments 支持的语言使用 `pygmentize -L lexers` 命令列出，hightlight.
 
 [^Markdown on Wikipedia]: [Markdown - Wikipedia](https://wikipedia.org/wiki/Markdown).
 
-[CodeHilite]:         https://python-markdown.github.io/extensions/code_hilite/
-[GitHub]:             https://github.com/
-[highlight.js]:       https://highlightjs.org/
-[Linguist]:           https://github.com/github/linguist
-[Markdown]:           https://daringfireball.net/projects/markdown/             "Daring Fireball: Markdown"
-[Pygments]:           https://pygments.org/
-[PyMdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
-[Python-Markdown]:    https://python-markdown.github.io/
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

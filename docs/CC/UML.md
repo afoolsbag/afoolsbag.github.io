@@ -86,6 +86,5 @@
 
 *[UML]: Unified Modeling Language
 
-[draw.io]:  <https://draw.io/>
-[PlantUML]: <https://plantuml.com/>
-[StarUML]:  <https://staruml.io/>
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

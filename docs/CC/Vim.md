@@ -258,10 +258,6 @@ set list
 
 <!----------------------------------------------------------------------------->
 
-[Vim]:      https://www.vim.org/
-[vim-plug]: https://github.com/junegunn/vim-plug
-[Vundle]:   https://github.com/VundleVim/Vundle.vim
-
 [help.txt]:             https://yianwillis.github.io/vimcdoc/doc/help.html#help.txt
 [doc-file-list]:        https://yianwillis.github.io/vimcdoc/doc/help.html#doc-file-list
 [quickref]:             https://yianwillis.github.io/vimcdoc/doc/quickref.html#quickref
@@ -284,7 +280,7 @@ set list
 [sys-file-list]:        https://yianwillis.github.io/vimcdoc/doc/help.html#sys-file-list
 [standard-plugin-list]: https://yianwillis.github.io/vimcdoc/doc/help.html#standard-plugin-list
 
-*[PaaS]: Platform as a Service
-*[Vim]:  Vi IMproved
-
 <!-- vim: set ts=4 et: -->
+
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

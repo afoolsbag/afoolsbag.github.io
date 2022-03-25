@@ -45,3 +45,6 @@
 [Google DNS]:        <https://developers.google.com/speed/public-dns/>
 [OpenDNS]:           <https://www.opendns.com/>
 [Public DNS Server]: <https://www.publicdns.xyz/>
+
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

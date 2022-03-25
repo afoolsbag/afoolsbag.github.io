@@ -4,7 +4,7 @@
 
 ## 运行 VirtualBox
 
-### :material-microsoft-windows: Windows 10 和 Scoop
+### 在 :material-microsoft-windows: Windows 10 和 Scoop 环境
 
 ``` doscon
 %USERPROFILE%> scoop install portable-virtualbox
@@ -12,5 +12,5 @@
 
 <!----------------------------------------------------------------------------->
 
-[Oracle]:     https://www.oracle.com/
-[VirtualBox]: https://www.virtualbox.org/ "Oracle VM VirtualBox"
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

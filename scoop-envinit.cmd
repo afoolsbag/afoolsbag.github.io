@@ -17,8 +17,8 @@ IF %ERRORLEVEL% NEQ 0 (
                         || ECHO Scoop install pyenv failed. ^
                         && CALL :pause_if_double_click ^
                         && EXIT /B 2
-                
-                SETX PYTHON_BUILD_MIRROR_URL https://npm.taobao.org/mirrors/python/ ^
+
+                SETX PYTHON_BUILD_MIRROR_URL https://registry.npmmirror.com/binary.html?path=python/ ^
                         && ECHO Set PYTHON_BUILD_MIRROR_URL successful. ^
                         || ECHO Set PYTHON_BUILD_MIRROR_URL failed. ^
                         && CALL :pause_if_double_click ^
@@ -31,13 +31,13 @@ IF %ERRORLEVEL% NEQ 0 (
                         && EXIT /B 4
         )
 
-        START "" /B /WAIT CMD /C pyenv install 3.9.6 ^
+        START "" /B /WAIT CMD /C pyenv install 3.10.2 ^
                 && ECHO pyenv install successful. ^
                 || ECHO pyenv install failed. ^
                 && CALL :pause_if_double_click ^
                 && EXIT /B 5
 
-        START "" /B /WAIT CMD /C pyenv global 3.9.6 ^
+        START "" /B /WAIT CMD /C pyenv global 3.10.2 ^
                 && ECHO pyenv global successful. ^
                 || ECHO pyenv global failed. ^
                 && CALL :pause_if_double_click ^
@@ -48,6 +48,8 @@ IF %ERRORLEVEL% NEQ 0 (
                 || ECHO pyenv rehash failed. ^
                 && CALL :pause_if_double_click ^
                 && EXIT /B 7
+
+        :: pip config set global.index-url https://pypi.doubanio.com/simple
 )
 
 :: Node.js
@@ -61,13 +63,13 @@ IF %ERRORLEVEL% NEQ 0 (
                         && CALL :pause_if_double_click ^
                         && EXIT /B 8
                 
-                START "" /B /WAIT CMD /C nvm node_mirror https://npm.taobao.org/mirrors/node/ ^
+                START "" /B /WAIT CMD /C nvm node_mirror https://registry.npmmirror.com/binary.html?path=node/ ^
                         && ECHO Set node_mirror successful. ^
                         || ECHO Set node_mirror failed. ^
                         && CALL :pause_if_double_click ^
                         && EXIT /B 9
 
-                START "" /B /WAIT CMD /C nvm npm_mirror https://npm.taobao.org/mirrors/npm/ ^
+                START "" /B /WAIT CMD /C nvm npm_mirror https://registry.npmmirror.com/binary.html?path=npm/ ^
                         && ECHO Set npm_mirror successful. ^
                         || ECHO Set npm_mirror failed. ^
                         && CALL :pause_if_double_click ^
@@ -85,7 +87,11 @@ IF %ERRORLEVEL% NEQ 0 (
                 || ECHO nvm use failed. ^
                 && CALL :pause_if_double_click ^
                 && EXIT /B 12
+
+        :: npm config set registry https://registry.npmmirror.com/
 )
+
+:: npm
 
 ECHO Environment initialize successful.
 CALL :pause_if_double_click

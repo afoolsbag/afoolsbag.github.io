@@ -20,6 +20,5 @@
 [^Symmetric Cryptography on Wikipedia]: [Symmetric-key algorithm - Wikipedia](https://wikipedia.org/wiki/Symmetric-key_algorithm)
 [^Asymmetric Cryptography on Wikipedia]: [Public-key cryptography - Wikipedia](https://wikipedia.org/wiki/Public-key_cryptography)
 
-*[DSA]:   Digital Signature Algorithm
-*[ECDSA]: Elliptic Curve Digital Signature Algorithm
-*[RSA]:   Rivest–Shamir–Adleman
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

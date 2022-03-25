@@ -88,6 +88,7 @@ nav:
         - DevOps/Git.md
         - DevOps/GitFlow.md
         - DevOps/GitLab.md
+        - DevOps/Jenkins.md
         - DevOps/Docker.md
         - DevOps/Podman.md
         - DevOps/SQLPad.md
@@ -105,11 +106,15 @@ theme:
     palette:
         - media: "(prefers-color-scheme: light)"
           scheme: default
+          primary: indigo
+          accent: indigo
           toggle:
               icon: material/weather-sunny
               name: 切换到夜间模式
         - media: "(prefers-color-scheme: dark)"
           scheme: slate
+          primary: red
+          accent: red
           toggle:
               icon: material/weather-night
               name: 切换到日常模式
@@ -154,6 +159,8 @@ extra_css:
 
 extra_javascript:
 #   - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+    - assets/javascripts/tablesort.js
 
 extra:
     social:
@@ -168,68 +175,68 @@ extra:
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
 
 markdown_extensions:
-#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#   - markdown.extensions.extra
-#   ||
-    - markdown.extensions.abbr
-    - markdown.extensions.attr_list
-    - markdown.extensions.def_list
-#   - markdown.extensions.fenced_code  # DEFAULT
-    - markdown.extensions.footnotes
-    - markdown.extensions.md_in_html
-    - markdown.extensions.tables       # DEFAULT
-#```````````````````````````````````````````````
-    - markdown.extensions.admonition
-#   - markdown.extensions.codehilite
-#   - markdown.extensions.legacy_attrs
-#   - markdown.extensions.legacy_em
-#   - markdown.extensions.meta         # DEFAULT
-#   - markdown.extensions.nl2br
-    - markdown.extensions.sane_lists
-    - markdown.extensions.smarty
-    - markdown.extensions.toc:         # DEFAULT
-        permalink: true
-        slugify: !!python/name:pymdownx.slugs.uslugify
-#   - markdown.extensions.wikilinks
-#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#   - pymdownx.extra
-#   ||
-    - pymdownx.betterem
-#   - markdown.extensions.abbr
-#   - markdown.extensions.attr_list
-#   - markdown.extensions.def_list
-    - pymdownx.superfences
-#   - markdown.extensions.footnotes
-#   - markdown.extensions.md_in_html
-#   - markdown.extensions.tables       # DEFAULT
-#```````````````````````````````````````````````
-    - pymdownx.arithmatex
-#   - pymdownx.b64
-    - pymdownx.caret
-#   - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-#   - pymdownx.escapeall
-    - pymdownx.highlight
-#   - pymdownx.inlinehilite
-    - pymdownx.keys
-    - pymdownx.magiclink
-    - pymdownx.mark
-#   - pymdownx.pathconverter
-#   - pymdownx.progressbar
-    - pymdownx.saneheaders
-    - pymdownx.smartsymbols
-#   - pymdownx.snippets
-    - pymdownx.striphtml
-    - pymdownx.tabbed:
-        alternate_style: true
-    - pymdownx.tasklist
-    - pymdownx.tilde
+    # 官方扩展包
+    # https://python-markdown.github.io/extensions/
+#   - markdown.extensions.extra                         # Extra
+    - markdown.extensions.abbr                          #     Abbreviations       https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#abbreviations
+    - markdown.extensions.attr_list                     #     Attribute Lists     https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+    - markdown.extensions.def_list                      #     Definition Lists    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists
+#   - markdown.extensions.fenced_code                   #     Fenced Code Blocks  https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#fenced-code-blocks
+    - markdown.extensions.footnotes                     #     Footnotes           https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes
+    - markdown.extensions.md_in_html                    #     Markdown in HTML    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+    - markdown.extensions.tables                        #     Tables              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables
+    - markdown.extensions.admonition                    # Admonition              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition
+#   - markdown.extensions.codehilite                    # CodeHilite              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#codehilite
+#   - markdown.extensions.legacy_attrs                  # Legacy Attributes
+#   - markdown.extensions.legacy_em                     # Legacy Emphasis
+    - markdown.extensions.meta                          # Meta-Data               https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata
+#   - markdown.extensions.nl2br                         # New Line to Break
+    - markdown.extensions.sane_lists                    # Sane Lists
+    - markdown.extensions.smarty                        # SmartyPants
+    - markdown.extensions.toc:                          # Table of Contents       https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
+          permalink: true                                 #
+          slugify: !!python/name:pymdownx.slugs.uslugify  #
+#   - markdown.extensions.wikilinks                       # WikiLinks
+
+    # 第三方 PyMdown Extensions 扩展包
+    # https://facelessuser.github.io/pymdown-extensions/
+#   - pymdownx.extra                                             # Extra
+    - pymdownx.betterem                                          #     BetterEm
+#   - markdown.extensions.abbr                                   #     Abbreviations
+#   - markdown.extensions.attr_list                              #     Attribute Lists
+#   - markdown.extensions.def_list                               #     Definition Lists
+    - pymdownx.superfences                                       #     SuperFences
+#   - markdown.extensions.footnotes                              #     Footnotes
+#   - markdown.extensions.md_in_html                             #     Markdown in HTML
+#   - markdown.extensions.tables                                 #     Tables
+    - pymdownx.arithmatex                                        # Arithmatex
+#   - pymdownx.b64                                               # B64
+    - pymdownx.caret                                             # Caret
+    - pymdownx.critic                                            # Critic
+    - pymdownx.details                                           # Details
+    - pymdownx.emoji:                                            # Emoji
+          emoji_index: !!python/name:materialx.emoji.twemoji     #
+          emoji_generator: !!python/name:materialx.emoji.to_svg  #
+#   - pymdownx.escapeall                                         # EscapeAll
+    - pymdownx.highlight                                         # Highlight
+    - pymdownx.inlinehilite                                      # InlineHilite
+    - pymdownx.keys                                              # Keys
+    - pymdownx.magiclink                                         # MagicLink
+    - pymdownx.mark                                              # Mark
+#   - pymdownx.pathconverter                                     # PathConverter
+#   - pymdownx.progressbar                                       # ProgressBar
+    - pymdownx.saneheaders                                       # SaneHeaders
+    - pymdownx.smartsymbols                                      # SmartSymbols
+    - pymdownx.snippets                                          # Snippets
+    - pymdownx.striphtml                                         # StripHTML
+    - pymdownx.tabbed:                                           # Tabbed
+          alternate_style: true                                  #
+    - pymdownx.tasklist                                          # Tasklist
+#         custom_checkbox: true
+    - pymdownx.tilde                                             # Tilde
 
 plugins:
     - git-revision-date-localized
     - minify:
-        minify_html: true
+          minify_html: true
     - search

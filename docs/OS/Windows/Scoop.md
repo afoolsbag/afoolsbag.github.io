@@ -13,13 +13,13 @@
 
 1.  配置执行策略
 
-    ```ps1con
+    ``` ps1con title="PowerShell"
     PS $env:USERPROFILE> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
     ```
 
 0.  可选的，配置用户安装路径
 
-    ```ps1con
+    ``` ps1con
     PS $env:USERPROFILE> $env:SCOOP='%USERPROFILE%\scoop'
 
     PS $env:USERPROFILE> [System.Environment]::setEnvironmentVariable('SCOOP', $env:SCOOP, [System.EnvironmentVariableTarget]::User)

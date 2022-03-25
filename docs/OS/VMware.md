@@ -18,40 +18,40 @@
 
 0.  查找 CD/DVD 设备
 
-    ``` console
+    ``` console title="GNU/Linux Bash Session"
     [sudoer@host *]$ lsblk
     ```
 
 0.  创建目录并挂载设备
 
-    ``` console
+    ``` console title="GNU/Linux Bash Session"
     [sudoer@host *]$ sudo mkdir /mnt/cdrom
     [sudoer@host *]$ sudo mount /dev/<sr0> /mnt/cdrom
     ```
 
 0.  解压缩
 
-    ``` console
+    ``` console title="GNU/Linux Bash Session"
     [sudoer@host *]$ sudo tar -xavf /mnt/cdrom/VMwareTools-<*> -C /opt/
     ```
 
 0.  安装依赖
 
-    :material-arch: Arch:
+    === ":material-arch: Arch"
 
-    ``` console
-    [sudoer@host *]$ sudo pacman -S perl
-    ```
+        ``` console title="Arch Bash Session"
+        [sudoer@host *]$ sudo pacman -S perl
+        ```
 
-    :material-centos: CentOS：
+    === ":material-centos: CentOS"
 
-    ``` console
-    [sudoer@host *]$ sudo yum install perl
-    ```
+        ``` console  title="CentOS Bash Session"
+        [sudoer@host *]$ sudo yum install perl
+        ```
 
 0.  安装 VMware Tools
 
-    ``` console
+    ``` console title="GNU/Linux Bash Session"
     [sudoer@host *]$ sudo /opt/vmware-tools-distrib/vmware-install.pl --default
     ```
 
@@ -79,5 +79,5 @@
 
 <!----------------------------------------------------------------------------->
 
-[Dell]:   https://www.dell.com/
-[VMware]: https://www.vmware.com/
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

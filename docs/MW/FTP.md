@@ -35,9 +35,5 @@
 [^vsftdp on Wikipedia]: [vsftpd - Wikipedia](https://wikipedia.org/wiki/Vsftpd)
 [^lftp on Wikipedia]:   [lftp - Wikipedia](https://wikipedia.org/wiki/Lftp)
 
-[lftp]:   <https://lftp.tech/>
-[vsftpd]: <https://security.appspot.com/vsftpd.html>
-[Xlight]: <https://xlightftpd.com/>
-
-*[FTP]:    File Transfer Protocol
-*[vsftpd]: very secure FTP daemon
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

@@ -1,3 +1,4 @@
+<!-- Code & Coding -->
 # 码代码
 
 ## 常用参考
@@ -122,3 +123,6 @@
 [Unicode]:                      https://unicode.org/                                 "Unicode – The World Standard for Text and Emoji"
 [Unicode Character Table]:      https://unicode-table.com/
 [漢典]:                         https://zdic.net/
+
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"
