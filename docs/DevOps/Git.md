@@ -29,9 +29,30 @@
     %USERPROFILE%> scoop install git
     ```
 
-## 常用操作
+## 使用 :material-git: Git
 
-### 配置
+### 账户
+
+=== ":material-linux: Linux"
+
+    ``` shell
+    [user@host *]$ nano ~/.ssh/config
+    ```
+
+=== ":material-microsoft-windows: Windows"
+
+    ``` doscon
+    %USERPROFILE%> notepad %USERPROFILE%\.ssh\config
+    ```
+
+``` title=".ssh/config"
+Host github.com
+	Hostname github.com
+	IdentityFile ~/.ssh/github.ssh
+	IdentitiesOnly yes
+```
+
+### 代理
 
 ??? example "在用户级别配置代理"
 
@@ -617,6 +638,5 @@
 
 [^Git on Wikipedia]: [Git - Wikipedia](https://wikipedia.org/wiki/Git).
 
-[Git]:        <https://git-scm.com/>
-[GitFlow]:    <https://github.com/nvie/gitflow> 
-[Sourcetree]: <https://www.sourcetreeapp.com/>
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

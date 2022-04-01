@@ -16,74 +16,13 @@ copyright: CC0-1.0
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 
 nav:
-    - 码代码:
-        - CC/index.md
-        - CC/Crypt.md
-        - CC/IntCen.md
-        - CC/Emacs.md
-        - CC/Markdown.md
-        - CC/Vim.md
-        - CC/UML.md
-    - 多媒体:
-        - MM/index.md
-        - MM/Audacity.md
-        - MM/Blender.md
-        - MM/FFmpeg.md
-        - MM/GIMP.md
-        - MM/GPT-2.md
-        - MM/VLC.md
-        - MM/YOLO.md
-    - 中间件:
-        - MW/Ceph.md
-        - MW/FTP.md
-        - MW/Kafka.md
-        - MW/MySQL.md
-        - MW/NGINX.md
-        - MW/nginx-rtmp-module.md
-        - MW/PostgreSQL.md
-        - MW/ZooKeeper.md
-    - 操作系统:
-        - OS/index.md
-        - Windows:
-            - OS/Windows/index.md
-            - OS/Windows/Chocolatey.md
-            - OS/Windows/Scoop.md
-            - OS/Windows/Cheat Engine.md
-            - OS/Windows/Cmder.md
-            - OS/Windows/Cygwin.md
-            - OS/Windows/Terminal.md
-            - OS/Windows/WSL.md
-        - GNU/Linux:
-            - OS/Linux/index.md
-            - OS/Linux/Coreutils.md
-            - OS/Linux/Cockpit.md
-            - OS/Linux/fish.md
-            - OS/Linux/netfilter.md
-            - OS/Linux/networking.md
-            - OS/Linux/tar.md
-            - OS/Linux/tldr.md
-            - OS/Linux/top.md
-            - OS/Linux/users.md
-        - Arch:
-            - OS/Arch/index.md
-            - OS/Arch/Pacman.md
-        - CentOS:
-            - OS/CentOS/index.md
-            - OS/CentOS/DNF.md
-        - Ubuntu:
-            - OS/Ubuntu/index.md
-            - OS/Ubuntu/APT.md
-        - Tails:
-            - OS/Tails/index.md
-        - Kali:
-            - OS/Kali/index.md
-            - OS/Kali/DirBuster.md
-            - OS/Kali/Nmap.md
-            - OS/Kali/skipfish.md
-        - OS/VMware.md
-        - OS/VirtualBox.md
-        - OS/Xshell.md
+    - index.md
     - 开发运维:
+        - DevOps/index.md
+        - DevOps/Crypt.md
+        - DevOps/IntCen.md
+        - DevOps/Markdown.md
+        - DevOps/UML.md
         - DevOps/index.md
         - DevOps/Git.md
         - DevOps/GitFlow.md
@@ -92,6 +31,80 @@ nav:
         - DevOps/Docker.md
         - DevOps/Podman.md
         - DevOps/SQLPad.md
+    - 应用:
+        - App/index.md
+        - 文本:
+            - App/Text/index.md
+            - App/Text/Emacs.md
+            - App/Text/Vim.md
+        - 文档:
+            - App/Document/index.md
+        - 音频:
+            - App/Audio/index.md
+            - App/Audio/Audacity.md
+        - 图像:
+            - App/Image/index.md
+            - App/Image/GIMP.md
+        - 视频:
+            - App/Video/index.md
+            - App/Video/FFmpeg.md
+            - App/Video/VLC.md
+        - 三维计算机图形:
+            - App/3DCG/index.md
+            - App/3DCG/Blender.md
+        - App/GPT-2.md
+        - App/YOLO.md
+    - 中间件:
+        - Mid/index.md
+        - Mid/Ceph.md
+        - Mid/FTP.md
+        - Mid/Kafka.md
+        - Mid/MySQL.md
+        - Mid/NGINX.md
+        - Mid/nginx-rtmp-module.md
+        - Mid/PostgreSQL.md
+        - Mid/ZooKeeper.md
+    - 操作系统:
+        - OpSys/index.md
+        - Windows:
+            - OpSys/Windows/index.md
+            - OpSys/Windows/Chocolatey.md
+            - OpSys/Windows/Scoop.md
+            - OpSys/Windows/Cheat Engine.md
+            - OpSys/Windows/Cmder.md
+            - OpSys/Windows/Cygwin.md
+            - OpSys/Windows/Terminal.md
+            - OpSys/Windows/WSL.md
+        - GNU/Linux:
+            - OpSys/Linux/index.md
+            - OpSys/Linux/Coreutils.md
+            - OpSys/Linux/Cockpit.md
+            - OpSys/Linux/fish.md
+            - OpSys/Linux/netfilter.md
+            - OpSys/Linux/networking.md
+            - OpSys/Linux/tar.md
+            - OpSys/Linux/tldr.md
+            - OpSys/Linux/top.md
+            - OpSys/Linux/users.md
+        - Arch:
+            - OpSys/Arch/index.md
+            - OpSys/Arch/Pacman.md
+        - CentOS:
+            - OpSys/CentOS/index.md
+            - OpSys/CentOS/DNF.md
+        - Ubuntu:
+            - OpSys/Ubuntu/index.md
+            - OpSys/Ubuntu/APT.md
+        - Tails:
+            - OpSys/Tails/index.md
+        - Kali:
+            - OpSys/Kali/index.md
+            - OpSys/Kali/DirBuster.md
+            - OpSys/Kali/Nmap.md
+            - OpSys/Kali/skipfish.md
+        - OpSys/VMware.md
+        - OpSys/VirtualBox.md
+        - OpSys/Xshell.md
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
@@ -137,7 +150,7 @@ theme:
 #       - navigation.expand
         - navigation.indexes
         - navigation.instant
-#       - navigation.sections
+        - navigation.sections
         - navigation.tabs
 #       - navigation.tabs.sticky
         - navigation.top
