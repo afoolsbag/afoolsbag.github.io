@@ -37,10 +37,14 @@ START "" /B /WAIT CMD /C pip install --upgrade mkdocs-minify-plugin ^
 WHERE /Q pyenv ^
         && START "" /B /WAIT CMD /C pyenv rehash
 
-CALL :pause_if_double_click
+CALL :timeout10_if_double_click
 EXIT /B 0
 
 :pause_if_double_click
         ECHO %CMDCMDLINE% | FINDSTR /I /C:" /C " > NUL ^
                 && PAUSE
+        EXIT /B 0
+:timeout10_if_double_click
+        ECHO %CMDCMDLINE% | FINDSTR /I /C:" /C " > NUL ^
+                && TIMEOUT 10
         EXIT /B 0
