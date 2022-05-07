@@ -1,6 +1,6 @@
-# GNU/Linux 发行版 Ubuntu 操作系统
+# netfilter 数据包过滤框架
 
-[:fontawesome-brands-ubuntu: Ubuntu][Ubuntu] 是一款 GNU/Linux 发行版操作系统。
+[netfilter]
 
 <!----------------------------------------------------------------------------->
 

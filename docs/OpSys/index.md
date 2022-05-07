@@ -157,25 +157,26 @@ ISO 3166-1:2013 标准中的“中国”代码
 
 ### 操作系统
 
-| 发行日     | 操作系统                                             | 备注                                   |
-|:---------- |:---------------------------------------------------- |:-------------------------------------- |
-| 2021-06-21 | [Rocky Linux][Rocky Linux]                           | Red Hat 社区版                          |
-| 2021-03-30 | [AlmaLinux][AlmaLinux]                               | Red Hat 社区版                          |
-| 2015-07-15 | [:material-microsoft-windows:Windows 10][Windows 10] | <https://msdn.itellyou.cn/>            |
-| 2013-03-13 | [Kali]                                               |
-| 2011-07-10 | [Manjaro]                                            |
+| 发行日     | 操作系统                                             | 备注 |
+|:---------- |:---------------------------------------------------- |:---- |
+| 2021-06-21 | [Rocky Linux][Rocky Linux]                           | Red Hat 社区版
+| 2021-03-30 | [AlmaLinux][AlmaLinux]                               | Red Hat 社区版
+| 2015-07-15 | [:material-microsoft-windows:Windows 10][Windows 10] | <https://msdn.itellyou.cn/>
+| 2013-03-13 | [Kali]                                               | 专注渗透，基于 Debian
+| 2011-07-10 | [Manjaro]                                            | 基于 Arch，更加友好
 | 2009-07-22 | :material-microsoft-windows: Windows 7               |
-| 2009-06-23 | [Tails]                                              |
-| 2004-10-20 | [:material-ubuntu: Ubuntu][Ubuntu]                   |
-| 2004-05-14 | [:material-centos: CentOS][CentOS]                   | Red Hat 滚动版                         |
-| 2003-11-06 | [:material-fedora: Fedora][Fedora]                   | Red Hat 试验版，Linus 使用此 GNU/Linux |
-| 2002-03-11 | [:material-arch: Arch][Arch]                         |
+| 2009-06-23 | [Tails]                                              | 专注隐私，基于 Debian；Snowden 使用此 Linux
+| 2005-08    | [Apline]                                             | 专注极简
+| 2004-10-20 | [:material-ubuntu: Ubuntu][Ubuntu]                   | 基于 Debian
+| 2004-05-14 | [:material-centos: CentOS][CentOS]                   | Red Hat 滚动版
+| 2003-11-06 | [:material-fedora: Fedora][Fedora]                   | Red Hat 试验版；Linus 使用此 GNU/Linux
+| 2002-03-11 | [:material-arch: Arch][Arch]                         | 前沿
 | 2001-08-24 | :material-microsoft-windows: Windows XP              |
 | 2000-07-26 | [:material-gentoo: Gentoo][Gentoo]                   |
 | 1998-05-15 | :material-microsoft-windows-classic: Windows 98      |
 | 1996-10-01 | [OpenBSD]                                            |
 | 1995-08-15 | :material-microsoft-windows-classic: Windows 95      |
-| 1995-05-13 | [:material-redhat: RHEL][RHEL]                       | Red Hat 企业版                         |
+| 1995-05-13 | [:material-redhat: RHEL][RHEL]                       | Red Hat 企业版
 | 1994-03-07 | [:fontawesome-brands-suse: SUSE][SUSE]               |
 | 1993-11-01 | [:material-freebsd: FreeBSD][FreeBSD]                |
 | 1993-08-16 | [:material-debian: Debian][Debian]                   |

@@ -47,7 +47,6 @@
 
 ``` title=".ssh/config"
 Host github.com
-	Hostname github.com
 	IdentityFile ~/.ssh/github.ssh
 	IdentitiesOnly yes
 ```
@@ -63,6 +62,7 @@ Host github.com
     ``` ini
     [http "https://github.com"]
     	proxy = http://127.0.0.1:41091
+    	sslVerify = false
     ```
 
 ### 创建版本仓库
@@ -376,6 +376,12 @@ Host github.com
             ```
 
 ## `git` 命令
+
+本地忽略文件：
+
+加入 git update-index --assume-unchanged <file>
+取消 git update-index --no-assume-unchanged <file>
+列出 git ls-files -v | grep -e "^[hsmrck]"
 
 ??? example "列出所有配置"
 

@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+
+  <service-name>:
+    image: <image-name>
+    ports:
+      - "<host>:<container>[/{tcp|udp}]"
+    volumes:
+      - "<host>:<container>[:{rw|ro}]"

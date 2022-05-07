@@ -23,13 +23,11 @@ nav:
         - DevOps/IntCen.md
         - DevOps/Markdown.md
         - DevOps/UML.md
-        - DevOps/index.md
         - DevOps/Git.md
         - DevOps/GitFlow.md
         - DevOps/GitLab.md
         - DevOps/Jenkins.md
-        - DevOps/Docker.md
-        - DevOps/Podman.md
+        - Docker: DevOps/Docker.md
         - DevOps/SQLPad.md
     - 应用:
         - App/index.md
@@ -56,6 +54,7 @@ nav:
         - App/YOLO.md
     - 中间件:
         - Mid/index.md
+        - SSH: Mid/SSH.md
         - Mid/Ceph.md
         - Mid/FTP.md
         - Mid/Kafka.md
@@ -66,6 +65,9 @@ nav:
         - Mid/ZooKeeper.md
     - 操作系统:
         - OpSys/index.md
+        - 引导:
+            - OpSys/Booting/index.md
+            - GRUB: OpSys/Booting/GRUB.md
         - Windows:
             - OpSys/Windows/index.md
             - OpSys/Windows/Chocolatey.md
@@ -77,7 +79,18 @@ nav:
             - OpSys/Windows/WSL.md
         - GNU/Linux:
             - OpSys/Linux/index.md
-            - OpSys/Linux/Coreutils.md
+            - Coreutils:
+                - OpSys/Linux/Coreutils/index.md
+            - iproute2:
+                - OpSys/Linux/iproute2/index.md
+            - net-tools:
+                - OpSys/Linux/net-tools/index.md
+            - procps:
+                - OpSys/Linux/procps/index.md
+            - systemd:
+                - OpSys/Linux/systemd/index.md
+            - util-linux:
+                - OpSys/Linux/util-linux/index.md
             - OpSys/Linux/Cockpit.md
             - OpSys/Linux/fish.md
             - OpSys/Linux/netfilter.md
@@ -94,11 +107,15 @@ nav:
             - OpSys/CentOS/DNF.md
         - Ubuntu:
             - OpSys/Ubuntu/index.md
-            - OpSys/Ubuntu/APT.md
+            - APT: OpSys/Ubuntu/APT.md
+            - deb: OpSys/Ubuntu/deb.md
+        - Alpine:
+            - OpSys/Alpine/index.md
         - Tails:
             - OpSys/Tails/index.md
         - Kali:
             - OpSys/Kali/index.md
+            - APT: OpSys/Ubuntu/APT.md
             - OpSys/Kali/DirBuster.md
             - OpSys/Kali/Nmap.md
             - OpSys/Kali/skipfish.md
@@ -150,12 +167,13 @@ theme:
 #       - navigation.expand
         - navigation.indexes
         - navigation.instant
-        - navigation.sections
+#       - navigation.sections
         - navigation.tabs
 #       - navigation.tabs.sticky
         - navigation.top
         - navigation.tracking
-#       - toc.integrate
+        - toc.follow
+        - toc.integrate
 
         # 搜索
         # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/

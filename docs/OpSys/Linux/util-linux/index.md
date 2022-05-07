@@ -1,6 +1,6 @@
-# GNU/Linux 发行版 Ubuntu 操作系统
+# util-linux 实用工具集
 
-[:fontawesome-brands-ubuntu: Ubuntu][Ubuntu] 是一款 GNU/Linux 发行版操作系统。
+[util-linux]
 
 <!----------------------------------------------------------------------------->
 

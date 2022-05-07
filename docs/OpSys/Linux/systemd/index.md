@@ -1,6 +1,6 @@
-# GNU/Linux 发行版 Ubuntu 操作系统
+# systemd 系统和服务管理器
 
-[:fontawesome-brands-ubuntu: Ubuntu][Ubuntu] 是一款 GNU/Linux 发行版操作系统。
+[systemd]
 
 <!----------------------------------------------------------------------------->
 

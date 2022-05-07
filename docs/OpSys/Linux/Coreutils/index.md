@@ -1,4 +1,4 @@
-# GNU Core Utilities
+# GNU Core Utilities 实用工具集
 
 [GNU Core Utilities][Coreutils] 是 [GNU 操作系统][GNU] 基础的文件、壳层和文本操作实用工具集。[^Coreutils on Wikipedia]
 

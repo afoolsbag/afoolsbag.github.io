@@ -1,107 +1,103 @@
-# APT
+# 高级软件包工具（Advanced Package Tool）
 
-[APT] 是适用于 :material-debian: Debian、:material-linux: Kali 和 :material-ubuntu: Ubuntu 操作系统的包管理工具。
+[APT] 是适用于 :material-debian: Debian、:fontawesome-brands-linux: Kali 和 :fontawesome-brands-ubuntu: Ubuntu 操作系统的软件包管理工具。
 
-APT 使用 dpkg 格式安装包，可以通过 [Keryx] 进行离线安装、升级。
+*   APT 使用 [dpkg] 格式安装包；
+*   APT 可以通过 [Synaptic] GUI 进行管理；
+*   APT 可以通过 [Aptitude] CLI 进行管理；
+*   APT 可以通过 [Keryx] 进行离线安装、升级。
 
 ## 运行 APT
 
-### :material-linux: Kali
-
-1.  备份原始源
+=== ":fontawesome-brands-linux: Kali"
 
     ``` console
+    # 备份原始源
     [sudoer@host ~]$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-    ```
 
-0.   配置中科大镜像源
-
-    ``` console
+    # 配置中科大镜像源
     [sudoer@host ~]$ sudo vim /etc/apt/sources.list
     ```
 
-    ``` text
+    ``` text title="/etc/apt/sources.list"
     deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
     deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
     ```
 
-    参见 <https://mirrors.ustc.edu.cn/kali/>。
-
-0.  更新索引
-
     ``` console
+    # 更新索引
     [sudoer@host ~]$ sudo apt update
     ```
 
-### :material-ubuntu: Ubuntu
+    参见 <https://mirrors.ustc.edu.cn/help/kali.html>。
 
-1.  备份原始源
-
-    ``` console
-    [sudoer@host ~]$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-    ```
-
-0.  配置阿里云镜像源
+=== ":fontawesome-brands-ubuntu: Ubuntu"
 
     ``` console
-    [sudoer@host ~]$ sudo vim /etc/apt/sources.list
-    ```
+    # 使用阿里云镜像源
+    sudoer@host:*$ sudo sed --in-place=.bak \
+                            's/archive\.ubuntu\.com/mirrors.aliyun.com/g' \
+                            /etc/apt/sources.list
 
-    ``` vim
-    :%s/archive\.ubuntu\.com/mirrors.aliyun.com/g
+    # 更新索引
+    sudoer@host:*$ sudo apt update
     ```
 
     参见 <https://developer.aliyun.com/mirror/ubuntu>。
 
-0.  更新索引
+## 使用 APT
+
+### 源管理
+
+=== ":material-refresh: `update`"
 
     ``` console
-    [sudoer@host ~]$ sudo apt update
+    # 更新索引
+    [sudoer@host *]$ sudo apt update
     ```
 
-## `apt` 命令
+### 软件包管理
 
-### 更新索引
+=== ":material-magnify: `search`"
 
-``` console
-[sudoer@host ~]$ sudo apt update
-```
+    ``` console
+    # 搜索软件包
+    [sudoer@host *]$ apt search <name>
+    ```
 
-### 更新包
+=== ":material-plus: `install`"
 
-``` console
-[sudoer@host ~]$ sudo apt upgrade
-```
+    ``` console
+    # 安装软件包
+    [sudoer@host *]$ sudo apt install <package>
+    ```
 
-### 搜索包
+=== ":material-information-variant: `show`"
 
-``` console
-[sudoer@host ~]$ apt search <name>
-```
+    ``` console
+    # 列出已安装的软件包
+    [sudoer@host *]$ apt list --installed
 
-### 展示包
+    # 展示软件包
+    [sudoer@host *]$ apt show <package>
+    ```
 
-``` console
-[sudoer@host ~]$ apt show <package>
-```
+=== ":material-refresh: `upgrade`"
 
-### 安装包
+    ``` console
+    # 更新软件包
+    [sudoer@host *]$ sudo apt upgrade <package>
+    ```
 
-``` console
-[sudoer@host ~]$ sudo apt install <package>
-```
+=== ":material-minus: `remove`"
 
-### 卸载包
+    ``` console
+    # 卸载软件包
+    [sudoer@host *]$ sudo apt remove <package>
 
-``` console
-[sudoer@host ~]$ sudo apt remove <package>
-```
-
-### 卸载残留依赖
-
-``` console
-[sudoer@host ~]$ sudo apt autoremove
-```
+    # 卸载残留依赖
+    [sudoer@host *]$ sudo apt autoremove
+    ```
 
 ## `apt` 示例
 
@@ -183,8 +179,8 @@ APT 使用 dpkg 格式安装包，可以通过 [Keryx] 进行离线安装、升�
 
 <!----------------------------------------------------------------------------->
 
-[APT]:   https://wiki.debian.org/Apt
-[Keryx]: https://launchpad.net/keryx
+[^Apt on Debian Wiki]:      [Apt - Debian Wiki](https://wiki.debian.org/Apt)
+[^Aptitude on Debian Wiki]: [Aptitude - Debian Wiki](https://wiki.debian.org/Aptitude)
 
-*[APT]:  Advanced Package Tool
-*[dpkg]: Debian Package
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

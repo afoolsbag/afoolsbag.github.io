@@ -1,5 +1,7 @@
 # GNU/Linux 操作系统
 
+[Modern Unix](https://github.com/ibraheemdev/modern-unix)
+
 ```{.sh}
 # 安全地重启系统
 user@host ~> sudo shutdown --reboot now
