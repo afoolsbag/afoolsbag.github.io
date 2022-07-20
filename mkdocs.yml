@@ -27,14 +27,19 @@ nav:
         - DevOps/GitFlow.md
         - DevOps/GitLab.md
         - DevOps/Jenkins.md
-        - Docker: DevOps/Docker.md
         - DevOps/SQLPad.md
+        - 壳层:
+            - Xshell:     DevOps/Shell/Xshell.md
+        - 虚拟化:
+            - Docker:     DevOps/Virt/Docker.md
+            - VMware:     DevOps/Virt/VMware.md
+            - VirtualBox: DevOps/Virt/VirtualBox.md
     - 应用:
         - App/index.md
         - 文本:
             - App/Text/index.md
             - App/Text/Emacs.md
-            - App/Text/Vim.md
+            - Vim: App/Text/Vim.md
         - 文档:
             - App/Document/index.md
         - 音频:
@@ -93,6 +98,7 @@ nav:
                 - OpSys/Linux/util-linux/index.md
             - OpSys/Linux/Cockpit.md
             - OpSys/Linux/fish.md
+            - OpSys/Linux/man-db.md
             - OpSys/Linux/netfilter.md
             - OpSys/Linux/networking.md
             - OpSys/Linux/tar.md
@@ -119,9 +125,6 @@ nav:
             - OpSys/Kali/DirBuster.md
             - OpSys/Kali/Nmap.md
             - OpSys/Kali/skipfish.md
-        - OpSys/VMware.md
-        - OpSys/VirtualBox.md
-        - OpSys/Xshell.md
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
