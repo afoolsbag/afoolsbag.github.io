@@ -1,4 +1,4 @@
-# Vim
+# Vim 文本编辑器
 
 [Vim] 是一款高度可配置的文本编辑器，它的建立使创建和更改任何类型的文本变得非常有效。[^Vim Awesome][^Vim Cheat Sheet][^Vim Chinese Documentation][^The Traditional Vi][^ed.1]
 
@@ -74,7 +74,7 @@
 ## `vimrc`
 
 ``` vim title=":edit $MYVIMRC"
---8<-- "includes/.vimrc"
+--8<-- "includes/App/Text/Vim/.vimrc"
 ```
 
 ## 小抄
@@ -224,13 +224,13 @@
     14| cc ·                         █                                       at it    |
     15|                                                                      a' i'    |
     16|                                                                      a" i"    |
-    17|                                                                      a` i`    |
-    18|                                                                               |
-    19|                                                                               |
-    20|                                                                               |
-    21|                                                                               |
+    17|   range: {number}[,{number}]             flags: c   (comfirm)        a` i`    |
+    18|   1    : first line                             e   (error)                   |
+    19|   .    : current line                           g                             |
+    20|   $    : last line                              i/I (ignore case)             |
+    21|   %    : whole file (1,$)                       n   (number)                  |
     22|                                                                               |
-    23|                                                                               |
+    23| :[range]s[ubstitute]/{pattern}/{string}/[flags] [count]                       |
     24|_______________________________________________________________________________|
     ```
 

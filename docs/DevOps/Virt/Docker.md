@@ -467,7 +467,7 @@
 ```
 
 ``` dockerfile title="Dockerfile"
---8<-- "includes/Dockerfile"
+--8<-- "includes/DevOps/Docker/Dockerfile"
 ```
 
 ## docker-compose.yml
@@ -498,7 +498,7 @@
     [Compose specification | Docker Documentation](https://docs.docker.com/compose/compose-file/)
 
 ``` yaml title="docker-compose.yml"
---8<-- "includes/docker-compose.yml"
+--8<-- "includes/DevOps/Docker/docker-compose.yml"
 ```
 
 <!----------------------------------------------------------------------------->

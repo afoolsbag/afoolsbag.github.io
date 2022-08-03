@@ -15,41 +15,67 @@
 
 ## 运行 :material-git: Git
 
-??? example "在 :material-microsoft-windows: Windows 10 中安装 :material-git: Git"
+=== ":material-microsoft-windows: Windows 10"
 
-    官方网站 [:material-git: Git][Git]。
+    === ":material-git: Git"
 
-??? example "在 :material-microsoft-windows: Windows 10 中通过 :fontawesome-brands-sourcetree: Sourcetree 安装 :material-git: Git"
+        官方网站 [:material-git: Git][Git]。
 
-    [:fontawesome-brands-sourcetree: Sourcetree][Sourcetree] 中内置 :material-git: Git 支持。
+    === ":fontawesome-brands-sourcetree: Sourcetree"
 
-??? example "在 :material-microsoft-windows: Windows 10 中通过 Scoop 安装 :material-git: Git"
+        [:fontawesome-brands-sourcetree: Sourcetree][Sourcetree] 中内置 :material-git: Git 支持。
 
-    ``` doscon
-    %USERPROFILE%> scoop install git
-    ```
+    === "Scoop"
+
+        ``` doscon
+        %USERPROFILE%> scoop install git
+        ```
 
 ## 使用 :material-git: Git
 
-### 账户
+### 凭证
 
-=== ":material-linux: Linux"
+=== ":material-ssh: SSH"
 
-    ``` shell
-    [user@host *]$ nano ~/.ssh/config
+    === ":material-linux: Linux"
+
+        ``` shell
+        [user@host *]$ nano ~/.ssh/config
+        ```
+
+    === ":material-microsoft-windows: Windows"
+
+        ``` doscon
+        %USERPROFILE%> notepad %USERPROFILE%\.ssh\config
+        ```
+
+    ``` title=".ssh/config"
+    Host github.com
+    	IdentityFile ~/.ssh/github.ssh
+    	IdentitiesOnly yes
     ```
 
-=== ":material-microsoft-windows: Windows"
+=== ":material-git: `git credential`"
 
-    ``` doscon
-    %USERPROFILE%> notepad %USERPROFILE%\.ssh\config
-    ```
+    === ":material-linux: Linux"
 
-``` title=".ssh/config"
-Host github.com
-	IdentityFile ~/.ssh/github.ssh
-	IdentitiesOnly yes
-```
+        !!! cite inline end
+
+            *   [gitcredentials](https://git-scm.com/docs/gitcredentials)
+            *   [git-credential-cache](https://git-scm.com/docs/git-credential-cache)
+            *   [git-credential-store](https://git-scm.com/docs/git-credential-store)
+            *   [How do I change the password or token I’ve saved in my credential manager?](https://git-scm.com/docs/gitfaq#Documentation/gitfaq.txt-HowdoIchangethepasswordortokenI8217vesavedinmycredentialmanager)
+
+        ``` shell
+        # 查看配置
+        [user@host ws]$ git config [--local|--global|--system] --list
+
+        # 设定密码管理器
+        [user@host ws]$ git config credential.helper store
+
+        # 更新密码
+        [user@host ws]$ echo url=https://[author@]<git.example.org> | git credential reject
+        ```
 
 ### 代理
 
@@ -609,6 +635,8 @@ Host github.com
     常用于将主分支的漏洞修复，应用到开发分支。
 
 ## :material-git: Git 服务
+
+[Gitblit](http://gitblit.github.io/gitblit/)
 
 1.  安装 :material-git: Git：
 
