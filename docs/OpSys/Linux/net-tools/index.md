@@ -35,7 +35,7 @@
 === "查询到主机的路由"
 
     ``` console
-    [user@host *]$ route -R <ipv4-address>
+    [user@host *]$ ping -R <ipv4-address>
     ```
 
 === "列出路由表"
