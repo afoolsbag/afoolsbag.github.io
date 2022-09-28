@@ -57,25 +57,69 @@
 
 === ":material-git: `git credential`"
 
+    !!! cite inline end
+
+        *   [gitcredentials](https://git-scm.com/docs/gitcredentials)
+        *   [How do I change the password or token I’ve saved in my credential manager?](https://git-scm.com/docs/gitfaq#Documentation/gitfaq.txt-HowdoIchangethepasswordortokenI8217vesavedinmycredentialmanager)
+
     === ":material-linux: Linux"
 
-        !!! cite inline end
+        ``` console
+        # 查看当前配置
+        [user@host ws]$ git config --list | grep credential
+        [abbr.     ws]$ git config  -l    | grep credential
 
-            *   [gitcredentials](https://git-scm.com/docs/gitcredentials)
-            *   [git-credential-cache](https://git-scm.com/docs/git-credential-cache)
-            *   [git-credential-store](https://git-scm.com/docs/git-credential-store)
-            *   [How do I change the password or token I’ve saved in my credential manager?](https://git-scm.com/docs/gitfaq#Documentation/gitfaq.txt-HowdoIchangethepasswordortokenI8217vesavedinmycredentialmanager)
+        # 查询可用的密码管理器
+        [user@host ws]$ git help --all | grep credential-
 
-        ``` shell
-        # 查看配置
-        [user@host ws]$ git config [--local|--global|--system] --list
+        # 查看密码管理器的文档
+        [user@host ws]$ git help credential-<foobar>
 
-        # 设定密码管理器
-        [user@host ws]$ git config credential.helper store
+        # 使用密码管理器
+        [user@host ws]$ git config credential.helper <foobar>
+        ```
 
-        # 更新密码
+    === ":material-microsoft-windows: Windows"
+
+        ``` ps1con
+        # 查看当前配置
+        PS       ws> git config --list | Select-String credential
+        PS abbr. ws> git config  -l    | Select-String credential
+
+        # 查询可用的密码管理器
+        PS       ws> git help --all | Select-String credential-
+
+        # 查看密码管理器的文档
+        PS       ws> git help credential-<foobar>
+
+        # 使用密码管理器
+        PS       ws> git config credential.helper <foobar>
+        ```
+
+=== ":material-git: git-credential-cache"
+
+    !!! cite inline end
+
+        *   [git-credential-cache](https://git-scm.com/docs/git-credential-cache)
+
+=== ":material-git: git-credential-store"
+
+    !!! cite inline end
+
+        *   [git-credential-store](https://git-scm.com/docs/git-credential-store)
+
+    === ":material-linux: Linux"
+
+        ``` console
+        # 移除密码
         [user@host ws]$ echo url=https://[author@]<git.example.org> | git credential reject
         ```
+
+=== "git-credential-manager"
+
+    !!! cite inline end
+
+        *   [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)
 
 ### 代理
 
@@ -87,8 +131,11 @@
 
     ``` ini
     [http "https://github.com"]
-    	proxy = http://127.0.0.1:41091
-    	sslVerify = false
+    	proxy = http://127.0.0.1:41091/
+    	sslVerify = true
+    [https "https://github.com"]
+    	proxy = http://127.0.0.1:41091/
+    	sslVerify = true
     ```
 
 ### 创建版本仓库
