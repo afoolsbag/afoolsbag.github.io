@@ -1,40 +1,40 @@
-# fish
+# 友好交互壳层（Friendly Interactive Shell）
 
 [fish] 是一款跨平台的命令行壳层。
 
 ## 运行 fish
 
-### :material-arch: Arch
-
-``` console
-[sudoer@host *]$ sudo pacman --sync fish
-```
-
-### :material-centos: CentOS
-
-1.  启用 [EPEL] 仓库：
+=== ":material-arch: Arch"
 
     ``` console
-    [sudoer@host *]$ sudo dnf install epel-release
+    [sudoer@host *]$ sudo pacman --sync fish
     ```
 
-0.  安装 fish：
+=== ":material-centos: CentOS"
+
+    1.  启用 [EPEL] 仓库：
+
+        ``` console
+        [sudoer@host *]$ sudo dnf install epel-release
+        ```
+
+    0.  安装 fish：
+
+        ``` console
+        [sudoer@host *]$ sudo yum install fish
+        ```
+
+=== "Kali"
 
     ``` console
-    [sudoer@host *]$ sudo yum install fish
+    sudoer@host:*$ sudo apt install fish
     ```
 
-### Kali
+=== ":material-ubuntu: Ubuntu"
 
-``` console
-sudoer@host:*$ sudo apt install fish
-```
-
-### :material-ubuntu: Ubuntu
-
-``` console
-sudoer@host:*$ sudo apt install fish
-```
+    ``` console
+    sudoer@host:*$ sudo apt install fish
+    ```
 
 ## 常用命令
 
@@ -116,8 +116,5 @@ set --export PATH {$PATH} /path/to/directory
 
 <!----------------------------------------------------------------------------->
 
-[EPEL]: <https://fedoraproject.org/wiki/EPEL> "EPEL - Fedora Project Wiki"
-[fish]: <https://fishshell.com/>              "fish shell"
-
-*[EPEL]: Extra Packages for Enterprise Linux
-*[fish]: friendly interactive shell
+--8<-- "includes/abbreviations.md"
+--8<-- "includes/links.md"

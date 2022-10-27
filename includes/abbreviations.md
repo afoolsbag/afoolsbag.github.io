@@ -7,6 +7,8 @@
 *[dpkg]:    Debian PacKaGe
 *[DSA]:     Digital Signature Algorithm
 *[ECDSA]:   Elliptic Curve Digital Signature Algorithm
+*[EPEL]:    Extra Packages for Enterprise Linux
+*[fish]:    friendly interactive shell
 *[FTP]:     File Transfer Protocol
 *[GRUB]:    GRand Unified Bootloader
 *[OCI]:     Open Containers Initiative
