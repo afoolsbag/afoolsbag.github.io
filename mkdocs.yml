@@ -1,3 +1,6 @@
+%YAML 1.2
+---
+
 # MkDocs 配置文件
 # https://www.mkdocs.org/user-guide/configuration/
 
@@ -7,7 +10,7 @@
 site_name: zhengrr's docs
 site_url: https://afoolsbag.github.io/
 repo_url: https://github.com/afoolsbag/afoolsbag.github.io/
-edit_uri: 'tree/master/docs'
+edit_uri: "tree/master/docs"
 site_description: 一份为 zhengrr 定制化的技术备忘。
 site_author: zhengrr
 copyright: CC0-1.0
@@ -16,191 +19,195 @@ copyright: CC0-1.0
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 
 nav:
-    - index.md
-    - 开发运维:
-        - DevOps/index.md
-        - DevOps/Crypt.md
-        - DevOps/IntCen.md
-        - DevOps/Markdown.md
-        - DevOps/UML.md
-        - DevOps/Git.md
-        - DevOps/GitFlow.md
-        - DevOps/GitLab.md
-        - DevOps/Jenkins.md
-        - DevOps/SQLPad.md
-        - 壳层:
-            - Xshell:     DevOps/Shell/Xshell.md
-        - 虚拟化:
-            - Docker:     DevOps/Virt/Docker.md
-            - VMware:     DevOps/Virt/VMware.md
-            - VirtualBox: DevOps/Virt/VirtualBox.md
-    - 应用:
-        - App/index.md
-        - 文本:
-            - App/Text/index.md
-            - App/Text/Emacs.md
-            - Vim: App/Text/Vim.md
-        - 文档:
-            - App/Document/index.md
-        - 音频:
-            - App/Audio/index.md
-            - App/Audio/Audacity.md
-        - 图像:
-            - App/Image/index.md
-            - App/Image/GIMP.md
-        - 视频:
-            - App/Video/index.md
-            - App/Video/FFmpeg.md
-            - App/Video/VLC.md
-        - 三维计算机图形:
-            - App/3DCG/index.md
-            - App/3DCG/Blender.md
-        - App/GPT-2.md
-        - App/YOLO.md
-    - 中间件:
-        - Mid/index.md
-        - SSH: Mid/SSH.md
-        - Mid/Ceph.md
-        - Mid/FTP.md
-        - Mid/Kafka.md
-        - Mid/MySQL.md
-        - Mid/NGINX.md
-        - Mid/nginx-rtmp-module.md
-        - Mid/PostgreSQL.md
-        - Mid/ZooKeeper.md
-    - 操作系统:
-        - OpSys/index.md
-        - 引导:
-            - OpSys/Booting/index.md
-            - GRUB: OpSys/Booting/GRUB.md
-        - Windows:
-            - OpSys/Windows/index.md
-            - OpSys/Windows/Chocolatey.md
-            - OpSys/Windows/Scoop.md
-            - OpSys/Windows/Cheat Engine.md
-            - OpSys/Windows/Cmder.md
-            - OpSys/Windows/Cygwin.md
-            - OpSys/Windows/Terminal.md
-            - OpSys/Windows/WSL.md
-        - GNU/Linux:
-            - OpSys/Linux/index.md
-            - Coreutils:
-                - OpSys/Linux/Coreutils/index.md
-            - iproute2:
-                - OpSys/Linux/iproute2/index.md
-            - net-tools:
-                - OpSys/Linux/net-tools/index.md
-            - procps:
-                - OpSys/Linux/procps/index.md
-            - systemd:
-                - OpSys/Linux/systemd/index.md
-            - util-linux:
-                - OpSys/Linux/util-linux/index.md
-            - OpSys/Linux/Cockpit.md
-            - OpSys/Linux/fish.md
-            - OpSys/Linux/man-db.md
-            - OpSys/Linux/netfilter.md
-            - OpSys/Linux/networking.md
-            - OpSys/Linux/tar.md
-            - OpSys/Linux/tldr.md
-            - OpSys/Linux/top.md
-            - OpSys/Linux/users.md
-        - Arch:
-            - OpSys/Arch/index.md
-            - OpSys/Arch/Pacman.md
-        - CentOS:
-            - OpSys/CentOS/index.md
-            - OpSys/CentOS/DNF.md
-        - Ubuntu:
-            - OpSys/Ubuntu/index.md
-            - APT: OpSys/Ubuntu/APT.md
-            - deb: OpSys/Ubuntu/deb.md
-        - Alpine:
-            - OpSys/Alpine/index.md
-        - Tails:
-            - OpSys/Tails/index.md
-        - Kali:
-            - OpSys/Kali/index.md
-            - APT: OpSys/Ubuntu/APT.md
-            - OpSys/Kali/DirBuster.md
-            - OpSys/Kali/Nmap.md
-            - OpSys/Kali/skipfish.md
+  - index.md
+  - 开发运维:
+      - DevOps/index.md
+      - DevOps/Crypt.md
+      - DevOps/IntCen.md
+      - DevOps/Markdown.md
+      - DevOps/UML.md
+      - DevOps/Git.md
+      - DevOps/GitFlow.md
+      - DevOps/GitLab.md
+      - DevOps/Jenkins.md
+      - DevOps/SQLPad.md
+      - 壳层:
+          - Xshell: DevOps/Shell/Xshell.md
+      - 虚拟化:
+          - Docker: DevOps/Virt/Docker.md
+          - VMware: DevOps/Virt/VMware.md
+          - VirtualBox: DevOps/Virt/VirtualBox.md
+  - 应用:
+      - App/index.md
+      - 文本:
+          - App/Text/index.md
+          - App/Text/Emacs.md
+          - Vim: App/Text/Vim.md
+      - 文档:
+          - App/Document/index.md
+      - 音频:
+          - App/Audio/index.md
+          - App/Audio/Audacity.md
+      - 图像:
+          - App/Image/index.md
+          - App/Image/GIMP.md
+      - 视频:
+          - App/Video/index.md
+          - App/Video/FFmpeg.md
+          - App/Video/VLC.md
+      - 三维计算机图形:
+          - App/3DCG/index.md
+          - App/3DCG/Blender.md
+      - App/GPT-2.md
+      - App/YOLO.md
+  - 中间件:
+      - Mid/index.md
+      - SSH: Mid/SSH.md
+      - Mid/Ceph.md
+      - Mid/FTP.md
+      - Mid/Kafka.md
+      - Mid/MySQL.md
+      - Mid/NGINX.md
+      - Mid/nginx-rtmp-module.md
+      - Mid/PostgreSQL.md
+      - Mid/ZooKeeper.md
+  - 操作系统:
+      - OpSys/index.md
+      - 引导:
+          - OpSys/Booting/index.md
+          - GRUB: OpSys/Booting/GRUB.md
+      - Windows:
+          - OpSys/Windows/index.md
+          - OpSys/Windows/Chocolatey.md
+          - OpSys/Windows/Scoop.md
+          - OpSys/Windows/Cheat Engine.md
+          - OpSys/Windows/Cmder.md
+          - OpSys/Windows/Cygwin.md
+          - OpSys/Windows/Terminal.md
+          - OpSys/Windows/WSL.md
+      - GNU/Linux:
+          - OpSys/Linux/index.md
+          - Coreutils:
+              - OpSys/Linux/Coreutils/index.md
+          - iproute2:
+              - OpSys/Linux/iproute2/index.md
+          - net-tools:
+              - OpSys/Linux/net-tools/index.md
+          - procps:
+              - OpSys/Linux/procps/index.md
+          - systemd:
+              - OpSys/Linux/systemd/index.md
+          - util-linux:
+              - OpSys/Linux/util-linux/index.md
+          - OpSys/Linux/Cockpit.md
+          - fish: OpSys/Linux/fish.md
+          - OpSys/Linux/man-db.md
+          - OpSys/Linux/netfilter.md
+          - OpSys/Linux/networking.md
+          - OpSys/Linux/tar.md
+          - OpSys/Linux/tldr.md
+          - OpSys/Linux/top.md
+          - OpSys/Linux/users.md
+      - Arch:
+          - OpSys/Arch/index.md
+          - OpSys/Arch/Pacman.md
+      - CentOS:
+          - OpSys/CentOS/index.md
+          - OpSys/CentOS/DNF.md
+      - Ubuntu:
+          - OpSys/Ubuntu/index.md
+          - APT: OpSys/Ubuntu/APT.md
+          - deb: OpSys/Ubuntu/deb.md
+      - Alpine:
+          - OpSys/Alpine/index.md
+      - Tails:
+          - OpSys/Tails/index.md
+      - Kali:
+          - OpSys/Kali/index.md
+          - APT: OpSys/Ubuntu/APT.md
+          - OpSys/Kali/DirBuster.md
+          - OpSys/Kali/Nmap.md
+          - OpSys/Kali/skipfish.md
 
 # Build directories
 # https://www.mkdocs.org/user-guide/configuration/#build-directories
 
 theme:
-    # 使用 Material 主题
-    # https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
-    name: material
+  # 使用 Material 主题
+  # https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
+  name: material
 
-    # 颜色
-    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
-    palette:
-        - media: "(prefers-color-scheme: light)"
-          scheme: default
-          primary: indigo
-          accent: indigo
-          toggle:
-              icon: material/weather-sunny
-              name: 切换到夜间模式
-        - media: "(prefers-color-scheme: dark)"
-          scheme: slate
-          primary: red
-          accent: red
-          toggle:
-              icon: material/weather-night
-              name: 切换到日常模式
+  # 颜色
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: 切换到日常模式
 
-    # 语言
-    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
-    language: zh
+  # 语言
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
+  language: zh
 
-    # 图标
-    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
-    logo:    assets/images/book-open-page-variant.png
-    favicon: assets/images/book-open-page-variant.png
-    icon:
-        repo: fontawesome/brands/github
+  # 图标
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
+  logo: assets/images/book-open-page-variant.png
+  favicon: assets/images/book-open-page-variant.png
+  icon:
+    repo: fontawesome/brands/github
 
-    # 功能
-    features:
-        # 导航
-        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
-#       - navigation.expand
-        - navigation.indexes
-        - navigation.instant
-#       - navigation.sections
-        - navigation.tabs
-#       - navigation.tabs.sticky
-        - navigation.top
-        - navigation.tracking
-        - toc.follow
-        - toc.integrate
+  # 功能
+  features:
+    # 导航
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+#   - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+#   - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - toc.integrate
 
-        # 搜索
-        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
-        - search.suggest
-        - search.highlight
-        - search.share
+    # 搜索
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
+    - search.suggest
+    - search.highlight
+    - search.share
 
-        # 标题
-        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/
-        - header.autohide
+    # 页眉
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/
+    - header.autohide
+
+    # 内容选项卡
+    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+    - content.tabs.link
 
 extra_css:
-#   - https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+# - https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
 
 extra_javascript:
-#   - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
-    - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-    - assets/javascripts/tablesort.js
+# - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascripts/tablesort.js
 
 extra:
-    social:
-        - icon: fontawesome/brands/github
-          link: https://github.com/afoolsbag
-          name: afoolsbag on GitHub
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/afoolsbag
+      name: afoolsbag on GitHub
 
 # Preview controls
 # https://www.mkdocs.org/user-guide/configuration/#preview-controls
@@ -209,68 +216,74 @@ extra:
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
 
 markdown_extensions:
-    # 官方扩展包
-    # https://python-markdown.github.io/extensions/
-#   - markdown.extensions.extra                         # Extra
-    - markdown.extensions.abbr                          #     Abbreviations       https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#abbreviations
-    - markdown.extensions.attr_list                     #     Attribute Lists     https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
-    - markdown.extensions.def_list                      #     Definition Lists    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists
-#   - markdown.extensions.fenced_code                   #     Fenced Code Blocks  https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#fenced-code-blocks
-    - markdown.extensions.footnotes                     #     Footnotes           https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes
-    - markdown.extensions.md_in_html                    #     Markdown in HTML    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
-    - markdown.extensions.tables                        #     Tables              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables
-    - markdown.extensions.admonition                    # Admonition              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition
-#   - markdown.extensions.codehilite                    # CodeHilite              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#codehilite
-#   - markdown.extensions.legacy_attrs                  # Legacy Attributes
-#   - markdown.extensions.legacy_em                     # Legacy Emphasis
-    - markdown.extensions.meta                          # Meta-Data               https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata
-#   - markdown.extensions.nl2br                         # New Line to Break
-    - markdown.extensions.sane_lists                    # Sane Lists
-    - markdown.extensions.smarty                        # SmartyPants
-    - markdown.extensions.toc:                          # Table of Contents       https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
-          permalink: true                                 #
-          slugify: !!python/name:pymdownx.slugs.uslugify  #
-#   - markdown.extensions.wikilinks                       # WikiLinks
+  # 官方扩展包
+  # https://python-markdown.github.io/extensions/
+# - markdown.extensions.extra         # Extra
+  - markdown.extensions.abbr          #   Abbreviations       https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#abbreviations
+  - markdown.extensions.attr_list     #   Attribute Lists     https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+  - markdown.extensions.def_list      #   Definition Lists    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists
+# - markdown.extensions.fenced_code   #   Fenced Code Blocks  https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#fenced-code-blocks
+  - markdown.extensions.footnotes     #   Footnotes           https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes
+  - markdown.extensions.md_in_html    #   Markdown in HTML    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+  - markdown.extensions.tables        #   Tables              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables
+  - markdown.extensions.admonition    # Admonition            https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition
+# - markdown.extensions.codehilite    # CodeHilite            https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#codehilite
+# - markdown.extensions.legacy_attrs  # Legacy Attributes
+# - markdown.extensions.legacy_em     # Legacy Emphasis
+  - markdown.extensions.meta          # Meta-Data             https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata
+# - markdown.extensions.nl2br         # New Line to Break
+  - markdown.extensions.sane_lists    # Sane Lists
+  - markdown.extensions.smarty        # SmartyPants
+  - markdown.extensions.toc:          # Table of Contents     https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+# - markdown.extensions.wikilinks     # WikiLinks
 
-    # 第三方 PyMdown Extensions 扩展包
-    # https://facelessuser.github.io/pymdown-extensions/
-#   - pymdownx.extra                                             # Extra
-    - pymdownx.betterem                                          #     BetterEm
-#   - markdown.extensions.abbr                                   #     Abbreviations
-#   - markdown.extensions.attr_list                              #     Attribute Lists
-#   - markdown.extensions.def_list                               #     Definition Lists
-    - pymdownx.superfences                                       #     SuperFences
-#   - markdown.extensions.footnotes                              #     Footnotes
-#   - markdown.extensions.md_in_html                             #     Markdown in HTML
-#   - markdown.extensions.tables                                 #     Tables
-    - pymdownx.arithmatex                                        # Arithmatex
-#   - pymdownx.b64                                               # B64
-    - pymdownx.caret                                             # Caret
-    - pymdownx.critic                                            # Critic
-    - pymdownx.details                                           # Details
-    - pymdownx.emoji:                                            # Emoji
-          emoji_index: !!python/name:materialx.emoji.twemoji     #
-          emoji_generator: !!python/name:materialx.emoji.to_svg  #
-#   - pymdownx.escapeall                                         # EscapeAll
-    - pymdownx.highlight                                         # Highlight
-    - pymdownx.inlinehilite                                      # InlineHilite
-    - pymdownx.keys                                              # Keys
-    - pymdownx.magiclink                                         # MagicLink
-    - pymdownx.mark                                              # Mark
-#   - pymdownx.pathconverter                                     # PathConverter
-#   - pymdownx.progressbar                                       # ProgressBar
-    - pymdownx.saneheaders                                       # SaneHeaders
-    - pymdownx.smartsymbols                                      # SmartSymbols
-    - pymdownx.snippets                                          # Snippets
-    - pymdownx.striphtml                                         # StripHTML
-    - pymdownx.tabbed:                                           # Tabbed
-          alternate_style: true                                  #
-    - pymdownx.tasklist                                          # Tasklist
-#         custom_checkbox: true
-    - pymdownx.tilde                                             # Tilde
+  # 第三方 PyMdown Extensions 扩展包
+  # https://facelessuser.github.io/pymdown-extensions/
+# - pymdownx.extra                    # Extra
+  - pymdownx.betterem                 #   BetterEm
+# - markdown.extensions.abbr          #   Abbreviations
+# - markdown.extensions.attr_list     #   Attribute Lists
+# - markdown.extensions.def_list      #   Definition Lists
+  - pymdownx.superfences:             #   SuperFences
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+# - markdown.extensions.footnotes     #   Footnotes
+# - markdown.extensions.md_in_html    #   Markdown in HTML
+# - markdown.extensions.tables        #   Tables
+  - pymdownx.arithmatex               # Arithmatex
+# - pymdownx.b64                      # B64
+  - pymdownx.caret                    # Caret
+  - pymdownx.critic                   # Critic
+  - pymdownx.details                  # Details
+  - pymdownx.emoji:                   # Emoji
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+# - pymdownx.escapeall                # EscapeAll
+  - pymdownx.highlight                # Highlight
+  - pymdownx.inlinehilite             # InlineHilite
+  - pymdownx.keys                     # Keys
+  - pymdownx.magiclink                # MagicLink
+  - pymdownx.mark                     # Mark
+# - pymdownx.pathconverter            # PathConverter
+# - pymdownx.progressbar              # ProgressBar
+  - pymdownx.saneheaders              # SaneHeaders
+  - pymdownx.smartsymbols             # SmartSymbols
+  - pymdownx.snippets                 # Snippets
+  - pymdownx.striphtml                # StripHTML
+  - pymdownx.tabbed:                  # Tabbed
+      alternate_style: true
+  - pymdownx.tasklist                 # Tasklist
+#     custom_checkbox: true
+  - pymdownx.tilde                    # Tilde
 
 plugins:
-    - git-revision-date-localized
-    - minify:
-          minify_html: true
-    - search
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+  - search
