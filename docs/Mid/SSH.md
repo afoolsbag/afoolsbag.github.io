@@ -105,6 +105,79 @@ Host <CustomName>
 
 参见 [ssh_config(5)](https://man.openbsd.org/ssh_config)。
 
+### 文件
+
+=== ":fontawesome-brands-windows: Windows"
+
+    !!! cite inline end
+
+        *   <https://github.com/PowerShell/Win32-OpenSSH/wiki>
+
+    ```
+    ?
+    ```
+
+=== ":fontawesome-brands-linux: GNU/Linux"
+
+    !!! cite inline end
+
+        *   <https://man.openbsd.org/ssh.1#FILES>
+        *   <https://man.openbsd.org/ssh_config#FILES>
+        *   <https://man.openbsd.org/ssh-add.1#FILES>
+        *   <https://man.openbsd.org/ssh-keygen#FILES>
+        *   <https://man.openbsd.org/ssh-keyscan#FILES>
+        *   <https://man.openbsd.org/sshd.8#FILES>
+        *   <https://man.openbsd.org/sshd_config.5#FILES>
+
+    ```
+    /
+    ├── etc
+    │   ├── hosts.equiv                   # -rw-r--r-- root root
+    │   ├── moduli                        #            root root
+    │   ├── motd                          #            root root
+    │   ├── nologin                       # -rw-r--r-- root root
+    │   ├── shosts.equiv                  # -rw-r--r-- root root
+    │   └── ssh                           #            root root
+    │       ├── ssh_host_key              # -rw------- root root
+    │       ├── ssh_host_dsa_key          # -rw------- root root
+    │       ├── ssh_host_ecdsa_key        # -rw------- root root
+    │       ├── ssh_host_ed25519_key      # -rw------- root root
+    │       ├── ssh_host_rsa_key          # -rw------- root root
+    │       ├── ssh_host_ecdsa_key.pub    # -rw-r--r-- root root
+    │       ├── ssh_host_ed25519_key.pub  # -rw-r--r-- root root
+    │       ├── ssh_host_rsa_key.pub      # -rw-r--r-- root root
+    │       ├── ssh_known_hosts           # -rw-r--r-- root root
+    │       ├── sshd_config               # -rw-r--r-- root root
+    │       └── sshrc                     # -rw-r--r-- root root
+    ├── home
+    │   └── ~
+    │       ├── .hushlogin                #            user user
+    │       ├── .rhosts                   # -rw------- user user
+    │       ├── .shosts                   # -rw------- user user
+    │       └── .ssh                      # drwx------ user user  # chmod 700 ~/.ssh
+    │           ├── authorized_keys       # -rw------- user user  # chmod 600 ~/.ssh/*
+    │           ├── config                # -rw------- user user
+    │           ├── environment           # -rw------- user user
+    │           ├── id_dsa                # -rw------- user user
+    │           ├── id_ecdsa              # -rw------- user user
+    │           ├── id_ecdsa_sk           # -rw------- user user
+    │           ├── id_ed25519            # -rw------- user user
+    │           ├── id_ed25519_sk         # -rw------- user user
+    │           ├── id_rsa                # -rw------- user user
+    │           ├── id_dsa.pub            # -rw------- user user
+    │           ├── id_ecdsa.pub          # -rw------- user user
+    │           ├── id_ecdsa_sk.pub       # -rw------- user user
+    │           ├── id_ed25519.pub        # -rw------- user user
+    │           ├── id_ed25519_sk.pub     # -rw------- user user
+    │           ├── id_rsa.pub            # -rw------- user user
+    │           ├── known_hosts           # -rw------- user user
+    │           └── rc                    # -rw------- user user
+    └── var
+        ├── empty                         # drwxr-xr-x root root
+        └── run
+            └── sshd.pid                  # -rw-r--r-- root root
+    ```
+
 <!----------------------------------------------------------------------------->
 
 [^SSH on Wikipedia]: [Secure Shell - Wikipedia](https://wikipedia.org/wiki/Secure_Shell)

@@ -1,63 +1,61 @@
-# 用户管理套件 users 等
+# 用户
 
-## 常用命令组合
----
+## 常用操作
 
-### 查看信息
+=== "查询"
 
-```fish
-# 输出已登陆用户的用户名
-sudoer@host *> users
+    ``` console
+    # 输出已登陆用户的用户名
+    [sudoer@host *]$ users
 
-# 输出已登录用户的用户信息
-sudoer@host *> who --heading
-# abbr.        who -H
+    # 输出已登录用户的用户信息
+    [sudoer@host *]$ who --heading
+    [abbr.        ]$ who -H
 
-# 输出已登录用户的用户信息，和他们正在做什么
-sudoer@host *> w
-```
+    # 输出已登录用户的用户信息，以及他们正在做什么
+    [sudoer@host *]$ w
+    ```
 
-### 禁止、允许用户登录
+=== "启用、禁用"
 
-```fish
-# 禁止用户登录
-sudoer@host *> sudo usermod --shell /sbin/nologin <username>
-# abbr.        sudo usermod -s /sbin/nologin <username>
+    ``` console
+    # 禁止用户登录
+    [sudoer@host *]$ sudo usermod --shell /sbin/nologin <username>
+    [abbr.        ]$ sudo usermod -s /sbin/nologin <username>
 
-# 允许用户登录
-sudoer@host *> sudo usermod --shell /bin/bash <username>
-# abbr.        sudo usermod -s /bin/bash <username>
+    # 允许用户登录
+    [sudoer@host *]$ sudo usermod --shell /bin/bash <username>
+    [abbr.        ]$ sudo usermod -s /bin/bash <username>
 
-# 以重置密码为 ! 的方式，禁止用户登录
-sudoer@host *> sudo usermod --password ! <username>
-# abbr.        sudo usermod -p ! <username>
-```
+    # 以重置密码为 ! 的方式，禁止用户登录
+    [sudoer@host *]$ sudo usermod --password ! <username>
+    [abbr.        ]$ sudo usermod -p ! <username>
+    ```
 
-### 新建、删除用户
+=== "新建、删除"
 
-```fish
-# 新建用户[，并创建用户主目录]
-sudoer@host *> useradd [--create-home] --shell /bin/bash <username>
-# abbr.        useradd [-m] -s /bin/bash <username>
+    ``` console
+    # 新建用户[，并创建用户主目录]
+    [sudoer@host *]$ sudo useradd [--create-home] --shell /bin/bash <username>
+    [abbr.        ]$ sudo useradd [-m] -s /bin/bash <username>
 
-# 交互式修改用户密码
-sudoer@host *> passwd <username>
+    # 交互式修改用户密码
+    [sudoer@host *]$ sudo passwd <username>
 
-# 为用户赋予 `sudo` 权限
-sudoer@host *> echo '<username> ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/<username>
+    # 为用户赋予 `sudo` 权限
+    [sudoer@host *]$ echo '<username> ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/<username>
 
-# 删除用户[，并移除用户主目录]
-sudoer@host *> userdel [--remove] <username>
-# abbr.        userdel [-r] <username>
+    # 删除用户[，并移除用户主目录]
+    [sudoer@host *]$ userdel [--remove] <username>
+    [abbr.        ]$ userdel [-r] <username>
 
-# 新建后门用户
-sudoer@host *> sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash <username>
-# abbr.        sudo useradd -d /dev/null -g root -l -M -s /bin/bash <username>
-sudoer@host *> sudo passwd <username>
-```
+    # 新建后门用户
+    [sudoer@host *]$ sudo useradd --home-dir /dev/null --gid root --no-log-init --no-create-home --shell /bin/bash <username>
+    [abbr.        ]$ sudo useradd -d /dev/null -g root -l -M -s /bin/bash <username>
+    [sudoer@host *]$ sudo passwd <username>
+    ```
 
 ## 相关文件格式
----
 
 ### `/etc/passwd`
 
