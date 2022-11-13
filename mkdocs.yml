@@ -1,11 +1,10 @@
 %YAML 1.2
 ---
+# [MkDocs 配置文件](https://www.mkdocs.org/user-guide/configuration/)
 
-# MkDocs 配置文件
-# https://www.mkdocs.org/user-guide/configuration/
-
-# Project information
-# https://www.mkdocs.org/user-guide/configuration/#project-information
+#
+# [Project information](https://www.mkdocs.org/user-guide/configuration/#project-information)
+#
 
 site_name: zhengrr's docs
 site_url: https://afoolsbag.github.io/
@@ -15,11 +14,14 @@ site_description: 一份为 zhengrr 定制化的技术备忘。
 site_author: zhengrr
 copyright: CC0-1.0
 
-# Documentation layout
-# https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+#
+# [Documentation layout](https://www.mkdocs.org/user-guide/configuration/#documentation-layout)
+#
 
 nav:
   - index.md
+  - 音乐:
+      - mus/index.md
   - 开发运维:
       - DevOps/index.md
       - DevOps/Crypt.md
@@ -129,16 +131,15 @@ nav:
           - OpSys/Kali/Nmap.md
           - OpSys/Kali/skipfish.md
 
-# Build directories
-# https://www.mkdocs.org/user-guide/configuration/#build-directories
+#
+# [Build directories](https://www.mkdocs.org/user-guide/configuration/#build-directories)
+#
 
 theme:
-  # 使用 Material 主题
-  # https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
+  # [使用 Material 主题](https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration)
   name: material
 
-  # 颜色
-  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  # [颜色](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/)
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -155,12 +156,10 @@ theme:
         icon: material/weather-night
         name: 切换到日常模式
 
-  # 语言
-  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/
+  # [语言](https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/)
   language: zh
 
-  # 图标
-  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
+  # [图标](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/)
   logo: assets/images/book-open-page-variant.png
   favicon: assets/images/book-open-page-variant.png
   icon:
@@ -168,8 +167,7 @@ theme:
 
   # 功能
   features:
-    # 导航
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    # [导航](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/)
 #   - navigation.expand
     - navigation.indexes
     - navigation.instant
@@ -181,27 +179,33 @@ theme:
     - toc.follow
     - toc.integrate
 
-    # 搜索
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
+    # [搜索](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/)
     - search.suggest
     - search.highlight
     - search.share
 
-    # 页眉
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/
+    # [页眉](https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/)
     - header.autohide
 
-    # 内容选项卡
-    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+    # [内容选项卡](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)
     - content.tabs.link
 
 extra_css:
-# - https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+  # abcjs
+  - https://cdn.jsdelivr.net/npm/abcjs@6.1.6/abcjs-audio.css
+  - assets/stylesheets/abcjs.css
 
 extra_javascript:
-# - https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+  # [MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # [Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/?h=table+sort#sortable-tables)
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - assets/javascripts/tablesort.js
+  # abcjs
+  - https://cdn.jsdelivr.net/npm/abcjs@6.1.6/dist/abcjs-basic-min.js
+  - assets/javascripts/abcjs.js
 
 extra:
   social:
@@ -209,54 +213,54 @@ extra:
       link: https://github.com/afoolsbag
       name: afoolsbag on GitHub
 
-# Preview controls
-# https://www.mkdocs.org/user-guide/configuration/#preview-controls
-
-# Formatting options
-# https://www.mkdocs.org/user-guide/configuration/#formatting-options
+#
+# [Formatting options](https://www.mkdocs.org/user-guide/configuration/#formatting-options)
+#
 
 markdown_extensions:
-  # 官方扩展包
-  # https://python-markdown.github.io/extensions/
+  #-----------------------------------# [Python-Markdown 官方扩展包](https://python-markdown.github.io/extensions/)
 # - markdown.extensions.extra         # Extra
-  - markdown.extensions.abbr          #   Abbreviations       https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#abbreviations
-  - markdown.extensions.attr_list     #   Attribute Lists     https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
-  - markdown.extensions.def_list      #   Definition Lists    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists
-# - markdown.extensions.fenced_code   #   Fenced Code Blocks  https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#fenced-code-blocks
-  - markdown.extensions.footnotes     #   Footnotes           https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes
-  - markdown.extensions.md_in_html    #   Markdown in HTML    https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
-  - markdown.extensions.tables        #   Tables              https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables
-  - markdown.extensions.admonition    # Admonition            https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition
-# - markdown.extensions.codehilite    # CodeHilite            https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#codehilite
+  - markdown.extensions.abbr          # ├[Abbreviations](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#abbreviations)
+  - markdown.extensions.attr_list     # ├[Attribute Lists](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists)
+  - markdown.extensions.def_list      # ├[Definition Lists](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists)
+# - markdown.extensions.fenced_code   # ├[Fenced Code Blocks](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#fenced-code-blocks)
+  - markdown.extensions.footnotes     # ├[Footnotes](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes)
+  - markdown.extensions.md_in_html    # ├[Markdown in HTML](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html)
+  - markdown.extensions.tables        # └[Tables](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables)
+  - markdown.extensions.admonition    # [Admonition](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition)
+# - markdown.extensions.codehilite    # [CodeHilite](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#codehilite)
 # - markdown.extensions.legacy_attrs  # Legacy Attributes
 # - markdown.extensions.legacy_em     # Legacy Emphasis
-  - markdown.extensions.meta          # Meta-Data             https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata
+  - markdown.extensions.meta          # [Meta-Data](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#metadata)
 # - markdown.extensions.nl2br         # New Line to Break
   - markdown.extensions.sane_lists    # Sane Lists
   - markdown.extensions.smarty        # SmartyPants
-  - markdown.extensions.toc:          # Table of Contents     https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
+  - markdown.extensions.toc:          # [Table of Contents](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents)
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
 # - markdown.extensions.wikilinks     # WikiLinks
 
-  # 第三方 PyMdown Extensions 扩展包
-  # https://facelessuser.github.io/pymdown-extensions/
+  #-----------------------------------# [PyMdown 第三方扩展包](https://facelessuser.github.io/pymdown-extensions/)
 # - pymdownx.extra                    # Extra
-  - pymdownx.betterem                 #   BetterEm
-# - markdown.extensions.abbr          #   Abbreviations
-# - markdown.extensions.attr_list     #   Attribute Lists
-# - markdown.extensions.def_list      #   Definition Lists
-  - pymdownx.superfences:             #   SuperFences
-      custom_fences:
-        - name: mermaid
+  - pymdownx.betterem                 # ├BetterEm
+# - markdown.extensions.abbr          # ├Abbreviations
+# - markdown.extensions.attr_list     # ├Attribute Lists
+# - markdown.extensions.def_list      # ├Definition Lists
+  - pymdownx.superfences:             # ├SuperFences
+      custom_fences:                  #  [Custom Fences](https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences)
+        - name: mermaid               #   [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-# - markdown.extensions.footnotes     #   Footnotes
-# - markdown.extensions.md_in_html    #   Markdown in HTML
-# - markdown.extensions.tables        #   Tables
-  - pymdownx.arithmatex               # Arithmatex
+        - name: abc                   #   []
+          class: abctext
+          format: !!python/name:pymdownx.superfences.fence_code_format
+# - markdown.extensions.footnotes     # ├Footnotes
+# - markdown.extensions.md_in_html    # ├Markdown in HTML
+# - markdown.extensions.tables        # └Tables
+  - pymdownx.arithmatex:              # Arithmatex
+      generic: true                   #   [MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)
 # - pymdownx.b64                      # B64
   - pymdownx.caret                    # Caret
   - pymdownx.critic                   # Critic
