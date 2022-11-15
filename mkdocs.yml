@@ -192,19 +192,19 @@ theme:
 
 extra_css:
   # abcjs
-  - https://cdn.jsdelivr.net/npm/abcjs@6.1.6/abcjs-audio.css
+  - https://unpkg.com/abcjs@6.1.6/abcjs-audio.css
   - assets/stylesheets/abcjs.css
 
 extra_javascript:
   # [MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)
   - assets/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   # [Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/?h=table+sort#sortable-tables)
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - assets/javascripts/tablesort.js
   # abcjs
-  - https://cdn.jsdelivr.net/npm/abcjs@6.1.6/dist/abcjs-basic-min.js
+  - https://unpkg.com/abcjs@6.1.6/dist/abcjs-basic-min.js
   - assets/javascripts/abcjs.js
 
 extra:
