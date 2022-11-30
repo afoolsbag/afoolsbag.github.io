@@ -21,7 +21,7 @@ copyright: CC0-1.0
 nav:
   - index.md
   - 音乐:
-      - mus/index.md
+      - music/index.md
   - 开发运维:
       - DevOps/index.md
       - DevOps/Crypt.md
