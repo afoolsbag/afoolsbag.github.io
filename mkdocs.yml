@@ -191,7 +191,7 @@ theme:
     - content.tabs.link
 
 extra_css:
-  # abcjs
+  # [abcjs](https://abcjs.net/)
   - https://unpkg.com/abcjs@6.1.6/abcjs-audio.css
   - assets/stylesheets/abcjs.css
 
@@ -202,10 +202,17 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   # [Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/?h=table+sort#sortable-tables)
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.date.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.dotsep.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.filesize.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.monthname.min.js
+  - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.number.min.js
   - assets/javascripts/tablesort.js
-  # abcjs
+  # [abcjs](https://abcjs.net/)
   - https://unpkg.com/abcjs@6.1.6/dist/abcjs-basic-min.js
   - assets/javascripts/abcjs.js
+  # [Plotly](https://plotly.com/javascript/)
+  - https://unpkg.com/plotly.js@2.16.3/dist/plotly-basic.min.js
 
 extra:
   social:
