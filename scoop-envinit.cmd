@@ -16,7 +16,7 @@ IF %ERRORLEVEL% NEQ 0 (
                 && CALL :pause_if_double_click ^
                 && EXIT /B 2
 
-        START "" /B /WAIT CMD /C pip config set global.index-url https://pypi.doubanio.com/simple
+        START "" /B /WAIT CMD /C pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
                 && ECHO pip config set global.index-url successful. ^
                 || ECHO pip config set global.index-url failed. ^
                 && CALL :pause_if_double_click ^
@@ -32,7 +32,7 @@ IF %ERRORLEVEL% NEQ 0 (
                 && CALL :pause_if_double_click ^
                 && EXIT /B 4
         
-        START "" /B /WAIT CMD /C npm config set registry https://registry.npmmirror.com/ ^
+        START "" /B /WAIT CMD /C npm config set registry https://registry.npm.taobao.org/ ^
                 && ECHO npm config set registry successful. ^
                 || ECHO npm config set registry failed. ^
                 && CALL :pause_if_double_click ^

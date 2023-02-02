@@ -11,6 +11,10 @@
 
 === ":fontawesome-brands-linux: Kali"
 
+    !!! cite inline end
+
+        <https://mirrors.ustc.edu.cn/help/kali.html>
+
     ``` console
     # 备份原始源
     [sudoer@host ~]$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -29,21 +33,31 @@
     [sudoer@host ~]$ sudo apt update
     ```
 
-    参见 <https://mirrors.ustc.edu.cn/help/kali.html>。
-
 === ":fontawesome-brands-ubuntu: Ubuntu"
 
+    !!! cite inline end
+
+        *   <https://mirrors.huaweicloud.com/home>
+        *   <https://developer.aliyun.com/mirror/ubuntu>
+        *   [Ubuntu 22.04 LTS (Jammy Jellyfish) complete sources.list](https://gist.github.com/hakerdefo/9c99e140f543b5089e32176fe8721f5f)
+
     ``` console
-    # 使用阿里云镜像源
+    # 使用华为云镜像源
     sudoer@host:*$ sudo sed --in-place=.bak \
-                            's/archive\.ubuntu\.com/mirrors.aliyun.com/g' \
+                            's@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g' \
                             /etc/apt/sources.list
+    sudoer@host:*$ sudo sed --in-place \
+                            's@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g' \
+                            /etc/apt/sources.list
+
+    # 使用阿里云镜像源
+    # sudoer@host:*$ sudo sed --in-place=.bak \
+    #                         's/archive\.ubuntu\.com/mirrors.aliyun.com/g' \
+    #                         /etc/apt/sources.list
 
     # 更新索引
     sudoer@host:*$ sudo apt update
     ```
-
-    参见 <https://developer.aliyun.com/mirror/ubuntu>。
 
 ## 使用 APT
 
@@ -107,74 +121,44 @@
 
     ``` console
     [sudoer@host ~]$ sudo apt install openssh-server
-
     [sudoer@host ~]$ sudo systemctl enable --now sshd
     ```
 
-0.  安装开发工具
+0.  安装基础开发调试工具
 
     ``` console
-    [sudoer@host ~]$ sudo apt install build-essential vim
+    [sudoer@host ~]$ sudo apt install build-essential gdb vim
     ```
 
 0.  若有需要，安装指定版本 GCC，并切换到指定环境
 
     ``` console
     [sudoer@host ~]$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-
     [sudoer@host ~]$ sudo apt update
-
     [sudoer@host ~]$ sudo apt install gcc-9 g++-9
 
     [sudoer@host ~]$ export CC=/usr/bin/gcc-9
-
     [sudoer@host ~]$ export CXX=/usr/bin/g++-9
     ```
 
-0.  安装 GDB
-
-    ``` console
-    [sudoer@host ~]$ sudo apt install gdb
-    ```
-
-0.  安装 pip3 并配置源
+0.  安装 pip 并配置源
 
     ``` console
     [sudoer@host ~]$ sudo apt install python3-pip
 
-    [sudoer@host ~]$ pip3 config set global.index-url https://pypi.doubanio.com/simple
+    # 全局（/usr/local/bin）
+    [sudoer@host ~]$ pip config --user set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+    # 用户（$HOME/.local/bin）
+    [sudoer@host ~]$ sudo pip config --global set global.index-url https://mirrors.aliyun.com/pypi/simple/
     ```
 
-    确保 `PATH` 环境变量包含 `$HOME/.local/bin`
-
-0.  安装 CMake
+0.  通过 pip 安装更多开发工具，并配置 Conan
 
     ``` console
-    [sudoer@host ~]$ pip3 install cmake
-    ```
-
-    或从官网安装包安装
-
-    ``` console
-    [sudoer@host ~]$ sudo wget --directory-prefix=/usr/local/src https://cmake.org/files/v3.17/cmake-3.17.3-Linux-x86_64.sh
-
-    [sudoer@host ~]$ sudo chmod u+x /usr/local/src/cmake-3.17.3-Linux-x86_64.sh
-
-    [sudoer@host ~]$ sudo /usr/local/src/cmake-3.17.3-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir --skip-license
-    ```
-
-0.  安装 Conan
-
-    ``` console
-    [sudoer@host ~]$ pip3 install conan
-    ```
-
-    或从官网安装包安装
-
-    ``` console
-    [sudoer@host ~]$ sudo wget --directory-prefix=/usr/local/src https://dl.bintray.com/conan/installers/conan-ubuntu-64_1_26_0.deb
-
-    [sudoer@host ~]$ sudo dpkg --install /usr/local/src/conan-ubuntu-64_1_26_0.deb
+    [sudoer@host ~]$ pip install cmake conan clang-format
+    [sudoer@host ~]$ conan profile new default --detect --force && \
+                     conan profile update settings.compiler.libcxx=libstdc++11 default
     ```
 
 <!----------------------------------------------------------------------------->

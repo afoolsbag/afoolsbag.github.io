@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
 # coding: utf-8
 """\
-:Version:   2022-11-14
+:Version:   2023-01-31
 :Since:     2020-05-15
 :Author:    zhengrr
 :Copyright: UNLICENSE
 
 """
-# https://github.com/pyinvoke/invoke/issues/833
-import inspect
-
-if not hasattr(inspect, "getargspec"):
-    inspect.getargspec = inspect.getfullargspec
-
 from invoke import task
 
 
@@ -26,6 +20,7 @@ def env(c):
 @task
 def update(c):
     c.run("python -m pip install --upgrade pip")
+    # c.run("pip install --upgrade invoke")
     c.run("pip install --upgrade pipenv")
     c.run("pipenv update --dev")
 

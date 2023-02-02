@@ -23,113 +23,113 @@ nav:
   - 音乐:
       - music/index.md
   - 开发运维:
-      - DevOps/index.md
-      - DevOps/Crypt.md
-      - DevOps/IntCen.md
-      - DevOps/Markdown.md
-      - DevOps/UML.md
-      - DevOps/Git.md
-      - DevOps/GitFlow.md
-      - DevOps/GitLab.md
-      - DevOps/Jenkins.md
-      - DevOps/SQLPad.md
+      - dev-ops/index.md
+      - dev-ops/crypt.md
+      - dev-ops/int-cen.md
+      - dev-ops/markdown.md
+      - dev-ops/uml.md
+      - dev-ops/git.md
+      - dev-ops/gitflow.md
+      - dev-ops/gitlab.md
+      - dev-ops/jenkins.md
+      - dev-ops/sqlpad.md
       - 壳层:
-          - Xshell: DevOps/Shell/Xshell.md
+          - Xshell: dev-ops/shell/xshell.md
       - 虚拟化:
-          - Docker: DevOps/Virt/Docker.md
-          - VMware: DevOps/Virt/VMware.md
-          - VirtualBox: DevOps/Virt/VirtualBox.md
+          - Docker: dev-ops/virt/docker.md
+          - VMware: dev-ops/virt/vmware.md
+          - VirtualBox: dev-ops/virt/virtualbox.md
   - 应用:
-      - App/index.md
+      - apps/index.md
       - 文本:
-          - App/Text/index.md
-          - App/Text/Emacs.md
-          - Vim: App/Text/Vim.md
+          - apps/text/index.md
+          - apps/text/emacs.md
+          - Vim: apps/text/vim.md
       - 文档:
-          - App/Document/index.md
+          - apps/document/index.md
       - 音频:
-          - App/Audio/index.md
-          - App/Audio/Audacity.md
+          - apps/audio/index.md
+          - apps/audio/audacity.md
       - 图像:
-          - App/Image/index.md
-          - App/Image/GIMP.md
+          - apps/image/index.md
+          - apps/image/gimp.md
       - 视频:
-          - App/Video/index.md
-          - App/Video/FFmpeg.md
-          - App/Video/VLC.md
+          - apps/video/index.md
+          - apps/video/ffmpeg.md
+          - apps/video/vlc.md
       - 三维计算机图形:
-          - App/3DCG/index.md
-          - App/3DCG/Blender.md
-      - App/GPT-2.md
-      - App/YOLO.md
+          - apps/3dcg/index.md
+          - apps/3dcg/blender.md
+      - apps/gpt-2.md
+      - apps/yolo.md
   - 中间件:
-      - Mid/index.md
-      - SSH: Mid/SSH.md
-      - Mid/Ceph.md
-      - Mid/FTP.md
-      - Mid/Kafka.md
-      - Mid/MySQL.md
-      - Mid/NGINX.md
-      - Mid/nginx-rtmp-module.md
-      - Mid/PostgreSQL.md
-      - Mid/ZooKeeper.md
+      - mids/index.md
+      - SSH: mids/ssh.md
+      - mids/ceph.md
+      - mids/ftp.md
+      - mids/kafka.md
+      - mids/mysql.md
+      - mids/nginx.md
+      - mids/nginx-rtmp-module.md
+      - mids/postgresql.md
+      - mids/zookeeper.md
   - 操作系统:
-      - OpSys/index.md
+      - oss/index.md
       - 引导:
-          - OpSys/Booting/index.md
-          - GRUB: OpSys/Booting/GRUB.md
+          - oss/booting/index.md
+          - GRUB: oss/booting/grub.md
       - Windows:
-          - OpSys/Windows/index.md
-          - OpSys/Windows/Chocolatey.md
-          - OpSys/Windows/Scoop.md
-          - OpSys/Windows/Cheat Engine.md
-          - OpSys/Windows/Cmder.md
-          - OpSys/Windows/Cygwin.md
-          - OpSys/Windows/Terminal.md
-          - OpSys/Windows/WSL.md
+          - oss/windows/index.md
+          - oss/windows/chocolatey.md
+          - oss/windows/scoop.md
+          - oss/windows/cheat-engine.md
+          - oss/windows/cmder.md
+          - oss/windows/cygwin.md
+          - oss/windows/terminal.md
+          - oss/windows/wsl.md
       - GNU/Linux:
-          - OpSys/Linux/index.md
+          - oss/linux/index.md
           - Coreutils:
-              - OpSys/Linux/Coreutils/index.md
+              - oss/linux/coreutils/index.md
           - iproute2:
-              - OpSys/Linux/iproute2/index.md
+              - oss/linux/iproute2/index.md
           - net-tools:
-              - OpSys/Linux/net-tools/index.md
+              - oss/linux/net-tools/index.md
           - procps:
-              - OpSys/Linux/procps/index.md
+              - oss/linux/procps/index.md
           - systemd:
-              - OpSys/Linux/systemd/index.md
+              - oss/linux/systemd/index.md
           - util-linux:
-              - OpSys/Linux/util-linux/index.md
-          - OpSys/Linux/Cockpit.md
-          - fish: OpSys/Linux/fish.md
-          - OpSys/Linux/man-db.md
-          - OpSys/Linux/netfilter.md
-          - OpSys/Linux/networking.md
-          - OpSys/Linux/tar.md
-          - OpSys/Linux/tldr.md
-          - OpSys/Linux/top.md
-          - OpSys/Linux/users.md
+              - oss/linux/util-linux/index.md
+          - oss/linux/cockpit.md
+          - fish: oss/linux/fish.md
+          - oss/linux/man-db.md
+          - oss/linux/netfilter.md
+          - oss/linux/networking.md
+          - oss/linux/tar.md
+          - oss/linux/tldr.md
+          - oss/linux/top.md
+          - oss/linux/users.md
       - Arch:
-          - OpSys/Arch/index.md
-          - OpSys/Arch/Pacman.md
+          - oss/arch/index.md
+          - oss/arch/pacman.md
       - CentOS:
-          - OpSys/CentOS/index.md
-          - OpSys/CentOS/DNF.md
+          - oss/centos/index.md
+          - oss/centos/dnf.md
       - Ubuntu:
-          - OpSys/Ubuntu/index.md
-          - APT: OpSys/Ubuntu/APT.md
-          - deb: OpSys/Ubuntu/deb.md
+          - oss/ubuntu/index.md
+          - APT: oss/ubuntu/apt.md
+          - deb: oss/ubuntu/deb.md
       - Alpine:
-          - OpSys/Alpine/index.md
+          - oss/alpine/index.md
       - Tails:
-          - OpSys/Tails/index.md
+          - oss/Tails/index.md
       - Kali:
-          - OpSys/Kali/index.md
-          - APT: OpSys/Ubuntu/APT.md
-          - OpSys/Kali/DirBuster.md
-          - OpSys/Kali/Nmap.md
-          - OpSys/Kali/skipfish.md
+          - oss/kali/index.md
+          - APT: oss/ubuntu/apt.md
+          - oss/kali/dirbuster.md
+          - oss/kali/nmap.md
+          - oss/kali/skipfish.md
 
 #
 # [Build directories](https://www.mkdocs.org/user-guide/configuration/#build-directories)

@@ -1,6 +1,12 @@
 # GitFlow
 
+see also [Trunk-based development](https://trunkbaseddevelopment.com/)
+
+atlassian <https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development>
+
+
 [GitFlow] 是一种 :material-git: Git 工作流规范。[^GitFlow on Atlassian]
+<https://nvie.com/posts/a-successful-git-branching-model/>
 
 ??? cite "流程一览"
 
