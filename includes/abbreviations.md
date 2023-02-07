@@ -1,22 +1,73 @@
 
-*[APT]:     Advanced Package Tool
-*[CentOS]:  Community ENTerprise Operating System
-*[CMD]:     CoMmanD Prompt
-*[csh]:     C SHell
-*[deb]:     DEBian package
-*[dpkg]:    Debian PacKaGe
-*[DSA]:     Digital Signature Algorithm
-*[ECDSA]:   Elliptic Curve Digital Signature Algorithm
-*[EPEL]:    Extra Packages for Enterprise Linux
-*[fish]:    friendly interactive shell
-*[FTP]:     File Transfer Protocol
-*[GRUB]:    GRand Unified Bootloader
-*[OCI]:     Open Containers Initiative
+<!-- A -->
+*[APT]: Advanced Package Tool
+
+<!-- B -->
+
+<!-- C -->
+*[CentOS]: Community ENTerprise Operating System
+*[CMD]: CoMmanD Prompt
+*[csh]: C SHell
+
+<!-- D -->
+*[deb]: DEBian package
+*[dpkg]: Debian PacKaGe
+*[DSA]: Digital Signature Algorithm
+
+<!-- E -->
+*[ECDSA]: Elliptic Curve Digital Signature Algorithm
+*[EPEL]: Extra Packages for Enterprise Linux
+
+<!-- F -->
+*[fish]: friendly interactive shell
+*[FTP]: File Transfer Protocol
+
+<!-- G -->
+*[GRUB]: GRand Unified Bootloader
+
+<!-- H -->
+
+<!-- I -->
+
+<!-- J -->
+
+<!-- K -->
+
+<!-- L -->
+
+<!-- M -->
+
+<!-- N -->
+
+<!-- O -->
+*[OCI]: Open Containers Initiative
 *[OpenSSH]: OPENbsd Secure SHell
-*[PaaS]:    Platform As A Service
-*[PXE]:     Preboot eXecution Environment
-*[RSA]:     Rivest–Shamir–Adleman
-*[sh]:      bourne SHell
-*[SSH]:     Secure SHell
-*[Vim]:     Vi IMproved
-*[vsftpd]:  Very Secure FTP Daemon
+
+<!-- P -->
+*[PaaS]: Platform As A Service
+*[PXE]: Preboot eXecution Environment
+
+<!-- Q -->
+
+<!-- R -->
+*[RSA]: Rivest–Shamir–Adleman
+
+<!-- S -->
+*[sh]: bourne SHell
+*[SSH]: Secure SHell
+
+<!-- T -->
+
+<!-- U -->
+
+<!-- V -->
+*[Vim]: Vi IMproved
+*[vsftpd]: Very Secure FTP Daemon
+
+<!-- W -->
+
+<!-- X -->
+
+<!-- Y -->
+
+<!-- Z -->

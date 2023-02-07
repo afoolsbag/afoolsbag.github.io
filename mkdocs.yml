@@ -21,7 +21,7 @@ copyright: CC0-1.0
 nav:
   - index.md
   - 音乐:
-      - music/index.md
+    - music/index.md
   - 开发运维:
       - dev-ops/index.md
       - dev-ops/crypt.md
@@ -42,53 +42,59 @@ nav:
   - 应用:
       - apps/index.md
       - 文本:
-          - apps/text/index.md
           - apps/text/emacs.md
           - Vim: apps/text/vim.md
-      - 文档:
-          - apps/document/index.md
-      - 音频:
-          - apps/audio/index.md
-          - apps/audio/audacity.md
       - 图像:
-          - apps/image/index.md
           - apps/image/gimp.md
+      - 音频:
+          - apps/audio/audacity.md
       - 视频:
-          - apps/video/index.md
           - apps/video/ffmpeg.md
           - apps/video/vlc.md
       - 三维计算机图形:
-          - apps/3dcg/index.md
           - apps/3dcg/blender.md
       - apps/gpt-2.md
       - apps/yolo.md
   - 中间件:
-      - mids/index.md
-      - SSH: mids/ssh.md
-      - mids/ceph.md
-      - mids/ftp.md
-      - mids/kafka.md
-      - mids/mysql.md
-      - mids/nginx.md
-      - mids/nginx-rtmp-module.md
-      - mids/postgresql.md
-      - mids/zookeeper.md
+      - mws/index.md
+      - SSH: mws/ssh.md
+      - mws/ceph.md
+      - mws/ftp.md
+      - mws/kafka.md
+      - mws/mysql.md
+      - mws/nginx.md
+      - mws/nginx-rtmp-module.md
+      - mws/postgresql.md
+      - mws/zookeeper.md
   - 操作系统:
       - oss/index.md
-      - 引导:
-          - oss/booting/index.md
-          - GRUB: oss/booting/grub.md
-      - Windows:
-          - oss/windows/index.md
-          - oss/windows/chocolatey.md
-          - oss/windows/scoop.md
-          - oss/windows/cheat-engine.md
-          - oss/windows/cmder.md
-          - oss/windows/cygwin.md
-          - oss/windows/terminal.md
-          - oss/windows/wsl.md
+      - oss/naming.md
+      - 壳层:
+          - oss/shs/index.md
+      - 兼容:
+          - oss/xps/index.md
+      - Kali:
+          - oss/kali/index.md
+          - APT: oss/ubuntu/apt.md
+          - oss/kali/dirbuster.md
+          - oss/kali/nmap.md
+          - oss/kali/skipfish.md
+      - Ubuntu:
+          - oss/ubuntu/index.md
+          - APT: oss/ubuntu/apt.md
+          - deb: oss/ubuntu/deb.md
+      - CentOS:
+          - oss/centos/index.md
+          - oss/centos/dnf.md
+      - NixOS:
+          - oss/nixos/index.md
+          - Nix: oss/nixos/nix.md
+      - Arch:
+          - oss/arch/index.md
+          - oss/arch/pacman.md
       - GNU/Linux:
           - oss/linux/index.md
+          - Nix: oss/nixos/nix.md
           - Coreutils:
               - oss/linux/coreutils/index.md
           - iproute2:
@@ -110,26 +116,22 @@ nav:
           - oss/linux/tldr.md
           - oss/linux/top.md
           - oss/linux/users.md
-      - Arch:
-          - oss/arch/index.md
-          - oss/arch/pacman.md
-      - CentOS:
-          - oss/centos/index.md
-          - oss/centos/dnf.md
-      - Ubuntu:
-          - oss/ubuntu/index.md
-          - APT: oss/ubuntu/apt.md
-          - deb: oss/ubuntu/deb.md
-      - Alpine:
-          - oss/alpine/index.md
-      - Tails:
-          - oss/Tails/index.md
-      - Kali:
-          - oss/kali/index.md
-          - APT: oss/ubuntu/apt.md
-          - oss/kali/dirbuster.md
-          - oss/kali/nmap.md
-          - oss/kali/skipfish.md
+      - Windows:
+          - oss/windows/index.md
+          - oss/windows/chocolatey.md
+          - oss/windows/scoop.md
+          - oss/windows/cheat-engine.md
+          - oss/windows/cmder.md
+          - oss/windows/cygwin.md
+          - oss/windows/terminal.md
+          - oss/windows/wsl.md
+      - 引导:
+          - oss/booting/index.md
+          - GRUB: oss/booting/grub.md
+  - 虚拟化:
+      - virts/index.md
+  - 硬件:
+      - hws/index.md
 
 #
 # [Build directories](https://www.mkdocs.org/user-guide/configuration/#build-directories)
