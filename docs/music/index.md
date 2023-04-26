@@ -1,10 +1,12 @@
 # 音乐
 
+!!! tldr inline end
+
+    [TOC]
+
 !!! cite inline end
 
     *   [每个人都应该了解的音乐理论](https://zhuanlan.zhihu.com/p/74547235)
-
-[TOC]
 
 ## 声音
 
