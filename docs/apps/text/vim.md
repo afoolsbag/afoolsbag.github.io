@@ -74,7 +74,7 @@
 ## `vimrc`
 
 ``` vim title=":edit $MYVIMRC"
---8<-- "includes/App/Text/Vim/.vimrc"
+--8<-- "includes/apps/text/vim/.vimrc"
 ```
 
 ## 小抄

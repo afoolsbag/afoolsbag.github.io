@@ -194,14 +194,14 @@ theme:
 
 extra_css:
   # [abcjs](https://abcjs.net/)
-  - https://unpkg.com/abcjs@6.1.6/abcjs-audio.css
+  - https://unpkg.com/abcjs@6.2.2/abcjs-audio.css
   - assets/stylesheets/abcjs.css
 
 extra_javascript:
   # [MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)
   - assets/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js
   # [Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/?h=table+sort#sortable-tables)
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.date.min.js
@@ -211,15 +211,15 @@ extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.number.min.js
   - assets/javascripts/tablesort.js
   # [abcjs](https://abcjs.net/)
-  - https://unpkg.com/abcjs@6.1.6/dist/abcjs-basic-min.js
+  - https://unpkg.com/abcjs@6.2.2/dist/abcjs-basic-min.js
   - assets/javascripts/abcjs.js
   # [Plotly](https://plotly.com/javascript/)
-  - https://unpkg.com/plotly.js@2.16.3/dist/plotly-basic.min.js
+  - https://unpkg.com/plotly.js@2.21.0/dist/plotly-basic.min.js
 
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/afoolsbag
+      link: https://github.com/afoolsbag/
       name: afoolsbag on GitHub
 
 #
