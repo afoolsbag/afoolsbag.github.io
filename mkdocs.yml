@@ -196,6 +196,7 @@ extra_css:
   # [abcjs](https://abcjs.net/)
   - https://unpkg.com/abcjs@6.2.2/abcjs-audio.css
   - assets/stylesheets/abcjs.css
+  - assets/stylesheets/extra.css
 
 extra_javascript:
   # [MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)

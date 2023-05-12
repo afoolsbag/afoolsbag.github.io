@@ -21,25 +21,30 @@
 
 <!-- 9 -->
 
-
 <!-- A -->
 [Aconvert]: <https://www.aconvert.com/>
 [aldeid]: <https://www.aldeid.com/wiki/Main_Page>
 [ALL TO ALL]: <https://www.alltoall.net/>
 [AlmaLinux]: <https://almalinux.org/>
 [Alpine]: <https://alpinelinux.org/>
+[AlternativeTo]: <https://alternativeto.net/> "AlternativeTo - Crowdsourced software recommendations"
 [APT]: <https://wiki.debian.org/AptCLI>
 [Aptitude]: <https://wiki.debian.org/Aptitude>
 [Arch]: <https://www.archlinux.org/>
 [ash]: <https://www.in-ulm.de/~mascheck/various/ash/> "Almquist Shell"
+[Awesome]: <https://awesome.re/>
 [Awesome Wallpapers]: <https://wallhaven.cc/>
 
 <!-- B -->
+[Baidu]: <https://www.baidu.com/>
 [bash]: <https://www.gnu.org/software/bash/> "Bourne-Again Shell"
 [Behind the Name]: <https://www.behindthename.com/>
 [bettercap]: <https://bettercap.org/>
 [Beyond Compare]: <https://scootersoftware.com/>
+[Bing]: <https://bing.com/>
 [Bing Wallpaper]: <https://www.microsoft.com/bing/bing-wallpaper>
+[BTDigg]: <https://btdig.com/>
+[BTSOW]: <https://btsow.com/>
 
 <!-- C -->
 [CentOS]: <https://centos.org/> "Community Enterprise Operating System"
@@ -63,6 +68,7 @@
 [dpkg]: <https://www.dpkg.org/>
 [draw.io]: <https://draw.io/>
 [dSniff]: <https://monkey.org/~dugsong/dsniff/>
+[DuckDuckGo]: <https://duckduckgo.com/>
 
 <!-- E -->
 [Elecard]: <https://elecard.com/>
@@ -86,6 +92,7 @@
 [Git]: <https://git-scm.com/>
 [GitFlow]: <https://github.com/nvie/gitflow> 
 [GitHub]: <https://github.com/>
+[Google]: <https://www.google.com/>
 [GPU-Z]: <https://www.techpowerup.com/download/techpowerup-gpu-z/>
 [Graphviz]: <https://graphviz.org/>
 [GRUB]: <https://www.gnu.org/software/grub/>
@@ -96,6 +103,7 @@
 <!-- I -->
 [IDA]: <https://hex-rays.com/products/ida/>
 [IDM]: <https://www.internetdownloadmanager.com/>
+[InfoQ]: <https://infoq.cn/>
 [iPerf]: <https://iperf.fr/>
 [Iris]: https://iristech.co/>
 
@@ -110,6 +118,7 @@
 <!-- L -->
 [LALAL.AI]: <https://www.lalal.ai/>
 [lftp]: <https://lftp.tech/>
+[Library Genesis]: <https://libgen.fun/> "成立于 2008"
 [Linguist]: <https://github.com/github/linguist>
 
 <!-- M -->
@@ -130,6 +139,7 @@
 [NSSM]: <https://nssm.cc/>
 
 <!-- O -->
+[OEIS]: <https://oeis.org/>
 [OllyDbg]: <http://ollydbg.de/>
 [OpenBSD]: <https://www.openobsd.org/> "Open Berkeley Software Distribution"
 [OpenSSH]: <https://www.openssh.com/>
@@ -138,6 +148,7 @@
 <!-- P -->
 [PC Hunter]: <http://xuetr.com/>
 [PCI-Z]: <https://www.pci-z.com/>
+[The Pirate Bay]: <https://thepiratebay.org/>
 [PlantUML]: <https://plantuml.com/>
 [Podman]: <https://podman.io/>
 [Postman]: <https://postman.com/>
@@ -162,8 +173,13 @@
 
 <!-- S -->
 [scsh]: <https://scsh.net/> "Scheme Shell"
+[Sci-Hub]: <https://sci-hub.se/> "成立于 2011-04-16"
 [SecureCRT]: <https://vandyke.com/products/securecrt/>
 [Serva]: <https://vercot.com/~serva/>
+[SimilarSites]: <https://www.similarsites.com/> "Similarsites.com - Easily Explore alternative websites"
+[Slant]: <https://www.slant.co/> "Choose the best - Slant"
+[Sogou]: <https://www.sogou.com/>
+[Soso]: <http://soso.com/>
 [Sourcetree]: <https://www.sourcetreeapp.com/>
 [SSD-Z]: <http://aezay.dk/aezay/ssdz/>
 [StarUML]: <https://staruml.io/>
@@ -176,6 +192,8 @@
 [tcsh]: <https://www.tcsh.org/> "TENEX C Shell"
 [Tails]: <https://tails.boum.org/>
 [Terminal]: <https://github.com/microsoft/terminal>
+[TIOBE Index]: <https://tiobe.com/tiobe-index/>
+[Track Awesome List]: <https://trackawesomelist.com/>
 [Transmission]: <https://transmissionbt.com/>
 
 <!-- U -->
@@ -193,6 +211,7 @@
 [vsftpd]: <https://security.appspot.com/vsftpd.html>
 
 <!-- W -->
+[Wolfram|Alpha]: <https://wolframalpha.com/>
 [WePE]: <http://www.wepe.com.cn/>
 [wikiHow]: <https://www.wikihow.com/>
 [Wikipedia]: <https://www.wikipedia.org/>
@@ -210,8 +229,11 @@
 [XMake]: <https://xmake.io/>
 
 <!-- Y -->
+[Yahoo Search]: <https://search.yahoo.com/>
+[Yandex]: <https://yandex.com/>
 
 <!-- Z -->
+[Z-Library]: <https://z-lib.org/> "成立于 2009"
 [zsh]: <http://www.zsh.org/ "Z Shell"
 
 <!-- UNICODE -->
