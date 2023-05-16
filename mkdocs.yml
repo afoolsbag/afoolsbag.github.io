@@ -199,11 +199,18 @@ extra_css:
   - assets/stylesheets/extra.css
 
 extra_javascript:
-  # [MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)
-  - assets/javascripts/mathjax.js
+  # [Polyfill.io](https://polyfill.io/)
   - https://polyfill.io/v3/polyfill.min.js?features=es6
+
+  # [Meterial for MkDocs § MathJax](https://squidfunk.github.io/mkdocs-material/reference/mathjax/)
+  # [MathJax](https://mathjax.org/)
+  # [UNPKG § MathJax](https://unpkg.com/mathjax/)
+  - assets/javascripts/mathjax.js
   - https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js
-  # [Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/?h=table+sort#sortable-tables)
+
+  # [Meterial for MkDocs § Sortable tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/?h=table+sort#sortable-tables)
+  # [tablesort](https://github.com/tristen/tablesort)
+  # [UNPKG § tablesort](https://unpkg.com/tablesort/)
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.date.min.js
   - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.dotsep.min.js
@@ -211,11 +218,15 @@ extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.monthname.min.js
   - https://unpkg.com/tablesort@5.3.0/dist/sorts/tablesort.number.min.js
   - assets/javascripts/tablesort.js
+
   # [abcjs](https://abcjs.net/)
+  # [UNPKG § abcjs](https://unpkg.com/abcjs/)
   - https://unpkg.com/abcjs@6.2.2/dist/abcjs-basic-min.js
   - assets/javascripts/abcjs.js
+
   # [Plotly](https://plotly.com/javascript/)
-  - https://unpkg.com/plotly.js@2.21.0/dist/plotly-basic.min.js
+  # [UNPKG § Plotly](https://unpkg.com/plotly.js/)
+  - https://unpkg.com/plotly.js@2.23.0/dist/plotly-basic.min.js
 
 extra:
   social:
@@ -263,7 +274,7 @@ markdown_extensions:
         - name: mermaid               #   [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-        - name: abc                   #   []
+        - name: abc
           class: abctext
           format: !!python/name:pymdownx.superfences.fence_code_format
 # - markdown.extensions.footnotes     # ├Footnotes
@@ -298,6 +309,6 @@ markdown_extensions:
 
 plugins:
   - git-revision-date-localized
-  - minify:
-      minify_html: true
+#  - minify:
+#      minify_html: true
   - search
