@@ -1,9 +1,9 @@
-document$.subscribe(function () {
-  const id = 'tuning-summary-plot'
-  if (document.getElementById(id)?.tagName?.toLowerCase() !== 'div')
+document$.subscribe(() => {
+  const elem = document.getElementById('tuning-summary-plot')
+  if (elem?.tagName !== 'DIV')
     return;
 
-  Plotly.newPlot(id, [
+  Plotly.newPlot(elem, [
     {
       name: '三分损益法',
       y: [1.000000, 1.067871, 1.125000, 1.201355, 1.265625, 1.351524, 1.423828, 1.500000, 1.601807, 1.687500, 1.802032, 1.898438, 2.027287]

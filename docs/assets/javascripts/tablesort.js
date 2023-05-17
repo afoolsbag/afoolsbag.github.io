@@ -1,6 +1,15 @@
-document$.subscribe(function () {
-  var tables = document.querySelectorAll("article table:not([class])")
-  tables.forEach(function (table) {
+// [window.document$](https://github.com/squidfunk/mkdocs-material/blob/9.1.13/src/assets/javascripts/bundle.ts#L301)
+// [./bundle.documents$](https://github.com/squidfunk/mkdocs-material/blob/9.1.13/src/assets/javascripts/bundle.ts#L128)
+// [./browser.watchDocument()](https://github.com/squidfunk/mkdocs-material/blob/9.1.13/src/assets/javascripts/browser/document/index.ts#L41)
+// [rxjs.Subject](https://rxjs.dev/api/index/class/Subject)
+// [rxjs.Observable.subscribe](https://rxjs.dev/api/index/class/Observable#subscribe)
+document$.subscribe(() => {
+  // [Window.document](https://developer.mozilla.org/docs/Web/API/Window/document)
+  // [Document.querySelectorAll](https://developer.mozilla.org/docs/Web/API/Document/querySelectorAll)
+  const tables = document.querySelectorAll("article table:not([class])")
+  // [NodeList.forEach](https://developer.mozilla.org/docs/Web/API/NodeList/forEach)
+  tables.forEach((table) => {
+    // [tablesort](http://tristen.ca/tablesort/demo/)
     new Tablesort(table)
   })
 })

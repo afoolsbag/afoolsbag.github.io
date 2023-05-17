@@ -201,7 +201,7 @@
 ## 七声音阶的音程
 
 音阶（Scale）
-:   分出高低的一系列乐调，按指定的音程图式升降音高，并按在八音音阶中的音调数而有不同的音高排列和音程大小。
+:   分出高低的一系列乐调，按指定的音程图式升降音高，并按在八度音程中的音调数而有不同的音高排列和音程大小。
 
 |         |    **C**    |    **D**    |    **E**    |    **F**    |    **G**    |    **A**    |    **B**    |
 | :-----: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: |
@@ -266,219 +266,217 @@
 
 ## 速度
 
-??? "速度表"
+!!! cite inline end ""
 
-    !!! cite inline end ""
+    *   意大利语：[Tempo (musica)](https://it.wikipedia.org/wiki/Tempo_(musica))
+    *   英语：[Tempo](https://en.wikipedia.org/wiki/Tempo)
+    *   中文：[速度 (音乐)](https://zh.wikipedia.org/wiki/速度_(音乐))
 
-        *   意大利语：[Tempo (musica)](https://it.wikipedia.org/wiki/Tempo_(musica))
-        *   英语：[Tempo](https://en.wikipedia.org/wiki/Tempo)
-        *   中文：[速度 (音乐)](https://zh.wikipedia.org/wiki/速度_(音乐))
-
-    | 意大利语         | 中文       |  BPM(it)  |      BPM(en)      |  BPM(zh)  |
-    | :--------------- | :--------- | :-------: | :---------------: | :-------: |
-    | Prestissimo      | 最急板     |   > 177   |      >= 200       | 200 - 208 |
-    | Presto           | 急板       | 100 - 208 |     186 - 200     | 168 - 200 |
-    | Allegro vivace   |            |           |     172 - 176     |           |
-    | Allegrissimo     | 快而活跃的 | 150 - 167 |     172 - 176     |           |
-    | Vivacissimamente |            |           |     172 - 176     |           |
-    | Vivacissimo      |            | 140 - 150 |     172 - 176     |           |
-    | Vivo             |            |           |                   |           |
-    | Vivace           | 活泼的     | 126 - 144 |     156 - 176     |   ~140    |
-    | Molto Allegro    |            |           |     124 - 156     |           |
-    | Allegramente     |            | 84 - 168  |                   |           |
-    | Allegro          | 快板       | 84 - 168  |     120 - 156     | 120 - 168 |
-    | Allegro moderato | 中速的快板 | 112 - 124 |     116 - 120     |           |
-    | Allegretto       | 小快板     | 98 - 109  |     112 - 120     | 104 - 112 |
-    | Veloce           |            |           |                   |           |
-    | Rapido           |            |           |                   |           |
-    | Moderato         | 中板       |  66 - 68  |     108 - 120     | 90 - 115  |
-    | Marcia moderato  |            |  83 - 85  |      83 - 85      |           |
-    | Mosso            |            |           |                   |           |
-    | Con moto         |            |           |                   |           |
-    | Andantino        | 小行板     |  66 - 83  |     80 - 108      |           |
-    | Andante          | 行板       | 56 - 108  |     76 - 108      | 76 - 108  |
-    | Andante moderato |            |  69 - 72  |     92 - 112      |           |
-    | Adagietto        | 小慢板     |  65 - 80  | 72 - 76 / 70 - 80 |           |
-    | Adagio           | 慢板       |  48 - 97  |      66 - 76      |  66 - 76  |
-    | Sostenuto        |            |           |                   |           |
-    | Tenuto           |            |           |                   |           |
-    | Larghetto        | 小广板     |  50 - 66  |      60 - 66      |  60 - 66  |
-    | Lentamente       |            |  40 - 48  |                   |           |
-    | Largamente       |            |  40 - 48  |                   |           |
-    | Lento            | 缓板       |  40 - 48  |      45 - 60      |  60 - 60  |
-    | Largo            | 广板       |  40 - 48  |      40 - 60      |           |
-    | Grave            | 庄严的     |   <= 44   |      25 - 45      |           |
-    | Lentissimo       | 甚缓       |    ~40    |                   |           |
-    | Adagissimo       |            |           |      24 - 40      |           |
-    | Larghissimo      | 极端地缓慢 |   <= 40   |       <= 24       |   <= 40   |
+| 意大利语         | 中文       |  BPM(it)  |      BPM(en)      |  BPM(zh)  |
+| :--------------- | :--------- | :-------: | :---------------: | :-------: |
+| Prestissimo      | 最急板     |   > 177   |      >= 200       | 200 - 208 |
+| Presto           | 急板       | 100 - 208 |     186 - 200     | 168 - 200 |
+| Allegro vivace   |            |           |     172 - 176     |           |
+| Allegrissimo     | 快而活跃的 | 150 - 167 |     172 - 176     |           |
+| Vivacissimamente |            |           |     172 - 176     |           |
+| Vivacissimo      |            | 140 - 150 |     172 - 176     |           |
+| Vivo             |            |           |                   |           |
+| Vivace           | 活泼的     | 126 - 144 |     156 - 176     |   ~140    |
+| Molto Allegro    |            |           |     124 - 156     |           |
+| Allegramente     |            | 84 - 168  |                   |           |
+| Allegro          | 快板       | 84 - 168  |     120 - 156     | 120 - 168 |
+| Allegro moderato | 中速的快板 | 112 - 124 |     116 - 120     |           |
+| Allegretto       | 小快板     | 98 - 109  |     112 - 120     | 104 - 112 |
+| Veloce           |            |           |                   |           |
+| Rapido           |            |           |                   |           |
+| Moderato         | 中板       |  66 - 68  |     108 - 120     | 90 - 115  |
+| Marcia moderato  |            |  83 - 85  |      83 - 85      |           |
+| Mosso            |            |           |                   |           |
+| Con moto         |            |           |                   |           |
+| Andantino        | 小行板     |  66 - 83  |     80 - 108      |           |
+| Andante          | 行板       | 56 - 108  |     76 - 108      | 76 - 108  |
+| Andante moderato |            |  69 - 72  |     92 - 112      |           |
+| Adagietto        | 小慢板     |  65 - 80  | 72 - 76 / 70 - 80 |           |
+| Adagio           | 慢板       |  48 - 97  |      66 - 76      |  66 - 76  |
+| Sostenuto        |            |           |                   |           |
+| Tenuto           |            |           |                   |           |
+| Larghetto        | 小广板     |  50 - 66  |      60 - 66      |  60 - 66  |
+| Lentamente       |            |  40 - 48  |                   |           |
+| Largamente       |            |  40 - 48  |                   |           |
+| Lento            | 缓板       |  40 - 48  |      45 - 60      |  60 - 60  |
+| Largo            | 广板       |  40 - 48  |      40 - 60      |           |
+| Grave            | 庄严的     |   <= 44   |      25 - 45      |           |
+| Lentissimo       | 甚缓       |    ~40    |                   |           |
+| Adagissimo       |            |           |      24 - 40      |           |
+| Larghissimo      | 极端地缓慢 |   <= 40   |       <= 24       |   <= 40   |
 
 ## ABC 记谱法
 
 [The abc standard](https://abcnotation.com/wiki/abc:standard)
 
-???+ "概览"
+### 概览
 
-    === "乐谱"
+=== "乐谱"
 
-        ``` abc
-        % ABC 乐曲
+    ``` abc
+    % ABC 乐曲
 
-        %
-        % [乐曲头](https://abcnotation.com/wiki/abc:standard:v2.1#information_fields)
-        %
-        X:1                     % 参考编号 [X:reference number](https://abcnotation.com/wiki/abc:standard:v2.1#xreference_number)
-        T:The Title             % 乐曲标题 [T:tune title](https://abcnotation.com/wiki/abc:standard:v2.1#ttune_title)
-        T:An Alternative Title  % 第二标题（，以及更多标题）
-        C:The Composer          % 作曲家 [C:composer](https://abcnotation.com/wiki/abc:standard:v2.1#ccomposer)
-        R:The Rhythm            % 节奏 [R:rhythm](https://abcnotation.com/wiki/abc:standard:v2.1#rrhythm)
-        Q:"Presto" 1/4=186      % 速度 [Q:tempo](https://abcnotation.com/wiki/abc:standard:v2.1#qtempo)
-        M:4/4                   % 拍号 [M:meter](https://abcnotation.com/wiki/abc:standard:v2.1#mmeter)
-        K:G                     % 调号 [K:key](https://abcnotation.com/wiki/abc:standard:v2.1#kkey)
-        %
-        % [乐曲体](https://abcnotation.com/wiki/abc:standard:v2.1#the_tune_body)
-        %
-          G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
-        w:G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
-        ```
+    %
+    % [乐曲头](https://abcnotation.com/wiki/abc:standard:v2.1#information_fields)
+    %
+    X:1                     % 参考编号 [X:reference number](https://abcnotation.com/wiki/abc:standard:v2.1#xreference_number)
+    T:The Title             % 乐曲标题 [T:tune title](https://abcnotation.com/wiki/abc:standard:v2.1#ttune_title)
+    T:An Alternative Title  % 第二标题（，以及更多标题）
+    C:The Composer          % 作曲家 [C:composer](https://abcnotation.com/wiki/abc:standard:v2.1#ccomposer)
+    R:The Rhythm            % 节奏 [R:rhythm](https://abcnotation.com/wiki/abc:standard:v2.1#rrhythm)
+    Q:"Presto" 1/4=186      % 速度 [Q:tempo](https://abcnotation.com/wiki/abc:standard:v2.1#qtempo)
+    M:4/4                   % 拍号 [M:meter](https://abcnotation.com/wiki/abc:standard:v2.1#mmeter)
+    K:G                     % 调号 [K:key](https://abcnotation.com/wiki/abc:standard:v2.1#kkey)
+    %
+    % [乐曲体](https://abcnotation.com/wiki/abc:standard:v2.1#the_tune_body)
+    %
+      G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
+    w:G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
+    ```
 
-    === "ABC 记谱法"
+=== "ABC 记谱法"
 
-        ``` text
-        % ABC 乐曲
+    ``` text
+    % ABC 乐曲
 
-        %
-        % [乐曲头](https://abcnotation.com/wiki/abc:standard:v2.1#information_fields)
-        %
-        X:1                     % 参考编号 [X:reference number](https://abcnotation.com/wiki/abc:standard:v2.1#xreference_number)
-        T:The Title             % 乐曲标题 [T:tune title](https://abcnotation.com/wiki/abc:standard:v2.1#ttune_title)
-        T:An Alternative Title  % 第二标题（，以及更多标题）
-        C:The Composer          % 作曲家 [C:composer](https://abcnotation.com/wiki/abc:standard:v2.1#ccomposer)
-        R:The Rhythm            % 节奏 [R:rhythm](https://abcnotation.com/wiki/abc:standard:v2.1#rrhythm)
-        Q:"Presto" 1/4=186      % 速度 [Q:tempo](https://abcnotation.com/wiki/abc:standard:v2.1#qtempo)
-        M:4/4                   % 拍号 [M:meter](https://abcnotation.com/wiki/abc:standard:v2.1#mmeter)
-        K:G                     % 调号 [K:key](https://abcnotation.com/wiki/abc:standard:v2.1#kkey)
-        %
-        % [乐曲体](https://abcnotation.com/wiki/abc:standard:v2.1#the_tune_body)
-        %
-          G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
-        w:G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
-        ```
+    %
+    % [乐曲头](https://abcnotation.com/wiki/abc:standard:v2.1#information_fields)
+    %
+    X:1                     % 参考编号 [X:reference number](https://abcnotation.com/wiki/abc:standard:v2.1#xreference_number)
+    T:The Title             % 乐曲标题 [T:tune title](https://abcnotation.com/wiki/abc:standard:v2.1#ttune_title)
+    T:An Alternative Title  % 第二标题（，以及更多标题）
+    C:The Composer          % 作曲家 [C:composer](https://abcnotation.com/wiki/abc:standard:v2.1#ccomposer)
+    R:The Rhythm            % 节奏 [R:rhythm](https://abcnotation.com/wiki/abc:standard:v2.1#rrhythm)
+    Q:"Presto" 1/4=186      % 速度 [Q:tempo](https://abcnotation.com/wiki/abc:standard:v2.1#qtempo)
+    M:4/4                   % 拍号 [M:meter](https://abcnotation.com/wiki/abc:standard:v2.1#mmeter)
+    K:G                     % 调号 [K:key](https://abcnotation.com/wiki/abc:standard:v2.1#kkey)
+    %
+    % [乐曲体](https://abcnotation.com/wiki/abc:standard:v2.1#the_tune_body)
+    %
+      G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
+    w:G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
+    ```
 
-??? "谱号和移调"
+### 谱号和移调
 
-    !!! cite inline end ""
+!!! cite inline end ""
 
-        [4.6 Clefs and transposition](https://abcnotation.com/wiki/abc:standard:v2.1#clefs_and_transposition)
+    [4.6 Clefs and transposition](https://abcnotation.com/wiki/abc:standard:v2.1#clefs_and_transposition)
 
-    === "高音谱号"
+=== "高音谱号"
 
-        ``` abc
-        T:高音谱号
-        T:G 谱号
-        K:treble
-          G  | C  D  E  F  G  A  B
-        w:G₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
-        ```
+    ``` abc
+    T:高音谱号
+    T:G 谱号
+    K:treble
+      G  | C  D  E  F  G  A  B
+    w:G₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+    ```
 
-    === "中音谱号"
+=== "中音谱号"
 
-        ``` abc
-        T:中音谱号
-        T:C 谱号
-        K:alto
-          C  | C  D  E  F  G  A  B
-        w:C₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
-        ```
+    ``` abc
+    T:中音谱号
+    T:C 谱号
+    K:alto
+      C  | C  D  E  F  G  A  B
+    w:C₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+    ```
 
-    === "次中音谱号"
+=== "次中音谱号"
 
-        ``` abc
-        T:次中音谱号
-        K:tenor
-          C  | C  D  E  F  G  A  B
-        w:C₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
-        ```
+    ``` abc
+    T:次中音谱号
+    K:tenor
+      C  | C  D  E  F  G  A  B
+    w:C₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+    ```
 
-    === "低音谱号"
+=== "低音谱号"
 
-        ``` abc
-        T:低音谱号
-        T:F 谱号
-        K:bass
-          F, | C  D  E  F  G  A  B
-        w:F₃ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
-        ```
+    ``` abc
+    T:低音谱号
+    T:F 谱号
+    K:bass
+      F, | C  D  E  F  G  A  B
+    w:F₃ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+    ```
 
-??? "调式"
+### 调式
 
-    !!! cite inline end ""
+!!! cite inline end ""
 
-        [Mode (music) - Wikipedia](https://wikipedia.org/wiki/Mode_(music))
+    [Mode (music) - Wikipedia](https://wikipedia.org/wiki/Mode_(music))
 
-    === "伊奥尼亚调式"
+=== "伊奥尼亚调式"
 
-        ``` abc
-        T:伊奥尼亚调式（Ionian）
-        T:自然大调（Major）
-        K:C ionian
-          C  D  E  F  G  A  B  c
-        w:C  D  E  F  G  A  B  c
-        ```
+    ``` abc
+    T:伊奥尼亚调式（Ionian）
+    T:自然大调（Major）
+    K:C ionian
+      C  D  E  F  G  A  B  c
+    w:C  D  E  F  G  A  B  c
+    ```
 
-    === "多利亚调式"
+=== "多利亚调式"
 
-        ``` abc
-        T:多利亚调式（Dorian）
-        K:C dorian
-          C  D  E  F  G  A  B  c
-        w:C  D  E♭ F  G  A  B♭ c
-        ```
+    ``` abc
+    T:多利亚调式（Dorian）
+    K:C dorian
+      C  D  E  F  G  A  B  c
+    w:C  D  E♭ F  G  A  B♭ c
+    ```
 
-    === "弗里几亚调式"
+=== "弗里几亚调式"
 
-        ``` abc
-        T:弗里几亚调式（Phrygian）
-        K:C phrygian
-          C  D  E  F  G  A  B  c
-        w:C  D♭ E♭ F  G  A♭ B♭ c
-        ```
+    ``` abc
+    T:弗里几亚调式（Phrygian）
+    K:C phrygian
+      C  D  E  F  G  A  B  c
+    w:C  D♭ E♭ F  G  A♭ B♭ c
+    ```
 
-    === "利底亚调式"
+=== "利底亚调式"
 
-        ``` abc
-        T:利底亚调式（Lydian）
-        K:C lydian
-          C  D  E  F  G  A  B  c
-        w:C  D  E  F♯ G  A  B  c
-        ```
+    ``` abc
+    T:利底亚调式（Lydian）
+    K:C lydian
+      C  D  E  F  G  A  B  c
+    w:C  D  E  F♯ G  A  B  c
+    ```
 
-    === "混合利底亚调式"
+=== "混合利底亚调式"
 
-        ``` abc
-        T:混合利底亚调式（Mixo-lydian）
-        K:C mixolydian
-          C  D  E  F  G  A  B  c
-        w:C  D  E  F  G  A  B♭ c
-        ```
+    ``` abc
+    T:混合利底亚调式（Mixo-lydian）
+    K:C mixolydian
+      C  D  E  F  G  A  B  c
+    w:C  D  E  F  G  A  B♭ c
+    ```
 
-    === "爱奥尼亚调式"
+=== "爱奥尼亚调式"
 
-        ``` abc
-        T:爱奥尼亚调式（Aeolian）
-        T:自然小调（Minor）
-        K:C aeolian
-          C  D  E  F  G  A  B  c
-        w:C  D  E♭ F  G  A♭ B♭ c
-        ```
+    ``` abc
+    T:爱奥尼亚调式（Aeolian）
+    T:自然小调（Minor）
+    K:C aeolian
+      C  D  E  F  G  A  B  c
+    w:C  D  E♭ F  G  A♭ B♭ c
+    ```
 
-    === "洛克里亚调式"
+=== "洛克里亚调式"
 
-        ``` abc
-        T:洛克里亚调式（Locrian）
-        K:C locrian
-          C  D  E  F  G  A  B  c
-        w:C  D♭ E♭ F  G♭ A♭ B♭ c
-        ```
+    ``` abc
+    T:洛克里亚调式（Locrian）
+    K:C locrian
+      C  D  E  F  G  A  B  c
+    w:C  D♭ E♭ F  G♭ A♭ B♭ c
+    ```
 
 <!----------------------------------------------------------------------------->
 

@@ -1,3 +1,4 @@
+// [Configuring MathJax](https://docs.mathjax.org/en/latest/web/configuration.html#configuration)
 window.MathJax = {
   tex: {
     inlineMath: [["\\(", "\\)"]],

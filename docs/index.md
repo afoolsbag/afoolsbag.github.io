@@ -29,7 +29,7 @@
 <span nowrap>:simple-yahoo:              [Yahoo! 搜索][Yahoo Search]{:target="_blank"}</span>
 <span nowrap>:material-function-variant: **数学**</span>
 <span nowrap>:octicons-link-external-16: [OEIS 整数序列搜索][OEIS]{:target="_blank"}</span>
-<span nowrap>:octicons-link-external-16: [:simple-wolfram: Wolfram\|Alpha 知识库][Wolfram|Alpha]{:target="_blank"}</span>
+<span nowrap>:simple-wolfram:            [Wolfram\|Alpha 知识库][Wolfram|Alpha]{:target="_blank"}</span>
 <span nowrap>:material-library-shelves:  **学术**</span>
 <span nowrap>:octicons-link-external-16: [创世纪图书馆][Library Genesis]{:target="_blank"}</span>
 <span nowrap>:octicons-link-external-16: [Z-Library]{:target="_blank"}</span>
@@ -70,13 +70,18 @@
 
 ## 仰望星空
 
-[Dollar Street](https://gapminder.org/dollar-street "Dollar Street - photos as data to kill country stereotypes")
-
-参见：
-
-*   [Homo sapiens sapiens - Wikispecies](https://species.wikimedia.org/wiki/Homo_sapiens_sapiens)
-*   [Taxonomy - NCBI](https://www.ncbi.nlm.nih.gov/taxonomy)（美国国家生物技术信息中心）
-*   [International Commission on Stratigraphy § 国际年代地层表](https://stratigraphy.org/chart)
+<span nowrap>:fontawesome-solid-seedling:    **生命**</span>
+<span nowrap>:fontawesome-solid-seedling:    [生命之树](https://www.onezoom.org/life "Tree of Life"){:target="_blank"}</span>
+<span nowrap>:octicons-history-16:           **时间**</span>
+<span nowrap>:octicons-link-external-16:     [国际年代地层表](https://stratigraphy.org/timescale/ "International Chronostratigraphic Chart"){:target="_blank"}</span>
+<span nowrap>:material-space-station:        **空间**</span>
+<span nowrap>:earth_asia:                    [地球](https://eyes.nasa.gov/apps/earth/){:target="_blank"}</span>
+<span nowrap>:comet:                         [小行星](https://eyes.nasa.gov/apps/asteroids/){:target="_blank"}</span>
+<span nowrap>:sunny:                         [太阳系](https://eyes.nasa.gov/apps/solar-system/){:target="_blank"}</span>
+<span nowrap>:star:                          [系外行星](https://eyes.nasa.gov/apps/exo/){:target="_blank"}</span>
+<span nowrap>:straight_ruler:                [宇宙的刻度](https://scaleofuniverse.com/ "Scale of the Universe"){:target="_blank"}</span>
+<span nowrap>:octicons-people-16:            **文化**</span>
+<span nowrap>:fontawesome-solid-dollar-sign: [Dollar Street](https://gapminder.org/dollar-street "Dollar Street - photos as data to kill country stereotypes"){:target="_blank"}</span>
 
 <!----------------------------------------------------------------------------->
 

@@ -1,9 +1,10 @@
-document$.subscribe(function () {
-  const id = 'mode-summary-plot'
-  if (document.getElementById(id)?.tagName?.toLowerCase() !== 'div')
+document$.subscribe(() => {
+  const elem = document.getElementById('mode-summary-plot')
+  if (elem?.tagName !== 'DIV')
     return;
 
-  Plotly.newPlot(id, [
+  // [Plotly.newPlot](https://plotly.com/javascript/plotlyjs-function-reference/#plotlynewplot)
+  Plotly.newPlot(elem, [
     {
       name: '伊奥尼亚 Ionian、自然大调 Natural Major',
       y: [0, 2, 4, 5, 7, 9, 11, 12]
