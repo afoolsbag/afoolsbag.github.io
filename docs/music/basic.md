@@ -308,11 +308,7 @@
 | Adagissimo       |            |           |      24 - 40      |           |
 | Larghissimo      | 极端地缓慢 |   <= 40   |       <= 24       |   <= 40   |
 
-## ABC 记谱法
-
-[The abc standard](https://abcnotation.com/wiki/abc:standard)
-
-### 概览
+## 五线谱
 
 === "乐谱"
 
@@ -360,6 +356,8 @@
     w:G, A, B, C  D  E  F  G  A  B  c  d  e  f  g  a  b  c' d'
     ```
 
+参见 [The abc standard](https://abcnotation.com/wiki/abc:standard)。
+
 ### 谱号
 
 === "高音谱号"
@@ -367,10 +365,11 @@
 
     ``` abc
     T:高音谱号
-    T:G 谱号，C₄ ~ B₅
+    T:G 谱号
+    T:E♭₄ ~ F♯₅
     K:treble
-      G  | C  ^C  D  ^D  E  F  ^F  G  ^G  A  ^A  B  c  ^c  d  ^d  e  f  ^f  g  ^g  a  ^a  b
-    w:G₄ | C₄ C♯₄ D₄ D♯₄ E₄ F₄ F♯₄ G₄ G♯₄ A₄ A♯₄ B₄ C₅ C♯₅ D₅ D♯₅ E₅ F₅ F♯₅ G₅ G♯₅ A₅ A♯₅ B₅
+      G  | _E  E  F  ^F  G  ^G  A  ^A  B  c  ^c  d  ^d  e  f  ^f
+    w:G₄ | E♭₄ E₄ F₄ F♯₄ G₄ G♯₄ A₄ A♯₄ B₄ C₅ C♯₅ D₅ D♯₅ E₅ F₅ F♯₅
     ```
 
 === "中音谱号"
@@ -378,18 +377,20 @@
     ``` abc
     T:中音谱号
     T:C 谱号
+    T:F₃ ~ G♯₄
     K:alto
-      C  | C  D  E  F  G  A  B
-    w:C₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+      C  | F, ^F, G, ^G, A, ^A, B, C  ^C  D  ^D  E  F  ^F  G  ^G
+    w:C₄ | F₃ F♯₃ G₃ G♯₃ A₃ A♯₃ B₃ C₄ C♯₄ D₄ D♯₄ E₄ F₄ F♯₄ G₄ G♯₄
     ```
 
 === "次中音谱号"
 
     ``` abc
     T:次中音谱号
+    T:D♭₃ ~ E₄
     K:tenor
-      C  | C  D  E  F  G  A  B
-    w:C₄ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+      C  | _D, D, ^D, E, F, ^F, G, ^G, A, ^A, B, C  ^C  D  ^D  E
+    w:C₄ | D♭₃ D₃ D♯₃ E₃ F₃ F♯₃ G₃ G♯₃ A₃ A♯₃ B₃ C₄ C♯₄ D₄ D♯₄ E₄
     ```
 
 === "低音谱号"
@@ -397,18 +398,15 @@
     ``` abc
     T:低音谱号
     T:F 谱号
+    T:G♭₂ ~ A♯₃
     K:bass
-      F, | C  D  E  F  G  A  B
-    w:F₃ | C₄ D₄ E₄ F₄ G₄ A₄ B₄
+      F, | _G,, G,, ^G,, A,, ^A,, B,, C, ^C, D, ^D, E, F, ^F, G, ^G, A, ^A,
+    w:F₃ | G♭₂  G₂  G♯₂  A₂  A♯₂  B₂  C₃ C♯₃ D₃ D♯₃ E₃ F₃ F♯₃ G₃ G♯₃ A₃ A♯₃
     ```
 
 参见 [4.6 Clefs and transposition](https://abcnotation.com/wiki/abc:standard:v2.1#clefs_and_transposition)。
 
 ### 调式
-
-!!! cite inline end ""
-
-    [Mode (music) - Wikipedia](https://wikipedia.org/wiki/Mode_(music))
 
 === "伊奥尼亚调式"
 
@@ -474,6 +472,8 @@
       C  D  E  F  G  A  B  c
     w:C  D♭ E♭ F  G♭ A♭ B♭ c
     ```
+
+参见 [Mode (music) - Wikipedia](https://wikipedia.org/wiki/Mode_(music))。
 
 <!----------------------------------------------------------------------------->
 
