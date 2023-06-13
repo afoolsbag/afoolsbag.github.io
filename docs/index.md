@@ -3,8 +3,11 @@
 
 ## 新鲜事
 
-<iframe width="300" height="200" src="https://www.ruanyifeng.com/blog/weekly/#page-title"></iframe>
-<iframe width="300" height="200" src="https://www.landiannews.com/#home-post-sidebar-4"></iframe>
+<iframe width="300" height="200" sandbox="allow-scripts" src="https://hackernews.betacat.io/zh.html"></iframe>
+<iframe width="300" height="200" sandbox="allow-scripts" src="https://www.ruanyifeng.com/blog/weekly/#page-title"></iframe>
+<iframe width="300" height="200" sandbox="allow-scripts" src="https://www.landiannews.com/#home-post-sidebar-4"></iframe>
+
+<span nowrap>:octicons-link-external-16: [计算机专业学习路线](https://hackway.org/docs/cs/intro){:target="_blank"}</span>
 
 <span nowrap>:material-newspaper:        [科技爱好者周刊](https://www.ruanyifeng.com/blog/weekly/){:target="_blank"}</span>
 <span nowrap>:material-newspaper:        [蓝点网](https://www.landiannews.com/){:target="_blank"}</span>
