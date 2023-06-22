@@ -36,10 +36,6 @@ nav:
       - dev-ops/sqlpad.md
       - 壳层:
           - Xshell: dev-ops/shell/xshell.md
-      - 虚拟化:
-          - Docker: dev-ops/virt/docker.md
-          - VMware: dev-ops/virt/vmware.md
-          - VirtualBox: dev-ops/virt/virtualbox.md
   - 应用:
       - apps/index.md
       - 文本:
@@ -131,6 +127,9 @@ nav:
           - GRUB: oss/booting/grub.md
   - 虚拟化:
       - virts/index.md
+      - Docker: dev-ops/virt/docker.md
+      - VMware: dev-ops/virt/vmware.md
+      - VirtualBox: dev-ops/virt/virtualbox.md
   - 硬件:
       - hws/index.md
 
