@@ -356,6 +356,10 @@ CertUtil 是命令行程序，作为 :material-microsoft-windows: Windows 证书
 
 请通过正规渠道获取以支持正版。
 
+??? tldr "MAS"
+
+    [MAS](https://massgrave.dev/)
+
 ??? tldr "KMS_VL_ALL_AIO"
 
     !!! warning "声明"

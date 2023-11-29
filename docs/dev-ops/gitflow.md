@@ -10,7 +10,7 @@ atlassian <https://www.atlassian.com/continuous-delivery/continuous-integration/
 
 ??? cite "流程一览"
 
-    ![git-flow.png](GitFlow-Overview.png)
+    ![git-flow.png](gitflow-overview.png)
 
 参见 [Using git-flow to automate your git branching workflow](https://jeffkreeftmeijer.com/git-flow/)。
 

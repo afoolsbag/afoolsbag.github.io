@@ -7,7 +7,8 @@
 *   [NDP Software :: Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
 *   [GitHub Git 备忘单 - GitHub Cheatsheets](https://training.github.com/)
 *   [Git Cheat Sheet | Tower Blog](https://www.git-tower.com/blog/git-cheat-sheet/)
-*   [Developing AngularJS § Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
+*   [约定式提交](https://www.conventionalcommits.org/zh-hans/)
+*   [语义化版本](https://semver.org/lang/zh-CN/)
 *   [A collection of .gitignore templates](https://github.com/github/gitignore)
 *   [Git教程 - 廖雪峰的官方网站](https://liaoxuefeng.com/wiki/896043488029600)
 *   [Sourcetree | Free Git GUI for Mac and Windows](https://sourcetreeapp.com/)
@@ -34,6 +35,26 @@
 ## 使用 :material-git: Git
 
 ### 凭证
+
+``` title=".gitconfig [-rw-rw-r--]"
+[user]
+	name = zhengrr
+	email = afoolsbag@gmail.com
+
+[credential]
+	helper = store
+
+[http "https://github.com"]
+	proxy = http://127.0.0.1:41091/
+	sslVerify = true
+[https "https://github.com"]
+	proxy = http://127.0.0.1:41091/
+	sslVerify = true
+```
+
+``` title=".git-credentials [-rw-------]"
+https://afoolsbag:#######@github.com
+```
 
 === ":material-ssh: SSH"
 
