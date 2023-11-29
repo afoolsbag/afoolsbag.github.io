@@ -82,8 +82,24 @@ $RECYCLE.BIN/
 *.lnk
 
 #-------------------------------------------------------------------------------
+# https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+# 2021-12-14
 
-/.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+#-------------------------------------------------------------------------------
+
 Pipfile.lock
 /site/
 !/*.cmd
