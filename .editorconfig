@@ -1,28 +1,49 @@
 # 代码风格配置。
 #
-# https://editorconfig.org/
+# <https://editorconfig.org/>
 #
-# 2022-10-27 – 2022-10-27
+# zhengrr
+# 2022-10-27 – 2023-11-29
+# Unlicense
 root = true
 
 # 缺省
 [*]
-charset = utf-8              # 源码以 UTF-8 编码保存
-insert_final_newline = true  # 文件末尾保留空行
+charset = utf-8
+                                        # 源码以 UTF-8 编码保存
+insert_final_newline = true
+                                        # 文件末尾保留空行
 
 # Windows 脚本
-[*.{bat,cmd}]
-end_of_line = crlf           # 以 `<CR><LF>` 换行
-indent_size = 1              # 缩进一个单位
-indent_style = tab           # 以制表符为缩进单位
-tab_width = 8                # 制表符宽 8 个空格
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+                                        # 以 `<CR><LF>` 换行
+indent_size = 1
+                                        # 缩进一个单位
+indent_style = tab
+                                        # 以制表符为缩进单位
+tab_width = 8
+                                        # 制表符宽 8 个空格
 
 # Linux 脚本
-[*.{bash,sh}]
-end_of_line = lf             # 以 `<LF>` 换行
-indent_size = 1              # 缩进一个单位
-indent_style = tab           # 以制表符为缩进单位
-tab_width = 8                # 制表符宽 8 个空格
+[*.{bash,fish,sh}]
+end_of_line = lf
+                                        # 以 `<LF>` 换行
+indent_size = 1
+                                        # 缩进一个单位
+indent_style = tab
+                                        # 以制表符为缩进单位
+tab_width = 8
+                                        # 制表符宽 8 个空格
+
+# Just 配方
+[*.justfile]
+indent_size = 1
+                                        # 缩进一个单位
+indent_style = tab
+                                        # 以制表符为缩进单位
+tab_width = 8
+                                        # 制表符宽 8 个空格
 
 # YAML
 [*.{yaml,yml}]
