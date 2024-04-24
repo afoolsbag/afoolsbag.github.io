@@ -1,0 +1,17 @@
+[tool.poetry]
+package-mode = false
+
+[[tool.poetry.source]]
+name = 'cernet'
+url = 'https://mirrors.cernet.edu.cn/pypi/web/simple/'
+priority = 'primary'
+
+[tool.poetry.dependencies]
+python = '^3.12'
+mkdocs-material = '*'
+mkdocs-minify-plugin = '*'
+mkdocs-git-revision-date-localized-plugin = '*'
+
+[build-system]
+requires = ['poetry-core']
+build-backend = 'poetry.core.masonry.api'

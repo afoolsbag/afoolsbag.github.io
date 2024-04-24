@@ -172,14 +172,14 @@ theme:
     # [导航](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/)
 #   - navigation.expand
     - navigation.indexes
-    - navigation.instant
+    - navigation.instant  # 即时加载
 #   - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - toc.follow
-    - toc.integrate
+#   - toc.integrate       # 目录导航集成
 
     # [搜索](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/)
     - search.suggest
@@ -189,12 +189,21 @@ theme:
     # [页眉](https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/)
     - header.autohide
 
+    # {Git}(https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/)
+    - content.action.view
+
     # [内容选项卡](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)
     - content.tabs.link
 
 extra_css:
   # [abcjs](https://abcjs.net/)
-  - https://unpkg.com/abcjs@6.2.2/abcjs-audio.css
+  # [UNPKG § abcjs](https://unpkg.com/abcjs/)
+  - https://unpkg.com/abcjs@6.2.3/abcjs-audio.css
+
+  # [Bootstrap](https://getbootstrap.com/)
+  # [UNPKG § Bootstrap](https://unpkg.com/bootstrap/)
+  - https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css
+
   - assets/stylesheets/abcjs.css
   - assets/stylesheets/extra.css
 
@@ -221,12 +230,12 @@ extra_javascript:
 
   # [abcjs](https://abcjs.net/)
   # [UNPKG § abcjs](https://unpkg.com/abcjs/)
-  - https://unpkg.com/abcjs@6.2.2/dist/abcjs-basic-min.js
+  - https://unpkg.com/abcjs@6.2.3/dist/abcjs-basic-min.js
   - assets/javascripts/abcjs.js
 
   # [Plotly](https://plotly.com/javascript/)
   # [UNPKG § Plotly](https://unpkg.com/plotly.js/)
-  - https://unpkg.com/plotly.js@2.23.0/dist/plotly-basic.min.js
+  - https://unpkg.com/plotly.js@2.27.1/dist/plotly-basic.min.js
 
 extra:
   social:
@@ -287,8 +296,8 @@ markdown_extensions:
   - pymdownx.critic                   # Critic
   - pymdownx.details                  # Details
   - pymdownx.emoji:                   # Emoji
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 # - pymdownx.escapeall                # EscapeAll
   - pymdownx.highlight                # Highlight
   - pymdownx.inlinehilite             # InlineHilite
@@ -308,7 +317,9 @@ markdown_extensions:
   - pymdownx.tilde                    # Tilde
 
 plugins:
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
 #  - minify:
 #      minify_html: true
   - search

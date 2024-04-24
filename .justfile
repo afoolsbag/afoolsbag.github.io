@@ -5,54 +5,61 @@
 # [Wikipedia § Package Manager](https://wikipedia.org/wiki/Package_manager)
 #
 # zhengrr
-# 2020-05-15 – 2023-11-29
+# 2020-05-15 – 2024-04-24
 # Unlicense
-set shell         := ['bash', '-e', '-o', 'pipefail', '-u', '-c']
-set windows-shell := ['PowerShell', '-NoLogo', '-Command']
+set quiet
+set shell := ['nu', '--commands']
+shebang := if os() == 'windows' { 'nu' } else { '/usr/bin/env nu' }
 
 # 默认配方：列出可用配方
 [private]
-@default:
+default:
 	just --list \
 		--justfile '{{justfile()}}' \
 		--unsorted
 
-# 升级 pip 和 pipenv 并调用 pipenv 安装虚拟环境（Environment）
+# Environment
+# 升级 pip 并调用 poetry 安装虚拟环境
 [no-cd]
-@pipenv-install *args:
+env *args:
+	#!{{shebang}}
 	python -m pip install --upgrade pip
-	pip install --upgrade pipenv
-	pipenv install --dev {{args}}
-alias env := pipenv-install
+	with-env [PYTHON_KEYRING_BACKEND 'keyring.backends.null.Keyring'] {
+		poetry install {{args}}
+	}
+	poetry env info
 
-# 升级 pip 和 pipenv 并调用 pipenv 升级虚拟环境（Re-Environment）
+# Re-Environment
+# 升级 pip 并调用 poetry 升级虚拟环境
 [no-cd]
-@pipenv-update *args:
+renv *args:
+	#!{{shebang}}
 	python -m pip install --upgrade pip
-	pip install --upgrade pipenv
-	pipenv update --dev {{args}}
-alias renv := pipenv-update
+	with-env [PYTHON_KEYRING_BACKEND 'keyring.backends.null.Keyring'] {
+		poetry update {{args}}
+	}
+	poetry env info
 
-# 调用 pipenv 删除虚拟环境（De-Environment）
+# De-Environment
+# 调用 poetry 删除虚拟环境
 [no-cd]
-@pipenv-rm *args:
-	pipenv --rm {{args}}
-alias denv := pipenv-rm
+denv *args:
+	poetry env remove --all {{args}}
 
 # 构建
 @build *args:
-	pipenv run mkdocs build --strict {{args}}
+	poetry run mkdocs build --strict {{args}}
 
 # 发布
 @gh_deploy *args:
-	pipenv run mkdocs gh-deploy --remote-branch "www" --strict --site-dir "site" {{args}}
+	poetry run mkdocs gh-deploy --remote-branch "www" --strict --site-dir "site" {{args}}
 
 # 本地服务
 @local-serve *args:
-	pipenv run mkdocs serve --dev-addr '127.0.0.1:49152' {{args}}
+	poetry run mkdocs serve --dev-addr '127.0.0.1:49152' {{args}}
 alias ls := local-serve
 
 # 远程服务
 @remote-serve *args:
-	pipenv run mkdocs serve --dev-addr '0.0.0.0:80' {{args}}
+	poetry run mkdocs serve --dev-addr '0.0.0.0:80' {{args}}
 alias rs := remote-serve
